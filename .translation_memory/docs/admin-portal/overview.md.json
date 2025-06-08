@@ -1,0 +1,322 @@
+{
+  "source_file_path_relative_to_docusaurus_root": "docs/admin-portal/overview.md",
+  "source_file_content_hash": "faac576c95549f284b2696d7354ca0119b9ec786ec30e04e3d49160b6e16770d",
+  "segments": [
+    {
+      "segment_id": "58cfcc64",
+      "source_content": "---\ntitle: Get Started with Admin Portal\nsidebar_label: Get Started\n---",
+      "source_content_hash": "51668574965befa16bdab1f4af718e07b23e27250626f433c0962fa86c58e888",
+      "node_type": "yaml",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_58cfcc64"
+      }
+    },
+    {
+      "segment_id": "b3de8742",
+      "source_content": "# Get Started with Admin Portal",
+      "source_content_hash": "1099eccbfb8714d8d75e8732a370e99715dbbbb475dc47c0cebcea6e865a57db",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "# 管理门户入门指南"
+      }
+    },
+    {
+      "segment_id": "3fbbcc07",
+      "source_content": "SAML Jackson comes with an Admin Portal that allows you to manage **Enterprise SSO**, **Directory Sync** and **Setup Links** products via an easy to use web interface.",
+      "source_content_hash": "77ec8cad3292b953c7b9f962845f54e06cfa798c287ebe9bd4d0afe28e8ff4a2",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "SAML Jackson 配备了一个管理门户，通过易用的网页界面，您可以管理 **企业级单点登录(SSO)**、**目录同步** 和 **设置链接** 产品。"
+      }
+    },
+    {
+      "segment_id": "7e5c5a39",
+      "source_content": "Our future products (where relevant) will also be available in the Admin Portal.",
+      "source_content_hash": "236f6105b63f81771fc05677b618a92155e56abb7fefdfcc10b09d436519731b",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "我们未来的产品（如适用）也将在管理门户中提供。"
+      }
+    },
+    {
+      "segment_id": "8d66f911",
+      "source_content": "To enable the Admin Portal, make sure you deploy [Jackson as a service](../jackson/deploy/service).",
+      "source_content_hash": "7016b1c36c6afdac1849b76034e8eaba5b6f3a4d4d78b91c402bf757fba96378",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "要启用管理门户，请确保您以服务形式部署 [Jackson](../jackson/deploy/service)。"
+      }
+    },
+    {
+      "segment_id": "70153c6e",
+      "source_content": "## Authentication Methods",
+      "source_content_hash": "229a3b5042aaf18b94249172e24ee0bbd23204aa863e1345806bb4fa61210d8e",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 认证方式"
+      }
+    },
+    {
+      "segment_id": "86b54d44",
+      "source_content": "BoxyHQ SAML Jackson supports multiple authentication methods. You can choose to use any of the following methods to authenticate users to the Admin Portal.",
+      "source_content_hash": "3b04a1824dbd7c2ca22f5370cff40d4d3b731fbf5ea8e2a4757b0890611393b7",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "BoxyHQ SAML Jackson 支持多种认证方式。您可以选择以下任意一种方式对管理门户的用户进行身份验证。"
+      }
+    },
+    {
+      "segment_id": "39b3772c",
+      "source_content": "We use [NextAuth](https://next-auth.js.org) to handle authentication. Set the following environment variables to configure the authentication.",
+      "source_content_hash": "ba0d642e74c8148b9ef220bd04e3a43996ca9902d644b78fbc8d5ffe97c19da6",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "我们使用 [NextAuth](https://next-auth.js.org) 来处理认证。设置以下环境变量以配置认证。"
+      }
+    },
+    {
+      "segment_id": "3b695c37",
+      "source_content": "- `NEXTAUTH_URL`: The URL of your app.\n- `NEXTAUTH_SECRET`: A secret used to encrypt the session cookie. You can generate one using `openssl rand -base64 32`",
+      "source_content_hash": "c4455d9cc0ff3c7f18e4d9591d628f3c8912d2b028d8ca08c13ce72c83a48f08",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- `NEXTAUTH_URL`: 您的应用URL\n- `NEXTAUTH_SECRET`: 用于加密会话cookie的密钥。可通过 `openssl rand -base64 32` 生成"
+      }
+    },
+    {
+      "segment_id": "40f9552a",
+      "source_content": "### 1. Magic Links",
+      "source_content_hash": "2e86008320f6156e7573ff602102d46323a536520c0c2361d997eca1962eba9c",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 1. 魔法链接"
+      }
+    },
+    {
+      "segment_id": "f2c2bdd0",
+      "source_content": "With Magic Links, you can sign in to the Admin Portal without having to enter a password. The app will send you an email with a link to sign in. You'll need **SMTP server credentials** to send emails.",
+      "source_content_hash": "80e32ac8e09c3e801724cbcf2035275c2d00bad34ed668d288e1e580a4a3e3c3",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "使用魔法链接，您无需输入密码即可登录管理门户。系统会向您发送包含登录链接的电子邮件。您需要配置 **SMTP服务器凭证** 来发送邮件。"
+      }
+    },
+    {
+      "segment_id": "a76548f8",
+      "source_content": "Configure the following environment variables to enable Magic Links.",
+      "source_content_hash": "54a201660f7c4682c167440c2d195f13735920f277a02814573ddc52252adb53",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "配置以下环境变量以启用魔法链接："
+      }
+    },
+    {
+      "segment_id": "77bf3ec9",
+      "source_content": "- `SMTP_HOST`: SMTP server host\n- `SMTP_PORT`: SMTP server port\n- `SMTP_USER`: SMTP server username\n- `SMTP_PASSWORD`: SMTP server password\n- `SMTP_FROM`: From email address to use when sending Magic Link emails\n- `NEXTAUTH_ACL`: An array of emails or glob patterns. Only these users will be allowed access to the Admin Portal. For example: `NEXTAUTH_ACL=tonystark@gmail.com,*@marvel.com`",
+      "source_content_hash": "5ceb98169274131fa7306767ebd451a57da122d4ecb8622b71d2883608faa974",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- `SMTP_HOST`: SMTP服务器主机\n- `SMTP_PORT`: SMTP服务器端口  \n- `SMTP_USER`: SMTP服务器用户名  \n- `SMTP_PASSWORD`: SMTP服务器密码  \n- `SMTP_FROM`: 发送魔法链接邮件时使用的发件人邮箱  \n- `NEXTAUTH_ACL`: 允许访问管理门户的邮箱或通配符数组。例如：`NEXTAUTH_ACL=tonystark@gmail.com,*@marvel.com`"
+      }
+    },
+    {
+      "segment_id": "517051a7",
+      "source_content": "Follow the below steps to login into the Admin Portal.",
+      "source_content_hash": "a869768c257ed57dcffb1e32c4af23519469ab15a1db1658ebc470f08974510b",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "按以下步骤登录管理门户："
+      }
+    },
+    {
+      "segment_id": "157151e9",
+      "source_content": "- Visit the path `/api/auth/signin` on your app.\n- Enter the email address that matches the `NEXTAUTH_ACL` and click the button **Send Magic Link**.\n- Open the inbox and you'll see an email from SAML Jackson.\n- Open that email and click the button **Sign in**.",
+      "source_content_hash": "a482c5b2c85a982289bbc75a3833d78b5fba4539b8ce973874014d63b9a52c29",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- 访问您应用中的 `/api/auth/signin` 路径  \n- 输入符合 `NEXTAUTH_ACL` 的邮箱地址，点击 **发送魔法链接**  \n- 查收收件箱，您将收到来自 SAML Jackson 的邮件  \n- 打开邮件并点击 **登录** 按钮"
+      }
+    },
+    {
+      "segment_id": "06c0f776",
+      "source_content": "### 2. Email and Password",
+      "source_content_hash": "774b36dae711eea2ee242e5cb4964a4968724bcddf8bf4914fa1ed147ea1077b",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 2. 邮箱密码登录"
+      }
+    },
+    {
+      "segment_id": "aa1e7006",
+      "source_content": "With Email and Password, you can sign in to the Admin Portal using an email address and password. You can use it as an alternative to Magic Links or SAML Single Sign-On. This is the easiest way to get started with the Admin Portal.",
+      "source_content_hash": "7e30df5975d83fb860834ad434fd14ba4122d8d295fa4f1d2e5a9a0fceae8de2",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "通过邮箱密码登录，您可以使用邮箱和密码组合登录管理门户。这可以作为魔法链接或SAML单点登录的替代方案，是最快捷的管理门户入门方式。"
+      }
+    },
+    {
+      "segment_id": "13d9cd70",
+      "source_content": "Configure the environment variable to enable Email and Password authentication.",
+      "source_content_hash": "9bf1a7613ed59a78d6481bce58c6aa0a5bc71b14794ab064af96f06d89e3680a",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "配置环境变量以启用邮箱密码认证："
+      }
+    },
+    {
+      "segment_id": "6773b78b",
+      "source_content": "- `NEXTAUTH_ADMIN_CREDENTIALS`: A comma separated list of email and password pairs. For example: `david@acme.com:secretpassword,john@acme.com:anotherpassword`",
+      "source_content_hash": "bd4939c1f2e9ff81f42e33fa68d5a85487d4fbb912b9ea4c883a3939577e8c9f",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- `NEXTAUTH_ADMIN_CREDENTIALS`: 逗号分隔的邮箱密码对。例如：`david@acme.com:secretpassword,john@acme.com:anotherpassword`"
+      }
+    },
+    {
+      "segment_id": "c504c207",
+      "source_content": "At the moment, set the password as plain text. We'll add support for encrypted passwords soon.",
+      "source_content_hash": "4cc85a73f8b26ebdffce600ee66de109a542bc19aa7ffee5b02bdb5c653a0bd8",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "当前密码需以明文形式设置，我们将很快增加加密密码支持。"
+      }
+    },
+    {
+      "segment_id": "98d26038",
+      "source_content": "Follow the below steps to login into the Admin Portal.",
+      "source_content_hash": "a869768c257ed57dcffb1e32c4af23519469ab15a1db1658ebc470f08974510b",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "按以下步骤登录管理门户："
+      }
+    },
+    {
+      "segment_id": "c94a9c0e",
+      "source_content": "- Visit the path `/api/auth/signin` on your app.\n- Enter the email address and password that matches the `NEXTAUTH_ADMIN_CREDENTIALS` and click the button **Sign In**.",
+      "source_content_hash": "868c584f51e4473a8266f2e994d03722459ba0cc8b62ef812ef14824099f04b8",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- 访问您应用中的 `/api/auth/signin` 路径  \n- 输入与 `NEXTAUTH_ADMIN_CREDENTIALS` 匹配的邮箱和密码，点击 **登录**"
+      }
+    },
+    {
+      "segment_id": "1a316f80",
+      "source_content": "### 3. SAML/OIDC Single Sign-On",
+      "source_content_hash": "303972a2d8ea61c0f3da22de4bc6de155afd89d44a2caaded0aa54789ac7fc7a",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 3. SAML/OIDC单点登录"
+      }
+    },
+    {
+      "segment_id": "40158b4b",
+      "source_content": "With SAML/OIDC Single Sign-On, you can sign in to the Admin Portal using your Identity Provider. The app will redirect you to your Identity Provider to sign in. Once you've signed in, you'll be redirected back to the Admin Portal.",
+      "source_content_hash": "e8cee5f3aa20a8871e8d14dbb4fb218d9c8cf02139591da9682d084942b64121",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "通过SAML/OIDC单点登录，您可以使用身份提供商(Identity Provider)登录管理门户。系统将重定向至您的身份提供商进行登录，认证成功后返回管理门户。"
+      }
+    },
+    {
+      "segment_id": "6ea4c715",
+      "source_content": "Configure the following environment variables to enable SAML/OIDC Single Sign-On.",
+      "source_content_hash": "865a3e9197aac089474078d7a02caa5f1278ea54b6a6643b916926cc7b54556c",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "配置以下环境变量以启用SAML/OIDC单点登录："
+      }
+    },
+    {
+      "segment_id": "158e1f5d",
+      "source_content": "- `ADMIN_PORTAL_SSO_TENANT`: This will be used as the tenant for the SSO connections. Set this to a value that is less likely to conflict with the main Enterprise SSO connections.\n- `ADMIN_PORTAL_SSO_PRODUCT`: This will be used as the product for the SSO connections. Set this to a value that is less likely to conflict with the main Enterprise SSO connections.",
+      "source_content_hash": "5bed7365b35ff17afefbb13d49a8be323b6cf304e2d84766e7b73d9f70ed43ac",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- `ADMIN_PORTAL_SSO_TENANT`: 作为SSO连接的租户标识，建议设置不易与企业SSO主连接冲突的值  \n- `ADMIN_PORTAL_SSO_PRODUCT`: 作为SSO连接的产品标识，建议设置不易与企业SSO主连接冲突的值"
+      }
+    },
+    {
+      "segment_id": "0bb95128",
+      "source_content": "If not set, the default values will be used which are `_jackson_boxyhq` and `_jackson_admin_portal`.",
+      "source_content_hash": "195b49c502b82514a59eafc20f3d8006a00345135949bb9897ebb67ffa00c919",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "若未设置，将使用默认值 `_jackson_boxyhq` 和 `_jackson_admin_portal`。"
+      }
+    },
+    {
+      "segment_id": "657c2b20",
+      "source_content": "To enable SAML/OIDC Single Sign-On, you'll need to access the Admin Portal using either [Magic Links](#1-magic-links) or [Email and Password](#2-email-and-password). Once you've logged in, you can configure SAML/OIDC Single Sign-On from the Admin Portal.",
+      "source_content_hash": "1813d578d73142b68609da42954b63b84ec5164aba35fce7b1b7e39f5740cff9",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "要启用SAML/OIDC单点登录，您需要先通过[魔法链接](#1-magic-links)或[邮箱密码登录](#2-email-and-password)访问管理门户。登录后，即可在管理门户中配置SAML/OIDC单点登录。"
+      }
+    },
+    {
+      "segment_id": "e7772088",
+      "source_content": "Go to **Settings** > **SSO for Admin Portal** and add a new SSO connection. We support both SAML and OIDC protocols.",
+      "source_content_hash": "e5addd80cca9c4c327a8d935915298a2136bafbb669737c42372e1660d698b12",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "前往**设置** > **管理门户SSO**，添加新的SSO连接。我们同时支持SAML和OIDC协议。"
+      }
+    },
+    {
+      "segment_id": "eab056be",
+      "source_content": "Follow the below steps to login into the Admin Portal.",
+      "source_content_hash": "a869768c257ed57dcffb1e32c4af23519469ab15a1db1658ebc470f08974510b",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "按照以下步骤登录管理门户："
+      }
+    },
+    {
+      "segment_id": "aa0bd54f",
+      "source_content": "- Visit the path `/api/auth/signin` on your app.\n- Click the button **Login with SSO**.\n- You'll be redirected to your SAML Identity Provider to sign in for the authentication and then redirected back to the Admin Portal.",
+      "source_content_hash": "e941d30652cab4c769d5dfb9530f78b96d602791e26124a787c7e03626dfbae2",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- 访问您应用中的路径 `/api/auth/signin`\n- 点击**使用SSO登录**按钮\n- 系统将重定向至您的SAML身份提供商进行认证，完成后跳转回管理门户"
+      }
+    }
+  ],
+  "target_i18n_subpath": "docusaurus-plugin-content-docs/current/admin-portal/overview.md",
+  "last_updated_timestamp": "2025-06-08T18:49:09.296977+00:00",
+  "schema_version": "1.0",
+  "translated_versions": {
+    "zh-CN": "faac576c95549f284b2696d7354ca0119b9ec786ec30e04e3d49160b6e16770d"
+  }
+}

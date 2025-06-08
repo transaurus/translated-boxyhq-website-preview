@@ -1,0 +1,1022 @@
+{
+  "source_file_path_relative_to_docusaurus_root": "blog/2023-07-240boxyhq-cerbos-merging-sso-and-authorization.md",
+  "source_file_content_hash": "484ed6aa5bdf0623e8263ee7e412659dd934904197c767b79979c16044d6878a",
+  "segments": [
+    {
+      "segment_id": "58cfcc64",
+      "source_content": "---\nslug: boxyhq-cerbos-merging-sso-and-authorization\ntitle: 'BoxyHQ + Cerbos: Merging SSO and Authorization'\nauthor: Kiran K\nauthor_title: Senior Developer @ BoxyHQ\nauthor_url: https://twitter.com/tokirankrishnan\nauthor_image_url: /images/authors/kiran.jpg\ntags_disabled: [enterprise-readiness, saml, saml-jackson, sso]\nimage: /img/blog/merging-sso-and-authorization.png\n---",
+      "source_content_hash": "6159c11317b3c2b65d96305edc0148e58dcbafcbde57eb962d0676fc216242da",
+      "node_type": "yaml",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_58cfcc64"
+      }
+    },
+    {
+      "segment_id": "8d66f911",
+      "source_content": "In this article, we will see how to enable Enterprise SSO login (based on the SAML single sign-on protocol) using Okta for your Next.js app and relay role-based access directly from the Identity Provider to Cerbos.",
+      "source_content_hash": "90b0a238914ea76c5d9437d770616b2f12f20fce91d82f246191d2abd2e895fd",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "本文将演示如何为Next.js应用启用基于SAML单点登录协议的Okta企业级SSO登录，并将身份提供者中的基于角色的访问控制直接传递至Cerbos。"
+      }
+    },
+    {
+      "segment_id": "ad8fd492",
+      "source_content": "We'll be using BoxyHQ's open-source [Enterprise SSO](/enterprise-sso) solution (called SAML Jackson) to interface with Okta. We'll use the principle of minimal UI and include only the necessary interface in our example application.",
+      "source_content_hash": "16bdccfaca3392ceb533667846b00a48147993f0ffd7b5eb78c06f9769d4b725",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "我们将使用BoxyHQ的开源[企业级SSO](/enterprise-sso)解决方案（名为SAML Jackson）与Okta对接。本示例应用将遵循最小化界面原则，仅保留必要功能接口。"
+      }
+    },
+    {
+      "segment_id": "cbe57f9d",
+      "source_content": "## Introduction to SAML single sign-on",
+      "source_content_hash": "2065f249bf9006bd16a36437b95a2a9640e9f9120ee989cabe1ff77fcac0996a",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## SAML单点登录简介"
+      }
+    },
+    {
+      "segment_id": "39b3772c",
+      "source_content": "Security Assertion Markup Language (SAML) was designed for traditional web applications in the early 2000s. The goal was to provide a seamless user experience for applications by federating authentication to an IdP.",
+      "source_content_hash": "3e5df34f9782767999fb8e5d522cdccabf08c97e5e4e2736ef77754025296110",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "安全断言标记语言(SAML)专为传统Web应用设计于21世纪初，旨在通过将认证联邦至身份提供者(IdP)，为应用提供无缝用户体验。"
+      }
+    },
+    {
+      "segment_id": "1acb9a05",
+      "source_content": "As a result, applications no longer had to maintain identities for users. All they had to do was to redirect the browser to the IdP which would then authenticate the user and return an assertion about the logged-in user.",
+      "source_content_hash": "37a6521916e41bf397444d2ad4b2928c5552d41c383b54a62b3397c72d05ac34",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "这使得应用无需维护用户身份体系，仅需将浏览器重定向至IdP。IdP完成用户认证后，会返回关于已登录用户的安全断言。"
+      }
+    },
+    {
+      "segment_id": "2df4f75f",
+      "source_content": "This assertion in effect was a token, asserting to the app that the user authenticated at the IdP and the assertion is valid for the set period contained within it. You can read more about SAML and other SSO protocols here.",
+      "source_content_hash": "ca141b8de122136c593f86eea3c5e77317af8fa96487b6164d890b02a9e080c7",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "该断言实质上是种令牌，向应用声明用户已在IdP完成认证，且断言在有效期内持续生效。您可在此处深入了解SAML及其他SSO协议。"
+      }
+    },
+    {
+      "segment_id": "98cfbd53",
+      "source_content": "SAML continues to be a very popular choice of protocol when there's a need to provide a single sign-on (SSO) experience for an enterprise application. Microsoft has great resources explaining SAML authentication and SAML at a deeper level.",
+      "source_content_hash": "f7ed96d86422170d1d66c66dab81302d371050d2cd1663bcd15b98ad0c55076b",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "当需要为企业级应用提供单点登录(SSO)体验时，SAML仍是极受欢迎的选择。微软提供了详尽的SAML认证解析和深度技术文档。"
+      }
+    },
+    {
+      "segment_id": "79b2d0b9",
+      "source_content": "## Benefits of using SAML",
+      "source_content_hash": "3dcd5e972aab4dfc808709b8f756ffa2b5cdb78fb253b4b9528f65d085d88a32",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 使用SAML的优势"
+      }
+    },
+    {
+      "segment_id": "3c36424c",
+      "source_content": "### Increased Security",
+      "source_content_hash": "ec29b16a28fa3aa1e74a62970703acfdd5aed5a58e8c08f622776e9a53077d22",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 增强安全性"
+      }
+    },
+    {
+      "segment_id": "26524352",
+      "source_content": "SAML is at its heart a security standard and as it provides a single point of authentication that takes place in a secure environment it adds an extra layer of security to your service that most enterprise customers will ask for.",
+      "source_content_hash": "3fb53cb501aec73ab6c031995d0da099225d078f205582f2753490722acb702b",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "SAML本质是安全标准，通过集中式安全环境完成认证，为服务增加企业客户普遍要求的安全防护层。"
+      }
+    },
+    {
+      "segment_id": "b25f21be",
+      "source_content": "### Improved user experience",
+      "source_content_hash": "3b8748e36a2a297203877d77266bcab4aada963ce5ee5970c9d512dd553227b3",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 优化用户体验"
+      }
+    },
+    {
+      "segment_id": "7499a4e7",
+      "source_content": "As a user, SAML is very simple and pleasant to use as you only have to log in once and then you can access all your external services on a dashboard with a single click. This saves the user time and makes their overall experience of your product better.",
+      "source_content_hash": "04555777175b6b98dcec293268761b048214519fcd9b181f8cb499d6974cf419",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "对用户而言，SAML只需单次登录即可通过仪表盘一键访问所有外部服务，既节省时间又提升产品使用体验。"
+      }
+    },
+    {
+      "segment_id": "109ace10",
+      "source_content": "### Reduces cost",
+      "source_content_hash": "28b25419f3e8d5a4bcf885bdf4faeb4da7a62189f0283a438f217b6aa607d2c2",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 降低成本"
+      }
+    },
+    {
+      "segment_id": "135468ee",
+      "source_content": "Without SAML you have to maintain account information across multiple services but when you use SAML this is all managed by the IdP.",
+      "source_content_hash": "96c169427436625d88d99ccf1faa895fac93adacb2cc6b7215947c4626f894b2",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "非SAML方案需跨服务维护账户信息，而SAML方案中这些均由身份提供者统一管理。"
+      }
+    },
+    {
+      "segment_id": "782c902a",
+      "source_content": "## Introduction to BoxyHQ",
+      "source_content_hash": "5ce62b94cd37b134dee1d08135535f5525581bc2f40137986e2bc15101d0beba",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## BoxyHQ简介"
+      }
+    },
+    {
+      "segment_id": "50746522",
+      "source_content": "[BoxyHQ](https://boxyhq.com/) implements and maintains an open-source project that handles all the service provider functionality for implementing SAML, hiding away all the complexity you read about above behind the more popular and well-understood OAuth 2.0 protocol.",
+      "source_content_hash": "ab6dcb8faca80f566cea162ec06ca78bcc53db5c2ef898eea722bb06aaf09ce3",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "[BoxyHQ](https://boxyhq.com/)通过开源项目实现并维护SAML的服务提供者功能，将前文所述的所有复杂技术细节封装在更普及的OAuth 2.0协议之后。"
+      }
+    },
+    {
+      "segment_id": "54268405",
+      "source_content": "## Introduction to Cerbos",
+      "source_content_hash": "eae1d1f72419faf9d990241e0a63c521b3080585f5d0a0311320c6e7c5674850",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## Cerbos简介"
+      }
+    },
+    {
+      "segment_id": "8af76f3d",
+      "source_content": "[Cerbos](https://cerbos.dev/) is the open-core, language-agnostic, scalable authorization solution that makes user permissions and authorization simple to implement and manage by writing context-aware access control policies for your application resources.",
+      "source_content_hash": "766d593ccd960b872eedc49e58aec755b28ed4e295af6e3221d0f6c4611b1bda",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "[Cerbos](https://cerbos.dev/)是开源核心、语言无关、可扩展的授权解决方案，通过编写上下文感知的访问控制策略，简化应用资源的用户权限管理与实现。"
+      }
+    },
+    {
+      "segment_id": "a9d49f92",
+      "source_content": "In this tutorial, we are using BoxyHQ as the service provider layer between our example Next.js application and Okta as the Identity Provider to showcase the benefits of syncing roles and permissions during SSO login.",
+      "source_content_hash": "0c6f074774e0e01577f9970aeffe21eb9f2fa9f66ab37bbd4940626ead9d90b7",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "本教程使用BoxyHQ作为示例Next.js应用与Okta身份提供者之间的服务提供层，展示SSO登录期间同步角色和权限的优势。"
+      }
+    },
+    {
+      "segment_id": "6d28a77c",
+      "source_content": "## Overview of the example app",
+      "source_content_hash": "610c663a8fccd54851aba1b8ac7c2e374ed479886cbd104fd6ed97a4adf93e49",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 示例应用概览"
+      }
+    },
+    {
+      "segment_id": "f7ef78f9",
+      "source_content": "The example app is a simple Next.js app that uses [SAML Jackson for SAML SSO](https://boxyhq.com/docs/jackson/overview) authentication and [Cerbos for authorization](https://docs.cerbos.dev/cerbos/latest/quickstart.html).",
+      "source_content_hash": "a565723f0f1e3409f2af39b072e7715eb2d8842c0fbf446c87448024a5a97735",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "该示例应用是使用[SAML Jackson实现SAML SSO认证](https://boxyhq.com/docs/jackson/overview)和[Cerbos进行授权](https://docs.cerbos.dev/cerbos/latest/quickstart.html)的简易Next.js应用。"
+      }
+    },
+    {
+      "segment_id": "b36c6338",
+      "source_content": "The app has two pages:",
+      "source_content_hash": "88ae1d4d2db800498528d8c49a5816a20d1bfc6377b1ce3dcec06c3b91a4bd53",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "应用包含两个页面："
+      }
+    },
+    {
+      "segment_id": "9b797309",
+      "source_content": "- `/` - Display the authenticated user's profile and authorization decisions returned by Cerbos API.\n- `/saml-connection` - Update the SAML connection details.",
+      "source_content_hash": "ab1e9544e106e02a34bbc9f0c56c1641e3eebde1aabaa24c99fb6603cb127580",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- `/` - 显示已认证用户档案及Cerbos API返回的授权决策\n- `/saml-connection` - 更新SAML连接配置"
+      }
+    },
+    {
+      "segment_id": "23dfb152",
+      "source_content": "The example app runs on port `3000`. SAML Jackson and Cerbos are running on ports `5225` and `3593` respectively within Docker containers.",
+      "source_content_hash": "81d5853114869a9054416c0b2cfe6f76daa93f7598d7c946d5fc46d5886bf2d3",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "示例应用运行于3000端口。SAML Jackson和Cerbos分别运行在Docker容器的5225和3593端口。"
+      }
+    },
+    {
+      "segment_id": "1131ef75",
+      "source_content": "You are free to use cloud versions of Cerbos, the instructions for those wouldn’t change a lot but have been avoided in this article to keep it short.",
+      "source_content_hash": "131426b3aab8f3144edfeb13c2b470e786f039185f8edeb1448f9a7c82992e4d",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "您可选择使用Cerbos云服务版本，相关配置指令变化不大，但为保持文章简洁未予赘述。"
+      }
+    },
+    {
+      "segment_id": "8b2a52b1",
+      "source_content": "The example app is configured to work with 2 roles: `app-admin` and `app-user`.",
+      "source_content_hash": "215df7ce1b63fc0748c015a24c771d573a107e1bee122a8271497f24d7d15875",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "示例应用配置了两种角色：`app-admin` 和 `app-user`。"
+      }
+    },
+    {
+      "segment_id": "35f6931b",
+      "source_content": "- The `app-admin` role has access to all resources.\n- The `app-user` role has access to resources only the user owns.",
+      "source_content_hash": "462320f5eaa5cd43e55492e4123285c03962ae2cdb47d30ad94852c456ce7f50",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- `app-admin` 角色拥有所有资源的访问权限。\n- `app-user` 角色仅能访问用户自身拥有的资源。"
+      }
+    },
+    {
+      "segment_id": "06e24cc0",
+      "source_content": "Take a look at the `cerbos/policies/contact.yaml` file to see how the policies are defined for the example app. You can try changing the policies and see how the authorization decisions change in the app.",
+      "source_content_hash": "c592eac505c5f7e3aa9d30194618f5e161e872a5d60be4e62f4eaf434a271b02",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "查看 `cerbos/policies/contact.yaml` 文件可了解示例应用的策略定义。您可以尝试修改策略，观察应用中授权决策的变化。"
+      }
+    },
+    {
+      "segment_id": "7f71ff2a",
+      "source_content": "The following diagram shows the architecture of the example app.",
+      "source_content_hash": "59cf1ecd01e4cd5682f94b03f6c1a3e23ad5f0b021a1a4ed50b8a3a76b835829",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "下图展示了示例应用的架构。"
+      }
+    },
+    {
+      "segment_id": "147e8550",
+      "source_content": "![example app architecture](/img/blog/cerbos-boxyhq/1.png)",
+      "source_content_hash": "31c998bc15a6c3db04580fb3ffb25797e39e4df958b0b0625dc02a304264c995",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![示例应用架构](/img/blog/cerbos-boxyhq/1.png)"
+      }
+    },
+    {
+      "segment_id": "daed5acb",
+      "source_content": "### 1. Setup the example app",
+      "source_content_hash": "8ca32b7106c49e50a25c2766bf21c38d885b0cb194a4b57458d985f3828fc83b",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 1. 配置示例应用"
+      }
+    },
+    {
+      "segment_id": "6cc549f2",
+      "source_content": "Clone the example app repository:",
+      "source_content_hash": "99287696a7fa02cc5ade707666de321ea4e5c07634099719349a15d0f8bb0631",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "克隆示例应用仓库："
+      }
+    },
+    {
+      "segment_id": "8a9e710a",
+      "source_content": "```bash\ngit clone https://github.com/boxyhq/jackson-cerbos\n```",
+      "source_content_hash": "c00f2d88151def184e8b48c9495aca4366941c5e0160c790f81dd9e26d3b596f",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_8a9e710a"
+      }
+    },
+    {
+      "segment_id": "6270d577",
+      "source_content": "Navigate to the example app directory and run `npm install` to install the dependencies.",
+      "source_content_hash": "a90e16a93f0fd8bf8de65093e5073ed30b993fd629fc983113ae6148f19414ec",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "进入示例应用目录并运行 `npm install` 安装依赖项。"
+      }
+    },
+    {
+      "segment_id": "d8159289",
+      "source_content": "```bash\ncd jackson-cerbos\n```",
+      "source_content_hash": "6f6d411f22e704c27104d49a33d1d8b0ceba78e15caece577414936cae0f1919",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_d8159289"
+      }
+    },
+    {
+      "segment_id": "26f7c825",
+      "source_content": "```bash\nnpm install\n```",
+      "source_content_hash": "eb5a50fc58daf7363e311766e9dd31ad61d85de38cdea9e5921158421a5cb4bb",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_26f7c825"
+      }
+    },
+    {
+      "segment_id": "86348f98",
+      "source_content": "If you navigate to `http://localhost:3000` on your browser, you should see the following page.",
+      "source_content_hash": "73560271debb25ab47f95d647329c8a8cb2c0c8350a8399d27d5c8fcb1c59bfe",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "在浏览器中访问 `http://localhost:3000`，您将看到以下页面。"
+      }
+    },
+    {
+      "segment_id": "6b77b644",
+      "source_content": "![example app home](/img/blog/cerbos-boxyhq/2.png)",
+      "source_content_hash": "ab33a3fda8e4f7dd8f5c0c6b5742f73ee078ac4f4e7d97d095b4b282b234794d",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![示例应用首页](/img/blog/cerbos-boxyhq/2.png)"
+      }
+    },
+    {
+      "segment_id": "a311e967",
+      "source_content": "This would mean that the example app is running successfully and you can now proceed to the next step.",
+      "source_content_hash": "470bfa9e38833a10c2f24582083feaa3c000dd7d087d4f3a5f505bee504e2e14",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "这表明示例应用已成功运行，您可以继续下一步操作。"
+      }
+    },
+    {
+      "segment_id": "eb51d107",
+      "source_content": "The [README](https://github.com/boxyhq/jackson-cerbos/blob/main/README.md) file repository has all details about the example app. You can refer to it if you have anything unclear in this article.",
+      "source_content_hash": "e8575a1b03b93792f156ab9aaca1e9deb459aa501532cbbfa2f40d1f52e8ed29",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "仓库中的[README](https://github.com/boxyhq/jackson-cerbos/blob/main/README.md)文件包含示例应用的所有详细信息。若本文有任何不清楚之处，可参考该文件。"
+      }
+    },
+    {
+      "segment_id": "c19de48a",
+      "source_content": "### 2. Setup SAML App in Okta",
+      "source_content_hash": "cb4ff235f37c23166a55b04e4e59a738d7968405a3ad885d8b25f0bb253c7ca1",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 2. 在Okta中配置SAML应用"
+      }
+    },
+    {
+      "segment_id": "6ca4479f",
+      "source_content": "The next step is to set up a SAML app in Okta. If you don't have an Okta account, you can create a free developer account [https://developer.okta.com/signup/](https://developer.okta.com/signup/).",
+      "source_content_hash": "c47c0ed691e68e4f30e77c9e290740e1bc2b963c949b3bda3cd519e49adbfe01",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "下一步是在Okta中设置SAML应用。若您没有Okta账户，可创建免费开发者账户[https://developer.okta.com/signup/](https://developer.okta.com/signup/)。"
+      }
+    },
+    {
+      "segment_id": "a2c0166e",
+      "source_content": "Alternatively, you can also use other SAML IdPs like Azure AD, OneLogin, Auth0, etc. The steps for those would be similar to the ones for Okta.",
+      "source_content_hash": "9bf830a8512eadf84e087d09db8e0efc2ca729cb3770dcacbcc841a0012f6f15",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "您也可以使用其他SAML身份提供商（如Azure AD、OneLogin、Auth0等），配置步骤与Okta类似。"
+      }
+    },
+    {
+      "segment_id": "c1eaf30b",
+      "source_content": "In this article, we will use Okta as the IdP.",
+      "source_content_hash": "52a9ffc3cb987e8ea3ead446eac66adb34c23ea26990a8e7dd03c6bccee2c9f7",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "本文将使用Okta作为身份提供商。"
+      }
+    },
+    {
+      "segment_id": "f0984c2a",
+      "source_content": "If you are unfamiliar with creating a SAML app in Okta, you can follow the instructions [here](https://boxyhq.com/docs/jackson/sso-providers/okta).",
+      "source_content_hash": "a0a8cb1a44e79029e44322284a703bac672be368ab5283c1e36e5b85bf89c0c6",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "若不熟悉如何在Okta创建SAML应用，可按照[此处](https://boxyhq.com/docs/jackson/sso-providers/okta)的说明操作。"
+      }
+    },
+    {
+      "segment_id": "a81544fd",
+      "source_content": "You will want to use the **Assertion Consumer Service URL** and **Entity ID** from [http://localhost:5225/.well-known/saml-configuration](http://localhost:5225/.well-known/saml-configuration).",
+      "source_content_hash": "0d26fdeaffc41821380e63e1f4e79fb8241249990f81ef868605759548234e63",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "您需要使用来自[http://localhost:5225/.well-known/saml-configuration](http://localhost:5225/.well-known/saml-configuration)的**断言消费者服务URL**和**实体ID**。"
+      }
+    },
+    {
+      "segment_id": "0801d969",
+      "source_content": "Do not worry about the roles attribute yet, we’ll configure that in a later step once we have ensured the SSO login flow works correctly.",
+      "source_content_hash": "e106733f9e3bfac34d99f583dd5b03cabb827233ea7c7040341e058da96612f8",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "暂时无需配置角色属性，待确保SSO登录流程正常工作后，我们将在后续步骤中配置。"
+      }
+    },
+    {
+      "segment_id": "3c19e221",
+      "source_content": "Next, download the **SAML Metadata XML file** from the Okta app. You will need this file in the next step.",
+      "source_content_hash": "7145bcb76a3ab6cbaac9a6d8f1d31db1cefcfe32efc0cf9e3387777d68f1530f",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "接着从Okta应用下载**SAML元数据XML文件**，下一步骤将需要此文件。"
+      }
+    },
+    {
+      "segment_id": "7974af84",
+      "source_content": "### 3. Create a SAML connection in SAML Jackson",
+      "source_content_hash": "b4fc11c50dde97c15b7af511c6ca6988d047060f6e21b3dde77a106e87ac711a",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 3. 在SAML Jackson中创建SAML连接"
+      }
+    },
+    {
+      "segment_id": "44aaa880",
+      "source_content": "Now that we have the SAML app setup in Okta, we need to create a SAML connection in SAML Jackson.",
+      "source_content_hash": "c34a0b6887ce6882c096dee540103f62dbd58acf38e5a4505c8507da828a55d3",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "完成Okta的SAML应用配置后，需在SAML Jackson中创建SAML连接。"
+      }
+    },
+    {
+      "segment_id": "396efb28",
+      "source_content": "Navigate to [http://localhost:3000/saml-connection](http://localhost:3000/saml-connection) on your browser and paste the contents of the SAML Metadata XML file you downloaded in the previous step in the **XML Metadata** field. Click on **Create SAML Connection** to create the SAML connection.",
+      "source_content_hash": "685e73f0395c38d8a52c6ca3894238ed20d4b395041b03fcdbfbda8f974db7d2",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "在浏览器中访问[http://localhost:3000/saml-connection](http://localhost:3000/saml-connection)，将上一步下载的SAML元数据XML文件内容粘贴至**XML元数据**字段，点击**创建SAML连接**。"
+      }
+    },
+    {
+      "segment_id": "558df877",
+      "source_content": "If you see the status **SAML SSO Enabled** on the page, it means that the SAML connection was created successfully.",
+      "source_content_hash": "4b2a3aa94058b845b12f7a2b3895915a3fd3b3eb212401a552c97bdce9e2830e",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "若页面显示**SAML SSO已启用**状态，则表示SAML连接创建成功。"
+      }
+    },
+    {
+      "segment_id": "64d57278",
+      "source_content": "### 4. Login with SAML SSO",
+      "source_content_hash": "1aa393e78f459bba10e9a23b90e8c2e37b14b7ebd6f8cce4ea395cee74cac784",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 4. 通过SAML SSO登录"
+      }
+    },
+    {
+      "segment_id": "5f82a1e9",
+      "source_content": "Now that we have the SAML connection setup, we can try logging in with SAML SSO.",
+      "source_content_hash": "5471603a68824e8a75580f00f4cb6b90f4f5d4955b05e25f83aa5525fc096a30",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "完成SAML连接配置后，即可尝试通过SAML SSO登录。"
+      }
+    },
+    {
+      "segment_id": "6fc234cf",
+      "source_content": "Navigate to [http://localhost:3000/login](http://localhost:3000/login) on your browser, enter the email address and click on **Continue with SAML SSO**.",
+      "source_content_hash": "4e6df3c4532fcd71fbbf2ed7050ee90a9ffa281d75c51f45197d512b0376ee25",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "在浏览器中访问[http://localhost:3000/login](http://localhost:3000/login)，输入电子邮件地址并点击**通过SAML SSO继续**。"
+      }
+    },
+    {
+      "segment_id": "c364340c",
+      "source_content": "You will be redirected to the Okta login page. Enter the credentials and click on **Sign In**.",
+      "source_content_hash": "5ec01d09a2191bf0352af0dec2ae8c33a537fb4ab509c3718f3b251e13bc05bd",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "您将被重定向至Okta登录页面。输入凭据后点击**登录**。"
+      }
+    },
+    {
+      "segment_id": "f45239ba",
+      "source_content": "You will be redirected back to the home page of the example app and you should see the Profile of the authenticated user.",
+      "source_content_hash": "dc02a059580b1486ad8dcf7020b65aa649d213641fe5ed0a1a525ad377216795",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "您将被重定向回示例应用首页，并看到已认证用户的个人资料。"
+      }
+    },
+    {
+      "segment_id": "692c6053",
+      "source_content": "This means that you have successfully logged in with SAML SSO.",
+      "source_content_hash": "ca1c8903745bfdde33d5ac1a5de2f34a68db9970d2e751591b3fa35a332ac973",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "这表示您已成功通过SAML SSO登录。"
+      }
+    },
+    {
+      "segment_id": "383fbdd2",
+      "source_content": "Since we haven't configured the roles attribute yet, all the users will be assigned the **app-user** role by default.",
+      "source_content_hash": "4efb48bd463a598879112444d09ef9566d9531b1e3c41ce29842ae53739c5dec",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "由于尚未配置角色属性，所有用户默认将被分配**app-user**角色。"
+      }
+    },
+    {
+      "segment_id": "13292277",
+      "source_content": "### 5. Configure the groups attribute in Okta App",
+      "source_content_hash": "519e0d2854db5474381b7a0c35f0ef7ed6b3db80b6cf4c0b087b4c84f03ddff4",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 5. 在Okta应用中配置群组属性"
+      }
+    },
+    {
+      "segment_id": "e478ec2c",
+      "source_content": "Now that we have ensured that the SSO login flow works correctly, we can configure the groups attribute in Okta.",
+      "source_content_hash": "09d6a10c417637361ec2e267ed24db504b0546f38038c871529d8ad712c27a47",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "现在我们已经确保SSO登录流程正常工作，可以在Okta中配置群组属性。"
+      }
+    },
+    {
+      "segment_id": "534ac82e",
+      "source_content": "Groups attribute allows you to map the groups in your identity provider to the roles in your application.",
+      "source_content_hash": "6194a9ddd5b5d88437427e2b6c155c55786a82569024c236b1ea4b964f3cce7c",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "群组属性允许您将身份提供商中的群组映射到应用中的角色。"
+      }
+    },
+    {
+      "segment_id": "0d5321b7",
+      "source_content": "#### Create a group in Okta",
+      "source_content_hash": "7566c52dbe43d4e3ae277b0854714643f56d406f733bafee1886aba235dbab16",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "#### 在Okta中创建群组"
+      }
+    },
+    {
+      "segment_id": "cfeb9eb1",
+      "source_content": "First, we need to create a group in Okta. Navigate to the Directory > Groups from the left navigation menu.",
+      "source_content_hash": "f86352b2b9b83940f681539c9ad0913ee105e69e0403beec414d6795f9129fea",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "首先需要在Okta中创建群组。从左导航菜单进入目录 > 群组。"
+      }
+    },
+    {
+      "segment_id": "f7e6e884",
+      "source_content": "Click on **Add group** and enter the group **name** and **description (optional)**",
+      "source_content_hash": "d7ec5aa710f9be5bb102554e179b2f326545b61f1eddea50dc9ca104a6977b84",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "点击**添加群组**，输入群组**名称**和**描述（可选）**"
+      }
+    },
+    {
+      "segment_id": "17b50e81",
+      "source_content": "Next create two new groups: **app-admin** and **app-user**.",
+      "source_content_hash": "9b469c2438fe3a1cf91ebcb3fdfec4fc2e4ea048ec55e82be913f2ff28dae430",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "接着创建两个新群组：**app-admin**和**app-user**。"
+      }
+    },
+    {
+      "segment_id": "719d3997",
+      "source_content": "![create okta group](/img/blog/cerbos-boxyhq/3.png)",
+      "source_content_hash": "f07fd49eba4ffbe104c318da2f874038868b338dcd48b8840384b432179dea84",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![创建okta群组](/img/blog/cerbos-boxyhq/3.png)"
+      }
+    },
+    {
+      "segment_id": "42d9ca67",
+      "source_content": "After creating the groups, you will see the groups listed in the Groups page.",
+      "source_content_hash": "d44b35a2ee3ccd73fba39b36832e36af8af616bac1901fd29ea024fbdc54efd5",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "创建完成后，您将在群组页面看到列出的群组。"
+      }
+    },
+    {
+      "segment_id": "619c3209",
+      "source_content": "Next we need to add the users to the groups. Navigate to the group you just created and click on the **People** tab.",
+      "source_content_hash": "524f8fc9f1bba33ed51be226b63314b06b5ffff5694cced1fd3e65689a4b43fe",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "接下来需要将用户添加到群组。进入刚创建的群组，点击**人员**标签页。"
+      }
+    },
+    {
+      "segment_id": "44285072",
+      "source_content": "Click on the **Assign people** button and assign the users you want to add to the group.",
+      "source_content_hash": "00cdc9751214273b47a7abaee93025096f66c28d6e0ea1838e9206d21719d9a2",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "点击**分配人员**按钮，选择要添加到群组的用户。"
+      }
+    },
+    {
+      "segment_id": "a8f09c71",
+      "source_content": "Repeat the same steps for the second group.Configure the groups attribute in Okta",
+      "source_content_hash": "04c545cfec9e92563953ae5833d8e3863011f51fe7930b6d5f0901b3f2748884",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "对第二个群组重复相同步骤。在Okta中配置群组属性"
+      }
+    },
+    {
+      "segment_id": "d2a3d4c7",
+      "source_content": "Now that we have created the groups in Okta, we need to configure the groups attribute in Okta.",
+      "source_content_hash": "a13a124b7782e2d14214b526b59e366a9b75b07b2c0f44166c040e6b18e34ad6",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "现在Okta中已创建群组，需要配置群组属性。"
+      }
+    },
+    {
+      "segment_id": "008183b0",
+      "source_content": "Navigate to the **SAML Settings** tab in the Okta app and click on **Edit**.",
+      "source_content_hash": "da6bde1e9dba789e95dad76c096825952ec5a8059d8cb4565f224b288b59ab91",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "进入Okta应用的**SAML设置**标签页，点击**编辑**。"
+      }
+    },
+    {
+      "segment_id": "0ddaa835",
+      "source_content": "Now click on the **Configure SAML** tab and scroll down to the **Group Attribute Statements** section.",
+      "source_content_hash": "3a2c2381ab9b51cd247b6afeb0c00eda4154459d4b37636f7cfde2e8902b6b4a",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "点击**配置SAML**标签页，滚动至**群组属性声明**部分。"
+      }
+    },
+    {
+      "segment_id": "fd7ed056",
+      "source_content": "Click on **Add Another** and enter the following values",
+      "source_content_hash": "67711884adb1e506e2701ac284893ba2a384eaf91087a275c35797322dc247be",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "点击**添加其他**并输入以下值"
+      }
+    },
+    {
+      "segment_id": "67549b35",
+      "source_content": "- Name: groups\n- Name format: Unspecified\n- Filter: Starts with **app-**",
+      "source_content_hash": "66ef384e65f974c2e40ba11305a9998de1d4482fffc603b656bf3dda383017f9",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- 名称：groups\n- 名称格式：未指定\n- 过滤器：以**app-**开头"
+      }
+    },
+    {
+      "segment_id": "99840f13",
+      "source_content": "![okta group statements](/img/blog/cerbos-boxyhq/4.png)",
+      "source_content_hash": "2a902a091aad62dc7096d10325b54bf53713c69d016bd79d0b2517ca132441b0",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![okta群组声明](/img/blog/cerbos-boxyhq/4.png)"
+      }
+    },
+    {
+      "segment_id": "85ea22dd",
+      "source_content": "Note the **app-** prefix in the filter. This will ensure that only the groups that start with **app-** are returned in the SAML response from Okta. So if you have other groups in Okta, they will not be returned in the SAML response. This is useful if you want to map only a subset of the groups in Okta to the roles in your application.",
+      "source_content_hash": "432874dec0a5026fbe3aecc55fc9e3f5f5ca99e36d5914a3b97f20fd098a1bbb",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "注意过滤器中的**app-**前缀。这将确保Okta的SAML响应中仅返回以**app-**开头的群组。如果您在Okta中有其他群组，它们不会出现在SAML响应中。当您只想将Okta中的部分群组映射到应用角色时，这非常有用。"
+      }
+    },
+    {
+      "segment_id": "dc72fd20",
+      "source_content": "There are also other filter options available in the Group Attribute Statements section. You can read more about them in the Okta documentation.",
+      "source_content_hash": "ac81a73bb4ff8350d7406c6816a7e35d8df6f0b7466b4ce4b3c3f4217c167fe6",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "群组属性声明部分还提供其他过滤器选项，您可以在Okta文档中了解更多信息。"
+      }
+    },
+    {
+      "segment_id": "445c72bd",
+      "source_content": "### 6. Test the authorization",
+      "source_content_hash": "ce12486ab012b943da029bc39e8c6a801140bf61fec69bdcdb6dd674f1a31680",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 6. 测试授权"
+      }
+    },
+    {
+      "segment_id": "9ef42155",
+      "source_content": "Now that we have configured the **group** attribute, we can test the authorization.",
+      "source_content_hash": "d9c89b251eeadef7e40d193045b88c18be5aa0de0a0f9b7594db41537e84f414",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "现在已配置**群组**属性，可以测试授权功能。"
+      }
+    },
+    {
+      "segment_id": "fe25bd72",
+      "source_content": "Navigate to [http://localhost:3000](http://localhost:3000/) on your browser and click the **Sign Out** button.",
+      "source_content_hash": "877b14ef773e07e3f15f9be73ef110916705b7cba98e37915bdf7a527c957e1b",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "在浏览器中访问[http://localhost:3000](http://localhost:3000/)，点击**退出登录**按钮。"
+      }
+    },
+    {
+      "segment_id": "c8a6ab3e",
+      "source_content": "Let's try logging in with a user that has the **app-admin** role.",
+      "source_content_hash": "a6c1e54c42a4c7d2864bdd0499c32911163f8f3f987ed48636ed9c696d60f9fa",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "让我们尝试用具有**app-admin**角色的用户登录。"
+      }
+    },
+    {
+      "segment_id": "5cf1bce4",
+      "source_content": "You will be redirected to the Okta login page. Enter the credentials and click on **Sign In**.",
+      "source_content_hash": "5ec01d09a2191bf0352af0dec2ae8c33a537fb4ab509c3718f3b251e13bc05bd",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "您将被重定向至Okta登录页面。输入凭据后点击**登录**。"
+      }
+    },
+    {
+      "segment_id": "0427bb2b",
+      "source_content": "You will be redirected back to the home page of the example app and you should see the Profile of the authenticated user.",
+      "source_content_hash": "dc02a059580b1486ad8dcf7020b65aa649d213641fe5ed0a1a525ad377216795",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "您将被重定向回示例应用首页，并看到已认证用户的个人资料。"
+      }
+    },
+    {
+      "segment_id": "be4b1cbf",
+      "source_content": "#### Access API authorized by Cerbos",
+      "source_content_hash": "a470b00be8b05bde46dffdf3461097bb99a76d5dbc3f526eb4026bfc82ab9f0c",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "#### 访问经Cerbos授权的API"
+      }
+    },
+    {
+      "segment_id": "b27c61de",
+      "source_content": "In the **Access API authorized by Cerbos** section, we've added a table to display Cerbos authorization decisions for the authenticated user for the resources in the example app.",
+      "source_content_hash": "832208740193e5a683dec997aa1952d1bbb1958c9243b1959ccd8e6c89de3f2b",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "在**访问经Cerbos授权的API**部分，我们添加了表格来显示Cerbos对示例应用中资源的授权决策。"
+      }
+    },
+    {
+      "segment_id": "af016b8e",
+      "source_content": "Here is the overview of the policies defined in the `cerbos/policies/contact.yaml` file.",
+      "source_content_hash": "c00f6ea59350f774124b94e2fb44d7e4aefdb271c6e6f045502d056227f4ef47",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "以下是`cerbos/policies/contact.yaml`文件中定义的策略概览。"
+      }
+    },
+    {
+      "segment_id": "53414a10",
+      "source_content": "- A user with the **app-admin** role can perform all actions on all resources.\n- A user with the **app-user** role can perform read and update actions on resources they own.",
+      "source_content_hash": "da01d0b81a52c9d1a88237c370f78988bcc2b4ba855bf541d0bc7a6d9184477c",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- 具有 **app-admin** 角色的用户可以执行对所有资源的所有操作。\n- 具有 **app-user** 角色的用户只能对自身拥有的资源执行读取和更新操作。"
+      }
+    },
+    {
+      "segment_id": "46dadadd",
+      "source_content": "```yaml\nresourcePolicy:\n  version: default\n  resource: contact\n  rules:\n    - actions: ['read', 'create', 'update', 'delete']\n      effect: EFFECT_ALLOW\n      roles:\n        - app-admin\n\n    - actions: ['read', 'update']\n      effect: EFFECT_ALLOW\n      roles:\n        - app-user\n      condition:\n        match:\n          expr: request.resource.attr.author == request.principal.id\n```",
+      "source_content_hash": "7e89df0b3a2069369e55001098877a973ef39dce151c6df94f4397a9c4512d7f",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_46dadadd"
+      }
+    },
+    {
+      "segment_id": "dc825187",
+      "source_content": "#### Guarded Routes",
+      "source_content_hash": "5dccb5c64334cfe49f6df2a1c80a33659599c9226f77a151bd54493267ad2ea5",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "#### 受保护路由"
+      }
+    },
+    {
+      "segment_id": "833ce577",
+      "source_content": "In the Guarded Routes section at the bottom of the page, we've added 3 routes to showcase how Cerbos can be used to guard routes in your application.",
+      "source_content_hash": "b2b32b95fac97618000be96546933b64ca20039fa620247047b4ba838235af62",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "在页面底部的\"受保护路由\"部分，我们添加了3条路由来演示如何用Cerbos实现应用路由的权限控制。"
+      }
+    },
+    {
+      "segment_id": "dee201e7",
+      "source_content": "- Route the _Admin user role can access_: Can be accessed by the user with the app-admin role.\n- Route the _User and Admin user roles can access_: Can be accessed by the user with the app-user or app-admin role.\n- Route the _User does not have access to_: Can be accessed by the user who owns the resource.",
+      "source_content_hash": "a58d86e629fa03b85d88abb0bcbceffe5ac06d1d699ef203dc5b2d513ac024ac",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- _管理员角色可访问的路由_：仅限具有app-admin角色的用户访问。\n- _用户和管理员角色均可访问的路由_：允许具有app-user或app-admin角色的用户访问。\n- _用户无权限访问的路由_：仅限资源所有者用户访问。"
+      }
+    },
+    {
+      "segment_id": "43662a16",
+      "source_content": "## Closing thoughts",
+      "source_content_hash": "b756531a66f9dee46768162c325d4b6e106e6a839ce1b887e860ef4e1ced43ca",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 结语"
+      }
+    },
+    {
+      "segment_id": "85821ad3",
+      "source_content": "In this article, we have seen how to integrate SAML SSO with Jackson and Cerbos. We have implemented authentication and authorization using SAML SSO, Jackson and Cerbos.",
+      "source_content_hash": "588036e01f7dd516e7742f9af231f6871d99d7f078725c52e01aa535b043f497",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "本文演示了如何通过Jackson和Cerbos集成SAML单点登录功能，实现了基于SAML SSO的身份认证与授权体系。"
+      }
+    },
+    {
+      "segment_id": "228d01d5",
+      "source_content": "This opens up whole new possibilities for enterprise apps using Jackson and Cerbos. I’d love to hear of all the cool apps and features you are going to build, please reach out to Jackson or Cerbos if you found this article useful.",
+      "source_content_hash": "288fc154a0ed1551508e4bf99753adcb267a930ddc8fe8da4a3ac0f5be487332",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "这为使用Jackson和Cerbos的企业级应用开启了全新可能。如果您基于本文构建了创新应用，欢迎联系Jackson或Cerbos团队分享成果。"
+      }
+    },
+    {
+      "segment_id": "85b17c36",
+      "source_content": "Access the source code for this article here: [https://github.com/boxyhq/jackson-cerbos](https://github.com/boxyhq/jackson-cerbos)",
+      "source_content_hash": "99dc622301400a6370d4ec0c34a51d0c153d93587a00d6f1926f9de4d634985a",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "本文完整源代码请访问：[https://github.com/boxyhq/jackson-cerbos](https://github.com/boxyhq/jackson-cerbos)"
+      }
+    },
+    {
+      "segment_id": "f210f942",
+      "source_content": "## Learn More",
+      "source_content_hash": "8c5b49d818690a0d06d280f25e2a3d692b69406c4e0a9d1889bbd7277cd78b11",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 了解更多"
+      }
+    },
+    {
+      "segment_id": "2dbbb313",
+      "source_content": "To learn more about SAML Jackson and Cerbos, take a look at the following resources:",
+      "source_content_hash": "7c4d5a1227861cddceacab1462f69bc37d4f838681b9e18ebdc4974d455006ae",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "关于SAML Jackson和Cerbos的更多资源："
+      }
+    },
+    {
+      "segment_id": "13f388ba",
+      "source_content": "- [BoxyHQ Website](https://boxyhq.com/)\n- [Cerbos Website](https://cerbos.dev/)\n- [SAML Jackson Documentation](https://boxyhq.com/docs/jackson/overview)\n- [Cerbos Documentation](https://docs.cerbos.dev/cerbos/latest/index.html)",
+      "source_content_hash": "d31445a88cc7f7e70639f2dbd9d5fbc74caaf4995c4a3651fe621175093dc102",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- [BoxyHQ官网](https://boxyhq.com/)\n- [Cerbos官网](https://cerbos.dev/)\n- [SAML Jackson文档](https://boxyhq.com/docs/jackson/overview)\n- [Cerbos文档](https://docs.cerbos.dev/cerbos/latest/index.html)"
+      }
+    }
+  ],
+  "target_i18n_subpath": "docusaurus-plugin-content-blog/2023-07-240boxyhq-cerbos-merging-sso-and-authorization.md",
+  "last_updated_timestamp": "2025-06-08T18:49:09.305356+00:00",
+  "schema_version": "1.0",
+  "translated_versions": {
+    "zh-CN": "484ed6aa5bdf0623e8263ee7e412659dd934904197c767b79979c16044d6878a"
+  }
+}

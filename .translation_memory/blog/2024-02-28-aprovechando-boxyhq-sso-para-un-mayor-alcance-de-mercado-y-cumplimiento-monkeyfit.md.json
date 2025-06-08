@@ -1,0 +1,192 @@
+{
+  "source_file_path_relative_to_docusaurus_root": "blog/2024-02-28-aprovechando-boxyhq-sso-para-un-mayor-alcance-de-mercado-y-cumplimiento-monkeyfit.md",
+  "source_file_content_hash": "385bb220339de9df4c2f6859e5ccb03717456a314dc85819777cad25f4839b7b",
+  "segments": [
+    {
+      "segment_id": "58cfcc64",
+      "source_content": "---\ndescription: 'La documentación clara y la naturaleza de código abierto hicieron de BoxyHQ (SAML Jackson) la opción SSO perfecta para MonkeyFit. Lea el estudio de caso.'\nslug: aprovechando-boxyhq-sso-para-un-mayor-alcance-de-mercado-y-cumplimiento-monkeyfit\ntitle: 'Aprovechando el SSO de código abierto de BoxyHQ para un mayor alcance y cumplimiento del mercado: MonkeyFit'\ntags_disabled: [developer, security, open-source, developerfirst, case-study]\nimage: /images/success-stories/monkeyfit-case-study.png\nhide_table_of_contents: true\nauthor: Sama - Carlos Samame\nauthor_title: Co-founder & COO @BoxyHQ\nauthor_url: https://www.linkedin.com/in/samame/\nauthor_image_url: /images/authors/sama.jpg\n---",
+      "source_content_hash": "d52e98e60ffc1f030d6eb1279901a85f5d54688b28dae4f20918e597da14ddda",
+      "node_type": "yaml",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_58cfcc64"
+      }
+    },
+    {
+      "segment_id": "17011a71",
+      "source_content": "import FeaturedQuote from \"../src/components/FeaturedQuote\";\nimport LearnMoreCTA from \"../src/components/ctas/LearnMoreCTA\";",
+      "source_content_hash": "6e5a9ed0c97ed26e0640282d2e843dc4fcefc87ff1a3ee7bf413ad0e3960d2bf",
+      "node_type": "mdxjsEsm",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_17011a71"
+      }
+    },
+    {
+      "segment_id": "42ad8e83",
+      "source_content": "En el siempre cambiante panorama tecnológico, las empresas enfrentan una multitud de desafíos en cuanto a escalabilidad, seguridad y cumplimiento normativo. El viaje de MonkeyFit, detallado en un caso de estudio, demuestra el poder de soluciones estratégicas para superar tales obstáculos. Su pasión por ofrecer software de nivel mundial y productos seguros en Perú y América Latina los llevó a adoptar la solución de Inicio Unico de Sesión - [Single Sign-On](/enterprise-sso) (SSO) de BoxyHQ, una elección que catalizó avances significativos en sus operaciones comerciales y posición en el mercado dentro de la región.",
+      "source_content_hash": "bc84643c2e99f33892af34b83fa074a8e6fcbd6ef97e80d5c036ae3891afac84",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "在不断变化的技术格局中，企业在可扩展性、安全性和合规性方面面临着诸多挑战。MonkeyFit的历程通过案例研究详细展示，战略解决方案在克服此类障碍方面的强大作用。他们致力于在秘鲁和拉丁美洲提供世界级软件和安全产品的热情，促使他们采用了BoxyHQ的企业级单点登录[Single Sign-On](/enterprise-sso)（SSO）解决方案，这一选择显著推动了其商业运营和市场地位的提升。"
+      }
+    },
+    {
+      "segment_id": "09a8fe76",
+      "source_content": "<LearnMoreCTA label=\"Read the interview in English\" newWindow={false} url=\"/blog/leveraging-boxyhqs-open-source-sso-for-greater-market-reach-and-compliance-monkeyfit\" />",
+      "source_content_hash": "ab781dbad4554084b40a12c0b0cc728c071cfa979ac1164ee7cda2c8836343a5",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_09a8fe76"
+      }
+    },
+    {
+      "segment_id": "418617bd",
+      "source_content": "## ¿Cuál fue la motivación para implementar SSO empresarial?",
+      "source_content_hash": "16de4ea7d4562d33a7074e717963aa8040df25c0ae95214525c85262013d3771",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 实施企业级SSO的动机是什么？"
+      }
+    },
+    {
+      "segment_id": "2fdadb08",
+      "source_content": "**José (Pepo) Arellano (MonkeyFit):** Teníamos un requerimiento específico para cumplir controles de seguridad con un cliente importante.",
+      "source_content_hash": "f659db075c68f731b896f4bbec734b21c6ff751036032469de09b90af8a253c3",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "**José (Pepo) Arellano (MonkeyFit):** 我们有一个特定需求，需要满足重要客户的安全控制要求。"
+      }
+    },
+    {
+      "segment_id": "ed7dde9c",
+      "source_content": "## ¿Qué factores llevaron a seleccionar BoxyHQ (Jackson) para esta implementación?",
+      "source_content_hash": "8e51dbbbff3f693db2fcce1207d9edf924d28cf9c356cc1b4d5b4d52382ec794",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 哪些因素促使您选择BoxyHQ（Jackson）进行此次实施？"
+      }
+    },
+    {
+      "segment_id": "a76548f8",
+      "source_content": "**José (Pepo) (MonkeyFit):** Nos gustó la facilidad que ofrece en cuanto a documentación, y por supuesto el hecho de que sea open source facilitó la implementación.",
+      "source_content_hash": "f6b32c6778c8cf3bb7d02e2b2bcc905ad405baa14f92f8810666903ef44c42db",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "**José (Pepo) (MonkeyFit):** 我们喜欢它提供的文档便利性，当然，其开源特性也大大简化了实施过程。"
+      }
+    },
+    {
+      "segment_id": "9329e3e0",
+      "source_content": "<FeaturedQuote personName=\"José (Pepo) Arellano\" personRole=\"CEO & Cofundador - MonkeyFit\" pictureSrc=\"/images/success-stories/jose-pepo-arellano-monkeyfit\">\n Durante el desarrollo, SAML Jackson proporcionó un flujo bien documentado y claro para hacer llamadas a la herramienta, reduciendo el tiempo en picos y en I+D en comparación con una integración directa con proveedores de identidad.\n</FeaturedQuote>",
+      "source_content_hash": "a92acb5b25cfb1364320ce62035ebfeed8e862c7e2760523089a42cb85737ad8",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_9329e3e0"
+      }
+    },
+    {
+      "segment_id": "0037ff70",
+      "source_content": "## ¿Puede ampliar sobre los beneficios directos y los beneficios indirectos (beneficios de segundo orden) que observó después de la adopción de la solución?",
+      "source_content_hash": "faabcf74c151f7a7fe473bf8017308d705bc12879a65eedec03b29576ef84a2d",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 能否详细说明采用该解决方案后观察到的直接效益和间接效益（二阶效益）？"
+      }
+    },
+    {
+      "segment_id": "bdc231b1",
+      "source_content": "**José (Pepo) (MonkeyFit):** Durante el desarrollo, [SAML Jackson](https://github.com/boxyhq/jackson) otorgó un flujo documentado y claro para realizar las llamadas a la herramienta, lo que aminoró el tiempo en spikes e I+D vs una integración directa con los proveedores de identidad. SAML Jackson nos permite ,en la actualidad, centrarnos en el mantenimiento y mejora de nuestro código y dejar de lado mantenimientos de la integración con los proveedores de identidad. Gracias a que SAML Jackson se encuentra Dockerizado, no tenemos problemas de downtime en una funcionalidad critica de la plataforma como lo es el signin y el signup. Debido al uso de SAML Jackson como middleware entre los proveedores de identidad ahora soportamos tanto SAML como OICD, lo que abre la puerta para futuros clientes.",
+      "source_content_hash": "b4ebd05042c78940992fbb580dedee773d4dae41cc5684c9b4f90f3658a0c3a0",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "**José (Pepo) (MonkeyFit):** 在开发过程中，[SAML Jackson](https://github.com/boxyhq/jackson)提供了清晰且文档完善的调用流程，相比直接与身份提供商集成，显著减少了技术预研和研发时间。目前，SAML Jackson使我们能够专注于代码的维护和改进，而无需操心与身份提供商的集成维护。由于SAML Jackson采用Docker化部署，平台关键功能如登录和注册未出现停机问题。通过将SAML Jackson作为身份提供商之间的中间件，我们现在同时支持SAML和OIDC协议，这为未来客户接入打开了大门。"
+      }
+    },
+    {
+      "segment_id": "3b7478ea",
+      "source_content": "## En términos de impacto comercial, ¿cuánto tiempo ahorró a su equipo?",
+      "source_content_hash": "805668a9f9ef955a410f367b877f99723ae52a705813b70acfca86fb5cc7c665",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 在商业影响方面，该方案为您的团队节省了多少时间？"
+      }
+    },
+    {
+      "segment_id": "c3a738de",
+      "source_content": "**José (Pepo) (MonkeyFit):** Calculamos un ahorro de por lo menos 5 sprints, pero en realidad lo más valioso además del tiempo fue el conocimiento, el framework acelera el desarrollo en gran medida.",
+      "source_content_hash": "dc79f0b3a4e53c47c5314d20126b14f83919306b5f34a6015443810bf57d4f09",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "**José (Pepo) (MonkeyFit):** 我们估算至少节省了5个冲刺周期，但实际上除了时间之外，最宝贵的是获得的知识，该框架极大加速了开发进程。"
+      }
+    },
+    {
+      "segment_id": "9f9e64f5",
+      "source_content": "## ¿La incorporación de BoxyHQ ayudó a acelerar su camino hacia la obtención de la certificación SOC 2 o ISO 27001?",
+      "source_content_hash": "2ec8141e74cdcb481f48bbdb83226e5b545c5c43f244bd4e927c7d526472bd72",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 采用BoxyHQ是否帮助加速了您获得SOC 2或ISO 27001认证的进程？"
+      }
+    },
+    {
+      "segment_id": "1042b50d",
+      "source_content": "**José (Pepo) (MonkeyFit):** Estamos en el camino, pero definitivamente si ayuda.",
+      "source_content_hash": "cfd7067b8e02a5f45fc38bce77827ef805bda3f425c0c7f6a94fda5802877691",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "**José (Pepo) (MonkeyFit):** 我们正在推进认证流程，这确实提供了助力。"
+      }
+    },
+    {
+      "segment_id": "35a77014",
+      "source_content": "## ¿Ha visto un crecimiento significativo en la adquisición de clientes empresariales como resultado directo de la utilización de SSO?",
+      "source_content_hash": "24fe01d8cad89fda846d89bbba561dfee5af14bc6ab995e6ccdbbc280037e460",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 使用SSO是否直接带来了企业客户获取的显著增长？"
+      }
+    },
+    {
+      "segment_id": "13d9cd70",
+      "source_content": "**José (Pepo) (MonkeyFit):** Si! Principalmente en industrias más conscientes en prácticas de seguridad de información. Es bastante bien recibido.",
+      "source_content_hash": "3b655c93ec7892133d8b2a68ec06db1bd3222ef42a9ba7d89c2bb0e962e1911c",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "**José (Pepo) (MonkeyFit):** 是的！特别是在更注重信息安全实践的行业领域，这一方案获得了高度认可。"
+      }
+    },
+    {
+      "segment_id": "6127963f",
+      "source_content": "<LearnMoreCTA label=\"Lea la historia de éxito de MonkeyFit\" newWindow={false} url=\"/success-stories/elevando-los-estandares-de-seguridad-latam-la-historia-de-exito-de-monkeyfit-boxyhq\" />",
+      "source_content_hash": "3e69c367fb529fb081e5274504cc0b1baa0f4fea950df0354bc1f72a6bb34f63",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_6127963f"
+      }
+    }
+  ],
+  "target_i18n_subpath": "docusaurus-plugin-content-blog/2024-02-28-aprovechando-boxyhq-sso-para-un-mayor-alcance-de-mercado-y-cumplimiento-monkeyfit.md",
+  "last_updated_timestamp": "2025-06-08T18:49:09.312437+00:00",
+  "schema_version": "1.0",
+  "translated_versions": {
+    "zh-CN": "385bb220339de9df4c2f6859e5ccb03717456a314dc85819777cad25f4839b7b"
+  }
+}

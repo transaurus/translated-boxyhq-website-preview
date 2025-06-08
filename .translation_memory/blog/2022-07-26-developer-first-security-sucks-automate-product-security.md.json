@@ -1,0 +1,202 @@
+{
+  "source_file_path_relative_to_docusaurus_root": "blog/2022-07-26-developer-first-security-sucks-automate-product-security.md",
+  "source_file_content_hash": "66e1cf2620783ed38630b0883b429695e4ab83e223b8be12db471fb006359213",
+  "segments": [
+    {
+      "segment_id": "58cfcc64",
+      "source_content": "---\nslug: developer-first-security-sucks-automate-product-security\ntitle: 'Developer-first Security sucks! Why is it essential to automate product security?'\nauthor: Sama - Carlos Samame\nauthor_title: Co-founder & COO @BoxyHQ\nauthor_url: https://www.linkedin.com/in/samame/\nauthor_image_url: /images/authors/sama.jpg\ntags_disabled: [developer, security, cybersecurity, devsecops, appsec]\nimage: /img/blog/security-sucks-meme.jpeg\n---",
+      "source_content_hash": "123051a71919e71362d39d38d9058611a80471fd358eb45c872c648ef5edb53a",
+      "node_type": "yaml",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_58cfcc64"
+      }
+    },
+    {
+      "segment_id": "8d66f911",
+      "source_content": "Let’s start with some facts to understand why it sucks!",
+      "source_content_hash": "7839f4914e24481571036660c6186b99797eb5dbe493c34992294af23f057c9d",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "让我们从一些事实开始，理解为什么现状如此糟糕！"
+      }
+    },
+    {
+      "segment_id": "ad8fd492",
+      "source_content": "On one hand:",
+      "source_content_hash": "a5ecfa3c9181e0bc48dc8f7b1808574b03355aa5b858ab07dea8bd349ed965c0",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "一方面："
+      }
+    },
+    {
+      "segment_id": "4ddf6ae7",
+      "source_content": "- Cybercrime went up 600% due to the COVID-19 Pandemic\n- Data breaches and cyber attacks in 2021 were 5.1 billion breached records, this is 11% more than in 2020\n- 79% of companies have experienced at least one cloud data breach in the past 18 months\n- Software supply chain attacks jumped over 300% in 2021\n- It is estimated that worldwide, cyber crimes will cost $10.5 trillion annually by 2025.",
+      "source_content_hash": "24a4a95b87ffd7ac5ab17e9f9217834ea0dd56db15ed39043e17544fc571e08a",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- 由于COVID-19疫情，网络犯罪激增600%\n- 2021年数据泄露和网络攻击导致51亿条记录外泄，较2020年增长11%\n- 79%的企业在过去18个月内至少遭遇过一次云数据泄露\n- 2021年软件供应链攻击激增超300%\n- 预计到2025年，全球网络犯罪年损失将达10.5万亿美元"
+      }
+    },
+    {
+      "segment_id": "2df4f75f",
+      "source_content": "(Data from Purplesec, IT Governance, VentureBeat)",
+      "source_content_hash": "b0cf3cb64ee511398920fd9afccb9b22d58414e2ff65229ad7f540d6e9e81cd4",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "（数据来源：Purplesec、IT Governance、VentureBeat）"
+      }
+    },
+    {
+      "segment_id": "98cfbd53",
+      "source_content": "On the other hand:",
+      "source_content_hash": "240aea6f9f40c923d0ae367d3dc4220ae5b6f2493ff7a2e642660baf71e8f031",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "另一方面："
+      }
+    },
+    {
+      "segment_id": "0cc488ed",
+      "source_content": "- 70% of development teams always or frequently skip security steps due to time pressures when completing projects\n- Almost 60% of devs are releasing code 2x faster, thanks to DevOps.\n- In 2021, only 20% of organizations have fully integrated security into the development\n- Security has low priority. 67% of developers surveyed by Secure Code Warrior admitted that they routinely left known vulnerabilities and exploits in their code\n- Github expects the number of software developers using its platform (56 million in 2020), to grow to 100 million developers in 2025",
+      "source_content_hash": "e3f881b571b517e8999aeb34a27047719d922f189fce95cb25040283ea786e29",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- 70%的开发团队因项目时间压力经常跳过安全步骤\n- 近60%开发者借助DevOps实现代码发布速度翻倍\n- 2021年仅20%的企业将安全完全集成到开发流程中\n- 安全优先级低下：Secure Code Warrior调查显示67%开发者承认会故意遗留已知漏洞\n- GitHub平台开发者数量（2020年5600万）预计2025年将达1亿"
+      }
+    },
+    {
+      "segment_id": "73ab96a3",
+      "source_content": "(Invicti Security, Gitlab, GitHub, VentureBeat)",
+      "source_content_hash": "d6660cc4ae28538881e2e1f138871c363b5e183d24defe212fc72a73c64946d5",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "（数据来源：Invicti Security、Gitlab、GitHub、VentureBeat）"
+      }
+    },
+    {
+      "segment_id": "7499a4e7",
+      "source_content": "**Security vs Developers**",
+      "source_content_hash": "f2c7b6d9ed73919cdfeebdb2e4482abc1cc0ba473765f384c1a760d66382e455",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "**安全团队vs开发者**"
+      }
+    },
+    {
+      "segment_id": "517051a7",
+      "source_content": "Security teams focus on planning secure IT environments, but developers are asked to focus on productivity while they are also tasked with implementing these security plans. The main issue is that developers are often left out of security planning processes, creating a strained relationship between these two teams.",
+      "source_content_hash": "a5b9b0d78464a6f4f13b80daa0eedd40a195bbb14dd7faf4adf21496fc9ef777",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "安全团队专注规划安全IT环境，而开发者既要保证生产力又要实施这些安全方案。核心矛盾在于开发者常被排除在安全规划流程之外，导致团队关系紧张。"
+      }
+    },
+    {
+      "segment_id": "135468ee",
+      "source_content": "It is important to build a healthy relationship where trust, communication, and collaboration are key to moving toward the organization’s north star. But traditional security teams sometimes see themselves as inspectors of the developer's work. And that attitude needs to change - “when you’re a hammer, everything is a nail”.",
+      "source_content_hash": "ff17411ea47660608bba74c2b77b93acec1bfd043f7ca0ad04d3f48c19effe0c",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "建立基于信任、沟通与协作的健康关系至关重要。但传统安全团队常以\"代码审查者\"自居，这种\"锤子眼里都是钉子\"的思维亟需改变。"
+      }
+    },
+    {
+      "segment_id": "33331f27",
+      "source_content": "Did you know that in “Gartner's Top Strategic Technology Trends for 2022: Cybersecurity Mesh”, the word \"developer\" is not included not even once? We were shocked about it; developers need to have a leading role in cybersecurity!",
+      "source_content_hash": "208b0f507db5ecb2c0fefe34f140da6a5ca3da3851d4ef6ca6233c584de6fce0",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "你知道吗？《Gartner 2022年顶级战略技术趋势：网络安全网格》全文竟未提及\"开发者\"一词！开发者本应在网络安全中扮演核心角色。"
+      }
+    },
+    {
+      "segment_id": "50746522",
+      "source_content": "**It’s “Shift Left Security” time!**",
+      "source_content_hash": "f0e8217b06622f6ad6832a4377622ae18d7da90b64d19e716c816662b42f2759",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "**\"左移安全\"正当时！**"
+      }
+    },
+    {
+      "segment_id": "95e9ba12",
+      "source_content": "With shift left security we mean moving security sooner in the development process.\nTeams should provide developers with the right tools to do their job securely; this is why it is essential to automate product security.",
+      "source_content_hash": "3d610f4fca003fb40c7dd274522ca12679d8d25c72cc5a2f7b38004f7ba92c93",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "\"左移安全\"意味着将安全防护前置到开发早期。团队应为开发者提供可靠的安全工具，这正是自动化产品安全的意义所在。"
+      }
+    },
+    {
+      "segment_id": "13d9cd70",
+      "source_content": "But most of the new security solutions are focused on selling to the CISOs and their security teams, maybe because they are the ones with the budget for “security”; but what about developers? Most of their new solutions are oriented toward productivity, which makes sense since we live in an agile world, but what if there were new developer-first security solutions? Well, it is about time; a recent survey from Forrester shows that last year 27% of organizations had their development teams holding the budget for application security tools and that number has increased to 37% this year.",
+      "source_content_hash": "e9903e7ce2bf722eb07274877136b505934666f11680adae0b1087837d163584",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "但多数新兴安全方案聚焦CISO及其安全团队——或许因其掌握安全预算。开发者呢？Forrester调查显示，去年27%的企业由开发团队持有应用安全工具预算，今年该比例已升至37%。"
+      }
+    },
+    {
+      "segment_id": "29528c8d",
+      "source_content": "**Developer-first security Tools**",
+      "source_content_hash": "efb5f254d12f921de432cca9884c1e1b80f616544614c8a96aea7121cd5d635f",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "**开发者优先的安全工具**"
+      }
+    },
+    {
+      "segment_id": "c504c207",
+      "source_content": "While some security tools for developers have started to appear, it is still early days. The ecosystem needs solutions to automate security for developers and most importantly, that is reliable. Our hypothesis is that the most important products will come from the open-source community; they have a genuine interest in supporting and empowering developers.",
+      "source_content_hash": "0b015e9abbe804c84f951581a7ea7de66c224fa85f56b922d7a9b8eaf7f4bbc2",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "虽然开发者安全工具初现端倪，但生态仍需更多自动化、高可靠性的解决方案。我们相信最具价值的产品将来自开源社区——他们真正致力于赋能开发者。"
+      }
+    },
+    {
+      "segment_id": "98d26038",
+      "source_content": "We are consolidating a list of reliable open source developer-first security tools for security, if you know of a project we should consider, or if you would like to have access to this list, please send me an [email](mailto:sama@boxyhq.com) or/and help us spread the word! 🙌",
+      "source_content_hash": "310b051d7cb8f7e8c8e14870fd475c855b8a28d602509632432706d2cbb2b390",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "我们正在整合可靠的开源开发者安全工具清单。如有推荐项目或需获取该清单，欢迎发送[邮件](mailto:sama@boxyhq.com)或协助传播！🙌"
+      }
+    },
+    {
+      "segment_id": "d3649a1e",
+      "source_content": "![Security risks everywhere](/img/blog/security-sucks-meme.jpeg)",
+      "source_content_hash": "b57705f61e1d07233bccf24d80241d91b348345841325fd4e428bad183c1b349",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![无处不在的安全风险](/img/blog/security-sucks-meme.jpeg)"
+      }
+    }
+  ],
+  "target_i18n_subpath": "docusaurus-plugin-content-blog/2022-07-26-developer-first-security-sucks-automate-product-security.md",
+  "last_updated_timestamp": "2025-06-08T18:49:09.319872+00:00",
+  "schema_version": "1.0",
+  "translated_versions": {
+    "zh-CN": "66e1cf2620783ed38630b0883b429695e4ab83e223b8be12db471fb006359213"
+  }
+}

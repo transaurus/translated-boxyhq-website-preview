@@ -1,0 +1,222 @@
+{
+  "source_file_path_relative_to_docusaurus_root": "blog/2023-11-27-unlocking-business-growth-a-conversation-with-dubs-founder.md",
+  "source_file_content_hash": "333ae7d28c0465ccbb76b7f365c8120a91e9e083266065d6689d41ecff117e9b",
+  "segments": [
+    {
+      "segment_id": "58cfcc64",
+      "source_content": "---\nslug: unlocking-business-growth-a-conversations-with-dubs-founder\ntitle: \"Unlocking Business Growth: A Conversation with Dub's Founder\"\ndescription: \"We interviewed Steven Tey from Dub to find out how they leveraged BoxyHQ's Enterprise SSO solution.\"\ntags_disabled:\n  [\n    developer,\n    security,\n    cybersecurity,\n    devsecops,\n    open-source,\n    developerfirst,\n    case-study,\n  ]\nimage: /images/success-stories/dub-case-study.png\nhide_table_of_contents: true\nauthor: Nathan Tarbert\nauthor_title: Community Engineer @BoxyHQ\nauthor_url: https://github.com/NathanTarbert\nauthor_image_url: /images/authors/nathan.jpg\n---",
+      "source_content_hash": "c16c21f9880c7af287666dc5fc9df35a577b7881d0963168a007985638fde776",
+      "node_type": "yaml",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_58cfcc64"
+      }
+    },
+    {
+      "segment_id": "2fdadb08",
+      "source_content": "[Dub](https://dub.co) is a cutting-edge URL-shortening service that simplifies and enhances your online experience. With Dub, you can convert long, unwieldy URLs into concise and user-friendly short links with just a few clicks. This means you can share links on social media, in emails, or in your documents more efficiently and aesthetically",
+      "source_content_hash": "87d339f238c3e60538144e9c94abc83ea68fc8f371d6dc4c87ce46fa21626271",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "[Dub](https://dub.co) 是一款前沿的短链接服务，它能简化和提升您的在线体验。通过 Dub，只需点击几下，您就能将冗长繁琐的 URL 转换为简洁且用户友好的短链接。这意味着您可以更高效、更美观地在社交媒体、电子邮件或文档中分享链接。"
+      }
+    },
+    {
+      "segment_id": "f2c2bdd0",
+      "source_content": "**Q:** Good day, we have a special guest with us today, Steven Tey, the Founder of Dub. We're going to delve into the fascinating journey of Dub and the transformative power of Enterprise SSO. Welcome, Steven!",
+      "source_content_hash": "cd5e4601a4de301560d7069337dc0e030cac7565ed3e81a459a70121609d10a7",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "**问：** 大家好，今天我们有一位特别的嘉宾，Dub 的创始人 Steven Tey。我们将深入探讨 Dub 的精彩历程以及企业级单点登录（SSO）的变革力量。欢迎 Steven！"
+      }
+    },
+    {
+      "segment_id": "a76548f8",
+      "source_content": "**Steven Tey:** Thank you for having me. It's a pleasure to be here.",
+      "source_content_hash": "70f30f3656572d6204ce77b5620f7fe0a969736a7dd79e583c40c334e33b4341",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "**Steven Tey：** 谢谢邀请，很高兴来到这里。"
+      }
+    },
+    {
+      "segment_id": "4b1d2d7d",
+      "source_content": "**Q:** Let's begin at the beginning. What motivated Dub to implement Enterprise SSO?",
+      "source_content_hash": "b3b35ab6dcac02e23fd1ded289dc7a14e3210a3620716a1d35da0733cccdf988",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "**问：** 让我们从头开始。是什么促使 Dub 决定实施企业级 SSO？"
+      }
+    },
+    {
+      "segment_id": "dfe931a2",
+      "source_content": "**Steven Tey:** Absolutely. Dub realized the importance of streamlining user authentication and boosting security. Our motivation behind implementing Enterprise SSO was twofold. We wanted to simplify user access, making it hassle-free for both our clients and employees, while also fortifying our security measures.",
+      "source_content_hash": "3746448a6eb97999c54ee5525710a46cfa89f05befd9195a5f8bf4b7f6b60183",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "**Steven Tey：** 当然。Dub 意识到简化用户认证和提升安全性的重要性。我们实施企业级 SSO 的动机是双重的：既希望简化用户访问，让客户和员工都能轻松操作，同时也想加强我们的安全措施。"
+      }
+    },
+    {
+      "segment_id": "4daf5cdd",
+      "source_content": "**Q:** It's clear that enhancing both user experience and security were key drivers. Now, could you share with us what factors led you to select BoxyHQ's Jackson for this implementation?",
+      "source_content_hash": "cd168fbcfac50f5f8e1d0c352d313610b5e70831ddc60ae44ae9c0b8012739d4",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "**问：** 显然，提升用户体验和安全性是关键驱动力。那么，能否分享一下是什么因素让您选择了 BoxyHQ 的 Jackson 来实现这一功能？"
+      }
+    },
+    {
+      "segment_id": "bdc231b1",
+      "source_content": "**Steven Tey:** Certainly. We chose BoxyHQ (Jackson) for its robust SSO capabilities and impeccable reputation for reliability. It wasn't just about features; it was about selecting a partner who shared our commitment to a seamless, secure user experience. We saw BoxyHQ as a trusted partner with a deep understanding of our security needs.",
+      "source_content_hash": "c7beebc7a9cc879b5b5e0d876f46a9452eea6600b788924475d931c432411a8d",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "**Steven Tey：** 当然。我们选择 BoxyHQ（Jackson）是因为它强大的 SSO 功能以及卓越的可靠性声誉。这不仅仅是功能的问题，更是选择一个与我们一样致力于提供无缝、安全用户体验的合作伙伴。我们认为 BoxyHQ 是一个值得信赖的伙伴，深刻理解我们的安全需求。"
+      }
+    },
+    {
+      "segment_id": "97ae4a01",
+      "source_content": "**Q:** The choice of a reliable partner is crucial in such implementations. Now, let's talk about the benefits. What were the direct and soft benefits Dub observed following the adoption of BoxyHQ’s SSO solution?",
+      "source_content_hash": "a7ea36532776540611ed505afcbfa85b87a084a3cebb4904e32ccfa0d61d9d5d",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "**问：** 在这种实施过程中，选择可靠的合作伙伴至关重要。现在，让我们谈谈收益。Dub 在采用 BoxyHQ 的 SSO 解决方案后，观察到了哪些直接和间接的收益？"
+      }
+    },
+    {
+      "segment_id": "c3a738de",
+      "source_content": "**Steven Tey:** The benefits were manifold. We saw reduced login friction, enhanced security, and simplified user management. These translated into soft benefits, including improved user satisfaction, increased productivity, and a heightened sense of trust among our clients and partners.",
+      "source_content_hash": "2f36c541419adbf3730638c8e2b2356e17bbc0bf4101091261c76f378b41e270",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "**Steven Tey：** 收益是多方面的。我们看到了登录摩擦的减少、安全性的提升以及用户管理的简化。这些转化为间接收益，包括用户满意度的提高、生产力的提升以及客户和合作伙伴之间信任感的增强。"
+      }
+    },
+    {
+      "segment_id": "3cfe6286",
+      "source_content": "**Q:** It's evident that implementing Enterprise SSO had a profound impact on your organization. Can you share with us how much time it saved your team in terms of business impact?",
+      "source_content_hash": "7501a73260032b4a1c8eed8381277d3f6bd8b9e228725bf8f5f7e0c66abee483",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "**问：** 显然，实施企业级 SSO 对您的组织产生了深远影响。能否分享一下在业务影响方面，它为您的团队节省了多少时间？"
+      }
+    },
+    {
+      "segment_id": "1042b50d",
+      "source_content": "**Steven Tey:** The time savings were substantial. With streamlined authentication processes and reduced password-related issues, our employees and clients could access resources faster. This led to significantly increased operational efficiency and allowed our team to focus on what they do best, build really great software.",
+      "source_content_hash": "c05abbcaea2fb4771700e66ec709432522055f43e560c3efaabe0da8cffaa4c1",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "**Steven Tey：** 节省的时间非常可观。通过简化的认证流程和减少密码相关问题，我们的员工和客户能够更快地访问资源。这显著提高了运营效率，并让我们的团队能够专注于他们最擅长的事情——开发出色的软件。"
+      }
+    },
+    {
+      "segment_id": "aa1e7006",
+      "source_content": "**Q:** That's impressive. And did incorporating BoxyHQ assist in accelerating your journey toward achieving SOC 2 compliance, by any chance?",
+      "source_content_hash": "923cb6f82dea155e991133c636e38124ae244262ba4e1acf0efe638acf44e9d3",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "**问：** 这令人印象深刻。那么，采用 BoxyHQ 是否在某种程度上加速了您实现 SOC 2 合规的进程？"
+      }
+    },
+    {
+      "segment_id": "13d9cd70",
+      "source_content": "**Steven Tey:** While SOC 2 compliance wasn't our primary goal, the enhanced security measures certainly facilitated the path to compliance. It's about creating a robust security foundation that aligns with industry standards, which in turn positively impacts our overall security posture.",
+      "source_content_hash": "1b67e1389e5e29b5b91b47eae0f8553ae90248e2dd4d979e0ae63be9c3f3e309",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "**Steven Tey：** 虽然 SOC 2 合规并非我们的主要目标，但增强的安全措施确实为合规之路提供了便利。关键在于建立一个符合行业标准的强大安全基础，这反过来对我们的整体安全态势产生了积极影响。"
+      }
+    },
+    {
+      "segment_id": "29528c8d",
+      "source_content": "**Q:** Finally, have you seen any significant growth in acquiring enterprise clients as a direct result of utilizing SSO?",
+      "source_content_hash": "843a50b649f39b67d8105f62719afae6eb9d17a6af58814799843ddbd96970aa",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "**问：** 最后，您是否看到由于采用 SSO 而直接带来的企业客户显著增长？"
+      }
+    },
+    {
+      "segment_id": "c504c207",
+      "source_content": "**Steven Tey:** Absolutely, we have. In fact, following the implementation of SSO, we secured five enterprise clients in a two-week period, leveraging BoxyHQ's SAML/SSO capabilities. The improved user experience and heightened security measures made onboarding new clients smoother, which contributed to our growth in the enterprise sector.",
+      "source_content_hash": "a451a0198725bfa0e4a77e4882cbff0a390867309dbcbbad4380218d1177bd28",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "**Steven Tey：** 当然，我们确实看到了。事实上，在实施 SSO 后，我们利用 BoxyHQ 的 SAML/SSO 功能，在两周内成功签下了五家大型企业客户。改进的用户体验和提升的安全措施使得新客户的上线过程更加顺畅，这为我们在企业领域的增长做出了贡献。"
+      }
+    },
+    {
+      "segment_id": "98d26038",
+      "source_content": "**Q:** That's an impressive growth trajectory. Before we conclude, could you share any insights about Dub's use case or any remarkable experiences with BoxyHQ's support during the implementation process?",
+      "source_content_hash": "a6833fe8273a5b437708ad78b902fab1a62787fce7dbd36935a3bd1708cd417d",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "**问：** 这是一个令人印象深刻的增长轨迹。在结束之前，能否分享一下 Dub 的用例，或者在实施过程中与 BoxyHQ 支持团队合作的一些突出体验？"
+      }
+    },
+    {
+      "segment_id": "d3649a1e",
+      "source_content": "**Steven Tey:** Our journey with BoxyHQ was smooth from the beginning. The support they provided was responsive and helpful, making the implementation process efficient. We found a true partner in them, and the results speak for themselves.",
+      "source_content_hash": "ff23705c0309dc91ccd7dabd065edad66c7382090998d3156a7f02773fd91bca",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "**Steven Tey：** 我们与 BoxyHQ 的合作从一开始就很顺利。他们提供的支持响应迅速且非常有帮助，使得实施过程高效顺畅。我们在他们身上找到了真正的合作伙伴，而结果也证明了这一点。"
+      }
+    },
+    {
+      "segment_id": "4d52a261",
+      "source_content": "**Q:** Steven, thank you for sharing your insights into Dub's remarkable journey toward Enterprise SSO with BoxyHQ's SAML Jackson. It's a testament to the transformative power of technology and the value of selecting the right partners. We look forward to seeing more from Dub in the future.",
+      "source_content_hash": "ff7c905ca912654d00b7ef64e26bdd1248332c3888f69e25b8f96f4c5c27070b",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "**问：** Steven，感谢您分享 Dub 与 BoxyHQ 的 SAML Jackson 合作实现企业级 SSO 的精彩历程。这证明了技术的变革力量以及选择正确合作伙伴的价值。我们期待未来能看到 Dub 更多的成就。"
+      }
+    },
+    {
+      "segment_id": "23dfb152",
+      "source_content": "**Steven Tey:** Thank you. It's been a pleasure sharing our story, and we're excited about what lies ahead for Dub.",
+      "source_content_hash": "9ed6540d0f011063b6b8020ff9115d072feb36f8585d8bbdc7aa66b7974acce8",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "**Steven Tey:** 谢谢。很高兴能分享我们的故事，我们对Dub的未来充满期待。"
+      }
+    },
+    {
+      "segment_id": "d37a3b88",
+      "source_content": "<div style={{ textAlign: \"center\" }}>\n  <a href=\"/success-stories/safeguarding-trust-boxyhq-sso-enhances-dubs-security\" className=\"button button-primary\">Read Dub's success story</a>\n</div>",
+      "source_content_hash": "164e983cbc7c1746277e0bdb7279e399e697da4c9045aad2801c1fa449a37cd0",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_d37a3b88"
+      }
+    }
+  ],
+  "target_i18n_subpath": "docusaurus-plugin-content-blog/2023-11-27-unlocking-business-growth-a-conversation-with-dubs-founder.md",
+  "last_updated_timestamp": "2025-06-08T18:49:09.288294+00:00",
+  "schema_version": "1.0",
+  "translated_versions": {
+    "zh-CN": "333ae7d28c0465ccbb76b7f365c8120a91e9e083266065d6689d41ecff117e9b"
+  }
+}

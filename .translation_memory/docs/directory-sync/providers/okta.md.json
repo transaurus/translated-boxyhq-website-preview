@@ -1,0 +1,452 @@
+{
+  "source_file_path_relative_to_docusaurus_root": "docs/directory-sync/providers/okta.md",
+  "source_file_content_hash": "136e4bd0381f4cbf8eda43db35a65e1d301f4020977424682ea0010d57a5a6b9",
+  "segments": [
+    {
+      "segment_id": "58cfcc64",
+      "source_content": "---\ntitle: Okta SCIM v2.0\nsidebar_label: Okta SCIM v2.0\n---",
+      "source_content_hash": "10fbf35d4cb5a5eda22e5dff3d5e9a153e3393d46b2b5e21149395e9f27ef920",
+      "node_type": "yaml",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_58cfcc64"
+      }
+    },
+    {
+      "segment_id": "b3de8742",
+      "source_content": "# Okta SCIM v2.0",
+      "source_content_hash": "ef235c3070d0aa911623b48e4e99b1f0ae4711def1e4b2056ac986b6a94ab6f4",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "# Okta SCIM v2.0"
+      }
+    },
+    {
+      "segment_id": "3fbbcc07",
+      "source_content": "The following guide will walk you through the process of configuring SAML Jackson to use the Okta as a directory sync provider.",
+      "source_content_hash": "4fb1fd12f38f19d7bd3d5f52acd113fe0af14662f485acda084c84f48a5faa4c",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "本指南将引导您完成配置SAML Jackson以使用Okta作为目录同步提供商的流程。"
+      }
+    },
+    {
+      "segment_id": "279b6a65",
+      "source_content": "---",
+      "source_content_hash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "node_type": "thematicBreak",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "---"
+      }
+    },
+    {
+      "segment_id": "9fcbdce9",
+      "source_content": "### Create Okta Application",
+      "source_content_hash": "17eadddc48ad30a7ddd238f825cf50dcf50972e8b446d0aeef6651da75ad33a8",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 创建Okta应用程序"
+      }
+    },
+    {
+      "segment_id": "ad8fd492",
+      "source_content": "Click **Applications** from the left navigation menu and click **Browse App Catalog** button.",
+      "source_content_hash": "e25100246e0694133271c7259699c16b4d2d4634cb47edc603d7338afcb16713",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "从左导航菜单点击**Applications**，然后点击**Browse App Catalog**按钮。"
+      }
+    },
+    {
+      "segment_id": "86b54d44",
+      "source_content": "![Okta SCIM Step 1](/images/docs/jackson/dsync-providers/okta/1.png)",
+      "source_content_hash": "6b62286211c4eb6140ec3b96d3d2223fb8e765f8909421d05e7962a137a85109",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![Okta SCIM Step 1](/images/docs/jackson/dsync-providers/okta/1.png)"
+      }
+    },
+    {
+      "segment_id": "39b3772c",
+      "source_content": "Search for **SCIM 2.0 Test App (Oauth Bearer Token)** from the search box and choose the app called **SCIM 2.0 Test App (Oauth Bearer Token)**.",
+      "source_content_hash": "391fef78e03e3749015e8869599eae78a834b44e275777b757ceb20596f7161a",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "在搜索框中输入**SCIM 2.0 Test App (Oauth Bearer Token)**，选择名为**SCIM 2.0 Test App (Oauth Bearer Token)**的应用。"
+      }
+    },
+    {
+      "segment_id": "1acb9a05",
+      "source_content": "![Okta SCIM Step 2](/images/docs/jackson/dsync-providers/okta/2.png)",
+      "source_content_hash": "4b6cc859d7a9ec2abf8fc1c7cda635b621ec3786e24dbe16d3f22e5ff55f9dd2",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![Okta SCIM Step 2](/images/docs/jackson/dsync-providers/okta/2.png)"
+      }
+    },
+    {
+      "segment_id": "2df4f75f",
+      "source_content": "From the app page, click the **Add Integration** button.",
+      "source_content_hash": "d9ac5c253a7a5c2d0d30b206fd1e1dbbd2eee139e64c3711fbbf89384b9b3b48",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "在应用页面点击**Add Integration**按钮。"
+      }
+    },
+    {
+      "segment_id": "98cfbd53",
+      "source_content": "![Okta SCIM Step 3](/images/docs/jackson/dsync-providers/okta/3.png)",
+      "source_content_hash": "daa595c895b7ffa28fa47ecfab8af49e1ccce1eda154330770ebdd65db53716d",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![Okta SCIM Step 3](/images/docs/jackson/dsync-providers/okta/3.png)"
+      }
+    },
+    {
+      "segment_id": "ccc88b4c",
+      "source_content": "Give the app a name and click the **Next** button. Click **Done** to finish the creation of the app.",
+      "source_content_hash": "314f150251910b40a267349ad01e466b9854cd105038050c0a5d0ac053b7084f",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "为应用命名后点击**Next**按钮，点击**Done**完成应用创建。"
+      }
+    },
+    {
+      "segment_id": "d9172fa4",
+      "source_content": "![Okta SCIM Step 4](/images/docs/jackson/dsync-providers/okta/4.png)",
+      "source_content_hash": "9387f3e2a674f62740eeb28f3f4c75956a29470c69006ad99cbcfd3f98e2e180",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![Okta SCIM Step 4](/images/docs/jackson/dsync-providers/okta/4.png)"
+      }
+    },
+    {
+      "segment_id": "2b28cb1b",
+      "source_content": "---",
+      "source_content_hash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "node_type": "thematicBreak",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "---"
+      }
+    },
+    {
+      "segment_id": "b25f21be",
+      "source_content": "### Enable Okta SCIM Provisioning",
+      "source_content_hash": "984a39cf007d817c57238e1542939ca2dc7ba75d4c0601e91b46e18e94a5cc9b",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 启用Okta SCIM配置"
+      }
+    },
+    {
+      "segment_id": "7499a4e7",
+      "source_content": "In your application, click the **Provisioning** tab and click **Configure API Integration**.",
+      "source_content_hash": "8ebf5bcb4abf8c395a9670b7c21a2b3cf6077bed79b19f1d365ac253f835afbc",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "在您的应用中点击**Provisioning**标签页，然后点击**Configure API Integration**。"
+      }
+    },
+    {
+      "segment_id": "517051a7",
+      "source_content": "![Okta SCIM Step 5](/images/docs/jackson/dsync-providers/okta/5.png)",
+      "source_content_hash": "894d27e3133f80a6d26c747e2aaff1b60464d992ff159ca7077f93363c7ec940",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![Okta SCIM Step 5](/images/docs/jackson/dsync-providers/okta/5.png)"
+      }
+    },
+    {
+      "segment_id": "135468ee",
+      "source_content": "Check the **Enable API Integration** checkbox and enter the following information:",
+      "source_content_hash": "1c9bbb64ae26e385837ee445ed51d6f2d53328ef24bc5b63fd347dd1a9cbdf6e",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "勾选**Enable API Integration**复选框并输入以下信息："
+      }
+    },
+    {
+      "segment_id": "e7bc8c38",
+      "source_content": "- SCIM 2.0 Base URL\n- OAuth Bearer Token",
+      "source_content_hash": "11f996a0f50c8a523e0705fe7642bb6b2524b948e9e32beb303e3b5c6f347322",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- SCIM 2.0基础URL\n- OAuth持有者令牌"
+      }
+    },
+    {
+      "segment_id": "1042b50d",
+      "source_content": "You'll receive these information from Jackson when you create the directory sync connection either via the API or the Admin Portal.",
+      "source_content_hash": "3d4d57049055d1ea55a496e448dde8eb725d7cd3555673c786665439dd4c9c68",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "这些信息将通过Jackson在通过API或管理门户创建目录同步连接时提供。"
+      }
+    },
+    {
+      "segment_id": "aa1e7006",
+      "source_content": "Click **Test API Credentials** to test the connection to see if the credentials are correct then click the **Save** to save the credentials.",
+      "source_content_hash": "0622435206be55d83f035396a7ecd93a993662d47127d351943fcccf63c13de1",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "点击**Test API Credentials**测试连接凭证是否正确，然后点击**Save**保存凭证。"
+      }
+    },
+    {
+      "segment_id": "13d9cd70",
+      "source_content": "![Okta SCIM Step 6](/images/docs/jackson/dsync-providers/okta/6.png)",
+      "source_content_hash": "8a16abd86696ad9da94b1596e867be6f632356055a868e7955fb89416118ed50",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![Okta SCIM Step 6](/images/docs/jackson/dsync-providers/okta/6.png)"
+      }
+    },
+    {
+      "segment_id": "29528c8d",
+      "source_content": "You'll see a new setting page, click **To App** and enable the following settings:",
+      "source_content_hash": "2f316a08cc4bc734ce35ff2ade3567f8e3ebe61e7bb86d4a1d615173b9c4c6d4",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "您将看到新设置页面，点击**To App**并启用以下设置："
+      }
+    },
+    {
+      "segment_id": "c504c207",
+      "source_content": "![Okta SCIM Step 7](/images/docs/jackson/dsync-providers/okta/7.png)",
+      "source_content_hash": "89a06abfe2a7eaea59942ed3d2f0614140f5071d7b9deedc1a190a7ed0bbd0d1",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![Okta SCIM Step 7](/images/docs/jackson/dsync-providers/okta/7.png)"
+      }
+    },
+    {
+      "segment_id": "98d26038",
+      "source_content": "At this stage, you've successfully configured the Okta SCIM API integration.",
+      "source_content_hash": "356609bde08c36299dcaa638858dca962a54d194b61364fe0813ef1f649f459b",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "至此，您已成功配置Okta SCIM API集成。"
+      }
+    },
+    {
+      "segment_id": "51029da6",
+      "source_content": "---",
+      "source_content_hash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "node_type": "thematicBreak",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "---"
+      }
+    },
+    {
+      "segment_id": "e50bebbf",
+      "source_content": "### Assign Users",
+      "source_content_hash": "a6766ca81034fb4cec29363bba807307a2deb897ec0bce01eaf5ba41f74810bc",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 分配用户"
+      }
+    },
+    {
+      "segment_id": "23dfb152",
+      "source_content": "In your application, click the **Assignments** tab and select **Assign to People** from the dropdown **Assign**.",
+      "source_content_hash": "54bb9d10e356b3910b546884959346e11e9d65f1c431a20c16aaa13ac17550dc",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "在您的应用中点击**Assignments**标签页，从**Assign**下拉菜单中选择**Assign to People**。"
+      }
+    },
+    {
+      "segment_id": "1131ef75",
+      "source_content": "![Okta SCIM Step 8](/images/docs/jackson/dsync-providers/okta/8.png)",
+      "source_content_hash": "1fe7d165cb2089d31f555a187ec24ecd747053c20810a289996e87787c54863d",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![Okta SCIM Step 8](/images/docs/jackson/dsync-providers/okta/8.png)"
+      }
+    },
+    {
+      "segment_id": "8b2a52b1",
+      "source_content": "Select users you want to assign to the app and click the **Assign** button.",
+      "source_content_hash": "f1ba13c5d2e8d540b8d943ed62ccbb621a0c0149b456f7b27dda017b4d289071",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "选择要分配给应用的用户并点击**Assign**按钮。"
+      }
+    },
+    {
+      "segment_id": "5dae11e3",
+      "source_content": "![Okta SCIM Step 9](/images/docs/jackson/dsync-providers/okta/9.png)",
+      "source_content_hash": "36dc00be3fdbb1bbc5a87634ccc4c5d055be0c32d10ea411e4cdd24ae50e040a",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![Okta SCIM Step 9](/images/docs/jackson/dsync-providers/okta/9.png)"
+      }
+    },
+    {
+      "segment_id": "0bb95128",
+      "source_content": "After you click the **Assign** button, you'll see a new popup window with various fields. Confirm the field values and click the **Save and Go Back** button.",
+      "source_content_hash": "fe7c190577e3c3bbde3bb002ab7ac01da42db7caa9c2c54b56646d9fd01d3450",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "点击**Assign**按钮后，将弹出包含多个字段的新窗口。确认字段值后点击**Save and Go Back**按钮。"
+      }
+    },
+    {
+      "segment_id": "657c2b20",
+      "source_content": "![Okta SCIM Step 10](/images/docs/jackson/dsync-providers/okta/10.png)",
+      "source_content_hash": "f1afadab0334c1531d66a7c8c8d865a6e4c22ebef6579f2e9c0a1defdcf98d63",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![Okta SCIM Step 10](/images/docs/jackson/dsync-providers/okta/10.png)"
+      }
+    },
+    {
+      "segment_id": "803be95a",
+      "source_content": "---",
+      "source_content_hash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "node_type": "thematicBreak",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "---"
+      }
+    },
+    {
+      "segment_id": "d422fb13",
+      "source_content": "### Push Groups",
+      "source_content_hash": "b163d1b2d892a5da6533bc1faab5c543d669f24cffa2dc322f6ede4844371c7a",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 推送群组"
+      }
+    },
+    {
+      "segment_id": "f01228d3",
+      "source_content": "Navigate to the tab **Push Groups** and select **Find group by name** from the dropdown **Push Groups**.",
+      "source_content_hash": "c60c39f9fba0c072381a42be7aa397f2585f4a68dcd55a64b2b9bd65fc016e5d",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "导航至**Push Groups**标签页，从**Push Groups**下拉菜单中选择**Find group by name**。"
+      }
+    },
+    {
+      "segment_id": "afa378f7",
+      "source_content": "![Okta SCIM Step 11](/images/docs/jackson/dsync-providers/okta/11.png)",
+      "source_content_hash": "0387a85cdfd030958ed1cd532b02623abfd0ae8a485de423bfa14a8fcf5a6898",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![Okta SCIM Step 11](/images/docs/jackson/dsync-providers/okta/11.png)"
+      }
+    },
+    {
+      "segment_id": "e8e162a9",
+      "source_content": "Find the group you want to assign to the app and click the **Save** button.",
+      "source_content_hash": "997880fd745816ba8fd6d95471c3629bd89470baf4191caa6ff54d93f76c5743",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "找到您想要分配给应用程序的群组，点击**保存**按钮。"
+      }
+    },
+    {
+      "segment_id": "463ed165",
+      "source_content": "![Okta SCIM Step 12](/images/docs/jackson/dsync-providers/okta/12.png)",
+      "source_content_hash": "01d5d5866a9c84acf33c67046b7cf6d3c3d4e2e75e772d30a9476519adac8b53",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![Okta SCIM 步骤 12](/images/docs/jackson/dsync-providers/okta/12.png)"
+      }
+    },
+    {
+      "segment_id": "66819c78",
+      "source_content": "### FAQ",
+      "source_content_hash": "f985d80cd209759f3dc9c3a755b37f9025cb0004b5067b9678ae0300b3e76200",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 常见问题"
+      }
+    },
+    {
+      "segment_id": "0a103a02",
+      "source_content": "#### Why don't I see a DELETE event for a user that was removed in Okta?",
+      "source_content_hash": "363a60610001b1dbed4070e8b5c2bdf058eda5a591d4b14665248f1cd207b055",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "#### 为什么我没有看到Okta中被移除用户的DELETE事件？"
+      }
+    },
+    {
+      "segment_id": "8126f763",
+      "source_content": "Instead of executing a DELETE operation, Okta sends a request to the SCIM application to set the `active` attribute to `false`. Consequently, you will observe a `user.updated` event with the `active` attribute changed to `false` for users removed from the Okta application.",
+      "source_content_hash": "5165a6d506b1f4cd7e99d467bab1f9f253227fb8fc175ed6a80ffd87bcebdcea",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "Okta不会执行DELETE操作，而是向SCIM应用程序发送请求，将`active`属性设置为`false`。因此，对于从Okta应用程序中移除的用户，您会观察到`user.updated`事件，其中`active`属性被更改为`false`。"
+      }
+    },
+    {
+      "segment_id": "3a8d2b95",
+      "source_content": "#### Why is there no event for a user that was deactivated in Okta?",
+      "source_content_hash": "670f537b66e50823bc7217b77fe23f3f7a616ffd5f3a33a1e5d36cc840f90867",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "#### 为什么Okta中停用的用户没有触发事件？"
+      }
+    },
+    {
+      "segment_id": "5803caac",
+      "source_content": "Okta does not dispatch a specific deprovisioning event for users that are suspended. This omission of a deactivation event is a known issue with Okta.",
+      "source_content_hash": "ef2ad148901abbcea4ff80cd2c6cb34c3f224b435257ba861793cd39a3513151",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "Okta不会为被暂停的用户发送特定的取消配置事件。这种缺少停用事件的情况是Okta的一个已知问题。"
+      }
+    }
+  ],
+  "target_i18n_subpath": "docusaurus-plugin-content-docs/current/directory-sync/providers/okta.md",
+  "last_updated_timestamp": "2025-06-08T18:49:09.295837+00:00",
+  "schema_version": "1.0",
+  "translated_versions": {
+    "zh-CN": "136e4bd0381f4cbf8eda43db35a65e1d301f4020977424682ea0010d57a5a6b9"
+  }
+}

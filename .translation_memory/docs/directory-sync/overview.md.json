@@ -1,0 +1,102 @@
+{
+  "source_file_path_relative_to_docusaurus_root": "docs/directory-sync/overview.md",
+  "source_file_content_hash": "3cb51bbae7c64151162f9a7923cf78f7b23e96d1e78a16c3abd0b5adaedd3d62",
+  "segments": [
+    {
+      "segment_id": "58cfcc64",
+      "source_content": "---\ntitle: Directory Sync Docs\n---",
+      "source_content_hash": "10b7f100f2e3b382552b618e515bf8ace172f56d649e2d5dbea701b1b4274835",
+      "node_type": "yaml",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_58cfcc64"
+      }
+    },
+    {
+      "segment_id": "f85bbfb4",
+      "source_content": "# Directory Sync",
+      "source_content_hash": "917cf314a3f05b34f48a118569e1ae8d9ca97bb58a7b61e72e2517464c4cccbd",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "# 目录同步"
+      }
+    },
+    {
+      "segment_id": "6ef78e84",
+      "source_content": "Directory sync helps organizations automate the provisioning and de-provisioning of their users. It is based on the System for Cross-domain Identity Management (SCIM) protocol.",
+      "source_content_hash": "6ae7aa8458e3fc2778ccc4f4f0c3e365130502a2633db9d2acc771299a759c50",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "目录同步帮助组织自动化管理用户的创建与删除流程。该系统基于跨域身份管理协议（SCIM）构建。"
+      }
+    },
+    {
+      "segment_id": "53eaf0e1",
+      "source_content": "As a result, it streamlines the user lifecycle management process by saving valuable organizational hours, creating a single truth source of the user identity data, and facilitating them to keep the data secure.",
+      "source_content_hash": "7fa90bf42e724bb34cc9b052c79573dfe45ea8ebd252bfe0233a81ea3f174fec",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "通过建立统一的用户身份数据源，该功能可节省大量组织管理时间，简化用户生命周期管理流程，同时确保数据安全。"
+      }
+    },
+    {
+      "segment_id": "8ac585fb",
+      "source_content": "Directory Sync is part of our SAML Jackson service (and npm library) from v1.2.1 onwards. Follow the instructions in [SAML Jackson](../jackson/deploy/index.md) for details on deployment. Or check out our [GitHub repo](https://github.com/boxyhq/jackson#directory-sync).",
+      "source_content_hash": "3f2a697129864d285da02e7cd5a67598922903f61c2b85071af41f0c5a3fa635",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "目录同步功能自v1.2.1版本起集成于我们的SAML Jackson服务（及npm库）。部署详情请参阅[SAML Jackson](../jackson/deploy/index.md)文档，或访问[GitHub代码库](https://github.com/boxyhq/jackson#directory-sync)。"
+      }
+    },
+    {
+      "segment_id": "180bddb1",
+      "source_content": "We currently only support SCIM 2.0 protocol because SCIM 1.1 is deprecated and support will be discontinued on December 2nd, 2022. If you still need support for SCIM 1.1 and are unable to move away from it then please contact us.",
+      "source_content_hash": "4184f036e066c4a5bd1a99083b2064e5cce801d35e00041bc2b4bbd801c24f83",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "当前仅支持SCIM 2.0协议，因SCIM 1.1版本已弃用并将于2022年12月2日终止支持。若您仍需使用SCIM 1.1且无法迁移，请联系我们获取帮助。"
+      }
+    },
+    {
+      "segment_id": "cf898102",
+      "source_content": "![Directory Sync Flow](/images/docs/jackson/directory-sync-flow.png)",
+      "source_content_hash": "a433bc15a2e9138eb6b3cc97a3355d5a27496061ddbb0d638c2a6f2030bc2efa",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![目录同步流程](/images/docs/jackson/directory-sync-flow.png)"
+      }
+    },
+    {
+      "segment_id": "3daf1b88",
+      "source_content": "## Overview",
+      "source_content_hash": "7337f3d0aa29e9a82b8f1650b743a98eef90794631fa763a319686e69c546821",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 概览"
+      }
+    },
+    {
+      "segment_id": "034de896",
+      "source_content": "- [API Reference](api-reference)\n- [Admin Portal](../admin-portal/directory-sync)\n- [Webhook](webhooks)\n- [Events and Types](events)\n- [Directory Sync Providers](providers)",
+      "source_content_hash": "e4e994667a7e6fb4dcb1735e7c34fdf12a2e9fc78ba063cef63e497fc28f5cf1",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- [API参考](api-reference)\n- [管理门户](../admin-portal/directory-sync)\n- [Webhook](webhooks)\n- [事件与类型](events)\n- [目录同步服务商](providers)"
+      }
+    }
+  ],
+  "target_i18n_subpath": "docusaurus-plugin-content-docs/current/directory-sync/overview.md",
+  "last_updated_timestamp": "2025-06-08T18:49:09.299779+00:00",
+  "schema_version": "1.0",
+  "translated_versions": {
+    "zh-CN": "3cb51bbae7c64151162f9a7923cf78f7b23e96d1e78a16c3abd0b5adaedd3d62"
+  }
+}

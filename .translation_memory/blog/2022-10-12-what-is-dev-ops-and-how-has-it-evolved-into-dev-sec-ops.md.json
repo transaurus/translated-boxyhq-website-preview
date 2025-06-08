@@ -1,0 +1,132 @@
+{
+  "source_file_path_relative_to_docusaurus_root": "blog/2022-10-12-what-is-dev-ops-and-how-has-it-evolved-into-dev-sec-ops.md",
+  "source_file_content_hash": "bc6063caa0704b69b99cec57eae986109e377251af2142737a34f28a7c1ec078",
+  "segments": [
+    {
+      "segment_id": "58cfcc64",
+      "source_content": "---\nslug: what-is-dev-ops-and-how-has-it-evolved-into-dev-sec-ops\ntitle: What is DevOps and how has it evolved into DevSecOps\nauthor: Jay Singh\nauthor_title: Marketing Consultant\nauthor_url: https://www.linkedin.com/in/jaydsingh/\nauthor_image_url: /images/authors/jay.jpg\ntags_disabled: [devops, devsecops, developer security]\nimage: /img/blog/devsecops.png\n---",
+      "source_content_hash": "28536ed19206dae7ec384a65957fb19f0cf54550579c3cd11fc161359e6e74f2",
+      "node_type": "yaml",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_58cfcc64"
+      }
+    },
+    {
+      "segment_id": "9fcbdce9",
+      "source_content": "## What is DevOps",
+      "source_content_hash": "dc4a080c2d53792f304795a3dfc358939a13b6591e22b55941255198f9f365b6",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 什么是DevOps"
+      }
+    },
+    {
+      "segment_id": "ad8fd492",
+      "source_content": "Let's first take a look at what DevOps (Developer Operations) is so we can better understand why it has now evolved into DevSecOps (Developer Security Operations). DevOps is a combination of philosophies, practices, and tools that increases a business's ability to deliver better development in less time (Higher velocity). This can be applied to building a new product or the process of continuous improvement that applies to most products we see today.",
+      "source_content_hash": "a7f20c0b4ea342fbb1660ed18bd7c3bac63883e6a7a536cb97c8b69f26ea8309",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "首先让我们了解什么是DevOps（开发运维），以便更好地理解它为何演变为DevSecOps（开发安全运维）。DevOps是哲学、实践和工具的组合，旨在提升企业以更短时间交付更优质开发成果的能力（更高效率）。这既适用于新产品构建，也适用于当前大多数产品持续改进的流程。"
+      }
+    },
+    {
+      "segment_id": "86b54d44",
+      "source_content": "If we look at the old way of development, typical teams worked on their own and would do their bit and then just pass it on to the next team to do theirs, a bit like an assembly line. This meant that development cycles were very long, communication between teams was limited, handover processes were not in place and if anything went wrong it would take a long time to identify and fix issues. If we compare that to today's agile development process we use DevOps to work in sprints and deliver results in a much faster and more efficient way. This has been made possible by not only the way we look at the development cycle but also by tools and automation.",
+      "source_content_hash": "deaac6f2cac685042c78e62b928cc3e50b3213f9a920dcda10e9f24e968d1b58",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "回顾传统开发模式，各团队独立工作，完成自身任务后简单交接给下一环节，类似流水线作业。这导致开发周期冗长、团队间沟通有限、缺乏规范的交接流程，且问题排查修复耗时巨大。相较之下，现代敏捷开发流程通过DevOps实现冲刺式协作，以更高效的方式交付成果。这种转变不仅源于开发理念革新，也得益于工具和自动化的支持。"
+      }
+    },
+    {
+      "segment_id": "39b3772c",
+      "source_content": "DevOps has come a long way already and we have seen it evolve with the agile methodology of working but security, in particular, was always still the last step of the development process and not thought about as a necessity. In some cases when security was only looked at by a specific team at the end of the process.",
+      "source_content_hash": "b0933842a542bdded343f45be117faf38af3cccf810d99826cc84bf6c7aa3cc2",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "DevOps已取得长足发展，随着敏捷工作方法不断演进。但安全环节始终被视为开发流程的最后一步，而非必要组成部分。某些情况下，安全甚至仅由特定团队在流程末期才介入审查。"
+      }
+    },
+    {
+      "segment_id": "bc633244",
+      "source_content": "## Why has security been integrated into DevOps",
+      "source_content_hash": "4b2fea5f4cd50a06090991b21b70ca1ba4ebf1f370e8d5fa6468fa77048f5e20",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 安全为何被整合进DevOps"
+      }
+    },
+    {
+      "segment_id": "2df4f75f",
+      "source_content": "The rise in cybercrime and the sophistication of attacks has made security a crucial part of the development process and not just an afterthought. This has led to security being integrated into the development process at each stage and becoming a shared responsibility. It has also led to security being thought about and planned right from the start of each process rather than at the end. This has resulted in more development velocity, more layers of integrated security and higher collaboration around security as a major aspect of the development cycle.",
+      "source_content_hash": "fa9e6b01bfcdcca5cbf3f8ce03b9cd17016607103c52c6d55c1cbc7feac14187",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "网络犯罪激增与攻击手段的日益复杂化，使安全成为开发流程的关键环节而非事后补丁。这促使安全被融入每个开发阶段，成为共同责任。安全考量也从流程起始阶段就被纳入规划，最终实现更高开发效率、多层次集成安全防护，以及围绕安全的高度协作——使其成为开发周期的重要维度。"
+      }
+    },
+    {
+      "segment_id": "98cfbd53",
+      "source_content": "The integration of security in the development cycle at each stage from start to finish while also automating some of the security steps is what has led to the evolution of DevOps becoming DevSecOps, a go-to practice today. One of the main reasons the term was adjusted to include security is to make each person in the process think about and take accountability for secure building practices.",
+      "source_content_hash": "7685ece0f394df354265744ab4a80c2381dda5b6075d476f140e4e826e4c0352",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "将安全集成到从始至终的每个开发阶段，同时自动化部分安全步骤，正是DevOps进化为DevSecOps的核心动因。调整术语以包含\"安全\"要素，主要目的是促使流程中的每个参与者都思考并承担安全构建实践的责任。"
+      }
+    },
+    {
+      "segment_id": "79b2d0b9",
+      "source_content": "## Benefits of DevSecOps",
+      "source_content_hash": "41ed86fdb740e54b56bd01c527c276b7ef5a4dd4325bb7ebbb565ecfb441a7a6",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## DevSecOps的优势"
+      }
+    },
+    {
+      "segment_id": "d9172fa4",
+      "source_content": "Lastly, let's take a quick look at the main benefits of having solid DevSecOps in place",
+      "source_content_hash": "07cf52b5671d31c923eeee599c8f2da96565267df548588b7f16f50be9c53dd6",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "最后我们快速了解实施健全DevSecOps的主要优势"
+      }
+    },
+    {
+      "segment_id": "5da9e02b",
+      "source_content": "1. **Security**\n\n   By thinking about and implementing security at each stage of the development process and particularly in the early stages organizations are proactively mitigating cyber threats. This combined with automated security testing means that dev teams can perform security checks and audits without slowing down development cycles.\n\n2. **Improved Collaboration**\n\n   DevSecOps pushes for development and security and operations teams to collaborate more and especially in the early stages of the process. This increases innovation and leads to better cross-team buy-in. It also makes sure that everyone is responsible for security.\n\n3. **Streamlines process that limits vulnerabilities**\n\n   Having security in every stage of the development process limits the chance of finding vulnerabilities much later, vulnerabilities which could delay the release. The process of streamlining the process with automated security testing as part of the development process also ensures that possible vulnerabilities are caught at each stage.\n\n4. **Cost**\n\n   Cost is also always a major benefit and by having a good DevSecOps process in place you will find bugs and issues much faster which will result in less time and cost required to fix them.",
+      "source_content_hash": "284956c6ca4573bec13e5ca2e8b711ed0353df4f0331c1b5d4350467b7d3be2c",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "1. **安全性**\n\n   通过在开发各阶段（尤其是早期阶段）考量和实施安全措施，组织能主动缓解网络威胁。结合自动化安全测试，开发团队可在不拖慢周期的情况下执行安全检查与审计。\n\n2. **增强协作**\n\n   DevSecOps推动开发、安全与运维团队深度协作，特别是在流程早期阶段。这既促进创新，又获得跨团队认同，同时确保安全成为每个人的责任。\n\n3. **精简流程以降低漏洞风险**\n\n   在开发全周期嵌入安全防护，能最大限度避免后期才发现可能延误发布的漏洞。通过将自动化安全测试纳入开发流程，可确保在每个阶段捕获潜在漏洞。\n\n4. **成本控制**\n\n   成本始终是关键优势。完善的DevSecOps流程能更早发现缺陷，大幅降低修复所需的时间与资金投入。"
+      }
+    },
+    {
+      "segment_id": "8af76f3d",
+      "source_content": "![DevSecOps](/img/blog/devsecops.png)",
+      "source_content_hash": "eb04de60cfa84be8c56a190c4330a29e75c33cd38fa9600a3aa54a09a9cccbdc",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![DevSecOps](/img/blog/devsecops.png)"
+      }
+    }
+  ],
+  "target_i18n_subpath": "docusaurus-plugin-content-blog/2022-10-12-what-is-dev-ops-and-how-has-it-evolved-into-dev-sec-ops.md",
+  "last_updated_timestamp": "2025-06-08T18:49:09.311389+00:00",
+  "schema_version": "1.0",
+  "translated_versions": {
+    "zh-CN": "bc6063caa0704b69b99cec57eae986109e377251af2142737a34f28a7c1ec078"
+  }
+}

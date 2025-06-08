@@ -1,0 +1,10 @@
+.quote-featured {
+  margin-bottom: var(--spacing-medium);
+}
+
+.featured-quote-reviewer .person-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: initial;
+}

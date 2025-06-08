@@ -1,0 +1,1202 @@
+{
+  "source_file_path_relative_to_docusaurus_root": "docs/directory-sync/api-reference.md",
+  "source_file_content_hash": "61c70263c8de0fe4372080a222b761cc90d4bf0867fbfa8fb9d961b427605e01",
+  "segments": [
+    {
+      "segment_id": "58cfcc64",
+      "source_content": "---\ntitle: Directory Sync API Reference\nsidebar_label: API Reference\n---",
+      "source_content_hash": "dbaa8d9b91a2d95426fd5488f1eb670b614efacbbdd54c9ef28818aa45f75a61",
+      "node_type": "yaml",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_58cfcc64"
+      }
+    },
+    {
+      "segment_id": "4d1292be",
+      "source_content": "import Tabs from '@theme/Tabs';\nimport TabItem from '@theme/TabItem';",
+      "source_content_hash": "86702643a5c3bdf74257ff6062535897129ed9144c4f5b70edfe338fef3e5c73",
+      "node_type": "mdxjsEsm",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_4d1292be"
+      }
+    },
+    {
+      "segment_id": "d912d376",
+      "source_content": "# API Reference",
+      "source_content_hash": "a39d0b2337765d2eae667251cb77f71843ec7bb154a88e17e207800ca2cab6a8",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "# API 参考"
+      }
+    },
+    {
+      "segment_id": "8ac585fb",
+      "source_content": "The following guides provide information about the APIs and SDKs that are available for the Directory Sync service.",
+      "source_content_hash": "f502531ffff92c84a023490c466339da69c8b6e614851b2965e3dc80556da00d",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "以下指南提供有关目录同步服务可用API和SDK的信息。"
+      }
+    },
+    {
+      "segment_id": "ba4f48ff",
+      "source_content": "### Directory",
+      "source_content_hash": "ce6a6bcc797676b67c9bc734743718c712f8d709c526a228295d42bb6b8808ac",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 目录"
+      }
+    },
+    {
+      "segment_id": "cf898102",
+      "source_content": "Below are the properties of a directory connection.",
+      "source_content_hash": "ae7fccc744097903d2e1752ba516b77ca4035487d4247cd60ff271014d4391ad",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "以下是目录连接的属性。"
+      }
+    },
+    {
+      "segment_id": "3daf1b88",
+      "source_content": "#### Properties",
+      "source_content_hash": "b8cb7eceade19338bef8d05cddffd363165b7542072b49420f430027915188fc",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "#### 属性"
+      }
+    },
+    {
+      "segment_id": "034de896",
+      "source_content": "- `name`: The name of the directory\n- `tenant`: The tenant ID of the tenant you want to create the directory for.\n- `product`: The product ID of the product you want to create the directory for.\n- `type`: The directory provider type. See the [Directory Providers](./providers) for more information.\n- `webhook.endpoint`: The webhook URL to which the directory connection will POST the events.\n- `webhook.secret`: The webhook secret used to sign the webhook payload.\n- `log_webhook_events`: Indicate if the webhook events should be logged.\n- `deactivated`: Indicate if the directory connection is deactivated.",
+      "source_content_hash": "d5b5fbf62a5d69dc7c4a4a6c37a3afb1f014c3a222a90bbb7eb2cdd843931d2c",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- `name`: 目录名称\n- `tenant`: 要为其创建目录的租户ID\n- `product`: 要为其创建目录的产品ID\n- `type`: 目录提供商类型。详见[目录提供商](./providers)获取更多信息\n- `webhook.endpoint`: 目录连接将POST事件发送到的webhook URL\n- `webhook.secret`: 用于签名webhook负载的webhook密钥\n- `log_webhook_events`: 指示是否应记录webhook事件\n- `deactivated`: 指示目录连接是否已停用"
+      }
+    },
+    {
+      "segment_id": "d2808037",
+      "source_content": ":::info\nThe `tenant` and `product` should not contain the `:` character since we use it as a delimiter internally.\n:::",
+      "source_content_hash": "410c546fcbbda706082c76a039c324525f63928241020f7ed928a86af7278d96",
+      "node_type": "containerDirective",
+      "translatable": true,
+      "translations": {
+        "zh-CN": ":::info\n`tenant`和`product`不应包含`:`字符，因为我们在内部将其用作分隔符。\n:::"
+      }
+    },
+    {
+      "segment_id": "b25f21be",
+      "source_content": "### Initialize Directory Sync",
+      "source_content_hash": "c9d5343b290d00ddd0b9eabf1240d5e9d7ba80af72ba8311d5a81e708e0d285c",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 初始化目录同步"
+      }
+    },
+    {
+      "segment_id": "6543a19e",
+      "source_content": "```javascript\nconst opts = {\n  externalUrl: 'https://my-cool-app.com',\n  db: {\n    engine: 'mongo',\n    url: 'mongodb://localhost:27017/my-cool-app',\n  },\n};\n\nlet directorySyncController;\n\n// Please note that the initialization of @boxyhq/saml-jackson is async, you cannot run it at the top level.\nasync function init() {\n  const jackson = await require('@boxyhq/saml-jackson').controllers(opts);\n\n  directorySyncController = jackson.directorySyncController;\n}\n```",
+      "source_content_hash": "faf120203699f97a7bea01e53d88103c7ffc534fede1dbb74fd2274dd8cbf863",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_6543a19e"
+      }
+    },
+    {
+      "segment_id": "c6cc90a0",
+      "source_content": "### Create a new directory",
+      "source_content_hash": "81a3009c3432f73324f00e8677f34ad640b5d980f9fcfed238ad04925bcd3475",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 创建新目录"
+      }
+    },
+    {
+      "segment_id": "d3649a1e",
+      "source_content": "Create a new directory connection.",
+      "source_content_hash": "9e17d6677fa16c86fdfba8c451945fb70d80cc872d0546a56145eda62e1e5d55",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "创建新的目录连接。"
+      }
+    },
+    {
+      "segment_id": "e50bebbf",
+      "source_content": "#### Request",
+      "source_content_hash": "ccf91e2a4f4d01917e4ab18dffaeb752f338215bf941ecaff6cce8e9a011196c",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "#### 请求"
+      }
+    },
+    {
+      "segment_id": "ce33792e",
+      "source_content": "<Tabs>\n<TabItem value=\"01\" label=\"Node.js\" default>\n\n```javascript showLineNumbers\nconst { data, error } = await directorySyncController.directories.create({\n  name: 'App',\n  tenant: 'boxyhq',\n  product: 'jackson',\n  type: 'onelogin-scim-v2',\n  webhook_url: 'https://my-cool-app.com/webhook',\n  webhook_secret: 'my-secret',\n});\n```\n\n</TabItem>\n<TabItem value=\"02\" label=\"Shell\">\n\n```bash\ncurl --request POST \\\n  --url http://localhost:5225/api/v1/directory-sync \\\n  --header 'Authorization: Api-Key secret' \\\n  --header 'Content-Type: application/json' \\\n  --data '{\n \"name\": \"App\",\n \"tenant\": \"boxyhq\",\n \"product\": \"jackson\",\n \"type\": \"onelogin-scim-v2\",\n \"webhook_url\": \"https://my-cool-app.com/webhook\",\n \"webhook_secret\": \"my-secret\"\n}'\n```\n\n</TabItem>\n</Tabs>",
+      "source_content_hash": "6f51ef94190765abcb48bd0c5a270b35683bf078b671314cafa42d5c8087ea26",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_ce33792e"
+      }
+    },
+    {
+      "segment_id": "f6b04a59",
+      "source_content": "#### Response",
+      "source_content_hash": "918d7df9bd5c6a4357dabf79a564f49e225f201d17f5e8f3f0a66e23321c9f63",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "#### 响应"
+      }
+    },
+    {
+      "segment_id": "19913a56",
+      "source_content": "```json\n{\n  \"data\": {\n    \"id\": \"58b5cd9dfaa39d47eb8f5f88631f9a629a232016\",\n    \"name\": \"App\",\n    \"tenant\": \"boxyhq\",\n    \"product\": \"jackson\",\n    \"type\": \"onelogin-scim-v2\",\n    \"log_webhook_events\": false,\n    \"scim\": {\n      \"path\": \"/api/scim/v2.0/58b5cd9dfaa39d47eb8f5f88631f9a629a232016\",\n      \"secret\": \"IJzAoevjD_liiiy-VkDtXg\",\n      \"endpoint\": \"http://localhost:5225/api/scim/v2.0/58b5cd9dfaa39d47eb8f5f88631f9a629a232016\"\n    },\n    \"webhook\": {\n      \"endpoint\": \"https://my-cool-app.com/webhook\",\n      \"secret\": \"my-secret\"\n    }\n  },\n  \"error\": null\n}\n```",
+      "source_content_hash": "b80670e11008cef1da6793fded7cb306210eae80da24aba67894cc209be8afb5",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_19913a56"
+      }
+    },
+    {
+      "segment_id": "6ad15270",
+      "source_content": "---",
+      "source_content_hash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "node_type": "thematicBreak",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "---"
+      }
+    },
+    {
+      "segment_id": "c7fa1e8d",
+      "source_content": "### Get directories",
+      "source_content_hash": "5326ffcda3ee7fab7ebfb6d524eb145307760871b9a4aa00a84f2baefa87414b",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 获取目录列表"
+      }
+    },
+    {
+      "segment_id": "a6c928a1",
+      "source_content": "Get the list of directories for the given tenant and product. A tenant can have multiple directories for same or different products.",
+      "source_content_hash": "e7a62fd8485baf3d6437a9843c79716dcefce974b0cd2990f53258d4b8dfcef6",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "获取给定租户和产品的目录列表。一个租户可以为相同或不同产品配置多个目录。"
+      }
+    },
+    {
+      "segment_id": "ed644f52",
+      "source_content": "#### Request",
+      "source_content_hash": "ccf91e2a4f4d01917e4ab18dffaeb752f338215bf941ecaff6cce8e9a011196c",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "#### 请求"
+      }
+    },
+    {
+      "segment_id": "a80fd598",
+      "source_content": "<Tabs>\n<TabItem value=\"01\" label=\"Node.js\" default>\n\n```javascript showLineNumbers\nconst tenant = 'boxyhq';\nconst product = 'jackson';\n\nconst { data, error } =\n  await directorySyncController.directories.getByTenantAndProduct(\n    tenant,\n    product\n  );\n```\n\n</TabItem>\n<TabItem value=\"02\" label=\"Shell\">\n\n```bash\ncurl --request GET \\\n  --url 'http://localhost:5225/api/v1/directory-sync?tenant=boxyhq&product=jackson' \\\n  --header 'Authorization: Api-Key secret' \\\n  --header 'Content-Type: application/json'\n```\n\n</TabItem>\n</Tabs>",
+      "source_content_hash": "99f7a75083666713bc7cdb7ee3b4b4d249b413f66e8b746e6c3b68e552168a03",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_a80fd598"
+      }
+    },
+    {
+      "segment_id": "b77e7669",
+      "source_content": "#### Response",
+      "source_content_hash": "918d7df9bd5c6a4357dabf79a564f49e225f201d17f5e8f3f0a66e23321c9f63",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "#### 响应"
+      }
+    },
+    {
+      "segment_id": "68d4860d",
+      "source_content": "```json\n{\n  \"data\": [\n    {\n      \"id\": \"58b5cd9dfaa39d47eb8f5f88631f9a629a232016\",\n      \"name\": \"App\",\n      \"tenant\": \"boxyhq\",\n      \"product\": \"jackson\",\n      \"type\": \"onelogin-scim-v2\",\n      \"log_webhook_events\": false,\n      \"scim\": {\n        \"path\": \"/api/scim/v2.0/58b5cd9dfaa39d47eb8f5f88631f9a629a232016\",\n        \"secret\": \"IJzAoevjD_liiiy-VkDtXg\",\n        \"endpoint\": \"http://localhost:5225/api/scim/v2.0/58b5cd9dfaa39d47eb8f5f88631f9a629a232016\"\n      },\n      \"webhook\": {\n        \"endpoint\": \"https://my-cool-app.com/webhook\",\n        \"secret\": \"my-secret\"\n      }\n    }\n  ],\n  \"error\": null\n}\n```",
+      "source_content_hash": "405687e79c3528c92595596329e22df98b23e419039047953a5b4b31ea9ed3eb",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_68d4860d"
+      }
+    },
+    {
+      "segment_id": "cdeffb11",
+      "source_content": "---",
+      "source_content_hash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "node_type": "thematicBreak",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "---"
+      }
+    },
+    {
+      "segment_id": "8d279c43",
+      "source_content": "### Get a directory",
+      "source_content_hash": "bf537771544e337b293d3d822d7636fee99cd7ce68ddf9ae06eda95a95ddc13d",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 获取目录详情"
+      }
+    },
+    {
+      "segment_id": "e5821418",
+      "source_content": "Get the details of a directory by its unique id.",
+      "source_content_hash": "c7cfd6c279bb69d8681ba434bdc8a0f10255f70d4d9078d6c20094f5d6bc11c5",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "通过唯一ID获取目录详细信息。"
+      }
+    },
+    {
+      "segment_id": "c4ac6a6f",
+      "source_content": "#### Request",
+      "source_content_hash": "ccf91e2a4f4d01917e4ab18dffaeb752f338215bf941ecaff6cce8e9a011196c",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "#### 请求"
+      }
+    },
+    {
+      "segment_id": "e32234e6",
+      "source_content": "<Tabs>\n<TabItem value=\"01\" label=\"Node.js\" default>\n\n```javascript showLineNumbers\nconst directoryId = '58b5cd9dfaa39d47eb8f5f88631f9a629a232016';\n\nconst { data, error } = await directorySyncController.directories.get(\n  directoryId\n);\n```\n\n</TabItem>\n<TabItem value=\"02\" label=\"Shell\">\n\n```bash\ncurl --request GET \\\n  --url 'http://localhost:5225/api/v1/directory-sync/58b5cd9dfaa39d47eb8f5f88631f9a629a232016' \\\n  --header 'Authorization: Api-Key secret' \\\n  --header 'Content-Type: application/json'\n```\n\n</TabItem>\n</Tabs>",
+      "source_content_hash": "e4b5f7bdd71d0906ac9f2727f671332a1b544df3f741570db984829f97007553",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_e32234e6"
+      }
+    },
+    {
+      "segment_id": "97496aad",
+      "source_content": "#### Response",
+      "source_content_hash": "918d7df9bd5c6a4357dabf79a564f49e225f201d17f5e8f3f0a66e23321c9f63",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "#### 响应"
+      }
+    },
+    {
+      "segment_id": "ff27b4c2",
+      "source_content": "```json\n{\n  \"data\": {\n    \"id\": \"58b5cd9dfaa39d47eb8f5f88631f9a629a232016\",\n    \"name\": \"App\",\n    \"tenant\": \"boxyhq\",\n    \"product\": \"jackson\",\n    \"type\": \"onelogin-scim-v2\",\n    \"log_webhook_events\": false,\n    \"scim\": {\n      \"path\": \"/api/scim/v2.0/58b5cd9dfaa39d47eb8f5f88631f9a629a232016\",\n      \"secret\": \"IJzAoevjD_liiiy-VkDtXg\",\n      \"endpoint\": \"http://localhost:5225/api/scim/v2.0/58b5cd9dfaa39d47eb8f5f88631f9a629a232016\"\n    },\n    \"webhook\": {\n      \"endpoint\": \"https://my-cool-app.com/webhook\",\n      \"secret\": \"my-secret\"\n    }\n  },\n  \"error\": null\n}\n```",
+      "source_content_hash": "b80670e11008cef1da6793fded7cb306210eae80da24aba67894cc209be8afb5",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_ff27b4c2"
+      }
+    },
+    {
+      "segment_id": "4b45c59d",
+      "source_content": "---",
+      "source_content_hash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "node_type": "thematicBreak",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "---"
+      }
+    },
+    {
+      "segment_id": "ad8a5f54",
+      "source_content": "### List directory users",
+      "source_content_hash": "c38d13c08292c5561f653696c20dd03c0ed5a7682b171891f91f2bc543c737e0",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 列出目录用户"
+      }
+    },
+    {
+      "segment_id": "4033c370",
+      "source_content": "List all the users in a directory.",
+      "source_content_hash": "6ea8ebd201fb154f380edc8f582b8084847535b331a193fb72030aa376612e62",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "列出目录中的所有用户。"
+      }
+    },
+    {
+      "segment_id": "5f4381f8",
+      "source_content": "#### Request",
+      "source_content_hash": "ccf91e2a4f4d01917e4ab18dffaeb752f338215bf941ecaff6cce8e9a011196c",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "#### 请求"
+      }
+    },
+    {
+      "segment_id": "d638060b",
+      "source_content": "<Tabs>\n<TabItem value=\"01\" label=\"Node.js\" default>\n\n```javascript showLineNumbers\nconst tenant = 'boxyhq';\nconst product = 'jackson';\n\nconst { data, error } = await directorySyncController.users\n  .setTenantAndProduct(tenant, product)\n  .getAll();\n```\n\n</TabItem>\n<TabItem value=\"02\" label=\"Shell\">\n\n```bash\ncurl --request GET \\\n  --url 'http://localhost:5225/api/v1/directory-sync/users?tenant=boxyhq&product=jackson' \\\n  --header 'Authorization: Api-Key secret' \\\n  --header 'Content-Type: application/json'\n```\n\n</TabItem>\n</Tabs>",
+      "source_content_hash": "077292fc8f11c037b570d4fa22662fdfeab9d0d27f46bddbc70166b6e62d5293",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_d638060b"
+      }
+    },
+    {
+      "segment_id": "bb74dfa2",
+      "source_content": "#### Response",
+      "source_content_hash": "918d7df9bd5c6a4357dabf79a564f49e225f201d17f5e8f3f0a66e23321c9f63",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "#### 响应"
+      }
+    },
+    {
+      "segment_id": "cb0a9597",
+      "source_content": "```json\n{\n  \"data\": [\n    {\n      \"id\": \"6296f71e-15fd-4af4-86ee-d6623b3ef1a4\",\n      \"first_name\": \"Aswin\",\n      \"last_name\": \"Venugopal\",\n      \"email\": \"aswin@boxyhq.com\",\n      \"active\": true,\n      \"raw\": {\n        \"schemas\": [\"urn:ietf:params:scim:schemas:core:2.0:User\"],\n        \"userName\": \"aswin@boxyhq.com\",\n        \"name\": {\n          \"givenName\": \"Aswin\",\n          \"familyName\": \"Venugopal\",\n          \"honorificPrefix\": \"Sir\"\n        },\n        \"emails\": [\n          {\n            \"primary\": true,\n            \"value\": \"aswin@boxyhq.com\",\n            \"type\": \"work\"\n          }\n        ],\n        \"displayName\": \"Aswin Venugopal\",\n        \"addresses\": [\n          {\n            \"primary\": true,\n            \"postalCode\": \"123\"\n          }\n        ],\n        \"locale\": \"en-US\",\n        \"externalId\": \"00u34iw1hm16RmjS95d7\",\n        \"groups\": [],\n        \"active\": true,\n        \"id\": \"6296f71e-15fd-4af4-86ee-d6623b3ef1a4\"\n      }\n    },\n    {\n      \"id\": \"ebc31d6e-7d62-4f81-b9e5-eb5f1a04ee92\",\n      \"first_name\": \"Kiran\",\n      \"last_name\": \"Krishnan\",\n      \"email\": \"kiran@boxyhq.com\",\n      \"active\": true,\n      \"raw\": {\n        \"schemas\": [\"urn:ietf:params:scim:schemas:core:2.0:User\"],\n        \"userName\": \"kiran@boxyhq.com\",\n        \"name\": {\n          \"givenName\": \"Kiran\",\n          \"familyName\": \"Krishnan\"\n        },\n        \"emails\": [\n          {\n            \"primary\": true,\n            \"value\": \"kiran@boxyhq.com\",\n            \"type\": \"work\"\n          }\n        ],\n        \"displayName\": \"Kiran Krishnan\",\n        \"addresses\": [\n          {\n            \"primary\": true,\n            \"region\": \"Kerala\"\n          }\n        ],\n        \"locale\": \"en-US\",\n        \"externalId\": \"00u3e3cmpdDydXdzV5d7\",\n        \"groups\": [],\n        \"active\": true,\n        \"id\": \"ebc31d6e-7d62-4f81-b9e5-eb5f1a04ee92\"\n      }\n    }\n  ],\n  \"error\": null\n}\n```",
+      "source_content_hash": "eac710e74d8ad4772566bd7abd0bcde77c90a32b86d1ccc4dd9a59ecc377472d",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_cb0a9597"
+      }
+    },
+    {
+      "segment_id": "d01b58cc",
+      "source_content": "---",
+      "source_content_hash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "node_type": "thematicBreak",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "---"
+      }
+    },
+    {
+      "segment_id": "cb0acec9",
+      "source_content": "### Get a directory user",
+      "source_content_hash": "21b0821926d3b637ee4ddd1e8d3edb0a2df2aee4da0fef62b1637facde042450",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 获取目录用户详情"
+      }
+    },
+    {
+      "segment_id": "eb398072",
+      "source_content": "Get the details of a directory user.",
+      "source_content_hash": "d979342b88f79f790ed8231f80bc6bcbce832434c5aeadfacbe7a98303ab9844",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "获取目录用户的详细信息。"
+      }
+    },
+    {
+      "segment_id": "505664a6",
+      "source_content": "#### Request",
+      "source_content_hash": "ccf91e2a4f4d01917e4ab18dffaeb752f338215bf941ecaff6cce8e9a011196c",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "#### 请求"
+      }
+    },
+    {
+      "segment_id": "0f669054",
+      "source_content": "<Tabs>\n<TabItem value=\"01\" label=\"Node.js\" default>\n\n```javascript showLineNumbers\nconst tenant = 'boxyhq';\nconst product = 'flex';\nconst userId = 'ebc31d6e-7d62-4f81-b9e5-eb5f1a04ee92';\n\nconst users = await directorySyncController.users\n  .setTenantAndProduct(tenant, product)\n  .get(userId);\n```\n\n</TabItem>\n<TabItem value=\"02\" label=\"Shell\">\n\n```bash\ncurl --request GET \\\n  --url 'http://localhost:5225/api/v1/directory-sync/users/ebc31d6e-7d62-4f81-b9e5-eb5f1a04ee92?tenant=boxyhq&product=jackson' \\\n  --header 'Authorization: Api-Key secret' \\\n  --header 'Content-Type: application/json'\n```\n\n</TabItem>\n</Tabs>",
+      "source_content_hash": "00fc23cc18a8a520017994047a91df0b184518cfa4e13b1821259a9aefed149e",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_0f669054"
+      }
+    },
+    {
+      "segment_id": "fa461c90",
+      "source_content": "#### Response",
+      "source_content_hash": "918d7df9bd5c6a4357dabf79a564f49e225f201d17f5e8f3f0a66e23321c9f63",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "#### 响应"
+      }
+    },
+    {
+      "segment_id": "0a6336a7",
+      "source_content": "```json\n{\n  \"data\": {\n    \"id\": \"ebc31d6e-7d62-4f81-b9e5-eb5f1a04ee92\",\n    \"first_name\": \"Kiran\",\n    \"last_name\": \"Krishnan\",\n    \"email\": \"kiran@boxyhq.com\",\n    \"active\": true,\n    \"raw\": {\n      \"schemas\": [\"urn:ietf:params:scim:schemas:core:2.0:User\"],\n      \"userName\": \"kiran@boxyhq.com\",\n      \"name\": {\n        \"givenName\": \"Kiran\",\n        \"familyName\": \"Krishnan\"\n      },\n      \"emails\": [\n        {\n          \"primary\": true,\n          \"value\": \"kiran@boxyhq.com\",\n          \"type\": \"work\"\n        }\n      ],\n      \"displayName\": \"Kiran Krishnan\",\n      \"addresses\": [\n        {\n          \"primary\": true,\n          \"region\": \"Kerala\"\n        }\n      ],\n      \"locale\": \"en-US\",\n      \"externalId\": \"00u3e3cmpdDydXdzV5d7\",\n      \"groups\": [],\n      \"active\": true,\n      \"id\": \"ebc31d6e-7d62-4f81-b9e5-eb5f1a04ee92\"\n    }\n  },\n  \"error\": null\n}\n```",
+      "source_content_hash": "6c32ec6ed1e560cdd05e4a74bbe6380950f05a68b884cc93fea7e6c937c37f0a",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_0a6336a7"
+      }
+    },
+    {
+      "segment_id": "40676f68",
+      "source_content": "---",
+      "source_content_hash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "node_type": "thematicBreak",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "---"
+      }
+    },
+    {
+      "segment_id": "51fd5537",
+      "source_content": "### List directory groups",
+      "source_content_hash": "0e44e421275428265eabfd5b3500285f39df6810846d7af1662147637aaa2e4e",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 列出目录群组"
+      }
+    },
+    {
+      "segment_id": "bab6f28b",
+      "source_content": "List all the groups in a directory.",
+      "source_content_hash": "b26a79d2c1161e5d079bc7662311d99882b2b8f93c63bc51c112dac4e5b925bd",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "列出目录中的所有群组。"
+      }
+    },
+    {
+      "segment_id": "9d81e9c3",
+      "source_content": "#### Request",
+      "source_content_hash": "ccf91e2a4f4d01917e4ab18dffaeb752f338215bf941ecaff6cce8e9a011196c",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "#### 请求"
+      }
+    },
+    {
+      "segment_id": "226ed6f7",
+      "source_content": "<Tabs>\n<TabItem value=\"01\" label=\"Node.js\" default>\n\n```javascript showLineNumbers\nconst tenant = 'boxyhq';\nconst product = 'jackson';\n\nconst users = await directorySyncController.groups\n  .setTenantAndProduct(tenant, product)\n  .getAll();\n```\n\n</TabItem>\n<TabItem value=\"02\" label=\"Shell\">\n\n```bash\ncurl --request GET \\\n  --url 'http://localhost:5225/api/v1/directory-sync/groups?tenant=boxyhq&product=jackson' \\\n  --header 'Authorization: Api-Key secret' \\\n  --header 'Content-Type: application/json'\n```\n\n</TabItem>\n</Tabs>",
+      "source_content_hash": "0a5f7c6915ee84e4f6c730ae7b3cf81c50821d152f447436bd9a043a3120fd4a",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_226ed6f7"
+      }
+    },
+    {
+      "segment_id": "a59a3e1f",
+      "source_content": "#### Response",
+      "source_content_hash": "918d7df9bd5c6a4357dabf79a564f49e225f201d17f5e8f3f0a66e23321c9f63",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "#### 响应"
+      }
+    },
+    {
+      "segment_id": "a343011f",
+      "source_content": "```json\n{\n  \"data\": [\n    {\n      \"id\": \"44d08c0e-d185-4a5e-80a6-b47a717ffaa5\",\n      \"name\": \"Developers\",\n      \"raw\": {\n        \"schemas\": [\"urn:ietf:params:scim:schemas:core:2.0:Group\"],\n        \"displayName\": \"Developers\",\n        \"members\": [\n          {\n            \"value\": \"6296f71e-15fd-4af4-86ee-d6623b3ef1a4\",\n            \"display\": \"aswin@boxyhq.com\"\n          },\n          {\n            \"value\": \"ebc31d6e-7d62-4f81-b9e5-eb5f1a04ee92\",\n            \"display\": \"kiran@boxyhq.com\"\n          }\n        ],\n        \"id\": \"44d08c0e-d185-4a5e-80a6-b47a717ffaa5\"\n      }\n    }\n  ],\n  \"error\": null\n}\n```",
+      "source_content_hash": "e972ba6b8ca31bb608d57248150c91d48549355e738c4b60951f21e6cf510ca3",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_a343011f"
+      }
+    },
+    {
+      "segment_id": "fdc8a041",
+      "source_content": "---",
+      "source_content_hash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "node_type": "thematicBreak",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "---"
+      }
+    },
+    {
+      "segment_id": "f2829f67",
+      "source_content": "### Get a directory group",
+      "source_content_hash": "085e3fc9a618ea3e0c33b095206f02515035a5760f55c96fb9284fd585504054",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 获取目录群组详情"
+      }
+    },
+    {
+      "segment_id": "d85a747f",
+      "source_content": "Get the details of a directory group.",
+      "source_content_hash": "34ab4cd0f8e95e51ec4e00fba87cd6f104d8608b69e38ae05fba3016631c95c8",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "获取目录群组的详细信息。"
+      }
+    },
+    {
+      "segment_id": "152bce91",
+      "source_content": "#### Request",
+      "source_content_hash": "ccf91e2a4f4d01917e4ab18dffaeb752f338215bf941ecaff6cce8e9a011196c",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "#### 请求"
+      }
+    },
+    {
+      "segment_id": "2bc560f3",
+      "source_content": "<Tabs>\n<TabItem value=\"01\" label=\"Node.js\" default>\n\n```javascript showLineNumbers\nconst tenant = 'boxyhq';\nconst product = 'jackson';\nconst groupId = '44d08c0e-d185-4a5e-80a6-b47a717ffaa5';\n\nconst users = await directorySyncController.groups\n  .setTenantAndProduct(tenant, product)\n  .get(groupId);\n```\n\n</TabItem>\n<TabItem value=\"02\" label=\"Shell\">\n\n```bash\ncurl --request GET \\\n  --url 'http://localhost:5225/api/v1/directory-sync/groups/44d08c0e-d185-4a5e-80a6-b47a717ffaa5?tenant=boxyhq&product=jackson' \\\n  --header 'Authorization: Api-Key secret' \\\n  --header 'Content-Type: application/json'\n```\n\n</TabItem>\n</Tabs>",
+      "source_content_hash": "b1d6f2cc3bf02389bb8b4bf2e5a7da2a823f36eac2da2fbb1aa23a35ea3e6f02",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_2bc560f3"
+      }
+    },
+    {
+      "segment_id": "1e8fadaf",
+      "source_content": "#### Response",
+      "source_content_hash": "918d7df9bd5c6a4357dabf79a564f49e225f201d17f5e8f3f0a66e23321c9f63",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "#### 响应"
+      }
+    },
+    {
+      "segment_id": "2fb2d516",
+      "source_content": "```json\n{\n  \"data\": {\n    \"id\": \"44d08c0e-d185-4a5e-80a6-b47a717ffaa5\",\n    \"name\": \"Developers\",\n    \"raw\": {\n      \"schemas\": [\"urn:ietf:params:scim:schemas:core:2.0:Group\"],\n      \"displayName\": \"Developers\",\n      \"members\": [\n        {\n          \"value\": \"6296f71e-15fd-4af4-86ee-d6623b3ef1a4\",\n          \"display\": \"aswin@boxyhq.com\"\n        },\n        {\n          \"value\": \"ebc31d6e-7d62-4f81-b9e5-eb5f1a04ee92\",\n          \"display\": \"kiran@boxyhq.com\"\n        }\n      ],\n      \"id\": \"44d08c0e-d185-4a5e-80a6-b47a717ffaa5\"\n    },\n    \"members\": [\n      {\n        \"group_id\": \"44d08c0e-d185-4a5e-80a6-b47a717ffaa5\",\n        \"user_id\": \"6296f71e-15fd-4af4-86ee-d6623b3ef1a4\"\n      },\n      {\n        \"group_id\": \"44d08c0e-d185-4a5e-80a6-b47a717ffaa5\",\n        \"user_id\": \"ebc31d6e-7d62-4f81-b9e5-eb5f1a04ee92\"\n      }\n    ]\n  },\n  \"error\": null\n}\n```",
+      "source_content_hash": "b00465e75c8161cd8ac2e16fa8e0f3a2e85c495a8f6990e335701798c68c2ed3",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_2fb2d516"
+      }
+    },
+    {
+      "segment_id": "19a1840f",
+      "source_content": "---",
+      "source_content_hash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "node_type": "thematicBreak",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "---"
+      }
+    },
+    {
+      "segment_id": "7fe44f5b",
+      "source_content": "### List group members",
+      "source_content_hash": "55a642f81b2520f8dfa499dff3c45b2e750a913cdd529ee4aed2810be7ce8bae",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 列出群组成员"
+      }
+    },
+    {
+      "segment_id": "1b8b3b24",
+      "source_content": "Get the members of a directory group. Only user IDs are returned.",
+      "source_content_hash": "f3f0a0a4e74e7830f15ccce32f6bfbbed5819e129a2e26844009d73b46fbf6e8",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "获取目录群组的成员。仅返回用户ID。"
+      }
+    },
+    {
+      "segment_id": "5552fbbd",
+      "source_content": "(Introduced in v1.20.6)",
+      "source_content_hash": "8c3a5fd39587825119e9d1d40f0edbd842628ce0cd54f44f0dc917e1a0443d87",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "(v1.20.6版本引入)"
+      }
+    },
+    {
+      "segment_id": "c7ed6f17",
+      "source_content": "#### Request",
+      "source_content_hash": "ccf91e2a4f4d01917e4ab18dffaeb752f338215bf941ecaff6cce8e9a011196c",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "#### 请求"
+      }
+    },
+    {
+      "segment_id": "783c3f35",
+      "source_content": "<Tabs>\n<TabItem value=\"01\" label=\"Node.js\" default>\n\n```javascript showLineNumbers\nawait directorySyncController.groups\n  .setTenantAndProduct('boxyhq', 'jackson')\n  .getGroupMembers({\n    groupId: '44d08c0e-d185-4a5e-80a6-b47a717ffaa5',\n    pageOffset: 0,\n    pageLimit: 10,\n  });\n```\n\n</TabItem>\n<TabItem value=\"02\" label=\"Shell\">\n\n```bash\ncurl --request GET \\\n  --url 'http://localhost:5225/api/v1/directory-sync/groups/44d08c0e-d185-4a5e-80a6-b47a717ffaa5/members?tenant=boxyhq&product=jackson&pageOffset=0&pageLimit=10' \\\n  --header 'Authorization: Api-Key secret' \\\n  --header 'Content-Type: application/json'\n```\n\n</TabItem>\n</Tabs>",
+      "source_content_hash": "966fabd258f84c363f87fcec93eb75f84e7b5fdeb1b7c379b1907f444b4525e7",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_783c3f35"
+      }
+    },
+    {
+      "segment_id": "7f7d0ca9",
+      "source_content": "#### Response",
+      "source_content_hash": "918d7df9bd5c6a4357dabf79a564f49e225f201d17f5e8f3f0a66e23321c9f63",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "#### 响应"
+      }
+    },
+    {
+      "segment_id": "a399ada9",
+      "source_content": "```json\n{\n  \"data\": [\n    {\n      \"user_id\": \"107130779649255553459\"\n    },\n    {\n      \"user_id\": \"107471187046551199726\"\n    }\n  ]\n}\n```",
+      "source_content_hash": "671ff20a6459bf03079052ae221a2336260b59637db18201af096a9b225ebe6c",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_a399ada9"
+      }
+    },
+    {
+      "segment_id": "e0036101",
+      "source_content": "---",
+      "source_content_hash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "node_type": "thematicBreak",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "---"
+      }
+    },
+    {
+      "segment_id": "38783568",
+      "source_content": "### Google Directory Sync",
+      "source_content_hash": "7bb8f649c328e71b3b18b644bc46c870810def4572796441e705644b87f93298",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### Google目录同步"
+      }
+    },
+    {
+      "segment_id": "505b6495",
+      "source_content": "Google Directory Sync specific properties:",
+      "source_content_hash": "f800e30aa1eaaf40c356b03f93611550cd37650495451e076d6ac00801c96966",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "Google 目录同步特有属性："
+      }
+    },
+    {
+      "segment_id": "4f246248",
+      "source_content": "- `google_domain`: The Google Workspace domain name.\n- `google_access_token`: The Google Admin access token.\n- `google_refresh_token`: The Google Admin refresh token.",
+      "source_content_hash": "b7ff0e9b7b9ea3e88ad6e049c60a7b4c75732bb1cba18097076f5d3515d07fa8",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- `google_domain`: Google Workspace 域名。\n- `google_access_token`: Google 管理员访问令牌。\n- `google_refresh_token`: Google 管理员刷新令牌。"
+      }
+    },
+    {
+      "segment_id": "5bd59085",
+      "source_content": "Jackson requires following API scopes:",
+      "source_content_hash": "185b935a98a2d707bac291eb1ad6466d3bc2a1a7c0f42177c5810419a473ef53",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "Jackson 需要以下 API 权限范围："
+      }
+    },
+    {
+      "segment_id": "23fc7b25",
+      "source_content": "- `https://www.googleapis.com/auth/admin.directory.group.member.readonly`\n- `https://www.googleapis.com/auth/admin.directory.group.readonly`",
+      "source_content_hash": "361e01e1233b87d01032bbd20374c712549e7fbf3061a365fe85d0c0c9d9fd02",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- `https://www.googleapis.com/auth/admin.directory.group.member.readonly`\n- `https://www.googleapis.com/auth/admin.directory.group.readonly`"
+      }
+    },
+    {
+      "segment_id": "97a6ee36",
+      "source_content": "#### 1. Get Authentication URL",
+      "source_content_hash": "fdd40bac8e3c31521b1ba3a67aeb93e09308a21346483fb4414c82ca63456a26",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "#### 1. 获取认证 URL"
+      }
+    },
+    {
+      "segment_id": "01c67364",
+      "source_content": "Get the URL to authenticate with admin credentials. Google will prompt the user to authenticate with the admin credentials and authorize the application to access the Google Workspace directories.",
+      "source_content_hash": "df30fdbf5e7d7413aad5053e063e2281c0b09dd7b510c64716ebd4e4901b8200",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "获取用于管理员凭据认证的 URL。Google 将提示用户使用管理员凭据进行认证，并授权应用访问 Google Workspace 目录。"
+      }
+    },
+    {
+      "segment_id": "7ab0c024",
+      "source_content": "#### Request",
+      "source_content_hash": "ccf91e2a4f4d01917e4ab18dffaeb752f338215bf941ecaff6cce8e9a011196c",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "#### 请求"
+      }
+    },
+    {
+      "segment_id": "1858740b",
+      "source_content": "<Tabs>\n<TabItem value=\"01\" label=\"Node.js\" default>\n\n```javascript showLineNumbers\nawait directorySyncController.google.generateAuthorizationUrl({\n  directoryId: '58b5cd9dfaa39d47eb8f5f88631f9a629a232016',\n});\n```\n\n</TabItem>\n</Tabs>",
+      "source_content_hash": "bffef6124de6b86187a43ced05498f56c7b35d6b472a4de42cb96f5ddb89704a",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_1858740b"
+      }
+    },
+    {
+      "segment_id": "c8bd4cb1",
+      "source_content": "#### Response",
+      "source_content_hash": "918d7df9bd5c6a4357dabf79a564f49e225f201d17f5e8f3f0a66e23321c9f63",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "#### 响应"
+      }
+    },
+    {
+      "segment_id": "0f5df84e",
+      "source_content": "```json\n{\n  \"data\": {\n    \"authorizationUrl\": \"https://accounts.google.com/...\"\n  },\n  \"error\": null\n}\n```",
+      "source_content_hash": "e8c3d537231f31a1f4239b9a7f44cc9229755cdd6bc77868550c4112ae959bca",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_0f5df84e"
+      }
+    },
+    {
+      "segment_id": "f390eeb4",
+      "source_content": "#### 2. Get Access Token",
+      "source_content_hash": "eccd015a9acc217816025ded452019011badfef3b813e9ead10f325e3e0e2a6d",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "#### 2. 获取访问令牌"
+      }
+    },
+    {
+      "segment_id": "560d66e0",
+      "source_content": "Get the access token from the authorization code.",
+      "source_content_hash": "72a646bf3240aa1123aa546cc607a8acfcd5b4157093c35105e1f3f6020cf36b",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "从授权码获取访问令牌。"
+      }
+    },
+    {
+      "segment_id": "bd6b59a9",
+      "source_content": "#### Request",
+      "source_content_hash": "ccf91e2a4f4d01917e4ab18dffaeb752f338215bf941ecaff6cce8e9a011196c",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "#### 请求"
+      }
+    },
+    {
+      "segment_id": "abadc7e4",
+      "source_content": "<Tabs>\n<TabItem value=\"01\" label=\"Node.js\" default>\n\n```javascript showLineNumbers\nawait directorySyncController.google.getAccessToken({\n  directoryId: '58b5cd9dfaa39d47eb8f5f88631f9a629a232016',\n  code: 'authorization-code',\n});\n```\n\n</TabItem>\n</Tabs>",
+      "source_content_hash": "18f3a7c9e347c02f45c7e14d5024d4510b27ee09ae131db5b0445fc6580a55f7",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_abadc7e4"
+      }
+    },
+    {
+      "segment_id": "1dc9f519",
+      "source_content": "#### Response",
+      "source_content_hash": "918d7df9bd5c6a4357dabf79a564f49e225f201d17f5e8f3f0a66e23321c9f63",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "#### 响应"
+      }
+    },
+    {
+      "segment_id": "281a0648",
+      "source_content": "```json\n{\n  \"data\": {\n    \"access_token\": \"ya29.a0AWY7CknlXtELCHzdKuS...\",\n    \"refresh_token\": \"1//03MJpa-zseicbCgYIARAAGAMSNwF-...\",\n    \"scope\": \"https://www.googleapis.com/auth/admin.directory.group.member.readonly https://www.googleapis.com/auth/admin.directory.group.readonly\",\n    \"token_type\": \"Bearer\",\n    \"expiry_date\": 1684343934305\n  },\n  \"error\": null\n}\n```",
+      "source_content_hash": "efc379045510ff97509361e1756b39c4b644a9e8ea2caf500c2dbc50dfee563e",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_281a0648"
+      }
+    },
+    {
+      "segment_id": "0b4ae2f4",
+      "source_content": "#### 3. Set Access Token to Directory",
+      "source_content_hash": "9f317e7227f4e9290d0c29ad3974ce209d1fc9e542e2d5f42fd765e6d9f30ba5",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "#### 3. 将访问令牌设置到目录"
+      }
+    },
+    {
+      "segment_id": "90878fe8",
+      "source_content": "Set the access token and refresh token to the directory. We'll use the access token to make requests to the Google Directory API.",
+      "source_content_hash": "85a97adb37f8446f121acc43ddbb1ae6970814a156bcb9395db6a9db156c6b32",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "将访问令牌和刷新令牌设置到目录。我们将使用访问令牌向 Google 目录 API 发起请求。"
+      }
+    },
+    {
+      "segment_id": "cd180894",
+      "source_content": "#### Request",
+      "source_content_hash": "ccf91e2a4f4d01917e4ab18dffaeb752f338215bf941ecaff6cce8e9a011196c",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "#### 请求"
+      }
+    },
+    {
+      "segment_id": "379e8aee",
+      "source_content": "<Tabs>\n<TabItem value=\"01\" label=\"Node.js\" default>\n\n```javascript showLineNumbers\nawait directorySyncController.google.setToken({\n  directoryId: '58b5cd9dfaa39d47eb8f5f88631f9a629a232016',\n  accessToken: 'ya29.a0AWY7CknlXtELCHzdKuS...',\n  refreshToken: '1//03MJpa-zseicbCgYIARAAGAMSNwF-...',\n});\n```\n\n</TabItem>\n</Tabs>",
+      "source_content_hash": "08626f3fbf1eb101617506326fc6b562099438b6ed3230b4d66f2d34950d6bd6",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_379e8aee"
+      }
+    },
+    {
+      "segment_id": "fd0ec171",
+      "source_content": "#### Response",
+      "source_content_hash": "918d7df9bd5c6a4357dabf79a564f49e225f201d17f5e8f3f0a66e23321c9f63",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "#### 响应"
+      }
+    },
+    {
+      "segment_id": "a2373c50",
+      "source_content": "```json\n{\n  \"data\": {\n    \"id\": \"58b5cd9dfaa39d47eb8f5f88631f9a629a232016\",\n    \"name\": \"App\",\n    \"tenant\": \"boxyhq\",\n    \"product\": \"jackson\",\n    \"type\": \"google\",\n    \"google_domain\": \"boxyhq.com\",\n    \"google_access_token\": \"ya29.a0AWY7CknlXtELCHzdKuS...\",\n    \"google_refresh_token\": \"1//03MJpa-zseicbCgYIARAAGAMSNwF-...\"\n  },\n  \"error\": null\n}\n```",
+      "source_content_hash": "986e18fb41a6f7d7dbf995108f7ef80f98cde597fb8f37bfd8bc98c02fbbe452",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_a2373c50"
+      }
+    },
+    {
+      "segment_id": "5cc60289",
+      "source_content": "#### 4. Sync Directory",
+      "source_content_hash": "d2488d832b748814e1dd9d4ca8cf15d7eaa94854971c1e3ad8e5b40c2ef3569a",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "#### 4. 同步目录"
+      }
+    },
+    {
+      "segment_id": "ccd1f378",
+      "source_content": "Jackson can be configured to sync your Google Workspace directory.",
+      "source_content_hash": "0d884e62dea5281c522c0c5c80ed21fe95eb79a6250933e7360e31b0873ca266",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "Jackson 可配置为同步您的 Google Workspace 目录。"
+      }
+    },
+    {
+      "segment_id": "8aa2ae1b",
+      "source_content": "<Tabs>\n<TabItem value=\"01\" label=\"Node.js\" default>\n\n```javascript showLineNumbers\nconst callback = (event: DirectorySyncEvent) => {\n  console.log(event);\n};\n\nawait directorySyncController.sync(callback);\n```\n\n</TabItem>\n<TabItem value=\"02\" label=\"Shell\">\n\n```bash\ncurl -X POST \\\n  -H \"Authorization: Api-Key YOUR_API_KEY\" \\\n  http://localhost:5225/api/v1/dsync/cron/sync-google\n```\n\n</TabItem>\n</Tabs>",
+      "source_content_hash": "e3fdb276ac0685bfbb9f320d03e8695199bf943c48af70ab956b2d2322430568",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_8aa2ae1b"
+      }
+    },
+    {
+      "segment_id": "1c6a8a5f",
+      "source_content": "You'll ideally want to run the sync on a schedule (e.g. every 2 hours). You can use a cron job to invoke this URL on a schedule.",
+      "source_content_hash": "8b3996d6ec7cdba259db54bfc66c5484647a88cb04e3c439e06e7b9a09af1468",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "理想情况下，您会希望按计划（例如每 2 小时）运行同步。您可以使用 cron 作业按计划调用此 URL。"
+      }
+    },
+    {
+      "segment_id": "1526930a",
+      "source_content": "See more information about the [Directory Sync Event](#handle-the-requests-from-identity-providers) below.",
+      "source_content_hash": "8bf02e0ac6479867e2671e78a4368f59ea9b088e9e1f53348f10c352f8d5c390",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "有关[目录同步事件](#handle-the-requests-from-identity-providers)的更多信息，请参阅下文。"
+      }
+    },
+    {
+      "segment_id": "ce9ecf19",
+      "source_content": "---",
+      "source_content_hash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "node_type": "thematicBreak",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "---"
+      }
+    },
+    {
+      "segment_id": "44ce4272",
+      "source_content": "### Handle the Requests from Identity Providers",
+      "source_content_hash": "fc51cefaa7310a0a59d84c5fc97346591ed5e05bf28ae0ce23f2500932c29e0c",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 处理来自身份提供商的请求"
+      }
+    },
+    {
+      "segment_id": "33e61440",
+      "source_content": "Make sure your application can handle the requests from Identity Providers.",
+      "source_content_hash": "7fc6ffad0535164cbf9d9479e83da618cf8de14ec6d34cf48492d250a937b5a5",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "确保您的应用能够处理来自身份提供商的请求。"
+      }
+    },
+    {
+      "segment_id": "a10f3259",
+      "source_content": "#### Routes",
+      "source_content_hash": "73e9e8da4c097d1dca4b3eb51d3217d8c3251197e5081d00a72236288ba9f181",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "#### 路由"
+      }
+    },
+    {
+      "segment_id": "96a98088",
+      "source_content": "Typically, you will want to add the following routes to your application to handle the requests. However, the `Methods` can vary for some Identity Providers.",
+      "source_content_hash": "4e85c30f95cd6e44e473e18fa77a793b682e80077704625084aef69d0d80d3f9",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "通常，您需要向应用添加以下路由以处理请求。但某些身份提供商的 `Methods` 可能有所不同。"
+      }
+    },
+    {
+      "segment_id": "510d71ae",
+      "source_content": "| Route       | Methods    | Event                                          |\n| ----------- | ---------- | ---------------------------------------------- |\n| /Users      | POST       | A new user has been assigned to a SCIM app     |\n| /Users/:id  | PUT, PATCH | A user information has been updated            |\n| /Users/:id  | DELETE     | A user has been removed from a SCIM app        |\n| /Groups     | POST       | A new group has been pushed                    |\n| /Groups/:id | PUT        | Group name has been changed                    |\n| /Groups/:id | PATCH      | User has been added to or removed from a group |\n| /Groups/:id | DELETE     | Group has been removed                         |",
+      "source_content_hash": "bb2005af3c7b84954510fc0b1171c001558033add350b355359b089fd036dfe4",
+      "node_type": "table",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_510d71ae"
+      }
+    },
+    {
+      "segment_id": "75fe70df",
+      "source_content": "#### User Requests",
+      "source_content_hash": "51e2133d86e3ececc2d59f2b6ed22e664deb4c1116118f2d18833e6582faca01",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "#### 用户请求"
+      }
+    },
+    {
+      "segment_id": "f4a5584a",
+      "source_content": "```javascript showLineNumbers\nconst { data, status } = await directorySyncController.requests.handle(request);\n```",
+      "source_content_hash": "e9fa7c60b1358c949453ef7f82a6f812aa0483cfd02e6d43230fa9b6c1e25eba",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_f4a5584a"
+      }
+    },
+    {
+      "segment_id": "5b4be38c",
+      "source_content": "The shape of the `request` should be as follows:",
+      "source_content_hash": "2480a5b0ef7424c46d81d6f1dd21b375a59b6ac95d7cb86cebebbf034dcd7fe9",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "`request` 的结构应如下："
+      }
+    },
+    {
+      "segment_id": "b1b6d00a",
+      "source_content": "```javascript\n{\n  method: HTTPMethod;\n  body?: any;\n  directoryId: string;\n  resourceId: string;\n  resourceType: \"users\",\n  apiSecret: string;\n  query: {\n    count?: number;\n    startIndex?: number;\n    filter?: string;\n  };\n};\n```",
+      "source_content_hash": "53ee4f32496f5275bc05686d28de399b8e6b53a0cd08073b337728aafef29330",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_b1b6d00a"
+      }
+    },
+    {
+      "segment_id": "088bd6c5",
+      "source_content": "#### Group Requests",
+      "source_content_hash": "b5ad74a7a74794d7e0cc20e8bbe4188948447e0460edc0273d3511db526e1760",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "#### 群组请求"
+      }
+    },
+    {
+      "segment_id": "b4c8c9d0",
+      "source_content": "Handling the group requests is similar to handling the user requests.",
+      "source_content_hash": "37cdd2322e8d92eb9efd985f0f004b1303ed749f720691ae3232cd86627f7284",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "处理群组请求与处理用户请求类似。"
+      }
+    },
+    {
+      "segment_id": "2522ffc3",
+      "source_content": "```javascript showLineNumbers\nconst { data, status } = await directorySyncController.requests.handle(request);\n```",
+      "source_content_hash": "e9fa7c60b1358c949453ef7f82a6f812aa0483cfd02e6d43230fa9b6c1e25eba",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_2522ffc3"
+      }
+    },
+    {
+      "segment_id": "cb63afa1",
+      "source_content": "The shape of the `request` should be as follows:",
+      "source_content_hash": "2480a5b0ef7424c46d81d6f1dd21b375a59b6ac95d7cb86cebebbf034dcd7fe9",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "`request` 的结构应如下："
+      }
+    },
+    {
+      "segment_id": "c9d3f882",
+      "source_content": "```javascript\n{\n  method: HTTPMethod;\n  body?: any;\n  directoryId: string;\n  resourceId: string;\n  resourceType: \"groups\",\n  apiSecret: string;\n  query: {\n    count?: number;\n    startIndex?: number;\n    filter?: string;\n  };\n};\n```",
+      "source_content_hash": "61e5b446b2fdf19b9d3fce11d43351b0174c30f9572845168cb2a2ccd20f35a7",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_c9d3f882"
+      }
+    },
+    {
+      "segment_id": "8e261df7",
+      "source_content": "#### Callback Function",
+      "source_content_hash": "d950e12ce8407346cb66cd358a22c94b7b4883db235aa3d82a90912446816b04",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "#### 回调函数"
+      }
+    },
+    {
+      "segment_id": "57855344",
+      "source_content": "You can optionally pass a callback function as a second parameter to the handle method `requests.handle`. Jackson will invoke the callback with the event object as the first argument after handling the request. You can use the event object to determine the action to take.",
+      "source_content_hash": "02a1c5f8d0aa08beeaf937689c1f7f31f8b67edad23f284910613311e23f3e7a",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "您可以选择将回调函数作为第二个参数传递给处理方法 `requests.handle`。Jackson 在处理完请求后，会以事件对象作为第一个参数调用回调。您可以使用事件对象来决定要采取的操作。"
+      }
+    },
+    {
+      "segment_id": "c2cc931b",
+      "source_content": "```javascript showLineNumbers\nconst callback = (event: DirectorySyncEvent) => {\n  console.log(event);\n};\n\nconst { data, status } = await directorySyncController.requests.handle(\n  request,\n  callback\n);\n```",
+      "source_content_hash": "2588d4e41692746ea551a213f517b57020c733a6a3c3b6fc6d65f101079a49e7",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_c2cc931b"
+      }
+    },
+    {
+      "segment_id": "d85fa516",
+      "source_content": "### Batch processing events",
+      "source_content_hash": "4789567086f771d9eb8cd3957f22a05f00f3b5cb25fca926bd96095b443fa7da",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 批量处理事件"
+      }
+    },
+    {
+      "segment_id": "1aa07733",
+      "source_content": "You can enable batch processing of directory sync events instead of receiving events in real-time on your webhook endpoint. Once enabled, Jackson will queue the events and process them in batches. The batch size can be configured using the [DSYNC_WEBHOOK_BATCH_SIZE](/docs/jackson/deploy/env-variables#dsync_webhook_batch_size) environment variable.",
+      "source_content_hash": "ad6102a662a974056ece47681edab52d16706c985c1b19661ab2426ecbe2c1f0",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "您可以启用目录同步事件的批量处理，而不是实时接收事件到您的 webhook 端点。启用后，Jackson 会将事件排队并按批次处理。批次大小可通过 [DSYNC_WEBHOOK_BATCH_SIZE](/docs/jackson/deploy/env-variables#dsync_webhook_batch_size) 环境变量配置。"
+      }
+    },
+    {
+      "segment_id": "e28b963e",
+      "source_content": "You'll ideally want to run the events processing endpoint on a schedule. You can use a cron job to do this.",
+      "source_content_hash": "ebd106dd0f4026cc4a4af675dabe8e5f29a907276cedbaaf4f8615b15c15ef46",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "理想情况下，您会希望按计划运行事件处理端点。您可以使用 cron 作业来实现。"
+      }
+    },
+    {
+      "segment_id": "4cd8cc2c",
+      "source_content": "<Tabs>\n<TabItem value=\"02\" label=\"Shell\">\n\n```bash\ncurl -X POST \\\n  -H \"Authorization: Api-Key YOUR_API_KEY\" \\\n  http://localhost:5225/api/v1/dsync/cron/process-events\n```\n\n</TabItem>\n</Tabs>",
+      "source_content_hash": "3ad3d55078417101995e65a71d5ae013fbec96982aa701aef247750cd29d3a85",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_4cd8cc2c"
+      }
+    },
+    {
+      "segment_id": "6dc90d2d",
+      "source_content": "Alternatively you can set the `DSYNC_WEBHOOK_BATCH_CRON_INTERVAL` env var.",
+      "source_content_hash": "3dda20ba6cd5fc5d1104a93ee8f4954e68dbf3efabd77b4142e5d40eec828e1a",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "或者，您可以设置 `DSYNC_WEBHOOK_BATCH_CRON_INTERVAL` 环境变量。"
+      }
+    }
+  ],
+  "target_i18n_subpath": "docusaurus-plugin-content-docs/current/directory-sync/api-reference.md",
+  "last_updated_timestamp": "2025-06-08T18:49:09.324123+00:00",
+  "schema_version": "1.0",
+  "translated_versions": {
+    "zh-CN": "61c70263c8de0fe4372080a222b761cc90d4bf0867fbfa8fb9d961b427605e01"
+  }
+}

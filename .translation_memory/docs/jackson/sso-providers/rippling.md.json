@@ -1,0 +1,262 @@
+{
+  "source_file_path_relative_to_docusaurus_root": "docs/jackson/sso-providers/rippling.md",
+  "source_file_content_hash": "61dec952a8db009b280cc427f9210f5e94c1c364dd56e49e7d7cfb213546f299",
+  "segments": [
+    {
+      "segment_id": "58cfcc64",
+      "source_content": "---\ntitle: Set up your own custom SAML application for Rippling SAML\nsidebar_label: Rippling SAML\n---",
+      "source_content_hash": "9ef005a600fd20bcc9701cc081bd06930afa4ba0b9f7d4735fe49b0532d81cbf",
+      "node_type": "yaml",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_58cfcc64"
+      }
+    },
+    {
+      "segment_id": "b3de8742",
+      "source_content": "# Rippling SAML SSO",
+      "source_content_hash": "c1b313bdf98af1ca833ff3325a4b2a80f2ee12f5744efb7e5ac237c278418342",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "# Rippling SAML 单点登录配置"
+      }
+    },
+    {
+      "segment_id": "3fbbcc07",
+      "source_content": "This section will show you how to set up your own custom SAML application for Rippling SAML.",
+      "source_content_hash": "74c63ff87ab6826083ab38f7f0e2ea9328739418f9a4b4a076c2c9066568712d",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "本节将指导您如何为 Rippling SAML 设置自定义 SAML 应用程序。"
+      }
+    },
+    {
+      "segment_id": "1cc03ec8",
+      "source_content": "## Create Application",
+      "source_content_hash": "a4c42fce6e36a4ed1120ec7f3eb7c050bd9ea2173680e61024ccfe8f6aaa2897",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 创建应用程序"
+      }
+    },
+    {
+      "segment_id": "8d66f911",
+      "source_content": "You'll need to create a new **Custom App** from your Rippling account if the app is not already in the Rippling app directory.",
+      "source_content_hash": "cf9d7e2ae22afc68679595de02e222f3d89773577333b332dd024e109ffba032",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "若 Rippling 应用目录中尚未存在该应用，您需在 Rippling 账户中新建一个**自定义应用**。"
+      }
+    },
+    {
+      "segment_id": "ad8fd492",
+      "source_content": "Go to **IT Management** > **Custom App** from the left navigation menu.",
+      "source_content_hash": "eeff8f8fc06d84e192e01bfbd35946b68b0d6bfa1bdb0fd350189ee24d4be099",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "通过左侧导航菜单进入 **IT管理** > **自定义应用**。"
+      }
+    },
+    {
+      "segment_id": "86b54d44",
+      "source_content": "![Rippling SAML Step 1](/images/docs/jackson/sso-providers/rippling/1.png)",
+      "source_content_hash": "57bff92fbe0942026d7249505ba1bb8c68bd10263e24b4ce23e3093ac60a711a",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![Rippling SAML 步骤1](/images/docs/jackson/sso-providers/rippling/1.png)"
+      }
+    },
+    {
+      "segment_id": "39b3772c",
+      "source_content": "Click **Create New App** button to create a new application.",
+      "source_content_hash": "517b13cc3e1d4f87267b5686c11209d551049245e74554f37496430b88fa320f",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "点击**创建新应用**按钮以新建应用程序。"
+      }
+    },
+    {
+      "segment_id": "1acb9a05",
+      "source_content": "From the next screen, fill in the following fields:",
+      "source_content_hash": "6844803c82bdad56b7d2c485e748efdae7934cb9687c50f83bf40c1079303347",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "在后续页面填写以下字段："
+      }
+    },
+    {
+      "segment_id": "da23c906",
+      "source_content": "- **App Name**\n- **Select Categories**\n- **Upload Logo**\n- **What type of app would you like to create?** - Make sure you select **Single Sign-On (SAML)** from the list.",
+      "source_content_hash": "ad77672f7c71a728ce7ed547054727019ac18d927df0b7443fd774b9fb3c95a3",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- **应用名称**\n- **选择分类**\n- **上传图标**\n- **您想创建哪种类型的应用？** - 请确保从列表中选择**单点登录(SAML)**。"
+      }
+    },
+    {
+      "segment_id": "a76548f8",
+      "source_content": "![Rippling SAML Step 2](/images/docs/jackson/sso-providers/rippling/2.png)",
+      "source_content_hash": "b54a9713f4ecd26c5594363e79b7f08ec4de67cecb801275ac12a08dfc5f225a",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![Rippling SAML 步骤2](/images/docs/jackson/sso-providers/rippling/2.png)"
+      }
+    },
+    {
+      "segment_id": "f2f30ae8",
+      "source_content": "## Configure Application",
+      "source_content_hash": "aa3cb32afcf17822a5ba904685b48592ccb953a514ebc2da0731fc9ce393d544",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 配置应用程序"
+      }
+    },
+    {
+      "segment_id": "dfe931a2",
+      "source_content": "Copy the **IdP Metadata URL** or **IdP Metadata XML** from the next screen. You'll need this value to configure your SAML connection in SAML Jackson.",
+      "source_content_hash": "ad374fdbebe1844665549e6dc4aa135f35672d26250dd23c166069319fc5af3e",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "从后续页面复制**IdP元数据URL**或**IdP元数据XML**。该值将用于在 SAML Jackson 中配置您的SAML连接。"
+      }
+    },
+    {
+      "segment_id": "4daf5cdd",
+      "source_content": "![Rippling SAML Step 3](/images/docs/jackson/sso-providers/rippling/3.png)",
+      "source_content_hash": "0c9a29d92e26bc37c70bf3208fca984d04b8fc2486019dc54ad2ba1818b18905",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![Rippling SAML 步骤3](/images/docs/jackson/sso-providers/rippling/3.png)"
+      }
+    },
+    {
+      "segment_id": "bdc231b1",
+      "source_content": "You'll need to enter the **ACS URL** and **Entity ID**. You'll get these values from SAML Jackson.",
+      "source_content_hash": "b2ef03e422a5e4aeda03fe234faf2e88b0602327d35af83265832c8c9e5feaca",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "您需要输入**ACS URL**和**实体ID**。这些值可从 SAML Jackson 获取。"
+      }
+    },
+    {
+      "segment_id": "97ae4a01",
+      "source_content": "![Rippling SAML Step 4](/images/docs/jackson/sso-providers/rippling/4.png)",
+      "source_content_hash": "05d6259e2ac9dff03726ff0574b0c5772f255b384fa9e5e7d2f44a956dbc18a4",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![Rippling SAML 步骤4](/images/docs/jackson/sso-providers/rippling/4.png)"
+      }
+    },
+    {
+      "segment_id": "c3a738de",
+      "source_content": "Make sure that **Service Provider Entity ID** matches the **SAML Audience (SP Entity ID)** value from SAML Jackson.",
+      "source_content_hash": "834094ab162803e1fa075d699f0058815bfbdeea7417abfa915ea1753ff273ed",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "确保**服务提供商实体ID**与 SAML Jackson 中的**SAML受众(SP实体ID)**值匹配。"
+      }
+    },
+    {
+      "segment_id": "3cfe6286",
+      "source_content": "From the **Settings** tab of custom app you just created. Go to **Advanced SAML Settings** section and check the box for **Disable InResponseTo field in assertions for IdP initiated SSO**.",
+      "source_content_hash": "6c96b55b4f1e209e2e2513b02eb4a194ae3c52a0526f336a91e5d83e1cb58ad2",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "在您刚创建的自定义应用的**设置**选项卡中，进入**高级SAML设置**部分，勾选**禁用IdP发起的SSO断言中的InResponseTo字段**。"
+      }
+    },
+    {
+      "segment_id": "1042b50d",
+      "source_content": "This is because Rippling sends dummy values for the **InResponseTo** field and SAML Jackson will try to validate the **InResponseTo** field if it is present.",
+      "source_content_hash": "45077216ccc48306f533a353b63a1bb94f3477eb850048f1cd944d067acac310",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "由于 Rippling 会为**InResponseTo**字段发送虚拟值，而 SAML Jackson 将尝试验证该字段（若存在）。"
+      }
+    },
+    {
+      "segment_id": "aa1e7006",
+      "source_content": "![Rippling SAML Step 5](/images/docs/jackson/sso-providers/rippling/5.png)",
+      "source_content_hash": "e78b162d93d0d58bfd49c11d00ea94f485e787ded1e870eef1c5ebbb76a5fe78",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![Rippling SAML 步骤5](/images/docs/jackson/sso-providers/rippling/5.png)"
+      }
+    },
+    {
+      "segment_id": "f44c1398",
+      "source_content": "## Next steps",
+      "source_content_hash": "3a5d9cbc49e6e5f0c98349dd1cd7cfe5713807fc5f02234240621031925d1f32",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 后续步骤"
+      }
+    },
+    {
+      "segment_id": "29528c8d",
+      "source_content": "You've successfully configured your custom SAML application for Rippling SAML. At this stage, you can assign users to your application and start using it.",
+      "source_content_hash": "b88bdeaebd11879ef00c4d084e9c8d503a0b606c8b04caadeb7684eab54ac70b",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "您已成功为 Rippling SAML 配置自定义应用。此时可为应用分配用户并开始使用。"
+      }
+    },
+    {
+      "segment_id": "11c76fcc",
+      "source_content": "## Resources",
+      "source_content_hash": "75c6211de8f8951e8037d10289e3e5d0177b8a172b593345006b5b42a8e08e0e",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 相关资源"
+      }
+    },
+    {
+      "segment_id": "310e47b7",
+      "source_content": "- [Rippling](https://www.rippling.com/) official website\n- Visit [Rippling documentation](https://developer.rippling.com/)",
+      "source_content_hash": "171ebd4200dbaebb0fc51a26e5a8f51c805281dcc2b9ea3587e77e73d1bd589a",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- [Rippling](https://www.rippling.com/) 官方网站\n- 访问 [Rippling 开发者文档](https://developer.rippling.com/)"
+      }
+    },
+    {
+      "segment_id": "f90b9a6a",
+      "source_content": ":::tip\nGot a question? [Ask here](https://discord.gg/uyb7pYt4Pa)\n:::",
+      "source_content_hash": "205c5768df1b402d61a634ce459105e3be3777225d2575780c425cf0a7ceae4c",
+      "node_type": "containerDirective",
+      "translatable": true,
+      "translations": {
+        "zh-CN": ":::tip\n遇到问题？[在此提问](https://discord.gg/uyb7pYt4Pa)\n:::"
+      }
+    }
+  ],
+  "target_i18n_subpath": "docusaurus-plugin-content-docs/current/jackson/sso-providers/rippling.md",
+  "last_updated_timestamp": "2025-06-08T18:49:09.318393+00:00",
+  "schema_version": "1.0",
+  "translated_versions": {
+    "zh-CN": "61dec952a8db009b280cc427f9210f5e94c1c364dd56e49e7d7cfb213546f299"
+  }
+}

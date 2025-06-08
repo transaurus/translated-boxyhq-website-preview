@@ -1,0 +1,272 @@
+{
+  "source_file_path_relative_to_docusaurus_root": "success-stories/2023-11-27-safeguarding-trust-boxyhq-sso-enhances-dubs-security.md",
+  "source_file_content_hash": "f3f07d0c8397037f03e799d03716f75a07ebb182b7a7933826f89a2372ab9f4a",
+  "segments": [
+    {
+      "segment_id": "58cfcc64",
+      "source_content": "---\nslug: safeguarding-trust-boxyhq-sso-enhances-dubs-security\ntitle: \"Safeguarding Trust: BoxyHQ SSO Enhances Dub's Security \"\ntags_disabled: [security, cybersecurity, devsecops, single sign-on]\nimage: /images/success-stories/dub-case-study.png\nhide_table_of_contents: true\n---",
+      "source_content_hash": "00b52d051243bd21b7fdc982db5a2eb58c4f286c5d626788fc03a6f6f3549019",
+      "node_type": "yaml",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_58cfcc64"
+      }
+    },
+    {
+      "segment_id": "623f74e7",
+      "source_content": "import LearnMoreCTA from \"../src/components/ctas/LearnMoreCTA\";\nimport FeaturedQuote from \"../src/components/FeaturedQuote\";\nimport SignupCTA from \"../src/components/ctas/SignupCTA\";",
+      "source_content_hash": "00ee7a5cc2eabfacc6faf08d517e820e19e38542f8e03adbe98caab442d4b6f6",
+      "node_type": "mdxjsEsm",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_623f74e7"
+      }
+    },
+    {
+      "segment_id": "180bddb1",
+      "source_content": "[Dub](https://dub.co) is a cutting-edge URL-shortening service that simplifies and enhances your online experience. With Dub, you can convert long, unwieldy URLs into concise and user-friendly short links with just a few clicks. This means you can share links on social media, in emails, or in your documents more efficiently and aesthetically.",
+      "source_content_hash": "fb9b2714c8f7d78a189cac7821e23dae3ee1a788a26be96560f660ea97241faa",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "[Dub](https://dub.co) 是一款前沿的URL缩短服务，它能简化和提升您的在线体验。通过Dub，您只需点击几下，就能将冗长不便的URL转换为简洁友好的短链接。这意味着您可以更高效、更美观地在社交媒体、电子邮件或文档中分享链接。"
+      }
+    },
+    {
+      "segment_id": "e14c9928",
+      "source_content": "## Introduction",
+      "source_content_hash": "d753efbab681fa4da82470d9a83b1c202de58f92fd498e77a269c1163bc4714b",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 引言"
+      }
+    },
+    {
+      "segment_id": "42ad8e83",
+      "source_content": "In the fast-paced digital landscape of today, security and efficiency are paramount. Dub, a forward-thinking organization, recognized the need to streamline and strengthen their user authentication process. The motivation behind implementing [Enterprise Single Sign-On (SSO)](https://github.com/boxyhq/jackson) was to simplify user access while bolstering security measures. Dub aimed to provide a seamless experience for their clients and employees, eliminating the hassle of multiple logins and passwords.",
+      "source_content_hash": "dc8d01967e61cb00b3fe0ddf1a4ee975c3f28f3198bb27969bb5f5ceda396a36",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "在当今快节奏的数字环境中，安全性和效率至关重要。作为一家具有前瞻性的组织，Dub认识到需要简化和加强其用户认证流程。实施[企业级单点登录(SSO)](https://github.com/boxyhq/jackson)的动机在于简化用户访问同时增强安全措施。Dub旨在为客户和员工提供无缝体验，消除多次登录和密码管理的麻烦。"
+      }
+    },
+    {
+      "segment_id": "09a8fe76",
+      "source_content": "<SignupCTA campaign=\"success-story-dub\" />",
+      "source_content_hash": "be92302641fee2ae7762daf1ae89f33dc024ef8df82d70b1f4e38e8ee5af30f1",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_09a8fe76"
+      }
+    },
+    {
+      "segment_id": "1485a88b",
+      "source_content": "<FeaturedQuote personName=\"Steven Tey\" personRole=\"Founder Dub\" pictureSrc=\"/images/success-stories/steven-tey-dub\">\n 🔥 BoxyHQ is an absolute godsend!\n</FeaturedQuote>",
+      "source_content_hash": "728a6809a6b56e31f59824989e88544ae007b3643ac6856ee3128e405eb84cd1",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_1485a88b"
+      }
+    },
+    {
+      "segment_id": "ed7dde9c",
+      "source_content": "## Choosing BoxyHQ's Jackson: A Trusted Partner in Security",
+      "source_content_hash": "cd0009292b7dcb190b714300a4afffbf52164beac223ca9bb3aaa40f8f06e177",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 选择BoxyHQ的Jackson：值得信赖的安全合作伙伴"
+      }
+    },
+    {
+      "segment_id": "a76548f8",
+      "source_content": "Dub's quest for a robust SSO solution led them to BoxyHQ [(Jackson)](https://github.com/boxyhq/jackson), a name synonymous with secure and user-friendly SSO implementations. The decision was influenced by BoxyHQ's Enterprise-Grade track record in delivering secure and user-friendly SSO solutions. Dub saw BoxyHQ as a trusted partner with a deep understanding of their security needs.",
+      "source_content_hash": "41315ed4401e4fa7c45e6d0524b5d3b5a0948b999a4ddd6f7b378b388587eb76",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "Dub对强大SSO解决方案的探索将其引向了BoxyHQ[(Jackson)](https://github.com/boxyhq/jackson)——一个以安全、用户友好的SSO实施方案著称的品牌。这一决定受到BoxyHQ在企业级安全SSO解决方案交付方面良好记录的深刻影响。Dub将BoxyHQ视为深刻理解其安全需求的可靠合作伙伴。"
+      }
+    },
+    {
+      "segment_id": "4b1d2d7d",
+      "source_content": "The choice of BoxyHQ's Jackson wasn't just about the features it offered. It was also about selecting a partner who shared Dub's commitment to a seamless, secure user experience.",
+      "source_content_hash": "9805749dd0719a9702511f631258ea3114f8d03df4d023c83803e89ac04df271",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "选择BoxyHQ的Jackson不仅关乎其提供的功能特性，更是选择了一个与Dub同样致力于提供无缝、安全用户体验的合作伙伴。"
+      }
+    },
+    {
+      "segment_id": "48847fd4",
+      "source_content": "## Direct and Soft Benefits of Enterprise SSO Implementation",
+      "source_content_hash": "0cc9b9d6bb58637b6fdd9f4246951bf3191d9b3965d0b01633fb5b473e8abeb4",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 企业级SSO实施的直接与间接效益"
+      }
+    },
+    {
+      "segment_id": "4daf5cdd",
+      "source_content": "The adoption of BoxyHQ's Jackson brought a multitude of benefits to Dub, both direct and soft. Here's a closer look at these advantages:",
+      "source_content_hash": "796611030096f0d6bd456f4ef0e96b05ad725e37272203681863563e15ea65d1",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "采用BoxyHQ的Jackson为Dub带来了多重效益，包括直接和间接层面。以下是这些优势的详细分析："
+      }
+    },
+    {
+      "segment_id": "bdc231b1",
+      "source_content": "**_Direct Benefits:_**",
+      "source_content_hash": "9fcfd5680cf7a792fbb93ba3b1770b81ed9f78d11f5b55a35be8227d78a9f3f9",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "**_直接效益：_**"
+      }
+    },
+    {
+      "segment_id": "5d66c9dc",
+      "source_content": "1. **Reduced Login Friction:** With SSO, users can access multiple systems and applications with a single set of credentials, eliminating the need for multiple logins. This streamlined process significantly reduced login friction and saved users valuable time.\n\n2. **Enhanced Security:** Enterprise SSO ensures that users have secure access to their resources. It safeguards against unauthorized access and provides a crucial layer of security.\n\n3. **Simplified User Management:** Dub found that managing user access and permissions became simpler and more efficient. Administrators could easily control who had access to what, improving overall data security.",
+      "source_content_hash": "06cabd29c1ea0f2af9ccf4920643169b7f42dc3c8a1a0de75d30ea606fa3396f",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "1. **降低登录阻力：** 通过SSO，用户只需一套凭证即可访问多个系统和应用，消除了多次登录的需求。这一简化流程显著减少了登录障碍，为用户节省了宝贵时间。\n\n2. **增强安全性：** 企业级SSO确保用户安全访问资源，有效防范未授权访问，提供了关键的安全防护层。\n\n3. **简化用户管理：** Dub发现用户访问权限管理变得更加简单高效。管理员可以轻松控制访问权限，全面提升数据安全性。"
+      }
+    },
+    {
+      "segment_id": "1042b50d",
+      "source_content": "**_Soft Benefits (Second-Order Benefits):_**",
+      "source_content_hash": "316a9f8ad54e0afcaf9c2afa08e966ce9c1ec3790f60338aafc4cf463db87f1c",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "**_间接效益（二阶效益）：_**"
+      }
+    },
+    {
+      "segment_id": "aa1e7006",
+      "source_content": "**Improved User Satisfaction:** With fewer login hassles and increased security, users were more satisfied with their experience, contributing to a more positive working environment.",
+      "source_content_hash": "f84a95de390ff34aa15b702357bb78bc2ffb5a898ef21e09af2d407595c29fa6",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "**提升用户满意度：** 减少登录困扰并增强安全性后，用户对其体验更加满意，这有助于营造更积极的工作环境。"
+      }
+    },
+    {
+      "segment_id": "13d9cd70",
+      "source_content": "**Increased Productivity:** The time saved in dealing with login issues and managing multiple passwords allowed employees to focus more on their core tasks, enhancing productivity.",
+      "source_content_hash": "a57474461079ba9748da0810467c50596f484459b69cd0bbc9e7211fec46f444",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "**提高生产力：** 节省处理登录问题和管理多个密码的时间，使员工能更专注于核心任务，从而提升生产力。"
+      }
+    },
+    {
+      "segment_id": "29528c8d",
+      "source_content": "**Heightened Trust:** Clients and partners felt more confident in Dub's security measures, strengthening relationships and trust.",
+      "source_content_hash": "686b2648c6becd7fd4a7a6d087f375633505974c6d5d77bd1e4fa6ba09b07063",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "**增强信任度：** 客户和合作伙伴对Dub的安全措施更有信心，这强化了合作关系和信任基础。"
+      }
+    },
+    {
+      "segment_id": "8e90ad3a",
+      "source_content": "<FeaturedQuote personName=\"Steven Tey\" personRole=\"Founder Dub\" pictureSrc=\"/images/success-stories/steven-tey-dub\">\n  HUGE shoutout to BoxyHQ for demystifying esoteric concepts like Enterprise SSO and Directory Sync!\n\n  I highly recommend checking out their docs – it's an absolute goldmine.\n</FeaturedQuote>",
+      "source_content_hash": "ad8f0b52ae59fec54e4e0b507a2b220dd00db4aff6510de70ca3bdfdf8c460a2",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_8e90ad3a"
+      }
+    },
+    {
+      "segment_id": "4d52a261",
+      "source_content": "**Business Impact:** Saving Time and Attracting Enterprise Clients\nThe implementation of BoxyHQ's Jackson resulted in significant time savings for Dub's team. With streamlined authentication processes and reduced password-related issues, employees and clients could access resources faster, leading to increased operational efficiency.",
+      "source_content_hash": "dd41d8c2c73a253f31335dbfb4264e1bd76f75a403db11866a19d54a5bfb8e23",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "**商业影响：节省时间与吸引企业客户**\nBoxyHQ的Jackson实施为Dub团队带来了显著的时间节省。通过简化的认证流程和减少密码相关问题，员工和客户能更快访问资源，从而提升运营效率。"
+      }
+    },
+    {
+      "segment_id": "40158b4b",
+      "source_content": "With the help of BoxyHQ, Dub has witnessed substantial growth in acquiring enterprise clients as a direct result of utilizing SSO. In just two weeks, Dub secured five enterprise clients by leveraging BoxyHQ's SAML/SSO capabilities. The improved user experience and heightened security measures facilitated smoother onboarding processes for new clients, contributing to Dub's growth in the enterprise sector.",
+      "source_content_hash": "a5d37bdaf76b7be8f6a4ffdfd3cc6ca7304f88fe5510fc38fa37706dcb2ea987",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "在BoxyHQ的助力下，Dub因采用SSO而实现了企业客户获取的大幅增长。仅两周内，Dub就通过利用BoxyHQ的SAML/SSO功能赢得了五家企业客户。改进的用户体验和强化的安全措施为新客户提供了更顺畅的入驻流程，推动了Dub在企业领域的发展。"
+      }
+    },
+    {
+      "segment_id": "96e9ed17",
+      "source_content": "<FeaturedQuote personName=\"Steven Tey\" personRole=\"Founder Dub\" pictureSrc=\"/images/success-stories/steven-tey-dub\">\n  SSO has been a highly requested feature since Dub's launch and we're excited to be launching BoxyHQ’s secure sign-on!\n</FeaturedQuote>",
+      "source_content_hash": "1feb4548824101439c7894215b039ee995759ebfd0b34a19d882eaccc56e4996",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_96e9ed17"
+      }
+    },
+    {
+      "segment_id": "8c6d7ee7",
+      "source_content": "## A Collaborative Success Story",
+      "source_content_hash": "1c4818e59867169d069c52d1b4f903ea3f49a44c3d99bdc70bf4dc5153317395",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 协作共赢的成功案例"
+      }
+    },
+    {
+      "segment_id": "06e24cc0",
+      "source_content": "Dub's successful collaboration with BoxyHQ (Jackson) in implementing Enterprise SSO highlights the tangible benefits that have transformed Dub's user authentication and security landscape. This partnership signifies a shared commitment to streamlining security and simplifying access. BoxyHQ's Jackson is more than a tool; it's a security partner.",
+      "source_content_hash": "7247654a9e3a698f753b2935040aaabd27ce000ca6d7d0732c53aefb55e47963",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "Dub与BoxyHQ(Jackson)在企业级SSO实施上的成功合作，彰显了那些改变Dub用户认证与安全格局的实际效益。这一合作伙伴关系体现了双方对简化安全流程和优化访问体验的共同承诺。BoxyHQ的Jackson不仅是一个工具，更是值得信赖的安全合作伙伴。"
+      }
+    },
+    {
+      "segment_id": "7f71ff2a",
+      "source_content": "In closing, Dub's journey towards Enterprise SSO with BoxyHQ's Jackson serves as a testament to the transformative power of technology. The adoption of SSO not only enhanced security and efficiency but also facilitated growth and strengthened relationships with clients and partners. It's a story of how a forward-thinking organization and a trusted technology partner can achieve remarkable results.",
+      "source_content_hash": "f103ba34f29f128f65ae21fda1ae9d00519a772a317f4a6e649221a8f2e91dfd",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "最后，Dub采用BoxyHQ的Jackson实现企业级SSO的历程，充分证明了技术的变革力量。SSO的采用不仅提升了安全性和效率，还促进了业务增长并强化了与客户及合作伙伴的关系。这个故事展示了一个具有前瞻性的组织与值得信赖的技术合作伙伴如何共同取得卓越成果。"
+      }
+    },
+    {
+      "segment_id": "5b035b90",
+      "source_content": "<LearnMoreCTA label=\"Read the full interview\" newWindow={false} url=\"/blog/unlocking-business-growth-a-conversations-with-dubs-founder\" />",
+      "source_content_hash": "17ab1ba977db085ec25c83441365cdc23ec72760a8c66fc2e7bce1da83a00148",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_5b035b90"
+      }
+    }
+  ],
+  "target_i18n_subpath": "docusaurus-plugin-content-blog-success-stories/2023-11-27-safeguarding-trust-boxyhq-sso-enhances-dubs-security.md",
+  "last_updated_timestamp": "2025-06-08T18:49:09.291245+00:00",
+  "schema_version": "1.0",
+  "translated_versions": {
+    "zh-CN": "f3f07d0c8397037f03e799d03716f75a07ebb182b7a7933826f89a2372ab9f4a"
+  }
+}

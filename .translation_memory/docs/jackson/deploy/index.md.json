@@ -1,0 +1,92 @@
+{
+  "source_file_path_relative_to_docusaurus_root": "docs/jackson/deploy/index.md",
+  "source_file_content_hash": "d064b7609563a23f9a7e607add0f7e9558ce6ffc2d9a9d3f866a0739f5da83cd",
+  "segments": [
+    {
+      "segment_id": "58cfcc64",
+      "source_content": "---\ntitle: Getting Started with SAML Jackson\ndescription: Getting Started with SAML Single Sign-On authentication\nsidebar_label: Overview\n---",
+      "source_content_hash": "67ec2dced021872a5125873f7aee60e66d6db88628c5d07a739daca9c5450d5a",
+      "node_type": "yaml",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_58cfcc64"
+      }
+    },
+    {
+      "segment_id": "6ef78e84",
+      "source_content": "SAML Jackson can be used with any web application to integrate the **Single Sign-On (SSO) authentication**.",
+      "source_content_hash": "7a2c7b5e724c3c69c6650fd89e833540e4e8887156e239cb46df45a65e391113",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "SAML Jackson 可与任何网络应用程序集成，实现**单点登录（SSO）认证**功能。"
+      }
+    },
+    {
+      "segment_id": "53eaf0e1",
+      "source_content": "There are two ways to integrate SAML Jackson with an application. Depending on your use case, you can choose either one of them.",
+      "source_content_hash": "f66bf257dd56f148b90844568c57d6cf9ae91eec4ce63d01eed7074282d04264",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "SAML Jackson 提供两种集成方式，您可根据实际使用场景任选其一。"
+      }
+    },
+    {
+      "segment_id": "8a5f6a7b",
+      "source_content": "## As a [separate service](./service.md)",
+      "source_content_hash": "5b1bd921e2590bc804cddd154dc7a55348c43466b4a2b3eddf71ab883858c936",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 作为[独立服务](./service.md)运行"
+      }
+    },
+    {
+      "segment_id": "180bddb1",
+      "source_content": "The advantage of running a separate service is that you get all of our UI tooling (Next.js application Admin Portal) out of the box to handle the SSO and Directory Sync connections with the service. The disadvantage is that you have to manage the operations of a separate service. If you are not using Node.js then this is the only option available to you.",
+      "source_content_hash": "dcaafb80745264d242740bc6c84f6139a80333a70b8d1d5634fdf6d471add213",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "独立服务部署的优势在于可直接获得我们全套UI工具（Next.js管理门户），开箱即用地处理SSO和目录同步连接。缺点是需额外维护独立服务的运维工作。若您未使用Node.js技术栈，此方式将成为唯一选择。"
+      }
+    },
+    {
+      "segment_id": "e14c9928",
+      "source_content": "## As an [NPM library](./npm-library.md)",
+      "source_content_hash": "cce68905599da735fb581a48315d9a29b11bd1ebafd242c31e9a57eeec7f9917",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 作为[NPM库](./npm-library.md)嵌入"
+      }
+    },
+    {
+      "segment_id": "42ad8e83",
+      "source_content": "This is available if you are already developing your application using Node.js.",
+      "source_content_hash": "1f1ac2a32061fb8c55a1d8820f6441dfbe6bef91ec4a40ef01d71c497e2afe54",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "此方案适用于基于Node.js开发的应用程序。"
+      }
+    },
+    {
+      "segment_id": "f6168993",
+      "source_content": "The advantage of embedding Jackson as an npm library is that you do not have to manage the operations of a separate service. The disadvantage is that you do not readily get our UI tooling (like the Admin Portal) with this method.",
+      "source_content_hash": "07b4b4023d641783fb55818cb300b4d27c997d0fe1b4dcf9ff5b5e3e96ede90c",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "以NPM库形式嵌入Jackson的优势在于无需维护独立服务，但缺点是无法直接获得我们的UI工具套件（如管理门户）。"
+      }
+    }
+  ],
+  "target_i18n_subpath": "docusaurus-plugin-content-docs/current/jackson/deploy/index.md",
+  "last_updated_timestamp": "2025-06-08T18:49:09.298654+00:00",
+  "schema_version": "1.0",
+  "translated_versions": {
+    "zh-CN": "d064b7609563a23f9a7e607add0f7e9558ce6ffc2d9a9d3f866a0739f5da83cd"
+  }
+}

@@ -1,0 +1,312 @@
+{
+  "source_file_path_relative_to_docusaurus_root": "docs/admin-portal/enterprise-sso.md",
+  "source_file_content_hash": "e302b4f0d88270bb58e7fb67665403e74c16e8070fe2ca61ecb8bd4691280ce2",
+  "segments": [
+    {
+      "segment_id": "58cfcc64",
+      "source_content": "---\ntitle: Manage Enterprise SSO using Admin Portal\nsidebar_label: Enterprise SSO\n---",
+      "source_content_hash": "efbe5144202f26d8f6e1b828a5d29d9d4125d8531ecf3ea5ff9d8b0343a20fac",
+      "node_type": "yaml",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_58cfcc64"
+      }
+    },
+    {
+      "segment_id": "b3de8742",
+      "source_content": "# Manage SSO Connections",
+      "source_content_hash": "4e4c7fccb7d0800325eedc74fb3031173c228322c6b0e2c19beeed1f5c77b03c",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "# 管理SSO连接"
+      }
+    },
+    {
+      "segment_id": "3fbbcc07",
+      "source_content": "On the Admin Portal **Enterprise SSO** menu, you can see the SSO Connections details.",
+      "source_content_hash": "60b97fa80b14ce2ca711ada3981e7273ecf3e9c97f0006cf0982e03660f331a4",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "在管理控制台的**企业SSO**菜单中，您可以查看SSO连接的详细信息。"
+      }
+    },
+    {
+      "segment_id": "1cc03ec8",
+      "source_content": "## Add SAML Connections",
+      "source_content_hash": "edcbae6d4591d3cdeddf96bce6a0491b1cfa701d6cef75475d20f7afe0307f88",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 添加SAML连接"
+      }
+    },
+    {
+      "segment_id": "8d66f911",
+      "source_content": "Once you've set up the SAML app on your Identity Provider, the Identity Provider will generate a SAML Metadata file.",
+      "source_content_hash": "0919f3039f386d0f72e23ee09fbd3c069c7f4faa47f9a00591abe26d1f7af999",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "当您在身份提供商处设置好SAML应用后，身份提供商会生成一个SAML元数据文件。"
+      }
+    },
+    {
+      "segment_id": "ad8fd492",
+      "source_content": "The SAML metadata file contains information about the various SAML Authorities that can be used in SAML 2.0 protocol message exchanges.",
+      "source_content_hash": "2c0d908dccf553556d21b8ffa99bebbb09ef9f2d522486627130da5831d454e6",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "SAML元数据文件包含有关SAML 2.0协议消息交换中可使用的各种SAML机构的信息。"
+      }
+    },
+    {
+      "segment_id": "86b54d44",
+      "source_content": "Download the SAML Metadata file from your IdP and follow the below steps for adding the SAML connection.",
+      "source_content_hash": "35a3170b6d4e3a0209cf5f91ba9b259de69249a68895dbbd7353d26d1a78dbe1",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "从您的IdP下载SAML元数据文件，并按照以下步骤添加SAML连接。"
+      }
+    },
+    {
+      "segment_id": "11c829ab",
+      "source_content": "- Click the button **New Connection**.\n- Choose **SAML** as the type.\n- Give your new connection a **name**.\n- Add your **Tenant** (Eg: boxyhq.com) and **Product** (Eg: flex).\n- Add **Allowed redirect URLs**.\n- Add **Default redirect URL**.\n- Paste the **Raw IdP XML**.\n- If **ForceAuthn** is checked, it means that the user will be forced to re-authenticate at SAML IdP, even if they have an active session.\n- Click the button **Save Changes**.",
+      "source_content_hash": "cc260861ec51f1edd951cd4f3ed54388e642fa1a180302508aaa39baf2c0b026",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- 点击**新建连接**按钮。\n- 选择**SAML**作为类型。\n- 为您的连接命名。\n- 添加您的**租户**（例如：boxyhq.com）和**产品**（例如：flex）。\n- 添加**允许的重定向URL**。\n- 添加**默认重定向URL**。\n- 粘贴**原始IdP XML**。\n- 如果勾选了**ForceAuthn**，即使用户已有活跃会话，也将强制在SAML IdP重新认证。\n- 点击**保存更改**按钮。"
+      }
+    },
+    {
+      "segment_id": "d9172fa4",
+      "source_content": "Now you've successfully added your first SAML connection.",
+      "source_content_hash": "4eb545d060f55e8f745d037d457e255652ac322d0502a6b1aa34ec7a9cf9d85f",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "现在您已成功添加了第一个SAML连接。"
+      }
+    },
+    {
+      "segment_id": "d06306f7",
+      "source_content": "## Add OIDC Connections",
+      "source_content_hash": "15dce5e13696ec1cdcfcbff7ea6b5125c0fd7894106154f7026823daaff8e2c2",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 添加OIDC连接"
+      }
+    },
+    {
+      "segment_id": "73ab96a3",
+      "source_content": "Once you've registered the OIDC app on your Identity Provider, the Identity Provider will generate a clientId and clientSecret.",
+      "source_content_hash": "b16d6ee5c145504eed8e1b20bf3b0b546b9358714da7a4223f41dffa8a1eccbe",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "当您在身份提供商处注册好OIDC应用后，身份提供商会生成clientId和clientSecret。"
+      }
+    },
+    {
+      "segment_id": "7499a4e7",
+      "source_content": "The `clientSecret` will be used to authenticate the oidc client (in this case jackson) and obtain the `access_token`.",
+      "source_content_hash": "9715748ed8bc81f417683480a2ee11f7e8fc17094d03a3f5f326233d62a92ff5",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "`clientSecret`将用于认证OIDC客户端（此处为jackson）并获取`access_token`。"
+      }
+    },
+    {
+      "segment_id": "517051a7",
+      "source_content": "Also get the OpenID provider [discovery](https://openid.net/specs/openid-connect-discovery-1_0.html#ProviderConfig) endpoint (usually ending in `/.well-known/openid-configuration`) and follow the below steps for adding the OIDC connection.",
+      "source_content_hash": "4986c82f1202734db0f76b03a1ba6a37d3787c810f07b16eb29bed9c069fb6de",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "同时获取OpenID提供商的[发现](https://openid.net/specs/openid-connect-discovery-1_0.html#ProviderConfig)端点（通常以`/.well-known/openid-configuration`结尾），并按照以下步骤添加OIDC连接。"
+      }
+    },
+    {
+      "segment_id": "157151e9",
+      "source_content": "- Click the button **New Connection**.\n- Choose **OIDC** as the type.\n- Give your new connection a **name**.\n- Add your **Tenant** (Eg: boxyhq.com) and **Product** (Eg: flex).\n- Add **Allowed redirect URLs**.\n- Add **Default redirect URL**.\n- Enter the URL for OpenID Provider discovery which exposes the Provider Metadata.\n- Paste the **clientId** and **clientSecret** values into Client ID [OIDC Provider]/Client Secret [OIDC Provider] fields in the UI.\n- Click the button **Save Changes**.",
+      "source_content_hash": "6717b5142891d427e85ed776f87d8f4be6c8b58bdfc8a451c32122acb260feb0",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- 点击**新建连接**按钮。\n- 选择**OIDC**作为类型。\n- 为您的连接命名。\n- 添加您的**租户**（例如：boxyhq.com）和**产品**（例如：flex）。\n- 添加**允许的重定向URL**。\n- 添加**默认重定向URL**。\n- 输入暴露提供商元数据的OpenID提供商发现URL。\n- 将**clientId**和**clientSecret**值粘贴到UI中的客户端ID[OIDC提供商]/客户端密钥[OIDC提供商]字段。\n- 点击**保存更改**按钮。"
+      }
+    },
+    {
+      "segment_id": "a9d49f92",
+      "source_content": "Now you've successfully added your first OIDC connection.",
+      "source_content_hash": "dfe5d666ba94a0e8e6bdf9922bc0e9f22bbb132b1f3473893ca4e3fdf03e04db",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "现在您已成功添加了第一个OIDC连接。"
+      }
+    },
+    {
+      "segment_id": "6d28a77c",
+      "source_content": "## SAML Federation",
+      "source_content_hash": "bc54f5abd5beef3b7e9a0618fb8a9b0eea18fd5730cfc38e5cec5ec6cdcadd39",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## SAML联盟"
+      }
+    },
+    {
+      "segment_id": "f7ef78f9",
+      "source_content": "SAML Federation is an enterprise feature and you need to have an enterprise license to use this feature.",
+      "source_content_hash": "678a6225dae29b830cfd1738c2511125532dfe310bf833043487836a4a820bda",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "SAML联盟是一项企业功能，您需要拥有企业许可证才能使用此功能。"
+      }
+    },
+    {
+      "segment_id": "b36c6338",
+      "source_content": "From the **Admin Portal** go to **Enterprise SSO** > **SAML Federation**.",
+      "source_content_hash": "5a16d1cf80f6f1717d8ed09567cf846bc486e30ca977c5688e29a6b5b1faac13",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "在**管理控制台**中，进入**企业SSO** > **SAML联盟**。"
+      }
+    },
+    {
+      "segment_id": "2c1b51df",
+      "source_content": "### Create SAML Federation App",
+      "source_content_hash": "125fdaa872c6673a6c9f27fa2b9dd0bcbbd3fa6baf3c5e14e5124cca2801ddac",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 创建SAML联盟应用"
+      }
+    },
+    {
+      "segment_id": "e3321a43",
+      "source_content": "- Click **New App**.\n- Enter the following information:\n  - **Name**\n  - **Tenant**\n  - **Product**\n  - **ACS URL** (ACS URL of the SP)\n  - **Entity ID** (Entity ID of the SP)",
+      "source_content_hash": "fbd48e643b6a4eb29a92ca4a7550b57ef78d2b7b7ad469f83852493016a9b7ca",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- 点击**新建应用**。\n- 输入以下信息：\n  - **名称**\n  - **租户**\n  - **产品**\n  - **ACS URL**（服务提供商的ACS URL）\n  - **实体ID**（服务提供商的实体ID）"
+      }
+    },
+    {
+      "segment_id": "531437ca",
+      "source_content": "![Create SAML Federation App](/images/docs/admin-portal/saml-federation/create-saml-federation-app.png)",
+      "source_content_hash": "e6a52a402f17840c73228ad7d6746cef0395c892a649f2cbdd604b027462f93c",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![创建SAML联盟应用](/images/docs/admin-portal/saml-federation/create-saml-federation-app.png)"
+      }
+    },
+    {
+      "segment_id": "ba96ee98",
+      "source_content": "---",
+      "source_content_hash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "node_type": "thematicBreak",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "---"
+      }
+    },
+    {
+      "segment_id": "ee8401db",
+      "source_content": "### Update SAML Federation App",
+      "source_content_hash": "e39f7f93364bf316cd9dc44c2e0165bce29f216e383d13e97181afb0ee00d119",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 更新SAML联盟应用"
+      }
+    },
+    {
+      "segment_id": "76dbcc76",
+      "source_content": "- From the list of SAML Federation Apps, click on the **Edit** icon of the app you want to update.\n- You can update the following information:\n  - **Name**\n  - **ACS URL** (ACS URL of the SP)\n  - **Entity ID** (Entity ID of the SP)",
+      "source_content_hash": "2833f7226fbed940e9b9bc515795832fc35c1595e4fa9ebd4d6b0728109b4888",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- 在SAML联盟应用列表中，点击您要更新的应用的**编辑**图标。\n- 您可以更新以下信息：\n  - **名称**\n  - **ACS URL**（服务提供商的ACS URL）\n  - **实体ID**（服务提供商的实体ID）"
+      }
+    },
+    {
+      "segment_id": "d0dd855b",
+      "source_content": "![Update SAML Federation App](/images/docs/admin-portal/saml-federation/update-saml-federation-app.png)",
+      "source_content_hash": "a9e3157eeae416893d75309318d3340a7edc9ae3c4f6a16dab02bb00ecb72f21",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![更新SAML联盟应用](/images/docs/admin-portal/saml-federation/update-saml-federation-app.png)"
+      }
+    },
+    {
+      "segment_id": "0170c674",
+      "source_content": "---",
+      "source_content_hash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "node_type": "thematicBreak",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "---"
+      }
+    },
+    {
+      "segment_id": "8a9b6c26",
+      "source_content": "### View IdP Configuration",
+      "source_content_hash": "d0f1535a224a238fc91fd61171c44e4064f1b43b4d5ecd98eb86a0ba36ca8aa6",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 查看IdP配置"
+      }
+    },
+    {
+      "segment_id": "a1fa5396",
+      "source_content": "Click **View IdP Configuration** button to view the IdP configuration for the SAML Federation App. You need to provide the SP with the following information:",
+      "source_content_hash": "3131dd2ab327509383825eb163918a06094206ccf708629bd7cd6373afe91d7f",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "点击**查看IdP配置**按钮以查看SAML联盟应用的IdP配置。您需要向服务提供商提供以下信息："
+      }
+    },
+    {
+      "segment_id": "cc9271fb",
+      "source_content": "- **SSO URL**\n- **Entity ID / Audience URI / Audience Restriction**\n- **X.509 Certificate**",
+      "source_content_hash": "78999539729840bb747cc06b53759cfc46dc421372d26fd7a989b6c59ff98f92",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- **SSO 登录地址**\n- **实体ID / 受众URI / 受众限制**\n- **X.509证书**"
+      }
+    },
+    {
+      "segment_id": "0750bfa1",
+      "source_content": "![View IdP Configuration](/images/docs/admin-portal/saml-federation/view-idp-configuration.png)",
+      "source_content_hash": "d6bba7a050b0f49830b850a10005ef4d858e4ab12dbc317347c38eb99ed68875",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![查看IdP配置](/images/docs/admin-portal/saml-federation/view-idp-configuration.png)"
+      }
+    }
+  ],
+  "target_i18n_subpath": "docusaurus-plugin-content-docs/current/admin-portal/enterprise-sso.md",
+  "last_updated_timestamp": "2025-06-08T18:49:09.289641+00:00",
+  "schema_version": "1.0",
+  "translated_versions": {
+    "zh-CN": "e302b4f0d88270bb58e7fb67665403e74c16e8070fe2ca61ecb8bd4691280ce2"
+  }
+}

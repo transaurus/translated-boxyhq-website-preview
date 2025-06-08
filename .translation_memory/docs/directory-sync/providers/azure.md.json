@@ -1,0 +1,412 @@
+{
+  "source_file_path_relative_to_docusaurus_root": "docs/directory-sync/providers/azure.md",
+  "source_file_content_hash": "c3dd967fc6b919f0caee71ca6565583d67ec45e653425c75368ca2ff131c7011",
+  "segments": [
+    {
+      "segment_id": "58cfcc64",
+      "source_content": "---\ntitle: Microsoft Entra ID SCIM v2.0\nsidebar_label: Microsoft Entra ID SCIM v2.0\n---",
+      "source_content_hash": "a09cac9c85362a8982044136b3813986fa832c3697f81146452f636b0d406296",
+      "node_type": "yaml",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_58cfcc64"
+      }
+    },
+    {
+      "segment_id": "b3de8742",
+      "source_content": "# Microsoft Entra ID SCIM v2.0",
+      "source_content_hash": "ea926be7babd5ae30a2f0ffe399cc4cbd28840ecc6952aac44dd2783f0aff0d5",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "# Microsoft Entra ID SCIM v2.0"
+      }
+    },
+    {
+      "segment_id": "3fbbcc07",
+      "source_content": "The following guide will walk you through the process of configuring SAML Jackson to use the Microsoft Entra ID SCIM v2.0 directory provider.",
+      "source_content_hash": "26ea971eaa7e2bb3436b432ef1828d6a52b2a87c194e7bc70e3d504a7235aa7d",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "本指南将引导您完成配置SAML Jackson以使用Microsoft Entra ID SCIM v2.0目录提供商的流程。"
+      }
+    },
+    {
+      "segment_id": "279b6a65",
+      "source_content": "---",
+      "source_content_hash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "node_type": "thematicBreak",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "---"
+      }
+    },
+    {
+      "segment_id": "9fcbdce9",
+      "source_content": "### Create Azure Application",
+      "source_content_hash": "7734d6217e2a917e3d8cd07c48f25c7c6f28a8c2449b383585227b86111eb218",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 创建Azure应用"
+      }
+    },
+    {
+      "segment_id": "ad8fd492",
+      "source_content": "Click **Azure Active Directory** from the Microsoft Azure Portal.",
+      "source_content_hash": "b473ca5395ff9f22e391436b26491ede90a986481e62c191f68f2b0bd9b96ecc",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "在Microsoft Azure门户中点击**Azure Active Directory**。"
+      }
+    },
+    {
+      "segment_id": "86b54d44",
+      "source_content": "![Microsoft Entra ID SCIM Step 1](/images/docs/jackson/dsync-providers/azure/1.png)",
+      "source_content_hash": "e7ccf1f94cf8a3d53d4e53b06b67a5bec652ae65e825e5d534a5b801114b93bb",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![Microsoft Entra ID SCIM 步骤1](/images/docs/jackson/dsync-providers/azure/1.png)"
+      }
+    },
+    {
+      "segment_id": "39b3772c",
+      "source_content": "Click **Enterprise Applications** from the left navigation menu.",
+      "source_content_hash": "c613b38cdbbe168406d5f814f07920d78d309bd69be22f82ace8c76fa43f9595",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "从左导航菜单点击**企业应用程序**。"
+      }
+    },
+    {
+      "segment_id": "1acb9a05",
+      "source_content": "![Microsoft Entra ID SCIM Step 2](/images/docs/jackson/dsync-providers/azure/2.png)",
+      "source_content_hash": "31472f477a207f0272f35f29d98d912f295b957e9c95d4f3f324f088e01845b8",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![Microsoft Entra ID SCIM 步骤2](/images/docs/jackson/dsync-providers/azure/2.png)"
+      }
+    },
+    {
+      "segment_id": "2df4f75f",
+      "source_content": "If your application is already created, choose it from the list and move to the section [Enable SCIM Provisioning](#enable-azure-scim-provisioning)",
+      "source_content_hash": "7d43a00bb51ec628943ed8bf77968972f8cfc6d65f76764a2df52c13e96ed769",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "如果应用已创建，从列表中选择并跳转至章节[启用SCIM配置](#enable-azure-scim-provisioning)"
+      }
+    },
+    {
+      "segment_id": "98cfbd53",
+      "source_content": "If you haven't created your application yet, click **New application** button.",
+      "source_content_hash": "387d56af80398e9a24d7fc6f03a8f17d0714b4ca1d4f2365a132ba5b2507cb5c",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "若尚未创建应用，点击**新建应用程序**按钮。"
+      }
+    },
+    {
+      "segment_id": "ccc88b4c",
+      "source_content": "![Microsoft Entra ID SCIM Step 2.1](/images/docs/jackson/dsync-providers/azure/2_1.png)",
+      "source_content_hash": "a777edb943f6098b23988ba00e404c473184f2f69757aa1b581876b806f2acb7",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![Microsoft Entra ID SCIM 步骤2.1](/images/docs/jackson/dsync-providers/azure/2_1.png)"
+      }
+    },
+    {
+      "segment_id": "d9172fa4",
+      "source_content": "From the next screen, click **Create your own application**, give your application a **name** and click the **Create** button.",
+      "source_content_hash": "cbc8d9959238fc4a63d579f77ffb8967aa4386865b6226565ec8ba371532873d",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "在下一界面点击**创建自己的应用**，输入应用**名称**后点击**创建**按钮。"
+      }
+    },
+    {
+      "segment_id": "26524352",
+      "source_content": "![Microsoft Entra ID SCIM Step 3](/images/docs/jackson/dsync-providers/azure/3.png)",
+      "source_content_hash": "f0ae76b718e556b74f699256c7c584995ba640b32fe4e810bcbd7d7af2f2762a",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![Microsoft Entra ID SCIM 步骤3](/images/docs/jackson/dsync-providers/azure/3.png)"
+      }
+    },
+    {
+      "segment_id": "2b88bb9d",
+      "source_content": "---",
+      "source_content_hash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "node_type": "thematicBreak",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "---"
+      }
+    },
+    {
+      "segment_id": "a1b3d8cb",
+      "source_content": "### Enable Azure SCIM Provisioning",
+      "source_content_hash": "81455ba42725373f6a54ee7d7fb395d9c4bd03d7afb1f0959a50e338527d12cc",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 启用Azure SCIM配置"
+      }
+    },
+    {
+      "segment_id": "517051a7",
+      "source_content": "Click **Provisioning** from the left navigation menu then click **Get started**.",
+      "source_content_hash": "16ad005c1a23e236e976df21e351a42923904aadb80422dafddb809f4c14a412",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "从左导航菜单点击**配置**，然后点击**开始使用**。"
+      }
+    },
+    {
+      "segment_id": "135468ee",
+      "source_content": "![Microsoft Entra ID SCIM Step 4](/images/docs/jackson/dsync-providers/azure/4.png)",
+      "source_content_hash": "a088821d8b6d78256d02b256cbe0d2e908725f9d3e3915b207b1bfad53dc531f",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![Microsoft Entra ID SCIM 步骤4](/images/docs/jackson/dsync-providers/azure/4.png)"
+      }
+    },
+    {
+      "segment_id": "33331f27",
+      "source_content": "Select **Automatic** from the **Provisioning Mode** dropdown and enter the following information under **Admin Credentials** section:",
+      "source_content_hash": "e84f62464d7bac20658d99bf7206109feff98bfe90bbd3a391048b7fd72ab627",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "在**配置模式**下拉框选择**自动**，并在**管理员凭据**部分输入以下信息："
+      }
+    },
+    {
+      "segment_id": "8612da05",
+      "source_content": "- Tenant URL\n- Secret Token",
+      "source_content_hash": "5967da68a55655cd85c82b15e3e07d4a6fbe0b00495c54d7a406faaf92c9e1a8",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- 租户URL\n- 密钥令牌"
+      }
+    },
+    {
+      "segment_id": "aa1e7006",
+      "source_content": "Next, click the **Test Connection** button to test the connection to see if the credentials are correct, then click **Save** to save the credentials.",
+      "source_content_hash": "77749bb4c7954b44bf9bb3c0575b61721680ef4c07f4c7c4d24288b23974e40b",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "点击**测试连接**按钮验证凭据是否正确，点击**保存**存储凭据。"
+      }
+    },
+    {
+      "segment_id": "13d9cd70",
+      "source_content": "![Microsoft Entra ID SCIM Step 5](/images/docs/jackson/dsync-providers/azure/5.png)",
+      "source_content_hash": "7852a9d6b2cdd2ef51bbee4dc19eb1521d1358a787c2e1fe9a3065f301c15616",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![Microsoft Entra ID SCIM 步骤5](/images/docs/jackson/dsync-providers/azure/5.png)"
+      }
+    },
+    {
+      "segment_id": "29528c8d",
+      "source_content": "Expand the **Mappings** section and ensure group and user attribute mappings are enabled for your app. The default mapping should work.",
+      "source_content_hash": "8e756a6f8b73448e0b589b31b51bc2fd17462e7b503e6a46c2d5127bb47e199b",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "展开**映射**部分，确保为应用启用了用户和组的属性映射。默认映射应可正常工作。"
+      }
+    },
+    {
+      "segment_id": "c504c207",
+      "source_content": "![Microsoft Entra ID SCIM Step 6](/images/docs/jackson/dsync-providers/azure/6.png)",
+      "source_content_hash": "7b34a4db7e390e649173cf160c3e2b59e5c35bd3616fc1595394c94a3e2fdc31",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![Microsoft Entra ID SCIM 步骤6](/images/docs/jackson/dsync-providers/azure/6.png)"
+      }
+    },
+    {
+      "segment_id": "98d26038",
+      "source_content": "Expand the **Settings** section and make the following changes:",
+      "source_content_hash": "5a6b3dc5cc5ebf33f13702db29da79733fa93cac86e85fecd49932961ddb4acc",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "展开**设置**部分并进行以下调整："
+      }
+    },
+    {
+      "segment_id": "c94a9c0e",
+      "source_content": "- Select **Sync only assigned users and groups** from the **Scope** dropdown.\n- Confirm the **Provisioning Status** is set to **On**.",
+      "source_content_hash": "064ee2cdcbf0747c87a16ed6a2bb3b567c75a7d243cebb4469330c806db2ab56",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- 在**范围**下拉框选择**仅同步分配的用户和组**\n- 确认**配置状态**设为**开启**"
+      }
+    },
+    {
+      "segment_id": "e536ea0d",
+      "source_content": "![Microsoft Entra ID SCIM Step 7](/images/docs/jackson/dsync-providers/azure/7.png)",
+      "source_content_hash": "cc0038c89e88f8937263e615fe9357320a051722da199f7f0939951ced395d59",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![Microsoft Entra ID SCIM 步骤7](/images/docs/jackson/dsync-providers/azure/7.png)"
+      }
+    },
+    {
+      "segment_id": "40158b4b",
+      "source_content": "At this stage, you've successfully configured the Microsoft Entra ID SCIM API integration.",
+      "source_content_hash": "5ed5a3380454886ab649819966fe3274d0b796e4f3c3552a6b62ca94a4a373a6",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "至此您已成功完成Microsoft Entra ID SCIM API集成配置。"
+      }
+    },
+    {
+      "segment_id": "818747ba",
+      "source_content": "---",
+      "source_content_hash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "node_type": "thematicBreak",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "---"
+      }
+    },
+    {
+      "segment_id": "c315c636",
+      "source_content": "### Assign Users",
+      "source_content_hash": "a6766ca81034fb4cec29363bba807307a2deb897ec0bce01eaf5ba41f74810bc",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 分配用户"
+      }
+    },
+    {
+      "segment_id": "531437ca",
+      "source_content": "From your application, click the **Users and groups** from the left navigation menu and click **Add user/group**.",
+      "source_content_hash": "021178b6e8e53e18ebe425e58986288500eac281bcce1bdc2e274933e319a924",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "在应用中点击左导航菜单的**用户和组**，点击**添加用户/组**。"
+      }
+    },
+    {
+      "segment_id": "06e24cc0",
+      "source_content": "![Microsoft Entra ID SCIM Step 8](/images/docs/jackson/dsync-providers/azure/8.png)",
+      "source_content_hash": "ee73cb35f6d661127d479a69402f8429a33a59232166da3287a70d3b43facbd1",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![Microsoft Entra ID SCIM 步骤8](/images/docs/jackson/dsync-providers/azure/8.png)"
+      }
+    },
+    {
+      "segment_id": "7f71ff2a",
+      "source_content": "Select **None Selected** under the **Users**.",
+      "source_content_hash": "a46f10a2d916033f12954abcd782efacc30b4da425aacfe527a3fe014025de61",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "在**用户**下方选择**未选择**。"
+      }
+    },
+    {
+      "segment_id": "147e8550",
+      "source_content": "From the right side of the screen, select the users you want to assign to the app and click the **Select** button, then click **Assign** to those users to the app.",
+      "source_content_hash": "e526efb5d6c69433fe3f2b36d7f1a8f36054736eeed5b5ae6aebb659668ee002",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "在界面右侧选择需分配至应用的用户，点击**选择**按钮后点击**分配**完成用户关联。"
+      }
+    },
+    {
+      "segment_id": "883231d4",
+      "source_content": "![Microsoft Entra ID SCIM Step 9](/images/docs/jackson/dsync-providers/azure/9.png)",
+      "source_content_hash": "0790406083814ea88235bdabdfc6e8c14cedaa251118ac76eed543cda97bc444",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![Microsoft Entra ID SCIM 步骤9](/images/docs/jackson/dsync-providers/azure/9.png)"
+      }
+    },
+    {
+      "segment_id": "b051b70c",
+      "source_content": "### FAQ",
+      "source_content_hash": "f985d80cd209759f3dc9c3a755b37f9025cb0004b5067b9678ae0300b3e76200",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 常见问题"
+      }
+    },
+    {
+      "segment_id": "98355e36",
+      "source_content": "#### How frequently does Microsoft Entra ID SCIM perform sync by default?",
+      "source_content_hash": "efc7ab129cb54984f4e708684031e3a019ac60bd8c2c65b8c9cc04f0cb7f3d1e",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "#### Microsoft Entra ID SCIM默认同步频率是多少？"
+      }
+    },
+    {
+      "segment_id": "7736989b",
+      "source_content": "Microsoft Entra ID automatically provisions and updates user accounts in an app based on things like user and group assignment. The sync happens at a regularly scheduled time interval, typically every 20-40 minutes.",
+      "source_content_hash": "e65be417303dad086efdcafb43a16d2e2957ee32da4e30f0e86b6b607da01ae4",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "Microsoft Entra ID 会根据用户和组分配等情况，自动在应用程序中配置和更新用户账户。同步操作按固定时间间隔进行，通常每20-40分钟执行一次。"
+      }
+    },
+    {
+      "segment_id": "8a9b6c26",
+      "source_content": "#### Why does the PATCH request fail in Microsoft Entra ID SCIM?",
+      "source_content_hash": "fda8bb89d9809cdf05577e65e21131f244bb06e82c77e8bdf6159f7dc7d222cc",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "#### 为什么 Microsoft Entra ID SCIM 中的 PATCH 请求会失败？"
+      }
+    },
+    {
+      "segment_id": "a1fa5396",
+      "source_content": "This is a known issue with Entra ID SCIM implementation. You have to add the query param `?aadOptscim062020` to the SCIM endpoint URL to make PATCH requests work. This query param update PATCH behavior and ensure SCIM compliance. [Read More](https://learn.microsoft.com/en-us/entra/identity/app-provisioning/application-provisioning-config-problem-scim-compatibility#flags-to-alter-the-scim-behavior)",
+      "source_content_hash": "87ad72315d4be91c0d57ef62b60377e76088fd42ac7b25283312a038d55a121f",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "这是 Entra ID SCIM 实现的一个已知问题。您需要在 SCIM 端点 URL 中添加查询参数 `?aadOptscim062020` 才能使 PATCH 请求正常工作。该查询参数会更新 PATCH 行为并确保 SCIM 合规性。[了解更多](https://learn.microsoft.com/en-us/entra/identity/app-provisioning/application-provisioning-config-problem-scim-compatibility#flags-to-alter-the-scim-behavior)"
+      }
+    }
+  ],
+  "target_i18n_subpath": "docusaurus-plugin-content-docs/current/directory-sync/providers/azure.md",
+  "last_updated_timestamp": "2025-06-08T18:49:09.296082+00:00",
+  "schema_version": "1.0",
+  "translated_versions": {
+    "zh-CN": "c3dd967fc6b919f0caee71ca6565583d67ec45e653425c75368ca2ff131c7011"
+  }
+}

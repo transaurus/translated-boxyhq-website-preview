@@ -1,0 +1,332 @@
+{
+  "source_file_path_relative_to_docusaurus_root": "docs/jackson/sso-providers/okta.md",
+  "source_file_content_hash": "b45b517a423be38788dbae0c2b2b3a884a8f371583bf6345ab6a4c45f7cff121",
+  "segments": [
+    {
+      "segment_id": "58cfcc64",
+      "source_content": "---\ntitle: Set up your own custom SAML application for Okta SAML\nsidebar_label: Okta SAML\n---",
+      "source_content_hash": "42b9d2d3b2d26d8cfd0fdba180a78732b1483fd83b2a993fc70c323a11ed4012",
+      "node_type": "yaml",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_58cfcc64"
+      }
+    },
+    {
+      "segment_id": "b3de8742",
+      "source_content": "# Okta SAML SSO",
+      "source_content_hash": "977ae85ed22716d087d185a5394198ae48ac620e0d4d910db32e6e9ce7fcca36",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "# Okta SAML 单点登录配置"
+      }
+    },
+    {
+      "segment_id": "3fbbcc07",
+      "source_content": "In this section, we will show you how to set up your own custom SAML application for Okta SAML.",
+      "source_content_hash": "7e5cb22a54b5e941fce2c04e9e089cb7c9abf958eae8156e399281a26d32056f",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "本节将指导您如何为Okta SAML设置自定义SAML应用程序。"
+      }
+    },
+    {
+      "segment_id": "1cc03ec8",
+      "source_content": "## Create Application",
+      "source_content_hash": "a4c42fce6e36a4ed1120ec7f3eb7c050bd9ea2173680e61024ccfe8f6aaa2897",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 创建应用程序"
+      }
+    },
+    {
+      "segment_id": "8d66f911",
+      "source_content": "From your Okta account, click **Applications** from the left navigation menu.",
+      "source_content_hash": "7afdc2d6fa70822ba4ac93039747281d8b41f300b622e0174e688f770f2aa123",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "登录Okta账户后，从左导航菜单点击**应用程序**。"
+      }
+    },
+    {
+      "segment_id": "ad8fd492",
+      "source_content": "If your application is already created, choose it from the list and move to the section [Configure Application](#configure-application)",
+      "source_content_hash": "1137b1c722a49032336fe1d2b3fd3b599f15d60bf8c23858936523cfc6344994",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "若应用程序已创建，请从列表中选择并跳转至[配置应用程序](#configure-application)章节。"
+      }
+    },
+    {
+      "segment_id": "86b54d44",
+      "source_content": "If you haven't created a SAML application, click the **Create App Integration** button to create a new application.",
+      "source_content_hash": "57bfe9fe387c8ae430ea53fc61cc7a2042ac7f0dddc56ff9daf5ef9b5e22d6b4",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "若需新建SAML应用，点击**创建应用集成**按钮。"
+      }
+    },
+    {
+      "segment_id": "39b3772c",
+      "source_content": "![Okta SAML Step 1](/images/docs/jackson/sso-providers/okta/1.png)",
+      "source_content_hash": "c544a77a5591d2a50ddd4359b692d8af241b988625757dda6f38684a5f4bb3ed",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![Okta SAML 步骤1](/images/docs/jackson/sso-providers/okta/1.png)"
+      }
+    },
+    {
+      "segment_id": "1acb9a05",
+      "source_content": "Choose **SAML 2.0** from the next screen and click **Next**.",
+      "source_content_hash": "9300a08affd151ddbf6d12d2afaa8831852d996387a01238b77d753b7a26370e",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "在后续界面选择**SAML 2.0**并点击**下一步**。"
+      }
+    },
+    {
+      "segment_id": "2df4f75f",
+      "source_content": "![Okta SAML Step 2](/images/docs/jackson/sso-providers/okta/2.png)",
+      "source_content_hash": "47d7a5c24c536c91e07920454bedf8e8470b2df3d8407e4e0cc0760e5605a99a",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![Okta SAML 步骤2](/images/docs/jackson/sso-providers/okta/2.png)"
+      }
+    },
+    {
+      "segment_id": "98cfbd53",
+      "source_content": "Give your application an **App Name** and click **Next**.",
+      "source_content_hash": "623920bed3f1b25216953a78deacfe8770b7f8d4998e087fd71f0111d98261f7",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "输入**应用名称**后点击**下一步**。"
+      }
+    },
+    {
+      "segment_id": "ccc88b4c",
+      "source_content": "![Okta SAML Step 3](/images/docs/jackson/sso-providers/okta/3.png)",
+      "source_content_hash": "4b4e20fb31d0db659fd8aef54e660f62a4ba976d87d4274b564484c058bf32ec",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![Okta SAML 步骤3](/images/docs/jackson/sso-providers/okta/3.png)"
+      }
+    },
+    {
+      "segment_id": "3c36424c",
+      "source_content": "## Configure Application",
+      "source_content_hash": "aa3cb32afcf17822a5ba904685b48592ccb953a514ebc2da0731fc9ce393d544",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 配置应用程序"
+      }
+    },
+    {
+      "segment_id": "26524352",
+      "source_content": "Enter the following values in the **SAML Settings** section on the next screen:",
+      "source_content_hash": "5f027623ab83a44a526343c50c9fd33ba9fb5699048a41c6d9f42ac8b6c79418",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "在**SAML设置**部分填写以下参数："
+      }
+    },
+    {
+      "segment_id": "86b525ab",
+      "source_content": "- **Single sign on URL**\n- **Audience URI (SP Entity ID)**\n- Select **EmailAddress** from the **Name ID format** dropdown.",
+      "source_content_hash": "a93c2c34b0e41e76d8408ddc6386bd5ccb36f4618700575e5f45204799ef1b0e",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- **单点登录URL**\n- **受众URI (SP实体ID)**\n- 从**Name ID格式**下拉菜单中选择**EmailAddress**"
+      }
+    },
+    {
+      "segment_id": "517051a7",
+      "source_content": "Replace the values with the ones you have received from SAML Jackson.",
+      "source_content_hash": "3a0252490deba22aac834db0ee890225a76896363a384f397f251886c5af8ecf",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "请将参数值替换为从SAML Jackson获取的对应值。"
+      }
+    },
+    {
+      "segment_id": "135468ee",
+      "source_content": "![Okta SAML Step 4](/images/docs/jackson/sso-providers/okta/4.png)",
+      "source_content_hash": "bacee5e52b470c2b2595d7d81154e413d1849c81b5b292e5be92fbd23558a5a0",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![Okta SAML 步骤4](/images/docs/jackson/sso-providers/okta/4.png)"
+      }
+    },
+    {
+      "segment_id": "782c902a",
+      "source_content": "## Attribute Mapping",
+      "source_content_hash": "ced521d3f2fec68e3b98cce4a507ed30e9cda40547fcc34bacfb25d1deb14981",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 属性映射"
+      }
+    },
+    {
+      "segment_id": "50746522",
+      "source_content": "Under the **Attribute Statements** section, you have to configure the following attributes:",
+      "source_content_hash": "f293f9705f2e94d6c0d5cb81898657fa9c3bd589340a686ec513b8e8dda3d203",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "在**属性声明**部分配置以下属性："
+      }
+    },
+    {
+      "segment_id": "b210da53",
+      "source_content": "| Name      | Value          |\n| --------- | -------------- |\n| id        | user.id        |\n| email     | user.email     |\n| firstName | user.firstName |\n| lastName  | user.lastName  |",
+      "source_content_hash": "934ca424127c5444127f9c299693f8a44fd0bac8ad63d65e5b8961c3258d2bd5",
+      "node_type": "table",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_b210da53"
+      }
+    },
+    {
+      "segment_id": "c504c207",
+      "source_content": "See the screenshot below.",
+      "source_content_hash": "484fb0ee90c5fa8ea70ce5cad0e59baf1dc7a4e18927a947a1fdaf6da53dfdca",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "参见下方截图示例。"
+      }
+    },
+    {
+      "segment_id": "98d26038",
+      "source_content": "![Okta SAML Step 5](/images/docs/jackson/sso-providers/okta/5.png)",
+      "source_content_hash": "60691fb40d4ee903de2e4b9143f1621bb0440cf7e3c11db0bd26ffee6ff63a85",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![Okta SAML 步骤5](/images/docs/jackson/sso-providers/okta/5.png)"
+      }
+    },
+    {
+      "segment_id": "d3649a1e",
+      "source_content": "On the next screen select **I'm an Okta customer adding an internal app** and click **Finish**.",
+      "source_content_hash": "ae8f16876035ea4850f339691547449405be96e32f6cc8cd7a38f13e46c02af4",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "选择**我是添加内部应用的Okta客户**后点击**完成**。"
+      }
+    },
+    {
+      "segment_id": "4d52a261",
+      "source_content": "![Okta SAML Step 6](/images/docs/jackson/sso-providers/okta/6.png)",
+      "source_content_hash": "1082d29043ba147c70ab9cf69ddbf30126f215ae5ff646052b09e6ba89df7319",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![Okta SAML 步骤6](/images/docs/jackson/sso-providers/okta/6.png)"
+      }
+    },
+    {
+      "segment_id": "23dfb152",
+      "source_content": "From your application, click **Sign On** tab and go to the section **SAML Signing Certificates**",
+      "source_content_hash": "d3f18f7f0a18aae23389816bb1200f6cdeb0c7dd95af37bafe05148d0304f7c3",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "进入应用**登录**标签页，定位至**SAML签名证书**区域"
+      }
+    },
+    {
+      "segment_id": "1131ef75",
+      "source_content": "Click the **Actions** dropdown for the correct certificate and click **View IdP metadata**. A separate window will open with the metadata XML file, you can copy it to your clipboard.",
+      "source_content_hash": "c1ab70dae8a9f3e674f8dec040cd8800bda33156db41aa22a101273334e96228",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "点击对应证书的**操作**下拉菜单，选择**查看IdP元数据**。元数据XML文件将在新窗口打开，可复制至剪贴板。"
+      }
+    },
+    {
+      "segment_id": "8b2a52b1",
+      "source_content": "![Okta SAML Step 7](/images/docs/jackson/sso-providers/okta/7.png)",
+      "source_content_hash": "fbad7ee7a01c15b073e600434c24fd8accb387065148b8546030fca6f1f6e120",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![Okta SAML 步骤7](/images/docs/jackson/sso-providers/okta/7.png)"
+      }
+    },
+    {
+      "segment_id": "126950d7",
+      "source_content": "## Next steps",
+      "source_content_hash": "3a5d9cbc49e6e5f0c98349dd1cd7cfe5713807fc5f02234240621031925d1f32",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 后续步骤"
+      }
+    },
+    {
+      "segment_id": "0bb95128",
+      "source_content": "You've successfully configured your custom SAML application for Okta SAML. At this stage, you can assign users to your application and start using it.",
+      "source_content_hash": "da757ac112085c30ee3582efac875c7dfd1ae3b8e7da68278787b4da6a3a60d2",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "您已成功完成Okta SAML自定义应用的配置。现在可以为应用分配用户并开始使用。"
+      }
+    },
+    {
+      "segment_id": "3ef18741",
+      "source_content": "## Resources",
+      "source_content_hash": "75c6211de8f8951e8037d10289e3e5d0177b8a172b593345006b5b42a8e08e0e",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 相关资源"
+      }
+    },
+    {
+      "segment_id": "af6ca965",
+      "source_content": "- [Okta](https://www.okta.com/) official website\n- Visit [Okta documentation](https://developer.okta.com/docs/concepts/saml/)",
+      "source_content_hash": "64c24170b39c888c7c02cceba0b83b20e4df6d6cbab55d568e4f4bd91646cf6a",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- [Okta](https://www.okta.com/) 官方网站\n- 查阅[Okta文档](https://developer.okta.com/docs/concepts/saml/)"
+      }
+    },
+    {
+      "segment_id": "07837485",
+      "source_content": ":::tip\nGot a question? [Ask here](https://discord.gg/uyb7pYt4Pa)\n:::",
+      "source_content_hash": "205c5768df1b402d61a634ce459105e3be3777225d2575780c425cf0a7ceae4c",
+      "node_type": "containerDirective",
+      "translatable": true,
+      "translations": {
+        "zh-CN": ":::tip\n遇到问题？[在此提问](https://discord.gg/uyb7pYt4Pa)\n:::"
+      }
+    }
+  ],
+  "target_i18n_subpath": "docusaurus-plugin-content-docs/current/jackson/sso-providers/okta.md",
+  "last_updated_timestamp": "2025-06-08T18:49:09.323302+00:00",
+  "schema_version": "1.0",
+  "translated_versions": {
+    "zh-CN": "b45b517a423be38788dbae0c2b2b3a884a8f371583bf6345ab6a4c45f7cff121"
+  }
+}

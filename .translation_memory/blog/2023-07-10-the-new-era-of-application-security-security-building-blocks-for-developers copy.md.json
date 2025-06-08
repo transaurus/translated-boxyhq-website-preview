@@ -1,0 +1,212 @@
+{
+  "source_file_path_relative_to_docusaurus_root": "blog/2023-07-10-the-new-era-of-application-security-security-building-blocks-for-developers copy.md",
+  "source_file_content_hash": "5818784e7b7def687dc9d4fa4eb0ff7981365b0639572a713843670b31b18c46",
+  "segments": [
+    {
+      "segment_id": "58cfcc64",
+      "source_content": "---\nslug: the-new-era-of-application-security-security-building-blocks-for-developers\ntitle: 'The new era of Application Security: Security Building Blocks for Developers'\ntags_disabled:\n  [developer, security, cybersecurity, devsecops, appsec, sso, open-source]\nimage: /img/blog/purple-building-blocks.jpg\nauthors:\n  - name: Sama - Carlos Samame\n    title: Co-founder & COO @BoxyHQ\n    url: https://www.linkedin.com/in/samame\n    image_url: /images/authors/sama.jpg\n  - name: Deepak Prabhakara\n    title: Co-founder & CEO @BoxyHQ\n    url: https://github.com/deepakprabhakara\n    image_url: /images/authors/deepak.jpg\n---",
+      "source_content_hash": "bed295352a893cdfcada4b023029734c3bb83824f20bd821eb2f42f830d62cdc",
+      "node_type": "yaml",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_58cfcc64"
+      }
+    },
+    {
+      "segment_id": "d350c018",
+      "source_content": "## The new era of Application Security: Security Building Blocks for Developers",
+      "source_content_hash": "40199905334b0a508b949d6d4ff27975d5a354d306b7829fb30375379d1793d1",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 应用安全新时代：开发者安全构建模块"
+      }
+    },
+    {
+      "segment_id": "1acb9a05",
+      "source_content": "With the proliferation of data breaches and cyber-attacks, developers must take a proactive approach to security. BoxyHQ's Security Building Blocks for Developers are designed to help developers build and deploy secure applications with minimal effort and expertise.",
+      "source_content_hash": "22346f3a2f26ea16f34731b7065a6247186c63748073bea6a67a6877742557f0",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "随着数据泄露和网络攻击的激增，开发者必须采取主动的安全策略。BoxyHQ的开发者安全构建模块旨在帮助开发者以最小的工作量和专业知识构建并部署安全应用。"
+      }
+    },
+    {
+      "segment_id": "2df4f75f",
+      "source_content": "In addition to their core products security teams are finding it hard to keep pace with new no-code and low-code apps that are being created in the company. The arrival of Generative AI and ChatGPT has complicated the landscape even further.",
+      "source_content_hash": "74e59fe1f5a2294708539250109bb01bcd6a968f743eb1b845fac00276cde663",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "除了核心产品外，安全团队还发现难以跟上企业内部不断涌现的无代码和低代码应用。生成式AI和ChatGPT的出现使这一局面更加复杂化。"
+      }
+    },
+    {
+      "segment_id": "98cfbd53",
+      "source_content": "The importance of integrating robust security measures into software applications cannot be overstated. BoxyHQ, a security-focused platform for developers, is leading the way with its Security Building Blocks for Developers, inspired by the concept of [Minimum Viable Security](https://mvsp.dev/mvsp.en/) (MVS) championed by [mvsp.dev](https://mvsp.dev).",
+      "source_content_hash": "25cdaffafe729b656f9dfa7e739afc53a65dbeb60f6bf715e60f17fd1bd953bb",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "将强健的安全措施集成到软件应用中的重要性怎么强调都不为过。面向开发者的安全平台BoxyHQ正引领潮流，其开发者安全构建模块的灵感来源于[mvsp.dev](https://mvsp.dev)倡导的[最小可行安全](https://mvsp.dev/mvsp.en/)（MVS）理念。"
+      }
+    },
+    {
+      "segment_id": "ccc88b4c",
+      "source_content": "BoxyHQ is set to revolutionize application security. Drawing insights from industry pioneers such as Twilio, Stripe, HashiCorp, and Snyk, BoxyHQ's open-source Security Building Blocks offer a comprehensive solution that empowers developers to build secure software products with ease and efficiency.",
+      "source_content_hash": "4597cce241709729b825765d2eaf7e7e47a701e7b61c0cbb48ca089cebc83318",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "BoxyHQ即将掀起应用安全革命。借鉴Twilio、Stripe、HashiCorp和Snyk等行业先驱的洞见，BoxyHQ的开源安全构建模块提供了一套全面解决方案，使开发者能够轻松高效地构建安全软件产品。"
+      }
+    },
+    {
+      "segment_id": "3c36424c",
+      "source_content": "## Building and Shipping Secure Software Products in Hours, Not Months",
+      "source_content_hash": "469a2aa991b39573b4400ecc5e2db72c77f1a6906b28448883a8cb99a21b1ed5",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 以小时而非月计构建和交付安全软件产品"
+      }
+    },
+    {
+      "segment_id": "26524352",
+      "source_content": "Building and shipping security features in hours instead of months is now a reality. In the fast-paced world of software development, time is of the essence. Traditional approaches to security often involve time-consuming and complex implementations. However, by embracing BoxyHQ's Security Building Blocks, developers can now build and ship secure software products in a fraction of the time it would take to develop these features from scratch. This not only saves valuable time but also accelerates time-to-market, giving businesses a competitive edge.",
+      "source_content_hash": "c13d204e59df0c80d21628e950f342741ca33cb5adc96f28cf6f15d17773889e",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "以小时而非月计构建和交付安全功能已成为现实。在快节奏的软件开发领域，时间就是生命。传统安全方案往往涉及耗时且复杂的实施过程。而通过采用BoxyHQ的安全构建模块，开发者现在能以从头开发这些功能所需时间的一小部分来构建和交付安全软件产品。这不仅节省宝贵时间，还能加速产品上市，为企业赢得竞争优势。"
+      }
+    },
+    {
+      "segment_id": "b25f21be",
+      "source_content": "## Democratizing Secure Development: Making Security Accessible to All",
+      "source_content_hash": "60c04b321e9ff8f9a2785abe314db288464f9d0d93211b1f5c817b6822f03193",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 普及安全开发：让安全触手可及"
+      }
+    },
+    {
+      "segment_id": "7499a4e7",
+      "source_content": "The developer community has long embraced the open-source movement. Open-source software fosters collaboration, innovation, and rapid evolution. By offering Security Building Blocks as open-source projects, BoxyHQ empowers developers to contribute, customize, and tailor security features to suit their specific needs. This flexibility not only enables developers to address unique requirements but also creates an ecosystem where best practices and security advancements are shared, benefiting the entire community. We hypothesize that in the future many of these security features will be a commodity, and will be implemented by any software product, not just the ones that need to be enterprise-grade.",
+      "source_content_hash": "7892e27398a98aae439cded52c16168ce3da2fb425258e556e5c3705db01187e",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "开发者社区长期拥抱开源运动。开源软件促进协作、创新和快速演进。通过将安全构建模块作为开源项目提供，BoxyHQ赋能开发者贡献、定制和调整安全功能以满足特定需求。这种灵活性不仅使开发者能够应对独特需求，还创建了一个共享最佳实践和安全进步的生态系统，惠及整个社区。我们假设未来许多此类安全功能将成为标配，被所有软件产品所采用，而不仅限于企业级产品。"
+      }
+    },
+    {
+      "segment_id": "109ace10",
+      "source_content": "## Minimum Viable Security (MVS): Building a Strong Foundation",
+      "source_content_hash": "1a48a06e761eae6ba182ea75ec4f02977fd87e3a53a2247895989fbda4ec5b8f",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 最小可行安全（MVS）：构建坚实基础"
+      }
+    },
+    {
+      "segment_id": "135468ee",
+      "source_content": "![Security Building Blocks](/img/blog/purple-building-blocks.jpg)",
+      "source_content_hash": "0cce5b589ba602f8be2696a683e2a862874d3c270edbaa6e3bbb47147cfc870b",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![安全构建模块](/img/blog/purple-building-blocks.jpg)"
+      }
+    },
+    {
+      "segment_id": "33331f27",
+      "source_content": "<div style={{fontSize: \"10px\", marginTop: \"-10px\", paddingBottom: \"20px\"}}>Photo by <a href=\"https://unsplash.com/@theshubhamdhage?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText\">Shubham Dhage</a> on <a href=\"https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText\">Unsplash</a></div>",
+      "source_content_hash": "9c9e4c6f1916f9c6f15b23748117c9a37def70df8b1d47f3733e84f2bb114f28",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "<div style={{fontSize: \"10px\", marginTop: \"-10px\", paddingBottom: \"20px\"}}>照片由<a href=\"https://unsplash.com/@theshubhamdhage?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText\">Shubham Dhage</a>在<a href=\"https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText\">Unsplash</a>拍摄</div>"
+      }
+    },
+    {
+      "segment_id": "50746522",
+      "source_content": "Minimum Viable Security (MVS) is a concept focused on identifying and implementing the essential security measures necessary to protect an application from common threats. BoxyHQ embraces the principles of MVS and provides developers with Security Building Blocks that address these foundational security needs. By adopting an MVS approach, developers can prioritize the integration of critical security features, ensuring a solid foundation for their applications while minimizing unnecessary complexity and overhead.",
+      "source_content_hash": "f1c82a3d63dfab093a758aff5633dd46b263db305a9d96ea23a6068bdddf784a",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "最小可行安全（MVS）是一种专注于识别和实施必要安全措施以保护应用免受常见威胁的理念。BoxyHQ秉承MVS原则，为开发者提供满足这些基础安全需求的构建模块。通过采用MVS方法，开发者可以优先集成关键安全功能，在确保应用坚实基础的同时，最大限度地减少不必要的复杂性和开销。"
+      }
+    },
+    {
+      "segment_id": "54268405",
+      "source_content": "## Comprehensive Integration: Uniting Security Features for Maximum Effectiveness",
+      "source_content_hash": "590a5fabebeeb1e1e7a9dea1281772d1273f570c328e892e180d89accbfdb8d1",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 全面集成：统一安全功能实现最大效能"
+      }
+    },
+    {
+      "segment_id": "8af76f3d",
+      "source_content": "BoxyHQ's Security Building Blocks integrate multiple security components, each designed to address a specific aspect of application security. By combining these features, developers can create a comprehensive security framework for their applications. Whether it's the secure authentication facilitated by the Enterprise Single Sign-On (SSO) product, the real-time synchronization provided by Directory Sync, the compliant logs generated by Audit Logs (Retraced), or the encrypted storage capabilities of the Data Privacy Vault (PII, PCI, PHI compliant), these components seamlessly work together to strengthen the overall security posture of applications.",
+      "source_content_hash": "cd056c06bebd40e2d92189f660f0d0fcd80cd5adf981e3bc29451829b2648810",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "BoxyHQ的安全构建模块集成了多个安全组件，每个组件都针对应用安全的特定方面而设计。通过组合这些功能，开发者可以为应用创建全面的安全框架。无论是企业单点登录（SSO）产品实现的认证安全、目录同步提供的实时同步、审计日志（Retraced）生成的合规日志，还是数据隐私保险库（符合PII、PCI、PHI标准）的加密存储能力，这些组件协同工作，共同增强应用的整体安全态势。"
+      }
+    },
+    {
+      "segment_id": "c674e260",
+      "source_content": "## Closing the Gap Between Compliance and Security",
+      "source_content_hash": "2c3c7a87e5179bec7a42f67f81bafa2ef9db740edbe15828baf717d9926eef3c",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 弥合合规与安全之间的鸿沟"
+      }
+    },
+    {
+      "segment_id": "a44047a5",
+      "source_content": "One of the key advantages of BoxyHQ is its ability to bridge the gap between compliance and security. With the increasing focus on cybersecurity vulnerabilities, compliance alone is not sufficient to protect against threats. BoxyHQ's comprehensive suite of open-source security components ensures that developers can not only meet compliance requirements but also implement robust security measures. By integrating these building blocks, businesses can confidently navigate the complex landscape of security and compliance, safeguarding their data and systems while staying ahead of potential threats. Aligned with this vision we consolidated a list of free [awesome open-source developer-first security tools](https://github.com/boxyhq/awesome-oss-devsec) that includes security principles and controls relevant to popular compliance certifications. (like ISO27001, SOC2, MVSP, etc)",
+      "source_content_hash": "bf80017314d2319d65d86945737566d7c3ab4b03261f2673a7e03f3cd651e719",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "BoxyHQ的关键优势之一在于其能够弥合合规性与安全性之间的鸿沟。随着网络安全漏洞日益受到关注，仅满足合规要求已不足以抵御威胁。BoxyHQ提供全面的开源安全组件套件，确保开发者不仅能满足合规认证，更能实施强健的安全措施。通过集成这些安全构建模块，企业可以自信应对复杂的安全与合规环境，在保护数据系统的同时保持对潜在威胁的防范优势。基于这一愿景，我们整合了免费的[优质开源开发者优先安全工具列表](https://github.com/boxyhq/awesome-oss-devsec)，其中包含与ISO27001、SOC2、MVSP等主流合规认证相关的安全原则和控制措施。"
+      }
+    },
+    {
+      "segment_id": "f7ef78f9",
+      "source_content": "The security building blocks for developers are supported by extensive documentation, an admin portal for easy management, and customer support and advice for each customer's unique needs. BoxyHQ's products represent a significant step forward for developers looking to improve the security of their applications.",
+      "source_content_hash": "18e4928ad74e3d1fa5e1dbcfc3cd244f21497f58c343ec19c339d201ed4dd5d9",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "这些面向开发者的安全构建模块配有详尽的文档说明、便于管理的管理门户，以及针对每位客户独特需求的技术支持与专业建议。BoxyHQ的产品代表着开发者在提升应用安全性道路上的重要进步。"
+      }
+    },
+    {
+      "segment_id": "b36c6338",
+      "source_content": "In conclusion, BoxyHQ aims to make a significant impact on the industry. By providing simple and efficient integrations for minimum viable security features, BoxyHQ is helping to ensure that developers and businesses of all sizes can protect their sensitive data and systems against threats, ultimately making the internet a safer place for everyone.",
+      "source_content_hash": "bd7953d5ea6e4688778ae54cb5ff017e0fc305e6773b9a0e7f40f85ada535578",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "总之，BoxyHQ致力于对行业产生深远影响。通过为最小可行安全功能提供简单高效的集成方案，BoxyHQ正帮助各类规模的开发者和企业保护敏感数据与系统免受威胁，最终为所有人构建更安全的互联网环境。"
+      }
+    }
+  ],
+  "target_i18n_subpath": "docusaurus-plugin-content-blog/2023-07-10-the-new-era-of-application-security-security-building-blocks-for-developers copy.md",
+  "last_updated_timestamp": "2025-06-08T18:49:09.297892+00:00",
+  "schema_version": "1.0",
+  "translated_versions": {
+    "zh-CN": "5818784e7b7def687dc9d4fa4eb0ff7981365b0639572a713843670b31b18c46"
+  }
+}

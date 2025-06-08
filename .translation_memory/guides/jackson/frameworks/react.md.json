@@ -1,0 +1,472 @@
+{
+  "source_file_path_relative_to_docusaurus_root": "guides/jackson/frameworks/react.md",
+  "source_file_content_hash": "ddcf04b11a68fad1b9f7e241d99b126b4e56f0a5c48df5372a6c0669b6010477",
+  "segments": [
+    {
+      "segment_id": "58cfcc64",
+      "source_content": "---\ntitle: Add SAML SSO to React App with BoxyHQ\ndescription: Add SAML SSO to React App with BoxyHQ\nsidebar_label: React\n---",
+      "source_content_hash": "c06d1f387fdfce050216e6c5ec0cb9d083bd136046418f3e923bcd96afbe3117",
+      "node_type": "yaml",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_58cfcc64"
+      }
+    },
+    {
+      "segment_id": "10c4cb47",
+      "source_content": "import Tabs from '@theme/Tabs';\nimport TabItem from '@theme/TabItem';",
+      "source_content_hash": "86702643a5c3bdf74257ff6062535897129ed9144c4f5b70edfe338fef3e5c73",
+      "node_type": "mdxjsEsm",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_10c4cb47"
+      }
+    },
+    {
+      "segment_id": "1cc03ec8",
+      "source_content": "# Add SAML SSO to React App",
+      "source_content_hash": "04cf8012faec5d65fe995ec3629072ebd236c4245eac8e3a62332b42f8c783bf",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "# 为React应用添加SAML单点登录"
+      }
+    },
+    {
+      "segment_id": "8d66f911",
+      "source_content": "This guide assumes that you have a React app and want to enable SAML Single Sign-On authentication for your enterprise customers. By the end of this guide, you'll have an app that allows you to authenticate the users using SAML Single Sign-On.",
+      "source_content_hash": "0aca487d7f20dc5310e53650c90e3bc6f0c81fad509e5aa3df0cd0182e9fe004",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "本指南假设您已有一个React应用，并希望为企业客户启用SAML单点登录认证。通过本指南，您将获得一个支持使用SAML单点登录进行用户认证的应用。"
+      }
+    },
+    {
+      "segment_id": "ad8fd492",
+      "source_content": "If you wish to dive straight into the source, Checkout: https://github.com/boxyhq/jackson-examples/tree/main/apps/react-example",
+      "source_content_hash": "c01eaafc27baed4c5bf3a6240ebf0e9b6fb2215b5ae2493aac3b2721dca9e3db",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "若希望直接查看源码，请访问：https://github.com/boxyhq/jackson-examples/tree/main/apps/react-example"
+      }
+    },
+    {
+      "segment_id": "976d532b",
+      "source_content": ":::info\nWe use an express backend with the React Single Page App. The code for this can be found at https://github.com/boxyhq/jackson-examples/tree/main/apps/express-api\n:::",
+      "source_content_hash": "115db8fa0c8d6860d0b85108d1b9ee0472fc96565fc4ba94270f642b624b6673",
+      "node_type": "containerDirective",
+      "translatable": true,
+      "translations": {
+        "zh-CN": ":::info\n我们使用Express后端配合React单页应用。相关代码可在 https://github.com/boxyhq/jackson-examples/tree/main/apps/express-api 找到\n:::"
+      }
+    },
+    {
+      "segment_id": "1acb9a05",
+      "source_content": "Integrating SAML SSO into an app involves the following steps.",
+      "source_content_hash": "b41d0c741a2a4a57f2f8fab371dffbd39dc33a404f97c74b706f4e166b827a0d",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "为应用集成SAML单点登录需要以下步骤。"
+      }
+    },
+    {
+      "segment_id": "da23c906",
+      "source_content": "- Configure SAML Single Sign-On\n- Authenticate with SAML Single Sign-On",
+      "source_content_hash": "bc65b0d357e9559034fbd9763bb9510bb34ac402187fc17447e5e97d7258d38e",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- 配置SAML单点登录\n- 通过SAML单点登录进行认证"
+      }
+    },
+    {
+      "segment_id": "ed7dde9c",
+      "source_content": "## Configure Enterprise SSO on React",
+      "source_content_hash": "c5b01bb92d2c8099d3ecc194e5b2ffa9351a014b6f9b9ec8a3b540a77f7a4e9f",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 在React上配置企业级单点登录"
+      }
+    },
+    {
+      "segment_id": "a76548f8",
+      "source_content": "This step allows your tenants to configure SAML connections for their users. Read the following guides to understand more about this.",
+      "source_content_hash": "44570eec6f1685f46ec726135e0ef1456876caf09b8afa825586b7f20c3776a4",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "此步骤允许您的租户为其用户配置SAML连接。阅读以下指南以了解更多信息。"
+      }
+    },
+    {
+      "segment_id": "77bf3ec9",
+      "source_content": "- [UI Best Practices for Configuring SAML Single Sign-On](/guides/jackson/configuring-saml-sso)\n- [SSO Connection API](/docs/jackson/sso-flow/)",
+      "source_content_hash": "088ba8b656d2059418e53604b3eba9e3f53a5c366eed28d0cbbe52042b6b3562",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- [配置SAML单点登录的UI最佳实践](/guides/jackson/configuring-saml-sso)\n- [单点登录连接API](/docs/jackson/sso-flow/)"
+      }
+    },
+    {
+      "segment_id": "b25f21be",
+      "source_content": "## Authenticate with SAML Single Sign-On",
+      "source_content_hash": "beaad64d7ce66f37bfb7d59b009777c5c9085f0353a91b1fc2650dc70a7345bb",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 通过SAML单点登录进行认证"
+      }
+    },
+    {
+      "segment_id": "7499a4e7",
+      "source_content": "Once you add a SAML connection, the app can use this SAML connection to initiate the SSO authentication flow using SAML Jackson. The following sections focus more on the SSO authentication side.",
+      "source_content_hash": "fc68bfce93d6cc7f2c605992f3e55f423b3bbf0dd231b9da91e6a1ce02758c7d",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "添加SAML连接后，应用可使用该连接通过SAML Jackson发起单点登录认证流程。以下章节主要关注单点登录认证部分。"
+      }
+    },
+    {
+      "segment_id": "109ace10",
+      "source_content": "### Deploy SAML Jackson",
+      "source_content_hash": "2755361fb186459f15d2e616b8ec89548f33c7ff9bfbe123f37c378529b405c3",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 部署SAML Jackson服务"
+      }
+    },
+    {
+      "segment_id": "135468ee",
+      "source_content": "The first step is to deploy the SAML Jackson service. Follow the [deployment docs](/docs/jackson/deploy/service) to install and configure the SAML Jackson.",
+      "source_content_hash": "0c16cc7a17726fcdcc50bf1602ebe7021f96730b33f9290a942214fc9fc5a232",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "第一步是部署SAML Jackson服务。请按照[部署文档](/docs/jackson/deploy/service)安装并配置SAML Jackson。"
+      }
+    },
+    {
+      "segment_id": "782c902a",
+      "source_content": "### Setup SAML Jackson Integration",
+      "source_content_hash": "ea864afbfebc4f5f1f20eb14994f0673e48450591361a65efba9f43abd12f913",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 设置SAML Jackson集成"
+      }
+    },
+    {
+      "segment_id": "50746522",
+      "source_content": "We'll use the client library `@bity/oauth2-auth-code-pkce` to implement the authentication process. It is a zero-dependency OAuth 2.0 client implementing the authorization code grant with PKCE for client-side protection.",
+      "source_content_hash": "370462e2fed10dd747a777f6c3e8e5ffa9e3569796ef02590e4b907e135bd8bc",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "我们将使用客户端库`@bity/oauth2-auth-code-pkce`来实现认证流程。这是一个零依赖的OAuth 2.0客户端，实现了带PKCE的授权码模式以提供客户端保护。"
+      }
+    },
+    {
+      "segment_id": "45022e4f",
+      "source_content": "```bash\nnpm i --save @bity/oauth2-auth-code-pkce\n```",
+      "source_content_hash": "f9ad3eb370442b947cd39add7176414cecdf59d15248ff57c7c0f54af1c0a660",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_45022e4f"
+      }
+    },
+    {
+      "segment_id": "a9d49f92",
+      "source_content": "Let's configure the `OAuth2AuthCodePKCE` client to use the SAML Jackson service for authentication. Here we use a custom hook so that the `oauthClient` can be used elsewhere in the app.",
+      "source_content_hash": "026ed519737c0ae60aab33431559ce13df3fd2e0217065cdb270c785c44baff3",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "让我们配置`OAuth2AuthCodePKCE`客户端以使用SAML Jackson服务进行认证。这里我们使用自定义钩子，以便`oauthClient`可在应用其他位置使用。"
+      }
+    },
+    {
+      "segment_id": "95318d95",
+      "source_content": "```ts title=\"src/hooks/useOAuthClient.ts\"\nimport { OAuth2AuthCodePKCE } from '@bity/oauth2-auth-code-pkce';\nimport { useEffect, useState } from 'react';\n\nconst JACKSON_URL = process.env.REACT_APP_JACKSON_URL;\n\ninterface OauthClientOptions {\n  redirectUrl: string;\n}\nexport default function useOAuthClient({\n  redirectUrl,\n}: OauthClientOptions): OAuth2AuthCodePKCE | null {\n  const [oauthClient, setOauthClient] = useState<OAuth2AuthCodePKCE | null>(\n    null\n  );\n\n  useEffect(() => {\n    setOauthClient(\n      new OAuth2AuthCodePKCE({\n        authorizationUrl: `${JACKSON_URL}/api/oauth/authorize`,\n        tokenUrl: `${JACKSON_URL}/api/oauth/token`,\n        // Setting the clientId dummy here. We pass additional query params for\n        // tenant and product in the authorize request.\n        clientId: 'dummy',\n        redirectUrl,\n        scopes: [],\n        onAccessTokenExpiry(refreshAccessToken) {\n          console.log('Expired! Access token needs to be renewed.');\n          alert(\n            'We will try to get a new access token via grant code or refresh token.'\n          );\n          return refreshAccessToken();\n        },\n        onInvalidGrant(refreshAuthCodeOrRefreshToken) {\n          console.log(\n            'Expired! Auth code or refresh token needs to be renewed.'\n          );\n          alert('Redirecting to auth server to obtain a new auth grant code.');\n          //return refreshAuthCodeOrRefreshToken();\n        },\n      })\n    );\n  }, [redirectUrl]);\n\n  return oauthClient;\n}\n```",
+      "source_content_hash": "1c9045fef73ef94320c96e786b68322d4db6de72e19b12d9d123fef06902d186",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_95318d95"
+      }
+    },
+    {
+      "segment_id": "f8edb6d2",
+      "source_content": "### Setup global Authentication primitives",
+      "source_content_hash": "16e1267b09ece29e5306b5ec2c776be3bb1041c8da749baee03648ab9a13b630",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 设置全局认证基础组件"
+      }
+    },
+    {
+      "segment_id": "c19de48a",
+      "source_content": "#### AuthContext",
+      "source_content_hash": "a6f53ed2d25be382b0a0c2561f10e0b1c56e4dc530216b4661fd503f942cad8c",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "#### 认证上下文(AuthContext)"
+      }
+    },
+    {
+      "segment_id": "6ca4479f",
+      "source_content": "We need a way to make the logged-in `user` as well as the `signIn`, `signOut` methods accessible globally. These, along with the `setTenant` (method used to select the tenant for the SSO flow) and `authStatus` (boolean which helps us to conditionally render content based on whether the authenticated status is fully known or being loaded) are made available throughout the application by using `AuthContext`.",
+      "source_content_hash": "0564b1041b9c2deb0f92b4dab257cd138968a817572d918da48d8c7413b48648",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "我们需要一种方式使已登录的`user`以及`signIn`、`signOut`方法全局可访问。这些方法连同`setTenant`（用于选择单点登录流程的租户）和`authStatus`（布尔值，帮助我们根据认证状态是否完全已知或正在加载来条件渲染内容）通过使用`AuthContext`在整个应用中可用。"
+      }
+    },
+    {
+      "segment_id": "1cf51900",
+      "source_content": "```tsx title=\"src/lib/AuthProvider.tsx\"\nimport React, { useState, useEffect, ReactNode, createContext } from 'react';\nimport { useLocation } from 'react-router-dom';\nimport useOAuthClient from '../hooks/useOAuthClient';\nimport { authenticate, getProfileByJWT } from './backend';\n\ninterface ProviderProps {\n  children: ReactNode;\n}\n\ninterface AuthContextInterface {\n  setTenant?: React.Dispatch<React.SetStateAction<string>>;\n  authStatus: 'UNKNOWN' | 'FETCHING' | 'LOADED';\n  user: any;\n  signIn: () => void;\n  signOut: (callback: VoidFunction) => void;\n}\n\n// localstorage key to store from url\nconst APP_FROM_URL = 'appFromUrl';\n\nexport const AuthContext = createContext<AuthContextInterface>(null!);\n```",
+      "source_content_hash": "c4b96f438568824007067a01d6a06f11e10984a246d3b5758bc82b7b676c43d4",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_1cf51900"
+      }
+    },
+    {
+      "segment_id": "6fc234cf",
+      "source_content": "We also create a custom hook that returns a handle to the `AuthContext`.",
+      "source_content_hash": "e38859c4550d3c308bcb862416a832fb4bea8026e3cafe51ef1219b3812f0403",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "我们还创建了一个返回`AuthContext`句柄的自定义钩子。"
+      }
+    },
+    {
+      "segment_id": "a3a1b8eb",
+      "source_content": "```ts title=\"src/hooks/useAuth.ts\"\nimport { useContext } from 'react';\nimport { AuthContext } from '../lib/AuthProvider';\n\nconst useAuth = () => {\n  return useContext(AuthContext);\n};\n\nexport default useAuth;\n```",
+      "source_content_hash": "945a8f85ad91123e5fae271ffcc5f8f60c20c00538bc7c6871b775cd8f2e893f",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_a3a1b8eb"
+      }
+    },
+    {
+      "segment_id": "fff17ff8",
+      "source_content": "#### AuthProvider",
+      "source_content_hash": "9b21151d8b5ee751aff4ce2ef965beeebe2c783e2d86447894f64c940bf45e90",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "#### 认证提供者(AuthProvider)"
+      }
+    },
+    {
+      "segment_id": "8664ed0b",
+      "source_content": "We will wire up the flow inside the AuthProvider.",
+      "source_content_hash": "ab574943153e6de4e651c7ddaa48f91d00f1686e124ab98f1208f223f7551812",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "我们将在AuthProvider中实现整个流程。"
+      }
+    },
+    {
+      "segment_id": "6892c8d2",
+      "source_content": "1.  Once the app shell is rendered, we run an effect that uses the `authClient` from `useOAuthClient` to conduct the flow. Two scenarios need to be handled here. The first one is the case where we have secured an access_token from the SSO provider (Jackson) in which case we can retrieve the logged-in user profile by passing in the cookie. The second one is the case where the browser gets redirected back to the app, after signing in at IdP. The authorization code in the redirect is exchanged for an access token which is then passed to the app backend to complete the login.\n\n    ```tsx title=\"src/lib/AuthProvider.tsx\"\n      const AuthProvider = ({ children }: ProviderProps) => {\n        const [user, setUser] = useState<any>(null);\n        const [authStatus, setAuthStatus] = useState<AuthContextInterface['authStatus']>('UNKNOWN');\n\n        ...\n\n        const redirectUrl = process.env.REACT_APP_APP_URL + from;\n\n        const authClient = useOAuthClient({ redirectUrl });\n\n        useEffect(() => {\n          let didCancel = false;\n\n          const loadUser = async () => {\n            if (!authClient) {\n              return;\n            }\n            setAuthStatus('FETCHING');\n            if (authClient.isAuthorized()) {\n              const { data, error } = await getProfileByJWT();\n              if (!didCancel && !error) {\n                setUser(data);\n                setAuthStatus('LOADED');\n              }\n            } else {\n              try {\n                const hasAuthCode = await authClient?.isReturningFromAuthServer();\n                if (!hasAuthCode) {\n                  devLogger('no auth code detected...');\n                } else {\n                  const token = !didCancel\n                    ? await authClient?.getAccessToken()\n                    : null;\n                  token && localStorage.removeItem(APP_FROM_URL);\n                  // authentication happens at the backend where the above token is used\n                  // to retrieve user profile\n                  const profile = await authenticate(token?.token?.value);\n                  if (!didCancel && profile) {\n                    setUser(profile);\n                  }\n                }\n              } catch (err) {\n                console.error(err);\n              } finally {\n                setAuthStatus('LOADED');\n              }\n            }\n          };\n\n          loadUser();\n          return () => {\n            didCancel = true;\n          };\n        }, [authClient]);\n\n        ...\n\n         const value = {\n          authStatus,\n          user,\n        };\n\n        return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;\n      };\n\n      export { AuthContext, AuthProvider };\n    ```\n\n2.  When someone tries to access protected/private routes they will be redirected to the login page. Before we do this we save the current location they were trying to access in the history state. This logic is encapsulated in the `RequireAuth` wrapper component. Use it to protect routes that require authentication.\n\n    ```tsx title=\"src/components/RequireAuth.tsx\"\n    const RequireAuth = ({ children }: { children: JSX.Element }) => {\n      let { user, authStatus } = useAuth();\n      let location = useLocation();\n\n      if (authStatus !== 'LOADED') {\n        return null;\n      }\n\n      if (!user) {\n        // Redirect them to the /login page, but save the current location they were\n        // trying to go to when they were redirected. This allows us to send them\n        // along to that page after they login, which is a nicer user experience\n        // than dropping them off on the home page.\n        return <Navigate to=\"/login\" state={{ from: location }} replace />;\n      }\n\n      return children;\n    };\n\n    export default RequireAuth;\n    ```\n\n    We then use the `from` state in the `redirectUrl` to construct the `oAuthClient` inside `AuthProvider`.\n\n    ```ts title=\"src/lib/AuthProvider.tsx\"\n    let location = useLocation();\n    let from =\n      location.state?.from?.pathname ||\n      localStorage.getItem(APP_FROM_URL) ||\n      '/profile';\n\n    const redirectUrl = process.env.REACT_APP_APP_URL + from;\n\n    const authClient = useOAuthClient({ redirectUrl });\n    ```\n\n3.  `signIn` and `signOut` methods can be implemented as follows:\n\n    ```tsx title=\"src/lib/AuthProvider.tsx\"\n    const signIn = async () => {\n      // store the 'from' url before redirecting ... we need this to correctly initialize\n      // the oauthClient after getting redirected back from SSO Provider.\n      localStorage.setItem(APP_FROM_URL, from);\n      // Initiate the login flow\n      await authClient?.fetchAuthorizationCode({\n        tenant,\n        product: 'saml-demo.boxyhq.com',\n      });\n    };\n\n    const signOut = async (callback: VoidFunction) => {\n      authClient?.reset();\n      setUser(null);\n      callback();\n    };\n\n    const value = {\n      signIn,\n      signOut,\n    };\n\n    return (\n      <AuthContext.Provider value={value}>{children}</AuthContext.Provider>\n    );\n    ```",
+      "source_content_hash": "1645d82c761e1f2807081e2f7d9acca48e2600fc7f3cd3664fc6b1eeae05bad8",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "1. 应用外壳渲染完成后，我们会执行一个副作用钩子，利用从`useOAuthClient`获取的`authClient`来处理认证流程。这里需要处理两种场景：第一种是已从SSO提供商(Jackson)获取access_token的情况，此时可通过传入cookie来获取已登录用户资料；第二种是用户在身份提供商(IdP)完成登录后浏览器重定向回应用的场景，此时需将重定向中的授权码交换为访问令牌，再传递给应用后端完成登录。\n\n    ```tsx title=\"src/lib/AuthProvider.tsx\"\n      const AuthProvider = ({ children }: ProviderProps) => {\n        const [user, setUser] = useState<any>(null);\n        const [authStatus, setAuthStatus] = useState<AuthContextInterface['authStatus']>('UNKNOWN');\n\n        ...\n\n        const redirectUrl = process.env.REACT_APP_APP_URL + from;\n\n        const authClient = useOAuthClient({ redirectUrl });\n\n        useEffect(() => {\n          let didCancel = false;\n\n          const loadUser = async () => {\n            if (!authClient) {\n              return;\n            }\n            setAuthStatus('FETCHING');\n            if (authClient.isAuthorized()) {\n              const { data, error } = await getProfileByJWT();\n              if (!didCancel && !error) {\n                setUser(data);\n                setAuthStatus('LOADED');\n              }\n            } else {\n              try {\n                const hasAuthCode = await authClient?.isReturningFromAuthServer();\n                if (!hasAuthCode) {\n                  devLogger('no auth code detected...');\n                } else {\n                  const token = !didCancel\n                    ? await authClient?.getAccessToken()\n                    : null;\n                  token && localStorage.removeItem(APP_FROM_URL);\n                  // 认证操作在后端完成，使用上述令牌获取用户资料\n                  const profile = await authenticate(token?.token?.value);\n                  if (!didCancel && profile) {\n                    setUser(profile);\n                  }\n                }\n              } catch (err) {\n                console.error(err);\n              } finally {\n                setAuthStatus('LOADED');\n              }\n            }\n          };\n\n          loadUser();\n          return () => {\n            didCancel = true;\n          };\n        }, [authClient]);\n\n        ...\n\n         const value = {\n          authStatus,\n          user,\n        };\n\n        return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;\n      };\n\n      export { AuthContext, AuthProvider };\n    ```\n\n2. 当用户尝试访问受保护/私有路由时，将被重定向至登录页。在此之前我们会将其尝试访问的当前路径保存在历史状态中。该逻辑封装在`RequireAuth`包装组件中，可用于保护需要认证的路由。\n\n    ```tsx title=\"src/components/RequireAuth.tsx\"\n    const RequireAuth = ({ children }: { children: JSX.Element }) => {\n      let { user, authStatus } = useAuth();\n      let location = useLocation();\n\n      if (authStatus !== 'LOADED') {\n        return null;\n      }\n\n      if (!user) {\n        // 重定向至/login页面，但保存触发重定向的原始路径\n        // 这使得用户登录后能跳转至目标页面，相比直接返回首页能提供更好的用户体验\n        return <Navigate to=\"/login\" state={{ from: location }} replace />;\n      }\n\n      return children;\n    };\n\n    export default RequireAuth;\n    ```\n\n    随后我们在`AuthProvider`内部使用`from`状态构建`redirectUrl`来初始化`oAuthClient`。\n\n    ```ts title=\"src/lib/AuthProvider.tsx\"\n    let location = useLocation();\n    let from =\n      location.state?.from?.pathname ||\n      localStorage.getItem(APP_FROM_URL) ||\n      '/profile';\n\n    const redirectUrl = process.env.REACT_APP_APP_URL + from;\n\n    const authClient = useOAuthClient({ redirectUrl });\n    ```\n\n3. `signIn`和`signOut`方法可按如下方式实现：\n\n    ```tsx title=\"src/lib/AuthProvider.tsx\"\n    const signIn = async () => {\n      // 在重定向前存储'from'路径，用于从SSO提供商重定向回来后正确初始化oauthClient\n      localStorage.setItem(APP_FROM_URL, from);\n      // 发起登录流程\n      await authClient?.fetchAuthorizationCode({\n        tenant,\n        product: 'saml-demo.boxyhq.com',\n      });\n    };\n\n    const signOut = async (callback: VoidFunction) => {\n      authClient?.reset();\n      setUser(null);\n      callback();\n    };\n\n    const value = {\n      signIn,\n      signOut,\n    };\n\n    return (\n      <AuthContext.Provider value={value}>{children}</AuthContext.Provider>\n    );\n    ```"
+      }
+    },
+    {
+      "segment_id": "0495d9eb",
+      "source_content": "### Make Authentication Request",
+      "source_content_hash": "183248edcdad61d66651eee6f50bd53b3e36cb15c69d07c5b5f5cb3ef9d59611",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 发起认证请求"
+      }
+    },
+    {
+      "segment_id": "e3bf03eb",
+      "source_content": "Let's add a page to begin the authenticate flow. This page initiates (by calling `signIn` from the `AuthContext`) the SAML SSO flow by redirecting the users to their configured Identity Provider (via Jackson).",
+      "source_content_hash": "a1167c77f644bf2ac983579da6c8d121d014ff38709c8841f2d7c5f10bcb47b7",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "让我们添加一个页面来启动认证流程。该页面通过调用 `AuthContext` 中的 `signIn` 方法，将用户重定向至其配置的身份提供商（通过 Jackson），从而发起 SAML SSO 流程。"
+      }
+    },
+    {
+      "segment_id": "7fa65ec5",
+      "source_content": "The user will be redirected to the IdP when clicking the \"Continue with SAML SSO\" button.",
+      "source_content_hash": "0040d7ae74d2ef8f96315f4d7d44e12e66b05c1ee59a30b52c6cac795195fa88",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "当用户点击\"使用 SAML SSO 继续\"按钮时，将被重定向至身份提供商。"
+      }
+    },
+    {
+      "segment_id": "ca8f8565",
+      "source_content": "```js title=\"src/pages/Login.tsx\"\nimport React from 'react';\nimport { Navigate, useLocation } from 'react-router-dom';\nimport useAuth from '../hooks/useAuth';\n\nconst Login = () => {\n  let location = useLocation();\n\n  let from = location.state?.from?.pathname || '/profile';\n\n  const { signIn, setTenant, authStatus, user } = useAuth();\n\n  if (authStatus !== 'LOADED') {\n    return null;\n  }\n\n  if (authStatus === 'LOADED' && user) {\n    return <Navigate to={from} replace />;\n  }\n\n  return (\n    <div className=\"mx-auto h-screen max-w-7xl\">\n      <div className=\"flex h-full flex-col justify-center space-y-5\">\n        <h2 className=\"text-center text-3xl\">Log in to App</h2>\n        <div className=\"mx-auto w-full max-w-md px-3 md:px-0\">\n          <div className=\"rounded border border-gray-200 bg-white py-5 px-5\">\n            <form className=\"space-y-3\" method=\"POST\" onSubmit={signIn}>\n              <label htmlFor=\"tenant\" className=\"block text-sm\">\n                Tenant ID\n              </label>\n              <input\n                type=\"text\"\n                name=\"tenant\"\n                placeholder=\"boxyhq\"\n                defaultValue=\"boxyhq.com\"\n                className=\"block w-full appearance-none rounded border border-gray-300 text-sm placeholder-gray-400 focus:outline-none focus:ring-indigo-500\"\n                required\n                onChange={(e) =>\n                  typeof setTenant === 'function' && setTenant(e.target.value)\n                }\n              />\n              <button\n                type=\"submit\"\n                className=\"w-full rounded border border-transparent bg-indigo-600 px-4 py-2 text-sm font-medium text-white focus:outline-none\"\n              >\n                Continue with SAML SSO\n              </button>\n            </form>\n          </div>\n        </div>\n      </div>\n    </div>\n  );\n};\n\nexport default Login;\n```",
+      "source_content_hash": "57196da93bd71272fc9d47fb5ea9b81edf5a6edc74e0a25761c7992d6b03903c",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_ca8f8565"
+      }
+    },
+    {
+      "segment_id": "1e5c4bc8",
+      "source_content": "### Fetch User Profile",
+      "source_content_hash": "0d72a4b900175fa6282dd8c47065fb455899ffcce076af4f0bc76a1efc02428f",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 获取用户资料"
+      }
+    },
+    {
+      "segment_id": "d8492b16",
+      "source_content": "Once the `accessToken` has been fetched, the React app can use it to retrieve the user profile from the Identity Provider.",
+      "source_content_hash": "9879ccfbb007639696ec161ac97a222c503feeaf5f1d741dbb6930f0febd1e9a",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "获取 `accessToken` 后，React 应用可借此从身份提供商处检索用户资料。"
+      }
+    },
+    {
+      "segment_id": "4cba7b8e",
+      "source_content": "Typically you would use your backend service (Eg: Express.js) to call the SAML Jackson API to fetch the user profile using the `accessToken`.",
+      "source_content_hash": "1d01cefc0b848dd5c5acc653fc64ccbb353eb99b028a5dc425379c4932253fbd",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "通常您会使用后端服务（例如 Express.js）调用 SAML Jackson API，通过 `accessToken` 获取用户资料。"
+      }
+    },
+    {
+      "segment_id": "c419a086",
+      "source_content": "Here are the express.js routes that return the user profile either on login or by parsing the JWT from the client-side cookie.",
+      "source_content_hash": "7f6f40a189cdbc7f56168eaa537cbc2b59886587790df432f4dcdcb90b75766c",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "以下是 Express.js 路由示例，它们会在登录时或通过解析客户端 cookie 中的 JWT 来返回用户资料。"
+      }
+    },
+    {
+      "segment_id": "7af0b75a",
+      "source_content": "```js\napp.get('/api/authenticate', async function (req, res, next) {\n  const accessToken = req.query.access_token;\n\n  if (!accessToken) {\n    throw new Error('Access token not found.');\n  }\n\n  const response = await fetch(\n    `${jacksonUrl}/api/oauth/userinfo?access_token=${accessToken}`,\n    {\n      method: 'GET',\n    }\n  );\n\n  const profile = await response.json();\n\n  // Once the user has been retrieved from the Identity Provider,\n  // you may determine if the user exists in your application and authenticate the user.\n  // If the user does not exist in your application, you will typically create a new record in your database to represent the user.\n\n  const token = jsonwebtoken.sign(\n    {\n      id: profile.id,\n      email: profile.email,\n      firstName: profile.firstName,\n      lastName: profile.lastName,\n    },\n    jwtSecret\n  );\n\n  res.cookie('sso-token', token, { httpOnly: true });\n  res.json(profile);\n});\n\napp.get('/api/profile', async function (req, res, next) {\n  const token = req.cookies['sso-token'];\n\n  if (!token) {\n    return res\n      .status(401)\n      .json({ data: null, error: { message: 'Missing JWT' } });\n  }\n\n  // You may fetch the user profile from your database using the user id.\n\n  const payload = jsonwebtoken.verify(token, jwtSecret);\n\n  return res.json({ data: payload, error: null });\n});\n```",
+      "source_content_hash": "60047cd2a7bb05ad558500459082fc0d59f0589747e2e7ad756814ac81cf94bf",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_7af0b75a"
+      }
+    },
+    {
+      "segment_id": "158df793",
+      "source_content": "The profile will look something like this:",
+      "source_content_hash": "cdc482a3a58ea17824afa7d380419628144d28aa6565e7a71ff15b9979e7857f",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "用户资料示例如下："
+      }
+    },
+    {
+      "segment_id": "d68d5d0e",
+      "source_content": "```json\n{\n  \"id\":\"<id from the Identity Provider>\",\n  \"email\": \"jackson@coolstartup.com\",\n  \"firstName\": \"SAML\",\n  \"lastName\": \"Jackson\",\n  \"requested\": {\n    \"tenant\": \"<tenant>\",\n    \"product\": \"<product>\",\n    \"client_id\": \"<client_id>\",\n    \"state\": \"<state>\"\n  },\n  \"raw\": {\n    ...\n  }\n}\n```",
+      "source_content_hash": "5aa1ce4635b3013ee315ac9ced87b396208cd8f8cec45142c40c58d9c33138cd",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_d68d5d0e"
+      }
+    },
+    {
+      "segment_id": "7e0b49a3",
+      "source_content": "In the React app, we call the `getProfileByJWT` if an access_token is already in possession or we call the `authenticate` when returning back from SSO provider with the authorization code.",
+      "source_content_hash": "9afc6d3e32085464dd8f3eee7fe4cc013f21020bd6b635f79c912f8bc1d8118b",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "在 React 应用中，若已持有 access_token 则调用 `getProfileByJWT`；若携带授权码从 SSO 提供商返回则调用 `authenticate`。"
+      }
+    },
+    {
+      "segment_id": "c34e4bdd",
+      "source_content": "```ts title=\"src/lib/backend.ts\"\nconst apiUrl = process.env.REACT_APP_API_URL;\n\nexport const authenticate = async (token: string | undefined) => {\n  if (!token) {\n    throw new Error('Access token not found.');\n  }\n\n  const response = await fetch(\n    `${apiUrl}/api/authenticate?access_token=${token}`,\n    {\n      method: 'GET',\n      credentials: 'include',\n    }\n  );\n  if (response.ok) {\n    return await response.json();\n  }\n  return null;\n};\n\nexport const getProfileByJWT = async () => {\n  const response = await fetch(`${apiUrl}/api/profile`, {\n    method: 'GET',\n    credentials: 'include',\n  });\n\n  return await response.json();\n};\n```",
+      "source_content_hash": "30072ea271cfee8733dbdc6c1aa108527a8ff397d4508278d64b29d51f07add4",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_c34e4bdd"
+      }
+    },
+    {
+      "segment_id": "4170d23c",
+      "source_content": "## Ready to go",
+      "source_content_hash": "395c2dd8591b7414ec68db3dc1cbedf3676a94e73bf3272e05b22c74df242b8e",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 准备就绪"
+      }
+    },
+    {
+      "segment_id": "76356197",
+      "source_content": "That's it, your react app is ready for Single Sign-On. 🎉",
+      "source_content_hash": "efd48c0d8178e159c3e19bb628badb9c77ca06a3c997c7047f1a52d19431648d",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "至此，您的 React 应用已实现单点登录功能。🎉"
+      }
+    },
+    {
+      "segment_id": "c655c05b",
+      "source_content": "## Next steps",
+      "source_content_hash": "3a5d9cbc49e6e5f0c98349dd1cd7cfe5713807fc5f02234240621031925d1f32",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 后续步骤"
+      }
+    },
+    {
+      "segment_id": "53d85bf8",
+      "source_content": "- Got a question? [Ask here](https://discord.gg/uyb7pYt4Pa)",
+      "source_content_hash": "3d42b2d324c1d4391b652a72774e8ed6adad48f83e9f875f7f743e0f70b6c89a",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- 遇到问题？[在此提问](https://discord.gg/uyb7pYt4Pa)"
+      }
+    }
+  ],
+  "target_i18n_subpath": "docusaurus-plugin-content-docs-guides/current/jackson/frameworks/react.md",
+  "last_updated_timestamp": "2025-06-08T18:49:09.306540+00:00",
+  "schema_version": "1.0",
+  "translated_versions": {
+    "zh-CN": "ddcf04b11a68fad1b9f7e241d99b126b4e56f0a5c48df5372a6c0669b6010477"
+  }
+}

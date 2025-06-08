@@ -1,0 +1,352 @@
+{
+  "source_file_path_relative_to_docusaurus_root": "guides/jackson/frameworks/laravel.md",
+  "source_file_content_hash": "f697e6175745dc53a6745bb70106cbdc11fc1b10509f7100b901740743466dcb",
+  "segments": [
+    {
+      "segment_id": "58cfcc64",
+      "source_content": "---\ntitle: Add SAML SSO to Laravel App with BoxyHQ\ndescription: Add SAML SSO to Laravel App with BoxyHQ\nsidebar_label: Laravel\n---",
+      "source_content_hash": "41ec2f436449254cd4bad9c07204721837e05bcdcdac7333b17b9d78cdb52e4f",
+      "node_type": "yaml",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_58cfcc64"
+      }
+    },
+    {
+      "segment_id": "a703643c",
+      "source_content": "# Add SAML SSO to Laravel App",
+      "source_content_hash": "d0e1d7399daa4fc40a8fd76371e09193e489bc5e189e01543acd22ae10c311fb",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "# 为 Laravel 应用添加 SAML 单点登录"
+      }
+    },
+    {
+      "segment_id": "53eaf0e1",
+      "source_content": "This guide assumes that you have a Laravel app and want to enable SAML Single Sign-On authentication for your enterprise customers. By the end of this guide, you'll have an app that allows you to authenticate the users using SAML Single Sign-On.",
+      "source_content_hash": "f484b797d885c1c688c6593ee7d5dc5ee14f3308424c590154c75604f9e45f32",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "本指南假设您已有一个 Laravel 应用，并希望为企业客户启用 SAML 单点登录认证。完成本指南后，您的应用将能够通过 SAML 单点登录对用户进行身份验证。"
+      }
+    },
+    {
+      "segment_id": "8ac585fb",
+      "source_content": "Visit the [GitHub repository](https://github.com/boxyhq/php-examples/tree/main/laravel-enterprise-sso) to see the source code for the Laravel SAML SSO integration.",
+      "source_content_hash": "fa024268637e9931052a1274b5fdb9d5d323262f43731007d911433bb90df5a9",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "访问 [GitHub 仓库](https://github.com/boxyhq/php-examples/tree/main/laravel-enterprise-sso) 查看 Laravel SAML 单点登录集成的源代码。"
+      }
+    },
+    {
+      "segment_id": "180bddb1",
+      "source_content": "Integrating SAML SSO into an app involves the following steps.",
+      "source_content_hash": "b41d0c741a2a4a57f2f8fab371dffbd39dc33a404f97c74b706f4e166b827a0d",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "为应用集成 SAML 单点登录需要完成以下步骤。"
+      }
+    },
+    {
+      "segment_id": "4269e691",
+      "source_content": "- Configure SAML Single Sign-On\n- Authenticate with SAML Single Sign-On",
+      "source_content_hash": "bc65b0d357e9559034fbd9763bb9510bb34ac402187fc17447e5e97d7258d38e",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- 配置 SAML 单点登录\n- 通过 SAML 单点登录进行认证"
+      }
+    },
+    {
+      "segment_id": "d350c018",
+      "source_content": "## Configure SAML Single Sign-On",
+      "source_content_hash": "680e424938b66ff2cb309ca1f6c9211de5a6b470399378248e3e36eb698a42f6",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 配置 SAML 单点登录"
+      }
+    },
+    {
+      "segment_id": "1acb9a05",
+      "source_content": "This step allows your tenants to configure SAML connections for their users. Read the following guides to understand more about this.",
+      "source_content_hash": "44570eec6f1685f46ec726135e0ef1456876caf09b8afa825586b7f20c3776a4",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "此步骤允许您的租户为其用户配置 SAML 连接。阅读以下指南以了解更多信息。"
+      }
+    },
+    {
+      "segment_id": "da23c906",
+      "source_content": "- [UI Best Practices for Configuring SAML Single Sign-On](/guides/jackson/configuring-saml-sso)\n- [SSO Connection API](/docs/jackson/sso-flow/)",
+      "source_content_hash": "088ba8b656d2059418e53604b3eba9e3f53a5c366eed28d0cbbe52042b6b3562",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- [配置 SAML 单点登录的 UI 最佳实践](/guides/jackson/configuring-saml-sso)\n- [单点登录连接 API](/docs/jackson/sso-flow/)"
+      }
+    },
+    {
+      "segment_id": "ed7dde9c",
+      "source_content": "## Authenticate with SAML Single Sign-On",
+      "source_content_hash": "beaad64d7ce66f37bfb7d59b009777c5c9085f0353a91b1fc2650dc70a7345bb",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 通过 SAML 单点登录进行认证"
+      }
+    },
+    {
+      "segment_id": "a76548f8",
+      "source_content": "Once you add a SAML connection, the app can use this SAML connection to initiate the SSO authentication flow using SAML Jackson. The following sections focus more on the SSO authentication side.",
+      "source_content_hash": "fc68bfce93d6cc7f2c605992f3e55f423b3bbf0dd231b9da91e6a1ce02758c7d",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "添加 SAML 连接后，应用可使用该连接通过 SAML Jackson 发起单点登录认证流程。以下部分主要关注单点登录认证环节。"
+      }
+    },
+    {
+      "segment_id": "f2f30ae8",
+      "source_content": "### Install SAML Jackson",
+      "source_content_hash": "649737b1a6678e52262ba416d8356f38e9b902683dab3eb0ac35677a3ce74499",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 安装 SAML Jackson"
+      }
+    },
+    {
+      "segment_id": "dfe931a2",
+      "source_content": "The first step is to deploy the SAML Jackson service. Follow the [deployment docs](/docs/jackson/deploy/service) to install and configure the SAML Jackson.",
+      "source_content_hash": "0c16cc7a17726fcdcc50bf1602ebe7021f96730b33f9290a942214fc9fc5a232",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "第一步是部署 SAML Jackson 服务。请按照 [部署文档](/docs/jackson/deploy/service) 进行安装和配置。"
+      }
+    },
+    {
+      "segment_id": "0037ff70",
+      "source_content": "### Setup SAML Jackson",
+      "source_content_hash": "8dbe0621d592d23bc26b14e5d3d03a40b35ff72223b1a4ea44f54251a3574187",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 设置 SAML Jackson"
+      }
+    },
+    {
+      "segment_id": "bdc231b1",
+      "source_content": "We'll use the Laravel Socialite for the integration. Socialite provides an expressive, fluent interface to OAuth authentication with external authentication providers.",
+      "source_content_hash": "f3a696a3e3a3fc6a078aa88c5976c4e87edf24a79bdc697ad487e183f7c7e116",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "我们将使用 Laravel Socialite 进行集成。Socialite 为外部认证提供商的 OAuth 认证提供了简洁流畅的接口。"
+      }
+    },
+    {
+      "segment_id": "97ae4a01",
+      "source_content": "Create a new config file to hold the SAML Jackson configuration values.",
+      "source_content_hash": "8284c56b6e7784450c0e53754fb29daecd91217d58dbc1e737fb15a358aafd16",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "创建新的配置文件来保存 SAML Jackson 的配置值。"
+      }
+    },
+    {
+      "segment_id": "de8f60af",
+      "source_content": "```php title=\"config/jackson.php\"\n<?php\n\nreturn [\n  'host' => 'http://localhost:5225', // SAML Jackson service URL\n  'product' => 'your-app-name',\n  'client_id' => 'dummy', // Keep this as `dummy`, we'll pass the tenant & product as dynamic params\n  'client_secret' => 'dummy', // Keep this as `dummy`, we'll pass the tenant & product as dynamic params\n  'redirect' => env('APP_URL') . '/sso/callback'\n];\n```",
+      "source_content_hash": "4749e83257c4513581b3d1aa61f8daaa6b7fab2056e4b6da3c0ed710d55a6c31",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_de8f60af"
+      }
+    },
+    {
+      "segment_id": "c504c207",
+      "source_content": "Set `host` to URL of running SAML Jackson service.",
+      "source_content_hash": "7dac635b44898ba5eae14539f8fb53e476c2c333902c1fd54d34765e7492e497",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "将 `host` 设置为运行中的 SAML Jackson 服务 URL。"
+      }
+    },
+    {
+      "segment_id": "98d26038",
+      "source_content": "Let's add a custom provider to the Laravel Socialite for the SAML Jackson.",
+      "source_content_hash": "e5bbae86d976a4de29e652eb6fc807fa410bf25a328b555239a11dfb93a78130",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "让我们为 SAML Jackson 向 Laravel Socialite 添加一个自定义提供商。"
+      }
+    },
+    {
+      "segment_id": "f275f5fd",
+      "source_content": "```php title=\"app/BoxyHQ/JacksonProvider.php\"\n<?php\n\nnamespace App\\BoxyHQ;\n\nuse Laravel\\Socialite\\Two\\AbstractProvider;\nuse Laravel\\Socialite\\Two\\ProviderInterface;\nuse Laravel\\Socialite\\Two\\User;\nuse GuzzleHttp\\RequestOptions;\n\nclass JacksonProvider extends AbstractProvider implements ProviderInterface\n{\n  /**\n   * The SAML Jackson instance host.\n   *\n   * @var string\n   */\n  protected $host;\n\n  /**\n   * Set the SAML Jackson instance host.\n   *\n   * @param  string|null  $host\n   * @return $this\n   */\n  public function setHost($host)\n  {\n    if (! empty($host)) {\n      $this->host = rtrim($host, '/');\n    }\n\n    return $this;\n  }\n\n  protected function getAuthUrl($state)\n  {\n    return $this->buildAuthUrlFromBase($this->host . '/api/oauth/authorize', $state);\n  }\n\n  protected function getTokenUrl()\n  {\n    return $this->host . '/api/oauth/token';\n  }\n\n  protected function getUserByToken($token)\n  {\n    $response = $this->getHttpClient()->get($this->host . '/api/oauth/userinfo', [\n      RequestOptions::QUERY => ['access_token' => $token],\n    ]);\n\n    return json_decode($response->getBody(), true);\n  }\n\n  protected function mapUserToObject(array $user)\n  {\n    return (new User)->setRaw($user)->map([\n      'id' => $user['id'],\n      'email' => $user['email'],\n      'name' => $user['firstName'].' '.$user['lastName'],\n      'first_name' => $user['firstName'],\n      'last_name' => $user['lastName'],\n      'requested' => $user['requested'],\n      'nickname' => null,\n      'avatar' => null,\n    ]);\n  }\n}\n```",
+      "source_content_hash": "56110565d320304d330b456ae7828a03cdf807b246aec05a4f1bbb956e5ea7a0",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_f275f5fd"
+      }
+    },
+    {
+      "segment_id": "f38d1cb0",
+      "source_content": "Bootstrap the `JacksonProvider` in the `AppServiceProvider`.",
+      "source_content_hash": "57f541c393320e4dfac826c7809d3e290e5072c78dfa356e86be2d93aed26d76",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "在 `AppServiceProvider` 中初始化 `JacksonProvider`。"
+      }
+    },
+    {
+      "segment_id": "e2c67c87",
+      "source_content": "```php title=\"app/Providers/AppServiceProvider.php\"\n<?php\n\nnamespace App\\Providers;\n\nuse Illuminate\\Support\\ServiceProvider;\nuse App\\BoxyHQ\\JacksonProvider;\n\nclass AppServiceProvider extends ServiceProvider\n{\n  /**\n   * Register any application services.\n   *\n   * @return void\n   */\n  public function register()\n  {\n    //\n  }\n\n  /**\n   * Bootstrap any application services.\n   *\n   * @return void\n   */\n  public function boot()\n  {\n    $socialite = $this->app->make('Laravel\\Socialite\\Contracts\\Factory');\n\n    $socialite->extend(\n      'jackson',\n      function ($app) use ($socialite) {\n        $config = config('jackson');\n\n        return $socialite->buildProvider(JacksonProvider::class, $config)\n          ->setHost($config['host'] ?? null);\n      }\n    );\n  }\n}\n```",
+      "source_content_hash": "087b6e75a2ef8860afee64ee003b04dc06e9b5e7091fc03b71fc42f2c5232105",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_e2c67c87"
+      }
+    },
+    {
+      "segment_id": "08f73f73",
+      "source_content": "### Make Authentication Request",
+      "source_content_hash": "183248edcdad61d66651eee6f50bd53b3e36cb15c69d07c5b5f5cb3ef9d59611",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 发起认证请求"
+      }
+    },
+    {
+      "segment_id": "b08ad0b4",
+      "source_content": "Let's add a route to begin the authenticate flow; this route initiates the SAML SSO flow by redirecting the users to their configured Identity Provider.",
+      "source_content_hash": "9f1a5a74765e0342025b8d3abead331db85a4586cd51c6fc90a1dec8fa6e055e",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "添加路由以开始认证流程；该路由通过将用户重定向至其配置的身份提供商来发起 SAML 单点登录流程。"
+      }
+    },
+    {
+      "segment_id": "90c0aa8a",
+      "source_content": "```php title=\"routes/web.php\"\n<?php\n\nuse Illuminate\\Support\\Facades\\Route;\n\nRoute::post('/sso', '\\App\\Http\\Controllers\\AuthController@store');\n```",
+      "source_content_hash": "6262294ac6d111abaa031baa8782664e283386698be3cf8394c15cdbadf91775",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_90c0aa8a"
+      }
+    },
+    {
+      "segment_id": "674abb31",
+      "source_content": "The `store` method of `AuthController` takes care of redirecting the user to the Identity Provider.",
+      "source_content_hash": "73f3a2368ae899d8cd65ed0ee8b45f8bcaf476b75643eeded9d51e8732e9b3e1",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "`AuthController` 的 `store` 方法负责将用户重定向至身份提供商。"
+      }
+    },
+    {
+      "segment_id": "ebc385af",
+      "source_content": "```php title=\"app/Http/Controllers/AuthController.php\"\n<?php\n\nnamespace App\\Http\\Controllers;\n\nuse Illuminate\\Http\\Request;\nuse Laravel\\Socialite\\Facades\\Socialite;\n\nclass AuthController extends Controller\n{\n  public function store(Request $request)\n  {\n    $jackson = config('jackson');\n\n    $tenant = $request->input('tenant');\n\n    return Socialite::driver('jackson')\n      ->with(['tenant' => $tenant, 'product' => $jackson['product']])\n      ->redirect();\n  }\n}\n```",
+      "source_content_hash": "24462649aa8b7fe9cc1fe67d43680ceed538d0e9805ae7430ecee8c4280211a9",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_ebc385af"
+      }
+    },
+    {
+      "segment_id": "a9de5d69",
+      "source_content": "### Fetch User Profile",
+      "source_content_hash": "0d72a4b900175fa6282dd8c47065fb455899ffcce076af4f0bc76a1efc02428f",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 获取用户资料"
+      }
+    },
+    {
+      "segment_id": "e6ac016e",
+      "source_content": "Let's add another route for receiving the callback after the authentication. Ensure the route matches the value of the `redirect` you configured previously.",
+      "source_content_hash": "9328051b46e750b347ceed9745fbb562e874bc5f1741f27afbb6f81e901eec4c",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "添加另一个路由以接收认证后的回调。确保该路由与先前配置的 `redirect` 值匹配。"
+      }
+    },
+    {
+      "segment_id": "5b2e44c7",
+      "source_content": "```php title=\"routes/web.php\"\n<?php\n\nRoute::get('/sso/callback', '\\App\\Http\\Controllers\\AuthController@callback');\n```",
+      "source_content_hash": "592ac2ba0994f44254401ee70493a65c7e49e97315503b6be8e9b81335ce60eb",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_5b2e44c7"
+      }
+    },
+    {
+      "segment_id": "af834e0d",
+      "source_content": "The `callback` method of `AuthController` takes care of fetching the user profile if the authorization is valid.",
+      "source_content_hash": "41019b809cafedd908946ea2ca20b57184dcdf7ef351f9bb927761890a5cf381",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "若授权有效，`AuthController` 的 `callback` 方法负责获取用户资料。"
+      }
+    },
+    {
+      "segment_id": "6b0761da",
+      "source_content": "```php title=\"app/Http/Controllers/AuthController.php\"\n<?php\n\nnamespace App\\Http\\Controllers;\n\nuse Illuminate\\Http\\Request;\nuse Laravel\\Socialite\\Facades\\Socialite;\n\nclass AuthController extends Controller\n{\n  public function callback(Request $request)\n  {\n    $user = Socialite::driver('jackson')->user();\n\n    // $user has all the properties you need. Do your business logic here.\n  }\n}\n```",
+      "source_content_hash": "6ef3d11fa8b940c85aece221a43f3f65637803812df456804331706b8b9f8025",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_6b0761da"
+      }
+    },
+    {
+      "segment_id": "f210f942",
+      "source_content": "### Authenticate User",
+      "source_content_hash": "0d068b485e5f9269baec72bdc4311c36a12b3266c4a631444dfa62a23d6c8350",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 认证用户"
+      }
+    },
+    {
+      "segment_id": "2dbbb313",
+      "source_content": "Once the user has been retrieved from the Identity Provider, you may determine if the user exists in your application and authenticate the user. If the user does not exist in your application, you will typically create a new record in your database to represent the user.",
+      "source_content_hash": "a524473dc4cf8bceb72976ed06072a8c8da9a82f1bc67f4fb86a7d6c9648b1af",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "从身份提供商获取用户信息后，您可判断该用户是否存在于您的应用中并进行认证。如果用户不存在，通常需要在数据库中创建新记录来代表该用户。"
+      }
+    }
+  ],
+  "target_i18n_subpath": "docusaurus-plugin-content-docs-guides/current/jackson/frameworks/laravel.md",
+  "last_updated_timestamp": "2025-06-08T18:49:09.321126+00:00",
+  "schema_version": "1.0",
+  "translated_versions": {
+    "zh-CN": "f697e6175745dc53a6745bb70106cbdc11fc1b10509f7100b901740743466dcb"
+  }
+}

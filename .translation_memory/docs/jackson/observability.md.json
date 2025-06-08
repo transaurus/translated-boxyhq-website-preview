@@ -1,0 +1,132 @@
+{
+  "source_file_path_relative_to_docusaurus_root": "docs/jackson/observability.md",
+  "source_file_content_hash": "5418ded852d29e506ffddd5a89c2b5d9efe8669e7fa6e96be91dae89464d8352",
+  "segments": [
+    {
+      "segment_id": "58cfcc64",
+      "source_content": "---\ntitle: Observability for Enterprise SSO\ndescription: Enterprise SSO provides first-class observability on the back of OpenTelemetry.\nsidebar_label: Observability\n---",
+      "source_content_hash": "29527746da8898bc718662f8b6cfabcad23f245ef29958f2bd0f469eddacd1f0",
+      "node_type": "yaml",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_58cfcc64"
+      }
+    },
+    {
+      "segment_id": "a703643c",
+      "source_content": "# Observability",
+      "source_content_hash": "3dd3435d13f8eecbe1bfb19960df6abd92a56a9dc05e6558078eebc1cbe2fb1c",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "# 可观测性"
+      }
+    },
+    {
+      "segment_id": "53eaf0e1",
+      "source_content": "Jackson provides first-class observability on the back of OpenTelemetry. Currently we support the following metrics. Traces and logs are coming soon.",
+      "source_content_hash": "47fbaf799dedbf57cd3c0a7dfd7441e517b5ed6afb509e90a109f4c9a7933093",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "Jackson基于OpenTelemetry提供一流的可观测性支持。当前我们支持以下指标，链路追踪和日志功能即将推出。"
+      }
+    },
+    {
+      "segment_id": "8ac585fb",
+      "source_content": "Please check the [Environment Variables](./deploy/env-variables.md#opentelemetry-configuration) to configure to enable this feature.",
+      "source_content_hash": "a8379de2f6081b97e8fa36c6dfcfff3b1bf6f43d591b48a0be424527d5a97d90",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "请查阅[环境变量](./deploy/env-variables.md#opentelemetry-configuration)配置以启用此功能。"
+      }
+    },
+    {
+      "segment_id": "ba4f48ff",
+      "source_content": "## Metrics",
+      "source_content_hash": "0452266c781fa76ebf563ff833063a8faecccf276367c128b9a14f0a144bdcb3",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 指标"
+      }
+    },
+    {
+      "segment_id": "87e3966e",
+      "source_content": "| Name                        | Description                              | Type  | Tags |\n| --------------------------- | ---------------------------------------- | ----- | ---- |\n| `jackson.connection.create` | Number of SSO Connection create requests | Count | ---- |\n| `jackson.connection.get`    | Number of SSO Connection get requests    | Count | ---- |\n| `jackson.connection.delete` | Number of SSO Connection delete requests | Count | ---- |\n| `jackson.oauth.authorize`   | Number of oauth authorize requests       | Count | ---- |\n| `jackson.oauth.token`       | Number of oauth token requests           | Count | ---- |\n| `jackson.oauth.userinfo`    | Number of oauth user info requests       | Count | ---- |",
+      "source_content_hash": "86c28ce774c169c45a5d30404e2b716fcb7bd21a986c7f014073e3419fb72d39",
+      "node_type": "table",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_87e3966e"
+      }
+    },
+    {
+      "segment_id": "98cfbd53",
+      "source_content": "From `v1.35.1` the following additional metrics are available:",
+      "source_content_hash": "d46bea4bb881644074cb9c19987771e4ee908c195d2a5b1aea2d23163c95cbfe",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "自`v1.35.1`版本起新增以下指标："
+      }
+    },
+    {
+      "segment_id": "9e1bd9df",
+      "source_content": "| Name                        | Description                              | Type  | Tags |\n| --------------------------- | ---------------------------------------- | ----- | ---- |\n| `jackson.oauth.authorize.error`   | Number of oauth authorize errors         | Count | **protocol**: `saml`,`oidc`,`saml-federated`,`oidc-federated` ; **login_type**: `sp-initiated`,`idp-initiated` |\n| `jackson.oauth.token.error`       | Number of oauth token errors             | Count | **protocol**: `saml`,`oidc`,`saml-federated`,`oidc-federated` ; **login_type**: `sp-initiated`,`idp-initiated` |\n| `jackson.oauth.userinfo.error`    | Number of oauth user info errors         | Count | **protocol**: `saml`,`oidc`,`saml-federated`,`oidc-federated` ; **login_type**: `sp-initiated`,`idp-initiated` |\n| `jackson.oauth.response.error`    | Number of oauth response errors          | Count | **protocol**: `saml`,`oidc`,`saml-federated`,`oidc-federated` ; **login_type**: `sp-initiated`,`idp-initiated` |",
+      "source_content_hash": "ea2ae854b2246f6d8b4fa9f6003909a5ffc55163fe81768f28046c15a8320b87",
+      "node_type": "table",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_9e1bd9df"
+      }
+    },
+    {
+      "segment_id": "4daf5cdd",
+      "source_content": "From `v1.39.0` the following additional metrics are available:",
+      "source_content_hash": "2a5ee0837de4e85dcc74de93edeb922ef24fd958b7ac36ceb682fa22fe211b96",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "自`v1.39.0`版本起新增以下指标："
+      }
+    },
+    {
+      "segment_id": "a8554b17",
+      "source_content": "| Name                        | Description                              | Type  | Tags |\n| --------------------------- | ---------------------------------------- | ----- | ---- |\n| `jackson.idfed.authorize`   | Number of identity federation authorize requests         | Count | **protocol**: `saml`,`oidc`,`saml-federated`,`oidc-federated` ; **login_type**: `sp-initiated`,`idp-initiated` |\n| `jackson.idfed.authorize.error`       | Number of errors in identity federation authorize requests             | Count | **protocol**: `saml`,`oidc`,`saml-federated`,`oidc-federated` ; **login_type**: `sp-initiated`,`idp-initiated` |\n| `jackson.idfed.response`    | Number of identity federation response requests         | Count | **protocol**: `saml`,`oidc`,`saml-federated`,`oidc-federated` ; **login_type**: `sp-initiated`,`idp-initiated` |\n| `jackson.idfed.response.error`    | Number of errors in identity federation response requests          | Count | **protocol**: `saml`,`oidc`,`saml-federated`,`oidc-federated` ; **login_type**: `sp-initiated`,`idp-initiated` |",
+      "source_content_hash": "629b03a146cf8cb36d2667117e7299080b097c3003d1a272e63696786334a29c",
+      "node_type": "table",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_a8554b17"
+      }
+    },
+    {
+      "segment_id": "50746522",
+      "source_content": "From `v1.41.2` the following additional metrics are available:",
+      "source_content_hash": "b361074e525eef4be5e97b75784a1e53a12892daa5473efea433ff82373ab8b0",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "自`v1.41.2`版本起新增以下指标："
+      }
+    },
+    {
+      "segment_id": "b210da53",
+      "source_content": "| Name                             | Description                              | Type  | Tags                   |\n| -------------------------------- | ---------------------------------------- | ----- | ---------------------- |\n| `jackson.db.connections.max`     | Maximum number of db connections         | Gauge | **db_name**: `jackson` |\n| `jackson.db.connections.total`   | Total number of db connections           | Gauge | **db_name**: `jackson` |\n| `jackson.db.connections.idle`    | Number of idle db connections            | Gauge | **db_name**: `jackson` |\n| `jackson.db.connections.waiting` | Number of waiting db connections         | Gauge | **db_name**: `jackson` |",
+      "source_content_hash": "a11631b9877849b7f5319317026e6af51b21692d0fd3af9d725c5661467dc5b4",
+      "node_type": "table",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_b210da53"
+      }
+    }
+  ],
+  "target_i18n_subpath": "docusaurus-plugin-content-docs/current/jackson/observability.md",
+  "last_updated_timestamp": "2025-06-08T18:49:09.296305+00:00",
+  "schema_version": "1.0",
+  "translated_versions": {
+    "zh-CN": "5418ded852d29e506ffddd5a89c2b5d9efe8669e7fa6e96be91dae89464d8352"
+  }
+}

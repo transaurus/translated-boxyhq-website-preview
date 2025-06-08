@@ -1,0 +1,262 @@
+{
+  "source_file_path_relative_to_docusaurus_root": "success-stories/2023-08-24-embracing-the-open-source-revolution-calcom-accelerates-enterprise-deals-with-boxyhq.md",
+  "source_file_content_hash": "c559d22303cade854b4160f3a8b1b0410b337d5500b88ea983bed3b1e8b27127",
+  "segments": [
+    {
+      "segment_id": "58cfcc64",
+      "source_content": "---\nslug: accelerating-enterprise-deals-and-conversion-rates-at-calcom-boxyhqs-sso-solution\ntitle: 'Cal.com accelerates Enterprise deals and conversion rates'\ntags_disabled: [security, cybersecurity, devsecops, open-source]\nimage: /images/success-stories/calcom-case-study.png\nhide_table_of_contents: true\n---",
+      "source_content_hash": "0aaf4915e846a53641f03dd89d228a6e2ef4650eda6b90502fc7c20136f95837",
+      "node_type": "yaml",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_58cfcc64"
+      }
+    },
+    {
+      "segment_id": "623f74e7",
+      "source_content": "import LearnMoreCTA from \"../src/components/ctas/LearnMoreCTA\";\nimport FeaturedQuote from \"../src/components/FeaturedQuote\";\nimport SignupCTA from \"../src/components/ctas/SignupCTA\";",
+      "source_content_hash": "00ee7a5cc2eabfacc6faf08d517e820e19e38542f8e03adbe98caab442d4b6f6",
+      "node_type": "mdxjsEsm",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_623f74e7"
+      }
+    },
+    {
+      "segment_id": "180bddb1",
+      "source_content": "[Cal.com](https://cal.com) provides an innovative scheduling and time management platform for individuals and enterprises to streamline their calendar and appointment processes.",
+      "source_content_hash": "d40d4c8c434ccc3c59e52c4866657c6e3125886a432635b6c1c8bdac4ff926d6",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "[Cal.com](https://cal.com) 为个人和企业提供创新的日程安排与时间管理平台，旨在优化日历和预约流程。"
+      }
+    },
+    {
+      "segment_id": "cf898102",
+      "source_content": "Their mission is to connect one billion people through the use of their platform by 2031. To achieve this, BoxyHQ’s enterprise-ready SSO would provide the reliable authentication they needed to maintain their customer's security and trust.",
+      "source_content_hash": "e226ff34489f57546faac52303829826354e80a52dc1f1f06ea5fbe88123c19f",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "其使命是通过平台在2031年前连接十亿用户。为实现这一目标，BoxyHQ的企业级单点登录(SSO)解决方案为其提供了可靠的身份验证机制，保障客户安全与信任。"
+      }
+    },
+    {
+      "segment_id": "3daf1b88",
+      "source_content": "## Introduction",
+      "source_content_hash": "d753efbab681fa4da82470d9a83b1c202de58f92fd498e77a269c1163bc4714b",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 引言"
+      }
+    },
+    {
+      "segment_id": "f6168993",
+      "source_content": "Cal.com, a leading scheduling and appointment management platform, embarked on a journey to implement enterprise Single Sign-On (SSO) in response to growing demand from enterprises and government organizations.",
+      "source_content_hash": "5b56d0d41832f7a80836a4461e85e94419b815d1ef72649dbeffdd326237a315",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "领先的日程管理平台Cal.com响应企业及政府机构日益增长的需求，启动了企业级单点登录(SSO)的部署计划。"
+      }
+    },
+    {
+      "segment_id": "1485a88b",
+      "source_content": "<SignupCTA campaign=\"success-story-calcom\" />",
+      "source_content_hash": "dae80f910ef36d584b7dff6829c0c4cbe0218eee89d46df484cf290d47bdbbcf",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_1485a88b"
+      }
+    },
+    {
+      "segment_id": "b7a64917",
+      "source_content": "<FeaturedQuote personName=\"Bailey Pumfleet\" personRole=\"Co-Founder, Cal.com\" pictureSrc=\"/images/success-stories/bailey-calcom\">\n  Boxy’s SSO solution just works, really well. We’re extremely satisfied and with very minimal effort to maintain on our part.\n</FeaturedQuote>",
+      "source_content_hash": "dd481d88e98ac60dca539568259af58c63ffbd4441f67b31a835fcac67efc0e7",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_b7a64917"
+      }
+    },
+    {
+      "segment_id": "fa430ad4",
+      "source_content": "## Reasons for Adopting Enterprise Single Sign-On",
+      "source_content_hash": "1764a23814636fb8ef86f1a4c2a518b2ce3964c447116b984a36739a0b352502",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 采用企业级单点登录的动因"
+      }
+    },
+    {
+      "segment_id": "4b1d2d7d",
+      "source_content": "The decision to implement enterprise SSO stemmed from a significant demand from various sectors, including enterprises and government organizations, that were eager to leverage Cal.com's capabilities. Clients were increasingly seeking the convenience and security offered by SSO to streamline user access across multiple systems and services.",
+      "source_content_hash": "33b595727c3486be3910d3a1568fe1860b1a693a129357f75829ae57bdfdb83a",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "实施企业SSO的决策源于各领域客户的强烈需求，包括希望利用Cal.com功能的企业和政府机构。这些客户日益需要通过SSO实现跨系统服务的便捷安全访问。"
+      }
+    },
+    {
+      "segment_id": "48847fd4",
+      "source_content": "## Selecting BoxyHQ (Jackson) for Single Sign-On Integration",
+      "source_content_hash": "f43bd4663fe9795c1ffb34594ba729496b1699b612447fc37333fd5d7d75484c",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 选择BoxyHQ(Jackson)实现单点登录集成"
+      }
+    },
+    {
+      "segment_id": "4daf5cdd",
+      "source_content": "Cal.com's dedication to open source led them to choose BoxyHQ (Jackson) for their SSO implementation. The commitment to open source aligned perfectly with Cal.com's ethos of providing customers with the freedom to choose and ensuring they weren't locked into proprietary solutions. By adopting BoxyHQ, Cal.com offered clients an enterprise-grade authentication solution that catered to their security and flexibility needs.",
+      "source_content_hash": "fbdfbdb29c34041008781874f51a698c9c6b62cba75aadd3ae894140f0e22857",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "Cal.com对开源技术的坚持使其最终选择了BoxyHQ(Jackson)。这一选择完美契合Cal.com\"赋予客户选择自由，避免厂商锁定\"的理念。通过采用BoxyHQ，Cal.com为客户提供了兼顾安全性与灵活性的企业级认证方案。"
+      }
+    },
+    {
+      "segment_id": "74d049c6",
+      "source_content": "<FeaturedQuote personName=\"Peer Richelsen\" personRole=\"Co-Founder, Cal.com\" pictureSrc=\"/images/success-stories/peer-calcom\">\n  Building enterprise features takes a lot of time and resources, thankfully BoxyHQ packages it up in a box. Their SSO offering is exactly what we needed. It allowed our team to focus on what we do best (democratizing scheduling for everyone) without getting distracted by the needs of our enterprise customers. Did I mention it's open-source and free?\n</FeaturedQuote>",
+      "source_content_hash": "8a558651159001c149b162cde2f63a5a19b1f4c7bd9be7a16a62cefaf77494bd",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_74d049c6"
+      }
+    },
+    {
+      "segment_id": "62a6890b",
+      "source_content": "## Tangible Gains from Implementation to Deployment",
+      "source_content_hash": "314637d55f31fa0a57848c076ccbe0ecc0713653fa9e0e8f1338b208ad3ed103",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 从实施到部署的实质收益"
+      }
+    },
+    {
+      "segment_id": "3cfe6286",
+      "source_content": "The adoption of BoxyHQ brought both direct benefits and second-order, or soft, benefits to Cal.com. The solution seamlessly integrated into their existing infrastructure, delivering flawless functionality with minimal maintenance effort. The ease of adoption, a direct benefit, translated to significant time savings for the development team, enabling them to focus on other critical tasks.",
+      "source_content_hash": "28e0e042b22218b0b0fc4d34eb52d7c7a678ed2e7efa20b2eeb8347cf3bf6616",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "BoxyHQ为Cal.com带来了直接效益与间接\"软性\"收益。该方案无缝集成现有架构，以近乎零维护成本实现完美运行。直接的易用性优势为开发团队节省大量时间，使其能专注于其他关键任务。"
+      }
+    },
+    {
+      "segment_id": "1042b50d",
+      "source_content": "Furthermore, Cal.com reaped soft benefits in terms of user satisfaction and retention. BoxyHQ's robust SSO solution empowered Cal.com's clients with a streamlined and secure authentication process. The enhanced user experience fostered positive client relationships and contributed to customer loyalty.",
+      "source_content_hash": "e0ea10db9fdfe226553f6d4984e8c4fa06065c3f48f5cce241b21f18ab1c9505",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "在用户满意度方面，BoxyHQ强大的SSO解决方案为Cal.com客户提供了流畅安全的认证流程。优化的用户体验巩固了客户关系，提升了用户忠诚度。"
+      }
+    },
+    {
+      "segment_id": "35a77014",
+      "source_content": "## Business Impact: Time and Effort Savings",
+      "source_content_hash": "48f990a5e1f007d6f257cdb7dda18141418b13d501470dfaee63fb6283367fb5",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 商业影响：时间与人力成本节约"
+      }
+    },
+    {
+      "segment_id": "13d9cd70",
+      "source_content": "When evaluating the time and effort required to build an SSO solution in-house, Cal.com estimated that the endeavor would have taken several months. The decision to integrate BoxyHQ's solution allowed Cal.com to bypass this arduous process, ensuring rapid deployment and freeing up valuable development resources.",
+      "source_content_hash": "d42e393dd8bb05f277c7e6f0e4609c6d195773b313159ab91b24dd16759041c6",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "经评估，自主开发SSO方案需耗时数月。而集成BoxyHQ方案使Cal.com避免了这一冗长过程，实现快速部署并释放了宝贵的开发资源。"
+      }
+    },
+    {
+      "segment_id": "6f930b2f",
+      "source_content": "## Enterprise Client Acquisition Boost",
+      "source_content_hash": "9e5ffd6392de95153c92cf2ffbe216b99d3dc9b959b491d0513530e4ba7d4950",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 企业客户获取能力提升"
+      }
+    },
+    {
+      "segment_id": "c504c207",
+      "source_content": "The impact on Cal.com's enterprise client acquisition was tangible. Single Sign-On support became a crucial factor in closing deals with enterprise clients. The ability to answer the question, \"Do you support SSO?\" affirmatively significantly contributed to converting leads into satisfied customers. The adoption of BoxyHQ's SSO solution played a pivotal role in Cal.com's ability to attract and cater to enterprise clients.",
+      "source_content_hash": "5afa8b69a14ea8e1d629bf7053efabf79ac493a51195022054e9e145d27239ba",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "SSO支持对Cal.com获取企业客户产生了实质性影响。能够肯定回答\"是否支持SSO\"这一问题，极大促进了潜在客户转化。BoxyHQ的SSO方案在Cal.com服务企业客户的能力建设中发挥了关键作用。"
+      }
+    },
+    {
+      "segment_id": "c6cc90a0",
+      "source_content": "## Positive Implementation Experience with BoxyHQ",
+      "source_content_hash": "c8f0f251408a9ab69a2d0944023aebe873e6b4bcfa93166e75e38c89f685973e",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 与BoxyHQ的积极合作体验"
+      }
+    },
+    {
+      "segment_id": "d3649a1e",
+      "source_content": "Cal.com's implementation experience with BoxyHQ was marked by collaboration and support. Working closely with the BoxyHQ team during the early stages, Cal.com felt supported and well-assisted. The partnership enabled a smooth implementation process, setting a positive tone for their ongoing relationship.",
+      "source_content_hash": "ef882de97ba7174017e40c130b6f5d11fa151ccbad65be9f2a7405941e9c4ee5",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "Cal.com与BoxyHQ的实施过程以紧密协作为特征。在早期阶段，BoxyHQ团队提供的支持使Cal.com获得充分协助，顺畅的实施过程为双方持续合作奠定了良好基础。"
+      }
+    },
+    {
+      "segment_id": "e50bebbf",
+      "source_content": "## Empowering Enterprises with Seamless SSO",
+      "source_content_hash": "6b3c7c1e4a70aa7f82ca8f6857beb0bf125066f2fada5ecb6fb215339bebe681",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 以无缝SSO赋能企业客户"
+      }
+    },
+    {
+      "segment_id": "23dfb152",
+      "source_content": "Cal.com's successful implementation of BoxyHQ's SSO solution not only satisfied the growing demand for streamlined authentication but also aligned with their principles of transparency and client-centricity. By partnering with BoxyHQ, Cal.com provided their clients with a seamless and secure authentication experience, while reaping tangible benefits in terms of time savings, enterprise client acquisition, and user satisfaction. The collaboration between Cal.com and BoxyHQ exemplifies the power of open-source solutions in driving innovation and value for businesses and their clients.",
+      "source_content_hash": "6818feed30469c9970d3a1534066bca45b31a8b881f986c89966298cf97f66ca",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "Cal.com成功部署BoxyHQ的SSO方案，不仅满足了市场对高效认证的需求，更践行了其透明化和以客户为中心的原则。通过与BoxyHQ合作，Cal.com为客户提供了安全无缝的认证体验，同时在时间节约、企业客户获取和用户满意度等方面获得实质收益。这一合作典范证明了开源解决方案在推动商业创新与价值创造方面的强大潜力。"
+      }
+    },
+    {
+      "segment_id": "d37a3b88",
+      "source_content": "<LearnMoreCTA label=\"Read the full interview\" newWindow={false} url=\"/blog/interview-with-calcom-enhancing-enterprise-experience-with-boxyhq\" />",
+      "source_content_hash": "503dfb300c482a1aabdf29dbdf90f2d08e056cbb7421e53caa29b614388045cc",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_d37a3b88"
+      }
+    }
+  ],
+  "target_i18n_subpath": "docusaurus-plugin-content-blog-success-stories/2023-08-24-embracing-the-open-source-revolution-calcom-accelerates-enterprise-deals-with-boxyhq.md",
+  "last_updated_timestamp": "2025-06-08T18:49:09.320344+00:00",
+  "schema_version": "1.0",
+  "translated_versions": {
+    "zh-CN": "c559d22303cade854b4160f3a8b1b0410b337d5500b88ea983bed3b1e8b27127"
+  }
+}

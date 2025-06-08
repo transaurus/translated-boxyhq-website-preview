@@ -1,0 +1,132 @@
+{
+  "source_file_path_relative_to_docusaurus_root": "docs/jackson/deploy/pre-loaded-connections.md",
+  "source_file_content_hash": "fdd17a9149ff54fc21e3eebd499b3b045a9c10ec92d374e4355994f8a12f497e",
+  "segments": [
+    {
+      "segment_id": "76e4a56a",
+      "source_content": "# Pre-loaded SSO Connections",
+      "source_content_hash": "26bf0bc2af7e98533a57129d66157d68d47c82ad4f6d63843751deeec2c0c677",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "# 预加载SSO连接"
+      }
+    },
+    {
+      "segment_id": "adbc947a",
+      "source_content": "#### SAML",
+      "source_content_hash": "c4e37a1f10cb61923d588b923667b5627397dc8aa560ca8232272bb265492842",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "#### SAML"
+      }
+    },
+    {
+      "segment_id": "e7ec8f99",
+      "source_content": "If PRE_LOADED_CONNECTION is set then it should point to a directory with the following structure (example below):-",
+      "source_content_hash": "0dde1e272657f65e6b88f5dc1fc2371fd28d88fe1028c6848a404f2671ec1919",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "若设置了PRE_LOADED_CONNECTION环境变量，其应指向具有以下结构的目录（示例如下）：-"
+      }
+    },
+    {
+      "segment_id": "efa96cff",
+      "source_content": "```bash\nboxyhq.js\nboxyhq.xml\nanothertenant.js\nanothertenant.xml\n```",
+      "source_content_hash": "557eb90d6fff91b08e764d57d5c3b4f2d6c68bc1105f354a0aa493a42d9366b6",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_efa96cff"
+      }
+    },
+    {
+      "segment_id": "ad8fd492",
+      "source_content": "The JS file has the following structure:-",
+      "source_content_hash": "410ff3f1ea8f47a0220896a335e0f356d0c554925bbb7696a76e8afb98990f55",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "JS文件需遵循以下结构：-"
+      }
+    },
+    {
+      "segment_id": "41ad46a6",
+      "source_content": "```javascript\nmodule.exports = {\n  defaultRedirectUrl: 'http://localhost:3366/login/saml',\n  redirectUrl: '[\"http://localhost:3366/*\"]',\n  tenant: 'boxyhq.com',\n  product: 'demo',\n  name: 'testConnection',\n  description: 'Just a test connection',\n};\n```",
+      "source_content_hash": "5f790acf24e3fe9b851356650ca517538c989e9b55da53e993c794840a14e745",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_41ad46a6"
+      }
+    },
+    {
+      "segment_id": "a76548f8",
+      "source_content": "The XML file (which should have the same name as the .js file) is the raw XML metadata file you receive from your Identity Provider. Please ensure it is saved in the `utf-8` encoding.",
+      "source_content_hash": "3c284447a831471735c45da68c9107edd81ea968b3f1ee016084b00da75c7bf6",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "XML文件（需与.js文件同名）是从身份提供商获取的原始元数据文件，请确保以utf-8编码保存。"
+      }
+    },
+    {
+      "segment_id": "4b1d2d7d",
+      "source_content": "The config and XML above correspond to the [Add connection API - SAML tab](../sso-flow/index.md#21-add-connection).",
+      "source_content_hash": "0d35853f8d6a48a38ac6f3b2adea99e60c7c0798d84511b884e75f454b9e107d",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "上述配置及XML文件对应[添加连接API-SAML标签页](../sso-flow/index.md#21-add-connection)。"
+      }
+    },
+    {
+      "segment_id": "48847fd4",
+      "source_content": "#### OIDC",
+      "source_content_hash": "a060719ca1d62dce383463aa98571b77bd6b1bfda2deaa1dea4a43ab1885b308",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "#### OIDC"
+      }
+    },
+    {
+      "segment_id": "4daf5cdd",
+      "source_content": "For a connection backed by OpenID IdP create the \\*.js file at PRE_LOADED_CONNECTION as shown below:-",
+      "source_content_hash": "eddcae59fcc160ce4c338208aa4d01212d2d2a61de02ef8a8545c5bb42fecd4c",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "对于基于OpenID身份提供商的连接，请在PRE_LOADED_CONNECTION路径下创建如下所示的*.js文件：-"
+      }
+    },
+    {
+      "segment_id": "bdc231b1",
+      "source_content": "See [Add connection API - OIDC tab](../sso-flow/index.md#21-add-connection)",
+      "source_content_hash": "a08ca1d71333bb0ed6bfe8494711bcc7a93270a8becbfa350e09dd1a2817b818",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "参见[添加连接API-OIDC标签页](../sso-flow/index.md#21-add-connection)"
+      }
+    },
+    {
+      "segment_id": "be2d5397",
+      "source_content": "```javascript\nmodule.exports = {\n  defaultRedirectUrl: 'http://localhost:3366/sso/oauth/oidc',\n  redirectUrl: '[\"http://localhost:3366\"]',\n  tenant: 'oidc.example.com',\n  product: 'crm',\n  name: 'OIDC connection for oidc.example.com',\n  description: 'OIDC connection for oidc.example.com',\n  oidcDiscoveryUrl:\n    'https://accounts.google.com/.well-known/openid-configuration',\n  oidcClientId: '<ClientId from the OpenID IdP>',\n  oidcClientSecret: '<ClientSecret from the OpenID IdP>',\n};\n```",
+      "source_content_hash": "21cdb5a71173995e352f12d68312c7d4cf1ddd9a14ee3523c91e580baf73de5d",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_be2d5397"
+      }
+    }
+  ],
+  "target_i18n_subpath": "docusaurus-plugin-content-docs/current/jackson/deploy/pre-loaded-connections.md",
+  "last_updated_timestamp": "2025-06-08T18:49:09.298849+00:00",
+  "schema_version": "1.0",
+  "translated_versions": {
+    "zh-CN": "fdd17a9149ff54fc21e3eebd499b3b045a9c10ec92d374e4355994f8a12f497e"
+  }
+}

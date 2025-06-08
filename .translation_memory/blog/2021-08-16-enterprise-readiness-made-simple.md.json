@@ -1,0 +1,122 @@
+{
+  "source_file_path_relative_to_docusaurus_root": "blog/2021-08-16-enterprise-readiness-made-simple.md",
+  "source_file_content_hash": "cf996308bee2f5b6d4e6edbaf4b1114b0a84f2500052e3ad24be82964d902c70",
+  "segments": [
+    {
+      "segment_id": "58cfcc64",
+      "source_content": "---\nslug: enterprise-readiness-made-simple\ntitle: Enterprise Readiness made simple\nauthor: Deepak Prabhakara\nauthor_title: Co-founder & CEO @BoxyHQ\nauthor_url: https://github.com/deepakprabhakara\nauthor_image_url: /images/authors/deepak.jpg\ntags_disabled: [enterprise-readiness]\nimage: /img/blog/xavi-cabrera-kn-UmDZQDjM-unsplash.jpg\n---",
+      "source_content_hash": "4c0f38f361cf69fd2351041fbdc68a77d79a8a6d84566b88495c67b6ca1dd9af",
+      "node_type": "yaml",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_58cfcc64"
+      }
+    },
+    {
+      "segment_id": "8d66f911",
+      "source_content": "I love Lego (don't we all), probably a little more than my kids. It invokes a builder's instinct. I feel the same way with code as well. When I started my career in the early 2000s building software was complex. You had to visit datacenters and set up your servers to even get started, it was the age of the ASPs; the predecessor of SaaS.",
+      "source_content_hash": "be034c353adce4c9391c17ab091a9a270a701ffac4d76b5a968e34ad377798fb",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "我热爱乐高（谁不是呢），可能比我的孩子们还要痴迷。它能激发建造者的本能。我对编写代码也有同样的感受。2000年代初刚入行时，软件开发非常复杂。你甚至需要亲自前往数据中心架设服务器才能起步，那是ASP（应用服务提供商）时代——SaaS的前身。"
+      }
+    },
+    {
+      "segment_id": "ad8fd492",
+      "source_content": "![Lego](/img/blog/xavi-cabrera-kn-UmDZQDjM-unsplash.jpg)",
+      "source_content_hash": "2e2fe34310be6ae2a662a150150dd1104d9972750accb8bd1292559739d25fd0",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![乐高积木](/img/blog/xavi-cabrera-kn-UmDZQDjM-unsplash.jpg)"
+      }
+    },
+    {
+      "segment_id": "86b54d44",
+      "source_content": "<div style={{fontSize: \"10px\", marginTop: \"-10px\", paddingBottom: \"20px\"}}>Photo by <a href=\"https://unsplash.com/@xavi_cabrera?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText\">Xavi Cabrera</a> on <a href=\"https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText\">Unsplash</a></div>",
+      "source_content_hash": "f0d7c998f7c58d7b1ffd37c599e8ba6a62d5a6318e8b996831be55ea3327d527",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "<div style={{fontSize: \"10px\", marginTop: \"-10px\", paddingBottom: \"20px\"}}>摄影：<a href=\"https://unsplash.com/@xavi_cabrera?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText\">Xavi Cabrera</a>，源自<a href=\"https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText\">Unsplash</a></div>"
+      }
+    },
+    {
+      "segment_id": "39b3772c",
+      "source_content": "Then came the Cloud; infrastructure at the click of a button. Nothing short of magic! And then over the last decade or so the Cloud enabled a lot of the re-usable services to be packaged up as APIs; enter the API Economy. If you need audio or video in your app, dial the Twilio API. If you need payments, cash in on the Stripe API. If you need authentication, sign in to the Auth0 API. The list is endless (also I ran out of puns).",
+      "source_content_hash": "f98006dcca590fe67a9da5b41c4e211f9a0be0e19b34a7a59aae9ffc1e8b44c7",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "随后云计算时代来临——点击按钮即可获得基础设施，堪称魔法！过去十年间，云技术更催生出可复用服务的API化浪潮，即API经济。若需音频视频功能？调用Twilio API。需要支付系统？接入Stripe API。身份认证需求？集成Auth0 API。这类服务不胜枚举（我的双关语也用尽了）。"
+      }
+    },
+    {
+      "segment_id": "1acb9a05",
+      "source_content": "Coding today is like assembling lego blocks thanks to these APIs and developers love it. There is no need to re-invent these blocks in every startup, it’s much better to outsource the non-core stuff.",
+      "source_content_hash": "42e50bd2b8a2585ad5ffa1444c658e0139dad6d8a94d07ee37e274a157b1401a",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "得益于这些API，如今的编程就像拼接乐高积木，开发者们乐在其中。初创公司无需重复造轮子，将非核心功能外包才是明智之举。"
+      }
+    },
+    {
+      "segment_id": "2df4f75f",
+      "source_content": "I have spent a significant part of my career building products that were sold to the Enterprise. I have helped build out numerous Compliance and Security features, all essential to make the sale but still a big distraction from the core product. I have personally experienced the pain of balancing these Enterprise features with other core features. My co-founder Sama has spent a significant part of his career helping startups accelerate and connecting them to Enterprises. He has seen the pain of startups not being ready to sell to the Enterprise despite having fantastic products.",
+      "source_content_hash": "a52ae2320888d5a4c32009a218c037ea10af831b64794326b96846d786d0beeb",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "我的职业生涯大部分时间都在打造面向企业的产品，曾参与开发过众多合规与安全功能——这些虽是企业销售的必备要素，却始终分散着对核心产品的专注力。我亲历过平衡企业功能与核心功能的痛苦。我的联合创始人Sama长期致力于加速初创企业发展并搭建其与企业客户的桥梁，他目睹过无数初创公司虽拥有卓越产品却因企业级准备不足而错失商机的困境。"
+      }
+    },
+    {
+      "segment_id": "98cfbd53",
+      "source_content": "We both looked at all this and questioned ourselves: What if Enterprise Readiness had an API? What would that look like? How would it work? Could we create a product that will help developers at startups address the hard problems of enterprise readiness, data security, and compliance?",
+      "source_content_hash": "82066c04c99c46551fb0d65ac522fe68add21304374906b6fb38a11355e11cf5",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "面对这些现象，我们不禁思考：如果企业级准备也能通过API实现会怎样？这样的API该是什么形态？如何运作？我们能否打造一款产品，帮助初创企业的开发者攻克企业级准备、数据安全与合规这些难题？"
+      }
+    },
+    {
+      "segment_id": "ccc88b4c",
+      "source_content": "And we went ahead and started BoxyHQ to build this vision. BoxyHQ is a commercial open source software that helps you add enterprise features to your app in just a few lines of code. We want to make enterprise features simple, that's it. That's our focus for the next few years. We want to solve the hard things for you and give you back valuable time to focus on your core products.",
+      "source_content_hash": "8058d9ceedeb34b94eacf34493abd9f37448623813ca7f4f0c68eb1222cdb3e5",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "于是我们创立了BoxyHQ来实现这个愿景。作为商业开源软件，BoxyHQ能让你用寥寥数行代码为应用添加企业级功能。我们的目标很简单：让企业级功能变得简单——这就是未来几年的专注方向。我们愿为你解决复杂难题，让你重获宝贵时间聚焦核心产品。"
+      }
+    },
+    {
+      "segment_id": "d9172fa4",
+      "source_content": "If you are selling to the Enterprise, come and say hello. We'd love to give you early access and help you with other aspects of Enterprise sales as well.",
+      "source_content_hash": "7a84f7071d51ac9ecaa97b2b39914342a898007962ff69171d95ba42b51a1fc3",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "若你正面向企业市场，欢迎前来交流。我们很乐意提供早期接入支持，并协助解决企业销售中的其他挑战。"
+      }
+    },
+    {
+      "segment_id": "26524352",
+      "source_content": "_\"Enterprise sales is fun!\"_ - said no one ever",
+      "source_content_hash": "95cbc32d7fd753633ea1eea48ece9626b01bc58df4884d624626f8b860f0cb9a",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "_\"企业销售真有趣！\"_ —— 从来没人这么说过"
+      }
+    }
+  ],
+  "target_i18n_subpath": "docusaurus-plugin-content-blog/2021-08-16-enterprise-readiness-made-simple.md",
+  "last_updated_timestamp": "2025-06-08T18:49:09.310919+00:00",
+  "schema_version": "1.0",
+  "translated_versions": {
+    "zh-CN": "cf996308bee2f5b6d4e6edbaf4b1114b0a84f2500052e3ad24be82964d902c70"
+  }
+}

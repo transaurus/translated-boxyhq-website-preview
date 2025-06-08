@@ -1,0 +1,372 @@
+{
+  "source_file_path_relative_to_docusaurus_root": "blog/2022-09-09-understanding-directory-sync.md",
+  "source_file_content_hash": "f20058bcd5a0f6eb7126488294651bedfbf4a7b012af373b02973ef40b0435fc",
+  "segments": [
+    {
+      "segment_id": "58cfcc64",
+      "source_content": "---\nslug: understanding-scim-and-directory-sync\ntitle: Understanding SCIM and Directory Sync\nauthor: Kiran K\nauthor_title: Senior Developer @BoxyHQ\nauthor_url: https://twitter.com/tokirankrishnan\nauthor_image_url: /images/authors/kiran.jpg\ntags_disabled:\n  [enterprise-readiness, engineering, saml-jackson, directory-sync, scim]\nimage: /images/docs/jackson/directory-sync-flow.png\n---",
+      "source_content_hash": "b0861a3654c0d1f7fa5ed29db1bb45ce5767c279c4f6bfc9bd5298c8ae7ec904",
+      "node_type": "yaml",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_58cfcc64"
+      }
+    },
+    {
+      "segment_id": "180bddb1",
+      "source_content": "This article will walk you through everything you should know about SCIM and Directory Sync.",
+      "source_content_hash": "1dcded44a1739ac67fba1bf108ab656cd515ab096aad2d8a17962ee94083b3ee",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "本文将带您全面了解SCIM与目录同步的所有关键知识。"
+      }
+    },
+    {
+      "segment_id": "e14c9928",
+      "source_content": "## What is SCIM?",
+      "source_content_hash": "3036f17bab598496b0f2b3d9fd47a9b24ee1dc5f33818ef760c29763ed6d9837",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 什么是SCIM？"
+      }
+    },
+    {
+      "segment_id": "42ad8e83",
+      "source_content": "System for Cross-domain Identity Management (SCIM) is an open standard that allows for the automation of user provisioning (Directory Sync).",
+      "source_content_hash": "22b7fce191728c50fbd9c9dfd3a43a685e7e29b5acde9437482f5e312b5bba34",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "跨域身份管理系统（SCIM）是一项开放标准，用于实现用户配置（目录同步）的自动化。"
+      }
+    },
+    {
+      "segment_id": "f6168993",
+      "source_content": "SCIM facilitates user identity data communication between Identity Providers (Okta, OneLogin, etc.) and Service Providers (Enterprise SaaS apps).",
+      "source_content_hash": "92c5f01b45a1e34c53cc9aa861d8f55ec1fb24c9829ef86ccf866a0202724c98",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "SCIM促进了身份提供商（如Okta、OneLogin等）与服务提供商（企业级SaaS应用）之间的用户身份数据通信。"
+      }
+    },
+    {
+      "segment_id": "418617bd",
+      "source_content": "## Why should you care about SCIM?",
+      "source_content_hash": "64052d92f7af01783be3938acceef57007e664d8e4142244495c6c7f3f6f483f",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 为什么需要关注SCIM？"
+      }
+    },
+    {
+      "segment_id": "2fdadb08",
+      "source_content": "Many companies manually onboard and offboard users, which consumes many IT resources and time.",
+      "source_content_hash": "3a2ef99276b20e30084e6cc6888fabd1bcca2b1582cd4111ec81d15a10a15765",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "许多公司仍采用人工方式管理用户入职和离职，这消耗了大量IT资源和时间。"
+      }
+    },
+    {
+      "segment_id": "f2c2bdd0",
+      "source_content": "User lifecycle management (ULM) begins when employees start their job and continue until they leave the company. ULM is all about provisioning and de-provisioning users when they join an organization.",
+      "source_content_hash": "21421f89968ac482734579b04a644cf1ca5a0f7e02ac27bdc93f52257c957ca4",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "用户生命周期管理（ULM）从员工入职开始持续到离职，核心在于根据人员变动动态配置和撤销用户权限。"
+      }
+    },
+    {
+      "segment_id": "a76548f8",
+      "source_content": "For IT departments, this means creating an account for the new employees in the cloud apps they need to use after starting their job. Also, IT departments must ensure that when those employees leave, they revoke access to those accounts.",
+      "source_content_hash": "87189117bc6ddbed1437b213754d0a08d2888d03f4cc6c4c26c53dbaa860cc84",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "对IT部门而言，这意味着需要在新员工入职时为其创建所需云应用账户，并在员工离职时确保及时撤销这些账户的访问权限。"
+      }
+    },
+    {
+      "segment_id": "4b1d2d7d",
+      "source_content": "Smaller organizations might address these procedures manually, but the process can become error-prone and time-consuming when done at scale. This is where the SCIM and Directory Sync come to the organization's rescue.",
+      "source_content_hash": "5555882e82eb6df3c329ea02bd4fa2fbdd1aac37e95de7b75d1bf10af072821c",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "小型组织尚可手动处理这些流程，但在大规模场景下，这种方式容易出错且效率低下。此时SCIM与目录同步技术便成为企业的救星。"
+      }
+    },
+    {
+      "segment_id": "48847fd4",
+      "source_content": "## What is Directory Sync?",
+      "source_content_hash": "808c5773a4cb579e2402ad4d45d7f6f52e89370eb3beaa1cd04aced47cf5f691",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 什么是目录同步？"
+      }
+    },
+    {
+      "segment_id": "4daf5cdd",
+      "source_content": "Directory sync helps organizations automate the provisioning and de-provisioning of their users.",
+      "source_content_hash": "ef58aefc87eedcafeff17d33ceeec2344032a43f8977c7bdb3445a2ce0e4ba68",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "目录同步帮助组织自动化实现用户的配置与权限撤销。"
+      }
+    },
+    {
+      "segment_id": "bdc231b1",
+      "source_content": "As a result, it streamlines the user lifecycle management process by saving valuable organizational hours, creating a single truth source of the user identity data, and facilitating them to keep the data secure.",
+      "source_content_hash": "7fa90bf42e724bb34cc9b052c79573dfe45ea8ebd252bfe0233a81ea3f174fec",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "通过建立用户身份数据的单一可信源，该技术不仅能节省大量工时，还能确保数据安全，从而优化用户生命周期管理流程。"
+      }
+    },
+    {
+      "segment_id": "3b7478ea",
+      "source_content": "## How does the Directory Sync work?",
+      "source_content_hash": "8d44390a224142afc4dcc885125391c3d0c4cad95c0fcd87a656226a6e0e6189",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 目录同步如何运作？"
+      }
+    },
+    {
+      "segment_id": "c3a738de",
+      "source_content": "Directory sync allows programmatic access to the user identity data via a standard protocol (SCIM).",
+      "source_content_hash": "1994af2fccf767ad65f4513a28a07fb9b267c0fe43ba6141d16a5877081e02d4",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "目录同步通过标准协议（SCIM）实现对用户身份数据的程序化访问。"
+      }
+    },
+    {
+      "segment_id": "3cfe6286",
+      "source_content": "Directory sync implementation typically involves a client and a server. A client is an identity provider (IDP) with a directory of user identities. A service provider (SP) is an enterprise SaaS app that needs a subset of data from those identities.",
+      "source_content_hash": "a0b052abdc5e272c5c55d63336f6848bdac65200f60919247cedcae30d75f75f",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "典型实现包含客户端（身份提供商IDP，维护用户身份目录）与服务端（企业SaaS应用，需要获取部分身份数据）。"
+      }
+    },
+    {
+      "segment_id": "1042b50d",
+      "source_content": "When you make changes to the user identities, the changes are automatically synced to the SP according to the SCIM protocol. SP can now process this data according to the way they want.",
+      "source_content_hash": "3a9d263d61a315161cbdb96c06055ff34a1a9c7682c333ac2fc499ba5302a60e",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "当用户身份信息变更时，这些变更会根据SCIM协议自动同步至服务提供商，后者可据此进行相应数据处理。"
+      }
+    },
+    {
+      "segment_id": "aa1e7006",
+      "source_content": "Some common user identity changes include adding new users to the organization, updating existing users, removing users from the organization, adding users to groups, etc.",
+      "source_content_hash": "b841147d32f06a89511cc693d50fe784db77ec1c6eff24c1f99b17c11bca3298",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "常见变更包括：新增组织成员、更新现有用户、移除离职人员、调整用户组归属等。"
+      }
+    },
+    {
+      "segment_id": "13d9cd70",
+      "source_content": "Technically, SCIM is a set of APIs that allows you to manipulate the users and group objects and expose these data as JSON through the REST endpoints.",
+      "source_content_hash": "b2f87e1524641cd03b870cf9da0f0401bc8264c48dd83b26953590f3251d8205",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "从技术角度看，SCIM是一组API接口，支持通过REST端点以JSON格式操作用户和群组对象数据。"
+      }
+    },
+    {
+      "segment_id": "6f930b2f",
+      "source_content": "## How to add Directory Sync to your SaaS app?",
+      "source_content_hash": "75f912eb7b5e3a0558d1888f3f1b7408ffe391ef55353a2339141c709214311b",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 如何为SaaS应用添加目录同步？"
+      }
+    },
+    {
+      "segment_id": "c504c207",
+      "source_content": "Building Directory sync implementation yourself can be tedious and time-consuming for any engineering team.",
+      "source_content_hash": "46a33973537ff22ce080d467b20ab77ac3ded16f8e3786ea73f8fa62e7a7e82b",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "自主构建目录同步实现对于任何工程团队都将是繁琐且耗时的过程。"
+      }
+    },
+    {
+      "segment_id": "98d26038",
+      "source_content": "Below are some questions the engineering team should answer before starting building Directory sync.",
+      "source_content_hash": "117b7ec32f6d6e534ffb995e5dbdf7738a891e71a0e6aa976538757d35bf26ce",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "工程团队在启动开发前需明确以下问题："
+      }
+    },
+    {
+      "segment_id": "c94a9c0e",
+      "source_content": "- How do we support multiple identity providers?\n- How much effort should the team put into support & maintenance?\n- Do we have developers with good knowledge of SCIM and its security?\n- Is it worth building the Directory sync ourselves?",
+      "source_content_hash": "20bd9918c910c832c9aed275e18c29dfffaa2513f43bbf270446d999c07b68af",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- 如何支持多身份提供商？\n- 需要投入多少资源进行支持维护？\n- 团队是否具备SCIM及安全领域的专业知识？\n- 自主开发目录同步是否值得？"
+      }
+    },
+    {
+      "segment_id": "40158b4b",
+      "source_content": "In short, building Directory sync yourself is not a good idea. It requires a lot of tedious engineering work and ongoing maintenance.",
+      "source_content_hash": "f3367b83160379605178b7553f2a4eb12912ed5fd2c8ab00b3a494765569d969",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "简言之，自主构建目录同步并非明智之选，这需要大量工程投入和持续维护。"
+      }
+    },
+    {
+      "segment_id": "6ea4c715",
+      "source_content": "The best alternative is an open-source dedicated Directory Sync implementation provider like SAML Jackson from BoxyHQ.",
+      "source_content_hash": "68df5c029bf304352906d536644b5d099353bd13b893672cfa8ceca5f2e9bc40",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "最佳替代方案是采用BoxyHQ旗下SAML Jackson等开源的专业目录同步实现方案。"
+      }
+    },
+    {
+      "segment_id": "c315c636",
+      "source_content": "## Directory Sync from BoxyHQ",
+      "source_content_hash": "e9424bc9d154218db7e9dbf99e6fdd4cdf11ac6ff771fbd8689c40a0487c48d1",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## BoxyHQ目录同步方案"
+      }
+    },
+    {
+      "segment_id": "531437ca",
+      "source_content": "BoxyHQ can help enterprises to add Directory Sync to any SaaS app with just a few lines of code.",
+      "source_content_hash": "edc504f09af3e91c18fb0571881e570e4144b301d82d0851af29e1cfaf9c645d",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "BoxyHQ可帮助企业仅用几行代码即可为SaaS应用添加目录同步功能。"
+      }
+    },
+    {
+      "segment_id": "06e24cc0",
+      "source_content": "Enterprise SaaS apps can provide a Webhook endpoint to SAML Jackson, and Jackson will notify the Webhook every time a change occurs in the user identity data within the IDP.",
+      "source_content_hash": "e23a518ca2917e5751fe18805da951484ef7fa8eb8be81f6e3cbc14755a6b682",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "企业SaaS应用只需向SAML Jackson提供Webhook端点，当IDP中的用户身份数据发生变更时，Jackson就会实时通知该Webhook。"
+      }
+    },
+    {
+      "segment_id": "7f71ff2a",
+      "source_content": "![Directory Sync Flow](/images/docs/jackson/directory-sync-flow.png)",
+      "source_content_hash": "a433bc15a2e9138eb6b3cc97a3355d5a27496061ddbb0d638c2a6f2030bc2efa",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![目录同步流程](/images/docs/jackson/directory-sync-flow.png)"
+      }
+    },
+    {
+      "segment_id": "147e8550",
+      "source_content": "In short, Jackson hides all the complexities involved with Directory Sync implementation and makes your integration easier.",
+      "source_content_hash": "d08f3a052c23a4c8455ba7ff32211dddcca1e6cdb98fdd19513e2c571f3ca08e",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "简而言之，Jackson封装了目录同步实现的所有复杂细节，使您的集成工作变得简单高效。"
+      }
+    },
+    {
+      "segment_id": "883231d4",
+      "source_content": "BoxyHQ's Directory Sync implementation supports identity providers such as Okta, OneLogin, Azure AD, and JumpCloud. We're looking forward to adding more identity providers in future releases.",
+      "source_content_hash": "2676790bca3eb4ca794719f9b21785b15cc977a3bc791c36ef0eea511aebce1a",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "BoxyHQ的目录同步实现支持Okta、OneLogin、Azure AD和JumpCloud等身份提供商。我们期待在未来的版本中添加更多身份提供商。"
+      }
+    },
+    {
+      "segment_id": "6cc549f2",
+      "source_content": "Here are a few critical aspects that make [BoxyHQ's Directory Sync implementation](/docs/directory-sync/overview) stand out.",
+      "source_content_hash": "bcb03db77b9eaa545848de06d2a6f0e837ccd72d97d6b54376b1831736d36fe4",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "以下是使[BoxyHQ的目录同步实现](/docs/directory-sync/overview)脱颖而出的几个关键方面。"
+      }
+    },
+    {
+      "segment_id": "6384b3d4",
+      "source_content": "- An open-source solution.\n- Allows you to keep control of your data.\n- Support multiple identity providers.\n- Allows you to listen to six critical SCIM events.",
+      "source_content_hash": "9b2a2f4dcabd1bf545e2e817ba867cb844dccb12a61446f720a062117bf9952c",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- 开源解决方案。\n- 允许您保持对数据的控制。\n- 支持多个身份提供商。\n- 允许您监听六个关键的SCIM事件。"
+      }
+    },
+    {
+      "segment_id": "66819c78",
+      "source_content": "## Final Thoughts",
+      "source_content_hash": "a50ee9c263352561e67780e777da208a782389c4f6302e6c36102a508f1bae05",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 最终思考"
+      }
+    },
+    {
+      "segment_id": "fbc2db85",
+      "source_content": "Directory Sync is a valuable investment for every organization seeking efficiency and security in their user lifecycle management system.",
+      "source_content_hash": "db801abf3a1a8d686bb76c5fe0b99d5e94665f99763491c9b3b05c3728611b37",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "目录同步对于每个寻求用户生命周期管理系统效率和安全的组织来说都是一项有价值的投资。"
+      }
+    },
+    {
+      "segment_id": "8126f763",
+      "source_content": "If you are interested in becoming enterprise-ready without the hassle, then let's chat! You can book a free consultation call and talk with our CEO about how we can help. So let's start the journey together.",
+      "source_content_hash": "70ef7999df9ad7faae7c9f3b70a90ac12f062f3e37f8eee3ac233d3ce3b12dee",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "如果您有兴趣无麻烦地实现企业级准备，那么让我们聊聊吧！您可以预约一次免费咨询电话，与我们的CEO讨论我们如何提供帮助。让我们一起开始这段旅程。"
+      }
+    }
+  ],
+  "target_i18n_subpath": "docusaurus-plugin-content-blog/2022-09-09-understanding-directory-sync.md",
+  "last_updated_timestamp": "2025-06-08T18:49:09.295128+00:00",
+  "schema_version": "1.0",
+  "translated_versions": {
+    "zh-CN": "f20058bcd5a0f6eb7126488294651bedfbf4a7b012af373b02973ef40b0435fc"
+  }
+}

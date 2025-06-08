@@ -1,0 +1,182 @@
+{
+  "source_file_path_relative_to_docusaurus_root": "blog/2024-02-15-unlocking-efficiency-with-enterprise-sso-a-unosecur-case-study.md",
+  "source_file_content_hash": "e5b4c28ba12675fdb3d9b5167d550ba7e1762a451bf6016914c477afd9b21e96",
+  "segments": [
+    {
+      "segment_id": "58cfcc64",
+      "source_content": "---\ndescription: \"Read how Unosecur improved operations with BoxyHQ's Enterprise SSO, enhancing security and streamlining access in our case study.\"\nslug: unlocking-efficiency-with-enterprise-sso-a-unosecur-case-study\ntitle: 'Unlocking Efficiency with Enterprise SSO: A Unosecur Case Study'\ntags_disabled:\n  [\n    developer,\n    security,\n    cybersecurity,\n    devsecops,\n    open-source,\n    developerfirst,\n    case-study,\n  ]\nimage: /images/success-stories/unosecur-case-study.png\nhide_table_of_contents: true\nauthor: Schalk Neethling\nauthor_title: Customer Success, Community, DevRel - @BoxyHQ\nauthor_url: https://github.com/schalkneethling\nauthor_image_url: /images/authors/schalk.jpg\n---",
+      "source_content_hash": "5621ea11c654e5ea79b25347f9fd4296d3aeda3030ff41fd2fa98009c38b4589",
+      "node_type": "yaml",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_58cfcc64"
+      }
+    },
+    {
+      "segment_id": "3af2d875",
+      "source_content": "import LearnMoreCTA from \"../src/components/ctas/LearnMoreCTA\";\nimport SignupCTA from \"../src/components/ctas/SignupCTA\";",
+      "source_content_hash": "dddc57493128cc375a7ab1dfc80fa534d8ca41c46c3ec993688b6a41199b5322",
+      "node_type": "mdxjsEsm",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_3af2d875"
+      }
+    },
+    {
+      "segment_id": "ccc88b4c",
+      "source_content": "Unosecur is a cybersecurity firm focused on protecting cloud infrastructures against identity threats. Their platform offers real-time analysis to visualize and understand cloud permissions, aiming to eliminate access risks. Trusted by cloud-native companies, Unosecur ensures comprehensive identity security through continuous monitoring, malicious activity tracking, and automated remediation with a no-code approach. Their services are designed for effective breach prevention and simplified IAMOps, providing a secure, agentless scanning architecture for cloud environments.",
+      "source_content_hash": "bce225227b721dd81f7e381421de9ad5c622a30c9734f97c8f0beab1b6de038a",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "Unosecur是一家专注于防范云基础设施身份威胁的网络安全公司。其平台通过实时分析实现云权限可视化与风险识别，致力于消除访问风险。作为云原生企业信赖的合作伙伴，Unosecur通过持续监控、恶意活动追踪和无代码自动化修复，提供全面的身份安全解决方案。其服务专为高效预防数据泄露和简化IAM运维设计，采用无需代理的扫描架构确保云环境安全。"
+      }
+    },
+    {
+      "segment_id": "2a3434e4",
+      "source_content": "<LearnMoreCTA label=\"Learn more about Unosecur\" url=\"https://www.unosecur.com/\" />",
+      "source_content_hash": "c5b715bbef31a5449c5187b1bb011f21aac641a933f1c94c8d51cc5c6de6f86b",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_2a3434e4"
+      }
+    },
+    {
+      "segment_id": "d06306f7",
+      "source_content": "## What was the motivation to implement enterprise SSO?",
+      "source_content_hash": "789a765dc22b1a7476da641caf4ee2d70ee033a1c08eb5de6894d678121f5620",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 实施企业级SSO的初衷是什么？"
+      }
+    },
+    {
+      "segment_id": "73ab96a3",
+      "source_content": "**Santosh Jayaprakash (Unosecur):** We aimed to enhance our authentication process for a more secure and user-friendly experience. By adopting Enterprise SSO, we streamlined access for our clients and employees, eliminating the complexity of managing multiple passwords and logins. This initiative improved usability and significantly strengthened our security framework, showcasing our commitment to providing a seamless and protected environment for all users.",
+      "source_content_hash": "386587a911ec2a1fd43fb7a430bb923f5989a0703bfa6575f9fccee3c1e5df09",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "**Santosh Jayaprakash（Unosecur）：** 我们希望通过更安全便捷的认证流程提升用户体验。采用企业级SSO后，既简化了客户与员工的访问流程，消除了多密码管理的复杂性，又显著强化了安全体系。这一举措体现了我们为用户打造无缝安全环境的承诺。"
+      }
+    },
+    {
+      "segment_id": "a1b3d8cb",
+      "source_content": "## What factors led you to select BoxyHQ for this implementation?",
+      "source_content_hash": "512f63abb08f609e1cb5f07935474a2c3889516c3b7afcb8b3b5866be2617c65",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 选择BoxyHQ进行实施的关键因素有哪些？"
+      }
+    },
+    {
+      "segment_id": "517051a7",
+      "source_content": "**Santosh (Unosecur):** We chose BoxyHQ for its exceptional SSO capabilities and proven reliability, valuing your expertise in crafting secure, intuitive SSO solutions. We recognize BoxyHQ as a reliable partner and trust your deep understanding of security requirements to fulfill our specific needs. All of this solidified a partnership based on trust and technical excellence.",
+      "source_content_hash": "6df7c5c400a6669b2a516c1018b123913c64b9917472c516a0950d36c09d8c2d",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "**Santosh（Unosecur）：** 我们看重BoxyHQ卓越的SSO技术实力与可靠性，认可其在构建安全直观的SSO解决方案方面的专业度。BoxyHQ对安全需求的深刻理解能精准满足我们的要求，这种技术专长与信任基础促成了双方的合作。"
+      }
+    },
+    {
+      "segment_id": "80d9e13c",
+      "source_content": "## Please elaborate on both the direct benefits and soft benefits (second-order benefits) you observed following the adoption of the solution",
+      "source_content_hash": "4e444632ff99be755948e77617323cc8c37f0edf8c9e27978c7ff01170b64a1b",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 请详述采用该解决方案后观察到的直接效益与间接效益"
+      }
+    },
+    {
+      "segment_id": "33331f27",
+      "source_content": "**Santosh (Unosecur):** After integrating BoxyHQ's SAML Jackson, we saw immediate improvements: login processes became smoother, security was enhanced, and managing users became simpler through the ease of user provision and de-provisioning using the built-in Directory Sync functionality.",
+      "source_content_hash": "5fd9805128a0484f4f239e6188e56e879a50a206538d1ea4b1e93405be750e04",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "**Santosh（Unosecur）：** 集成BoxyHQ的SAML Jackson后，我们立即体验到：登录流程更顺畅、安全性提升，通过内置目录同步功能简化了用户配置/撤销流程。"
+      }
+    },
+    {
+      "segment_id": "50746522",
+      "source_content": "These technical benefits led to significant second-order advantages. Our users enjoy a better overall experience when accessing internal and external systems, which led to organization-wide increases in productivity. The trust of our clients and partners is elevated, underscoring the value of BoxyHQ's solutions in fostering a secure, efficient, and user-friendly environment.",
+      "source_content_hash": "eed1091a03bf72447a3a80551122770572db2ef6d9bad72fb84dbd621ecac37e",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "这些技术优势带来了显著的衍生价值：用户访问内外系统时获得更优体验，推动全组织生产力提升。客户与合作伙伴的信任度随之提高，印证了BoxyHQ方案在构建安全高效环境方面的价值。"
+      }
+    },
+    {
+      "segment_id": "e2ae1ac7",
+      "source_content": "<SignupCTA campaign=\"blog-unosecur\" />",
+      "source_content_hash": "b86cef0140ee5ef0f4e9cc2f0194969624dd1abeb2509584ec7f1162f55b2ec3",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_e2ae1ac7"
+      }
+    },
+    {
+      "segment_id": "8bddee80",
+      "source_content": "## In terms of business impact, how much time did it save your team?",
+      "source_content_hash": "5b18637471c808d1e03f939894fc56f10a559ccfdb09e7c28f9a712f93073b3e",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 该方案为团队节省了多少时间成本？"
+      }
+    },
+    {
+      "segment_id": "a9d49f92",
+      "source_content": "**Santosh (Unosecur):** The adoption of BoxyHQ's SAML Jackson significantly optimized our team's workflow, leading to notable time savings. Streamlined authentication processes and fewer password-related issues allowed for quicker access to necessary resources, enhancing overall operational efficiency. This change not only saved time but also improved the work experience for both employees and clients, contributing to a more productive and efficient operational environment.",
+      "source_content_hash": "0dfbc62f4de4c83ba8fbcbf0009a7d88817302d3c8d41e673a9661128d6d4d2e",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "**Santosh（Unosecur）：** BoxyHQ的SAML Jackson显著优化了团队工作流。简化的认证流程和减少的密码问题使资源获取更快速，整体运营效率提升。这一改变不仅节省时间，更改善了员工与客户的工作体验，营造出更高产的环境。"
+      }
+    },
+    {
+      "segment_id": "6d28a77c",
+      "source_content": "## Have you seen any significant growth in acquiring enterprise clients as a direct result of utilizing SSO?",
+      "source_content_hash": "d6806c8e9ed7121e803d694246396fac36930b9e220115a2cbbebdd17afec87b",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## SSO的实施是否直接促进了企业客户增长？"
+      }
+    },
+    {
+      "segment_id": "f7ef78f9",
+      "source_content": "**Santosh (Unosecur):** The implementation of SSO significantly enhanced our ability to attract and onboard enterprise clients. The upgraded security and streamlined user experience directly contributed to smoother client onboarding, fostering growth in the enterprise sector. This strategic move not only strengthened our position as a trusted security partner but also underscored the essential role of effective SSO solutions in expanding business opportunities within the competitive enterprise market.",
+      "source_content_hash": "568c5f2ea7ba7f3b2ca2ff2c530df5bf2cf84807b942feee57e5cd72102d09ac",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "**Santosh（Unosecur）：** SSO极大增强了我们获取企业客户的能力。升级的安全性与流畅体验直接优化了客户入驻流程，推动企业业务增长。这一战略举措不仅巩固了我们作为安全合作伙伴的地位，更凸显了SSO解决方案在激烈市场竞争中的商业价值。"
+      }
+    },
+    {
+      "segment_id": "c7ecf06f",
+      "source_content": "<LearnMoreCTA label=\"Read Unosecur's Success Story\" newWindow={false} url=\"/success-stories/how-boxyhq-solutions-drive-business-efficiency-and-security-unosecur\" />",
+      "source_content_hash": "2342c455d66cf1f9cb6bdca7187047ffae4a9673f67740cd4172e21407d72dd4",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_c7ecf06f"
+      }
+    }
+  ],
+  "target_i18n_subpath": "docusaurus-plugin-content-blog/2024-02-15-unlocking-efficiency-with-enterprise-sso-a-unosecur-case-study.md",
+  "last_updated_timestamp": "2025-06-08T18:49:09.312928+00:00",
+  "schema_version": "1.0",
+  "translated_versions": {
+    "zh-CN": "e5b4c28ba12675fdb3d9b5167d550ba7e1762a451bf6016914c477afd9b21e96"
+  }
+}

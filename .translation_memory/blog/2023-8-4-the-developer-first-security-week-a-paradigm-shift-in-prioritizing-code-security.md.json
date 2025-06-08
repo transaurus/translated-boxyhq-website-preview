@@ -1,0 +1,352 @@
+{
+  "source_file_path_relative_to_docusaurus_root": "blog/2023-8-4-the-developer-first-security-week-a-paradigm-shift-in-prioritizing-code-security.md",
+  "source_file_content_hash": "480428ba8983bfe26b4841ffc58f9905bcbadde882f819d0343ecaeec3056a83",
+  "segments": [
+    {
+      "segment_id": "58cfcc64",
+      "source_content": "---\nslug: the-developer-first-security-week-a-paradigm-shift-in-prioritizing-code-security\ntitle: 'The Developer-First Security Week: ⭐ A Paradigm Shift in Prioritizing Code Security'\ntags_disabled:\n  [\n    developer,\n    security,\n    cybersecurity,\n    devsecops,\n    appsec,\n    sso,\n    open-source,\n    developerfirst,\n  ]\nimage: /img/blog/DevFirstSecWeekFlyer.png\nauthors:\n  - name: Sama - Carlos Samame\n    title: Co-founder & COO @BoxyHQ\n    url: https://www.linkedin.com/in/samame\n    image_url: /images/authors/sama.jpg\n  - name: Deepak Prabhakara\n    title: Co-founder & CEO @BoxyHQ\n    url: https://github.com/deepakprabhakara\n    image_url: /images/authors/deepak.jpg\n---",
+      "source_content_hash": "1873cac71d80481ff8a61ab6698f0704a2bf767bc8d074bc67fa100a014ed220",
+      "node_type": "yaml",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_58cfcc64"
+      }
+    },
+    {
+      "segment_id": "a76548f8",
+      "source_content": "👩🏼‍💻 In the fast-evolving realm of software development, security isn't just an option; it's the foundation on which trust and innovation thrive. At BoxyHQ, we believe that a proactive approach to security should be at the heart of every developer's journey. That's precisely why we decided to build Security Building Blocks for Developers and why we've also embarked on organizing the inaugural 🌟**Developer-First Security Week**🌟 – a transformative event designed to ignite a new era of secure and resilient coding practices.",
+      "source_content_hash": "a104857a3d253a2985debf840d7863bd5823254f0edfd2b7bfeadd160cfc37b2",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "👩🏼‍💻 在快速演进的软件开发领域，安全性不仅是可选项，更是信任与创新的基石。BoxyHQ坚信，主动式安全防护应成为每位开发者旅程的核心。这正是我们打造\"开发者安全构建模块\"的初衷，也是我们筹办首届🌟**开发者优先安全周**🌟的动因——这场变革性活动旨在开启安全与韧性编码实践的新纪元。"
+      }
+    },
+    {
+      "segment_id": "f2f30ae8",
+      "source_content": "## Why we are organizing The Developer-First Security Week?",
+      "source_content_hash": "cce687ed340919adc31aac2f5c993f66505b48ac21d01ba3021744ceb3420033",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 为何举办开发者优先安全周？"
+      }
+    },
+    {
+      "segment_id": "dfe931a2",
+      "source_content": "In today's dynamic tech landscape, the imperative for a Developer-First Security Week is crystal clear to us. As software development continues to evolve at a rapid pace, so do the threats that target it. This dedicated week-long event brings together developers and security experts, fostering a crucial dialogue on seamlessly integrating robust security measures into the very fabric of code creation.",
+      "source_content_hash": "6f80a7fa1116424ae7150bcf5de1e3da59c434d0bf82bafd404c92ed8b1a06ea",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "当前技术格局瞬息万变，举办开发者优先安全周的迫切性对我们而言不言而喻。随着软件开发持续高速演进，针对它的威胁也在同步升级。这场为期一周的专项活动汇聚开发者与安全专家，围绕如何将稳健的安全措施无缝融入代码创作展开关键对话。"
+      }
+    },
+    {
+      "segment_id": "4daf5cdd",
+      "source_content": "By prioritizing security from the start, we empower developers not only to innovate but also safeguard their creations against emerging cyber risks. The Developer-First Security Week serves as a vital platform for unveiling the strategies, trends, and best practices that shape the future of secure software development.",
+      "source_content_hash": "9a54f46d79936f294261a12f8f261e40a5cb6a4d3f9cab323a887cdccd8fa13d",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "通过从源头重视安全，我们赋能开发者在创新的同时，守护其成果免受新兴网络威胁。开发者优先安全周将成为揭示安全软件开发未来趋势、策略与最佳实践的重要平台。"
+      }
+    },
+    {
+      "segment_id": "f422383e",
+      "source_content": "## How We Are Doing It?",
+      "source_content_hash": "cde85b2faad8f92f0e9b67c113c3b52638da35db000aebc2e882ffae2d9fa249",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 如何实现这一愿景？"
+      }
+    },
+    {
+      "segment_id": "97ae4a01",
+      "source_content": "The Developer-First Security Week isn't just another conference; it's a week-long immersion into the world of secure coding. Our \"How\" focuses on bringing together leading minds, practitioners, and pioneers in the field of cybersecurity and development to share insights, strategies, and real-world experiences.",
+      "source_content_hash": "5241e113a3632331b74e034d62ae9c5d8ab070bc4942d5708a1f0ff50797f7e8",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "开发者优先安全周不仅是又一场会议，更是为期一周的安全编码沉浸式体验。我们通过汇聚网络安全与开发领域的顶尖思想者、实践者和先驱者，分享洞见、策略与实战经验来实现目标。"
+      }
+    },
+    {
+      "segment_id": "c3a738de",
+      "source_content": "This event is designed to be completely free and virtual, allowing us to reach and support as many developers and organizations as possible, ensuring that the knowledge and best practices for developer-first security are accessible to all.",
+      "source_content_hash": "7d660a127832942214e6661b3e34b9e7d93586096cad7e18334c283a18a61817",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "本活动完全免费且采用虚拟形式，旨在覆盖和支持尽可能多的开发者与组织，确保开发者优先安全的知识与最佳实践能够普惠大众。"
+      }
+    },
+    {
+      "segment_id": "9f9e64f5",
+      "source_content": "## What to Expect?",
+      "source_content_hash": "4e6f8ee808ca774d58d62bbaaa5ade440cb32cb05c51d069b337bb4a3048f176",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 活动亮点前瞻"
+      }
+    },
+    {
+      "segment_id": "06c0f776",
+      "source_content": "#### 🗓️ Agenda Highlights 🗓️",
+      "source_content_hash": "1e238fa86f20dbcb8024487142fee055ee7b6a7de30bfde301e1932d68c2cccb",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "#### 🗓️ 议程精选 🗓️"
+      }
+    },
+    {
+      "segment_id": "35a77014",
+      "source_content": "#### 🚨Talk: Your Attack Surface Just Got Bigger🚨",
+      "source_content_hash": "7fd3970a6d5dc09f97a19f5a4b525b998def9785e94e193c6ba33284278da24a",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "#### 🚨主题演讲：攻击面正在扩大🚨"
+      }
+    },
+    {
+      "segment_id": "13d9cd70",
+      "source_content": "Date: 8/7/2023 - 12:30 PM EST",
+      "source_content_hash": "8a05505b031cedbf7a69bc57658c2e20786523b11d12df1488aae597de7663b6",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "日期：2023年8月7日 - 美东时间12:30"
+      }
+    },
+    {
+      "segment_id": "2f83a0f4",
+      "source_content": "<a href=\"https://www.youtube.com/watch?v=qVECqnuw1H8\">\n\n![Keynote Talk](/img/blog/speaker-card-sonya-moisett.png)\n\n<p style={{ textAlign: \"center\" }}>Link to video</p>\n</a>",
+      "source_content_hash": "c7e02cb17834c8fd29246822f687a40b7465f6d49956423a7c6f0b99111a56e9",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_2f83a0f4"
+      }
+    },
+    {
+      "segment_id": "af52d59d",
+      "source_content": "#### 🚨Panel: The Future of Security Engineers🚨",
+      "source_content_hash": "70d916edde686291e2f5bf034a4c945cbe13be05bef2e39c7445387f3097238a",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "#### 🚨专题讨论：安全工程师的未来🚨"
+      }
+    },
+    {
+      "segment_id": "4d52a261",
+      "source_content": "Date: 8/7/2023 - 1:00 PM EST",
+      "source_content_hash": "3b83cda1c55cf0488b407bfa5780ae044eda11af8d5530418d75bf6384a32bb9",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "日期：2023年8月7日 - 美东时间13:00"
+      }
+    },
+    {
+      "segment_id": "6214d3c2",
+      "source_content": "<a href=\"https://www.youtube.com/watch?v=PGmJyMJAKl0\">\n\n![Keynote Talk](/img/blog/the-future-of-security-engineers.png)\n\n<p style={{ textAlign: \"center\" }}>Link to video</p>\n</a>",
+      "source_content_hash": "e58f3f0e3018a0b83808925910f7b93fdd0bffc172e0e71b526cdfc11df27d3a",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_6214d3c2"
+      }
+    },
+    {
+      "segment_id": "126950d7",
+      "source_content": "#### 🚨Panel: The Future of Authentication🚨",
+      "source_content_hash": "f26c4e1e0c51a57fa96c49462fe8c19d2e8fcaf753a0419223c7fab4ba495c07",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "#### 🚨专题讨论：身份认证的未来🚨"
+      }
+    },
+    {
+      "segment_id": "0bb95128",
+      "source_content": "Date: 8/8/2023 - 1:00 PM EST",
+      "source_content_hash": "fe3cd6963c3ab8d122b898e4f5ddd97f9636c4330b9b19e459e7d9b9233db09c",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "日期：2023年8月8日 - 美东时间13:00"
+      }
+    },
+    {
+      "segment_id": "c537a3d3",
+      "source_content": "<a href=\"https://www.youtube.com/watch?v=SKBhCe_V27g\">\n\n![Keynote Talk](/img/blog/the-future-of-authentication.png)\n\n<p style={{ textAlign: \"center\" }}>Link to video</p>\n</a>",
+      "source_content_hash": "431d488bb4568587eef98bd02385460005f53c3aff91e7d4d9bc96228693acf6",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_c537a3d3"
+      }
+    },
+    {
+      "segment_id": "b1cbdb65",
+      "source_content": "#### 🚨Talk: Automating Security to enable Developer-First in DevOps🚨",
+      "source_content_hash": "60d1981d233d6208545f35aaa4f640a60eaa83aa639b1f2ff63fb3a037363ff1",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "#### 🚨主题演讲：自动化安全赋能DevOps中的开发者优先🚨"
+      }
+    },
+    {
+      "segment_id": "afa378f7",
+      "source_content": "Date: 8/9/2023 - 12:30 PM EST",
+      "source_content_hash": "2011e1e893a5dee3ff428886cce642dbc760038cbb43e06390e768e8281cc65f",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "日期：2023年8月9日 - 美东时间12:30"
+      }
+    },
+    {
+      "segment_id": "95729a46",
+      "source_content": "<a href=\"https://www.youtube.com/watch?v=iyxvBcm86OY\">\n\n![Keynote Talk](/img/blog/speaker-card-mohini-soodan-keynote.png)\n\n<p style={{ textAlign: \"center\" }}>Link to video</p>\n</a>",
+      "source_content_hash": "a451ebd5ec5e0918b838a4c93f80e02e44ff1b123fdf67e28216e4e3065accfa",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_95729a46"
+      }
+    },
+    {
+      "segment_id": "0a103a02",
+      "source_content": "#### 🚨Panel: The Future of Authorization🚨",
+      "source_content_hash": "e6a84830b80b5fac6f6bf7f2f641aacdbb9ea74cc263a80f6ed7af69178815d8",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "#### 🚨专题讨论：授权机制的未来🚨"
+      }
+    },
+    {
+      "segment_id": "8126f763",
+      "source_content": "Date: 8/9/2023 - 1:00 PM EST",
+      "source_content_hash": "e33ff0d8497102eef306cd2fa5394275bfbb12b3b1754b839252bb48d7e9294a",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "日期：2023年8月9日 - 美东时间13:00"
+      }
+    },
+    {
+      "segment_id": "46cf9aca",
+      "source_content": "<a href=\"https://www.youtube.com/watch?v=l1EFMYrIfUk\">\n\n![Keynote Talk](/img/blog/the-future-of-authorization.png)\n\n<p style={{ textAlign: \"center\" }}>Link to video</p>\n</a>",
+      "source_content_hash": "9d8e81cb9652176100ce30379f003039dcb3dfec626b9b7da5946fa66c965c63",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_46cf9aca"
+      }
+    },
+    {
+      "segment_id": "e33a2404",
+      "source_content": "#### 🚨Panel: The Future of Data Privacy🚨",
+      "source_content_hash": "ae32986007ef0ba017513e7e55da99c30710148d977014bdf15e1daf96411616",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "#### 🚨专题讨论：数据隐私的未来🚨"
+      }
+    },
+    {
+      "segment_id": "82e90254",
+      "source_content": "Date: 8/10/2023 - 1:00 PM EST",
+      "source_content_hash": "fb4ef0aa2996a6e05a87cfe47900b705388a9cefb75fc50931e5b509ed238251",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "日期：2023年8月10日 - 美东时间13:00"
+      }
+    },
+    {
+      "segment_id": "f9d6f2bf",
+      "source_content": "<a href=\"https://www.youtube.com/watch?v=4_NitExfFvs\">\n\n![Keynote Talk](/img/blog/the-future-of-data-privacy.png)\n\n<p style={{ textAlign: \"center\" }}>Link to video</p>\n</a>",
+      "source_content_hash": "29d8b80ffec58246baa742fd934b9198ddfb10a88ceb04d9641868c0affa687a",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_f9d6f2bf"
+      }
+    },
+    {
+      "segment_id": "2838eb68",
+      "source_content": "🌟 Distinguished guest speakers from leading organizations:",
+      "source_content_hash": "9dc5d6cc36d316f01946be1ffc7bf2966f57fa4a0ee3da28da3282a4e10b0dfc",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "🌟 来自顶尖组织的特邀演讲嘉宾："
+      }
+    },
+    {
+      "segment_id": "f6db2c30",
+      "source_content": "- #### [Deepak Prabhakara](https://www.linkedin.com/in/deepakp/m) - Co-Founder & CEO @ BoxyHQ\n\n- #### [Chris John Riley](https://www.linkedin.com/in/chrisjohnriley/) - Staff Security Engineer @ Google\n\n- #### [Mohini Soodan](https://www.linkedin.com/in/mohini-soodan-47604958/) - Sr Security Architect @ Microsoft\n\n- #### [Randall Degges](https://www.linkedin.com/in/rdegges/) - Head of Developer Relations @ Snyk\n\n- #### [Sameer Kamani](https://about.gitlab.com/) -Federal Staff Solutions Architect @ Gitlab\n\n- #### [Alex Olivier](https://www.linkedin.com/in/alexolivier/) - Head of Product @ Cerbos\n\n- #### [Guillaume Montard](https://www.linkedin.com/in/guillaumemontard/) - >Founder & CEO @ Bearer\n\n- #### [Advait Ruia](https://www.linkedin.com/in/advait-ruia-2aa52a85/) - Co-Founder @ SuperTokens\n\n- #### [Brian Levine](https://www.linkedin.com/in/brian-levine-cyberlaw/) - >Director, Cybersecurity & Data Privacy @ EY-Parthenon\n\n- #### [Joe Toscano](https://www.linkedin.com/in/realjoet/) - Author/Keynote/ @ Data Grade\n\n- #### [Sonya Moisset](https://www.linkedin.com/in/sonyamoisset/) - Senior Developer Advocate @ Snyk",
+      "source_content_hash": "6f29f7f875397df480991d35840cc33e857933e2fe3eef4b2fccae8483381752",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- #### [Deepak Prabhakara](https://www.linkedin.com/in/deepakp/m) - BoxyHQ联合创始人兼首席执行官\n\n- #### [Chris John Riley](https://www.linkedin.com/in/chrisjohnriley/) - Google高级安全工程师\n\n- #### [Mohini Soodan](https://www.linkedin.com/in/mohini-soodan-47604958/) - Microsoft高级安全架构师\n\n- #### [Randall Degges](https://www.linkedin.com/in/rdegges/) - Snyk开发者关系负责人\n\n- #### [Sameer Kamani](https://about.gitlab.com/) - Gitlab联邦解决方案架构师\n\n- #### [Alex Olivier](https://www.linkedin.com/in/alexolivier/) - Cerbos产品负责人\n\n- #### [Guillaume Montard](https://www.linkedin.com/in/guillaumemontard/) - Bearer创始人兼首席执行官\n\n- #### [Advait Ruia](https://www.linkedin.com/in/advait-ruia-2aa52a85/) - SuperTokens联合创始人\n\n- #### [Brian Levine](https://www.linkedin.com/in/brian-levine-cyberlaw/) - 安永帕特农网络安全与数据隐私总监\n\n- #### [Joe Toscano](https://www.linkedin.com/in/realjoet/) - 《数据分级》作者/主题演讲人\n\n- #### [Sonya Moisset](https://www.linkedin.com/in/sonyamoisset/) - Snyk高级开发者布道师"
+      }
+    },
+    {
+      "segment_id": "8fcdd6d4",
+      "source_content": "Join us as we delve into the intricacies of securing modern software, glean insights from industry experts, and engage in thought-provoking discussions that will shape the future of developer-first security.",
+      "source_content_hash": "51df67bdcdc3c22605cdd15a66943face31bd0abc919ab0054c08140fa315725",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "加入我们，共同探讨现代软件安全的核心议题，汲取行业领袖的真知灼见，参与将重塑开发者优先安全未来的深度对话。"
+      }
+    },
+    {
+      "segment_id": "53aa2b95",
+      "source_content": "This is more than an event; it's a movement to champion a culture where security isn't an afterthought but a fundamental aspect of innovation. We invite you to be a part of this transformative journey that promises to revolutionize how we approach code security.",
+      "source_content_hash": "3de6477c6ec91be8ac50bbd7c490518d977508a674be2e5824e3947610c4b82d",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "这不仅是一场活动，更是一场倡导安全文化变革的运动——让安全成为创新基石而非事后补丁。诚邀您参与这场将彻底改变代码安全实践的转型之旅。"
+      }
+    },
+    {
+      "segment_id": "9c9e2b64",
+      "source_content": "Mark your calendars and register now for Developer-First Security Week. Together, we're writing the next chapter in secure software development.",
+      "source_content_hash": "8471111b41ac7eaf2a64f4323300583c9e939e6bf7bf89f99cc01ff39f6bc76b",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "立即标记您的日历并注册开发者优先安全周活动。让我们携手谱写安全软件开发的新篇章。"
+      }
+    },
+    {
+      "segment_id": "d53c8ed4",
+      "source_content": "#### #DevSecMesh #DevSecWeek #DeveloperSecurity #SecureCoding",
+      "source_content_hash": "92a0432b896cdabf9fea917caf9d7be66ea52556e483726188421a335bf3751b",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "#### #开发安全融合 #安全周 #开发者安全 #安全编码"
+      }
+    }
+  ],
+  "target_i18n_subpath": "docusaurus-plugin-content-blog/2023-8-4-the-developer-first-security-week-a-paradigm-shift-in-prioritizing-code-security.md",
+  "last_updated_timestamp": "2025-06-08T18:49:09.308582+00:00",
+  "schema_version": "1.0",
+  "translated_versions": {
+    "zh-CN": "480428ba8983bfe26b4841ffc58f9905bcbadde882f819d0343ecaeec3056a83"
+  }
+}

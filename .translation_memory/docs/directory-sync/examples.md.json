@@ -1,0 +1,72 @@
+{
+  "source_file_path_relative_to_docusaurus_root": "docs/directory-sync/examples.md",
+  "source_file_content_hash": "e83a27b808e2406d153d5ae0d7d65354d0eb3d376a2af536d0db594446632c16",
+  "segments": [
+    {
+      "segment_id": "58cfcc64",
+      "source_content": "---\ntitle: Examples & Resources (Directory Sync)\nsidebar_label: Examples & Resources\ndescription: Examples & Resources for our Directory Sync product\n---",
+      "source_content_hash": "a9f13a266fa68d34dfe9c39f0a40de80a352504afb706f620b9f48ed08ebf89b",
+      "node_type": "yaml",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_58cfcc64"
+      }
+    },
+    {
+      "segment_id": "a703643c",
+      "source_content": "# Examples & Resources (Directory Sync)",
+      "source_content_hash": "99bbd960a6ebafcc878783bb5abf01ca7ce0a4f55304575718334d5d4d06cec7",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "# 示例与资源（目录同步）"
+      }
+    },
+    {
+      "segment_id": "d912d376",
+      "source_content": "## Examples",
+      "source_content_hash": "0d19ab46319785768005536313f02bd3b9b779aaed82eeac5bf7a7f796ad3ef1",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 示例"
+      }
+    },
+    {
+      "segment_id": "be33979e",
+      "source_content": "- [Directory Sync with Next.js](https://github.com/boxyhq/jackson-examples/tree/main/apps/directory-sync)\n- [Directory Sync (embedded as a library) with Next.js](https://github.com/boxyhq/jackson-examples/tree/main/apps/directory-sync-embedded)",
+      "source_content_hash": "f6a02db4c71d0fdbb9e9b3a7ce6cf06aed360998b89a1ff4f95b37a694ad4c4e",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- [Next.js 目录同步实现](https://github.com/boxyhq/jackson-examples/tree/main/apps/directory-sync)\n- [Next.js 嵌入式目录同步（作为库集成）](https://github.com/boxyhq/jackson-examples/tree/main/apps/directory-sync-embedded)"
+      }
+    },
+    {
+      "segment_id": "70153c6e",
+      "source_content": "## Resources",
+      "source_content_hash": "75c6211de8f8951e8037d10289e3e5d0177b8a172b593345006b5b42a8e08e0e",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 资源"
+      }
+    },
+    {
+      "segment_id": "4ddf6ae7",
+      "source_content": "- [SCIM 2.0 Protocol](https://datatracker.ietf.org/doc/html/rfc7644)",
+      "source_content_hash": "32333db8f862fac404cf21026e9bf8ffda49fd276cb0be393065da9d5ce99d18",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- [SCIM 2.0 协议规范](https://datatracker.ietf.org/doc/html/rfc7644)"
+      }
+    }
+  ],
+  "target_i18n_subpath": "docusaurus-plugin-content-docs/current/directory-sync/examples.md",
+  "last_updated_timestamp": "2025-06-08T18:49:09.294938+00:00",
+  "schema_version": "1.0",
+  "translated_versions": {
+    "zh-CN": "e83a27b808e2406d153d5ae0d7d65354d0eb3d376a2af536d0db594446632c16"
+  }
+}

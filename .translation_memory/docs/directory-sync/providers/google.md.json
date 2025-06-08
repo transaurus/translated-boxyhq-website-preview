@@ -1,0 +1,452 @@
+{
+  "source_file_path_relative_to_docusaurus_root": "docs/directory-sync/providers/google.md",
+  "source_file_content_hash": "a4d2577cc289fd5a184553e70c3f26727e0dbfdfce56e9df23c2707c9c1c036b",
+  "segments": [
+    {
+      "segment_id": "58cfcc64",
+      "source_content": "---\ntitle: Google Workspace Directory\nsidebar_label: Google Workspace\n---",
+      "source_content_hash": "c64af4ccc084ee24c5df9cb316fb22783a10c913ab6ba635b0f61cb63b93d024",
+      "node_type": "yaml",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_58cfcc64"
+      }
+    },
+    {
+      "segment_id": "b3de8742",
+      "source_content": "# Google Workspace",
+      "source_content_hash": "d557e50a2138fcb99b696fc226a9b586ef252b4024a7321308fad1dfc4368f14",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "# Google Workspace"
+      }
+    },
+    {
+      "segment_id": "3fbbcc07",
+      "source_content": "Google Workspace SCIM support is pretty minimal, so we directly tap into their APIs to give you the full benefit of SCIM-like functionality.",
+      "source_content_hash": "a91e390c08dfd3ce78ea0c5edf367538a21209211eef5d6b78a56244b6f30872",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "Google Workspace 对 SCIM 的支持较为有限，因此我们直接调用其 API 来提供完整的类 SCIM 功能。"
+      }
+    },
+    {
+      "segment_id": "7e5c5a39",
+      "source_content": "To enable this you have to authenticate against Google so that we get access to the Admin SDK API. When you create a new Directory Sync connection the Google authentication URL is displayed, this can be sent to your customer so they can authenticate against their Google tenant. It doesn't require any of the traditional SCIM setup.",
+      "source_content_hash": "501e40704424c19a3962de94bda6c2d22ddd59f8f9d9e42d5120b0ac322dd880",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "启用此功能需通过 Google 认证以获取 Admin SDK API 访问权限。创建新目录同步连接时，系统会显示 Google 认证 URL，您可将该 URL 发送给客户以完成其 Google 租户的认证。此过程无需传统 SCIM 配置。"
+      }
+    },
+    {
+      "segment_id": "9fcbdce9",
+      "source_content": "## Self-hosting instructions",
+      "source_content_hash": "d60502844b31a3f9dd2d9bbfa3bd7c406e8ba862b3dc21f000b9116fd516e91e",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 自托管配置指南"
+      }
+    },
+    {
+      "segment_id": "ad8fd492",
+      "source_content": "If you are self-hosting the following guide will walk you through the process of configuring SAML Jackson to use Google Workspace as a directory sync provider.",
+      "source_content_hash": "fa75449cc0f953216630b587591e4cda88c3edb42146f4483686d1a033b54410",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "若采用自托管部署，以下指南将帮助您配置 SAML Jackson 以使用 Google Workspace 作为目录同步供应商。"
+      }
+    },
+    {
+      "segment_id": "5beeb758",
+      "source_content": "---",
+      "source_content_hash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "node_type": "thematicBreak",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "---"
+      }
+    },
+    {
+      "segment_id": "39b3772c",
+      "source_content": "Jackson requires a Google OAuth App to be configured to access the Admin SDK API. You can use your existing OAuth App or create a new one.",
+      "source_content_hash": "3def2aded64070e0ef920d1a6f26557087a96f6d3ae2f22efbcda8fccef92be2",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "Jackson 需配置 Google OAuth 应用来访问 Admin SDK API。您可使用现有 OAuth 应用或新建一个。"
+      }
+    },
+    {
+      "segment_id": "bc633244",
+      "source_content": "### Create OAuth App",
+      "source_content_hash": "d9196c29b33c9fe8df5f9c5376e374efa66876b93e878385be4241ea154dee32",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 创建 OAuth 应用"
+      }
+    },
+    {
+      "segment_id": "2df4f75f",
+      "source_content": "Navigate to the [Google Cloud Console](https://console.cloud.google.com/) and select your project from the list.",
+      "source_content_hash": "1a7c47e0c59639c1fc1e948f4893e61d358d05df89fc5730ce6eb60a3de2ff11",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "访问 [Google Cloud Console](https://console.cloud.google.com/) 并从列表中选择您的项目。"
+      }
+    },
+    {
+      "segment_id": "98cfbd53",
+      "source_content": "![Google Workspace DSync Step 1](/images/docs/jackson/dsync-providers/google/oauth/1.png)",
+      "source_content_hash": "e851ef5af9debc4c1724f1c727799765d7f0e15caccf145ca9a0c92c25599600",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![Google Workspace DSync Step 1](/images/docs/jackson/dsync-providers/google/oauth/1.png)"
+      }
+    },
+    {
+      "segment_id": "ccc88b4c",
+      "source_content": "Select **APIs & Services** from the left menu and then select **Credentials**.",
+      "source_content_hash": "ffcf16ff04432e075fbea9d0965f5677b4dd4f5a45da87ae9846bde6ab5df4af",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "从左侧菜单选择 **APIs & Services**，然后选择 **Credentials**。"
+      }
+    },
+    {
+      "segment_id": "d9172fa4",
+      "source_content": "Select **OAuth client ID** from the **CREATE CREDENTIALS** dropdown.",
+      "source_content_hash": "2fc46e138c728497f4808c41689925e678ae6f681b3947739866c80caad4b2ca",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "从 **CREATE CREDENTIALS** 下拉菜单中选择 **OAuth client ID**。"
+      }
+    },
+    {
+      "segment_id": "26524352",
+      "source_content": "![Google Workspace DSync Step 2](/images/docs/jackson/dsync-providers/google/oauth/2.png)",
+      "source_content_hash": "58ba638e4f45ff8b371c9ed22975c3b90d3294d536007024a5bdfe6ca5b9d486",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![Google Workspace DSync Step 2](/images/docs/jackson/dsync-providers/google/oauth/2.png)"
+      }
+    },
+    {
+      "segment_id": "73ab96a3",
+      "source_content": "Give your credentials a name and select **Web application** as the **Application type**.",
+      "source_content_hash": "ebed55c68deee0fa52d204dfab765bece7c959e6b84b2436df42ffddc64a7d5d",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "为凭证命名，并选择 **Web application** 作为 **Application type**。"
+      }
+    },
+    {
+      "segment_id": "7499a4e7",
+      "source_content": "Add the following **Authorized redirect URIs** and then click **Create**.",
+      "source_content_hash": "c9f5375a922b8835bd4f8a10e0e0e44475cd4964664e7a55f1442886faf90ac8",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "添加以下 **Authorized redirect URIs** 后点击 **Create**。"
+      }
+    },
+    {
+      "segment_id": "517051a7",
+      "source_content": "`https://<your-domain>/api/scim/oauth/callback`",
+      "source_content_hash": "b738e2607132153bfd3fd8e2bd2107b0c34a60ed9a298bd52268e605848f2281",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "`https://<your-domain>/api/scim/oauth/callback`"
+      }
+    },
+    {
+      "segment_id": "135468ee",
+      "source_content": "![Google Workspace DSync Step 3](/images/docs/jackson/dsync-providers/google/oauth/3.png)",
+      "source_content_hash": "a2a33efe989fd37caeb93101c47966b871403f5af5b1cd9be481f07fe0bbfbdf",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![Google Workspace DSync Step 3](/images/docs/jackson/dsync-providers/google/oauth/3.png)"
+      }
+    },
+    {
+      "segment_id": "33a4805e",
+      "source_content": ":::info\nNote that the above callback URL works if you're using Jackson as a service.\n\nIf using Jackson as an NPM package, the Authorized redirect URIs will be a URL on your application that you'll need to configure. See [Google Directory Sync API](/docs/directory-sync/api-reference#google-directory-sync) for more information.\n:::",
+      "source_content_hash": "6172c674cfb23fdb527e44ef7ce0508aa45094ba005f0f8234cc232376eeff12",
+      "node_type": "containerDirective",
+      "translatable": true,
+      "translations": {
+        "zh-CN": ":::info\n注意：上述回调 URL 适用于将 Jackson 作为服务使用的情况。\n\n若以 NPM 包形式使用 Jackson，需在您的应用中配置重定向 URI。详见 [Google 目录同步 API](/docs/directory-sync/api-reference#google-directory-sync)。\n:::"
+      }
+    },
+    {
+      "segment_id": "8af76f3d",
+      "source_content": "Copy the **Client ID** and **Client secret** and save them for later.",
+      "source_content_hash": "3a6be6dad69a36563ba76bd55d79f16d4a05d92659dec71a742f8cd414ff5e3b",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "复制 **Client ID** 和 **Client secret** 并妥善保存。"
+      }
+    },
+    {
+      "segment_id": "a9d49f92",
+      "source_content": "![Google Workspace DSync Step 4](/images/docs/jackson/dsync-providers/google/oauth/4.png)",
+      "source_content_hash": "9425637afd0cf21e80d37e0a7ea079f97e32a3402d364919e7eacd8d1f0df9d6",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![Google Workspace DSync Step 4](/images/docs/jackson/dsync-providers/google/oauth/4.png)"
+      }
+    },
+    {
+      "segment_id": "7d0728d9",
+      "source_content": ":::info\nPlease don't forget to configure the `OAuth consent screen` and publish it so your customers can access it.\n:::",
+      "source_content_hash": "0c32ed30019b275b98a46f087aea43bd627d90372c442c4a6bda8a87e897d8c9",
+      "node_type": "containerDirective",
+      "translatable": true,
+      "translations": {
+        "zh-CN": ":::info\n请务必配置并发布 `OAuth consent screen`，否则客户将无法访问。\n:::"
+      }
+    },
+    {
+      "segment_id": "b36c6338",
+      "source_content": "See the [Environment Variables](/docs/jackson/deploy/env-variables#directory-sync) section to learn how to configure Jackson with these values.",
+      "source_content_hash": "541013d49e3cbee51134b47abea29ac90f81dcc59255cd38f37feaec744d8612",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "参阅[环境变量](/docs/jackson/deploy/env-variables#directory-sync)章节了解如何配置 Jackson 使用这些参数。"
+      }
+    },
+    {
+      "segment_id": "b9aaa519",
+      "source_content": "Once Jackson is configured, you can authenticate the tenants with Google OAuth and sync their Workspace directory.",
+      "source_content_hash": "979aaaf664939bfd1554de251372daded9fd7e604c19803b3cb4512be006a1ec",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "完成 Jackson 配置后，即可通过 Google OAuth 认证租户并同步其 Workspace 目录。"
+      }
+    },
+    {
+      "segment_id": "1a316f80",
+      "source_content": "### Enable Admin SDK API",
+      "source_content_hash": "530ca5c2bec448eb3ecbacd585b714a648621f5dfb16b600342bda6fdb5c3878",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 启用 Admin SDK API"
+      }
+    },
+    {
+      "segment_id": "40158b4b",
+      "source_content": "We need access to the Admin SDK API. To enable this follow these instructions:-",
+      "source_content_hash": "a86dfef714750007cf9f8c4da19d94f40293fbf969654fff13d30f01d94a6f85",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "需按以下步骤启用 Admin SDK API 访问权限："
+      }
+    },
+    {
+      "segment_id": "6ea4c715",
+      "source_content": "Head over to the `Enabled APIs and services` section in the console.",
+      "source_content_hash": "4b67f6682dc3b2b8fa35ed72a59f0d529c5447194d9858d9bea164c658e41395",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "进入控制台的 `Enabled APIs and services` 版块。"
+      }
+    },
+    {
+      "segment_id": "79ad944d",
+      "source_content": "![Google Workspace DSync Enable API Step 1](/images/docs/jackson/dsync-providers/google/oauth/enable-api-1.png)",
+      "source_content_hash": "1548a7c0ced895c636371f72a01b34edb01087adde7d00eff3fcf69b54f5aad2",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![Google Workspace DSync Enable API Step 1](/images/docs/jackson/dsync-providers/google/oauth/enable-api-1.png)"
+      }
+    },
+    {
+      "segment_id": "531437ca",
+      "source_content": "Search for `admin sdk api`.",
+      "source_content_hash": "3205d8dd26be999164e5764a6eb80a58e8ffa765cd122f05b838052f4c90eb8c",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "搜索 `admin sdk api`。"
+      }
+    },
+    {
+      "segment_id": "06e24cc0",
+      "source_content": "![Google Workspace DSync Enable API Step 2](/images/docs/jackson/dsync-providers/google/oauth/enable-api-2.png)",
+      "source_content_hash": "551786603137354caf5a296ad62ff119b6d05406e7daa7d63188bcdc14187964",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![Google Workspace DSync Enable API Step 2](/images/docs/jackson/dsync-providers/google/oauth/enable-api-2.png)"
+      }
+    },
+    {
+      "segment_id": "7f71ff2a",
+      "source_content": "Select the `Admin SDK API` and click on the `ENABLE` button.",
+      "source_content_hash": "00c82ac412e35ec44d8710e612c5dde418655179718f9e3e70acc415159845bc",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "选择 `Admin SDK API` 并点击 `ENABLE` 按钮。"
+      }
+    },
+    {
+      "segment_id": "147e8550",
+      "source_content": "![Google Workspace DSync Enable API Step 3](/images/docs/jackson/dsync-providers/google/oauth/enable-api-3.png)",
+      "source_content_hash": "db1ab2b276fec5d4dcb5a80203b7c1cb3e4ab419753047a8775d051b6a2ec638",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![Google Workspace DSync Enable API Step 3](/images/docs/jackson/dsync-providers/google/oauth/enable-api-3.png)"
+      }
+    },
+    {
+      "segment_id": "daed5acb",
+      "source_content": "### Schedule Sync",
+      "source_content_hash": "ea7a1bf14495ee7d150b3922526045653ca2806e3d0f807c46e5668794363ecf",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 配置同步计划"
+      }
+    },
+    {
+      "segment_id": "6cc549f2",
+      "source_content": "Jackson can be configured to sync your Google Workspace directory on a schedule (e.g. every 2 hours).",
+      "source_content_hash": "c9836a4269348ba67d8fcdace16996e15266d380f0a1ecab049416d8c08a7d40",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "Jackson 可配置为按计划（例如每 2 小时）同步 Google Workspace 目录。"
+      }
+    },
+    {
+      "segment_id": "d0dd855b",
+      "source_content": "Jackson service exposes the below API URL that can be called to trigger a sync. You can use a cron job to invoke this URL on a schedule.",
+      "source_content_hash": "d897deef98d7b0338dd6ed424d3b0584e1bb868e927d02af5107d335ede2df32",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "Jackson 服务暴露了以下 API URL 用于触发同步。您可以通过定时任务（cron job）按计划调用该 URL。"
+      }
+    },
+    {
+      "segment_id": "7736989b",
+      "source_content": "Depending on the number of Google directories you have, the sync can take a few minutes to complete.",
+      "source_content_hash": "dace760fcc2d1d611749633e6eb81331f75eee6ed9ad3b436d117d326cd9f6b3",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "根据 Google 目录的数量，同步过程可能需要几分钟才能完成。"
+      }
+    },
+    {
+      "segment_id": "a716abf2",
+      "source_content": "```bash\ncurl -X POST \\\n  -H \"Authorization: Api-Key YOUR_API_KEY\" \\\n  http://localhost:5225/api/v1/dsync/cron/sync-google\n```",
+      "source_content_hash": "521117c3589fb25185e55d3a1e1fa87ed13b789f21850b953f720d47523d05db",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_a716abf2"
+      }
+    },
+    {
+      "segment_id": "2547a6bb",
+      "source_content": "Alternatively you can set the `DSYNC_GOOGLE_CRON_INTERVAL` env var to enable the cron in the Jackson service.",
+      "source_content_hash": "28735b9ed4562fc2fd7a5a09c923660ff127f4b4c8822528607e20470ec4124f",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "或者，您可以通过设置环境变量 `DSYNC_GOOGLE_CRON_INTERVAL` 来启用 Jackson 服务中的定时同步功能。"
+      }
+    },
+    {
+      "segment_id": "0750bfa1",
+      "source_content": "Learn more about [Google Directory Sync API](/docs/directory-sync/api-reference#4-sync-directory).",
+      "source_content_hash": "92af349a2d8b9c7f4dab3f2baef5bb44abe26f25689edabb29d18208a21ac0a2",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "了解更多关于 [Google 目录同步 API](/docs/directory-sync/api-reference#4-sync-directory) 的信息。"
+      }
+    },
+    {
+      "segment_id": "bd30d33e",
+      "source_content": "### FAQ",
+      "source_content_hash": "f985d80cd209759f3dc9c3a755b37f9025cb0004b5067b9678ae0300b3e76200",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 常见问题"
+      }
+    },
+    {
+      "segment_id": "f6b04a59",
+      "source_content": "#### Does Google Workspace sync in real time?",
+      "source_content_hash": "1c5ac820c7578e1fec1c005380017aaf2d85d1537f492de39e0d087edcc15713",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "#### Google Workspace 是否支持实时同步？"
+      }
+    },
+    {
+      "segment_id": "a311e967",
+      "source_content": "No, Google Workspace sync is not real-time. Jackson syncs the Google Workspace directory on a schedule (e.g. every 2 hours). In a self-hosted deployment, you can configure a cron job to sync the directory on a schedule of your choice.",
+      "source_content_hash": "656b06e81b230937682ffa75854bea3d266c1c1982e26c2599a4a83f8e5faef2",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "不支持。Google Workspace 的同步并非实时进行。Jackson 会按计划（例如每 2 小时）同步 Google Workspace 目录。在自托管部署中，您可以配置定时任务按自定义计划同步目录。"
+      }
+    },
+    {
+      "segment_id": "f8edb6d2",
+      "source_content": "#### Can I sync specific groups from Google Workspace?",
+      "source_content_hash": "7532ba3278ba91fac65d93d2bc781b3d0290ab0a7502bfd816e9c7b875c6e4d2",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "#### 能否仅同步 Google Workspace 中的特定群组？"
+      }
+    },
+    {
+      "segment_id": "1862c5fe",
+      "source_content": "Not possible at the moment. Jackson syncs all the groups from Google Workspace. You have to filter the groups from your application's side.",
+      "source_content_hash": "65e391f4551066e2b49bb7974d2d73307d65656cd07bd19275474a78ccda42fb",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "目前无法实现。Jackson 会同步 Google Workspace 中的所有群组，您需要在应用端自行筛选所需群组。"
+      }
+    }
+  ],
+  "target_i18n_subpath": "docusaurus-plugin-content-docs/current/directory-sync/providers/google.md",
+  "last_updated_timestamp": "2025-06-08T18:49:09.299979+00:00",
+  "schema_version": "1.0",
+  "translated_versions": {
+    "zh-CN": "a4d2577cc289fd5a184553e70c3f26727e0dbfdfce56e9df23c2707c9c1c036b"
+  }
+}

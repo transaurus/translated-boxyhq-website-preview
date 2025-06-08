@@ -1,0 +1,72 @@
+{
+  "source_file_path_relative_to_docusaurus_root": "docs/directory-sync/observability.md",
+  "source_file_content_hash": "dfb698b0603abf69e48a1d305637c5d85f6e0dbf2109f04f87da7ac67c147e70",
+  "segments": [
+    {
+      "segment_id": "58cfcc64",
+      "source_content": "---\ntitle: Observability for Directory Sync\ndescription: Directory Sync provides first-class observability on the back of OpenTelemetry.\nsidebar_label: Observability\n---",
+      "source_content_hash": "128ee3ee302c0bb988918759b7273fd12c9fbcd485ecf0f81b319efe6ba1a31c",
+      "node_type": "yaml",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_58cfcc64"
+      }
+    },
+    {
+      "segment_id": "a703643c",
+      "source_content": "# Observability",
+      "source_content_hash": "3dd3435d13f8eecbe1bfb19960df6abd92a56a9dc05e6558078eebc1cbe2fb1c",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "# 可观测性"
+      }
+    },
+    {
+      "segment_id": "53eaf0e1",
+      "source_content": "Jackson provides first-class observability on the back of OpenTelemetry. Currently we support the following metrics. Traces and logs are coming soon.",
+      "source_content_hash": "47fbaf799dedbf57cd3c0a7dfd7441e517b5ed6afb509e90a109f4c9a7933093",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "Jackson基于OpenTelemetry提供一流的可观测性支持。当前我们支持以下指标功能，链路追踪和日志功能即将推出。"
+      }
+    },
+    {
+      "segment_id": "8ac585fb",
+      "source_content": "Please check the [Environment Variables](../jackson/deploy/env-variables#opentelemetry-configuration) to configure to enable this feature.",
+      "source_content_hash": "cf86f3696a947804b3108124fbc0e836a48cf1e338085e4aa502a82719c3e1bb",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "请查看[环境变量](../jackson/deploy/env-variables#opentelemetry-configuration)配置以启用此功能。"
+      }
+    },
+    {
+      "segment_id": "ba4f48ff",
+      "source_content": "## Metrics",
+      "source_content_hash": "0452266c781fa76ebf563ff833063a8faecccf276367c128b9a14f0a144bdcb3",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 指标"
+      }
+    },
+    {
+      "segment_id": "87e3966e",
+      "source_content": "| Name                                | Description                                                  | Type  |\n| ----------------------------------- | ------------------------------------------------------------ | ----- |\n| `jackson.dsync.connection.create`   | Number of directory sync connection create requests          | Count |\n| `jackson.dsync.connection.get`      | Number of directory sync connection get requests             | Count |\n| `jackson.dsync.connection.delete`   | Number of directory sync connection delete requests          | Count |\n| `jackson.dsync.events_batch.failed` | Indicates that a batch of directory sync events failed       | Count |",
+      "source_content_hash": "9a800488372eb057141ef9fc3b1db5780cef0e26ea9279d2cf47ea2dd097a163",
+      "node_type": "table",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_87e3966e"
+      }
+    }
+  ],
+  "target_i18n_subpath": "docusaurus-plugin-content-docs/current/directory-sync/observability.md",
+  "last_updated_timestamp": "2025-06-08T18:49:09.294409+00:00",
+  "schema_version": "1.0",
+  "translated_versions": {
+    "zh-CN": "dfb698b0603abf69e48a1d305637c5d85f6e0dbf2109f04f87da7ac67c147e70"
+  }
+}

@@ -1,0 +1,552 @@
+{
+  "source_file_path_relative_to_docusaurus_root": "guides/jackson/frameworks/rails.md",
+  "source_file_content_hash": "00968d34147b5fc099d737c2063b669025d58ac3d4a29f14866d7e34f3a14c66",
+  "segments": [
+    {
+      "segment_id": "58cfcc64",
+      "source_content": "---\ntitle: Add SAML SSO to Ruby on Rails App with BoxyHQ\ndescription: Add SAML SSO to Ruby on Rails App with BoxyHQ\nsidebar_label: Ruby on Rails\ntoc_min_heading_level: 2\ntoc_max_heading_level: 5\n---",
+      "source_content_hash": "1edde4f96eee5bc034b4818d6fa1db4972e6e87121152d0eb7418135ba3417a8",
+      "node_type": "yaml",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_58cfcc64"
+      }
+    },
+    {
+      "segment_id": "623f74e7",
+      "source_content": "import Tabs from '@theme/Tabs';\nimport TabItem from '@theme/TabItem';",
+      "source_content_hash": "86702643a5c3bdf74257ff6062535897129ed9144c4f5b70edfe338fef3e5c73",
+      "node_type": "mdxjsEsm",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_623f74e7"
+      }
+    },
+    {
+      "segment_id": "9fcbdce9",
+      "source_content": "# Add SAML SSO to Ruby on Rails App",
+      "source_content_hash": "025e621ed7ef8eb48b841290a860a822b7e6c6056ae80e53839650901ed21765",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "# 为Ruby on Rails应用添加SAML单点登录"
+      }
+    },
+    {
+      "segment_id": "ad8fd492",
+      "source_content": "This guide assumes that you have a Ruby on Rails app and want to enable SAML Single Sign-On authentication for your enterprise customers. By the end of this guide, you'll have an app that allows you to authenticate the users using SAML Single Sign-On.",
+      "source_content_hash": "6acd8fb24748318f040b9e245e13d0cd799d3a6ffee7827f8953415615034822",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "本指南假设您已有一个Ruby on Rails应用，并希望为企业客户启用SAML单点登录认证。通过本指南，您将获得一个能够使用SAML单点登录认证用户的应用。"
+      }
+    },
+    {
+      "segment_id": "86b54d44",
+      "source_content": "Visit the [GitHub repository](https://github.com/boxyhq/ruby-examples/tree/main/rails-enterprise-sso) to see the source code for the Ruby on Rails SAML SSO integration.",
+      "source_content_hash": "a2cacda4d42ee97d9f1a974d23a74ea9862ae7127c32ec6916963bb9c6e0d51f",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "访问[GitHub仓库](https://github.com/boxyhq/ruby-examples/tree/main/rails-enterprise-sso)查看Ruby on Rails SAML单点登录集成的源代码。"
+      }
+    },
+    {
+      "segment_id": "39b3772c",
+      "source_content": "Integrating SAML SSO into an app involves the following steps.",
+      "source_content_hash": "b41d0c741a2a4a57f2f8fab371dffbd39dc33a404f97c74b706f4e166b827a0d",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "为应用集成SAML单点登录包含以下步骤："
+      }
+    },
+    {
+      "segment_id": "3b695c37",
+      "source_content": "- Configure SAML Single Sign-On\n- Authenticate with SAML Single Sign-On",
+      "source_content_hash": "bc65b0d357e9559034fbd9763bb9510bb34ac402187fc17447e5e97d7258d38e",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- 配置SAML单点登录\n- 通过SAML单点登录进行认证"
+      }
+    },
+    {
+      "segment_id": "40f9552a",
+      "source_content": "## Configure Enterprise SSO on Rails",
+      "source_content_hash": "ded0b1cfecac513e06a717569762c3b2100e7a699f5e439cdb1739b51946b9e7",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 在Rails上配置企业级单点登录"
+      }
+    },
+    {
+      "segment_id": "f2c2bdd0",
+      "source_content": "This step allows your tenants to configure SAML connections for their users. Read the following guides to understand more about this.",
+      "source_content_hash": "44570eec6f1685f46ec726135e0ef1456876caf09b8afa825586b7f20c3776a4",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "此步骤允许您的租户为其用户配置SAML连接。阅读以下指南以了解更多信息："
+      }
+    },
+    {
+      "segment_id": "b3f5c97c",
+      "source_content": "- [UI Best Practices for Configuring SAML Single Sign-On](/guides/jackson/configuring-saml-sso)\n- [SSO Connection API](/docs/jackson/sso-flow/)",
+      "source_content_hash": "088ba8b656d2059418e53604b3eba9e3f53a5c366eed28d0cbbe52042b6b3562",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- [配置SAML单点登录的UI最佳实践](/guides/jackson/configuring-saml-sso)\n- [单点登录连接API](/docs/jackson/sso-flow/)"
+      }
+    },
+    {
+      "segment_id": "d06306f7",
+      "source_content": "## Authenticate with SAML Single Sign-On",
+      "source_content_hash": "beaad64d7ce66f37bfb7d59b009777c5c9085f0353a91b1fc2650dc70a7345bb",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 通过SAML单点登录进行认证"
+      }
+    },
+    {
+      "segment_id": "73ab96a3",
+      "source_content": "Once you add a SAML connection, the app can use this SAML connection to initiate the SSO authentication flow using SAML Jackson. The following sections focus more on the SSO authentication side.",
+      "source_content_hash": "fc68bfce93d6cc7f2c605992f3e55f423b3bbf0dd231b9da91e6a1ce02758c7d",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "添加SAML连接后，应用可使用此连接通过SAML Jackson发起单点登录认证流程。以下部分更侧重于单点登录认证方面。"
+      }
+    },
+    {
+      "segment_id": "a1b3d8cb",
+      "source_content": "### Deploy SAML Jackson",
+      "source_content_hash": "2755361fb186459f15d2e616b8ec89548f33c7ff9bfbe123f37c378529b405c3",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 部署SAML Jackson"
+      }
+    },
+    {
+      "segment_id": "517051a7",
+      "source_content": "The first step is to deploy the SAML Jackson service. Follow the [deployment docs](/docs/jackson/deploy/service) to install and configure the SAML Jackson.",
+      "source_content_hash": "0c16cc7a17726fcdcc50bf1602ebe7021f96730b33f9290a942214fc9fc5a232",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "第一步是部署SAML Jackson服务。按照[部署文档](/docs/jackson/deploy/service)安装并配置SAML Jackson。"
+      }
+    },
+    {
+      "segment_id": "80d9e13c",
+      "source_content": "### Setup SAML Jackson Integration",
+      "source_content_hash": "ea864afbfebc4f5f1f20eb14994f0673e48450591361a65efba9f43abd12f913",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 设置SAML Jackson集成"
+      }
+    },
+    {
+      "segment_id": "33331f27",
+      "source_content": "We will dive into Jackson integration with two popular authentication libraries:",
+      "source_content_hash": "a878f74ddff1e1e23a5bf8f82be40ac69027ed048dd7bd77751e7973d777f386",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "我们将通过两种流行的认证库深入探讨Jackson集成："
+      }
+    },
+    {
+      "segment_id": "8612da05",
+      "source_content": "- [Sorcery](#with-sorcery)\n- [OmniAuth](#with-omniauth)",
+      "source_content_hash": "0d2650d12b0f3bc8af74b41520fa88616ae4150446830e1ea985fb6bad208775",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- [使用Sorcery](#with-sorcery)\n- [使用OmniAuth](#with-omniauth)"
+      }
+    },
+    {
+      "segment_id": "35a77014",
+      "source_content": "#### With Sorcery",
+      "source_content_hash": "8b05ca6d207a1364e6171083b1b1a5c67df38a9a5bc4151ffaef49171fe38661",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "#### 使用Sorcery"
+      }
+    },
+    {
+      "segment_id": "13d9cd70",
+      "source_content": "First, we need to install and configure [sorcery](https://github.com/Sorcery/sorcery).",
+      "source_content_hash": "3bc1ce37260b7180ed2aaa13adf0e3d0ec7fb9cc8c2f3d1da70d4ee03b41fffc",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "首先，需要安装并配置[sorcery](https://github.com/Sorcery/sorcery)。"
+      }
+    },
+    {
+      "segment_id": "6f930b2f",
+      "source_content": "##### Install Dependencies",
+      "source_content_hash": "794f1511dc2e4f8ec66d4c361707bd71cef4c06abc18b235190f5a2808972c42",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "##### 安装依赖"
+      }
+    },
+    {
+      "segment_id": "c504c207",
+      "source_content": "Install the `sorcery` gem using",
+      "source_content_hash": "72d913491537e7427c99a80607e88146b01f8116aad8a77c587e2ea1d0671a86",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "使用以下命令安装`sorcery` gem："
+      }
+    },
+    {
+      "segment_id": "ac961110",
+      "source_content": "```shell\nbundle add sorcery\n```",
+      "source_content_hash": "178eedf5a59417f54b488b626217cf0589e69494be8c509fa6571667ba183ec4",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_ac961110"
+      }
+    },
+    {
+      "segment_id": "e50bebbf",
+      "source_content": "##### Configure the database",
+      "source_content_hash": "44b55e644e22796666cc82c59777d2d40fc0e76df115cb3269841e825a12c960",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "##### 配置数据库"
+      }
+    },
+    {
+      "segment_id": "6d254e09",
+      "source_content": "```shell title=\"Generate migration scripts for sorcery\"\n    bin/rails g sorcery:install external --only-submodules\n```",
+      "source_content_hash": "650a3c3753cf21d2193ee815f37ac1b1ad259c5fbff4d210254911c376e892c3",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_6d254e09"
+      }
+    },
+    {
+      "segment_id": "750e2f7e",
+      "source_content": "```shell title=\"Run migration scripts\"\n    bin/rake db:migrate\n```",
+      "source_content_hash": "b939877e7517ce4270aaad7a2ccb42af015bcb5c594c1a9b68c48e895f1c4ec2",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_750e2f7e"
+      }
+    },
+    {
+      "segment_id": "1d510af2",
+      "source_content": "```shell title=\"Generate the Authentication model\"\n    bin/rails generate model Authentication --migration=false\n```",
+      "source_content_hash": "72c899a97da8cbf462cd9cd6c26b31db6c5d0cf07956ab65993b7fa259e4a876",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_1d510af2"
+      }
+    },
+    {
+      "segment_id": "17c579d2",
+      "source_content": "```shell title=\"Modify the user schema\"\n    # remove the unused columns from the user table, we won't need the password field as the login is external\n    bin/rails generate migration RemoveColumnsFromUsers crypted_password:string salt:string\n    # add the new columns\n    bin/rails generate migration AddColumnsToUsers firstName:string lastName:string uid:string\n    # run the migrations\n    bin/rake db:migrate\n```",
+      "source_content_hash": "cc48796271274cd1ef90ca0c51fc678e707eafa7073ee11bf73c17ea71100f12",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_17c579d2"
+      }
+    },
+    {
+      "segment_id": "2fd0be2a",
+      "source_content": "##### Add a custom provider for Jackson",
+      "source_content_hash": "d5269d2192aa3ba58b1c5a291fa54c9a5612176ac7dd0807974eb5e8d655b1fc",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "##### 为Jackson添加自定义提供者"
+      }
+    },
+    {
+      "segment_id": "6270d577",
+      "source_content": "Add a custom sorcery provider for Jackson. We will name it `Boxyhqsso`.",
+      "source_content_hash": "2ea9ec2bf482474800c3942962ea6205144f356cbc6f8659523b9c91aade9815",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "为Jackson添加自定义sorcery提供者，命名为`Boxyhqsso`。"
+      }
+    },
+    {
+      "segment_id": "a1fa5396",
+      "source_content": "We rely on the `Protocols::Oauth2` mixin from the sorcery package. In a nutshell, here we are wiring up the OAuth 2.0 flow with Jackson. Jackson will redirect to the configured IdP connection based on the tenant/product.",
+      "source_content_hash": "fccd0e3989bc3b8fb328b27b01a99ac1893cc80081b5d9b19ed97055547145d5",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "我们依赖sorcery包中的`Protocols::Oauth2`混入。简而言之，这里我们正在与Jackson建立OAuth 2.0流程的连接。Jackson将根据租户/产品重定向到配置的身份提供者连接。"
+      }
+    },
+    {
+      "segment_id": "de7ed16f",
+      "source_content": ":::info\nBy including the file in the `app/lib` folder, rails will autoload the provider class.\n:::",
+      "source_content_hash": "2505326f10d241a05b8917a2db71fe81d1f0756293445b97fa7fed58c7074762",
+      "node_type": "containerDirective",
+      "translatable": true,
+      "translations": {
+        "zh-CN": ":::info\n通过将文件包含在`app/lib`文件夹中，Rails将自动加载提供者类。\n:::"
+      }
+    },
+    {
+      "segment_id": "7d898a0e",
+      "source_content": "```ruby title=\"app/lib/sorcery/providers/boxyhqsso.rb\"\n    module Sorcery\n      module Providers\n       # This class adds support for OAuth2.0 SSO flow with Jackson service.\n       #\n       #   config.boxyhqsso.site = <http://localhost:5225>\n       #   config.boxyhqsso.key = <key>\n       #   config.boxyhqsso.secret = <secret>\n       #   ...\n       #\n       class Boxyhqsso < Base\n         include Protocols::Oauth2\n\n         attr_reader :parse\n         attr_accessor :auth_url, :token_url, :user_info_path\n\n         def initialize\n           super\n\n           @site          = ENV['JACKSON_URL']\n           @auth_url      = '/api/oauth/authorize'\n           @token_url     = '/api/oauth/token'\n           @user_info_path = '/api/oauth/userinfo'\n           @parse = :json\n           # @state = SecureRandom.hex(16)\n         end\n\n         def get_user_hash(access_token)\n           response = access_token.get(user_info_path)\n           body = JSON.parse(response.body)\n           auth_hash(access_token).tap do |h|\n             h[:user_info] = body\n             h[:uid] = body['id']\n           end\n         end\n\n         # calculates and returns the url to which the user should be redirected,\n         # to get authenticated at the external provider's site.\n         def login_url(params, _session)\n           add_param(authorize_url(authorize_url: auth_url),\n                     [\n                       { name: 'tenant', value: params[:tenant] },\n                       { name: 'product', value: params[:product] }\n                     ])\n         end\n\n         # tries to login the user from access token\n         def process_callback(params, _session)\n           args = {}.tap do |a|\n             a[:code] = params[:code] if params[:code]\n           end\n           get_access_token(args, token_url: token_url, token_method: :post, auth_scheme: :request_body)\n         end\n\n         def add_param(url, query_params)\n           uri = URI(url)\n           qp = URI.decode_www_form(uri.query || [])\n           query_params.each do |param|\n             qp << [param[:name], param[:value]]\n           end\n           uri.query = URI.encode_www_form(qp)\n           uri.to_s\n         end\n       end\n    end\n    end\n\n```",
+      "source_content_hash": "257cc715ad47bdc826470edcf1e377d3a2e0023acbb8fa08be07a03ec6e4431d",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_7d898a0e"
+      }
+    },
+    {
+      "segment_id": "c6b2ca77",
+      "source_content": "##### Configure the custom sorcery provider",
+      "source_content_hash": "5ae8602c0dfde98cf757d2db69747195386ae262a545e9aed09ee0c3add77563",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "##### 配置自定义sorcery提供者"
+      }
+    },
+    {
+      "segment_id": "dce16ab4",
+      "source_content": "Add an initializer file to configure the sorcery module. Here we tell sorcery to load the `:external` submodule and also add `boxyhqsso` custom provider from the previous step to the `external_providers` list. Also, see the inline comments for `boxyhqsso` provider settings.",
+      "source_content_hash": "e0159a5964f2c8cc3d46d80f8a9c394a0ed524f01522d32ee7df879d5df99bcf",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "添加一个初始化文件来配置sorcery模块。这里我们告诉sorcery加载`:external`子模块，并将上一步中的`boxyhqsso`自定义提供者添加到`external_providers`列表中。同时，参见内联注释了解`boxyhqsso`提供者的设置。"
+      }
+    },
+    {
+      "segment_id": "0029045f",
+      "source_content": "```ruby title=\"config/initializers/sorcery.rb\"\n    Rails.application.config.sorcery.submodules = [:external]\n\n    # Here you can configure each submodule's features.\n    Rails.application.config.sorcery.configure do |config|\n\n      config.external_providers = [:boxyhqsso]\n\n      # URL of Jackson service\n      config.boxyhqsso.site = ENV['JACKSON_URL']\n      # This translates to client_id in OAuth 2.0. Setting it to dummy will allow us to use `tenant` and product` params instead\n      config.boxyhqsso.key = 'dummy'\n      # The url of the rails app to which Jackson sends back the authorization code\n      config.boxyhqsso.callback_url = 'http://localhost:3366/oauth/callback'\n      # This will be passed to Jackson token endpoint as part of credentials\n      config.boxyhqsso.secret = ENV['CLIENT_SECRET_VERIFIER']\n      # Takes care of converting the user info from the provider (Jackson) into the attributes of the User.\n      config.boxyhqsso.user_info_mapping = { email: 'email', uid: 'id', firstName: 'firstName', lastName: 'lastName'}\n\n      # --- user config ---\n      config.user_config do |user|\n\n       # -- external --\n       user.authentications_class = Authentication\n\n      end\n      # This line must come after the 'user config' block.\n      # Define which model authenticates with sorcery.\n      config.user_class = User\n\n    end\n```",
+      "source_content_hash": "5e8fe3b31730d53495b6fecb6741c41e838be3cd54c37931cefd1c75d2ef0f30",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_0029045f"
+      }
+    },
+    {
+      "segment_id": "de588fa2",
+      "source_content": "##### Routes and Controllers",
+      "source_content_hash": "e78bc53bfe75991e5ed3fbbd5afa3843417efe2e6e3fa983dfbad25747c5e2ae",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "##### 路由和控制器"
+      }
+    },
+    {
+      "segment_id": "3799844b",
+      "source_content": "Finally, we need to add the routes and controller files that initiate the login flow and handle the callback from the Jackson service.",
+      "source_content_hash": "c5e637048b4e45bae2b899ed6552c0f72518a2150024d422f3f425fe9dffd2a9",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "最后，需要添加路由和控制器文件以发起登录流程并处理来自Jackson服务的回调。"
+      }
+    },
+    {
+      "segment_id": "03427b3b",
+      "source_content": ":::info\nThe login flow is initiated by posting to `/sso`\n:::",
+      "source_content_hash": "dc1170d595e48b95f6c59b2662976b3f37ddbbf24966fda5c0752239be88e6da",
+      "node_type": "containerDirective",
+      "translatable": true,
+      "translations": {
+        "zh-CN": ":::info\n登录流程通过向`/sso`发起POST请求来启动。\n:::"
+      }
+    },
+    {
+      "segment_id": "d7cf3ad8",
+      "source_content": "<Tabs>\n     <TabItem value=\"routes\" label=\"Routes\" default>\n\n```ruby title=\"config/routes.rb\"\n    Rails.application.routes.draw do\n      ...\n      # Renders the login page\n      get 'sso', to: 'logins#index', as: :login\n      # Initiates the OAuth 2.0 redirect to Jackson SSO service\n      post 'sso', to: 'sorcery#oauth'\n      # logout the user\n      delete 'logout' => 'logins#destroy', as: :logout\n      # handles the redirect back from Jackson SSO service, exchanges code with access_token and then fetches userprofile. Sorcery creates the user if not present in database, else return the one in the db.\n      resource :oauth do\n        get :callback, to: 'sorcery#callback', on: :collection\n      end\n      # Show profile data\n      get 'profile', to: 'profiles#index', as: :profile\n\n      ...\n    end\n\n```\n\n  </TabItem>\n  <TabItem value=\"controllers\" label=\"Controllers\">\n     <Tabs>\n     <TabItem value=\"SorceryController\" label=\"SorceryController\" default>\n\nThe `oauth` action initiates the OAuth 2.0 flow to Jackson SSO service. In the `callback` action, sorcery exchanges the code for access_token and user profile. If a user exists in the database, then the value of `@current_user` is loaded from the database. Else a new user is created in the database and returned.\n\n```ruby title=\"app/controllers/sorcery_controller.rb\"\n     class SorceryController < ApplicationController\n         skip_before_action :require_login, raise: false\n\n         def oauth\n           login_at('boxyhqsso', state: SecureRandom.hex(16))\n         end\n\n         # rubocop:disable Metrics/AbcSize, Metrics/MethodLength\n         def callback\n           provider = 'boxyhqsso'\n           if @user = login_from(provider)\n             redirect_to profile_path, notice: \"Logged in from #{provider.titleize}!\"\n           else\n             begin\n               @user = create_from(provider)\n\n               reset_session # protect from session fixation attack\n               auto_login(@user)\n               redirect_to profile_path, notice: \"Logged in from #{provider.titleize}!\"\n             rescue\n               redirect_to root_path, alert: \"Failed to login from #{provider.titleize}!\"\n             end\n         end\n         rescue ::OAuth2::Error => e\n           Rails.logger.error e\n           Rails.logger.error e.code\n           Rails.logger.error e.description\n           Rails.logger.error e.message\n           Rails.logger.error e.backtrace\n         end\n\n    end\n\n```\n\n  </TabItem>\n\n  <TabItem value=\"LoginsController\" label=\"LoginsController\">\n\n```ruby title=\"app/controllers/logins_controller.rb\"\n    class LoginsController < ApplicationController\n          skip_before_action :require_login\n\n          def index; # render login view\n          end\n\n          def destroy\n              logout\n              redirect_to(root_path, notice: 'Logged out!')\n          end\n\n    end\n\n```\n\n  </TabItem>\n\n  <TabItem value=\"ProfilesController\" label=\"ProfilesController\">\n\n```ruby title=\"app/controllers/profiles_controller.rb\"\n    class ProfilesController < ApplicationController\n       def index; end # display profile information\n    end\n\n```\n\n  </TabItem>\n  </Tabs>\n  </TabItem>\n</Tabs>",
+      "source_content_hash": "c283951ca3fef82b606a570839cd6e9f0e5e95c9e5d599ccf7115952978fd3f7",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_d7cf3ad8"
+      }
+    },
+    {
+      "segment_id": "fd59095d",
+      "source_content": "#### With OmniAuth",
+      "source_content_hash": "d94fb3d1ce752a4c78f0e719942b62685633aa13acf9d73972840c3ea31806e9",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "#### 使用OmniAuth"
+      }
+    },
+    {
+      "segment_id": "aa0c9d14",
+      "source_content": ":::info\nUnlike sorcery, omniauth does not automatically associate with a User model nor persist the user in the database.\n:::",
+      "source_content_hash": "79e18b1419fdf6f0bc76e7e0a60c46466916f0bd23ff870be5d462b07ed1d267",
+      "node_type": "containerDirective",
+      "translatable": true,
+      "translations": {
+        "zh-CN": ":::info\n与sorcery不同，omniauth不会自动关联用户模型，也不会将用户信息持久化到数据库。\n:::"
+      }
+    },
+    {
+      "segment_id": "e020f7ed",
+      "source_content": "First, we need to install and configure [omniauth](https://github.com/omniauth/omniauth).",
+      "source_content_hash": "1be36e638316ce97383215bc83650a73c92f1e41626411ef68ec38d677a9d559",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "首先，我们需要安装并配置[omniauth](https://github.com/omniauth/omniauth)。"
+      }
+    },
+    {
+      "segment_id": "2567fe3c",
+      "source_content": "##### Install Dependencies",
+      "source_content_hash": "794f1511dc2e4f8ec66d4c361707bd71cef4c06abc18b235190f5a2808972c42",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "##### 安装依赖项"
+      }
+    },
+    {
+      "segment_id": "d7bc17bf",
+      "source_content": "```shell\n    bin/bundle add omniauth\n    bin/bundle add omniauth-rails_csrf_protection # Used to protect against CSRF vulnerability\n    bin/bundle add omniauth-oauth2 # generic OAuth2 strategy for OmniAuth that we will inherit from\n```",
+      "source_content_hash": "26f99e32e9d62dbb85a54f29105108f5fa39a97dbb2352006b0e5b4ed127951f",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_d7bc17bf"
+      }
+    },
+    {
+      "segment_id": "5cd80849",
+      "source_content": "##### Add a custom strategy for Jackson",
+      "source_content_hash": "617ef0b4a1d301e90346bf92bb527f419a1e354231d4cce6bf5583455c8c9f6d",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "##### 添加Jackson自定义策略"
+      }
+    },
+    {
+      "segment_id": "8862791b",
+      "source_content": "Add a custom omniauth strategy for Jackson. We will name it `Boxyhqsso`.\nBy inheriting from `OmniAuth::Strategies::OAuth2`, we can wire up the OAuth 2.0 flow with Jackson. Jackson will redirect to the configured IdP connection based on the tenant/product.",
+      "source_content_hash": "64c79df3fbcaef419422c02e08d61f779bfdaa79791c74137f3bbab0b89d0b87",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "为Jackson添加自定义omniauth策略，我们将其命名为`Boxyhqsso`。\n通过继承`OmniAuth::Strategies::OAuth2`，我们可以实现与Jackson的OAuth 2.0流程对接。Jackson将根据租户/产品重定向到配置的IdP连接。"
+      }
+    },
+    {
+      "segment_id": "31df1954",
+      "source_content": "```ruby title=\"app/lib/omniauth/strategies/boxyhqsso.rb\"\n      module OmniAuth\n      module Strategies\n          class Boxyhqsso < OmniAuth::Strategies::OAuth2\n              # strategy name\n              option :name, \"boxyhqsso\"\n\n              args %i[\n                client_id\n                client_secret\n                domain\n              ]\n\n              # Setup client URLs used during authentication\n              def client\n                options.client_options.site = domain_url\n                options.client_options.authorize_url = '/api/oauth/authorize'\n                options.client_options.token_url = '/api/oauth/token'\n                options.client_options.userinfo_url = '/api/oauth/userinfo'\n                options.client_options.auth_scheme = :request_body\n                options.token_params = { :redirect_uri => full_host + '/auth/boxyhqsso/callback' }\n                super\n              end\n\n              # These are called after authentication has succeeded. If\n              # possible, you should try to set the UID without making\n              # additional calls (if the user id is returned with the token\n              # or as a URI parameter). This may not be possible with all\n              # providers.\n              uid{ raw_info['id'] }\n\n              # Define the parameters used for the /authorize endpoint\n              def authorize_params\n                params = super\n                %w[connection connection_scope prompt screen_hint login_hint organization invitation ui_locales tenant product].each do |key|\n                  params[key] = request.params[key] if request.params.key?(key)\n                end\n\n                # Generate nonce\n                params[:nonce] = SecureRandom.hex\n\n                # Store authorize params in the session for token verification\n                session['authorize_params'] = params.to_hash\n\n                params\n              end\n\n              extra do\n                {\n                  'raw_info' => raw_info\n                }\n              end\n\n              # Declarative override for the request phase of authentication\n              def request_phase\n                if no_client_id?\n                  # Do we have a client_id for this Application?\n                  fail!(:missing_client_id)\n                elsif no_client_secret?\n                  # Do we have a client_secret for this Application?\n                  fail!(:missing_client_secret)\n                elsif no_domain?\n                  # Do we have a domain for this Application?\n                  fail!(:missing_domain)\n                else\n                  # All checks pass, run the Oauth2 request_phase method.\n                  super\n                end\n              end\n\n              def raw_info\n                userinfo_url = options.client_options.userinfo_url\n                @raw_info ||= access_token.get(userinfo_url).parsed\n              end\n\n              # Check if the options include a client_id\n              def no_client_id?\n                ['', nil].include?(options.client_id)\n              end\n\n              # Check if the options include a client_secret\n              def no_client_secret?\n                ['', nil].include?(options.client_secret)\n              end\n\n              # Check if the options include a domain\n              def no_domain?\n                ['', nil].include?(options.domain)\n              end\n\n              # Normalize a domain to a URL.\n              def domain_url\n                domain_url = URI(options.domain)\n                domain_url = URI(\"https://#{domain_url}\") if domain_url.scheme.nil?\n                domain_url.to_s\n              end\n          end\n        end\n    end\n\n```",
+      "source_content_hash": "b6c281ce36383f6ad93f4c92839d0529871193637a8737bee8690e73c16ced7a",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_31df1954"
+      }
+    },
+    {
+      "segment_id": "cd2c3844",
+      "source_content": "##### Configure the custom omniauth provider",
+      "source_content_hash": "954213d1bfd600a648de5c8a498521567a55d3e5ac54e6456f665caa3b2858fd",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "##### 配置自定义omniauth提供商"
+      }
+    },
+    {
+      "segment_id": "ac91a2d7",
+      "source_content": "Add an initializer file to insert omniauth into the rack middleware pipeline. `OmniAuth::Builder` allows us to load multiple strategies.",
+      "source_content_hash": "fed2c6af687d77185c539317c838a6d5e65840fdf2d02ec02504b666b380b994",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "添加初始化文件将omniauth插入rack中间件管道。`OmniAuth::Builder`允许我们加载多个策略。"
+      }
+    },
+    {
+      "segment_id": "51315946",
+      "source_content": "```ruby title=\"config/initializers/omniauth.rb\"\n    Rails.application.config.middleware.use OmniAuth::Builder do\n          provider(\n                :boxyhqsso,\n                'dummy',\n                ENV['CLIENT_SECRET_VERIFIER'],\n                ENV['JACKSON_URL'],\n                callback_path: '/auth/boxyhqsso/callback',\n                authorize_params: {\n                    scope: 'openid'\n                }\n            )\n\n    end\n```",
+      "source_content_hash": "10edc813dfbd77e6c9f6a7bc388b6a130bfa0cfa979cbe12dfe28e0de0861b52",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_51315946"
+      }
+    },
+    {
+      "segment_id": "573762e8",
+      "source_content": "##### Routes and Controllers",
+      "source_content_hash": "e78bc53bfe75991e5ed3fbbd5afa3843417efe2e6e3fa983dfbad25747c5e2ae",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "##### 路由与控制器"
+      }
+    },
+    {
+      "segment_id": "ec3c0760",
+      "source_content": "Finally, we need to add the routes and controller files that initiate the login flow and handle the callback from the Jackson service. We also use a controller `concern` to control access to protected routes such as the profile page.",
+      "source_content_hash": "8c9025573b55ba4bcf549cb8033dfdaea43bf1c4edf7dd46fef65d8cce2d6adb",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "最后需要添加路由和控制器文件来处理登录流程及Jackson服务的回调。我们使用控制器`concern`来保护诸如个人资料页等受保护路由的访问权限。"
+      }
+    },
+    {
+      "segment_id": "c5d38641",
+      "source_content": ":::info\nThe login flow is initiated by posting to `/auth/boxyhqsso` which is handled by omniauth in the rack middleware pipeline.\n:::",
+      "source_content_hash": "b04f810375556e3b97062d410eb34bff07b532d3c263bd26be2eb8bb29c958ad",
+      "node_type": "containerDirective",
+      "translatable": true,
+      "translations": {
+        "zh-CN": ":::info\n登录流程通过向`/auth/boxyhqsso`发起POST请求触发，该请求由rack中间件管道中的omniauth处理。\n:::"
+      }
+    },
+    {
+      "segment_id": "7c10e081",
+      "source_content": "<Tabs>\n\n  <TabItem value=\"routes\" label=\"Routes\" default>\n\n```ruby title=\"config/routes.rb\"\n    Rails.application.routes.draw do\n      # Renders the login page\n       get 'sso', to: 'logins#index', as: :login\n       # handles the redirect back from Jackson SSO service, exchanges code with access_token and then fetches userprofile.\n       get 'auth/boxyhqsso/callback', to: 'omniauth#callback'\n       # Show profile data\n       get 'omniauth/profile', to: 'omniauth_profiles#show', as: :omniauth_profile\n       # logout the user\n       delete 'omniauth/logout' => 'omniauth#logout', as: :omniauth_logout\n    end\n```\n\n  </TabItem>\n\n  <TabItem value=\"controllers\" label=\"Controllers\">\n\n  <Tabs>\n\n  <TabItem value=\"omniauth\" label=\"OmniauthController\" default>\n\nAfter omniauth handles the callback from Jackson SSO service, it sets an authentication hash (`omniauth.auth`) on the rack environment of a request to `/auth/boxyhqsso/callback`. This contains the information about the logged-in user. We then set this value in the session which can then be displayed on the profile page.\n\n```ruby title=\"app/controllers/omniauth_controller.rb\"\n    class OmniauthController < ApplicationController\n      skip_before_action :require_login, raise: false\n\n      def callback\n        user_info = request.env['omniauth.auth']\n        session[:userinfo] = user_info['extra']['raw_info']\n        redirect_to omniauth_profile_path,  notice: \"Logged in using omniauth!\"\n      end\n\n      def logout\n        reset_session\n        redirect_to root_path,  notice: \"Logged out from Omniauth!\"\n      end\n    end\n```\n\n  </TabItem>\n\n  <TabItem value=\"omniauth_profiles\" label=\"OmniauthProfilesController\">\n\nHere we set the instance variable `@user` from the session. This can then be referenced in the profile view. Also by using the concern `OmniauthSecured`, we ensure that the profile view is rendered only if a user is logged in, else we redirect to the login page.\n\n```ruby title=\"app/controllers/omniauth_profiles_controller.rb\"\n    class OmniauthProfilesController < ApplicationController\n        skip_before_action :require_login, raise: false\n        include OmniauthSecured\n\n        def show\n          @user = session[:userinfo]\n        end\n    end\n```\n\n  </TabItem>\n\n  </Tabs>\n\n  </TabItem>\n  <TabItem value=\"concern\" label=\"Controller concern\">\n\n```ruby title=\"app/controllers/concerns/omniauth_secured.rb\"\n    module OmniauthSecured\n        extend ActiveSupport::Concern\n\n        included do\n          before_action :logged_in_using_omniauth?\n        end\n\n        def logged_in_using_omniauth?\n          redirect_to login_path, notice: \"⚠️ Please login using omniauth\" unless session[:userinfo].present?\n        end\n    end\n```\n\n  </TabItem>\n\n  </Tabs>",
+      "source_content_hash": "ff5495b20178b18ff6fed58d0baec06e6c149a2e2d59411bde36110d72284cfd",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_7c10e081"
+      }
+    }
+  ],
+  "target_i18n_subpath": "docusaurus-plugin-content-docs-guides/current/jackson/frameworks/rails.md",
+  "last_updated_timestamp": "2025-06-08T18:49:09.301615+00:00",
+  "schema_version": "1.0",
+  "translated_versions": {
+    "zh-CN": "00968d34147b5fc099d737c2063b669025d58ac3d4a29f14866d7e34f3a14c66"
+  }
+}

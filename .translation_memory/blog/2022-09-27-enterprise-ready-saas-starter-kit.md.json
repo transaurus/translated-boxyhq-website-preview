@@ -1,0 +1,502 @@
+{
+  "source_file_path_relative_to_docusaurus_root": "blog/2022-09-27-enterprise-ready-saas-starter-kit.md",
+  "source_file_content_hash": "f22825e571de9188d4bd6a15a0e8828e2635e6200e7f31ae345f8499db496aba",
+  "segments": [
+    {
+      "segment_id": "58cfcc64",
+      "source_content": "---\nslug: enterprise-ready-saas-starter-kit\ntitle: Enterprise-ready SaaS Starter Kit\nauthor: Kiran K\nauthor_title: Senior Developer @BoxyHQ\nauthor_url: https://twitter.com/tokirankrishnan\nauthor_image_url: /images/authors/kiran.jpg\ntags_disabled: [enterprise-readiness, nextjs-template, saas-starter-kit]\n---",
+      "source_content_hash": "473284cb36c1d4aebdafb3acb97698ada195a3ebecbbcdfc7f37a1ee73a1b250",
+      "node_type": "yaml",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_58cfcc64"
+      }
+    },
+    {
+      "segment_id": "8ac585fb",
+      "source_content": "Enterprise-ready SaaS Starter Kit is a **Next.js** based SaaS Starter Kit that can save hundreds of development hours while building [enterprise-ready SaaS apps](/blog/enterprise-readiness-made-simple).",
+      "source_content_hash": "f7531f84122c298ef165b40532a50d2bb6c3350f3579a748bcd9e522ef5df5d9",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "企业级SaaS入门套件是基于**Next.js**的SaaS开发框架，可帮助您在构建[企业级SaaS应用](/blog/enterprise-readiness-made-simple)时节省数百小时的开发时间。"
+      }
+    },
+    {
+      "segment_id": "180bddb1",
+      "source_content": "[Kickstart your enterprise app development with Next.js SaaS Starter Kit](https://github.com/boxyhq/saas-starter-kit)",
+      "source_content_hash": "e658f4ec3dcff38144630a65eea7fd8317dc2669b65ee93193f13afb77e8fffc",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "[使用Next.js SaaS入门套件快速启动企业应用开发](https://github.com/boxyhq/saas-starter-kit)"
+      }
+    },
+    {
+      "segment_id": "cf898102",
+      "source_content": "Check out the [video tutorial](https://youtu.be/oF8QIwQIhyo) that walks through setting up your local environment and running enterprise-ready features the SaaS kit offers.",
+      "source_content_hash": "bb2c0e07903b1685f48b860b23b83bb5171073b2e700d3423cb7a7b684dc4c19",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "观看[视频教程](https://youtu.be/oF8QIwQIhyo)，了解如何配置本地环境并运行该SaaS套件提供的企业级功能。"
+      }
+    },
+    {
+      "segment_id": "3daf1b88",
+      "source_content": "## SAML SSO",
+      "source_content_hash": "00dd34af669ecc4e0fd0fa9d0ea6cca0ad1d6e1e842902e6ed5057c1204fb07e",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## SAML单点登录"
+      }
+    },
+    {
+      "segment_id": "f6168993",
+      "source_content": "SAML stands for Security Assertion Markup Language. It is an XML-based open standard for transferring identity data between an identity provider (IdP) and a service provider (SP).",
+      "source_content_hash": "0be8c51059466b8653d32e00e504939078dfd489fd90554eb732d0e6cc62bdb0",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "SAML（安全断言标记语言）是一种基于XML的开放标准，用于在身份提供商（IdP）和服务提供商（SP）之间传输身份数据。"
+      }
+    },
+    {
+      "segment_id": "f5f6d2ce",
+      "source_content": "[Single Sign On (SSO)](/blog/understanding-saml-sso-the-basics-from-the-solution-providers-side) allows your customers to manage their team's users outside your built-in user table.",
+      "source_content_hash": "763d94c4ba7fb85e643eeb2f19cfb89181496764412bc78e57cef4c7aa5d54a9",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "[单点登录(SSO)](/blog/understanding-saml-sso-the-basics-from-the-solution-providers-side)允许客户在外部管理团队成员，而无需依赖您内置的用户表。"
+      }
+    },
+    {
+      "segment_id": "2fdadb08",
+      "source_content": "SAML SSO is integrated with the help of [SAML Jackson](https://github.com/boxyhq/jackson)",
+      "source_content_hash": "68c202c7610f9520b4ceaad809df089db7b12b6f4fc81797e96a8e81786734f7",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "SAML单点登录通过[SAML Jackson](https://github.com/boxyhq/jackson)实现集成"
+      }
+    },
+    {
+      "segment_id": "ed7dde9c",
+      "source_content": "## Directory Sync (SCIM)",
+      "source_content_hash": "98b84f9793157f2aa1588eed15834448d672f02874e3555d21e42c0aeaed7a3a",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 目录同步(SCIM)"
+      }
+    },
+    {
+      "segment_id": "a76548f8",
+      "source_content": "[Directory sync](/blog/understanding-scim-and-directory-sync) helps organizations automate the provisioning and de-provisioning of their users.",
+      "source_content_hash": "ae0fc8ef78aa125ebc87e5880b07fac7d90534eefef169228aee97a44a0a8041",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "[目录同步](/blog/understanding-scim-and-directory-sync)可帮助组织自动化实现用户配置与撤销配置。"
+      }
+    },
+    {
+      "segment_id": "4b1d2d7d",
+      "source_content": "As a result, it streamlines the user lifecycle management process by saving valuable organizational hours, creating a single truth source of the user identity data, and facilitating them to keep the data secure.",
+      "source_content_hash": "7fa90bf42e724bb34cc9b052c79573dfe45ea8ebd252bfe0233a81ea3f174fec",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "它能优化用户生命周期管理流程，通过节省宝贵时间、创建统一的用户身份数据源、保障数据安全来提升效率。"
+      }
+    },
+    {
+      "segment_id": "dfe931a2",
+      "source_content": "Directory Sync is integrated with the help of [SAML Jackson](https://github.com/boxyhq/jackson#directory-sync)",
+      "source_content_hash": "a7734bc18916729a3a3f47a1ab1bb78810d8f799bb73960250b97414b7361fae",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "目录同步功能通过[SAML Jackson](https://github.com/boxyhq/jackson#directory-sync)实现集成"
+      }
+    },
+    {
+      "segment_id": "0037ff70",
+      "source_content": "## Audit Logs",
+      "source_content_hash": "9d5e16ed194742f14c5156b94381e5b989a9ca2516cc89b829154d6dec11b94e",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 审计日志"
+      }
+    },
+    {
+      "segment_id": "bdc231b1",
+      "source_content": "Provide enterprise customers with the ability to record and search events that happen within your application. With our simple integration, you can become compliant fast and save your team from building complex solutions from scratch.",
+      "source_content_hash": "5749bd997e53c149ef1dd294b1ca5a1150f36fce82bf2ec0ff51950728def2f4",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "为您的企业客户提供记录和检索应用内事件的能力。通过我们的简易集成，您可以快速满足合规要求，避免团队从零构建复杂解决方案。"
+      }
+    },
+    {
+      "segment_id": "97ae4a01",
+      "source_content": "Organizations gain the ability to monitor the flow of data and be alerted to any breaches. Audit logs help to pinpoint any misuse of information and ensure that data policies are followed.",
+      "source_content_hash": "622b07c00ae4746846599a839e4c588f6e91b0f752c90db2cd2d5624883c9367",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "组织能够监控数据流动并及时获知安全漏洞。审计日志有助于精确定位信息滥用行为，确保数据策略得到遵循。"
+      }
+    },
+    {
+      "segment_id": "62a6890b",
+      "source_content": "## Webhooks & Events",
+      "source_content_hash": "cd3bccf4edd35f6205597246983d8c14fcda5964509e42f297f98cebb323ec57",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## Webhook与事件"
+      }
+    },
+    {
+      "segment_id": "3cfe6286",
+      "source_content": "Webhooks are a way for systems to notify external applications that a specific event has occurred in your SaaS app without receiving a request.",
+      "source_content_hash": "f3998c5616ca1c090d34c02d522f8dd338458ab46e1976d3ac7402db67df6466",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "Webhook是一种系统通知机制，当您的SaaS应用中发生特定事件时，无需接收请求即可通知外部应用程序。"
+      }
+    },
+    {
+      "segment_id": "1042b50d",
+      "source_content": "Webhooks are a great solution if the client does not know when an event will occur and wants to be notified in real-time.",
+      "source_content_hash": "c7aa38e2a323247c21c1f3aec938efc02895805677fce983d7bc3a2aa167e305",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "当客户端无法预知事件发生时间并需要实时通知时，Webhook是最佳解决方案。"
+      }
+    },
+    {
+      "segment_id": "aa1e7006",
+      "source_content": "Webhook is integrated with the help of [Svix](https://github.com/svix/svix-webhooks)",
+      "source_content_hash": "6868e4ed8c80e2e074244018ecc209dbdf4707d0319c7f25b42bc0c5b9b555c6",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "Webhook功能通过[Svix](https://github.com/svix/svix-webhooks)实现集成"
+      }
+    },
+    {
+      "segment_id": "f44c1398",
+      "source_content": "## Team Management",
+      "source_content_hash": "455962a00d399b9e1cba06c7205669280080683e294b4267aa2ece7b5dcb52b2",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 团队管理"
+      }
+    },
+    {
+      "segment_id": "29528c8d",
+      "source_content": "Teams describe the functionality that enables modern software to be coordinated and managed.",
+      "source_content_hash": "9d11c66465b537c2c518e8547be410e83129092d37c88ccef38854d2895762e1",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "团队功能描述了现代软件中实现协作与管理的能力。"
+      }
+    },
+    {
+      "segment_id": "c504c207",
+      "source_content": "Through Teams, SaaS app users invite others to collaboratively use the application with them by creating an account.",
+      "source_content_hash": "423db23b071adf551a855d5091efad7209a10f16a1851f916e6bd253965944c9",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "通过团队功能，SaaS应用用户可以创建账户并邀请他人共同使用应用程序。"
+      }
+    },
+    {
+      "segment_id": "c6cc90a0",
+      "source_content": "## Other Features",
+      "source_content_hash": "007faa1491dd676b89ea5934880264bd6af4285cbb3ed08c15930342cb2ef457",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 其他功能"
+      }
+    },
+    {
+      "segment_id": "d3649a1e",
+      "source_content": "Now, let's take a look at the other conventional features that the SaaS kit provides. 🥇",
+      "source_content_hash": "0c4cbc5be714d50b1808b66da7e6be8237ea604276c24d31ef3a233d64acce45",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "现在让我们看看该SaaS套件提供的其他常规功能 🥇"
+      }
+    },
+    {
+      "segment_id": "36ab8340",
+      "source_content": "- Create account\n- Sign in with Email and Password\n- Sign in with Magic Link\n- Sign in with SAML SSO\n- Sign in with Google [[Setting up Google OAuth](https://support.google.com/cloud/answer/6158849?hl=en)]\n- Sign in with GitHub [[Creating a Github OAuth App](https://docs.github.com/en/developers/apps/building-oauth-apps/creating-an-oauth-app)]\n- Directory Sync (SCIM)\n- Update account\n- Create team\n- Invite users to the team\n- Manage team members\n- Update team settings\n- Webhooks & Events\n- Internationalization\n- Audit logs\n- Roles and Permissions\n- Dark mode",
+      "source_content_hash": "30acbbf0c0e3536284b9a64205f046412c7ee468c3eca0ab9ef57f928faa4d86",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- 创建账户\n- 邮箱密码登录\n- 魔法链接登录\n- SAML单点登录\n- Google登录[[配置Google OAuth](https://support.google.com/cloud/answer/6158849?hl=en)]\n- GitHub登录[[创建Github OAuth应用](https://docs.github.com/en/developers/apps/building-oauth-apps/creating-an-oauth-app)]\n- 目录同步(SCIM)\n- 更新账户\n- 创建团队\n- 邀请团队成员\n- 管理团队成员\n- 更新团队设置\n- Webhook与事件\n- 国际化支持\n- 审计日志\n- 角色与权限\n- 深色模式"
+      }
+    },
+    {
+      "segment_id": "b1cbdb65",
+      "source_content": "## Getting Started",
+      "source_content_hash": "c6144136c5fdde00c066bed01a81aecaf8f239036f9ecabc432e5386d5b7a49a",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 快速开始"
+      }
+    },
+    {
+      "segment_id": "afa378f7",
+      "source_content": "Please follow these simple steps to get a local copy up and running.",
+      "source_content_hash": "9c3e7ecbbf3d8387944ce7926018bf501a6249beb7b3a3e3b842996187743452",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "请按照以下简单步骤在本地运行项目。"
+      }
+    },
+    {
+      "segment_id": "58ed925f",
+      "source_content": "### 1. Setup",
+      "source_content_hash": "7aea72d52efac1841c2d8082e465d83cd4ac3aee4b0f4123d4901d9e81584596",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 1. 环境准备"
+      }
+    },
+    {
+      "segment_id": "463ed165",
+      "source_content": "Clone or fork this GitHub repository",
+      "source_content_hash": "bc4522ebf689294ae17cf7e29e523cdaab5d19c76068087d7313173e3500d3ba",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "克隆或fork该GitHub仓库"
+      }
+    },
+    {
+      "segment_id": "092b29bb",
+      "source_content": "```bash\ngit clone https://github.com/boxyhq/saas-starter-kit.git\n```",
+      "source_content_hash": "243ab034401efb08c08c8fb96a1691271655315c222b3790544f73955246791b",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_092b29bb"
+      }
+    },
+    {
+      "segment_id": "759d12dd",
+      "source_content": "### 2. Go to the project folder",
+      "source_content_hash": "371a7d2f85cc41542dcc9a071312d05f4c2bb5e50fd0d97425e55271df8694d4",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 2. 进入项目目录"
+      }
+    },
+    {
+      "segment_id": "f6563256",
+      "source_content": "```bash\ncd saas-starter-kit\n```",
+      "source_content_hash": "053fac76f977607166c971e62ea6a92d6ae04fe28169c98f326b0d4b1b34f69d",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_f6563256"
+      }
+    },
+    {
+      "segment_id": "39db08de",
+      "source_content": "### 3. Install dependencies",
+      "source_content_hash": "b4235c09127d0c206870deb0055a5c2fb7d643d56abdc81fd0d2d752c073068c",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 3. 安装依赖项"
+      }
+    },
+    {
+      "segment_id": "59f28e14",
+      "source_content": "```bash\nnpm install\n```",
+      "source_content_hash": "eb5a50fc58daf7363e311766e9dd31ad61d85de38cdea9e5921158421a5cb4bb",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_59f28e14"
+      }
+    },
+    {
+      "segment_id": "e06c002e",
+      "source_content": "### 4. Set up your .env file",
+      "source_content_hash": "cd5000b8a8c8641baaaa777bbc01d84ca5ff15d045fe3b9731d0f925e28f7d10",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 4. 配置.env环境文件"
+      }
+    },
+    {
+      "segment_id": "25212439",
+      "source_content": "Duplicate `.env.example` to `.env`.",
+      "source_content_hash": "9ebafcd7a9d214e46155fb72acc9d39f8da6cdfe336eba23f61de7eae95838a0",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "将`.env.example`复制为`.env`。"
+      }
+    },
+    {
+      "segment_id": "cae897fb",
+      "source_content": "```bash\ncp .env.example .env\n```",
+      "source_content_hash": "20fded08d3cbbca59ec2590725f1cc1dae7e53761fbb3f88084ded281c45cc43",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_cae897fb"
+      }
+    },
+    {
+      "segment_id": "42a5832e",
+      "source_content": "### 5. Set up database schema",
+      "source_content_hash": "c0b37e11106d34a112126bf82cacd631493e908e36590920cf418d416419b301",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 5. 设置数据库结构"
+      }
+    },
+    {
+      "segment_id": "c9873cf8",
+      "source_content": "```bash\nnpx prisma db push\n```",
+      "source_content_hash": "b539bf45de353ac196592f66334ae5d813a55d5c2a8ee1caec4aa1c4804c5b27",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_c9873cf8"
+      }
+    },
+    {
+      "segment_id": "8574d51c",
+      "source_content": "### 6. Start the server",
+      "source_content_hash": "f2ef17f68603c5f7c1d0e99ed1936a40e8d6395f585984b6739b6f5159e11d94",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 6. 启动服务端"
+      }
+    },
+    {
+      "segment_id": "e9313fef",
+      "source_content": "In a development environment:",
+      "source_content_hash": "caff062eebfb75c78623af71a41bd8f42cd0d1d4e5cd04b346ba3721840518c8",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "在开发环境中运行："
+      }
+    },
+    {
+      "segment_id": "342e4d80",
+      "source_content": "```bash\nnpm run dev\n```",
+      "source_content_hash": "e4ff51db0038ca229a48b7cc64192499bfb28766ddfd60f57a0a1c43fc2b0547",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_342e4d80"
+      }
+    },
+    {
+      "segment_id": "c7fa1e8d",
+      "source_content": "### 7. Start the Prisma Studio",
+      "source_content_hash": "037028414c6c38efdbeb29e7c5521eb091632cf6ac17615611294cb61a4bcb3e",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 7. 启动Prisma Studio"
+      }
+    },
+    {
+      "segment_id": "a6c928a1",
+      "source_content": "Prisma Studio is a visual editor for the data in your database.",
+      "source_content_hash": "271c4d66dda95f68136e0b67bc169f58de4ffa25a7b3c28086b04e2b50964ae8",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "Prisma Studio是数据库数据的可视化编辑器。"
+      }
+    },
+    {
+      "segment_id": "3917a88d",
+      "source_content": "```bash\nnpx prisma studio\n```",
+      "source_content_hash": "5851af316b9a072e14c6059bf6bd4d9338ce1c8e03799ca19dc9bdf3e29840ce",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_3917a88d"
+      }
+    },
+    {
+      "segment_id": "2bb63d77",
+      "source_content": "## Contributing guide",
+      "source_content_hash": "e0650f2933efe41354c5bb78428bc6829fd5c00407506879c6215113470145a7",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 贡献指南"
+      }
+    },
+    {
+      "segment_id": "53aa2b95",
+      "source_content": "Contributions make the open-source community a fantastic place to learn, inspire, and create. Any contributions are greatly appreciated by the whole community.",
+      "source_content_hash": "ccaff11fe58f31545ba7040ec0d6d226836f91462d20a2fe6f0d72d0457009f6",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "贡献使开源社区成为学习、启发和创造的绝佳场所。任何贡献都将受到整个社区的高度赞赏。"
+      }
+    },
+    {
+      "segment_id": "9c9e2b64",
+      "source_content": "We encourage and invite users and community members to contribute to the [saas-starter-kit](https://github.com/boxyhq/saas-starter-kit) repository.",
+      "source_content_hash": "bb4ba456d3038f2e961b0d702ba9a06b3923e45e71b5e98338c0597f75e8f61a",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "我们诚邀用户和社区成员为[saas-starter-kit](https://github.com/boxyhq/saas-starter-kit)代码库贡献力量。"
+      }
+    },
+    {
+      "segment_id": "5c7d994c",
+      "source_content": "For more help or if you have a question about getting started building a SaaS app please join our [Community Discord.](https://discord.boxyhq.com)",
+      "source_content_hash": "e4061d9f14750ea0a5e4f1e8d42ecdd99d5b61ffbe4270f40a47efbc0866a6da",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "如需更多帮助或有关构建SaaS应用的疑问，请加入我们的[社区Discord](https://discord.boxyhq.com)。"
+      }
+    }
+  ],
+  "target_i18n_subpath": "docusaurus-plugin-content-blog/2022-09-27-enterprise-ready-saas-starter-kit.md",
+  "last_updated_timestamp": "2025-06-08T18:49:09.301123+00:00",
+  "schema_version": "1.0",
+  "translated_versions": {
+    "zh-CN": "f22825e571de9188d4bd6a15a0e8828e2635e6200e7f31ae345f8499db496aba"
+  }
+}

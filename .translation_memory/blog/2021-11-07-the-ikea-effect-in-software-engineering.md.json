@@ -1,0 +1,102 @@
+{
+  "source_file_path_relative_to_docusaurus_root": "blog/2021-11-07-the-ikea-effect-in-software-engineering.md",
+  "source_file_content_hash": "e46b1c2c8b7d1aea7a0f2066370f13c14bc63dddf3275a06a030c857cd42fc76",
+  "segments": [
+    {
+      "segment_id": "58cfcc64",
+      "source_content": "---\nslug: the-ikea-effect-in-software-engineering\ntitle: The IKEA effect in Software Engineering\nauthor: Deepak Prabhakara\nauthor_title: Co-founder & CEO @BoxyHQ\nauthor_url: https://github.com/deepakprabhakara\nauthor_image_url: /images/authors/deepak.jpg\ntags_disabled: [enterprise-readiness, ikea-effect]\nimage: /img/blog/jay-wennington-BdeMttZx6Fs-unsplash.jpg\n---",
+      "source_content_hash": "42bc44eb764fdab56155422da8107cbabfd121b42eabc777841019402b4fed22",
+      "node_type": "yaml",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_58cfcc64"
+      }
+    },
+    {
+      "segment_id": "8d66f911",
+      "source_content": "I recently had to revamp my home office setup and decided to make a trip to my closest IKEA. The wide range of choices of desks in Micke, Malm, Brusali, Alex, and Bekant was only the beginning of the journey. I knew I had to head back home with the desk, find a good place to unpack the unit, find my screwdrivers, hammer, alan keys, and finally dedicate a few hours of labor to assemble everything. I enjoy the process but it is not devoid of frustrations. In the end, I now have a desk I value more because of the labor I put into it.",
+      "source_content_hash": "8e8089d1f3c923fdec7eb15efe235518ef5aacc0654c730d50b80d9ef6ab4095",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "最近我不得不重新布置家庭办公室，于是决定去最近的宜家逛逛。Micke、Malm、Brusali、Alex和Bekant系列琳琅满目的书桌只是这段旅程的开始。我知道我得把书桌运回家，找个合适的地方拆箱，翻出螺丝刀、锤子、内六角扳手，最后花上几个小时组装。虽然享受这个过程，但也不乏挫败感。最终，由于倾注了劳动，我对这张书桌格外珍视。"
+      }
+    },
+    {
+      "segment_id": "ad8fd492",
+      "source_content": "![IKEA Assembly](/img/blog/jay-wennington-BdeMttZx6Fs-unsplash.jpg)",
+      "source_content_hash": "401cfbed0ffe264eed7bda1caca60c562f222fb48ea49b6646b66f7de2a008c8",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![宜家组装](/img/blog/jay-wennington-BdeMttZx6Fs-unsplash.jpg)"
+      }
+    },
+    {
+      "segment_id": "86b54d44",
+      "source_content": "<div style={{fontSize: \"10px\", marginTop: \"-10px\", paddingBottom: \"20px\"}}>Photo by <a href=\"https://unsplash.com/@jaywennington?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText\">Jay Wennington</a> on <a href=\"https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText\">Unsplash</a></div>",
+      "source_content_hash": "7c5177125f0593814835bcf44f0b3bda0d6f7e1f6683ec1ad0bf217f418943e6",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "<div style={{fontSize: \"10px\", marginTop: \"-10px\", paddingBottom: \"20px\"}}>照片由<a href=\"https://unsplash.com/@jaywennington?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText\">Jay Wennington</a>拍摄，发布于<a href=\"https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText\">Unsplash</a></div>"
+      }
+    },
+    {
+      "segment_id": "39b3772c",
+      "source_content": "This is the IKEA effect, a cognitive bias where we place a disproportionately high value on products that we have partially created. This makes people value things they had a part in building than the ones they didn’t. We face this challenge as developers every day, the classic build vs buy decisions when we build software. We’d love to build everything ourselves and in an ideal world this would be possible but we need to juggle business requirements, limited resources, and deadlines. The challenge is always in striking the right balance between building what is core to the business and finding ways to offload non-core tasks.",
+      "source_content_hash": "32652a65f15eca3f62154188105541b9b148b9859cf3aed2a673a1ca5c01b9f1",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "这就是\"宜家效应\"——一种认知偏差，我们会对自己参与创造的产品赋予不成比例的高价值。这使得人们更珍视自己参与构建的事物。作为开发者，我们每天都在面对这种挑战，即经典的\"自建还是采购\"决策。在理想世界中我们当然希望亲手打造一切，但现实中必须权衡业务需求、有限资源和交付期限。真正的挑战在于：如何在构建核心业务与外包非核心任务之间找到平衡点。"
+      }
+    },
+    {
+      "segment_id": "1acb9a05",
+      "source_content": "Just like how an IKEA desk is pretty useless if half-assembled, a feature we set out to build is pretty useless if we end up getting caught up in the implementation details and are unable to see it through. When we set out to build BoxyHQ we constantly heard about the challenges of enterprise readiness from startups. They have to support a range of compliance, security, and governance requirements from their enterprise customers and their developers end up spending 30-40% of their time bogged down in the details of implementation. These startups build teams to work on cool and exciting things that are core to their business but the reality is that non-core features start competing for attention. As a result these non-core features also end up being just good enough to check some boxes and never quite get as innovative as they can get.",
+      "source_content_hash": "d8e073d4164b74107b11ed8bb553c539d4bd2af71a7d51e5d701856adc79b298",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "就像半成品宜家书桌毫无用处一样，如果我们陷入功能实现的细节泥潭而无法完成，那么开发中的功能同样失去价值。在创建BoxyHQ过程中，我们不断听到初创企业关于\"企业级就绪\"的痛点——他们需要满足企业客户的各种合规、安全和治理要求，开发者30-40%的时间都耗费在实现细节上。这些初创公司本应组建团队专注于核心业务创新，但现实是非核心功能开始争夺资源，最终这些功能往往只是勉强达标，永远无法达到应有的创新高度。"
+      }
+    },
+    {
+      "segment_id": "2df4f75f",
+      "source_content": "We have seen software eat the world. This has led to more surface area for security exploits and leaks which in turn is driving a broader awareness of security topics in enterprises. Security has become the top priority for all companies now and is no longer seen as the sole responsibility of the CISO’s team. This means a shift-left trend in compliance and data security for developers and we are taking a new approach at BoxyHQ to solve this problem. BoxyHQ provides developers with non-core building blocks (described above) that integrate easily with their products. Simple self-hosted services and APIs that they can pull into their existing technology stack. Developers no longer have to worry about correctly implementing SAML login flows, building and scaling a robust audit logs service, or figuring out the best encryption technique to safeguard PII data.",
+      "source_content_hash": "c7f6def7dc7903eba15755e25b5a5ab2bd2e8d96ca0efe49377468188234fb28",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "我们见证了软件吞噬世界的过程。这导致安全漏洞的攻击面扩大，进而推动企业界对安全议题的空前重视。安全已成为所有公司的首要任务，不再仅是CISO团队的职责。这意味着开发者面临合规与数据安全的\"左移\"趋势，而BoxyHQ正以创新方式解决这个问题。我们提供即插即用的非核心功能模块：简单的自托管服务和API，开发者可以轻松集成到现有技术栈中。从此不必再为SAML登录流程的正确实现、健壮审计日志服务的构建扩展，或是保护PII数据的最佳加密方案而困扰。"
+      }
+    },
+    {
+      "segment_id": "98cfbd53",
+      "source_content": "BoxyHQ will build IKEA desks for all our customers so they don’t have to. Just sit at your pre-assembled desk and continue working on cool things that you set out to build in the first place.",
+      "source_content_hash": "87461c98878d0388cede3dd115eb59b3fc66b32381d52473d536815f136ca91e",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "BoxyHQ将为您打造所有\"宜家书桌\"，让您无需亲自动手。只需坐在预装好的书桌前，继续专注最初想要构建的酷炫产品。"
+      }
+    },
+    {
+      "segment_id": "ccc88b4c",
+      "source_content": "PS: Announcing SAML Jackson (who doesn’t like a bit of Pulp Fiction), a SAML SSO service that works seamlessly as an OAuth 2.0 flow and abstracts away the tedious XML bits of the SAML protocol. Check out [our repository](https://github.com/boxyhq/jackson) and the [demo](https://github.com/boxyhq/jackson-examples/tree/main/apps/next-auth). If SAML SSO is not relevant to you at this moment don’t forget to bookmark us and check back again. We are building a **\"DevSecMesh\"** over time so you can expect a lot of exciting features in the coming months.",
+      "source_content_hash": "4583b23c63b376525180a8b79f16d400d3e3cb1be1a715671a7929ed7e8bceac",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "附：隆重推出SAML Jackson（谁不爱《低俗小说》呢），这项SAML单点登录服务可无缝对接OAuth 2.0流程，并抽象掉SAML协议中繁琐的XML部分。查看[我们的代码库](https://github.com/boxyhq/jackson)和[演示示例](https://github.com/boxyhq/jackson-examples/tree/main/apps/next-auth)。若SAML SSO目前与您无关，别忘了收藏我们以便回访。我们正在构建**\"DevSecMesh\"**安全网格，未来数月将推出更多激动人心的功能。"
+      }
+    }
+  ],
+  "target_i18n_subpath": "docusaurus-plugin-content-blog/2021-11-07-the-ikea-effect-in-software-engineering.md",
+  "last_updated_timestamp": "2025-06-08T18:49:09.324523+00:00",
+  "schema_version": "1.0",
+  "translated_versions": {
+    "zh-CN": "e46b1c2c8b7d1aea7a0f2066370f13c14bc63dddf3275a06a030c857cd42fc76"
+  }
+}

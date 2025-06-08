@@ -1,0 +1,132 @@
+{
+  "source_file_path_relative_to_docusaurus_root": "docs/directory-sync/getting-started.md",
+  "source_file_content_hash": "30a461109733ac4878ae4bb4031ee2102a8211681b6a27795cba81ad2d1a9300",
+  "segments": [
+    {
+      "segment_id": "58cfcc64",
+      "source_content": "---\ntitle: Getting Started\nsidebar_label: Getting Started\n---",
+      "source_content_hash": "547c632476997a4b24179c2a9a303e339bad7d3669aa4ebe02c998ca239f7466",
+      "node_type": "yaml",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_58cfcc64"
+      }
+    },
+    {
+      "segment_id": "bb42506b",
+      "source_content": "There are two ways to integrate the Directory Sync within your application.",
+      "source_content_hash": "71e80a2a9fbc3c8b93dad2acaadb537f184513dfd3f6f218c36a4a5ab6713b6d",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "有两种方式可将目录同步功能集成到您的应用程序中。"
+      }
+    },
+    {
+      "segment_id": "cc3c868d",
+      "source_content": "## As a service",
+      "source_content_hash": "74376338bb9a81847ac7b29d77ae40eacd80c7c0409ee7918cf9a357228c2246",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 作为独立服务运行"
+      }
+    },
+    {
+      "segment_id": "7e5c5a39",
+      "source_content": "The advantage of running a separate service is that you get all of our UI tooling (like the Admin Portal) with the service. The disadvantage is that you have to manage the operations of a separate service.",
+      "source_content_hash": "a6b4ff892f765054e4bc62671352c3887bda908507f8580592295dc03d8a8b65",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "运行独立服务的优势在于您能获得我们所有的UI工具（如管理门户），缺点是您需要额外管理该服务的运维工作。"
+      }
+    },
+    {
+      "segment_id": "8d66f911",
+      "source_content": "**If you are not using Node.js then this is the only option available to you.**",
+      "source_content_hash": "49c08b0d2a0cb1b6e376a8fed2a86f301d346e1cb1e7f4609b3bf9d284cf3ff5",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "**若您未使用Node.js开发，则这是唯一可选的集成方案。**"
+      }
+    },
+    {
+      "segment_id": "ad8fd492",
+      "source_content": "Read more about [how to run the Jackson service](/docs/jackson/deploy/service)",
+      "source_content_hash": "aa565c57b0c6bb44f666dedcd1e39b19b7f5fc41660b46a8b3e0954232f9560f",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "了解更多关于[如何运行Jackson服务](/docs/jackson/deploy/service)"
+      }
+    },
+    {
+      "segment_id": "86b54d44",
+      "source_content": "Jackson use webhooks to notify your application any time changes are made to directory users and groups. You can use webhooks to trigger actions in your application, such as creating a new user in your application, or updating a user in your application based on the changes made in the directory.",
+      "source_content_hash": "f246a0d14e6e5147a1e5c0601200a1ef4cc3db318c74f0b3e22a0d27b573e5ab",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "Jackson通过Webhook机制在目录用户或群组发生变更时通知您的应用程序。您可利用Webhook触发业务逻辑，例如根据目录变更在应用中创建新用户或更新现有用户。"
+      }
+    },
+    {
+      "segment_id": "d350c018",
+      "source_content": "## As an NPM library",
+      "source_content_hash": "787dea047535c23c3cf10504979c944863c53907f8dec33663e0dc27789764bb",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 作为NPM库集成"
+      }
+    },
+    {
+      "segment_id": "1acb9a05",
+      "source_content": "This is available if you are already developing your application using Node.js.",
+      "source_content_hash": "1f1ac2a32061fb8c55a1d8820f6441dfbe6bef91ec4a40ef01d71c497e2afe54",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "此方案仅适用于使用Node.js开发的应用程序。"
+      }
+    },
+    {
+      "segment_id": "2df4f75f",
+      "source_content": "The advantage of embedding Jackson as an NPM library is that you do not have to manage operations of a separate service.\nThe disadvantage is that you do not readily get our UI tooling (like the Admin Portal) with this method.",
+      "source_content_hash": "99a6c19af746796fab51229fb97ad741c0966a4755efb10ec0f3ddbd9bdd27c9",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "嵌入Jackson作为NPM库的优势在于无需维护独立服务，但缺点是无法直接使用我们的UI工具（如管理门户）。"
+      }
+    },
+    {
+      "segment_id": "3569d545",
+      "source_content": "```bash\nnpm i --save @boxyhq/saml-jackson\n```",
+      "source_content_hash": "812541629967c649211aa86e10cd476b3ac843eaf54089dade89546d0e3b3b9a",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_3569d545"
+      }
+    },
+    {
+      "segment_id": "4b1d2d7d",
+      "source_content": "See the [API Reference](/docs/directory-sync/api-reference) to understand more about the available methods.",
+      "source_content_hash": "4e9183ca58afdbdcdfdc736998e55bbc4b8aafa62fa3407c5c4d504fca2cb591",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "查阅[API参考文档](/docs/directory-sync/api-reference)了解可用方法详情。"
+      }
+    }
+  ],
+  "target_i18n_subpath": "docusaurus-plugin-content-docs/current/directory-sync/getting-started.md",
+  "last_updated_timestamp": "2025-06-08T18:49:09.298284+00:00",
+  "schema_version": "1.0",
+  "translated_versions": {
+    "zh-CN": "30a461109733ac4878ae4bb4031ee2102a8211681b6a27795cba81ad2d1a9300"
+  }
+}

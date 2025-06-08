@@ -1,0 +1,2522 @@
+{
+  "source_file_path_relative_to_docusaurus_root": "docs/jackson/deploy/env-variables.md",
+  "source_file_content_hash": "e88a71e27a24b4448893ede26f2009662d66cbc2ca76c385af77300589a05ba5",
+  "segments": [
+    {
+      "segment_id": "58cfcc64",
+      "source_content": "---\ntitle: Environment Variables (Enterprise SSO)\nsidebar_label: Environment Variables\ndescription: Environment Variables for Enterprise SSO\n---",
+      "source_content_hash": "927b7fb4c2e1607083ec25e0cbb78660fc3907fec0d08a91d5b81b9008b2278b",
+      "node_type": "yaml",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_58cfcc64"
+      }
+    },
+    {
+      "segment_id": "a703643c",
+      "source_content": "# Environment Variables",
+      "source_content_hash": "45bc1ffaf8981e4a53e39e3b8c6d63dd5bf7503b597c2187c24c603b275b66d3",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "# 环境变量"
+      }
+    },
+    {
+      "segment_id": "53eaf0e1",
+      "source_content": "The env vars are only applicable to the Jackson service. If you are using the npm library then look for the options below when initializing the library.",
+      "source_content_hash": "c1b28de1826662fb171bec9d9a3608240ba51a2ce528b01245fbc34acbbb1fb2",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "以下环境变量仅适用于Jackson服务。若使用npm库，请参考下方初始化库时的配置选项。"
+      }
+    },
+    {
+      "segment_id": "8a5f6a7b",
+      "source_content": "## General configuration",
+      "source_content_hash": "423e12f9b72d7abf9800733a0aea432dd15b5f9715f0162c2af3561938786735",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 通用配置"
+      }
+    },
+    {
+      "segment_id": "ba4f48ff",
+      "source_content": "### **HOSTNAME**",
+      "source_content_hash": "fe34fa818e4d461148a9896c1b8e9984ca19c65f830c7a10fd0232abbf99458a",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### **HOSTNAME**"
+      }
+    },
+    {
+      "segment_id": "cf898102",
+      "source_content": "If you need to bind to a specific hostname, you can define `HOSTNAME` environment variable.\nFor example, if you are planning to use a Docker health check like `wget -q --spider http://localhost:{PORT}/api/health || exit 1` set `HOSTNAME=0.0.0.0` to listen to localhost.",
+      "source_content_hash": "7ed0fdc3b9a3917490c8f0a8077cbd502ad37c1fab8a689f1c9a28f754e2f15b",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "如需绑定特定主机名，可定义`HOSTNAME`环境变量。\n例如使用Docker健康检查`wget -q --spider http://localhost:{PORT}/api/health || exit 1`时，需设置`HOSTNAME=0.0.0.0`以监听本地地址。"
+      }
+    },
+    {
+      "segment_id": "d350c018",
+      "source_content": "### **HOST_URL**",
+      "source_content_hash": "31985ba3bdb6e828135497f92c01bc76400f0f6548e9b70f5088bd889b7f75ce",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### **HOST_URL**"
+      }
+    },
+    {
+      "segment_id": "1acb9a05",
+      "source_content": "The URL to bind to.\nDefault: `localhost`",
+      "source_content_hash": "c0c9779e4ebc6ba3ef42b69cb94e90fd249200d03cefc9ed0ac90663c5be8735",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "服务绑定地址。\n默认值：`localhost`"
+      }
+    },
+    {
+      "segment_id": "40f9552a",
+      "source_content": "### **PORT**",
+      "source_content_hash": "644a1604d21ed00adc4685c2bdfc1a252841621a56b82bec3883315a6c9c875a",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### **PORT**"
+      }
+    },
+    {
+      "segment_id": "f2c2bdd0",
+      "source_content": "The port to bind to.\nDefault: `5225`",
+      "source_content_hash": "34fead65854859881fae82c24921faaca3625f7c6cff7b580a2571b2012e419d",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "服务绑定端口。\n默认值：`5225`"
+      }
+    },
+    {
+      "segment_id": "3c36424c",
+      "source_content": "### **EXTERNAL_URL**",
+      "source_content_hash": "339264b7cd8191da7e5991c8ce5f8f1c3530bdf19a2808502fc3ce6518fc315d",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### **EXTERNAL_URL**"
+      }
+    },
+    {
+      "segment_id": "26524352",
+      "source_content": "The public URL to reach this service. This is used internally to construct the callback url at which the SAML/OIDC IdP sends back the authorization response.",
+      "source_content_hash": "22f116c9ce3b927dddd2c58d05dc6f070aa6fc3d200bbf743e02745b95bfa1d9",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "该服务的公开访问URL，用于内部构造SAML/OIDC身份提供商返回授权响应的回调地址。"
+      }
+    },
+    {
+      "segment_id": "73ab96a3",
+      "source_content": "Default: `http://{HOST_URL}:{PORT}`",
+      "source_content_hash": "312b939fd4b0f82438e4f9fe4e72a6a08bb9255e6aed716d217e9f5a2b342e78",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "默认值：`http://{HOST_URL}:{PORT}`"
+      }
+    },
+    {
+      "segment_id": "7499a4e7",
+      "source_content": "NPM library option: `externalUrl`",
+      "source_content_hash": "fccc720c855277d1c6da08f2ce03016e0342aed362299a1ed0d3bf225f9365dd",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "NPM库选项：`externalUrl`"
+      }
+    },
+    {
+      "segment_id": "109ace10",
+      "source_content": "### **ACS_URL**",
+      "source_content_hash": "8a0b4898d5923cb0a6d384d4eb57bcd9629f622dece419377bec3d62dbc48f8f",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### **ACS_URL**"
+      }
+    },
+    {
+      "segment_id": "135468ee",
+      "source_content": "The custom ACS URL (if used) to let Jackson know which ACS URL to send to in the SAML Request to the IdP. Custom ACS URL can also be defined per SAML connection.",
+      "source_content_hash": "748ae21329fa5c85b42781f8fafca64ab9700a38fe7ca9c1cb9e95b31cafc369",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "自定义断言消费服务(ACS)地址，用于指定SAML请求中发送给身份提供商的ACS地址。也可为每个SAML连接单独配置。"
+      }
+    },
+    {
+      "segment_id": "33331f27",
+      "source_content": "Available from version `1.40.1`.",
+      "source_content_hash": "62f6b208c0a756217ed71c687fb6c0ba9941bbc19e9388815f1e588fb30510ae",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "自版本`1.40.1`起可用。"
+      }
+    },
+    {
+      "segment_id": "50746522",
+      "source_content": "NPM library option: `acsUrl`",
+      "source_content_hash": "004693b703971682a16d52ccda073f65a066a37da70cac63f1e7483ab80903a4",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "NPM库选项：`acsUrl`"
+      }
+    },
+    {
+      "segment_id": "54268405",
+      "source_content": "### **JACKSON_API_KEYS**",
+      "source_content_hash": "2ab129a35a15b7717f79ea15a1ee4ee2a6d63756841a212f8cd7af470f5d9b3b",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### **JACKSON_API_KEYS**"
+      }
+    },
+    {
+      "segment_id": "8af76f3d",
+      "source_content": "A comma separated list of API keys that will be validated when serving the API requests (`/api/v1/**`).",
+      "source_content_hash": "313329c508dcb6585e6d046c7ea6e1336dffe56d11d2a34c693373dd79959cb7",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "以逗号分隔的API密钥列表，用于验证API请求(`/api/v1/**`)的合法性。"
+      }
+    },
+    {
+      "segment_id": "a9d49f92",
+      "source_content": "For example `JACKSON_API_KEYS=key1,key2,key3`",
+      "source_content_hash": "c1517686571ffc9848444c51486ec1c267839e9c141995b658b2b0e3ad4bf090",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "示例：`JACKSON_API_KEYS=key1,key2,key3`"
+      }
+    },
+    {
+      "segment_id": "a44047a5",
+      "source_content": "The API requests will then need to specify an `Authorization` header which contains one of the API keys above in this format: `Api-Key key1`",
+      "source_content_hash": "c7f407c5e21575889921a856986e31830cbb1aa286cc3c9f6c438dae169a4d54",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "API请求需在`Authorization`头中按此格式提供密钥：`Api-Key key1`"
+      }
+    },
+    {
+      "segment_id": "cb5b269c",
+      "source_content": "### **SAML_AUDIENCE**",
+      "source_content_hash": "8616e956ae0435f2e0a0311638bca91907901eb024d472e88ad0b8e7300d8a80",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### **SAML_AUDIENCE**"
+      }
+    },
+    {
+      "segment_id": "b36c6338",
+      "source_content": "The value of this setting (same as SP EntityID of Jackson) allows the Jackson instance to verify that it is the intended recipient of a SAML response. The same value is also set in the SAML App created on the IdP end by your customers. Once set do not change this value unless you get your customers to reconfigure their SAML App again. It is case-sensitive. This does not have to be a real URL.",
+      "source_content_hash": "a433beed7e637f57d73c9b4f35a7025d432d47c9e330d77d1f169b4e778428cd",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "该设置值(即Jackson的SP实体ID)用于验证SAML响应的目标接收方。客户需在其身份提供商端的SAML应用中配置相同值（区分大小写，不必是真实URL）。设置后请勿修改，否则需客户重新配置SAML应用。"
+      }
+    },
+    {
+      "segment_id": "b9aaa519",
+      "source_content": "Default: `https://saml.boxyhq.com`",
+      "source_content_hash": "74e77b938265eefcb24799a35eb2ecc5975da73f0f4396fb8acb01fbe659e4c3",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "默认值：`https://saml.boxyhq.com`"
+      }
+    },
+    {
+      "segment_id": "e536ea0d",
+      "source_content": "NPM library option: `samlAudience`",
+      "source_content_hash": "1fbea8f97396027236b2737290f4c833a9942e864971e8eeee13d6bb2cf6f4b1",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "NPM库选项：`samlAudience`"
+      }
+    },
+    {
+      "segment_id": "ab5fc5b5",
+      "source_content": "### **samlPath**",
+      "source_content_hash": "23c7b10efb9f84c4a7f153df2c41befed9b3bc427ae4ef092e1029171cef5087",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### **samlPath**"
+      }
+    },
+    {
+      "segment_id": "73f3d740",
+      "source_content": "> **_NOTE:_** This is only applicable to our npm library.",
+      "source_content_hash": "d1db5480768abd635ad721e118663e208454661dbc4f10b010f8831f722d8e2d",
+      "node_type": "blockquote",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "> **_注意：_** 仅适用于npm库。"
+      }
+    },
+    {
+      "segment_id": "79ad944d",
+      "source_content": "The ACS path at which the [saml response](./npm-library#saml-response) is sent back from the SAML IdP. Set this when using the npm package.",
+      "source_content_hash": "5a2b989beb1f19dbb578e26ad9abff6f7d32d39f0f72f848a6c33efaa207e785",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "SAML身份提供商返回[saml响应](./npm-library#saml-response)的ACS路径。使用npm包时需设置此值。"
+      }
+    },
+    {
+      "segment_id": "531437ca",
+      "source_content": "NPM library option: `samlPath`",
+      "source_content_hash": "5ee5e532cf60b6072452b4431b9338be0d2f6ca9b99797164eebd028a51cb2f6",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "NPM库选项：`samlPath`"
+      }
+    },
+    {
+      "segment_id": "06e24cc0",
+      "source_content": "For example: `/api/oauth/saml`",
+      "source_content_hash": "e070403afcc1e1fd9f7b3b2c3026dd8959a7e0e0d5be3de37bd5b357165177ae",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "示例：`/api/oauth/saml`"
+      }
+    },
+    {
+      "segment_id": "ee8401db",
+      "source_content": "### **oidcPath**",
+      "source_content_hash": "d97bdfe6f5ce98e28532f91599726df43b9d7eed43ab9f6afb4dd2ae55d367e9",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### **oidcPath**"
+      }
+    },
+    {
+      "segment_id": "bd4bfa7f",
+      "source_content": "> **_NOTE:_** This is only applicable to our npm library.",
+      "source_content_hash": "d1db5480768abd635ad721e118663e208454661dbc4f10b010f8831f722d8e2d",
+      "node_type": "blockquote",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "> **_注意：_** 仅适用于npm库。"
+      }
+    },
+    {
+      "segment_id": "883231d4",
+      "source_content": "The `redirect_uri` at which the Authorization response is sent back from the OpenID Connect IdP. Set this when using the npm package.",
+      "source_content_hash": "a4848acfa85eb4daee5c5e498dae164191a256ffb0daf5094867d5b21dd692f6",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "OpenID Connect身份提供商返回授权响应的`redirect_uri`。使用npm包时需设置此值。"
+      }
+    },
+    {
+      "segment_id": "6cc549f2",
+      "source_content": "NPM library option: `oidcPath`",
+      "source_content_hash": "0e1cb4b7aff8b1007bba547ade875c13019db9779a5d12c2ddf596518c244706",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "NPM库选项：`oidcPath`"
+      }
+    },
+    {
+      "segment_id": "d0dd855b",
+      "source_content": "For example: `/api/oauth/oidc`",
+      "source_content_hash": "f168712f4ff868b89c18b681affc71d6105c19883bb5d9c3767b1ecc693a790d",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "示例：`/api/oauth/oidc`"
+      }
+    },
+    {
+      "segment_id": "2fd0be2a",
+      "source_content": "### **IDP_DISCOVERY_PATH**",
+      "source_content_hash": "f03361b32fc0094edf59449a4e9a27229f3ec6235e20618691eab188bf7a6fa2",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### **IDP_DISCOVERY_PATH**"
+      }
+    },
+    {
+      "segment_id": "6270d577",
+      "source_content": "This is the path for showing the IdP Selection screen in case there are multiple SSO Connections for the same `tenant` and `product`.\nThis path is also used to show the App Selection screen in the case of IdP-initiated SAML login (Different apps using the same SAML IdP).\nSet this when using the npm package.",
+      "source_content_hash": "6a569f51c759da368260b1926eadf941e526b141687211f74aaa26c654ed5285",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "该路径用于在同一个`tenant`和`product`下存在多个SSO连接时展示身份提供商（IdP）选择界面。在IdP发起的SAML登录场景中（多个应用使用同一个SAML IdP），该路径也用于展示应用选择界面。使用npm包时需要设置此路径。"
+      }
+    },
+    {
+      "segment_id": "ec619944",
+      "source_content": "NPM library option: `idpDiscoveryPath`",
+      "source_content_hash": "d7247e5ed21c8b278b773f1331482ad6054fb2fda074842823ce7af7ebd92891",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "NPM库选项：`idpDiscoveryPath`"
+      }
+    },
+    {
+      "segment_id": "2547a6bb",
+      "source_content": "For example: `/idp/select` - You can find an implementation of IdP/App Selection [here](https://github.com/boxyhq/jackson/blob/main/pages/idp/select.tsx).",
+      "source_content_hash": "1393d17a1a34f77b627169a5f95232ebe836aafc8263daea79ddf21995adb00b",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "例如：`/idp/select` —— 您可以在[这里](https://github.com/boxyhq/jackson/blob/main/pages/idp/select.tsx)找到IdP/应用选择的实现示例。"
+      }
+    },
+    {
+      "segment_id": "90d35b51",
+      "source_content": "### **CLIENT_SECRET_VERIFIER**",
+      "source_content_hash": "5a5ac699b73e95336017e007f987abdb7ea284046da33c1d22d4532b5013e0fa",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### **CLIENT_SECRET_VERIFIER**"
+      }
+    },
+    {
+      "segment_id": "86348f98",
+      "source_content": "When `tenant` and `product` are used for the SAML flow (and PKCE is not being used) then we use `dummy` as placeholders for `client_id` and `client_secret`. This is not a security issue because SAML is tenanted and hence your Identity Provider will block access to anyone trying to log into your SAML tenant. However for additional security you should set `CLIENT_SECRET_VERIFIER` to a random secret and use that value as the `client_secret` during the OAuth 2.0 flow.",
+      "source_content_hash": "f1b24d1209ec0f1fc1d31235de4ae0141886b2b86f4328d21d6a53daf55c3bef",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "当SAML流程中使用`tenant`和`product`（且未使用PKCE）时，系统会使用`dummy`作为`client_id`和`client_secret`的占位符。这不会引发安全问题，因为SAML具有租户隔离特性，您的身份提供商将阻止任何尝试登录您SAML租户的行为。但为了增强安全性，您应设置`CLIENT_SECRET_VERIFIER`为一个随机密钥，并在OAuth 2.0流程中使用该值作为`client_secret`。"
+      }
+    },
+    {
+      "segment_id": "6b77b644",
+      "source_content": "Default: `dummy`",
+      "source_content_hash": "783bfcbbabf757232ef0083f3aece54b8f60c7d8da11e87ebaca6096260167bf",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "默认值：`dummy`"
+      }
+    },
+    {
+      "segment_id": "a311e967",
+      "source_content": "NPM library option: `clientSecretVerifier`",
+      "source_content_hash": "722147b2d3abfac51d508359ea6b1e840516c91f4d71752dda1ddcbfd2cbfe56",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "NPM库选项：`clientSecretVerifier`"
+      }
+    },
+    {
+      "segment_id": "f8edb6d2",
+      "source_content": "### **IDP_ENABLED**",
+      "source_content_hash": "a481e914fdddbcd825bdf38fc11c1832e63321f01bf76cd40acaebd5f43c269d",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### **IDP_ENABLED**"
+      }
+    },
+    {
+      "segment_id": "1862c5fe",
+      "source_content": "Set to true to enable IdP initiated login for SAML. SP initiated login is the only recommended flow but you might have to support IdP login at times.",
+      "source_content_hash": "61020d988c7f553ae8ab575623c106081e2aabb93a51616c110dd27ecbc5be6d",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "设置为true可启用SAML的IdP发起登录。虽然SP发起登录是推荐流程，但有时仍需支持IdP登录。"
+      }
+    },
+    {
+      "segment_id": "6ca4479f",
+      "source_content": "Default: `false`",
+      "source_content_hash": "5173128309f7b284ca2c215e0224cddfc7a29db4b2609e0876977029f82f6d17",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "默认值：`false`"
+      }
+    },
+    {
+      "segment_id": "a2c0166e",
+      "source_content": "NPM library option: `idpEnabled`",
+      "source_content_hash": "6fabf556de669627dc71603223538b0c925d7b35f9836916dbddd839dc699f73",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "NPM库选项：`idpEnabled`"
+      }
+    },
+    {
+      "segment_id": "c7c92a79",
+      "source_content": "### **PUBLIC_KEY**",
+      "source_content_hash": "3f71f6bddbbbb5635ed3ce6c285db14189a6f48b5a9a4bc93df862dc95b2b2f7",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### **PUBLIC_KEY**"
+      }
+    },
+    {
+      "segment_id": "f0984c2a",
+      "source_content": "This is the public key of the private key used to sign the SAML requests. Jackson expects the public key to be base64 encoded.",
+      "source_content_hash": "ae0bfe6272b3b388acaa92320dd51b4e02adced89a7080fc7b2208d642ec4eb4",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "这是用于签署SAML请求的私钥对应的公钥。Jackson要求公钥采用base64编码格式。"
+      }
+    },
+    {
+      "segment_id": "a81544fd",
+      "source_content": "NPM library option: `certs.publicKey`",
+      "source_content_hash": "7235bdebbbc65be989f5a906251cda408775f934f5f82a3379ec6a4aa8b8bca7",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "NPM库选项：`certs.publicKey`"
+      }
+    },
+    {
+      "segment_id": "722e4930",
+      "source_content": "### **PRIVATE_KEY**",
+      "source_content_hash": "ad8988b94c03ecda145bad37203504433b245e4cff74c67bdbe787f7f4e1d481",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### **PRIVATE_KEY**"
+      }
+    },
+    {
+      "segment_id": "3c19e221",
+      "source_content": "This is the private key used to sign the SAML requests. Jackson expects the private key to be base64 encoded.",
+      "source_content_hash": "9c2700861b9f1921ab1c03b7487b64c8420d0f9adda4efdb3cab1413ec3eb2ca",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "这是用于签署SAML请求的私钥。Jackson要求私钥采用base64编码格式。"
+      }
+    },
+    {
+      "segment_id": "d21af28f",
+      "source_content": "NPM library option: `certs.privateKey`",
+      "source_content_hash": "3f361aa80dac97371d1ffdac219efb1fd467e1a604a502a0841d42731cb9b312",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "NPM库选项：`certs.privateKey`"
+      }
+    },
+    {
+      "segment_id": "44aaa880",
+      "source_content": "To generate a private key and public key pair you can use the following command:",
+      "source_content_hash": "3de8b7af17d4d45cbe1a68d1c43247c2ff1f2838007a79b69614c2b93698ecf4",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "可通过以下命令生成公私钥对："
+      }
+    },
+    {
+      "segment_id": "353ca453",
+      "source_content": "```bash\nopenssl req -x509 -newkey rsa:2048 -keyout key.pem -out public.crt -sha256 -days 365 -nodes\n\n# Convert the public key to base64\ncat public.crt | base64\n\n# Convert the private key to base64\ncat key.pem | base64\n```",
+      "source_content_hash": "8ba941f421fc4b342f3560596cbf784169241c85cfb807114e6223fa39e904ac",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_353ca453"
+      }
+    },
+    {
+      "segment_id": "4dd6a631",
+      "source_content": "### **FLATTEN_RAW_CLAIMS**",
+      "source_content_hash": "663ba4d63057883b3f26f080b345f81f45c4afe6d9bc3339b87f8a311d8721e9",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### **FLATTEN_RAW_CLAIMS**"
+      }
+    },
+    {
+      "segment_id": "f45239ba",
+      "source_content": "Set this config if you want to flatten all the raw claims into the profile instead of grouping them into profile.raw, this is needed for some OIDC providers that do no support nested objects",
+      "source_content_hash": "9dbf9ab0a7bcb837bc6b200063972cf4212be04563a25ba72b4a64cf25a7b1ac",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "如需将所有原始声明（raw claims）平铺到用户档案中（而非分组到profile.raw对象里），可设置此配置。某些不支持嵌套对象的OIDC提供商需要此配置。"
+      }
+    },
+    {
+      "segment_id": "692c6053",
+      "source_content": "Default: `false`",
+      "source_content_hash": "5173128309f7b284ca2c215e0224cddfc7a29db4b2609e0876977029f82f6d17",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "默认值：`false`"
+      }
+    },
+    {
+      "segment_id": "383fbdd2",
+      "source_content": "NPM library option: `flattenRawClaims`",
+      "source_content_hash": "b052a5567fd569507cb6d4232186f80658ec8beab488a63f2e1ce9d8002ed7e5",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "NPM库选项：`flattenRawClaims`"
+      }
+    },
+    {
+      "segment_id": "13292277",
+      "source_content": "## OpenID configuration",
+      "source_content_hash": "226e14333347375540a3c9261f658240507451d5695e1bcecc32cccc647b361c",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## OpenID 配置"
+      }
+    },
+    {
+      "segment_id": "e478ec2c",
+      "source_content": "For supporting OpenID flow, we need to set the algorithm and keys used to sign the ID token JWT.",
+      "source_content_hash": "cc782384b66cc7e1a2ae9497500412f2ab2a56ed77e37bc1a52ba4e89f8758a5",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "为支持OpenID流程，需设置用于签署ID令牌JWT的算法和密钥。"
+      }
+    },
+    {
+      "segment_id": "9c2ab4c8",
+      "source_content": "### **OPENID_JWS_ALG**",
+      "source_content_hash": "fbb50c8d91f042a58f5e53297e3cc9dc4eb5f34db89f745b6b2f672da28c4c04",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### **OPENID_JWS_ALG**"
+      }
+    },
+    {
+      "segment_id": "a9c2a503",
+      "source_content": "The algorithm used to sign the id_token. Jackson uses [jose](https://github.com/panva/jose) to create the ID token. Supported algorithms can be found [here](https://github.com/panva/jose/issues/114#digital-signatures).",
+      "source_content_hash": "81f3b72ca8b4c30ca8a170046b4fed18b85212b261a216f9abcc8e275f1fdef0",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "用于签署id_token的算法。Jackson使用[jose](https://github.com/panva/jose)生成ID令牌，支持的算法详见[此处](https://github.com/panva/jose/issues/114#digital-signatures)。"
+      }
+    },
+    {
+      "segment_id": "cfeb9eb1",
+      "source_content": "Default: `RS256`",
+      "source_content_hash": "cd89982586d7ca9dc130e5fefe985a2ea6eea33564c81d365b9b82b122112ef7",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "默认值：`RS256`"
+      }
+    },
+    {
+      "segment_id": "f7e6e884",
+      "source_content": "NPM library option: `openid.jwsAlg`",
+      "source_content_hash": "c6822f90f0ded66503cd270c9fe8b65129ddf099140e131899ac4aa8aaa2a20a",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "NPM库选项：`openid.jwsAlg`"
+      }
+    },
+    {
+      "segment_id": "35353302",
+      "source_content": "### **OPENID_RSA_PRIVATE_KEY**",
+      "source_content_hash": "a61e1c6a9d61e7ed4a78fa16a65e7308c7e56fcc2336ffb61f438e2d2c3bb110",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### **OPENID_RSA_PRIVATE_KEY**"
+      }
+    },
+    {
+      "segment_id": "719d3997",
+      "source_content": "Base64 value of private key.\nTo generate one:",
+      "source_content_hash": "bdc7c394361b8aaea1aed142b8a65fdf33aa08ccafffc7991bad7220c689e71b",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "私钥的base64编码值。生成方法："
+      }
+    },
+    {
+      "segment_id": "d58c5dc0",
+      "source_content": "```bash\nopenssl genrsa -out private-key.pem 3072\nopenssl pkcs8 -topk8 -inform PEM -outform PEM -nocrypt -in private-key.pem -out private_key.pem\ncat private_key.pem | base64\n```",
+      "source_content_hash": "2c33007fc4ec0798d1c0fddb00176a89b3945da5eaf7664d2f0dcf5f6cf1eb0d",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_d58c5dc0"
+      }
+    },
+    {
+      "segment_id": "dce16ab4",
+      "source_content": "NPM library option: `openid.jwtSigningKeys.private`",
+      "source_content_hash": "7664af1fb9377de1c96179ac134080b75b06a93c81096d1523ba377c412c0973",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "NPM库选项：`openid.jwtSigningKeys.private`"
+      }
+    },
+    {
+      "segment_id": "7312e69e",
+      "source_content": "### **OPENID_RSA_PUBLIC_KEY**",
+      "source_content_hash": "698bc8043df2c0dc6730dc721b49ff226453e390f0f5f05a47cc4840a44f2fbb",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### **OPENID_RSA_PUBLIC_KEY**"
+      }
+    },
+    {
+      "segment_id": "2dbfc5f7",
+      "source_content": "Base64 value of public key.\nYou can generate the public key from the private key as shown below:",
+      "source_content_hash": "b80c6b5e0e97266eddb612234d57f606d59024aa3a98c9f9b6cd184ed6321d37",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "公钥的base64编码值。可通过私钥生成公钥，如下所示："
+      }
+    },
+    {
+      "segment_id": "b5ea89c4",
+      "source_content": "```bash\nopenssl rsa -in private_key.pem -pubout -out public_key.pem\ncat public_key.pem | base64\n```",
+      "source_content_hash": "5d0d19b633a9c80e1d4fa410596ed2e50fda6b98e9f2a0109f32ae12a92a8572",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_b5ea89c4"
+      }
+    },
+    {
+      "segment_id": "62d066b0",
+      "source_content": "NPM library option: `openid.jwtSigningKeys.public`",
+      "source_content_hash": "c12d8a8999a193b8f510101e9720589c6b2fe374480e739578ada54de975c32d",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "NPM库选项：`openid.jwtSigningKeys.public`"
+      }
+    },
+    {
+      "segment_id": "a49ac2ed",
+      "source_content": "### **OPENID_REQUEST_PROFILE_SCOPE**",
+      "source_content_hash": "b2814b999a1344d991be0b581ae23b0e2ca7ab9795f622fec116066c3c5273b1",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### **OPENID_REQUEST_PROFILE_SCOPE**"
+      }
+    },
+    {
+      "segment_id": "808b0414",
+      "source_content": "By setting this to `false`, the profile scope will no longer be automatically included in the Authorization request to the OIDC provider. This will enable apps to request the minimum required authorization permissions from the signed in user. Apps can explicitly send the profile scope in the request to Jackson which will then be forwarded to the OIDC provider.",
+      "source_content_hash": "f68305a50b8a6aa8e22343d791feecfbcee30c4f20608b4bd0d1978da3278d23",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "将此选项设为`false`后，授权请求中将不再自动包含profile范围参数发送至OIDC提供商。这使得应用能够仅向登录用户请求最小必需的授权权限。应用可显式地在请求中向Jackson发送profile范围参数，该参数将被转发至OIDC提供商。"
+      }
+    },
+    {
+      "segment_id": "61a78cbe",
+      "source_content": "Default: `true`",
+      "source_content_hash": "ebfc60f3a746eb8b52655ae30e95733eb469c7a0ade1008499f6967cfa258ea4",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "默认值：`true`"
+      }
+    },
+    {
+      "segment_id": "39c48ff7",
+      "source_content": "NPM library option: `openid.requestProfileScope`",
+      "source_content_hash": "6696e0018ca2b9a7a917852c7619ad6dee6d4aa742d81ff9fdb55b248c5cf558",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "NPM库选项：`openid.requestProfileScope`"
+      }
+    },
+    {
+      "segment_id": "8d279c43",
+      "source_content": "### **OPENID_SUBJECT_PREFIX**",
+      "source_content_hash": "87d27fb1007b8b7524c2926b001eb1ed32f2d6332034dfc725aaeef1d73f7978",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### **OPENID_SUBJECT_PREFIX**"
+      }
+    },
+    {
+      "segment_id": "e5821418",
+      "source_content": "By setting this to `true`, the `id` and `subject` in OIDC claims will be prefixed with `${tenant}:${product}:` to prevent any potential collisions or malicious IdPs.",
+      "source_content_hash": "e993db5ea388b119357efc17b1b6d8c75b4cd02c4fed49a15cb34dda7d20e7db",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "启用此选项后，OIDC声明中的`id`和`subject`将添加`${tenant}:${product}:`前缀，以防止潜在的标识冲突或恶意身份提供商攻击。"
+      }
+    },
+    {
+      "segment_id": "4e2e17c5",
+      "source_content": "Default: `true`",
+      "source_content_hash": "ebfc60f3a746eb8b52655ae30e95733eb469c7a0ade1008499f6967cfa258ea4",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "默认值：`true`"
+      }
+    },
+    {
+      "segment_id": "b49a7009",
+      "source_content": "NPM library option: `openid.subjectPrefix`",
+      "source_content_hash": "37af81d3b45843a0f8e378aec5e2bd78e274c39eb9215198a7fabab2264d492e",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "NPM库选项：`openid.subjectPrefix`"
+      }
+    },
+    {
+      "segment_id": "af250a10",
+      "source_content": "## Database configuration",
+      "source_content_hash": "bc04beaaa997c63b2d4f14782b78dc3166f085a768871dff1c56f31b0fb16b75",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 数据库配置"
+      }
+    },
+    {
+      "segment_id": "6d457467",
+      "source_content": "### **DB_ENGINE**",
+      "source_content_hash": "dd0bc05fa86cde301f8388155e6a9579f9c45ef2f79a7d9420c852f889c75941",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### **DB_ENGINE**"
+      }
+    },
+    {
+      "segment_id": "6fad5db5",
+      "source_content": "Supported values are `redis`, `sql`, `mongo`, `mem`, `planetscale`, `dynamodb`",
+      "source_content_hash": "f3d7dd74721907c5fc2d33106d6681104a15c843594fcc9d6b1f9a9ec1e93643",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "支持取值：`redis`、`sql`、`mongo`、`mem`、`planetscale`、`dynamodb`"
+      }
+    },
+    {
+      "segment_id": "c5e0bb3d",
+      "source_content": "Default: `sql`",
+      "source_content_hash": "93d7e5ee79587649e13b6908f72ca0d6cec3747c85944014a42da4aac173ab25",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "默认值：`sql`"
+      }
+    },
+    {
+      "segment_id": "f2c67ca5",
+      "source_content": "NPM library option: `db.engine`",
+      "source_content_hash": "2d09632bcc90b5c79591e83d51960abb8bd599dada18aa84af525c08f8b4f339",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "NPM库选项：`db.engine`"
+      }
+    },
+    {
+      "segment_id": "930e340a",
+      "source_content": "> **_NOTE:_** If you are using DynamoDB then you also need to set `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY`. For additional options like region and capacity units check [this section](#db_dynamodb_region)",
+      "source_content_hash": "3cc5c07e410ffba2d02f0b5a4efa7bfc0aa7f7e3a0520a860aeb6e85305830e1",
+      "node_type": "blockquote",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "> **_注意：_** 使用DynamoDB时需额外设置`AWS_ACCESS_KEY_ID`和`AWS_SECRET_ACCESS_KEY`。区域与容量单位等高级选项请参阅[此章节](#db_dynamodb_region)"
+      }
+    },
+    {
+      "segment_id": "93b7c17c",
+      "source_content": "> **_NOTE:_** `mem` DB (In memory database) is useful to test the Jackson setup locally and is not intended for production. In a serverless deployment like Vercel, the mem DB won't persist across API calls since each call is a fresh lambda invocation with an entirely new context.",
+      "source_content_hash": "a0e41ec355d86bfd7ee233d9a0b0e25c57253d8b85d40af777906c0d1e67684c",
+      "node_type": "blockquote",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "> **_注意：_** `mem`数据库（内存数据库）仅适用于本地测试Jackson配置，不可用于生产环境。在Vercel等无服务器部署中，由于每次API调用都是全新的lambda调用上下文，内存数据库无法跨请求持久化数据。"
+      }
+    },
+    {
+      "segment_id": "a9de5d69",
+      "source_content": "### **DB_TYPE**",
+      "source_content_hash": "79eaa4d0cb03acd399a08afd43349daf63f32afded5895aa765432aaa4bd507a",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### **DB_TYPE**"
+      }
+    },
+    {
+      "segment_id": "e6ac016e",
+      "source_content": "Only needed when DB_ENGINE is sql. Supported values are `postgres`, `mysql`, `mariadb`, `mssql`",
+      "source_content_hash": "f2c9168cfa4bb554ebc64c1a4ffe3f14d819a5e49ca62f6245ab890e0fae8685",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "仅当DB_ENGINE为sql时需配置。支持取值：`postgres`、`mysql`、`mariadb`、`mssql`"
+      }
+    },
+    {
+      "segment_id": "dad05c50",
+      "source_content": "Default: `postgres`",
+      "source_content_hash": "5e7cfe76e6017b48a35afb7d026580827a2b05e3cd591efa25f27626b22996c5",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "默认值：`postgres`"
+      }
+    },
+    {
+      "segment_id": "eeeea5ce",
+      "source_content": "NPM library option: `db.type`",
+      "source_content_hash": "d3b4f4739b13a988f32c80c90d8fa1f014322d818fc5ac8494e84f438dad44f9",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "NPM库选项：`db.type`"
+      }
+    },
+    {
+      "segment_id": "97496aad",
+      "source_content": "### **DB_URL**",
+      "source_content_hash": "fee962a7b9787b9df2614be8430d8ade11c0febbf69d4cffe1926f3b416fc9f8",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### **DB_URL**"
+      }
+    },
+    {
+      "segment_id": "af834e0d",
+      "source_content": "The database URL to connect to. If you are using self-signed certificates then pass `sslmode=no-verify` instead of `sslmode=require` in the `DB_URL`. This is because self-signed certs will be rejected as unauthorized in strict mode. Also, set `DB_SSL=true` and `DB_SSL_REJECT_UNAUTHORIZED=false` (see env vars below for more details).",
+      "source_content_hash": "d7dae4e70b0c7c70ba53dc2b9418912e35e94c1a519f9e187363da68aba0ac4e",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "数据库连接URL。若使用自签名证书，需将`sslmode=require`替换为`sslmode=no-verify`，因为严格模式下自签名证书会被视为未授权。同时需设置`DB_SSL=true`和`DB_SSL_REJECT_UNAUTHORIZED=false`（详见下方环境变量说明）。"
+      }
+    },
+    {
+      "segment_id": "d75361e3",
+      "source_content": "Example: `postgres://postgres:postgres@localhost:5432/postgres` or `postgres://postgres:postgres@localhost:5432/postgres?sslmode=no-verify`",
+      "source_content_hash": "09a237733906fd17fcf288eae3610722410d0dfa6e2c96c7847dbf99299400fd",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "示例：`postgres://postgres:postgres@localhost:5432/postgres` 或 `postgres://postgres:postgres@localhost:5432/postgres?sslmode=no-verify`"
+      }
+    },
+    {
+      "segment_id": "c277c3c0",
+      "source_content": "For `mssql` the URL takes the form of `sqlserver://localhost:1433;database=<db name>;username=<username>;password=<password>;encrypt=true`",
+      "source_content_hash": "08318bc990c09b164a1848753207930b36342180bcc843e8010e26c4fe1d4837",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "`mssql`连接URL格式：`sqlserver://localhost:1433;database=<数据库名>;username=<用户名>;password=<密码>;encrypt=true`"
+      }
+    },
+    {
+      "segment_id": "118e6784",
+      "source_content": "> **_NOTE:_** If you are using DynamoDB then you also need to set `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY`. For additional options like region and capacity units check [this section](#db_dynamodb_region)",
+      "source_content_hash": "3cc5c07e410ffba2d02f0b5a4efa7bfc0aa7f7e3a0520a860aeb6e85305830e1",
+      "node_type": "blockquote",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "> **_注意：_** 使用DynamoDB时需额外设置`AWS_ACCESS_KEY_ID`和`AWS_SECRET_ACCESS_KEY`。区域与容量单位等高级选项请参阅[此章节](#db_dynamodb_region)"
+      }
+    },
+    {
+      "segment_id": "e4945edb",
+      "source_content": "NPM library option: `db.url`",
+      "source_content_hash": "c7e7a9717848a06428accf550a7678b1cb54eaf7b0881ace4854f9458962b29d",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "NPM库选项：`db.url`"
+      }
+    },
+    {
+      "segment_id": "950e5c6c",
+      "source_content": "### **DB_SSL**",
+      "source_content_hash": "bd4333329ac24c1b691a21831e0b86509fd23f00119a5073ec663b050afbdf26",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### **DB_SSL**"
+      }
+    },
+    {
+      "segment_id": "49be422b",
+      "source_content": "This needs to be set to `true` if you are using SSL with your database (You should definitely be using SSL if the database needs to be access via a public url).",
+      "source_content_hash": "60c6aeab3e815a7949d2dc4db0dc2c448f77bb99d8efd142538e9403f6dd75dc",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "当数据库需通过SSL连接时必须设为`true`（若需通过公网访问数据库，强烈建议启用SSL）。"
+      }
+    },
+    {
+      "segment_id": "01902900",
+      "source_content": "Default: `false`",
+      "source_content_hash": "5173128309f7b284ca2c215e0224cddfc7a29db4b2609e0876977029f82f6d17",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "默认值：`false`"
+      }
+    },
+    {
+      "segment_id": "200685d4",
+      "source_content": "### **DB_SSL_REJECT_UNAUTHORIZED**",
+      "source_content_hash": "e1cd5e4d36ab9703d0606a7be4480a99e41a1382264c788e3bc7cf43108fdc08",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### **DB_SSL_REJECT_UNAUTHORIZED**"
+      }
+    },
+    {
+      "segment_id": "09d52457",
+      "source_content": "If you are using a self-signed certificate then set this to `false`, otherwise it will be rejected due to Certificate Authority checks.",
+      "source_content_hash": "d0c5a238102abac013b7e3d166835bd4dd1eb5611086b6b29d49b5fd29ca609f",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "使用自签名证书时需设为`false`，否则会因证书权威机构校验失败被拒绝连接。"
+      }
+    },
+    {
+      "segment_id": "d73903fc",
+      "source_content": "Default: `true`",
+      "source_content_hash": "ebfc60f3a746eb8b52655ae30e95733eb469c7a0ade1008499f6967cfa258ea4",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "默认值：`true`"
+      }
+    },
+    {
+      "segment_id": "263073b1",
+      "source_content": "### **DB_MANUAL_MIGRATION**",
+      "source_content_hash": "0cbd9789eadddcf587ef06e96ed863e908a0b80bcabc5c849f2aaa4d9ca9c6af",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### **DB_MANUAL_MIGRATION**"
+      }
+    },
+    {
+      "segment_id": "d119b75c",
+      "source_content": "Set this to true to trigger execution of migration scripts when you use our Jackson docker image.",
+      "source_content_hash": "8ba2ff58c9346ab5bf1d8d327ba5c243ea0eae97482b45b7df11582788038af5",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "使用Jackson Docker镜像时，设为true可触发迁移脚本执行。"
+      }
+    },
+    {
+      "segment_id": "8f4e752e",
+      "source_content": "Optionally you can run the npm scripts present in `./npm/package.json` to run db specific migrations.",
+      "source_content_hash": "ff620638e3d31397f250c507fab3a564758414894395d790c20a040aebcb891d",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "也可选择运行`./npm/package.json`中的npm脚本来执行特定数据库的迁移操作。"
+      }
+    },
+    {
+      "segment_id": "f211c69a",
+      "source_content": "Make sure you have set the correct value for `DB_ENGINE` environment variable as the migration script checks that to run correct command and migration file.",
+      "source_content_hash": "95f69fe65599da5e2b2aaca9305f3d8a75292256d1afb7850e881587610bd8ff",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "请确保已正确设置 `DB_ENGINE` 环境变量，因为迁移脚本会检查该值以执行正确的命令和迁移文件。"
+      }
+    },
+    {
+      "segment_id": "face5559",
+      "source_content": "NPM library option: `db.manualMigration`\nDefault: `false`",
+      "source_content_hash": "8618077f5eb1a1de66e18f1b767b720c2f941c68f54611ffc32f47af64a2833c",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "NPM库选项: `db.manualMigration`\n默认值: `false`"
+      }
+    },
+    {
+      "segment_id": "9349ceaa",
+      "source_content": "### **DB_TTL**",
+      "source_content_hash": "f7ad62255cadf2f2105f0aa1448f0eab218acd2e6a2fc4864b600b0a401a6a36",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### **DB_TTL**"
+      }
+    },
+    {
+      "segment_id": "e636ba62",
+      "source_content": "TTL for the code, session and token stores (in seconds)",
+      "source_content_hash": "4194ebab9a54886f9e6b5a993263b0e2f4ef49b814fb25c1857709cd0f80f895",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "代码、会话和令牌存储的生存时间（单位：秒）"
+      }
+    },
+    {
+      "segment_id": "b0c30ab4",
+      "source_content": "Default: `300`",
+      "source_content_hash": "620bc93357724b86aab546bacb4e83d300d6309350172fc4145e7fe007304d40",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "默认值: `300`"
+      }
+    },
+    {
+      "segment_id": "318fb07e",
+      "source_content": "NPM library option: `db.ttl`",
+      "source_content_hash": "8c9c0e9a545139ef94695dbd42ab7510877f02147ef3e42bec914d2b79580afe",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "NPM库选项: `db.ttl`"
+      }
+    },
+    {
+      "segment_id": "68f08256",
+      "source_content": "### **DB_CLEANUP_LIMIT**",
+      "source_content_hash": "8e66ffa2c778627a72f933672ba27f69cc71a3df265c1c1c28acf83df8cba4ec",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### **DB_CLEANUP_LIMIT**"
+      }
+    },
+    {
+      "segment_id": "5d3138c7",
+      "source_content": "Limit cleanup of TTL entries to this number",
+      "source_content_hash": "6ba0d1138f1ddbbc5c712314e676b6c145e0788435ff2b2ba94da51b231edb65",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "限制TTL条目清理的数量"
+      }
+    },
+    {
+      "segment_id": "f6e7e6a7",
+      "source_content": "Default: `1000`",
+      "source_content_hash": "ec22e9fdf324749b60938de800306c9c3e4875f429b27e71ef43e18c974f873d",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "默认值: `1000`"
+      }
+    },
+    {
+      "segment_id": "9c70c953",
+      "source_content": "NPM library option: `db.cleanupLimit`",
+      "source_content_hash": "807bdc5bc809530081f89d4d91c81fde04bd3b1e06383eef5a78a8693e90d20a",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "NPM库选项: `db.cleanupLimit`"
+      }
+    },
+    {
+      "segment_id": "e5878bb6",
+      "source_content": "### **DB_ENCRYPTION_KEY**",
+      "source_content_hash": "07be5274ae0b8fdfe1cb98f910fc5f3a60d924e785e4268ad2cad859d828eb72",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### **DB_ENCRYPTION_KEY**"
+      }
+    },
+    {
+      "segment_id": "12bc7444",
+      "source_content": "To encrypt data at rest specify a 32 byte key (encoded in base64)",
+      "source_content_hash": "572833c5911a4a7713f159e36f984931bce19be92bd16c0bdb66e920a448605d",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "如需静态数据加密，请指定32字节密钥（base64编码）"
+      }
+    },
+    {
+      "segment_id": "f50056c0",
+      "source_content": "You can use openssl to generate a random 32 byte key:",
+      "source_content_hash": "10ab944acc873c773997fd5b3e5fab456784945c0698e0c5331a0b79230a451b",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "可使用openssl生成随机32字节密钥："
+      }
+    },
+    {
+      "segment_id": "a3c4300b",
+      "source_content": "```bash\nopenssl rand -base64 32\n```",
+      "source_content_hash": "8077c4fdd334659ca2a0d14518349b93da034a41f253a83807b714bcf6546117",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_a3c4300b"
+      }
+    },
+    {
+      "segment_id": "216a8ee1",
+      "source_content": "NPM library option: `db.encryptionKey`",
+      "source_content_hash": "b6df25d196df388ba3d9368bba5385344d178d92e2f7014f0a1c32987564130c",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "NPM库选项: `db.encryptionKey`"
+      }
+    },
+    {
+      "segment_id": "d59d3f3c",
+      "source_content": "### **PGSSLMODE**",
+      "source_content_hash": "8a70b65d2ebc47d47452d45058f2865b7093c21e91705b3f0bb3bce699d94c2c",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### **PGSSLMODE**"
+      }
+    },
+    {
+      "segment_id": "b632973a",
+      "source_content": "If you use Heroku to deploy Postgres (or use self-signed certs for Postgres) then set this to `no-verify`. See [Heroku docs](https://devcenter.heroku.com/articles/connecting-heroku-postgres#connecting-in-node-js) for more details",
+      "source_content_hash": "b4382b3c2a9ec637ca80501340f548415582faaebf02ddff39b885116720eecc",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "如果在Heroku部署Postgres（或使用自签名证书），请将此值设为`no-verify`。详见[Heroku文档](https://devcenter.heroku.com/articles/connecting-heroku-postgres#connecting-in-node-js)"
+      }
+    },
+    {
+      "segment_id": "04f25754",
+      "source_content": "### **DB_DYNAMODB_REGION**",
+      "source_content_hash": "8b0caedace6bbcf033ecee974ec71b3abbf266501e860c9ec8f6839c4fff4da9",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### **DB_DYNAMODB_REGION**"
+      }
+    },
+    {
+      "segment_id": "1d39fdbf",
+      "source_content": "If you are using DynamoDB then you can specify the region.",
+      "source_content_hash": "0ad0bbc88d76e0fba8d8b6b931ab4655505c5db13733b0230325428f9501b8c9",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "使用DynamoDB时可指定区域"
+      }
+    },
+    {
+      "segment_id": "bed77f05",
+      "source_content": "Default: `us-east-1`",
+      "source_content_hash": "d9f430d41e589b05cd5b5a546e4a5714a5e56c4f69e605be56030f06665e98ad",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "默认值: `us-east-1`"
+      }
+    },
+    {
+      "segment_id": "46e586a3",
+      "source_content": "NPM library option: `db.dynamodb.region`",
+      "source_content_hash": "46e197b3e45390d1c46b2526aa4383a889beac4b1f9198bd3d55c15e67345fa7",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "NPM库选项: `db.dynamodb.region`"
+      }
+    },
+    {
+      "segment_id": "bea5d450",
+      "source_content": "### **DB_DYNAMODB_RCUS**",
+      "source_content_hash": "3b4fd48ebfe6566a9e3b7ad3504da84019e9ed2c88879724e28233a5c079d10e",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### **DB_DYNAMODB_RCUS**"
+      }
+    },
+    {
+      "segment_id": "aa705b4d",
+      "source_content": "If you are using DynamoDB then you can specify the read capacity units. Check [AWS docs](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/HowItWorks.ReadWriteCapacityMode.html) for more details",
+      "source_content_hash": "b81d2e52a750d17900f52d9f6314ef4872d1aea3d8edfcca13ffcde1f4d93a38",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "使用DynamoDB时可指定读取容量单位。详见[AWS文档](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/HowItWorks.ReadWriteCapacityMode.html)"
+      }
+    },
+    {
+      "segment_id": "f0db2ff1",
+      "source_content": "Default: 5",
+      "source_content_hash": "1f6bdacb343e160b3b1587dd6a5657dc4648407cc429b506ff4c6f0db2ca68fe",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "默认值: 5"
+      }
+    },
+    {
+      "segment_id": "4e994fc3",
+      "source_content": "NPM library option: `db.dynamodb.readCapacityUnits`",
+      "source_content_hash": "52ab2e1361c62af3d5507b837929442e35c063f352eedc33edb005b4d35ce90f",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "NPM库选项: `db.dynamodb.readCapacityUnits`"
+      }
+    },
+    {
+      "segment_id": "a99db0f6",
+      "source_content": "### **DB_DYNAMODB_WCUS**",
+      "source_content_hash": "de37580f684962e2aafdd483651284d48225066ff2cc34a64a79ace9e00c66a1",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### **DB_DYNAMODB_WCUS**"
+      }
+    },
+    {
+      "segment_id": "2ab62b74",
+      "source_content": "If you are using DynamoDB then you can specify the write capacity units.",
+      "source_content_hash": "7ccabac95bc8ecd6c7d284ba8386959a920358ff0f4e4c4c4b7383434ad25b02",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "使用DynamoDB时可指定写入容量单位"
+      }
+    },
+    {
+      "segment_id": "c9e08343",
+      "source_content": "Default: 5",
+      "source_content_hash": "1f6bdacb343e160b3b1587dd6a5657dc4648407cc429b506ff4c6f0db2ca68fe",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "默认值: 5"
+      }
+    },
+    {
+      "segment_id": "4786f22b",
+      "source_content": "NPM library option: `db.dynamodb.writeCapacityUnits`",
+      "source_content_hash": "147e8706d9664f2289eb382fed2ba00e9e147963c112428ad868bc52e7a35881",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "NPM库选项: `db.dynamodb.writeCapacityUnits`"
+      }
+    },
+    {
+      "segment_id": "9cdf9229",
+      "source_content": "## Webhook configuration",
+      "source_content_hash": "b1b770927df6271c1effc52a945fa60116973f0d21e33dd1ecfcb172f9bdc765",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## Webhook配置"
+      }
+    },
+    {
+      "segment_id": "ca32a808",
+      "source_content": "### **WEBHOOK_URL**",
+      "source_content_hash": "2541d518848a2c14bbba488b4e6dd4ca99828b901d065aaf2977e07722dc6bcb",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### **WEBHOOK_URL**"
+      }
+    },
+    {
+      "segment_id": "d1996877",
+      "source_content": "Specify a webhook URL to receive events about sso and directory connections.",
+      "source_content_hash": "6ff0cafec33b243347cb3c1dd7d38334130e81a3da8a3d624a0590b379b1b1d9",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "指定接收SSO和目录连接事件的webhook URL"
+      }
+    },
+    {
+      "segment_id": "95b3e282",
+      "source_content": "NPM library option: `webhook.endpoint`",
+      "source_content_hash": "c610f88e94cca751e3784c370ec3155b77efd74cf73a231a6e091add6131109b",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "NPM库选项: `webhook.endpoint`"
+      }
+    },
+    {
+      "segment_id": "db1c4f18",
+      "source_content": "### **WEBHOOK_SECRET**",
+      "source_content_hash": "06978875130683b4ef9ae16253ec49c0aa1639f8bba22fbea06a35c85d5c7362",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### **WEBHOOK_SECRET**"
+      }
+    },
+    {
+      "segment_id": "45d5dee4",
+      "source_content": "Specify a secret to be used to sign the webhook payload. This is used to verify the authenticity of the webhook payload.",
+      "source_content_hash": "456b05dbaf7c3ddd6255da407d97ab4df46fa2150bba07edbf9c3b52ba8bb819",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "指定用于签名webhook负载的密钥，用于验证负载真实性"
+      }
+    },
+    {
+      "segment_id": "83d7d3bc",
+      "source_content": "NPM library option: `webhook.secret`",
+      "source_content_hash": "7c91ce5ded38df8c54b235127e0ef6e8af5ff36d35ffae5b3cb7861e12d8dde2",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "NPM库选项: `webhook.secret`"
+      }
+    },
+    {
+      "segment_id": "2e76bd58",
+      "source_content": "Both the `WEBHOOK_URL` and `WEBHOOK_SECRET` are required to enable webhook events.",
+      "source_content_hash": "870dfbc56a0e82327abb7d1b056abdab631cc0f75d136047ed62cd01670c08f0",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "需同时配置`WEBHOOK_URL`和`WEBHOOK_SECRET`才能启用webhook事件"
+      }
+    },
+    {
+      "segment_id": "c06a14cd",
+      "source_content": "## Pre-loaded Connections",
+      "source_content_hash": "5b1d6f0923110ea8eee5bbfa8a4af37cad8d300dbd7e356486bccfa6f04356df",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 预加载连接配置"
+      }
+    },
+    {
+      "segment_id": "363f5ed5",
+      "source_content": "### **PRE_LOADED_CONNECTION**",
+      "source_content_hash": "9d04869b5d21284ffde5b2ed9399ddb7071449c7677411c4769b3c93c19e4279",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### **PRE_LOADED_CONNECTION**"
+      }
+    },
+    {
+      "segment_id": "ebe673d6",
+      "source_content": "If you only need a single tenant or a handful of pre-configured tenants then this config will help you read and load IdP (both OpenID and SAML)connections. It works well with the mem DB engine so you don't have to configure any external databases for this to work (though it works with those as well). This is a path (absolute or relative) to a directory that contains files organized in the format described in the next section. Check [this section](./pre-loaded-connections.md) for more details",
+      "source_content_hash": "36a854922e0b649784a7fb58b6d3c29c73d4c6e6396b71545974e98aaacb65e1",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "若仅需单个租户或少量预配置租户，此配置可帮助读取和加载IdP（包括OpenID和SAML）连接。该功能与mem数据库引擎配合良好，无需配置外部数据库（但也可兼容其他数据库）。需指定包含特定格式文件的目录路径（绝对或相对路径），格式说明详见下一节。更多细节请参阅[此章节](./pre-loaded-connections.md)"
+      }
+    },
+    {
+      "segment_id": "7e031d10",
+      "source_content": "NPM library option: `preLoadedConnection`",
+      "source_content_hash": "5396a16690acb53af10a960425bd8c4e62240b0633fd08202b9385f345640437",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "NPM库选项: `preLoadedConnection`"
+      }
+    },
+    {
+      "segment_id": "28d66ee4",
+      "source_content": "## Opentelemetry configuration",
+      "source_content_hash": "f3406f154fffeb78fdf91930dc297e449d246ac706e15c058cccde24ca655a49",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## OpenTelemetry配置"
+      }
+    },
+    {
+      "segment_id": "0974dfbb",
+      "source_content": "Jackson supports observability via OpenTelemetry. The following env vars are available for configuration (along with the rest of the [supported ones](https://github.com/open-telemetry/opentelemetry-specification/blob/main/specification/protocol/exporter.md))",
+      "source_content_hash": "688a8b4b767dc7b1796ca495f984a523835a24b1955b15efc735b5bd10f5f4f3",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "Jackson 支持通过 OpenTelemetry 实现可观测性。以下是可配置的环境变量（以及[官方支持的其他变量](https://github.com/open-telemetry/opentelemetry-specification/blob/main/specification/protocol/exporter.md)）："
+      }
+    },
+    {
+      "segment_id": "c48a3f55",
+      "source_content": "### **OTEL_EXPORTER_OTLP_ENDPOINT** or **OTEL_EXPORTER_OTLP_METRICS_ENDPOINT**",
+      "source_content_hash": "f0ebae5b603cf8c3a0bb6bc9a5cb48d2f884a6cfeeb4be38956d9a596bfebe45",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### **OTEL_EXPORTER_OTLP_ENDPOINT** 或 **OTEL_EXPORTER_OTLP_METRICS_ENDPOINT**"
+      }
+    },
+    {
+      "segment_id": "d6c9e4cd",
+      "source_content": "Target URL to which the exporter is going to send metrics.",
+      "source_content_hash": "fe945874b8b78947bc7de3986dadf9eae14c8360e02a18396d4357dd38f14c45",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "导出器发送指标的目标 URL。"
+      }
+    },
+    {
+      "segment_id": "4443801b",
+      "source_content": "Example: `https://ingest.lightstep.com:443/metrics/otlp/v0.6`",
+      "source_content_hash": "58ee783ed85cd0c1709686c529dcfe97b1833de7cb2b37637825a096f3a23ede",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "示例：`https://ingest.lightstep.com:443/metrics/otlp/v0.6`"
+      }
+    },
+    {
+      "segment_id": "40a24bf2",
+      "source_content": "### **OTEL_EXPORTER_OTLP_HEADERS** or **OTEL_EXPORTER_OTLP_METRICS_HEADERS**",
+      "source_content_hash": "f7dd885b184b7bd3e2b3461dd47a482cb4a16c3b0088f90b8aac9ea40901f7a8",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### **OTEL_EXPORTER_OTLP_HEADERS** 或 **OTEL_EXPORTER_OTLP_METRICS_HEADERS**"
+      }
+    },
+    {
+      "segment_id": "a30b7214",
+      "source_content": "Headers relevant for the endpoint, useful for specifying authentication details for providers.",
+      "source_content_hash": "d114e7352e54d6ee539a2248939989ac1bef6364b27224fc85ff44327bdec69c",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "与端点相关的请求头，可用于指定服务商的身份验证信息。"
+      }
+    },
+    {
+      "segment_id": "647ea627",
+      "source_content": "Example: `lightstep-access-token=<token>,...`",
+      "source_content_hash": "205711ffc5e037c21675967a68fcd77b29e751b1855dc3900e045c442d901016",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "示例：`lightstep-access-token=<token>,...`"
+      }
+    },
+    {
+      "segment_id": "e85288f7",
+      "source_content": "### **OTEL_EXPORTER_OTLP_PROTOCOL** or **OTEL_EXPORTER_OTLP_METRICS_PROTOCOL**",
+      "source_content_hash": "458aaf4262aa2cd066243c7f3622bfc9b4f83152ee9ca8affff86a65511c7566",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### **OTEL_EXPORTER_OTLP_PROTOCOL** 或 **OTEL_EXPORTER_OTLP_METRICS_PROTOCOL**"
+      }
+    },
+    {
+      "segment_id": "f10c482a",
+      "source_content": "The transport protocol. Options MUST be one of: `grpc`, `http/protobuf` or `http/json`.",
+      "source_content_hash": "e662b81c7f274aca11c7c687e0949cd789e242924703657a7b39334cdb505ad1",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "传输协议。可选值必须为：`grpc`、`http/protobuf` 或 `http/json`。"
+      }
+    },
+    {
+      "segment_id": "fe45329d",
+      "source_content": "### **OTEL_EXPORTER_DEBUG**",
+      "source_content_hash": "57ee5891b60c851473b271cf871da464335e2e12ff6123243eed01153f6d0d92",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### **OTEL_EXPORTER_DEBUG**"
+      }
+    },
+    {
+      "segment_id": "e17d0554",
+      "source_content": "Set this to `true` to enable debug logs for Opentelemetry. This is only meant for purposes of debugging otel locally.",
+      "source_content_hash": "191d381c678dd4c60ec1caf6cc13aab9b817abb3b58e54147d37f2068304c911",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "设置为 `true` 可启用 OpenTelemetry 的调试日志。仅限本地调试使用。"
+      }
+    },
+    {
+      "segment_id": "cb0acec9",
+      "source_content": "## Admin Portal configuration",
+      "source_content_hash": "2e9580aaddc83da3f4ed09f564b54756d1c5b03d9791f7197cd5902d8aba15f2",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 管理门户配置"
+      }
+    },
+    {
+      "segment_id": "eb398072",
+      "source_content": "Below variables are used to enable [Magic link](https://next-auth.js.org/providers/email) based authentication for Admin Portal. The **SMTP\\_** variables are used for sending email which contain the magic link (one-time use) for sign in.",
+      "source_content_hash": "927b293a26cef6cb0350950b0efc85fdd25955541beca1ce899e05804538802a",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "以下变量用于为管理门户启用[魔法链接](https://next-auth.js.org/providers/email)认证功能。**SMTP_** 变量用于发送包含一次性登录魔法链接的邮件。"
+      }
+    },
+    {
+      "segment_id": "505664a6",
+      "source_content": "### **SMTP_HOST**",
+      "source_content_hash": "5c81e73276ae29ad6d2b6c8f67d2eaae8e6e4779ccaf7c1e562c12855cdbd390",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### **SMTP_HOST**"
+      }
+    },
+    {
+      "segment_id": "3d5e3f4c",
+      "source_content": "The SMTP host like `smtp.example.com`.",
+      "source_content_hash": "bc774266b2a8170a9df67485aa52a13318f0e81143f7fde5596d9c63dd40e9ea",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "SMTP 主机地址，例如 `smtp.example.com`。"
+      }
+    },
+    {
+      "segment_id": "d67910b8",
+      "source_content": "### **SMTP_PORT**",
+      "source_content_hash": "e1236fbb33a496e62f63b81a27e7320b4147ec4c13eaecc3ecede2684ab64046",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### **SMTP_PORT**"
+      }
+    },
+    {
+      "segment_id": "b6abd1ad",
+      "source_content": "The SMTP server port like `587`.",
+      "source_content_hash": "0b08a6fe71c110ca963f6a3c4c70dcb62333ef15e929ad1d79b1584db25a7326",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "SMTP 服务器端口，例如 `587`。"
+      }
+    },
+    {
+      "segment_id": "a6f3574e",
+      "source_content": "### **SMTP_USER**",
+      "source_content_hash": "e9b78deec7416fd9d74a5be5048582a000bc2f1d2a6e5056975051a5c7ca83ff",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### **SMTP_USER**"
+      }
+    },
+    {
+      "segment_id": "d67645cb",
+      "source_content": "Username for the SMTP server.",
+      "source_content_hash": "1b0117cd12f2cf876a8c62e86132f2c578036ff13e22f9e3b705b86e2a2dc951",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "SMTP 服务器的用户名。"
+      }
+    },
+    {
+      "segment_id": "99e44af3",
+      "source_content": "### **SMTP_PASSWORD**",
+      "source_content_hash": "85bf54ad0f2dedfcfe0d99c301c6ba058a9446a61d33437542b18e5916509789",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### **SMTP_PASSWORD**"
+      }
+    },
+    {
+      "segment_id": "dd78ef80",
+      "source_content": "Password for the SMTP server.",
+      "source_content_hash": "9fa2b592a0ba7daf7c5cbd916d8a2a8a0ef735d8d760fa2e24b47ed1967f0a51",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "SMTP 服务器的密码。"
+      }
+    },
+    {
+      "segment_id": "3f6b512a",
+      "source_content": "### **SMTP_FROM**",
+      "source_content_hash": "09b2c2c80c95c222a1d5ec3aa0a64acca6ffa74c23b14a497fa9d026928401a8",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### **SMTP_FROM**"
+      }
+    },
+    {
+      "segment_id": "e91bdcd9",
+      "source_content": "_From_ address used to send mail like: `noreply@example.com`.",
+      "source_content_hash": "7ef178a4a94adce229e1056967a3197c9a536866366ef1161c49b098e007ac03",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "发送邮件时使用的发件人地址，例如：`noreply@example.com`。"
+      }
+    },
+    {
+      "segment_id": "f7420cb5",
+      "source_content": "### **NEXTAUTH_URL**",
+      "source_content_hash": "a428edda84ec767538d34729ea5df28ba2bea48bc632402f757a5ddb79f72ec5",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### **NEXTAUTH_URL**"
+      }
+    },
+    {
+      "segment_id": "dbea1fe8",
+      "source_content": "When running locally this will point to the local server: `http://localhost:5225`. When deploying to production, set this to the canonical URL of the site. More details [here](https://next-auth.js.org/configuration/options#nextauth_url).",
+      "source_content_hash": "0695d79f84323620eb17ceafb036674343bff973c8dbb29a27886794f8031b5d",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "本地运行时指向本地服务器：`http://localhost:5225`。部署到生产环境时，请设置为站点的正式 URL。详情参见[此处](https://next-auth.js.org/configuration/options#nextauth_url)。"
+      }
+    },
+    {
+      "segment_id": "5ce48008",
+      "source_content": "### **NEXTAUTH_SECRET**",
+      "source_content_hash": "4a2d020455fb55e326e672ecad3b6c6bc1ccb29431839ae5d89ab3f1e6009909",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### **NEXTAUTH_SECRET**"
+      }
+    },
+    {
+      "segment_id": "4869d0e4",
+      "source_content": "Set this to a random string. You can use `openssl rand -base64 32` to get one. This secret is used to encrypt JWT and hash the email verification token. More details [here](https://next-auth.js.org/configuration/options#nextauth_secret).",
+      "source_content_hash": "4c32247c987057e825828943df780ac0901dc955d59ab903ce9fcd49c704642f",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "设置为随机字符串。可通过 `openssl rand -base64 32` 生成。该密钥用于加密 JWT 和哈希邮件验证令牌。详情参见[此处](https://next-auth.js.org/configuration/options#nextauth_secret)。"
+      }
+    },
+    {
+      "segment_id": "fa461c90",
+      "source_content": "### **NEXTAUTH_ACL**",
+      "source_content_hash": "28d1efd79ec429c18aec4b02317d0eddea7d4c693e518339fd940fc13fcc011e",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### **NEXTAUTH_ACL**"
+      }
+    },
+    {
+      "segment_id": "fe2c7f95",
+      "source_content": "Set this to a comma separated string of email addresses or glob patterns like: `tonystark@gmail.com,*@marvel.com`. Access will be denied to email addresses which don't match. If you don't specify any value access is denied to all.",
+      "source_content_hash": "b3058658bfe021cd29f2f019db5836f470ee6f38d38978edd5e705a77f6fd967",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "设置为逗号分隔的电子邮件地址或通配符模式，例如：`tonystark@gmail.com,*@marvel.com`。不匹配的邮箱地址将被拒绝访问。若未指定值，则拒绝所有访问。"
+      }
+    },
+    {
+      "segment_id": "99b95415",
+      "source_content": "### **NEXTAUTH_ADMIN_CREDENTIALS**",
+      "source_content_hash": "b913604c92bcd037f040ce901095f3d2bf5241468acdb14ab658bcd2a57d3c7f",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### **NEXTAUTH_ADMIN_CREDENTIALS**"
+      }
+    },
+    {
+      "segment_id": "860eb645",
+      "source_content": "Set this to a comma separated string of the pattern `email:password` to enable login to the Admin Portal, for example `NEXTAUTH_ADMIN_CREDENTIALS=deepak@boxyhq.com:Password123`. If you don't specify any value access is denied to all.",
+      "source_content_hash": "63d436088bb824391a17d65dea0fede67f98b8ba01f32dc5385ca495cc85e659",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "设置为 `email:password` 格式的逗号分隔字符串以启用管理门户登录，例如 `NEXTAUTH_ADMIN_CREDENTIALS=deepak@boxyhq.com:Password123`。若未指定值，则拒绝所有访问。"
+      }
+    },
+    {
+      "segment_id": "9b9cfc44",
+      "source_content": "### **ADMIN_PORTAL_HIDE_AUDIT_LOGS**",
+      "source_content_hash": "5e6bb61035a6a772cc0ca8668dda0198a658f950553bcc9ec9b44d4f1503add4",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### **ADMIN_PORTAL_HIDE_AUDIT_LOGS**"
+      }
+    },
+    {
+      "segment_id": "77f0732d",
+      "source_content": "Set this to `true` if you want to hide the Audit Logs product in the sidebar.",
+      "source_content_hash": "2a3e1893f86ac5f0ae0dfac1812094e83da800253c33906b9a0aeac229b67407",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "设置为 `true` 可隐藏侧边栏中的审计日志产品。"
+      }
+    },
+    {
+      "segment_id": "7acce358",
+      "source_content": "Default: `false`",
+      "source_content_hash": "5173128309f7b284ca2c215e0224cddfc7a29db4b2609e0876977029f82f6d17",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "默认值：`false`"
+      }
+    },
+    {
+      "segment_id": "dfa57bae",
+      "source_content": "### **ADMIN_PORTAL_HIDE_IDENTITY_FEDERATION**",
+      "source_content_hash": "83a1cd648bea2d807eab357236740058db2b8cd12d828f8e7ff745917f340687",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### **ADMIN_PORTAL_HIDE_IDENTITY_FEDERATION**"
+      }
+    },
+    {
+      "segment_id": "85f6fcdd",
+      "source_content": "Set this to `true` if you want to hide the Identity Federation product in the sidebar.",
+      "source_content_hash": "c33adeff326a069546a126d01068b88dac5c8f692bee52c10047aecb83fb8e87",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "设置为 `true` 可隐藏侧边栏中的身份联邦产品。"
+      }
+    },
+    {
+      "segment_id": "9150ec12",
+      "source_content": "Default: `false`",
+      "source_content_hash": "5173128309f7b284ca2c215e0224cddfc7a29db4b2609e0876977029f82f6d17",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "默认值：`false`"
+      }
+    },
+    {
+      "segment_id": "3e57e612",
+      "source_content": "### **ADMIN_PORTAL_SSO_TENANT**",
+      "source_content_hash": "d784aef20207a5996597904278ea10363cde89657fbc226aa5d85912f75085b6",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### **ADMIN_PORTAL_SSO_TENANT**"
+      }
+    },
+    {
+      "segment_id": "f6c8bbba",
+      "source_content": "This will be used as the tenant for the SSO connections (added from Settings tab) used to login into the Admin portal itself. Set this to a value that is less likely to conflict with the main Enterprise SSO connections.",
+      "source_content_hash": "9d050553a1a8c8bed8b19188f44b5102beadef3fd504e1df3db0d7eb19b7bb95",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "该参数将作为管理门户自身登录所用SSO连接（通过设置页添加）的租户标识。请设置为不易与企业主SSO连接冲突的值。"
+      }
+    },
+    {
+      "segment_id": "ff95ec03",
+      "source_content": "Default: `_jackson_boxyhq`",
+      "source_content_hash": "24a46dff8678e51f1fa9002ad61936126bcc82c1d4c422387b5e71331559f652",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "默认值：`_jackson_boxyhq`"
+      }
+    },
+    {
+      "segment_id": "72965517",
+      "source_content": "### **ADMIN_PORTAL_SSO_PRODUCT**",
+      "source_content_hash": "93f431d42e0483c3db435a8a10f61fd703d47949da24fad1922663dc1b6d30f6",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### **ADMIN_PORTAL_SSO_PRODUCT**"
+      }
+    },
+    {
+      "segment_id": "ce99c217",
+      "source_content": "This will be used as the product for the SSO connections (added from Settings tab) used to login into the Admin portal itself. Set this to a value that is less likely to conflict with the main Enterprise SSO connections.",
+      "source_content_hash": "215dff7d766d2a83eaa1cf6a8f4af197af795ecf8fb7ad05beffd708958f3c3a",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "该参数将作为管理门户自身登录所用SSO连接（通过设置页添加）的产品标识。请设置为不易与企业主SSO连接冲突的值。"
+      }
+    },
+    {
+      "segment_id": "94a47b80",
+      "source_content": "Default: `_jackson_admin_portal`",
+      "source_content_hash": "e4843b033e9ad7841528b7eeedab272a427a3000ac0104b456982256b0199ac6",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "默认值：`_jackson_admin_portal`"
+      }
+    },
+    {
+      "segment_id": "7083d194",
+      "source_content": "### **RETRACED_HOST_URL**",
+      "source_content_hash": "aedf7f33bbfa9badc4622a2b2c40987f3e643f6fbc857be671edca34d3718058",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### **RETRACED_HOST_URL**"
+      }
+    },
+    {
+      "segment_id": "7a210168",
+      "source_content": "If you'd like to use the Admin Portal to manage our Audit Logs service ([Retraced](https://github.com/retracedhq/retraced)) then set this env var to the URL of the service.",
+      "source_content_hash": "e383eb08fef144170f44badcc3213b6ec3005401f789195667b5176098b04c56",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "若需通过管理门户操作审计日志服务([Retraced](https://github.com/retracedhq/retraced))，请将此环境变量设置为该服务URL。"
+      }
+    },
+    {
+      "segment_id": "a7b21ac5",
+      "source_content": "### **RETRACED_EXTERNAL_URL**",
+      "source_content_hash": "cd9939a3a62749697fbbd5008dd687b451b2b997cdb8bd0b77b229fc5a6a59cf",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### **RETRACED_EXTERNAL_URL**"
+      }
+    },
+    {
+      "segment_id": "250c20ca",
+      "source_content": "If you'd like to use the Admin Portal to manage our Audit Logs service ([Retraced](https://github.com/retracedhq/retraced)) then set this env var to the Public URL of the service. If this is the same as `RETRACED_HOST_URL` above then you can skip this and it will default to the value of `RETRACED_HOST_URL`.",
+      "source_content_hash": "8962262dccc3ae35c9e073400cafc56dfc4f1835805ccf0d0003daaf3897caa2",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "若需通过管理门户操作审计日志服务([Retraced](https://github.com/retracedhq/retraced))，请将此环境变量设置为该服务的公网URL。若该值与上述`RETRACED_HOST_URL`相同，可忽略此参数，系统将自动沿用`RETRACED_HOST_URL`的值。"
+      }
+    },
+    {
+      "segment_id": "a279d6f8",
+      "source_content": "Default: It is set to `RETRACED_HOST_URL` if `RETRACED_EXTERNAL_URL` is not defined.",
+      "source_content_hash": "acafc1ab4bfd822de93c7fc498b7f31e6870a7a16406d097b1c949a5e6a2721e",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "默认值：当未定义`RETRACED_EXTERNAL_URL`时，自动设置为`RETRACED_HOST_URL`的值。"
+      }
+    },
+    {
+      "segment_id": "b1e9700d",
+      "source_content": "### **RETRACED_ADMIN_ROOT_TOKEN**",
+      "source_content_hash": "eff51554cde0d680f9e19169d31856b2cc68bc798f52ca7c53ab50f8ea573834",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### **RETRACED_ADMIN_ROOT_TOKEN**"
+      }
+    },
+    {
+      "segment_id": "4206c3f9",
+      "source_content": "you need to set the admin root token for Retraced so that we can connect to Retraced and fetch projects and audit logs.",
+      "source_content_hash": "d1cdb8d333301ea9731ec428c8c0e8b180802b7db86d58102d2cff2008f56f71",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "需设置Retraced的管理员根令牌，以便连接Retraced并获取项目及审计日志。"
+      }
+    },
+    {
+      "segment_id": "cd2c3844",
+      "source_content": "## Anonymous Analytics",
+      "source_content_hash": "27c9e95a5d5e167298cb0754ad833ff5f8b66ebd8cf3c8d23b52895a41f0efd4",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 匿名分析"
+      }
+    },
+    {
+      "segment_id": "9d81e9c3",
+      "source_content": "### **BOXYHQ_NO_TELEMETRY** or **DO_NOT_TRACK**",
+      "source_content_hash": "21cf752ad969eab2772ee0ceef53191e30658a82afc9320914f497868e8a76af",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### **BOXYHQ_NO_TELEMETRY** 或 **DO_NOT_TRACK**"
+      }
+    },
+    {
+      "segment_id": "60d3a00d",
+      "source_content": "Set one of these to `1` or `true` to turn off our anonymous analytics. We only track usage events once per day and it does not contain any information that can identify you in any form.",
+      "source_content_hash": "a2e4788c1d3cf20f8dbec29c024b153893ee728b45345ff30310ae14e8894d99",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "将其中任一参数设为`1`或`true`可关闭匿名分析功能。我们仅每天统计一次使用事件，且不包含任何可识别用户身份的信息。"
+      }
+    },
+    {
+      "segment_id": "381a5950",
+      "source_content": "## SSO Traces",
+      "source_content_hash": "fe751af395b209f5e5757c8aa6e2e9d3847b5d4d2419e7ff68939c83c21ab533",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## SSO追踪"
+      }
+    },
+    {
+      "segment_id": "b6ec34ca",
+      "source_content": "### **SSO_TRACES_DISABLE**",
+      "source_content_hash": "f5e7c50d716837d403adeff387e4f84c9c46b4e5fa7545ea8a77d079a4e8aec6",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### **SSO_TRACES_DISABLE**"
+      }
+    },
+    {
+      "segment_id": "0beac34c",
+      "source_content": "Set this to `true` to disable SSO Traces collection.",
+      "source_content_hash": "159fbbeb3b7a8b19cd1a4a3a6643e93916b02252c377a7921fbed762a7b88be6",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "设为`true`可禁用SSO追踪收集功能。"
+      }
+    },
+    {
+      "segment_id": "a4e26c9f",
+      "source_content": "NPM library option: `ssoTraces.disable`",
+      "source_content_hash": "ed2c286bc5ed5d8ce5ef992e51227f4ff1269fdfbec96e999823bd48b2eb0632",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "NPM库选项：`ssoTraces.disable`"
+      }
+    },
+    {
+      "segment_id": "c721d9c4",
+      "source_content": "### **SSO_TRACES_REDACT**",
+      "source_content_hash": "2c45a2dbfd5c02162f23aa6f4d7212648a65636ecff5a0edec1cffc2953b8e9b",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### **SSO_TRACES_REDACT**"
+      }
+    },
+    {
+      "segment_id": "36b947e5",
+      "source_content": "Set this to `true` to redact profile information in SSO Traces.",
+      "source_content_hash": "3eb4121406050e214b951de6936afb7c25b31883c379eb2e0962018f4c189da8",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "设为`true`可对SSO追踪中的个人信息进行脱敏处理。"
+      }
+    },
+    {
+      "segment_id": "0400d81e",
+      "source_content": "NPM library option: `ssoTraces.redact`",
+      "source_content_hash": "ba4d86dbc9a10161bb517c27df7c59758fb3aab63c3d81fecb44fe482f145a6e",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "NPM库选项：`ssoTraces.redact`"
+      }
+    },
+    {
+      "segment_id": "573762e8",
+      "source_content": "### **SSO_TRACES_TTL**",
+      "source_content_hash": "d56423ecdb59519850d51c560cb02f78c59785b9939113720d2b48290f41e43f",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### **SSO_TRACES_TTL**"
+      }
+    },
+    {
+      "segment_id": "ec3c0760",
+      "source_content": "Set this to a value in hours to control how long SSO Traces are stored. Default: `7 days`",
+      "source_content_hash": "665d77b36a97425867da9f3b65e455919b9bda9cf118ed18850f4318d20b2e7a",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "设置SSO追踪数据的存储时长（单位：小时）。默认值：`7天`"
+      }
+    },
+    {
+      "segment_id": "69d6e4be",
+      "source_content": "NPM library option: `ssoTraces.ttl`",
+      "source_content_hash": "eb3c04d3948621f00f442540f7c1cb051303bc97b50b1e5612c160403e552da5",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "NPM库选项：`ssoTraces.ttl`"
+      }
+    },
+    {
+      "segment_id": "65863fe2",
+      "source_content": "## Directory Sync",
+      "source_content_hash": "5b7ee6f7676f37508bbcc598b07513439b76382c84c545d90cb9e695bf3a9370",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 目录同步"
+      }
+    },
+    {
+      "segment_id": "db871df4",
+      "source_content": "The following env vars are used to configure the directory sync feature.",
+      "source_content_hash": "426a5ec31a523bf664b723abeb5fdef5b4b91a735145dee77aa11db07b49ce4b",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "以下环境变量用于配置目录同步功能。"
+      }
+    },
+    {
+      "segment_id": "04bb83ba",
+      "source_content": "`DSYNC_GOOGLE_` env vars are only applicable if you are using Google Workspace as a directory sync provider.",
+      "source_content_hash": "d5dd2ca76b71bc029616306bbd81904abf02c7cb60526c7288af6fd945b67fb1",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "`DSYNC_GOOGLE_`前缀的环境变量仅在使用Google Workspace作为目录同步提供商时生效。"
+      }
+    },
+    {
+      "segment_id": "4170d23c",
+      "source_content": "### **DSYNC_WEBHOOK_BATCH_SIZE**",
+      "source_content_hash": "168c652680d779d872c8920f70585ef62e4f2f14c9d8f1a263f4b6d3f91d1512",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### **DSYNC_WEBHOOK_BATCH_SIZE**"
+      }
+    },
+    {
+      "segment_id": "76356197",
+      "source_content": "Enable batch processing of directory sync events. The value represents the number of events to batch together instead of sending each event individually. This requires you to configure a cron job to [process the queued events](/docs/directory-sync/api-reference#batch-processing-events). Alternatively you can set `DSYNC_WEBHOOK_BATCH_CRON_INTERVAL` below if you are not deploying the service in an Edge environment.",
+      "source_content_hash": "518da564ffc4f6f6ed4e2ef92bd750748695fdaa09b9c67d4ebbb2d198052f07",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "启用目录同步事件的批量处理功能。该值表示批量合并的事件数量（替代单事件发送模式）。需配置定时任务来[处理队列中的事件](/docs/directory-sync/api-reference#batch-processing-events)。若未部署在边缘环境，也可直接设置下方的`DSYNC_WEBHOOK_BATCH_CRON_INTERVAL`参数。"
+      }
+    },
+    {
+      "segment_id": "c655c05b",
+      "source_content": "### **DSYNC_WEBHOOK_BATCH_CRON_INTERVAL**",
+      "source_content_hash": "8876010d11f962bbf7514840e7f4015a0663d3d9faa7844cd1791047ce6a8156",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### **DSYNC_WEBHOOK_BATCH_CRON_INTERVAL**"
+      }
+    },
+    {
+      "segment_id": "74bfaf8c",
+      "source_content": "The cron interval at which to process the queued events. Provide a number in seconds. By default, the cron job is disabled.",
+      "source_content_hash": "5d5bee53d4eb796c2ec736e94c01ccc38c3d06f910bcc6fe57f79da870bd5d48",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "设置处理队列事件的定时任务间隔（单位：秒）。默认情况下定时任务处于禁用状态。"
+      }
+    },
+    {
+      "segment_id": "508bf572",
+      "source_content": "NPM library option: `dsync.webhookBatchCronInterval`",
+      "source_content_hash": "d4ce20cd5c37ef673289d579ceec5f4b900cad151174324bccb74d52bad3e13c",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "NPM库选项：`dsync.webhookBatchCronInterval`"
+      }
+    },
+    {
+      "segment_id": "2f9a305c",
+      "source_content": "### **DSYNC_GOOGLE_CRON_INTERVAL**",
+      "source_content_hash": "4bfa72e18a33f9fb3d89500f3db573170b9119a58a24393d5dadb05185f850b2",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### **DSYNC_GOOGLE_CRON_INTERVAL**"
+      }
+    },
+    {
+      "segment_id": "0b7b2b74",
+      "source_content": "The cron interval at which to sync the Google Workspace. Provide a number in seconds. By default, the cron job is disabled.",
+      "source_content_hash": "e07851c26876926f8b31b5d9722c20a3d44dcdb50280d4669ea10cdec7273244",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "设置Google Workspace同步的定时任务间隔时间（以秒为单位）。默认情况下定时任务处于禁用状态。"
+      }
+    },
+    {
+      "segment_id": "b136c0e9",
+      "source_content": "NPM library option: `dsync.providers.google.cronInterval`",
+      "source_content_hash": "ad20bf72a465ba628b17182512c34307b3b6241a846fe81f5e477a7b51334f94",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "NPM库选项：`dsync.providers.google.cronInterval`"
+      }
+    },
+    {
+      "segment_id": "ed6c5f16",
+      "source_content": "### **DSYNC_GOOGLE_CLIENT_ID**",
+      "source_content_hash": "42c4c3db95d3d7861522aaaf788e849d6132c7984a5b70dd8ec98ab2b0aa9da7",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### **DSYNC_GOOGLE_CLIENT_ID**"
+      }
+    },
+    {
+      "segment_id": "9cfda36e",
+      "source_content": "The Google authentication client ID.",
+      "source_content_hash": "2377e107dcdf30a91ece96475f255721a9c6a0faa577876bbc15100a0e6aa456",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "Google身份验证客户端ID。"
+      }
+    },
+    {
+      "segment_id": "f49fce49",
+      "source_content": "NPM library option: `dsync.providers.google.clientId`",
+      "source_content_hash": "f76aba82908898f5694d6153f33f36b125c872986d915a8a1ad7d358158b02cd",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "NPM库选项：`dsync.providers.google.clientId`"
+      }
+    },
+    {
+      "segment_id": "fb037688",
+      "source_content": "### **DSYNC_GOOGLE_CLIENT_SECRET**",
+      "source_content_hash": "dd93d1b8685718652b0c2adaf9a83b212b5d7fe13de512c875d640ef38d62a92",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### **DSYNC_GOOGLE_CLIENT_SECRET**"
+      }
+    },
+    {
+      "segment_id": "6d93952b",
+      "source_content": "The Google authentication client secret.",
+      "source_content_hash": "2de210ef1c38c4ccd2cfc7a61efef05b3a04ec15290bfc43fd06bdb7edad6835",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "Google身份验证客户端密钥。"
+      }
+    },
+    {
+      "segment_id": "16341c03",
+      "source_content": "NPM library option: `dsync.providers.google.clientSecret`",
+      "source_content_hash": "508c24ac7cd780e5adcf179b885c10f6c44558347ad099d89406ead86f9c5921",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "NPM库选项：`dsync.providers.google.clientSecret`"
+      }
+    },
+    {
+      "segment_id": "f2829f67",
+      "source_content": "### **dsync.providers.google.authorizePath**",
+      "source_content_hash": "533680f2fff51741607231e6d4923116441cb7b61dcf1ae0d3d45962ebd27dac",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### **dsync.providers.google.authorizePath**"
+      }
+    },
+    {
+      "segment_id": "d85a747f",
+      "source_content": "The authorization endpoint for Google SCIM.",
+      "source_content_hash": "5568f50e8e4071fe22837faba62b56adbfe763098008c31f2b087fbad0fe7d3b",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "Google SCIM的授权端点路径。"
+      }
+    },
+    {
+      "segment_id": "bd254bae",
+      "source_content": "NPM library option: `dsync.providers.google.authorizePath`",
+      "source_content_hash": "f4a5c11ac3a3ce383e77687c37e635f59d1c992bd8cf99195e90a1464af33c4e",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "NPM库选项：`dsync.providers.google.authorizePath`"
+      }
+    },
+    {
+      "segment_id": "13ccbdec",
+      "source_content": "For example: `/api/scim/oauth/authorize`",
+      "source_content_hash": "ce85dc2d5cf0529122b0f7e9cb9b9f4dc11db581a80fd3912aebb1fee76ae956",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "例如：`/api/scim/oauth/authorize`"
+      }
+    },
+    {
+      "segment_id": "31dac036",
+      "source_content": "### **dsync.providers.google.callbackPath**",
+      "source_content_hash": "1cd03a20bf180a212f1dd028756afa279ba2939832a3a97b5ce4e9f09c03cd63",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### **dsync.providers.google.callbackPath**"
+      }
+    },
+    {
+      "segment_id": "2c676438",
+      "source_content": "The path to redirect to after completing the authorization request for Google SCIM.",
+      "source_content_hash": "e5fcf45f537e34ca1b65ec78d79468f8e0e9bc50268b3acf4064549cd25705e7",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "完成Google SCIM授权请求后的回调路径。"
+      }
+    },
+    {
+      "segment_id": "44314141",
+      "source_content": "NPM library option: `dsync.providers.google.callbackPath`",
+      "source_content_hash": "4fb2485a0ceef88d6478318e30219176e7f160bf3a5783de56cdd3502bf4ded9",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "NPM库选项：`dsync.providers.google.callbackPath`"
+      }
+    },
+    {
+      "segment_id": "81ed2b45",
+      "source_content": "For example: `/api/scim/oauth/callback`",
+      "source_content_hash": "186f41f6082308997d846fa8fdbcd82060fa859f0200cfd0c40410aaa5a22141",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "例如：`/api/scim/oauth/callback`"
+      }
+    },
+    {
+      "segment_id": "7f3056d6",
+      "source_content": "## Enterprise Features",
+      "source_content_hash": "ac458f7af3aa6570c17733169571763b7ed96942087bd4264f025c67c2116916",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 企业级功能"
+      }
+    },
+    {
+      "segment_id": "22e907f5",
+      "source_content": "### **BOXYHQ_LICENSE_KEY**",
+      "source_content_hash": "dcdbd09f78fad822b2ec4b0d0383837be5957749dfc4a3be3e949fe93927350d",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### **BOXYHQ_LICENSE_KEY**"
+      }
+    },
+    {
+      "segment_id": "0cfab7d6",
+      "source_content": "Contact us to obtain a license for our Enterprise Features - Portal Branding, Identity Federation and Ory Integration.",
+      "source_content_hash": "1e5e35afc43417dc62708e292f8663690312eb8c615eedea7f95e6da7f79f286",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "联系我们获取企业级功能许可证（包含门户品牌定制、身份联邦与Ory集成）。"
+      }
+    },
+    {
+      "segment_id": "2649c530",
+      "source_content": "## Enterprise Features - Ory Integration",
+      "source_content_hash": "5cf573cd62700360a01cf8716c611a254637f7551ead9cfb91e8ae1e325348d4",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 企业级功能 - Ory集成"
+      }
+    },
+    {
+      "segment_id": "400396d9",
+      "source_content": "### **ENTERPRISE_ORY_SDK_TOKEN**",
+      "source_content_hash": "2deb64c4687483f28c7a10dcff2349ae3cb23db65dceee634f9ee507107dc494",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### **ENTERPRISE_ORY_SDK_TOKEN**"
+      }
+    },
+    {
+      "segment_id": "1e1ccc8c",
+      "source_content": "Your Ory Network Session Token. To obtain this use the Ory CLI and copy out your session token.",
+      "source_content_hash": "577b2ea13577f519d63597096b2ea538396fed988d788e8cbab8ed908e3b4566",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "您的Ory网络会话令牌。可通过Ory CLI获取并复制会话令牌。"
+      }
+    },
+    {
+      "segment_id": "b7ec4fb1",
+      "source_content": "### **ENTERPRISE_ORY_PROJECT_ID**",
+      "source_content_hash": "54044102acab705e648fd0da9f1de9d2d780b1330e6317106beab15e17c1ce76",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### **ENTERPRISE_ORY_PROJECT_ID**"
+      }
+    },
+    {
+      "segment_id": "6dbe7a7e",
+      "source_content": "Your Ory Network Project ID.",
+      "source_content_hash": "31fadf9e76548110b1f35c5eeec3fcd50492cd8a417a6bd69a2275040e49b5c1",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "您的Ory网络项目ID。"
+      }
+    },
+    {
+      "segment_id": "1e8fadaf",
+      "source_content": "## Logger options",
+      "source_content_hash": "387409059c7e0ee45906852478a8d641291ef52339c94c384f143229e152ccd2",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 日志配置选项"
+      }
+    },
+    {
+      "segment_id": "3a8e718b",
+      "source_content": "### **LOG_FILE**",
+      "source_content_hash": "c2e5bfb4721da83c14cb968cdfe80805ad12df1bde464cbaf6cade7344480a76",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### **LOG_FILE**"
+      }
+    },
+    {
+      "segment_id": "7b046f1b",
+      "source_content": "Log file to write to",
+      "source_content_hash": "b365c0e0983ddb17d58e167eec1ea36138fdc742c50461574530f4e4200e26b4",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "指定日志输出文件路径"
+      }
+    },
+    {
+      "segment_id": "15ecb075",
+      "source_content": "### **LOG_LEVEL**",
+      "source_content_hash": "16f4d448b495a0d9359ef3e4a2f648830271d44a43b2dba6acf18c94c7ba831d",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### **LOG_LEVEL**"
+      }
+    },
+    {
+      "segment_id": "bb16b416",
+      "source_content": "Log levels - \"fatal\" | \"error\" | \"warn\" | \"info\" (default) | \"debug\" | \"trace\"",
+      "source_content_hash": "750e3dc588e5572af36cd3f6d2b1f1cfeba2f81ec4d05a8d4d1117cfe3b8c642",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "日志级别 - \"fatal\" | \"error\" | \"warn\" | \"info\" (默认) | \"debug\" | \"trace\""
+      }
+    }
+  ],
+  "target_i18n_subpath": "docusaurus-plugin-content-docs/current/jackson/deploy/env-variables.md",
+  "last_updated_timestamp": "2025-06-08T18:49:09.311640+00:00",
+  "schema_version": "1.0",
+  "translated_versions": {
+    "zh-CN": "e88a71e27a24b4448893ede26f2009662d66cbc2ca76c385af77300589a05ba5"
+  }
+}

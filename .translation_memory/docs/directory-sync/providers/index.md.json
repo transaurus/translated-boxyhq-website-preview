@@ -1,0 +1,42 @@
+{
+  "source_file_path_relative_to_docusaurus_root": "docs/directory-sync/providers/index.md",
+  "source_file_content_hash": "88214688028958c69ce8741ae71a7fbaf2d66eb1b567652fbb8746f3f867f68c",
+  "segments": [
+    {
+      "segment_id": "76e4a56a",
+      "source_content": "# Providers",
+      "source_content_hash": "aae43005ff6cd83acf358230a740dcb4893a7553f6cf2be27db86477d20d1f30",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "# 提供商"
+      }
+    },
+    {
+      "segment_id": "faebdc62",
+      "source_content": "SAML Jackson supports the following directory providers:",
+      "source_content_hash": "e7ab36b79a2231eaf45912320d17543773fd7c9ab2124e3524ddb8dfe7449498",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "SAML Jackson 支持以下目录提供商："
+      }
+    },
+    {
+      "segment_id": "17ded777",
+      "source_content": "- [Microsoft Entra ID v2.0](./providers/azure)\n- [OneLogin SCIM v2.0](./providers/onelogin)\n- [Okta SCIM v2.0](./providers/okta)\n- [JumpCloud SCIM v2.0](./providers/jumpcloud)\n- [Google Workspace](./providers/google)",
+      "source_content_hash": "0fe8fb2142ecc5efa683e3ac724954f07f88b8c6dbc5a74bb4f9ad753c76e4c1",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- [Microsoft Entra ID v2.0](./providers/azure)\n- [OneLogin SCIM v2.0](./providers/onelogin)\n- [Okta SCIM v2.0](./providers/okta)\n- [JumpCloud SCIM v2.0](./providers/jumpcloud)\n- [Google Workspace](./providers/google)"
+      }
+    }
+  ],
+  "target_i18n_subpath": "docusaurus-plugin-content-docs/current/directory-sync/providers/index.md",
+  "last_updated_timestamp": "2025-06-08T18:49:09.291989+00:00",
+  "schema_version": "1.0",
+  "translated_versions": {
+    "zh-CN": "88214688028958c69ce8741ae71a7fbaf2d66eb1b567652fbb8746f3f867f68c"
+  }
+}

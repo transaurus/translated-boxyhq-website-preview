@@ -1,0 +1,112 @@
+{
+  "source_file_path_relative_to_docusaurus_root": "blog/2024-01-17-changelog-retraced-2023.md",
+  "source_file_content_hash": "d179495da01dd337c63da9d1f54e104b3e751daeb2a4d7868837d09781a67f6e",
+  "segments": [
+    {
+      "segment_id": "58cfcc64",
+      "source_content": "---\nslug: changelog-retraced-2023\ntitle: 'BoxyHQ 2023 Changelog: Enhancing Security with Retraced-Powered Audit Logs'\nauthor: Schalk Neethling\nauthor_title: Customer Success, Community, DevRel - @BoxyHQ\nauthor_url: https://github.com/schalkneethling\nauthor_image_url: /images/authors/schalk.jpg\ntags_disabled: [changelog]\nimage: /img/blog/retraced-2023-changelog.jpg\n---",
+      "source_content_hash": "fe8e8998ee20f4890b9b7bc9926fed3a91826420f5d0586694efbc143cfef439",
+      "node_type": "yaml",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_58cfcc64"
+      }
+    },
+    {
+      "segment_id": "8d66f911",
+      "source_content": "BoxyHQ's audit logs are powered by [Retraced](https://github.com/retracedhq/retraced) which, in the true spirit of open source, is also a collaboration between us and [Replicated](https://www.replicated.com/). While this project did not have the same level of [activity as SAML Jackson](2024-01-16-changelog-saml-jackson-2023.md), it is a critical component of our offering and we are excited to share some of the highlights from 2023.",
+      "source_content_hash": "234cd268e23ff2a68412114f9b21187be62f71b004ece8808cf86bd78e6ff8e9",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "BoxyHQ的审计日志功能由[Retraced](https://github.com/retracedhq/retraced)提供支持，秉承开源精神，该项目是我们与[Replicated](https://www.replicated.com/)的合作成果。虽然该项目的[活跃度不及SAML Jackson](2024-01-16-changelog-saml-jackson-2023.md)，但作为产品体系的关键组件，我们很高兴与您分享2023年的重要进展。"
+      }
+    },
+    {
+      "segment_id": "ad8fd492",
+      "source_content": "Instead of doing a list by quarter, for this one we will just do a list of notable new features, fixes, and changes in chronological order starting in February 2023.",
+      "source_content_hash": "cbc48cec200f67430c3e825c1bc4dbad186d34ffb1c2e97c36b941b3cb0e1d08",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "与按季度分类不同，本次我们将以时间顺序列出2023年2月起值得关注的新功能、修复和变更。"
+      }
+    },
+    {
+      "segment_id": "cbe57f9d",
+      "source_content": "## The growth of Retraced in 2023",
+      "source_content_hash": "a2af4c4e0b1266a4cd2020e8a5084d36ee14e38d355377e8564ea7e5c15bbc46",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## Retraced在2023年的成长轨迹"
+      }
+    },
+    {
+      "segment_id": "11c829ab",
+      "source_content": "- Switched to an Alpine Linux base image for the Retraced container.\n- If Maxmind key is provided then Geo data download is initialized on startup instead of waiting for the first cron event.\n- As with SAML Jackson, we added some anonymous analytics to better understand the usage of our product. At the same time, we put the controls in your hands by allowing you to turn all analytics off using `RETRACED_NO_ANALYTICS=1`. Even when enabled, we do not collect any information that identifies users or machines.\n- Switched from Elasticsearch library to [OpenSearch](https://opensearch.org/) library to support both Elastic and OpenSearch.\n- Statsd support has been switched with [OpenTelemetry](https://opentelemetry.io/).\n- Added env var `RETRACED_DISABLE_GEOSYNC` to explicitly turn off geo sync\n- Optimized storage of logs to save up to 40% storage over previous versions.\n- MaxMind GeoIP update can now [alternatively be done via their MMDB format](https://github.com/retracedhq/docs/blob/main/self-host/env-variables.md#geoipupdate_use_mmdb), skipping our current method of storing Geo data in a Postgres table.\n- API to remove viewer session\n- Postgres SSL support\n- We take the security of our users seriously and addressed a potential DoS vulnerability.\n- Support JWT value in request headers and queries for data export.",
+      "source_content_hash": "711a698627aa1c0d61a561eae9f2126eafad0d40c254ffb08d13be9be266cea8",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- 将Retraced容器基础镜像切换为Alpine Linux\n- 若提供Maxmind密钥，则启动时立即初始化地理数据下载，而非等待首次定时任务\n- 与SAML Jackson类似，我们增加了匿名分析功能以了解产品使用情况，同时通过`RETRACED_NO_ANALYTICS=1`参数将控制权交给您。即使启用分析，我们也不会收集任何用户或设备识别信息\n- 从Elasticsearch库切换至[OpenSearch](https://opensearch.org/)库以同时支持两种搜索引擎\n- 将Statsd支持替换为[OpenTelemetry](https://opentelemetry.io/)方案\n- 新增环境变量`RETRACED_DISABLE_GEOSYNC`用于显式关闭地理同步\n- 优化日志存储方案，较旧版本节省最高40%存储空间\n- MaxMind GeoIP更新现支持[通过MMDB格式完成](https://github.com/retracedhq/docs/blob/main/self-host/env-variables.md#geoipupdate_use_mmdb)，跳过当前将地理数据存入Postgres表的方案\n- 新增删除查看会话的API接口\n- 增加PostgreSQL SSL支持\n- 修复了潜在的DoS漏洞，彰显我们对用户安全的重视\n- 支持在请求头和查询参数中使用JWT值进行数据导出"
+      }
+    },
+    {
+      "segment_id": "4e95fc9d",
+      "source_content": "> **NOTE:** Audit logs is currently a self-hosted only feature.",
+      "source_content_hash": "d80a44c505003ff2f16a6c09424011638377e4cdab5b96cc1466305adf569218",
+      "node_type": "blockquote",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "> **注意：** 审计日志功能目前仅支持自托管模式"
+      }
+    },
+    {
+      "segment_id": "0037ff70",
+      "source_content": "## Conclusion",
+      "source_content_hash": "be031d37bb75d96ef08ca9ec5b0e83bb6f91172f60d3c31a78feae8d7dc4a0b0",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 总结展望"
+      }
+    },
+    {
+      "segment_id": "bdc231b1",
+      "source_content": "As we reflect on the significant strides made with Retraced in 2023, it's evident that this project, born from the collaborative efforts of BoxyHQ and Replicated, has been pivotal in our pursuit of delivering top-tier security solutions. Though it may not have matched SAML Jackson in activity, its role in our toolset is indispensable. Each development, from the Alpine Linux transition to the OpenTelemetry integration, underscores our commitment to innovation and operational efficiency.",
+      "source_content_hash": "cc20d5a03c258796b3e201718b36969cbdaba4305d7b9cbb3d145254f1372633",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "回顾Retraced在2023年的重大进展，这个由BoxyHQ与Replicated合作诞生的项目，已成为我们提供顶级安全解决方案的关键支柱。虽然其活跃度不及SAML Jackson，但从Alpine Linux迁移到OpenTelemetry集成的每个技术决策，都印证着我们对创新与运营效率的不懈追求。"
+      }
+    },
+    {
+      "segment_id": "97ae4a01",
+      "source_content": "The evolution of Retraced symbolizes more than just technical enhancements; it represents our dedication to security and efficiency. With features like enhanced PostgreSQL SSL support and improvements in log storage, we continue to raise the bar in open-source security tools. Moreover, the real-world impact of these advancements is best exemplified by our clients' success stories. For instance, discover how [BoxyHQ's SSO and Audit Logs helped Unicis accelerate towards SOC2 compliance](https://boxyhq.com/success-stories/boxyhqs-sso-&-audit-logs-accelerate-unicis-towards-soc2-compliance), showcasing the tangible benefits of our solutions in achieving crucial compliance goals.",
+      "source_content_hash": "d280696bebfd6de4615f389c30c699c333ed986e5aa8d9341bd3e680e90b95c8",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "Retraced的演进不仅是技术升级，更是安全承诺的体现。通过增强PostgreSQL SSL支持、优化日志存储等改进，我们持续提升开源安全工具的标准。这些进步的实际价值在客户案例中得到最佳印证——例如了解[BoxyHQ的SSO与审计日志如何助力Unicis加速达成SOC2合规](https://boxyhq.com/success-stories/boxyhqs-sso-&-audit-logs-accelerate-unicis-towards-soc2-compliance)，这正是我们解决方案在实现关键合规目标时创造价值的生动例证。"
+      }
+    },
+    {
+      "segment_id": "c3a738de",
+      "source_content": "As we forge ahead into 2024, we are energized by your support, feedback, and contributions. Join us on this journey of continuous innovation and help us write more success stories like Unicis's. Together, let's set new standards for security and efficiency in the open-source community.",
+      "source_content_hash": "478bbb159d8fe7538d58595d788783360ed5d16187877f00ad05da2116ea21e9",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "迈进2024年，我们因您的支持、反馈和贡献而充满动力。加入我们的持续创新之旅，共同书写更多像Unicis这样的成功案例，携手为开源社区树立安全与效率的新标杆。"
+      }
+    }
+  ],
+  "target_i18n_subpath": "docusaurus-plugin-content-blog/2024-01-17-changelog-retraced-2023.md",
+  "last_updated_timestamp": "2025-06-08T18:49:09.318153+00:00",
+  "schema_version": "1.0",
+  "translated_versions": {
+    "zh-CN": "d179495da01dd337c63da9d1f54e104b3e751daeb2a4d7868837d09781a67f6e"
+  }
+}

@@ -1,0 +1,122 @@
+{
+  "source_file_path_relative_to_docusaurus_root": "docs/jackson/events.md",
+  "source_file_content_hash": "fbf8272fb610397b3ef35faaffff47523714826561ecf2771dfd76e1ce34d689",
+  "segments": [
+    {
+      "segment_id": "58cfcc64",
+      "source_content": "---\ntitle: Enterprise SSO Webhook Events\nsidebar_label: Events\n---",
+      "source_content_hash": "fc3cc9ed52f49dd749d9e5dcd7b6cd28dbe7383ee551f266519ea305505cd957",
+      "node_type": "yaml",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_58cfcc64"
+      }
+    },
+    {
+      "segment_id": "b3de8742",
+      "source_content": "# Webhook Events",
+      "source_content_hash": "065bd974e11aef2acd079dd7e7abe2b4e7c121ff55282b12c4bda4231611cb23",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "# Webhook 事件"
+      }
+    },
+    {
+      "segment_id": "3fbbcc07",
+      "source_content": "SAML Jackson uses webhooks to notify your application any time changes are made to the connections. We'll notify you of the following 4 events for each connection.",
+      "source_content_hash": "7ca9451215308949450e91703b67dc8bf8536826b54d6e2f5cd6ae226be3f50f",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "SAML Jackson 通过 Webhook 在连接发生变更时通知您的应用程序。我们将针对每个连接发送以下4种事件通知。"
+      }
+    },
+    {
+      "segment_id": "1cc03ec8",
+      "source_content": "## Events",
+      "source_content_hash": "f4776ba3d0fd53ce403170cc2d8cca7a2863d1d0adf8a34232db931e60e91830",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 事件类型"
+      }
+    },
+    {
+      "segment_id": "321c5251",
+      "source_content": "<details>\n<summary>\n  sso.created - New connection has been created.\n</summary>\n<p>\n\n```json\n{\n  \"event\": \"sso.created\",\n  \"tenant\": \"boxyhq\",\n  \"product\": \"demo\",\n  \"data\": {\n    \"name\": \"SSO Connection\",\n    \"description\": \"SSO Connection for BoxyHQ\",\n    \"clientID\": \"326991705d478f0178fc2b49e35cd166dc771061\",\n    \"clientSecret\": \"15b2db91b2ba4c848b68148f108035e7138d69104d99de89\",\n    \"provider\": \"saml.example.com\",\n    \"friendlyProviderName\": null\n  }\n}\n```\n\n</p>\n</details>",
+      "source_content_hash": "8dff213cd7c31ff5e0c6d10b2632cbecab8910d0a276d95b67193379f6a7f55e",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_321c5251"
+      }
+    },
+    {
+      "segment_id": "7b66d6d6",
+      "source_content": "<details>\n<summary>\n  sso.deactivated - A connection has been deactivated.\n</summary>\n<p>\n\n```json\n{\n  \"event\": \"sso.deactivated\",\n  \"tenant\": \"boxyhq\",\n  \"product\": \"demo\",\n  \"data\": {\n    \"name\": \"SSO Connection\",\n    \"description\": \"SSO Connection for BoxyHQ\",\n    \"clientID\": \"326991705d478f0178fc2b49e35cd166dc771061\",\n    \"clientSecret\": \"15b2db91b2ba4c848b68148f108035e7138d69104d99de89\",\n    \"provider\": \"saml.example.com\",\n    \"friendlyProviderName\": null\n  }\n}\n```\n\n</p>\n</details>",
+      "source_content_hash": "d1fe728faa29f7afe99537c493409b62e3765afa9d18c13d908cf9d9c9ba4a2b",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_7b66d6d6"
+      }
+    },
+    {
+      "segment_id": "96e9ed17",
+      "source_content": "<details>\n<summary>\n  sso.activated - A connection has been activated.\n</summary>\n<p>\n\n```json\n{\n  \"event\": \"sso.activated\",\n  \"tenant\": \"boxyhq\",\n  \"product\": \"demo\",\n  \"data\": {\n    \"name\": \"SSO Connection\",\n    \"description\": \"SSO Connection for BoxyHQ\",\n    \"clientID\": \"326991705d478f0178fc2b49e35cd166dc771061\",\n    \"clientSecret\": \"15b2db91b2ba4c848b68148f108035e7138d69104d99de89\",\n    \"provider\": \"saml.example.com\",\n    \"friendlyProviderName\": null\n  }\n}\n```\n\n</p>\n</details>",
+      "source_content_hash": "64833e12850ec13dbbdf40d0fd524b351b56e5fa8919392cc23b87ed3de20a06",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_96e9ed17"
+      }
+    },
+    {
+      "segment_id": "bfba2ea7",
+      "source_content": "<details>\n<summary>\n  sso.deleted - A connection has been deleted.\n</summary>\n<p>\n\n```json\n{\n  \"event\": \"sso.deleted\",\n  \"tenant\": \"boxyhq\",\n  \"product\": \"demo\",\n  \"data\": {\n    \"name\": \"SSO Connection\",\n    \"description\": \"SSO Connection for BoxyHQ\",\n    \"clientID\": \"326991705d478f0178fc2b49e35cd166dc771061\",\n    \"clientSecret\": \"15b2db91b2ba4c848b68148f108035e7138d69104d99de89\",\n    \"provider\": \"saml.example.com\",\n    \"friendlyProviderName\": null\n  }\n}\n```\n\n</p>\n</details>",
+      "source_content_hash": "25e4266276f5264e6c0c4aa2d7723e09dc51f517d6b798267e6c95a05eac5d60",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_bfba2ea7"
+      }
+    },
+    {
+      "segment_id": "722e4930",
+      "source_content": "## Configure Webhook",
+      "source_content_hash": "2dce5b9a85e1d03f7adc006c59367339fedafc868fb838ddd12384882aba94b9",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 配置 Webhook"
+      }
+    },
+    {
+      "segment_id": "3c19e221",
+      "source_content": "To configure the webhook, you have to set the following environment variables.",
+      "source_content_hash": "30e56820523c8814d5dbb24ce668c02220cbb4b9f4dd7defb0b315ffa27ad0a7",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "配置 Webhook 需要设置以下环境变量："
+      }
+    },
+    {
+      "segment_id": "8d56fc0d",
+      "source_content": "- `WEBHOOK_URL` - The URL to which the webhook events will be sent.\n- `WEBHOOK_SECRET` - The secret key used to sign the webhook events.",
+      "source_content_hash": "8b35ea871ce4dd8b71ad6c8e9a4f3ac4dae9b73d7791190cbceb14851ec305a0",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- `WEBHOOK_URL` - 接收 Webhook 事件的目标 URL\n- `WEBHOOK_SECRET` - 用于签名 Webhook 事件的密钥"
+      }
+    }
+  ],
+  "target_i18n_subpath": "docusaurus-plugin-content-docs/current/jackson/events.md",
+  "last_updated_timestamp": "2025-06-08T18:49:09.293939+00:00",
+  "schema_version": "1.0",
+  "translated_versions": {
+    "zh-CN": "fbf8272fb610397b3ef35faaffff47523714826561ecf2771dfd76e1ce34d689"
+  }
+}

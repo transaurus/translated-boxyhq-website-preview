@@ -1,0 +1,362 @@
+{
+  "source_file_path_relative_to_docusaurus_root": "docs/jackson/sso-providers/azure.md",
+  "source_file_content_hash": "17dc26e344dd02c2e5b91320fd4bd785872e5790a635b9739c66c84a07ba28ce",
+  "segments": [
+    {
+      "segment_id": "58cfcc64",
+      "source_content": "---\ntitle: Set up your own custom SAML application for Microsoft Entra ID SAML\nsidebar_label: Microsoft Entra ID SAML\n---",
+      "source_content_hash": "793be47559cfa586828ca25697b6d460155ba2384c10c43fda99dc3bc65ebe63",
+      "node_type": "yaml",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_58cfcc64"
+      }
+    },
+    {
+      "segment_id": "b3de8742",
+      "source_content": "# Microsoft Entra ID (formerly Azure AD) SAML SSO",
+      "source_content_hash": "6b18aafc27a22ca2be9d12513cee5eb4b1591b475da45df0a25073b9b18504df",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "# Microsoft Entra ID（原Azure AD）SAML单点登录配置"
+      }
+    },
+    {
+      "segment_id": "3fbbcc07",
+      "source_content": "In this section, we will show you how to set up your own custom SAML application for Microsoft Entra ID SAML.",
+      "source_content_hash": "b2a33699606363384fd505776a5bcd27574b98efaf9103a339f5503c1289a81f",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "本节将指导您如何为Microsoft Entra ID SAML设置自定义应用程序。"
+      }
+    },
+    {
+      "segment_id": "1cc03ec8",
+      "source_content": "## Create Application",
+      "source_content_hash": "a4c42fce6e36a4ed1120ec7f3eb7c050bd9ea2173680e61024ccfe8f6aaa2897",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 创建应用程序"
+      }
+    },
+    {
+      "segment_id": "8d66f911",
+      "source_content": "From your Azure Admin console, click **Enterprise applications** from the left navigation menu.",
+      "source_content_hash": "81e76f9460c5822f27577d78b226c1b2b9263c3a971767c0f81422ad37e60637",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "在Azure管理控制台中，从左导航菜单选择**企业应用程序**。"
+      }
+    },
+    {
+      "segment_id": "ad8fd492",
+      "source_content": "![Microsoft Entra ID SAML Step 1](/images/docs/jackson/sso-providers/azure/1.png)",
+      "source_content_hash": "c6b92d89f14fab23357cba44a15647d92beff295bc641bb283ea0eef001283ce",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![Microsoft Entra ID SAML步骤1](/images/docs/jackson/sso-providers/azure/1.png)"
+      }
+    },
+    {
+      "segment_id": "86b54d44",
+      "source_content": "If your application is already created, choose it from the list and move to the section [Configure Application](#configure-application)",
+      "source_content_hash": "1137b1c722a49032336fe1d2b3fd3b599f15d60bf8c23858936523cfc6344994",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "若已创建应用程序，请从列表中选择并跳转至[配置应用程序](#configure-application)章节"
+      }
+    },
+    {
+      "segment_id": "39b3772c",
+      "source_content": "If you haven't created a SAML application, click **New application** from the top to create a new application.",
+      "source_content_hash": "d2ae56836ea182de8b968807d363195ed9703dd6e46474383ada1a7160c20601",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "若需新建SAML应用，点击顶部**新建应用程序**按钮。"
+      }
+    },
+    {
+      "segment_id": "1acb9a05",
+      "source_content": "![Microsoft Entra ID SAML Step 2](/images/docs/jackson/sso-providers/azure/2.png)",
+      "source_content_hash": "358641e2ff6a1546255e2a8815ae6fb11d722084e921fbb4635210d71d92630a",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![Microsoft Entra ID SAML步骤2](/images/docs/jackson/sso-providers/azure/2.png)"
+      }
+    },
+    {
+      "segment_id": "2df4f75f",
+      "source_content": "From the next screen, click **Create your own application**. Give your application a **Name** and click **Create**.",
+      "source_content_hash": "cdce3402632b696726e3cbe5ddc38df5f64bb720de7a49d7cfdb8c60125969a8",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "在后续界面点击**创建自己的应用程序**，输入应用名称后点击**创建**。"
+      }
+    },
+    {
+      "segment_id": "98cfbd53",
+      "source_content": "![Microsoft Entra ID SAML Step 3](/images/docs/jackson/sso-providers/azure/3.png)",
+      "source_content_hash": "559840ea275b9994f633f1322a505abbe2be3285aa64abbfb0d3ea7ff4f56c49",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![Microsoft Entra ID SAML步骤3](/images/docs/jackson/sso-providers/azure/3.png)"
+      }
+    },
+    {
+      "segment_id": "79b2d0b9",
+      "source_content": "## Configure Application",
+      "source_content_hash": "aa3cb32afcf17822a5ba904685b48592ccb953a514ebc2da0731fc9ce393d544",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 配置应用程序"
+      }
+    },
+    {
+      "segment_id": "d9172fa4",
+      "source_content": "Select **Single Sign On** from the **Manage** section of your app and then **SAML**.",
+      "source_content_hash": "626c3331ce80db0d26f1ef2004888f83a42ead0cb90b34657807039bfcc426f6",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "在应用的**管理**部分选择**单点登录**，然后选择**SAML**。"
+      }
+    },
+    {
+      "segment_id": "26524352",
+      "source_content": "![Microsoft Entra ID SAML Step 4](/images/docs/jackson/sso-providers/azure/4.png)",
+      "source_content_hash": "23869c6872cb037a14f5635075d275185ee3f152eb614acff586175e83076900",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![Microsoft Entra ID SAML步骤4](/images/docs/jackson/sso-providers/azure/4.png)"
+      }
+    },
+    {
+      "segment_id": "73ab96a3",
+      "source_content": "Click **Edit** on the **Basic SAML Configuration** section.",
+      "source_content_hash": "27347a35c43713356216a6c4bae3d8ed5435fac47b41b3927a90925fe54851ca",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "点击**基本SAML配置**部分的**编辑**按钮。"
+      }
+    },
+    {
+      "segment_id": "7499a4e7",
+      "source_content": "![Microsoft Entra ID SAML Step 5](/images/docs/jackson/sso-providers/azure/5.png)",
+      "source_content_hash": "3ff06cb4bf269093f0c9c19795ecf494d517b0ed56f574423858aa2ae012097d",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![Microsoft Entra ID SAML步骤5](/images/docs/jackson/sso-providers/azure/5.png)"
+      }
+    },
+    {
+      "segment_id": "517051a7",
+      "source_content": "Enter the following values in the **Basic SAML Configuration** section on the next screen:",
+      "source_content_hash": "ca6561ed36903070826c5610a514e380d00a8f6faab9b52acd4f2f074340f315",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "在**基本SAML配置**部分填写以下值："
+      }
+    },
+    {
+      "segment_id": "157151e9",
+      "source_content": "- **Identifier (Entity ID)**\n- **Reply URL (Assertion Consumer Service URL)**",
+      "source_content_hash": "3125bbaea1c92d5d80b3c7e4e379935c70f0358617eb1da2fc8154261d70f7a1",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- **标识符(实体ID)**\n- **回复URL(断言消费者服务URL)**"
+      }
+    },
+    {
+      "segment_id": "3cfe6286",
+      "source_content": "Replace the values with the ones you have received from SAML Jackson.",
+      "source_content_hash": "3a0252490deba22aac834db0ee890225a76896363a384f397f251886c5af8ecf",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "请使用从SAML Jackson获取的对应值替换。"
+      }
+    },
+    {
+      "segment_id": "1042b50d",
+      "source_content": "Click **Save** to save your changes.",
+      "source_content_hash": "a9c636617a76dfd41ebe142ae04e4e4c2ce548787415e83b4e960880ee89d828",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "点击**保存**应用更改。"
+      }
+    },
+    {
+      "segment_id": "aa1e7006",
+      "source_content": "![Microsoft Entra ID SAML Step 6](/images/docs/jackson/sso-providers/azure/6.png)",
+      "source_content_hash": "3addd7b63799bb3d6c6e1538db41803ea6c73eeec99ac0e7b0efd66a50bdf6e4",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![Microsoft Entra ID SAML步骤6](/images/docs/jackson/sso-providers/azure/6.png)"
+      }
+    },
+    {
+      "segment_id": "f44c1398",
+      "source_content": "## Attribute Mapping",
+      "source_content_hash": "ced521d3f2fec68e3b98cce4a507ed30e9cda40547fcc34bacfb25d1deb14981",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 属性映射"
+      }
+    },
+    {
+      "segment_id": "29528c8d",
+      "source_content": "Click **Edit** on the **Attributes & Claims** section.",
+      "source_content_hash": "6e34b90f3fe0bdc5336eeb947c599cb74fa3058f30fc884798c64a08aebcd8b9",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "点击**属性与声明**部分的**编辑**按钮。"
+      }
+    },
+    {
+      "segment_id": "c504c207",
+      "source_content": "![Microsoft Entra ID SAML Step 7](/images/docs/jackson/sso-providers/azure/7.png)",
+      "source_content_hash": "4bf41283d49d3651164303eb7760a53687a132ff812f1a943144b193ac3c3426",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![Microsoft Entra ID SAML步骤7](/images/docs/jackson/sso-providers/azure/7.png)"
+      }
+    },
+    {
+      "segment_id": "98d26038",
+      "source_content": "You have to configure the following attributes under the **Attributes & Claims** section:",
+      "source_content_hash": "340f61725a3ed114c09897d877571caf0defc8b8104f1f62d6c5e0c64b0a0637",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "您需要在**属性与声明**部分配置以下属性："
+      }
+    },
+    {
+      "segment_id": "0e904c93",
+      "source_content": "| Name                                                                 | Value                  |\n| -------------------------------------------------------------------- | ---------------------- |\n| `http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress` | user.mail              |\n| `http://schemas.xmlsoap.org/ws/2005/05/identity/claims/givenname`    | user.givenname         |\n| `http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name`         | user.userprincipalname |\n| `http://schemas.xmlsoap.org/ws/2005/05/identity/claims/surname`      | user.surname           |",
+      "source_content_hash": "9c19418acbb06d04885e4dfb3c9eb8a54a809ebac1d3317e384084ce3a974e95",
+      "node_type": "table",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_0e904c93"
+      }
+    },
+    {
+      "segment_id": "6ea4c715",
+      "source_content": "See the screenshot below.",
+      "source_content_hash": "484fb0ee90c5fa8ea70ce5cad0e59baf1dc7a4e18927a947a1fdaf6da53dfdca",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "请参考下方截图。"
+      }
+    },
+    {
+      "segment_id": "79ad944d",
+      "source_content": "![Microsoft Entra ID SAML Step 8](/images/docs/jackson/sso-providers/azure/8.png)",
+      "source_content_hash": "fa947a6ab592c7ee5cbd8a50ad1ace28e9b8e198333307bb734e4fa8c0b4c5c7",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![Microsoft Entra ID SAML步骤8](/images/docs/jackson/sso-providers/azure/8.png)"
+      }
+    },
+    {
+      "segment_id": "531437ca",
+      "source_content": "Go to the section **SAML Signing Certificate** section and download the **Federation Metadata XML**.",
+      "source_content_hash": "fc927efb557fe12b6a0ec5defacfa4d43d18bf63975830ff6531c7ba67e68996",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "进入**SAML签名证书**部分，下载**联合元数据XML**文件。"
+      }
+    },
+    {
+      "segment_id": "06e24cc0",
+      "source_content": "![Microsoft Entra ID SAML Step 9](/images/docs/jackson/sso-providers/azure/9.png)",
+      "source_content_hash": "836aa8c638e2f0c961e7034562902c95246a32139680c84309a0690777ceec1a",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![Microsoft Entra ID SAML步骤9](/images/docs/jackson/sso-providers/azure/9.png)"
+      }
+    },
+    {
+      "segment_id": "ee8401db",
+      "source_content": "## Next steps",
+      "source_content_hash": "3a5d9cbc49e6e5f0c98349dd1cd7cfe5713807fc5f02234240621031925d1f32",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 后续步骤"
+      }
+    },
+    {
+      "segment_id": "147e8550",
+      "source_content": "You've successfully configured your custom SAML application for Microsoft Entra ID SAML. At this stage, you can assign users to your application and start using it.",
+      "source_content_hash": "fb87b7bcddfc64943c19d64525e352c8c2d68d67d4ab6c11fab0d00dfcd4813e",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "您已成功完成Microsoft Entra ID SAML自定义应用程序配置。现在可以为应用分配用户并开始使用。"
+      }
+    },
+    {
+      "segment_id": "daed5acb",
+      "source_content": "## Resources",
+      "source_content_hash": "75c6211de8f8951e8037d10289e3e5d0177b8a172b593345006b5b42a8e08e0e",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 相关资源"
+      }
+    },
+    {
+      "segment_id": "4fe53981",
+      "source_content": "- [Azure Admin Console](https://portal.azure.com/)",
+      "source_content_hash": "01b3e0d794a30c18fe86e0e2f18a642f0bf07e7197dbacc78b9b2da9fc9126c6",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- [Azure管理控制台](https://portal.azure.com/)"
+      }
+    },
+    {
+      "segment_id": "0286b5a7",
+      "source_content": ":::tip\nGot a question? [Ask here](https://discord.gg/uyb7pYt4Pa)\n:::",
+      "source_content_hash": "205c5768df1b402d61a634ce459105e3be3777225d2575780c425cf0a7ceae4c",
+      "node_type": "containerDirective",
+      "translatable": true,
+      "translations": {
+        "zh-CN": ":::tip\n遇到问题？[在此提问](https://discord.gg/uyb7pYt4Pa)\n:::"
+      }
+    }
+  ],
+  "target_i18n_subpath": "docusaurus-plugin-content-docs/current/jackson/sso-providers/azure.md",
+  "last_updated_timestamp": "2025-06-08T18:49:09.319130+00:00",
+  "schema_version": "1.0",
+  "translated_versions": {
+    "zh-CN": "17dc26e344dd02c2e5b91320fd4bd785872e5790a635b9739c66c84a07ba28ce"
+  }
+}

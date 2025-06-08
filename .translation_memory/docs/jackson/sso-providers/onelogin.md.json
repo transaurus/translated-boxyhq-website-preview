@@ -1,0 +1,402 @@
+{
+  "source_file_path_relative_to_docusaurus_root": "docs/jackson/sso-providers/onelogin.md",
+  "source_file_content_hash": "b5d9d6948f2a57d48071629817acb190e07662633129860a9a8d5bb4f6ec9943",
+  "segments": [
+    {
+      "segment_id": "58cfcc64",
+      "source_content": "---\ntitle: Set up your own custom SAML application for OneLogin SAML\nsidebar_label: OneLogin SAML\n---",
+      "source_content_hash": "a2de63214d21508ab29dd51d456d43673ae084ed415f592d017b7aeae02f3088",
+      "node_type": "yaml",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_58cfcc64"
+      }
+    },
+    {
+      "segment_id": "b3de8742",
+      "source_content": "# OneLogin SAML SSO",
+      "source_content_hash": "13c3be2ab7e6ffcb8522ee4065204e7d7b73cc2168b57a11854bda0cf318fe52",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "# OneLogin SAML 单点登录"
+      }
+    },
+    {
+      "segment_id": "3fbbcc07",
+      "source_content": "In this section, we will show you how to set up your own custom SAML application for OneLogin SAML.",
+      "source_content_hash": "2aad4a7dbcebb0ef70ceaa4e980d218aed28e5d02736249649f94d93a39bfaa3",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "本节将指导您如何为OneLogin SAML设置自定义SAML应用程序。"
+      }
+    },
+    {
+      "segment_id": "1cc03ec8",
+      "source_content": "## Create Application",
+      "source_content_hash": "a4c42fce6e36a4ed1120ec7f3eb7c050bd9ea2173680e61024ccfe8f6aaa2897",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 创建应用程序"
+      }
+    },
+    {
+      "segment_id": "8d66f911",
+      "source_content": "From your OneLogin account, click **Applications** from the top navigation menu.",
+      "source_content_hash": "05e7ca48bef2a4d958e58a006b004205b82ec92d76d8356df968b42f64a038e4",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "登录OneLogin账户后，从顶部导航菜单点击**应用程序**。"
+      }
+    },
+    {
+      "segment_id": "ad8fd492",
+      "source_content": "If your application is already created, choose it from the list and move to the section [Configure Application](#configure-application)",
+      "source_content_hash": "1137b1c722a49032336fe1d2b3fd3b599f15d60bf8c23858936523cfc6344994",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "若应用程序已创建，请从列表中选择并跳转至[配置应用程序](#configure-application)章节。"
+      }
+    },
+    {
+      "segment_id": "86b54d44",
+      "source_content": "If you haven't created a SAML application, click the **Add App** button to create a new application.",
+      "source_content_hash": "af947e337c839bd00886fe803793b4d6822e8fea68018975098bb946b5b303b6",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "若需新建SAML应用程序，请点击**添加应用**按钮。"
+      }
+    },
+    {
+      "segment_id": "39b3772c",
+      "source_content": "![OneLogin SAML Step 1](/images/docs/jackson/sso-providers/onelogin/1.png)",
+      "source_content_hash": "bccebb303ee784df46daa830e8330ccc865992b6a3f81275361260d5ab95445d",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![OneLogin SAML 步骤1](/images/docs/jackson/sso-providers/onelogin/1.png)"
+      }
+    },
+    {
+      "segment_id": "1acb9a05",
+      "source_content": "Search for **SAML Test Connector** in the **Find Applications** section. Select **SAML Custom Connector (Advanced)** from the search results.",
+      "source_content_hash": "01f7b82219201b3f653b42095678ac1497ebf7eed9a4350579abe2a7d8dfe599",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "在**查找应用程序**区域搜索**SAML测试连接器**，并从结果中选择**SAML自定义连接器(高级版)**。"
+      }
+    },
+    {
+      "segment_id": "2df4f75f",
+      "source_content": "![OneLogin SAML Step 2](/images/docs/jackson/sso-providers/onelogin/2.png)",
+      "source_content_hash": "33ab8338cf988934472413d704af13189244827ad4eb394a09d6f74268bd70e9",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![OneLogin SAML 步骤2](/images/docs/jackson/sso-providers/onelogin/2.png)"
+      }
+    },
+    {
+      "segment_id": "98cfbd53",
+      "source_content": "Give your application a **Display Name** and click **Save**.",
+      "source_content_hash": "b21d832f0ee929984a470b3615758968e5171e9d86d9429273d617ee39a2a2f9",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "为应用程序输入**显示名称**后点击**保存**。"
+      }
+    },
+    {
+      "segment_id": "ccc88b4c",
+      "source_content": "![OneLogin SAML Step 3](/images/docs/jackson/sso-providers/onelogin/3.png)",
+      "source_content_hash": "b3c6a99854fb79767df2fc52680edf8f15e18b3cd942ab4f4996712afe07ba1f",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![OneLogin SAML 步骤3](/images/docs/jackson/sso-providers/onelogin/3.png)"
+      }
+    },
+    {
+      "segment_id": "3c36424c",
+      "source_content": "## Configure Application",
+      "source_content_hash": "aa3cb32afcf17822a5ba904685b48592ccb953a514ebc2da0731fc9ce393d544",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 配置应用程序"
+      }
+    },
+    {
+      "segment_id": "26524352",
+      "source_content": "From your application, click the **Configuration** tab on the left to configure the application.",
+      "source_content_hash": "0b31e34b8a501d8173e1f5d3e1f1da335574eee63a40bcea82e6d04413c9bb7a",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "进入应用程序后，点击左侧**配置**标签页。"
+      }
+    },
+    {
+      "segment_id": "73ab96a3",
+      "source_content": "You have to enter the following values in the **Application details** section:",
+      "source_content_hash": "0996c753688e10f867c3399fc87fda433237581cc7844dec62b40f043fbf7a00",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "您需要在**应用程序详情**区域填写以下字段："
+      }
+    },
+    {
+      "segment_id": "f2c8a42b",
+      "source_content": "- **Audience (Entity ID)**\n- **ACS (Consumer) URL Validator**\n- **ACS (Consumer) URL**\n- Select the **Service Provider** from the **SAML initiator** dropdown.",
+      "source_content_hash": "d628ec6f7961370227fa00bbf15991349446a2fa2800c63d01de9ac4fcf6ec26",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- **受众(实体ID)**\n- **ACS(消费者)URL验证器**\n- **ACS(消费者)URL**\n- 从**SAML发起方**下拉菜单中选择**服务提供商**"
+      }
+    },
+    {
+      "segment_id": "c3a738de",
+      "source_content": "Replace the values with the ones you have received from SAML Jackson.",
+      "source_content_hash": "3a0252490deba22aac834db0ee890225a76896363a384f397f251886c5af8ecf",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "请将字段值替换为从SAML Jackson获取的对应参数。"
+      }
+    },
+    {
+      "segment_id": "3cfe6286",
+      "source_content": "Click **Save** to save the configuration.",
+      "source_content_hash": "5de8a67baabbbbb72ebc8307981194a5b2a380f1a353144b6e06e27fc2d66b50",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "点击**保存**完成配置。"
+      }
+    },
+    {
+      "segment_id": "1042b50d",
+      "source_content": "![OneLogin SAML Step 4](/images/docs/jackson/sso-providers/onelogin/4.png)",
+      "source_content_hash": "f71659bd5f8d372e62a14ca25c42a2ab912507c5016c2e05dd3a3e990b0e37f0",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![OneLogin SAML 步骤4](/images/docs/jackson/sso-providers/onelogin/4.png)"
+      }
+    },
+    {
+      "segment_id": "aa1e7006",
+      "source_content": "![OneLogin SAML Step 4.1](/images/docs/jackson/sso-providers/onelogin/4_1.png)",
+      "source_content_hash": "6fd64cd93c130a4a8e2382a0f296fb634d0acb7416cc6d6448b2cde076c08ea6",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![OneLogin SAML 步骤4.1](/images/docs/jackson/sso-providers/onelogin/4_1.png)"
+      }
+    },
+    {
+      "segment_id": "13d9cd70",
+      "source_content": "Click the dropdown menu **More Actions** from the top right corner and click **SAML Metadata** to download the metadata XML file.",
+      "source_content_hash": "6c0adbb02eba9d0bc7e076c1a94d60ad3f2f1fd56e67914d1dbb4477646820eb",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "点击右上角**更多操作**下拉菜单，选择**SAML元数据**以下载元数据XML文件。"
+      }
+    },
+    {
+      "segment_id": "29528c8d",
+      "source_content": "![OneLogin SAML Step 5](/images/docs/jackson/sso-providers/onelogin/5.png)",
+      "source_content_hash": "3d6bfb1c0e7d7f10231cd61c1ed8ffa06999baba630c2a0c6ba47f3d6d9ff6dc",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![OneLogin SAML 步骤5](/images/docs/jackson/sso-providers/onelogin/5.png)"
+      }
+    },
+    {
+      "segment_id": "11c76fcc",
+      "source_content": "## Attribute Mapping",
+      "source_content_hash": "ced521d3f2fec68e3b98cce4a507ed30e9cda40547fcc34bacfb25d1deb14981",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 属性映射"
+      }
+    },
+    {
+      "segment_id": "98d26038",
+      "source_content": "From your application, click the **Parameters** tab on the left.",
+      "source_content_hash": "c1ed6d8432d3de09a2085e80668321ccc3dee879202447f19bce7310488d2e44",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "进入应用程序后点击左侧**参数**标签页。"
+      }
+    },
+    {
+      "segment_id": "d3649a1e",
+      "source_content": "You have to configure the following attributes:",
+      "source_content_hash": "abfe813fb5d1d3b126ea1a4282617b9e860fadeaee15af55550c8abf73b6a283",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "需要配置以下属性："
+      }
+    },
+    {
+      "segment_id": "0b4652a4",
+      "source_content": "| SAML Custom Connector Field | Value      |\n| --------------------------- | ---------- |\n| id                          | UUID       |\n| email                       | Email      |\n| firstName                   | First Name |\n| lastName                    | Last Name  |",
+      "source_content_hash": "aaceb10477d1970a33a2b7422b77011effd17f6fd5ecf5129e2a57630accaf4f",
+      "node_type": "table",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_0b4652a4"
+      }
+    },
+    {
+      "segment_id": "79ad944d",
+      "source_content": "See the screenshot below.",
+      "source_content_hash": "484fb0ee90c5fa8ea70ce5cad0e59baf1dc7a4e18927a947a1fdaf6da53dfdca",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "如下图所示。"
+      }
+    },
+    {
+      "segment_id": "531437ca",
+      "source_content": "![OneLogin SAML Step 6](/images/docs/jackson/sso-providers/onelogin/6.png)",
+      "source_content_hash": "778f80285f0c039c8a9f33d6bbfe40d63603b5e798b06b788722ba73b5d6aed1",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![OneLogin SAML 步骤6](/images/docs/jackson/sso-providers/onelogin/6.png)"
+      }
+    },
+    {
+      "segment_id": "06e24cc0",
+      "source_content": "See the below screenshot to see how to map the **id** attribute to **UUID**.",
+      "source_content_hash": "0706e91894ebe953984ac94560088fcc7975df1e2b3f4e57d4fbb7d85ce86a3d",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "参考下图将**id**属性映射至**UUID**。"
+      }
+    },
+    {
+      "segment_id": "7f71ff2a",
+      "source_content": "Enter **id** in the **Field name** input and check the **Include in SAML assertion** checkbox. Click **Save** to continue.",
+      "source_content_hash": "a16d46842d47862ee8bac6b962c852ae6d27693fbecc9981b09234c89b09d553",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "在**字段名**输入框填写\"id\"并勾选**包含在SAML断言中**复选框，点击**保存**继续。"
+      }
+    },
+    {
+      "segment_id": "147e8550",
+      "source_content": "![OneLogin SAML Step 7](/images/docs/jackson/sso-providers/onelogin/7.png)",
+      "source_content_hash": "f142300f123c5e9cbe5642ce0908c5eb56a7482cebc3fa37580cf6f21bd0d74d",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![OneLogin SAML 步骤7](/images/docs/jackson/sso-providers/onelogin/7.png)"
+      }
+    },
+    {
+      "segment_id": "883231d4",
+      "source_content": "On the next screen, select **UUID** from the **Value** dropdown and click **Save**.",
+      "source_content_hash": "367ecb1017a803312b72e179b8caa02fbeef7e77cf263bb89d475dba1cdfdb07",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "在后续界面中，从**值**下拉列表选择**UUID**并点击**保存**。"
+      }
+    },
+    {
+      "segment_id": "6cc549f2",
+      "source_content": "![OneLogin SAML Step 8](/images/docs/jackson/sso-providers/onelogin/8.png)",
+      "source_content_hash": "4759dec1cb0c8008e93628e7f80737d332da199397da63a79a1e506149648a84",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![OneLogin SAML 步骤8](/images/docs/jackson/sso-providers/onelogin/8.png)"
+      }
+    },
+    {
+      "segment_id": "d0dd855b",
+      "source_content": "Do the same for the other attributes (email, firstName, lastName).",
+      "source_content_hash": "b999f8baa507c4c651512d497c3742b413b45b7adccf61f79b1368d2e4621f1c",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "对其他属性(email, firstName, lastName)重复相同操作。"
+      }
+    },
+    {
+      "segment_id": "2fd0be2a",
+      "source_content": "## Next steps",
+      "source_content_hash": "3a5d9cbc49e6e5f0c98349dd1cd7cfe5713807fc5f02234240621031925d1f32",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 后续步骤"
+      }
+    },
+    {
+      "segment_id": "6270d577",
+      "source_content": "You've successfully configured your custom SAML application for OneLogin SAML. At this stage, you can assign users to your application and start using it.",
+      "source_content_hash": "586334323a96cd3daab69aa3549d2e5ea6d8c3ac2951c0c6620fdcfb9458c4a2",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "您已成功完成OneLogin SAML自定义应用程序配置。现在可以为应用程序分配用户并开始使用。"
+      }
+    },
+    {
+      "segment_id": "a4bf4268",
+      "source_content": "## Resources",
+      "source_content_hash": "75c6211de8f8951e8037d10289e3e5d0177b8a172b593345006b5b42a8e08e0e",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 相关资源"
+      }
+    },
+    {
+      "segment_id": "cc9271fb",
+      "source_content": "- [OneLogin](https://www.onelogin.com/) official website\n- Visit [OneLogin documentation](https://developers.onelogin.com/)",
+      "source_content_hash": "9298b812923d920719c9caba32d37c35ebbd7bf08b439449dc005f51ce510e8d",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- [OneLogin](https://www.onelogin.com/) 官方网站\n- 访问 [OneLogin 开发者文档](https://developers.onelogin.com/)"
+      }
+    },
+    {
+      "segment_id": "09f6e084",
+      "source_content": ":::tip\nGot a question? [Ask here](https://discord.gg/uyb7pYt4Pa)\n:::",
+      "source_content_hash": "205c5768df1b402d61a634ce459105e3be3777225d2575780c425cf0a7ceae4c",
+      "node_type": "containerDirective",
+      "translatable": true,
+      "translations": {
+        "zh-CN": ":::tip\n遇到问题？[在此提问](https://discord.gg/uyb7pYt4Pa)\n:::"
+      }
+    }
+  ],
+  "target_i18n_subpath": "docusaurus-plugin-content-docs/current/jackson/sso-providers/onelogin.md",
+  "last_updated_timestamp": "2025-06-08T18:49:09.289160+00:00",
+  "schema_version": "1.0",
+  "translated_versions": {
+    "zh-CN": "b5d9d6948f2a57d48071629817acb190e07662633129860a9a8d5bb4f6ec9943"
+  }
+}

@@ -1,0 +1,92 @@
+{
+  "source_file_path_relative_to_docusaurus_root": "guides/jackson/integrations/supertokens.md",
+  "source_file_content_hash": "15c8a19de3011c5d11b253d36f2193b866a229bc4ffb8a4cad77e270bf518a65",
+  "segments": [
+    {
+      "segment_id": "58cfcc64",
+      "source_content": "---\ntitle: SuperTokens\nsidebar_label: SuperTokens\n---",
+      "source_content_hash": "80a0a4062f25514987ba8c54ed32970b3e9ea6db97131f1127b3b36246e7086f",
+      "node_type": "yaml",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_58cfcc64"
+      }
+    },
+    {
+      "segment_id": "b3de8742",
+      "source_content": "# SuperTokens",
+      "source_content_hash": "943adf83b224dc1a6052c46f0ff6eba9349b36811d5155cfca1d5897c86bab32",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "# SuperTokens"
+      }
+    },
+    {
+      "segment_id": "3fbbcc07",
+      "source_content": "[SuperTokens](https://supertokens.com/) is an open core alternative to proprietary login providers like Auth0 or AWS Cognito.",
+      "source_content_hash": "0d71f56c3373e85c58a3797982bdf353b5a2871e9e00596254e5c8a7860b4271",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "[SuperTokens](https://supertokens.com/) 是专有登录服务（如 Auth0 或 AWS Cognito）的开源替代方案。"
+      }
+    },
+    {
+      "segment_id": "7e5c5a39",
+      "source_content": "SuperTokens allows you to use SAML Jackson as a custom OAuth provider.",
+      "source_content_hash": "74c8db76a25ac26bd93ad5cc2e9aaadb655e4ee7747295f4e82c74e0bceba713",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "SuperTokens 允许您将 SAML Jackson 作为自定义 OAuth 提供商使用。"
+      }
+    },
+    {
+      "segment_id": "8d66f911",
+      "source_content": "Follow [this documentation](https://supertokens.com/docs/thirdpartyemailpassword/common-customizations/saml/with-boxyhq/integration-steps) to learn about how to use SAML Jackson with SuperTokens.",
+      "source_content_hash": "f479dc621614a971eed095fa07ecffa36fb1fca01d119e27aa0d3c3e891c79d3",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "请参阅[此文档](https://supertokens.com/docs/thirdpartyemailpassword/common-customizations/saml/with-boxyhq/integration-steps)了解如何将 SAML Jackson 与 SuperTokens 结合使用。"
+      }
+    },
+    {
+      "segment_id": "ad8fd492",
+      "source_content": "Visit our [GitHub repo](https://github.com/supertokens/jackson-supertokens-express) to see the source code for the SuperTokens SAML SSO integration. We also have a [Next.js + Supertokens + Jackson](https://github.com/nadilas/jackson-next-supertokens) integration for you to draw inspiration from.",
+      "source_content_hash": "51899bb68dc8118d38e951df1e9402089627bcc8640de898c3daba2c3153dd8b",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "访问我们的 [GitHub 仓库](https://github.com/supertokens/jackson-supertokens-express)查看 SuperTokens SAML SSO 集成的源代码。我们还提供了 [Next.js + Supertokens + Jackson](https://github.com/nadilas/jackson-next-supertokens) 集成示例供您参考。"
+      }
+    },
+    {
+      "segment_id": "cbe57f9d",
+      "source_content": "## Next steps",
+      "source_content_hash": "3a5d9cbc49e6e5f0c98349dd1cd7cfe5713807fc5f02234240621031925d1f32",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 后续步骤"
+      }
+    },
+    {
+      "segment_id": "11c829ab",
+      "source_content": "- Got a question? [Ask here](https://discord.gg/uyb7pYt4Pa)",
+      "source_content_hash": "3d42b2d324c1d4391b652a72774e8ed6adad48f83e9f875f7f743e0f70b6c89a",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- 有问题？[在此提问](https://discord.gg/uyb7pYt4Pa)"
+      }
+    }
+  ],
+  "target_i18n_subpath": "docusaurus-plugin-content-docs-guides/current/jackson/integrations/supertokens.md",
+  "last_updated_timestamp": "2025-06-08T18:49:09.299055+00:00",
+  "schema_version": "1.0",
+  "translated_versions": {
+    "zh-CN": "15c8a19de3011c5d11b253d36f2193b866a229bc4ffb8a4cad77e270bf518a65"
+  }
+}

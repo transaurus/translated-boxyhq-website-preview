@@ -1,0 +1,112 @@
+{
+  "source_file_path_relative_to_docusaurus_root": "docs/jackson/sso-providers/generic-saml.md",
+  "source_file_content_hash": "171c558d036b27d486d67f4e574e9910c334270c7d80e1e2501860d3580281db",
+  "segments": [
+    {
+      "segment_id": "58cfcc64",
+      "source_content": "---\ntitle: Set up your own custom SAML application for a Generic IdP\nsidebar_label: Generic SAML 2.0 Provider\n---",
+      "source_content_hash": "caf569608afa9bb7e6d52a375774b61a298b208a8b3bb4bbb875e3cbff07c7f1",
+      "node_type": "yaml",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_58cfcc64"
+      }
+    },
+    {
+      "segment_id": "b3de8742",
+      "source_content": "# Generic SAML",
+      "source_content_hash": "73074d1a79c947a257bfe4ed7cd490ec5f7c22d1d2a329ee6fd31253b5fb50d6",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "# 通用SAML配置"
+      }
+    },
+    {
+      "segment_id": "3fbbcc07",
+      "source_content": "This guide explains the settings you’d need to use to configure SAML with your Identity Provider. Once this is set up you should get an XML metadata file that should then be configured using our [API (or calling the API controller connection method if using our NPM)](../sso-flow/index.md#21-add-connection).",
+      "source_content_hash": "88bd8797fc76887b2af51a23a9e4dd2736bb7dabea795f04ca22aef053335869",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "本指南说明与身份提供商配置SAML所需的参数设置。完成配置后，您将获得一个XML元数据文件，需通过我们的[API（或调用NPM包中的API控制器连接方法）](../sso-flow/index.md#21-add-connection)进行配置。"
+      }
+    },
+    {
+      "segment_id": "2f796981",
+      "source_content": "> Please do not add a trailing slash at the end of the URLs.",
+      "source_content_hash": "357490f6cfcbb69932d657adaef9931ae61afc0624b7a762c7601303cc23aeb6",
+      "node_type": "blockquote",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "> 请注意：所有URL末尾请勿添加斜杠。"
+      }
+    },
+    {
+      "segment_id": "8d66f911",
+      "source_content": "Create them exactly as shown below:",
+      "source_content_hash": "c6fa9392d466b78af3c161584cbba98713028d515366a8c66f6d00b36f58999b",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "请严格按照以下格式创建："
+      }
+    },
+    {
+      "segment_id": "9e760345",
+      "source_content": "- Assertion consumer service URL / Single Sign-On URL / Destination URL: `http://localhost:5225/api/oauth/saml`\n\n- Entity ID / Identifier / Audience URI / Audience Restriction: `https://saml.boxyhq.com`\n\n- Response: `Signed`\n\n- Assertion Signature: `Signed`\n\n- Signature Algorithm: `RSA-SHA256`\n\n- Assertion Encryption: `Unencrypted`",
+      "source_content_hash": "49fb9cf78672c26d74ace8e06b676332974aeda58e986171ccda663165c9cc76",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- 断言消费者服务URL/单点登录URL/目标URL：`http://localhost:5225/api/oauth/saml`\n\n- 实体ID/标识符/受众URI/受众限制：`https://saml.boxyhq.com`\n\n- 响应：`已签名`\n\n- 断言签名：`已签名`\n\n- 签名算法：`RSA-SHA256`\n\n- 断言加密：`未加密`"
+      }
+    },
+    {
+      "segment_id": "a2f1eaea",
+      "source_content": ":::info\nThe deployed Jackson service has a Service Provider (SP) endpoint that exposes the above metadata and the same can be accessed at `<jackson_endpoint>/.well-known/saml-configuration`. \n:::",
+      "source_content_hash": "580506203a65b1639acb294bf2d0a5b6be9c66a044e68d6ca071134a0532c92d",
+      "node_type": "containerDirective",
+      "translatable": true,
+      "translations": {
+        "zh-CN": ":::info\n已部署的Jackson服务会通过服务提供商(SP)端点公开上述元数据，访问地址为：`<jackson_endpoint>/.well-known/saml-configuration`\n:::"
+      }
+    },
+    {
+      "segment_id": "d06306f7",
+      "source_content": "## SAML profile/claims/attributes mapping",
+      "source_content_hash": "788eac2e92849a61a8aa0f66639842eeb91b6f61ea56c163993735605dbc849d",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## SAML属性/声明映射"
+      }
+    },
+    {
+      "segment_id": "73ab96a3",
+      "source_content": "As outlined in the guide above we try and support 4 attributes in the SAML claims - `id`, `email`, `firstName`, `lastName`. This is how the common SAML attributes map over for most providers, but some providers have custom mappings. Please refer to the documentation on Identity Provider to understand the exact mapping.",
+      "source_content_hash": "0113469f6361abb21bcc067b9b32b388cefdf7fa59f31e36f05ce9d99c818e83",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "如上所述，我们支持SAML声明中的4个标准属性——`id`、`email`、`firstName`、`lastName`。大多数提供商采用通用属性映射，但部分提供商使用自定义映射规则，具体请参考身份提供商的官方文档。"
+      }
+    },
+    {
+      "segment_id": "6c3c2cc2",
+      "source_content": "| SAML Attribute                                                         | Jackson mapping |\n| ---------------------------------------------------------------------- | --------------- |\n| `http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier` | id              |\n| `http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress`   | email           |\n| `http://schemas.xmlsoap.org/ws/2005/05/identity/claims/givenname`      | firstName       |\n| `http://schemas.xmlsoap.org/ws/2005/05/identity/claims/surname`        | lastName        |",
+      "source_content_hash": "32f79e11114b0388e7508a81275143c75e1478c5c96a2e063c0ff2c7599344fd",
+      "node_type": "table",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_6c3c2cc2"
+      }
+    }
+  ],
+  "target_i18n_subpath": "docusaurus-plugin-content-docs/current/jackson/sso-providers/generic-saml.md",
+  "last_updated_timestamp": "2025-06-08T18:49:09.303340+00:00",
+  "schema_version": "1.0",
+  "translated_versions": {
+    "zh-CN": "171c558d036b27d486d67f4e574e9910c334270c7d80e1e2501860d3580281db"
+  }
+}

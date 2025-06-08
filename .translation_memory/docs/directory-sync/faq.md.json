@@ -1,0 +1,182 @@
+{
+  "source_file_path_relative_to_docusaurus_root": "docs/directory-sync/faq.md",
+  "source_file_content_hash": "615735c941bd6a7bee92f588c69ea5cd5d36cf1a25ff72dda670e276249c238b",
+  "segments": [
+    {
+      "segment_id": "58cfcc64",
+      "source_content": "---\ntitle: Faq\nsidebar_label: FAQ\nhide_table_of_contents: true\n---",
+      "source_content_hash": "bf934ee2b1ebf25e7b0033dca3455c8cd53bcd1dd551ba418d48c7947821dd0c",
+      "node_type": "yaml",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_58cfcc64"
+      }
+    },
+    {
+      "segment_id": "a703643c",
+      "source_content": "# Frequently asked questions",
+      "source_content_hash": "48606895176e03072826ad12dec7016beb0adaf928f984c55db6c05e49f5b02d",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "# 常见问题解答"
+      }
+    },
+    {
+      "segment_id": "53eaf0e1",
+      "source_content": "Frequently asked questions about the common issues and limitations of the directory sync providers.",
+      "source_content_hash": "9af0c893a83dbcd5e4cd7ee48b398350d33943b2d72f2afad090647723758963",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "关于目录同步提供商的常见问题及限制说明。"
+      }
+    },
+    {
+      "segment_id": "8a5f6a7b",
+      "source_content": "### Why don't I see any event when a group is removed in OneLogin?",
+      "source_content_hash": "78fd9b6bded115e9dab607579cdcbf8683b93bafe8e92ffdc8e80b785ec5f749",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 为什么在OneLogin中删除群组时看不到任何事件？"
+      }
+    },
+    {
+      "segment_id": "180bddb1",
+      "source_content": "It is a known issue with OneLogin SCIM. OneLogin does not dispatch a specific deprovisioning event for groups that are deleted, so you won't see any event such as `group.deleted` or `group.user_removed` when a group is removed. It is recommended to remove the users from the group before deleting the group itself from the SCIM application.",
+      "source_content_hash": "008d244e7ab37e01d0d05625a2dc8b9bd798152008dbafbf7876aa06a03d9828",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "这是OneLogin SCIM的已知问题。OneLogin不会为已删除的群组发送特定的取消配置事件，因此当群组被移除时，您不会看到诸如`group.deleted`或`group.user_removed`之类的事件。建议在从SCIM应用中删除群组本身之前，先移除群组中的用户。"
+      }
+    },
+    {
+      "segment_id": "e14c9928",
+      "source_content": "### Why don't I see a DELETE event for a user that was removed in Okta?",
+      "source_content_hash": "de4cb4575a1e3595ac3e8e2df400d79829a73f16172c5aba9fc73a0cc8260316",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 为什么在Okta中移除用户时看不到DELETE事件？"
+      }
+    },
+    {
+      "segment_id": "42ad8e83",
+      "source_content": "Instead of executing a DELETE operation, Okta sends a request to the SCIM application to set the `active` attribute to `false`. Consequently, you will observe a `user.updated` event with the `active` attribute changed to `false` for users removed from the Okta application. [Read More](https://developer.okta.com/docs/reference/scim/scim-20/#delete-users)",
+      "source_content_hash": "cca5a138f7fa37bd8def14529fccbd9c4e5324e76cccff027ac83b1b654402b2",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "Okta不会执行DELETE操作，而是向SCIM应用发送请求将`active`属性设置为`false`。因此，对于从Okta应用中移除的用户，您会观察到`user.updated`事件，其中`active`属性变为`false`。[了解更多](https://developer.okta.com/docs/reference/scim/scim-20/#delete-users)"
+      }
+    },
+    {
+      "segment_id": "aee0e40d",
+      "source_content": "### Why is there no event for a user that was deactivated in Okta?",
+      "source_content_hash": "906d5f5f4d527e63d2ce04a4043439e2fae778539a126293f61ea4ca2e6b6903",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 为什么Okta中用户停用时没有事件？"
+      }
+    },
+    {
+      "segment_id": "f5f6d2ce",
+      "source_content": "Okta does not dispatch a specific deprovisioning event for users that are suspended. This omission of a deactivation event is a known issue with Okta.",
+      "source_content_hash": "ef2ad148901abbcea4ff80cd2c6cb34c3f224b435257ba861793cd39a3513151",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "Okta不会为被暂停的用户发送特定的取消配置事件。这种停用事件的缺失是Okta的已知问题。"
+      }
+    },
+    {
+      "segment_id": "40f9552a",
+      "source_content": "### Does Google Workspace sync in real time?",
+      "source_content_hash": "7a4e9a346f28c565c53b0336530b88b596d32b854ba8b8ff32362fa819e0ba82",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### Google Workspace是否实时同步？"
+      }
+    },
+    {
+      "segment_id": "f2c2bdd0",
+      "source_content": "No, Google Workspace sync is not real-time. Jackson syncs the Google Workspace directory on a schedule (e.g. every 2 hours). In a self-hosted deployment, you can configure a cron job to sync the directory on a schedule of your choice.",
+      "source_content_hash": "656b06e81b230937682ffa75854bea3d266c1c1982e26c2599a4a83f8e5faef2",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "否，Google Workspace同步并非实时。Jackson会按计划（例如每2小时）同步Google Workspace目录。在自托管部署中，您可以配置cron作业按您选择的时间表同步目录。"
+      }
+    },
+    {
+      "segment_id": "fa430ad4",
+      "source_content": "### Can I sync specific groups from Google Workspace?",
+      "source_content_hash": "331323152a9b993fb3fe2732f7811fd90dab7d5429b6ae1e72f53c52551e1b41",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 能否同步Google Workspace中的特定群组？"
+      }
+    },
+    {
+      "segment_id": "4b1d2d7d",
+      "source_content": "Not possible at the moment. Jackson syncs all the groups from Google Workspace. You have to filter the groups from your application's side.",
+      "source_content_hash": "65e391f4551066e2b49bb7974d2d73307d65656cd07bd19275474a78ccda42fb",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "目前不可行。Jackson会同步Google Workspace中的所有群组。您需要从应用端过滤群组。"
+      }
+    },
+    {
+      "segment_id": "48847fd4",
+      "source_content": "### How frequently does Microsoft Entra ID SCIM perform sync by default?",
+      "source_content_hash": "9cf0e9fd98ae16c9acff8d479db319f6d3321dc6c827858761c2511c7cc1635c",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### Microsoft Entra ID SCIM默认的同步频率是多少？"
+      }
+    },
+    {
+      "segment_id": "4daf5cdd",
+      "source_content": "Microsoft Entra ID automatically provisions and updates user accounts in an app based on things like user and group assignment. The sync happens at a regularly scheduled time interval, typically every 20-40 minutes. [Read More](https://learn.microsoft.com/en-us/entra/identity/app-provisioning/application-provisioning-when-will-provisioning-finish-specific-user#how-long-will-it-take-to-provision-users)",
+      "source_content_hash": "718e3615074b1c8254f0106ca0a3f8c9d950b36babd99e091deaa89e582155fa",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "Microsoft Entra ID会根据用户和群组分配等情况自动在应用中配置和更新用户账户。同步会按定期计划的时间间隔进行，通常为每20-40分钟一次。[了解更多](https://learn.microsoft.com/en-us/entra/identity/app-provisioning/application-provisioning-when-will-provisioning-finish-specific-user#how-long-will-it-take-to-provision-users)"
+      }
+    },
+    {
+      "segment_id": "f422383e",
+      "source_content": "### Why does the PATCH request fail in Microsoft Entra ID SCIM?",
+      "source_content_hash": "7e330adc8d0a4a3cfc9d0d0c2d066f1ed41a1619a433540c8cbebf46e322c8e5",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 为什么Microsoft Entra ID SCIM中的PATCH请求会失败？"
+      }
+    },
+    {
+      "segment_id": "97ae4a01",
+      "source_content": "This is a known issue with Entra ID SCIM implementation. You have to add the query param `?aadOptscim062020` to the SCIM endpoint URL to make PATCH requests work. This query param update PATCH behavior and ensure SCIM compliance. [Read More](https://learn.microsoft.com/en-us/entra/identity/app-provisioning/application-provisioning-config-problem-scim-compatibility#flags-to-alter-the-scim-behavior)",
+      "source_content_hash": "87ad72315d4be91c0d57ef62b60377e76088fd42ac7b25283312a038d55a121f",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "这是Entra ID SCIM实现的已知问题。您必须在SCIM端点URL中添加查询参数`?aadOptscim062020`才能使PATCH请求正常工作。此查询参数会更新PATCH行为并确保SCIM合规性。[了解更多](https://learn.microsoft.com/en-us/entra/identity/app-provisioning/application-provisioning-config-problem-scim-compatibility#flags-to-alter-the-scim-behavior)"
+      }
+    }
+  ],
+  "target_i18n_subpath": "docusaurus-plugin-content-docs/current/directory-sync/faq.md",
+  "last_updated_timestamp": "2025-06-08T18:49:09.313937+00:00",
+  "schema_version": "1.0",
+  "translated_versions": {
+    "zh-CN": "615735c941bd6a7bee92f588c69ea5cd5d36cf1a25ff72dda670e276249c238b"
+  }
+}

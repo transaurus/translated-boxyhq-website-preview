@@ -1,0 +1,242 @@
+{
+  "source_file_path_relative_to_docusaurus_root": "success-stories/2024-02-15-how-boxyhq-solutions-drive-business-efficiency-and-security-unosecur.md",
+  "source_file_content_hash": "49c668d8081fb7bb6d97cf1b58b2d69e1d254be5d2c31062d689c140f1eae821",
+  "segments": [
+    {
+      "segment_id": "58cfcc64",
+      "source_content": "---\ndescription: \"Explore how Unosecur boosts efficiency & security with BoxyHQ's SSO solutions, ensuring streamlined access and robust protection.\"\nslug: how-boxyhq-solutions-drive-business-efficiency-and-security-unosecur\ntitle: \"How BoxyHQ's Solutions Drive Business Efficiency And Security: Unosecur\"\ntags_disabled: [security, cybersecurity, devsecops]\nimage: /images/success-stories/unosecur-case-study.png\nhide_table_of_contents: true\n---",
+      "source_content_hash": "6632c0bd05398b4a19a5ac0d7674eadd5389dd97d23b0ebe6526d16094f56c30",
+      "node_type": "yaml",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_58cfcc64"
+      }
+    },
+    {
+      "segment_id": "73ddcfdf",
+      "source_content": "import LearnMoreCTA from \"../src/components/ctas/LearnMoreCTA\";\nimport FeaturedQuote from \"../src/components/FeaturedQuote\";\nimport SignupCTA from \"../src/components/ctas/SignupCTA\";",
+      "source_content_hash": "00ee7a5cc2eabfacc6faf08d517e820e19e38542f8e03adbe98caab442d4b6f6",
+      "node_type": "mdxjsEsm",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_73ddcfdf"
+      }
+    },
+    {
+      "segment_id": "ad8fd492",
+      "source_content": "[Unosecur](https://www.unosecur.com/) is a cybersecurity firm focused on protecting cloud infrastructures against identity threats. Their platform offers real-time analysis to visualize and understand cloud permissions, aiming to eliminate access risks. Trusted by cloud-native companies, Unosecur ensures comprehensive identity security through continuous monitoring, malicious activity tracking, and automated remediation with a no-code approach. Their services are designed for effective breach prevention and simplified IAMOps, providing a secure, agentless scanning architecture for cloud environments.",
+      "source_content_hash": "04eaf3b352285c7216a8d9a168a910420a71913adfe906783ff61d20ce396c63",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "[Unosecur](https://www.unosecur.com/) 是一家专注于防范云基础设施身份威胁的网络安全公司。其实时分析平台可可视化呈现云权限状态，旨在消除访问风险。作为云原生企业信赖的安全伙伴，Unosecur 通过持续监控、恶意活动追踪和无代码自动化修复，提供全面的身份安全防护。其服务专为高效预防数据泄露和简化IAM运维设计，采用无需代理的扫描架构为云环境提供安全保障。"
+      }
+    },
+    {
+      "segment_id": "cbe57f9d",
+      "source_content": "## Introduction",
+      "source_content_hash": "d753efbab681fa4da82470d9a83b1c202de58f92fd498e77a269c1163bc4714b",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 引言"
+      }
+    },
+    {
+      "segment_id": "39b3772c",
+      "source_content": "[Enterprise Single Sign-On (SSO)](/enterprise-sso) is a cornerstone for cybersecurity companies like Unosecur, enhancing security, user experience, and operational efficiency while supporting compliance efforts and strengthening client relationships. With BoxyHq's suite of security building blocks for developers, Unosecur has been able to leverage these benefits to drive business efficiency and security.",
+      "source_content_hash": "6007c367ce83c02c17cae6bf73647eb1cb8c883f85d34a9c5cb046aafe543236",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "[企业级单点登录(SSO)](/enterprise-sso) 是Unosecur等网络安全公司的基石技术，既能增强安全性、优化用户体验、提升运营效率，又能支持合规建设并巩固客户关系。通过采用BoxyHQ为开发者打造的安全组件套件，Unosecur成功实现了业务效率与安全性的双重提升。"
+      }
+    },
+    {
+      "segment_id": "8f488ab5",
+      "source_content": "<SignupCTA campaign=\"success-story-unosecur\" />",
+      "source_content_hash": "c414a899d29f0afa8815b42fb2f30b11b1b649f6750725f2e75effe2242f7ef9",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_8f488ab5"
+      }
+    },
+    {
+      "segment_id": "63622bf0",
+      "source_content": "## Why Single Sign-On (SSO) Is Critical For Cybersecurity Companies",
+      "source_content_hash": "246dd0339cad7f2a34f2d8582462d427290e80c458a90378ee4b4ddc2f68249d",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 单点登录对网络安全企业的核心价值"
+      }
+    },
+    {
+      "segment_id": "95b38f97",
+      "source_content": "### Enhanced Security",
+      "source_content_hash": "fa0bfd6b21c8bd944384ea78886b3715cc12439d0e877891aaed01db5097ca27",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 强化安全防护"
+      }
+    },
+    {
+      "segment_id": "ccc88b4c",
+      "source_content": "SSO reduces the number of attack surfaces by minimizing the number of passwords users need to manage and remember. This is crucial for cybersecurity companies to prevent breaches and maintain high security standards.",
+      "source_content_hash": "c54be248880ade45d8d2ce9404fb27003e1682f40c1f3032304fc3a85719b543",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "SSO通过减少用户需要管理的密码数量，有效缩小攻击面。这对预防数据泄露、维持高标准安全体系的网络安全企业至关重要。"
+      }
+    },
+    {
+      "segment_id": "3c36424c",
+      "source_content": "### Streamlined Access",
+      "source_content_hash": "ae49a8384ee5413eb3c3669387fbaaad6c62f9b999c485528c70ab7b58196c67",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 简化访问流程"
+      }
+    },
+    {
+      "segment_id": "26524352",
+      "source_content": "By allowing users to access multiple applications or services with a single set of credentials, SSO simplifies the login process. This is beneficial for internal operations, making it easier for employees to access the tools they need without the hassle of managing multiple passwords, thus increasing efficiency.",
+      "source_content_hash": "5dd673495707a5f4412c721c750a67b4d402f2a98e2d071de407b9d79561fe7e",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "凭借单组凭证访问多应用服务的特性，SSO极大简化了登录流程。这种机制优化了内部运营效率，员工无需记忆多组密码即可快速获取所需工具。"
+      }
+    },
+    {
+      "segment_id": "b25f21be",
+      "source_content": "### Improved User Experience",
+      "source_content_hash": "453cfc12424d1369e284521aa8aa7e0197a17a3d74d5829d1c135394e1ee2842",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 提升用户体验"
+      }
+    },
+    {
+      "segment_id": "7499a4e7",
+      "source_content": "For clients, SSO means a smoother, more seamless interaction with Unosecur's services. A simplified access mechanism enhances customer satisfaction and trust, which are vital in the cybersecurity sector where ease of use must be balanced with stringent security measures.",
+      "source_content_hash": "dcb24ddec5b0687892f27a1281d58d2a2f5889215ff450862dd1a00f26587ea1",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "对客户而言，SSO意味着与Unosecur服务的交互更流畅无缝。简化的访问机制增强了客户满意度与信任度——这在需要平衡易用性与严格安全措施的网络安全领域尤为关键。"
+      }
+    },
+    {
+      "segment_id": "109ace10",
+      "source_content": "### Compliance and Audit Trails",
+      "source_content_hash": "63f13fe4f9a457f15fae90ddd01100c2c2503c6a2a9d6fb0b925d3f8cdaa115f",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 合规与审计追踪"
+      }
+    },
+    {
+      "segment_id": "135468ee",
+      "source_content": "In the cybersecurity industry, adhering to compliance standards is non-negotiable. SSO solutions often come with features that support compliance through better management of user access and activity logging, making it easier for companies like Unosecur to meet industry regulations and standards. With BoxyHQ's suite of solutions, you can enable both [Directory Sync](/directory-sync) and Audit Logs to provide the necessary tools to meet these requirements.",
+      "source_content_hash": "c765549a8a9e5acde7c11c314207bdab916fb7ceca1c12361bafda3d1c083cb8",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "网络安全行业必须严守合规标准。SSO解决方案通常配备完善的用户访问管理和活动日志功能，帮助Unosecur等企业轻松满足行业监管要求。通过BoxyHQ的[目录同步](/directory-sync)和审计日志功能套件，企业可获得满足这些要求的全套工具。"
+      }
+    },
+    {
+      "segment_id": "782c902a",
+      "source_content": "### Operational Efficiency",
+      "source_content_hash": "e4fb19fc2e75b7f03adce3dad3468a9c9f3afc789dcb677826f6abef17249f44",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 运营效率提升"
+      }
+    },
+    {
+      "segment_id": "50746522",
+      "source_content": "SSO can significantly reduce IT overhead by decreasing the need for password resets and user support related to access issues. For Unosecur, where resources are better allocated to enhancing security measures, this operational efficiency is invaluable.",
+      "source_content_hash": "7aee06ac216ac986d6105dacd901392570f2b88bbcc35e9b18fe4414b2cf9370",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "SSO能显著减少密码重置和访问支持相关的IT运维压力。对需要集中资源强化安全措施的Unosecur而言，这种运营效率的提升具有不可估量的价值。"
+      }
+    },
+    {
+      "segment_id": "e2ae1ac7",
+      "source_content": "<FeaturedQuote personName=\"Santosh Jayaprakash\" personRole=\"Co-Founder Unosecur\" pictureSrc=\"/images/success-stories/santosh-unosecur\">\n With BoxyHQ, we can focus on building our core product without worrying too much about the enterprise readiness features. We seamlessly integrated the SAML SSO offering to our platform, enabling us to onboard enterprise co-development customers.\n</FeaturedQuote>",
+      "source_content_hash": "89da67bdc461c683a554dc8004f548661a96f27b47fc99dd6de894c0da8a1460",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_e2ae1ac7"
+      }
+    },
+    {
+      "segment_id": "c674e260",
+      "source_content": "### Strengthened Client Relationships",
+      "source_content_hash": "ac7ef0c2eac9812ac09a5439b2fc866adceb3c539773be3260e4e822e190c842",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 巩固客户关系"
+      }
+    },
+    {
+      "segment_id": "a44047a5",
+      "source_content": "By providing an SSO solution, Unosecur can offer added value to clients, reinforcing its position as a leader in cybersecurity solutions. It demonstrates a commitment to not only protecting clients' digital assets but also to improving their operational workflow.",
+      "source_content_hash": "d418725dc783779676f506ab189bb906eb81f37a15b6d1877642bd6be0edcf38",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "通过提供SSO解决方案，Unosecur为客户创造了附加价值，进一步巩固了其网络安全解决方案领导者的地位。这不仅体现了对客户数字资产的保护承诺，更展现了优化其工作流程的决心。"
+      }
+    },
+    {
+      "segment_id": "cb5b269c",
+      "source_content": "## In Conclusion",
+      "source_content_hash": "9250f10518eaf57d5a90a64b35b9a2e781c4487b449f9105c22130f83bf5c78b",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 总结"
+      }
+    },
+    {
+      "segment_id": "b36c6338",
+      "source_content": "With BoxyHQ's SSO solutions, Unosecur has been able to enhance its security posture, streamline access, and improve operational efficiency. This has led to a better user experience for both employees and clients, and has strengthened Unosecur's position as a trusted security partner in the competitive cybersecurity market.",
+      "source_content_hash": "cef17e30c0a9276eeb2f9331a671b0163dfd1aee4bce02b8d4faf72531e9a083",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "借助BoxyHQ的SSO解决方案，Unosecur成功强化了安全防御体系、优化了访问流程并提升了运营效率。这些改进为员工和客户带来了更优质的使用体验，使Unosecur在竞争激烈的网络安全市场中持续保持可信赖的安全合作伙伴地位。"
+      }
+    },
+    {
+      "segment_id": "6b969f9f",
+      "source_content": "<LearnMoreCTA label=\"Read the interview with Unosecur\" newWindow={false} url=\"/blog/unlocking-efficiency-with-enterprise-sso-a-unosecur-case-study\" />",
+      "source_content_hash": "308468f8e65665a10b280c38ac06fa9624e5ed8f8a1cec3aa49b57aaa8379aa3",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_6b969f9f"
+      }
+    }
+  ],
+  "target_i18n_subpath": "docusaurus-plugin-content-blog-success-stories/2024-02-15-how-boxyhq-solutions-drive-business-efficiency-and-security-unosecur.md",
+  "last_updated_timestamp": "2025-06-08T18:49:09.317275+00:00",
+  "schema_version": "1.0",
+  "translated_versions": {
+    "zh-CN": "49c668d8081fb7bb6d97cf1b58b2d69e1d254be5d2c31062d689c140f1eae821"
+  }
+}

@@ -1,0 +1,202 @@
+{
+  "source_file_path_relative_to_docusaurus_root": "blog/2022-06-30-understanding-saml-sso-the-basics-from-the-user-side.md",
+  "source_file_content_hash": "83faf51fa1433e25b321154bb16978d718ff6084e69b02cb47e9798c7e9f1141",
+  "segments": [
+    {
+      "segment_id": "58cfcc64",
+      "source_content": "---\nslug: understanding-saml-sso-the-basics-from-the-user-side\ntitle: Understanding SAML SSO, the basics from the user side\nauthor: Jay Singh\nauthor_title: Marketing Consultant\nauthor_url: https://www.linkedin.com/in/jaydsingh/\nauthor_image_url: /images/authors/jay.jpg\ntags_disabled: [enterprise-readiness, saml, saml-jackson, sso, single-sign on]\nimage: /img/blog/sso/with-saml.png\n---",
+      "source_content_hash": "72344a775a4cc2302ac753f326442f922f32c23838740adad4e68538bb7c711f",
+      "node_type": "yaml",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_58cfcc64"
+      }
+    },
+    {
+      "segment_id": "8d66f911",
+      "source_content": "I have always worked in tech, so have always needed to understand the technical nature of the products we are building. This process has always been over-complicated for me so I now always try to write a guide for non-technical people like me. It turns out that once you understand it you can explain it to other non-technical people much easier! So here we go as I try to explain SAML (Security Assertion Markup Language) SSO (single sign-on) and why BoxyHQ makes it so easy to implement. Firstly you have probably heard of not only SAML but OAuth 2.0 and OIDC, these are all protocols that achieve the same result of providing SSO. There are a few nuances but those are out of scope for this article to keep things simple.",
+      "source_content_hash": "19508f72d421afcf8b233f130a6f9f21835943b6bda527caeaae0081f90bf451",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "作为一名长期从事技术工作的人，我一直需要理解我们构建产品的技术本质。这个过程对我来说总是过于复杂，因此我现在总是尝试为像我这样的非技术人员编写指南。事实证明，一旦你理解了它，就能更容易地向其他非技术人员解释！那么，让我尝试解释SAML（安全断言标记语言）单点登录（SSO），以及为什么BoxyHQ能如此轻松地实现它。首先，你可能不仅听说过SAML，还听说过OAuth 2.0和OIDC，这些都是实现单点登录的协议。它们之间有一些细微差别，但为了简单起见，本文不深入讨论这些细节。"
+      }
+    },
+    {
+      "segment_id": "ad8fd492",
+      "source_content": "Let's start with what SAML SSO is and what it does. An example of SAML SSO in action would be a user in your company signs into a single dashboard and inside that dashboard, they have all the icons for the external services they use such as their CRM (Hubspot) and accounting software (Xero). The user can now just log in to any of their services by clicking on them rather than logging into each one individually.",
+      "source_content_hash": "7ba33bd27e699d15bb1d7474d44da01aea93bf755d543be5c258d85c620ee3b1",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "让我们从SAML SSO是什么以及它的作用开始。SAML SSO的一个实际例子是：你公司的用户登录到一个统一的仪表盘，里面包含了他们使用的所有外部服务的图标，比如CRM（如Hubspot）和会计软件（如Xero）。用户现在只需点击这些图标即可登录任何服务，而无需单独登录每一个。"
+      }
+    },
+    {
+      "segment_id": "86b54d44",
+      "source_content": "But how does this work? Well, the idea behind SAML SSO is that by centralizing your access to an external system you can better manage access and permission as well as improve security. So in our example, the dashboard that allowed the user to just click an icon and log in was SAML in action. Because the company has connected to its external servicing using SAML it can now let its users access all the services from a single point. This single point of access is known as the IdP (Identity Provider) which authenticates the access to all the other services via SAML.",
+      "source_content_hash": "3c900a746a13004dbe0deee51e5cbffc397872915b57e8edc8a297000c5a1ee7",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "但这是如何实现的呢？SAML SSO的核心思想是通过将访问集中到一个外部系统，可以更好地管理访问权限并提升安全性。在我们的例子中，那个允许用户点击图标直接登录的仪表盘就是SAML的实际应用。因为公司已经通过SAML连接到其外部服务，现在可以让用户从一个统一的入口访问所有服务。这个统一的入口被称为身份提供商（IdP），它通过SAML认证对所有其他服务的访问。"
+      }
+    },
+    {
+      "segment_id": "39b3772c",
+      "source_content": "The diagrams below show how this access flow would work with and without SAML:\n![Without SAML SSO](/img/blog/sso/without-saml.png)",
+      "source_content_hash": "9a855a129e9e077191a5de1fe9691b3212925f64d1b4375f20b894358fd05763",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "下面的图表展示了使用和不使用SAML时的访问流程：\n![不使用SAML SSO](/img/blog/sso/without-saml.png)"
+      }
+    },
+    {
+      "segment_id": "f5f6d2ce",
+      "source_content": "In the diagram above we can see that the company is not using SAML so the user has to log into each of the services with an individual username and password. The username and password are managed by the service provider and access is also managed via an admin user on the service provider's side. The user must be given access to each of the services from each of the services and remember the login details for each one.",
+      "source_content_hash": "eef6e06c3ba61a5b8b57bed41b90eae47ea126c395dedd2360d0dd9788addbc0",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "在上图中可以看到，公司没有使用SAML，因此用户必须为每个服务单独输入用户名和密码登录。用户名和密码由服务提供商管理，访问权限也由服务提供商的管理员控制。用户需要从每个服务获取访问权限，并记住每个服务的登录信息。"
+      }
+    },
+    {
+      "segment_id": "2fdadb08",
+      "source_content": "![With SAML SSO](/img/blog/sso/with-saml.png)",
+      "source_content_hash": "b5eb405f821d17faca85dbd58d24c6a9d49f290b2bde2baee3f253160516b10e",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![使用SAML SSO](/img/blog/sso/with-saml.png)"
+      }
+    },
+    {
+      "segment_id": "f2c2bdd0",
+      "source_content": "In the image above we can see that the company is using an IdP such as Okta so the user simply has to log in once and then can access all the external services from a single dashboard. This also means that the company admins can manage access to the different services as they control the access directly from their IdP.",
+      "source_content_hash": "907dbe722dce3a69c54c40bd292ef3cdb7583fb34e7b8221dfdd86b4f9f8fa72",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "在上图中可以看到，公司使用了Okta等身份提供商（IdP），用户只需登录一次，就可以从一个统一的仪表盘访问所有外部服务。这也意味着公司管理员可以直接通过IdP管理对不同服务的访问权限。"
+      }
+    },
+    {
+      "segment_id": "a76548f8",
+      "source_content": "Now, remember that this is just a high-level overview of SAML and the technical aspects behind the scenes can get a lot more complicated.",
+      "source_content_hash": "f13b1bf62da314e73676453628605a4e29451ccbf51a237e5fbd5cd1ac66744d",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "请注意，这只是对SAML的高层次概述，其背后的技术细节可能会复杂得多。"
+      }
+    },
+    {
+      "segment_id": "4b1d2d7d",
+      "source_content": "We have been looking at SAML from a company user's perspective but it's also important to remember that these service providers also have to build a SAML integration to enable them to connect to their clients’ IdPs. This can be a very long and time-consuming process for service providers and this is where BoxyHQ comes in. Instead of service providers building a custom integration for each IdP their customers use which can take months, the service providers can use BoxyHQ and have all the connections to IdPs they need with a single integration! You can be SAML-ready in as little as 8 days! To understand how this looks check out my other blog [here](./2022-06-30-understanding-saml-sso-the-basics-from-the-solution-providers-side.md).",
+      "source_content_hash": "c8f49fbb521d2fd699b24941dc0ffbd8882cbd143ab190d7e98891aa972671e3",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "我们一直从公司用户的角度来看SAML，但同样重要的是，服务提供商也需要构建SAML集成，以便连接到客户的IdP。这对服务提供商来说可能是一个非常耗时且漫长的过程，而这正是BoxyHQ的用武之地。服务提供商无需为每个客户使用的IdP构建定制集成（这可能需要数月时间），而是可以使用BoxyHQ，通过一次集成即可连接到所有需要的IdP！你可以在短短8天内实现SAML就绪！想了解具体实现方式，请查看我的另一篇博客[这里](./2022-06-30-understanding-saml-sso-the-basics-from-the-solution-providers-side.md)。"
+      }
+    },
+    {
+      "segment_id": "dfe931a2",
+      "source_content": "So what are the main benefits of SAML? Here are three of the most important ones I have identified.",
+      "source_content_hash": "02147eec972aa6f9dd02696946055e8ce6d2f2d3f3e6b26339b9ba509f59648a",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "那么，SAML的主要优势是什么？以下是我总结的三个最重要的方面。"
+      }
+    },
+    {
+      "segment_id": "0037ff70",
+      "source_content": "#### Increased Security",
+      "source_content_hash": "2d79df61f31b2db4bfb0bfc6d6339d24066a9cd2f77ae39cc0d55f163667e6f0",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "#### 增强安全性"
+      }
+    },
+    {
+      "segment_id": "bdc231b1",
+      "source_content": "SAML is at its heart a security standard and as it provides a single point of authentication that takes place in a secure environment it adds an extra layer of security to your service that most enterprise customers will ask for.",
+      "source_content_hash": "3fb53cb501aec73ab6c031995d0da099225d078f205582f2753490722acb702b",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "SAML本质上是一种安全标准，它通过在安全环境中提供单一认证点，为你的服务增加了一层额外的安全性，这是大多数企业客户会要求的。"
+      }
+    },
+    {
+      "segment_id": "3b7478ea",
+      "source_content": "#### Improved user experience",
+      "source_content_hash": "28376a9ff73a70e265fdabb47a8d78c41fb47201830df43531cfefa2b71400da",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "#### 提升用户体验"
+      }
+    },
+    {
+      "segment_id": "c3a738de",
+      "source_content": "As a user using SAML is very simple and pleasant to use as you only have to log in once and then you can access all your external services on a dashboard with a single click. This saves the user time and makes their overall experience of your product better.",
+      "source_content_hash": "397b9085f6b005406444d7d4c5b7764b162f7674df5bd072b5e557cbe14b2417",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "作为用户，使用SAML非常简单且体验愉悦，因为只需登录一次，之后就能通过仪表盘一键访问所有外部服务。这为用户节省了时间，并显著提升了产品使用体验。"
+      }
+    },
+    {
+      "segment_id": "9f9e64f5",
+      "source_content": "#### Reduces cost",
+      "source_content_hash": "6a269d5c8f0b85ac363a297cffe97d286789ed83023c971d7badbde5b41d588f",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "#### 降低成本"
+      }
+    },
+    {
+      "segment_id": "1042b50d",
+      "source_content": "Without SAML you have to maintain account information across multiple services but when you use SAML this is all managed by the IdP.",
+      "source_content_hash": "96c169427436625d88d99ccf1faa895fac93adacb2cc6b7215947c4626f894b2",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "在没有SAML的情况下，您需要跨多个服务维护账户信息；而使用SAML后，这些全部由身份提供商（IdP）集中管理。"
+      }
+    },
+    {
+      "segment_id": "aa1e7006",
+      "source_content": "BoxyHQ is open source and our SAML SSO product, SAML Jackson is just the first product we have built to help companies become enterprise-ready. If you are interested in discussing your authentication strategy or deploying SAML SSO you can book a call with our CEO [here](https://cal.com/deepak-boxyhq/demo) to discuss how we can support you.",
+      "source_content_hash": "edf299a9f2f602f20dfbee54a04a2eee350f6d4340e606ac8df861aa84291456",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "BoxyHQ是开源平台，我们的SAML SSO产品SAML Jackson只是我们帮助企业实现企业级就绪的首个解决方案。如果您想探讨认证策略或部署SAML SSO，可以[在此](https://cal.com/deepak-boxyhq/demo)预约与CEO的会议，了解我们如何提供支持。"
+      }
+    },
+    {
+      "segment_id": "13d9cd70",
+      "source_content": "I hope you have found this high-level explanation of SAML and its use cases helpful. If you have any questions please don't hesitate to reach out to us on our live chat on our [website](https://boxyhq.com/)",
+      "source_content_hash": "40cf4f89a73105247f20e3a3d7177d48fcbfa8c626e88e9d4bfbe26f32b5c0e8",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "希望这篇关于SAML及其用例的高阶解读对您有所帮助。如有任何疑问，欢迎通过我们[官网](https://boxyhq.com/)的在线聊天随时联系。"
+      }
+    }
+  ],
+  "target_i18n_subpath": "docusaurus-plugin-content-blog/2022-06-30-understanding-saml-sso-the-basics-from-the-user-side.md",
+  "last_updated_timestamp": "2025-06-08T18:49:09.296729+00:00",
+  "schema_version": "1.0",
+  "translated_versions": {
+    "zh-CN": "83faf51fa1433e25b321154bb16978d718ff6084e69b02cb47e9798c7e9f1141"
+  }
+}

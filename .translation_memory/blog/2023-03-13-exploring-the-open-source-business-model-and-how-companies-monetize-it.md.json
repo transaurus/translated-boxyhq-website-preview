@@ -1,0 +1,292 @@
+{
+  "source_file_path_relative_to_docusaurus_root": "blog/2023-03-13-exploring-the-open-source-business-model-and-how-companies-monetize-it.md",
+  "source_file_content_hash": "0502e4e81331d7822c464dbb08ac28d0d02cb9d1e962617468c5aa4482126e50",
+  "segments": [
+    {
+      "segment_id": "58cfcc64",
+      "source_content": "---\nslug: exploring-the-open-source-business-model-and-how-companies-monetize-it\ntitle: Exploring the open-source business model and how companies monetize it\nauthor: Deepak Prabhakara\nauthor_title: Co-founder & CEO @BoxyHQ\nauthor_url: https://github.com/deepakprabhakara\nauthor_image_url: /images/authors/deepak.jpg\ntags_disabled: [open-source]\nimage: /img/blog/christine-roy-ir5MHI6rPg0-unsplash.jpg\n---",
+      "source_content_hash": "abfd41f2d2e06fc611f806375fc5c37f80e7ec5b569de3fa57487dd492717392",
+      "node_type": "yaml",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_58cfcc64"
+      }
+    },
+    {
+      "segment_id": "8d66f911",
+      "source_content": "With the rise of open-source solutions and solution providers, one of the biggest questions asked is, how do businesses monetize while giving away the source code for free?",
+      "source_content_hash": "a5b3560cf82951ab8ebb9d424de9785ffd895f5d0da53affd15b481c17b81f26",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "随着开源解决方案和供应商的兴起，人们最常提出的疑问是：企业在免费公开源代码的同时，如何实现盈利？"
+      }
+    },
+    {
+      "segment_id": "70153c6e",
+      "source_content": "## What is an open-source company?",
+      "source_content_hash": "3ecbf50c3278540e3a7cc7c9746a873b5df54ab48d31624d944aeffafea09220",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 什么是开源公司？"
+      }
+    },
+    {
+      "segment_id": "86b54d44",
+      "source_content": "An open-source company is an organization that develops software but makes the source code freely available to the public. This means that others can copy the code and engine, deploy it themselves, develop it, fix bugs and more. This allows the software not only to be widely accessible for free but also to evolve in a very collaborative way.",
+      "source_content_hash": "6b5d2da733c2b99a29a82676b7cee91d67da43c8ee1d8b848c87787d48ee231d",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "开源公司是指开发软件但将源代码向公众免费开放的组织。这意味着他人可以复制代码和引擎、自行部署、开发以及修复错误等。这种方式不仅使软件能够免费广泛传播，还能以高度协作的方式持续演进。"
+      }
+    },
+    {
+      "segment_id": "d350c018",
+      "source_content": "## If everything is free then how can it be monetized?",
+      "source_content_hash": "427d4f030a048368ac51cc8d2eac310b81ff5314f595f12727cf92793df8261b",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 如果一切免费，如何实现盈利？"
+      }
+    },
+    {
+      "segment_id": "1acb9a05",
+      "source_content": "We don't have to look very far to find examples of open-source companies that have become unicorns and continue to grow. Some great examples are Elastic ($608 million in revenue, 2021), HashiCorp ($320 million in revenue, 2021), and RedHat ($3.4 billion in revenue, 2021). All these companies operate an open-source business model but have huge revenues and valuations. This is what we are going to look at.",
+      "source_content_hash": "253d2551355561864f14dec532e72448d1268f5125e84ed62cbdcbb1a85eb846",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "我们无需远寻就能找到已成为独角兽并持续增长的开源公司案例。典型代表包括Elastic（2021年收入6.08亿美元）、HashiCorp（2021年收入3.2亿美元）和RedHat（2021年收入34亿美元）。这些公司均采用开源商业模式，却创造了巨额收入和估值。这正是我们要探讨的。"
+      }
+    },
+    {
+      "segment_id": "2df4f75f",
+      "source_content": "There are many different ways that open-source companies can monetize - ultimately this comes down to the goals of the business. We are going to explore a few of the options available but keep in mind that these are just some of the ways it can be done and open-source continues to develop and grow at a rapid pace.",
+      "source_content_hash": "2223a2eaf936f03a521ac73f7bdb3b91724fc087adcc01ab500873ecd8e92b05",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "开源公司有多种盈利途径——最终取决于企业的目标。我们将分析几种可行方案，但需注意这些仅是部分选项，开源领域仍在快速发展。"
+      }
+    },
+    {
+      "segment_id": "95b38f97",
+      "source_content": "### Donations",
+      "source_content_hash": "5314f3bf8316f3e63e261d69cd7ded3af311ea4e718ef1602f8ee706c24014f5",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 捐赠模式"
+      }
+    },
+    {
+      "segment_id": "ccc88b4c",
+      "source_content": "One of the most popular models is to offer the source code and documentation completely free and let its users donate at their discretion. This is normally done for smaller projects and donations can be solicited in various ways, such as a button on the website, a link in a newsletter, a Github donation, or one that I like - buymeacoffee.com. The latter allows you to embed an option into your website or interface and donate at the value of a coffee. Although donations are a great way to monetize some projects, this method is not feasible for bigger companies that have complex solutions and large overheads.",
+      "source_content_hash": "9b2a75a042d7292e1b10873b8a3c5f5627b8b74c6b99ac20aa3d1a42e3e61313",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "最流行的模式之一是完全免费提供源代码和文档，由用户自主决定是否捐赠。这种方式常见于小型项目，可通过网站按钮、新闻简报链接、Github捐赠或buymeacoffee.com等渠道募集。后者允许在网站或界面中嵌入\"买杯咖啡\"的小额捐赠选项。虽然捐赠是某些项目的理想盈利方式，但对于解决方案复杂、运营成本高的大型企业并不适用。"
+      }
+    },
+    {
+      "segment_id": "3c36424c",
+      "source_content": "### Support",
+      "source_content_hash": "3e57a62e66c9cf8978c247efe296eb9b3372ee226c7e308b8e1e5a242f3a0c7d",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 技术支持服务"
+      }
+    },
+    {
+      "segment_id": "26524352",
+      "source_content": "Paid Support or Premium Care, as it’s commonly termed, is a very common business model that has done very well for larger commercial companies. This model allows users to still access the code and deploy it for free but also enables an option for companies/users to pay for additional support. This monetized plan often includes perks such as help deploying the software, customization and ongoing support for general use. Just because the source code of a project is open, it doesn’t mean it's easy to deploy or manage. This is where companies such as Red Hat have been successful and use this particular model to great effect.",
+      "source_content_hash": "86e4122a90747d872ad2702522881dad076ed96a08edf1dc763641040e48cc62",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "付费支持（常称为高级保障）是大型商业公司广泛采用的成功模式。该模式允许用户免费获取代码并部署，同时为需要额外支持的企业/用户提供付费选项。这类商业化方案通常包含部署协助、定制化开发和使用支持等服务。正如红帽公司所证明的，源代码开放并不意味着部署和管理简单——这正是该模式的成功关键。"
+      }
+    },
+    {
+      "segment_id": "73ab96a3",
+      "source_content": "The benefits of this model are, as Red Hat has demonstrated, you can build a revenue-generating company that can be scaled effectively. The drawback is, some companies only make the open-source code available with a paid plan, which goes against the open-source ethos. To truly use this model effectively, companies should offer the source code for free regardless of an option for additional support.",
+      "source_content_hash": "6cafdad6e2451b4ddfb9d28c463dfe0009d2ccb75e513463d4b2d34ad4af6330",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "该模式的优点在于能建立可规模化的盈利企业，但需注意：若仅限付费计划提供源代码，则违背开源精神。要有效运用此模式，企业应无条件开放源代码，额外支持作为可选增值服务。"
+      }
+    },
+    {
+      "segment_id": "7499a4e7",
+      "source_content": "![OSS Monetization](/img/blog/christine-roy-ir5MHI6rPg0-unsplash.jpg)",
+      "source_content_hash": "2fd69e3ba6dcde219cc938188964b735db7cab1ad9f50658c53cbdeaa1c3c0c2",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![开源盈利模式](/img/blog/christine-roy-ir5MHI6rPg0-unsplash.jpg)"
+      }
+    },
+    {
+      "segment_id": "517051a7",
+      "source_content": "<div style={{fontSize: \"10px\", marginTop: \"-10px\", paddingBottom: \"20px\"}}>Photo by <a href=\"https://unsplash.com/fr/@agent_illustrateur?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText\">Christine Roy</a> on <a href=\"https://unsplash.com/images/things/money?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText\">Unsplash</a></div>",
+      "source_content_hash": "f040cd69d4d9dac1a4df4831e450c5d23837cf7eddc315c7accb96cac3ae986f",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "<div style={{fontSize: \"10px\", marginTop: \"-10px\", paddingBottom: \"20px\"}}>摄影：<a href=\"https://unsplash.com/fr/@agent_illustrateur?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText\">Christine Roy</a>，来源：<a href=\"https://unsplash.com/images/things/money?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText\">Unsplash</a></div>"
+      }
+    },
+    {
+      "segment_id": "80d9e13c",
+      "source_content": "### Licensing",
+      "source_content_hash": "75792beb07a6c8a8314edfee3629c9b23cae903d000afbdc3693a9d884782770",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 授权许可"
+      }
+    },
+    {
+      "segment_id": "33331f27",
+      "source_content": "Open-source companies can also license their open-source software, which applies rules to how their software can be used, edited, distributed and copied. Some open-source companies will allow individuals and smaller organizations to use their software for free while charging larger companies a fee to deploy it. Normally a license fee comes with additional benefits, such as support and training, etc. There are also two main types of licensing that open-source companies can utilize.",
+      "source_content_hash": "96c4d840cb4819c110b6782d1c61085446fafbf3e60e78cebaaed980113aecfa",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "开源公司还可通过软件授权许可盈利，即规定软件的使用、修改、分发和复制规则。常见做法是允许个人和小型组织免费使用，而向大型企业收取部署费用。授权费通常包含支持培训等附加权益。开源公司主要采用两类许可模式："
+      }
+    },
+    {
+      "segment_id": "50746522",
+      "source_content": "-Copyleft license\nThis is a type of license in which, if code is copied and modified it still retains the original license terms",
+      "source_content_hash": "2c41957b5bd1335574f2ef66e89ef94d5e3b2b741bd7ba31b40db72722ae8248",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "-著佐权许可（Copyleft）\n此类许可要求衍生代码必须保留原始许可条款"
+      }
+    },
+    {
+      "segment_id": "aa1e7006",
+      "source_content": "-Permissive license\nThis grants licenses based on different needs and is much more diverse.",
+      "source_content_hash": "56855a012c6252d78305a9edf8600fdf273442c1e5118a149f724351dcd55513",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "-宽松许可证\n这类许可证根据不同需求授予权限，其多样性更为显著。"
+      }
+    },
+    {
+      "segment_id": "a9d49f92",
+      "source_content": "Licensing and open-source licensing is a huge topic in itself and Snyk has done a fantastic job at explaining this. You can read more about it here.",
+      "source_content_hash": "aee94746a17a2b6de9691b10d3474be61f7a38bc0e6f46cc36c67272486dc9ba",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "许可证与开源许可本身就是一个庞大议题，Snyk对此进行了精彩阐述。您可在此深入了解相关内容。"
+      }
+    },
+    {
+      "segment_id": "6d28a77c",
+      "source_content": "### Cloud-hosted Services",
+      "source_content_hash": "29fd115488f7187d1f6d898b1348af8941f818399632eebaa3ae11abc0b32166",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 云托管服务"
+      }
+    },
+    {
+      "segment_id": "f7ef78f9",
+      "source_content": "Finally, the last model we will look at is hosting. While open-source organizations can still offer their code for free, some may offer a hosted version which is much easier to set up and maintain. This means customers can effectively use their product like any other SaaS and they typically charge on a subscription basis.",
+      "source_content_hash": "cc538b04f7e32d22da53f337d5c5aadecc5428414fa749c49dd6cdbcc8784607",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "最后我们将探讨托管模式。开源组织在免费提供代码的同时，也可提供更易部署维护的托管版本。客户可像使用常规SaaS产品那样按订阅付费使用。"
+      }
+    },
+    {
+      "segment_id": "b36c6338",
+      "source_content": "The hosted model is very popular as it now allows quick deployment but also reduces the level of maintenance and custom work developers need to carry out. The main limitation of offering a hosted model is, it will require the open-source company to offer web hosting and everything that goes along with it. This can require an enormous amount of maintenance and development.",
+      "source_content_hash": "f200de37a5bfdfbb96cf72b78a43585ac4fcea3a075c497ee1391c9a6ef864d4",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "托管模式广受欢迎，既能实现快速部署，又可降低开发人员的维护和定制工作量。但其主要局限在于，开源企业需自行提供网络托管及配套服务，这将带来巨大的运维和开发投入。"
+      }
+    },
+    {
+      "segment_id": "2c1b51df",
+      "source_content": "### The open-core model",
+      "source_content_hash": "56a731d18fadac194cba745a76d46fcd8a035866db60cf316ea1d704ee2356b3",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 开放核心模式"
+      }
+    },
+    {
+      "segment_id": "e536ea0d",
+      "source_content": "The open core model is when a company releases the core software for anyone to use but then also controls things such as the roadmap and what commits are accepted into it. By doing this, the company can also charge for extra features which customers may want. Some examples could be functionality features or even security/compliance modules. This model has been very popular with open-source companies and is widely seen as a very fair way to operate. It is also very important to make sure that the open-core has enough value that developers will rally around the product from the get-go. Companies that offer very little value from the free version and charge for additional features, do not see great traction in the open-source community.",
+      "source_content_hash": "37d58f70d379059624fd338d2eac399647b739b9b9a1d9c577e817a925bbfc7c",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "开放核心模式指企业免费开放核心软件，但掌控路线图及代码合并权限。通过这种方式，企业可对增值功能（如特色功能或安全合规模块）收费。该模式被普遍认为是最公平的运营方式之一，但关键在于确保免费版能提供足够价值以吸引开发者社区。若免费版价值匮乏而过度依赖收费功能，则难以获得开源社区认可。"
+      }
+    },
+    {
+      "segment_id": "ab5fc5b5",
+      "source_content": "## Controversial opinion",
+      "source_content_hash": "a61fb5b5517e9637b551887d013fd36a87733e6e262646dbbec064a4eef5694b",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 争议观点"
+      }
+    },
+    {
+      "segment_id": "6ea4c715",
+      "source_content": "I personally believe that OSS is not a business model but a development model. We are debating this internally, so we would love to hear your feedback and opinions on this subject.",
+      "source_content_hash": "d80f7d5a44abc2b9aac63ec325debc77d434a41dc1c1dd9d61db9850db5a7705",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "我个人认为开源软件是开发模式而非商业模式。我们正在内部讨论此议题，非常期待听到您的见解。"
+      }
+    },
+    {
+      "segment_id": "c315c636",
+      "source_content": "## Summary",
+      "source_content_hash": "30ac03ff33731529441be8fbe52a3bd0d4c5ec830e806d54692168ebb7f98ada",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 总结"
+      }
+    },
+    {
+      "segment_id": "531437ca",
+      "source_content": "Although open-source code is widely free and available to use, it has become a popular choice for companies who also want to commercialize. The benefits of open-source are vast and with the variety of business models we discussed you can understand the various options to create a successful, revenue-generating business.",
+      "source_content_hash": "b5e173f9639895489b59a35f52eca13fcc9d81557fded0129572e18d99f4bb64",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "尽管开源代码可自由使用，但已成为企业商业化的重要选择。开源优势显著，结合我们探讨的多种商业模式，您可灵活选择构建成功的盈利性业务。"
+      }
+    }
+  ],
+  "target_i18n_subpath": "docusaurus-plugin-content-blog/2023-03-13-exploring-the-open-source-business-model-and-how-companies-monetize-it.md",
+  "last_updated_timestamp": "2025-06-08T18:49:09.303603+00:00",
+  "schema_version": "1.0",
+  "translated_versions": {
+    "zh-CN": "0502e4e81331d7822c464dbb08ac28d0d02cb9d1e962617468c5aa4482126e50"
+  }
+}

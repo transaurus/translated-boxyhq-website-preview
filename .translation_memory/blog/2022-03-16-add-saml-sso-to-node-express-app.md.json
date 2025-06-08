@@ -1,0 +1,972 @@
+{
+  "source_file_path_relative_to_docusaurus_root": "blog/2022-03-16-add-saml-sso-to-node-express-app.md",
+  "source_file_content_hash": "9bd259a66e8ae1a4a362308f5565014d2704414529cbeced9f04c98fdf485cb7",
+  "segments": [
+    {
+      "segment_id": "58cfcc64",
+      "source_content": "---\nslug: add-saml-sso-to-node-express-app\ntitle: How to add SAML Single Sign On to an Express app\nauthor: Kiran K\nauthor_title: Senior Developer @BoxyHQ\nauthor_url: https://twitter.com/tokirankrishnan\nauthor_image_url: /images/authors/kiran.jpg\ntags_disabled:\n  [enterprise-readiness, engineering, saml, saml-jackson, integrations, sso]\n---",
+      "source_content_hash": "ed02b5fe281747dc4a33749a174e2fbb9471744b8d34c29ec02c1287f4ec7c2b",
+      "node_type": "yaml",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_58cfcc64"
+      }
+    },
+    {
+      "segment_id": "8d66f911",
+      "source_content": "In this article, you'll learn how add SAML SSO login to an Express.js app. You'll use [SAML Jackson](https://boxyhq.com/docs/jackson/overview) with [Auth0](https://auth0.com/single-sign-on) to authenticate users and protect routes.",
+      "source_content_hash": "49499f6332e38b8544f6c4fa5e4203c71924e9d4a239902a2b445ca0060ca438",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "本文将指导您如何为Express.js应用添加SAML单点登录功能。您将使用[SAML Jackson](https://boxyhq.com/docs/jackson/overview)与[Auth0](https://auth0.com/single-sign-on)实现用户认证和路由保护。"
+      }
+    },
+    {
+      "segment_id": "ad8fd492",
+      "source_content": "You can also access the full code at the [GitHub repository](https://github.com/boxyhq/express-jackson-auth0-demo).",
+      "source_content_hash": "d27a43f6b7cff2fcdd1e88f816100ebd4796d70c2cd6808ed91617cd72ed95a2",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "完整代码可访问[GitHub仓库](https://github.com/boxyhq/express-jackson-auth0-demo)获取。"
+      }
+    },
+    {
+      "segment_id": "86b54d44",
+      "source_content": "Let’s get started!",
+      "source_content_hash": "7e097c3e82c5cf1e4a68daa8a23b2c23b56316d1c4086686f17c7e90c23a151e",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "让我们开始吧！"
+      }
+    },
+    {
+      "segment_id": "d350c018",
+      "source_content": "## Prerequisites",
+      "source_content_hash": "bbd3d4949a6f237efd8d4ff5c7c5f30d968e7a989ad12f3d7dcef69c98053912",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 先决条件"
+      }
+    },
+    {
+      "segment_id": "1acb9a05",
+      "source_content": "To follow along with this article, you’ll need the following:",
+      "source_content_hash": "8c6b9445e6d66123dd966d2779fa00803bf33ef7bfd576c974e3e4f82e84e9ea",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "跟随本文操作需要满足以下条件："
+      }
+    },
+    {
+      "segment_id": "da23c906",
+      "source_content": "- Node.js installed on your computer\n- Basic knowledge about Node.js and Express.js",
+      "source_content_hash": "1115ccbb8e14a014cc299c5dd047824ae558e01295aec15f1309078abeb3cb10",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- 已安装Node.js运行环境\n- 具备Node.js和Express.js基础知识"
+      }
+    },
+    {
+      "segment_id": "ed7dde9c",
+      "source_content": "## Setting up the database",
+      "source_content_hash": "c5fc65e9e43ab78d9b5bfaab0cb9cfc39e8c0e670947403c1d26094bf2355f33",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 数据库配置"
+      }
+    },
+    {
+      "segment_id": "a76548f8",
+      "source_content": "For our article, we’ll create a free [Postgres database on Heroku](https://devcenter.heroku.com/articles/heroku-postgresql) instead of setting up a local Postgres server.",
+      "source_content_hash": "4bf8e0182edb3544bc87550f82203856534a72b12528fd974ed10e82fb0061e4",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "本文将使用免费的[Heroku Postgres数据库](https://devcenter.heroku.com/articles/heroku-postgresql)替代本地Postgres服务。"
+      }
+    },
+    {
+      "segment_id": "77bf3ec9",
+      "source_content": "- Go to [Heroku signup page](https://signup.heroku.com/login), then create an account.\n- Go to [Apps](https://dashboard.heroku.com/apps) and click **Create new app**.\n- Give your app a name, and click the **Create app** button.\n- Go to the **Resources** tab.\n- Choose the **Heroku Postgres** from the Add-ons search box, and click **Submit Order Form**.\n- Click the **Heroku Postgres** and select **Settings** tab.\n- Click the **View Credentials** button and copy **URI**.",
+      "source_content_hash": "d0416561e432ad9014fe34a2bd411d9ad4944c8c020a8ad8f4e0c487c9cc3bbf",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- 访问[Heroku注册页面](https://signup.heroku.com/login)创建账户\n- 进入[应用控制台](https://dashboard.heroku.com/apps)点击**创建新应用**\n- 输入应用名称后点击**创建应用**按钮\n- 切换到**资源**标签页\n- 在插件搜索框选择**Heroku Postgres**并提交订单\n- 点击**Heroku Postgres**进入**设置**标签页\n- 点击**查看凭证**按钮复制**URI**连接字符串"
+      }
+    },
+    {
+      "segment_id": "97ae4a01",
+      "source_content": "Now you have created a free PostgreSQL database and copied the database connection URI. We'll need the connection URI later.",
+      "source_content_hash": "6d0c2ebb38c5302e9cb255e2f3d4676a58533243c574c3600853fb1979c4d361",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "至此您已创建免费PostgreSQL数据库并获取连接URI，后续步骤将使用该连接字符串。"
+      }
+    },
+    {
+      "segment_id": "62a6890b",
+      "source_content": "## Configure the Identity Provider",
+      "source_content_hash": "d35199996b7ebd8e8b2cf5cdaa5617dece4c38c6dbfa4f94331812b85168fe8c",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 身份提供商配置"
+      }
+    },
+    {
+      "segment_id": "3cfe6286",
+      "source_content": "We'll use the Auth0 as our identity provider. An Identity Provider (IdP) is a service that manage user accounts for your app.",
+      "source_content_hash": "c4fc0322bd4789e9e6a82bd3a33f9dfd39e41a098f18d238b0286d80f9a6f092",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "我们将使用Auth0作为身份提供商(IdP)，该服务负责管理应用的用户账户体系。"
+      }
+    },
+    {
+      "segment_id": "bdfae007",
+      "source_content": "- First, go to the [Auth0 signup page](https://auth0.com/signup), then create an account.\n- Go to [Dashboard > Applications > Applications](https://manage.auth0.com/dashboard/).\n- Click the **Create Application** button.\n- Give your new application a name.\n- Choose **Regular Web Applications** as an application type and the click **Create**.\n- Go to the app you created, then click the **Addons** tab.\n- In the **SAML2 Web App** box, click the slider to enable the Addon.\n- Go to the **Usage** tab and download the **Identity Provider Metadata**.\n- Go to the **Settings** tab and make below changes.\n- Add `http://localhost:3000/sso/acs` as your **Application Callback URL** that receives the SAML response.\n- Paste the following JSON for **Settings**, then click **Enable** button.",
+      "source_content_hash": "a9663d5b37a94fc899277c789c3c1f145203fdf46bd1aa578afc997c5ef625b0",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- 首先访问[Auth0注册页面](https://auth0.com/signup)创建账户\n- 进入[仪表盘 > 应用 > 应用程序](https://manage.auth0.com/dashboard/)\n- 点击**创建应用程序**按钮\n- 输入新应用名称\n- 选择**常规Web应用**类型后点击**创建**\n- 进入创建的应用，点击**插件**标签页\n- 在**SAML2 Web应用**模块启用插件开关\n- 切换到**使用**标签页下载**身份提供商元数据**\n- 进入**设置**标签页进行以下配置：\n- 添加`http://localhost:3000/sso/acs`作为接收SAML响应的**应用回调URL**\n- 粘贴以下JSON配置后点击**启用**按钮"
+      }
+    },
+    {
+      "segment_id": "f275f5fd",
+      "source_content": "```json\n{\n  \"audience\": \"https://saml.boxyhq.com\",\n  \"mappings\": {\n    \"id\": \"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier\",\n    \"email\": \"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress\",\n    \"firstName\": \"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/givenname\",\n    \"lastName\": \"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/surname\"\n  }\n}\n```",
+      "source_content_hash": "0cc3cd1005ca6f1e4c3c2d8064adeacf61a9897b6142bb0c1ab8b3ac344b158d",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_f275f5fd"
+      }
+    },
+    {
+      "segment_id": "0bb95128",
+      "source_content": "`audience` is just an identifier to validate the SAML audience. [More info](https://boxyhq.com/docs/jackson/deploy/env-variables#saml_audience).",
+      "source_content_hash": "c9ce29a26967876f6a19a481febf7127d2038083d0c157c5e176ccfeb3256871",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "`audience`参数用于验证SAML受众标识符。[了解更多](https://boxyhq.com/docs/jackson/deploy/env-variables#saml_audience)"
+      }
+    },
+    {
+      "segment_id": "657c2b20",
+      "source_content": "Auth0 provides database connections to authenticate users with an email/username and password. These credentials are securely stored in the Auth0 user store.",
+      "source_content_hash": "a8c2154f72be47e3359c1462c2f43f982bac6d0da660c5fbff658df14e312df7",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "Auth0提供数据库连接方式，支持通过邮箱/用户名和密码认证用户，这些凭证会安全存储在Auth0用户库中。"
+      }
+    },
+    {
+      "segment_id": "e7772088",
+      "source_content": "Let's create one so that our users can register or login.",
+      "source_content_hash": "acca3bf93f1f1b7c5ddcd0f15d8a64953a0926a25692e147efafeddcfa1b0f90",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "现在让我们创建用户库以便用户注册登录："
+      }
+    },
+    {
+      "segment_id": "69c1f590",
+      "source_content": "- Go to [Auth0 Dashboard > Authentication > Database](https://manage.auth0.com/dashboard/).\n- Click **Create DB Connection** - [Auth0 Create DB Document](https://auth0.com/docs/authenticate/database-connections/custom-db/create-db-connection)\n- Give your connection a name, then click **Create**.\n- Go to the **Applications** tab and enable the application you just created.",
+      "source_content_hash": "aaadab172fe57e0b2cc876d7ada76a68633c8bf5f2bd8df6f286fe6424a62e8f",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- 进入[Auth0仪表盘 > 认证 > 数据库](https://manage.auth0.com/dashboard/)\n- 点击**创建数据库连接** - [Auth0文档](https://auth0.com/docs/authenticate/database-connections/custom-db/create-db-connection)\n- 输入连接名称后点击**创建**\n- 切换到**应用**标签页启用刚创建的应用"
+      }
+    },
+    {
+      "segment_id": "d0dd855b",
+      "source_content": "Now we've everything ready, let's move to the next step.",
+      "source_content_hash": "caa2e70ca2811308853e7eadf9a8cc8bff42b4cb9a96372e54fc976147504f30",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "完成以上准备后，我们进入下一步操作。"
+      }
+    },
+    {
+      "segment_id": "2fd0be2a",
+      "source_content": "## Getting started",
+      "source_content_hash": "79eb659e005ff4845161992705da3e668e6aef55a4e616c59a71c30337ebb69b",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 快速开始"
+      }
+    },
+    {
+      "segment_id": "6270d577",
+      "source_content": "Launch a terminal and clone the GitHub repo:",
+      "source_content_hash": "5095a838c05d07f4b1ce6a6bf6ce74512066c2fc657209bc9670af21190b44d3",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "打开终端克隆GitHub仓库："
+      }
+    },
+    {
+      "segment_id": "d8159289",
+      "source_content": "```bash\ngit clone https://github.com/devkiran/express-saml.git\n```",
+      "source_content_hash": "9b8878258e1a52f9ba5b331d4b26f6b7d262f4da96af4cb39fe035d3e64491c0",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_d8159289"
+      }
+    },
+    {
+      "segment_id": "26f7c825",
+      "source_content": "```bash\ncd express-saml\n```",
+      "source_content_hash": "083c62d169bcd26329afd0bc536aa9e5475bb74dc9efb12d5a3c8990d9c1ed1d",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_26f7c825"
+      }
+    },
+    {
+      "segment_id": "86348f98",
+      "source_content": "Now, install the dependencies:",
+      "source_content_hash": "c08a94f327f6e4a325efab666b402be1606ea865d2acbd3ff4038a82caca7cfb",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "安装项目依赖："
+      }
+    },
+    {
+      "segment_id": "daa16011",
+      "source_content": "```bash\nnpm install\n```",
+      "source_content_hash": "eb5a50fc58daf7363e311766e9dd31ad61d85de38cdea9e5921158421a5cb4bb",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_daa16011"
+      }
+    },
+    {
+      "segment_id": "eb51d107",
+      "source_content": "Add the environment variables:",
+      "source_content_hash": "9556517d3b763eba00687ac068d4fb78a38cb88c9b5e487b61ac7f017a94b82c",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "配置环境变量："
+      }
+    },
+    {
+      "segment_id": "dc73c0d2",
+      "source_content": "```bash\ncp .env.example .env\n```",
+      "source_content_hash": "20fded08d3cbbca59ec2590725f1cc1dae7e53761fbb3f88084ded281c45cc43",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_dc73c0d2"
+      }
+    },
+    {
+      "segment_id": "a2c0166e",
+      "source_content": "Update the `DATABASE_URL` variable with your Heroku Postgres database connection URI.",
+      "source_content_hash": "7e057ec2c73a60a4557ebfc0108ef9da089dac62e5562254d4477131c63ed902",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "将 `DATABASE_URL` 变量更新为您的 Heroku Postgres 数据库连接 URI。"
+      }
+    },
+    {
+      "segment_id": "c1eaf30b",
+      "source_content": "Append `?sslmode=no-verify` to your database connection URI otherwise Heroku won't allow you to link to the database. This is a Heroku specific configuration.",
+      "source_content_hash": "97de8178e44208549b13269c88e7449d104b785d4e93d9133d336e65920041f5",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "在数据库连接 URI 后追加 `?sslmode=no-verify`，否则 Heroku 不允许连接到数据库。这是 Heroku 的特定配置。"
+      }
+    },
+    {
+      "segment_id": "f0984c2a",
+      "source_content": "For example `postgres://hcydrtasctfyth:fe001b264322d6cf794@ec2-1-2-3-4.compute-1.amazonaws.com:5432/demo?sslmode=no-verify`",
+      "source_content_hash": "9c5ea63b3d095a90b10777843ea085b0ef8c00ad508b137a0ff7616ba3fa3136",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "例如 `postgres://hcydrtasctfyth:fe001b264322d6cf794@ec2-1-2-3-4.compute-1.amazonaws.com:5432/demo?sslmode=no-verify`"
+      }
+    },
+    {
+      "segment_id": "56bc971f",
+      "source_content": "## About the Express app",
+      "source_content_hash": "1ec7dc4696227112d1bcf3aca2a198eed85f36fe5d3a0e2a3e905e3e7a4747d7",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 关于 Express 应用"
+      }
+    },
+    {
+      "segment_id": "0801d969",
+      "source_content": "This is a simple express.js app created using `express-generator`. You can use any express.js app if you want.",
+      "source_content_hash": "4a12247c8621636dacb2660c68f8a9641079d59e6060fb42e199fe85c608fa6e",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "这是一个使用 `express-generator` 创建的简单 express.js 应用。您也可以使用任何其他 express.js 应用。"
+      }
+    },
+    {
+      "segment_id": "3c19e221",
+      "source_content": "Our express.js app has only 2 routes.",
+      "source_content_hash": "7f77d3a6e8c38ab3f3d76c0f2b42687d3abfdaceb57ecabf20dcc1122b5201ec",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "我们的 express.js 应用仅包含 2 个路由。"
+      }
+    },
+    {
+      "segment_id": "8d56fc0d",
+      "source_content": "- `GET /` render a home page\n- `GET /dashboard` render a dashboard",
+      "source_content_hash": "f63aa6a658483df523bf144778489f32ae426fc21956924aae12efcfcb6afd05",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- `GET /` 渲染首页\n- `GET /dashboard` 渲染仪表盘"
+      }
+    },
+    {
+      "segment_id": "1958bc43",
+      "source_content": "So, what's the plan? We'll add SAML SSO login (via Auth0) to our express.js app so that only authenticated users can access the `/dashboard`.",
+      "source_content_hash": "d0e156cc5742f0c15c7861b867c008f4a679b2a094b45ea5c4317be3d6a61ed6",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "那么计划是什么？我们将为 express.js 应用添加 SAML SSO 登录（通过 Auth0），以便只有经过身份验证的用户才能访问 `/dashboard`。"
+      }
+    },
+    {
+      "segment_id": "c7fa1e8d",
+      "source_content": "## Install SAML Jackson",
+      "source_content_hash": "e9a534a0353dbd7053bd7e0d9da41456c66f61a0a8b2cdf35ce77426e095f892",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 安装 SAML Jackson"
+      }
+    },
+    {
+      "segment_id": "a6c928a1",
+      "source_content": "Run the following command to install the latest version of the SAML Jackson.",
+      "source_content_hash": "f42ae4ae629f8d4a6b87c6b830d047b4e79775d8bd9b21a82c1ea63261c7a0c3",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "运行以下命令安装最新版本的 SAML Jackson。"
+      }
+    },
+    {
+      "segment_id": "3917a88d",
+      "source_content": "```bash\nnpm i --save @boxyhq/saml-jackson\n```",
+      "source_content_hash": "812541629967c649211aa86e10cd476b3ac843eaf54089dade89546d0e3b3b9a",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_3917a88d"
+      }
+    },
+    {
+      "segment_id": "8fcdd6d4",
+      "source_content": "Once you installed Jackson, let's initialize it.",
+      "source_content_hash": "3c4e774356803b57acae2bac7b561bf07d814652281877afe27efbba2fe7eccd",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "安装 Jackson 后，让我们初始化它。"
+      }
+    },
+    {
+      "segment_id": "53aa2b95",
+      "source_content": "Add the following code to the `routes/index.js`.",
+      "source_content_hash": "b2b8b9130f523e31d093a206747523bc609cc393c077bfbdca45d2c7a3bc374a",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "将以下代码添加到 `routes/index.js`。"
+      }
+    },
+    {
+      "segment_id": "18fb666f",
+      "source_content": "```javascript\n// routes/index.js\n\n...\n\nlet apiController;\nlet oauthController;\n\nconst jacksonOptions = {\n  externalUrl: process.env.APP_URL,\n  samlAudience: process.env.SAML_AUDIENCE,\n  samlPath: '/sso/acs',\n  db: {\n    engine: 'sql',\n    type: 'postgres',\n    url: process.env.DATABASE_URL,\n  },\n};\n\n(async function init() {\n  const jackson = await require('@boxyhq/saml-jackson').controllers(jacksonOptions);\n\n  apiController = jackson.apiController;\n  oauthController = jackson.oauthController;\n})();\n```",
+      "source_content_hash": "cb6781985e4f4ecb86acdc2f9c35198a4e35cd100d26cf7c4d6c210e913efe02",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_18fb666f"
+      }
+    },
+    {
+      "segment_id": "531ec0bb",
+      "source_content": "## Setting up Express.js routes",
+      "source_content_hash": "eb9fbe179f20baf203b5e3468322035b16d7b2632dfe07dffe3e98825c41a27a",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 设置 Express.js 路由"
+      }
+    },
+    {
+      "segment_id": "ee213c98",
+      "source_content": "### Add SAML Metadata",
+      "source_content_hash": "c3730d46ee2f414793d45b9025afe3592656567f97cb0700177b01e0487bbab1",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 添加 SAML 元数据"
+      }
+    },
+    {
+      "segment_id": "008183b0",
+      "source_content": "The first route you'll create is the `GET /config` one. This route will display a form with following fields:",
+      "source_content_hash": "735dd9d4f2e7ca87dcef936118abd608edb9abc07932196ea8151abafaee5004",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "您将创建的第一个路由是 `GET /config`。此路由将显示一个包含以下字段的表单："
+      }
+    },
+    {
+      "segment_id": "e258929d",
+      "source_content": "- `Metadata`: Enter the XML Metadata content you've downloaded from IdP.\n- `Tenant`: Jackson supports a multi-tenant architecture, this is a unique identifier you set from your side that relates back to your customer's tenant. This is normally an email, domain, an account id, or user-id.\n- `Product`: Jackson support multiple products, this is a unique identifier you set from your side that relates back to the product your customer is using.",
+      "source_content_hash": "1eab3189288479fe5e635dce66101737ba46ac73055125fe3e95555078a85517",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- `Metadata`：输入您从 IdP 下载的 XML 元数据内容。\n- `Tenant`：Jackson 支持多租户架构，这是您设置的唯一标识符，与您的客户租户相关联。通常是电子邮件、域名、账户 ID 或用户 ID。\n- `Product`：Jackson 支持多产品，这是您设置的唯一标识符，与您的客户正在使用的产品相关联。"
+      }
+    },
+    {
+      "segment_id": "dddc2d3c",
+      "source_content": "```javascript\n// routes/index.js\n\nrouter.get('/config', async (req, res) => {\n  res.render('config');\n});\n```",
+      "source_content_hash": "0121621252690019b1b48de23a75ff81af0b6eaeff026629cde1541ad28df801",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_dddc2d3c"
+      }
+    },
+    {
+      "segment_id": "dc72fd20",
+      "source_content": "Add a view to display the form.",
+      "source_content_hash": "244d96ea04124d9e9fb8b22175d4f42284a66852f88074fbd3dc2c8466b01efe",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "添加一个视图来显示表单。"
+      }
+    },
+    {
+      "segment_id": "82a37a1b",
+      "source_content": "```html\n<!-- views/config.ejs -->\n\n<!DOCTYPE html>\n<html>\n  <head>\n    <title>SAML Config</title>\n    <link\n      rel=\"stylesheet\"\n      href=\"https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css\"\n      crossorigin=\"anonymous\"\n    />\n    <link rel=\"stylesheet\" href=\"/stylesheets/style.css\" />\n  </head>\n  <body>\n    <h1>SAML Config</h1>\n    <p>Add SAML Metadata.</p>\n    <form action=\"/config\" method=\"POST\">\n      <div class=\"form-group\">\n        <label for=\"tenant\">Tenant</label>\n        <input\n          type=\"text\"\n          name=\"tenant\"\n          id=\"tenant\"\n          class=\"form-control col-md-6\"\n          required=\"required\"\n        />\n      </div>\n      <div class=\"form-group\">\n        <label for=\"product\">Product</label>\n        <input\n          type=\"text\"\n          name=\"product\"\n          id=\"product\"\n          class=\"form-control col-md-6\"\n          required=\"required\"\n        />\n      </div>\n      <div class=\"form-group\">\n        <label for=\"rawMetadata\">Metadata (Raw XML)</label>\n        <textarea\n          name=\"rawMetadata\"\n          id=\"rawMetadata\"\n          cols=\"30\"\n          rows=\"10\"\n          class=\"form-control col-md-6\"\n          required=\"required\"\n        ></textarea>\n      </div>\n      <button type=\"submit\" class=\"btn btn-primary\">Submit</button>\n    </form>\n  </body>\n</html>\n```",
+      "source_content_hash": "f83bd85efa9fde494b114e6264c2f91bffb6f788f1505df88cb49fa4e7bd3a5a",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_82a37a1b"
+      }
+    },
+    {
+      "segment_id": "d73903fc",
+      "source_content": "Now let's add another route `POST /config` that will store the form data by calling the SAML Jackson config API.",
+      "source_content_hash": "6ca28d8450a087be8a378612766e54eb9d4da0fc15fd50f3984e6a6e38dd8ecf",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "现在让我们添加另一个路由 `POST /config`，它将通过调用 SAML Jackson 配置 API 来存储表单数据。"
+      }
+    },
+    {
+      "segment_id": "130a77cc",
+      "source_content": "This step is the equivalent of setting an OAuth 2.0 app and generating a client ID and client secret that will be used in the login flow.",
+      "source_content_hash": "32b18d07052ffccde8fd3beaa1091298db4264690449145d90d45e2be60f9714",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "此步骤相当于设置 OAuth 2.0 应用并生成将在登录流程中使用的客户端 ID 和客户端密钥。"
+      }
+    },
+    {
+      "segment_id": "0883e35a",
+      "source_content": "```javascript\n// routes/index.js\n\nrouter.post('/config', async (req, res, next) => {\n  const { rawMetadata, tenant, product } = req.body;\n\n  const defaultRedirectUrl = 'http://localhost:3000/sso/callback';\n  const redirectUrl = '[\"http://localhost:3000/*\"]';\n\n  try {\n    await apiController.config({\n      rawMetadata,\n      tenant,\n      product,\n      defaultRedirectUrl,\n      redirectUrl,\n    });\n\n    res.redirect('/config');\n  } catch (err) {\n    next(err);\n  }\n});\n```",
+      "source_content_hash": "fbb599f5815003696d6a7bdb3e60e7ce77cf3df9150e8e6043dd2428d761a6a0",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_0883e35a"
+      }
+    },
+    {
+      "segment_id": "93f7c834",
+      "source_content": "There are a few important things to note in the code above.",
+      "source_content_hash": "4c3e8bbbfc2d53cad0c0128b0152441fa385c876c5bda326e7d00116f14306f4",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "上面的代码中有几点需要注意。"
+      }
+    },
+    {
+      "segment_id": "12bc7444",
+      "source_content": "`defaultRedirectUrl` holds the redirect URL to use in the IdP login flow. Jackson will call this URL after completing an IdP login flow.",
+      "source_content_hash": "9f655205e3d8f47a8ab32dd3e85da0a1669ca081bead2ae773542119d0f3779e",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "`defaultRedirectUrl` 保存了在 IdP 登录流程中使用的重定向 URL。Jackson 将在完成 IdP 登录流程后调用此 URL。"
+      }
+    },
+    {
+      "segment_id": "f50056c0",
+      "source_content": "`redirectUrl` holds an array containing a list of allowed redirect URLs. Jackson will disallow any redirects that are not on this list.",
+      "source_content_hash": "b60438fc5d4fa10055648c0850e6be0eddac4a51e495b87af8075873f1428780",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "`redirectUrl` 保存了一个包含允许重定向 URL 列表的数组。Jackson 将禁止任何不在此列表中的重定向。"
+      }
+    },
+    {
+      "segment_id": "30aa9816",
+      "source_content": "Next, let's start the express app. The app starts a server and listens on port 3000 (by default) for connections.",
+      "source_content_hash": "700619a4154bd6dbf11325dfe56155af366d86ca0afb7c9615173f2acf28ff69",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "接下来，让我们启动 express 应用。应用默认启动一个服务器并监听端口 3000 的连接。"
+      }
+    },
+    {
+      "segment_id": "d76894b4",
+      "source_content": "```bash\nnpm start\n```",
+      "source_content_hash": "80f5b93bb17097eba1b9e9d9eef3404299fa35b2e96264510259d43099694f1f",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_d76894b4"
+      }
+    },
+    {
+      "segment_id": "590d1cd9",
+      "source_content": "Now, let's visit [http://localhost:3000/config](http://localhost:3000/config), you should see the page with a form.",
+      "source_content_hash": "022688a800e7ee7f7cc333d1ce2809f23aabcdb2dfea9b15fa6a20d6fcba1a38",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "现在，访问 [http://localhost:3000/config](http://localhost:3000/config)，您应该会看到一个表单页面。"
+      }
+    },
+    {
+      "segment_id": "b632973a",
+      "source_content": "![SAML Config](/img/blog/add-saml-sso-to-node-express-app/add-saml-config-form.png)",
+      "source_content_hash": "acc09e6504dbad09bd9c45309b076ea32e8550b3e977a78151d90d8c0979de34",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![SAML 配置](/img/blog/add-saml-sso-to-node-express-app/add-saml-config-form.png)"
+      }
+    },
+    {
+      "segment_id": "2f8456b2",
+      "source_content": "Here you can add the metadata you've downloaded from Auth0. Fill out the form with a Tenant, Product, and paste the metadata XML content as it is.",
+      "source_content_hash": "8c04053338d878e7c6b6b777ce4f790ec43f5ab0b46b708d60d03241ff06fd5f",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "在这里，您可以添加从 Auth0 下载的元数据。填写表单中的 Tenant、Product，并原样粘贴元数据 XML 内容。"
+      }
+    },
+    {
+      "segment_id": "1d39fdbf",
+      "source_content": "I'll use 'boxyhq.com' for tenant and 'crm' for product.",
+      "source_content_hash": "11db2aa0127dc3c3b6651e5991844be9936dde049d5fb165e4f52de944efa4e2",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "我将使用 'boxyhq.com' 作为租户，'crm' 作为产品。"
+      }
+    },
+    {
+      "segment_id": "bed77f05",
+      "source_content": "The response returns a JSON with `client_id` and `client_secret` that can be stored against your tenant and product for a more secure OAuth 2.0 flow.",
+      "source_content_hash": "52561d19a6d051a16dab27952dd242d67dae85e634b776c10f006d6d366395b3",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "响应返回一个包含 `client_id` 和 `client_secret` 的 JSON，可以针对您的租户和产品存储，以实现更安全的 OAuth 2.0 流程。"
+      }
+    },
+    {
+      "segment_id": "46e586a3",
+      "source_content": "If you do not want to store the `client_id` and `client_secret` you can alternatively use `client_id=tenant=<tenantID>&product=<productID>` and any arbitrary value for `client_secret` when setting up the OAuth 2.0 flow.",
+      "source_content_hash": "3c5df9add15d907938e32e15f3335bbcfc3dbbc109e21146af05d4f7994abaa1",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "若您不希望存储 `client_id` 和 `client_secret`，可在配置OAuth 2.0流程时使用 `client_id=tenant=<tenantID>&product=<productID>` 格式，并为 `client_secret` 填写任意值作为替代方案。"
+      }
+    },
+    {
+      "segment_id": "bea5d450",
+      "source_content": "### Redirect the users to IdP",
+      "source_content_hash": "4e945d07580fcd5d42f07944a2314d793d4362499a15c0e5415d9dd673c940a8",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 将用户重定向至身份提供商(IdP)"
+      }
+    },
+    {
+      "segment_id": "aa705b4d",
+      "source_content": "Now you have added the SAML metadata, you'll need a route to redirect the users to IdP to start the SAML authentication.",
+      "source_content_hash": "35690c456a5889afc6974b6b24e3e413793054764bd7ffc514ecaf506022fec5",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "添加SAML元数据后，需创建路由将用户重定向至IdP以启动SAML认证流程。"
+      }
+    },
+    {
+      "segment_id": "f0db2ff1",
+      "source_content": "Let's add a new route `GET /sso/authorize`.",
+      "source_content_hash": "0c6c9f53d928b95020a69315af5dc9b8b9121cef0d59c42e554aa2346e83399d",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "现在添加新路由 `GET /sso/authorize`。"
+      }
+    },
+    {
+      "segment_id": "4e994fc3",
+      "source_content": "Don't forget to change the values of the tenant and product in the code.",
+      "source_content_hash": "a29b63e1d955d2183352ee852d2faf881a62236f64f869ff3fea5ced8a655d09",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "请务必修改代码中的租户(tenant)和产品(product)值。"
+      }
+    },
+    {
+      "segment_id": "45bc4861",
+      "source_content": "```javascript\n// routes/index.js\n\nrouter.get('/sso/authorize', async (req, res, next) => {\n  try {\n    const tenant = 'boxyhq.com';\n    const product = 'crm';\n\n    const body = {\n      response_type: 'code',\n      client_id: `tenant=${tenant}&product=${product}`,\n      redirect_uri: 'http://localhost:3000/sso/callback',\n      state: 'a-random-state-value',\n    };\n\n    const { redirect_url } = await oauthController.authorize(body);\n\n    res.redirect(redirect_url);\n  } catch (err) {\n    next(err);\n  }\n});\n```",
+      "source_content_hash": "d6870d21c52dbd1069bf112ad96b18077512b65c1503dce4f00c4204f63625ee",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {}
+    },
+    {
+      "segment_id": "c9f6a516",
+      "source_content": "`oauthController.authorize()` will returns a `redirect_url`. You should redirect the users to this `redirect_url` to start the IdP authentication flow.",
+      "source_content_hash": "aa3fb3f6ba440aec7b9653707d1c3cc15feb689ca65d19e5c625269456716ea5",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "`oauthController.authorize()` 将返回一个 `redirect_url`。您应将用户重定向至此URL以启动IdP认证流程。"
+      }
+    },
+    {
+      "segment_id": "363f5ed5",
+      "source_content": "### Handle the SAML Response from IdP",
+      "source_content_hash": "6bda85b8dfb10cc84ffb434ead082140bcfb3e78802c6c6b17de28294b99c65f",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 处理来自IdP的SAML响应"
+      }
+    },
+    {
+      "segment_id": "ebe673d6",
+      "source_content": "This route becomes the Assertion Consumer Service (ACS) URL of your app. The ACS URL tells your IdP where to POST its SAML Response after authenticating a user.",
+      "source_content_hash": "7697e45a953e681d4f8d10753d4452113c5de41397a01a9f8be47fd7aeefc0e4",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "此路由将成为应用的断言消费者服务(ACS) URL。ACS URL用于告知IdP在用户认证后向何处POST其SAML响应。"
+      }
+    },
+    {
+      "segment_id": "7e031d10",
+      "source_content": "The SAML Response contains 2 fields: `SAMLResponse` and `RelayState`.",
+      "source_content_hash": "0035185e35aa0f9b84264d8e356a1c2c0b496179a46c60388b9c519dc1d8e14d",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "SAML响应包含两个字段：`SAMLResponse` 和 `RelayState`。"
+      }
+    },
+    {
+      "segment_id": "31df1954",
+      "source_content": "```javascript\n// routes/index.js\n\nrouter.post('/sso/acs', async (req, res, next) => {\n  try {\n    const { SAMLResponse, RelayState } = req.body;\n\n    const body = {\n      SAMLResponse,\n      RelayState,\n    };\n\n    const { redirect_url } = await oauthController.samlResponse(body);\n\n    res.redirect(redirect_url);\n  } catch (err) {\n    next(err);\n  }\n});\n```",
+      "source_content_hash": "b28ee34fc342fa9739f3685c77eb0e38b67f328fb6c7f7cb047c3f3c8f7531cd",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {}
+    },
+    {
+      "segment_id": "dbd18971",
+      "source_content": "Call to the method `oauthController.samlResponse()` will returns a `redirect_url`. You should redirect the users to this `redirect_url`. The query parameters will include the `code` and `state` parameters.",
+      "source_content_hash": "71baa94d25c47c6602d7fa0bf28b504ed80d02a18dc8be633dc92b50449f7b67",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "调用方法 `oauthController.samlResponse()` 将返回一个 `redirect_url`。您应将用户重定向至此URL，其查询参数将包含 `code` 和 `state`。"
+      }
+    },
+    {
+      "segment_id": "4e36860d",
+      "source_content": "### Code exchange",
+      "source_content_hash": "ab74e317e4b1168dfb8f7b6fabf243b05017bca6144a7cf9978a1848feca1315",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 授权码交换"
+      }
+    },
+    {
+      "segment_id": "4cba7b8e",
+      "source_content": "Now exchange the `code` for a `token`. The `token` is required to access the user profile.",
+      "source_content_hash": "2dc6185fcb6594749fcaf5645cd671232eba147c1f68d46233afd20fac926b61",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "现在将 `code` 交换为 `token`，该令牌用于获取用户资料。"
+      }
+    },
+    {
+      "segment_id": "c419a086",
+      "source_content": "Let's create a new route `GET /sso/callback` to handle the callback.",
+      "source_content_hash": "fcee6f80d938b53ff62ded408a61602e554c674d5cfed22588a808c797c9f6ed",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "创建新路由 `GET /sso/callback` 来处理回调。"
+      }
+    },
+    {
+      "segment_id": "7af0b75a",
+      "source_content": "```javascript\n// routes/index.js\n\nrouter.get('/sso/callback', async (req, res, next) => {\n  const { code } = req.query;\n\n  const tenant = 'boxyhq.com';\n  const product = 'crm';\n\n  const body = {\n    code,\n    client_id: `tenant=${tenant}&product=${product}`,\n    client_secret: 'client_secret',\n  };\n\n  try {\n    // Get the access token\n    const { access_token } = await oauthController.token(body);\n\n    // Get the user information\n    const profile = await oauthController.userInfo(access_token);\n\n    // Add the profile to the express session\n    req.session.profile = profile;\n\n    res.redirect('/dashboard');\n  } catch (err) {\n    next(err);\n  }\n});\n```",
+      "source_content_hash": "8a8a05aebcfc20dbff91a4dcc64bed8676971102b936fe40579349a13b8219ee",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {}
+    },
+    {
+      "segment_id": "fd40deab",
+      "source_content": "In the above code, replace the value for `tenant` and `product` with yours.",
+      "source_content_hash": "17ca12333c07b3b6302e3e91e9140ad938077a2b2d3269c4486d0bd8673e06fe",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "在上述代码中，请替换 `tenant` 和 `product` 的值为您自己的配置。"
+      }
+    },
+    {
+      "segment_id": "22c5ecf3",
+      "source_content": "### Protect the dashboard",
+      "source_content_hash": "c25098668c130463dd38f80eb640cf29da562d281b3304fe1b5568ce089ae1e9",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 保护仪表板路由"
+      }
+    },
+    {
+      "segment_id": "991164fd",
+      "source_content": "Now is the time to fix our `GET /dashboard` route so that only authenticated users can access it.",
+      "source_content_hash": "32844b94fcef021cf1a209bbd1a450c87a81111a7b995d9f8d63a2d3c99c5b3e",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "现在需要修改 `GET /dashboard` 路由，确保仅认证用户可访问。"
+      }
+    },
+    {
+      "segment_id": "c4d69fe4",
+      "source_content": "Let's fix it by adding a condition to check if the `profile` exists in the session.",
+      "source_content_hash": "a724b1ee07913cf4af99340afbc2e845742fe526f680924fe8f4212fe5a00fbd",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "通过添加条件检查会话中是否存在 `profile` 来实现。"
+      }
+    },
+    {
+      "segment_id": "e3f3475c",
+      "source_content": "If `profile` is `undefined`, redirect the users back to the `/` otherwise display the profile on the dashboard.",
+      "source_content_hash": "6a761d5f4d3e8076a470666c40dbb820feacb74d01b03e90532192e5f5c124d5",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "若 `profile` 为 `undefined`，则将用户重定向至 `/`，否则在仪表板显示用户资料。"
+      }
+    },
+    {
+      "segment_id": "b63b9ccf",
+      "source_content": "Replace the `GET /dashboard` route with the below code.",
+      "source_content_hash": "270b07e7b5d084cbdadf5882fbb7810613d33bf4449dc797ce6351f944d2d871",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "用以下代码替换原 `GET /dashboard` 路由。"
+      }
+    },
+    {
+      "segment_id": "371e39a0",
+      "source_content": "```javascript\n// routes/index.js\n\nrouter.get('/dashboard', function (req, res, next) {\n  const { profile } = req.session;\n\n  if (profile === undefined) {\n    return res.redirect('/');\n  }\n\n  // Pass the profile to the view\n  res.render('dashboard', {\n    profile,\n  });\n});\n```",
+      "source_content_hash": "0dddbfc8eeea3711e3b7b1c9175e203231c19cb3c1e5e657c579f5f04189f68f",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {}
+    },
+    {
+      "segment_id": "7a210168",
+      "source_content": "Replace the `views/dashboard.ejs` view with the below code.",
+      "source_content_hash": "347fb501d9d1875ac77f7be632213271ed4a2296b26aff8fcaee7fbf12f7e900",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "用以下代码替换 `views/dashboard.ejs` 视图文件。"
+      }
+    },
+    {
+      "segment_id": "59be63b1",
+      "source_content": "```html\n<!-- views/dashboard.ejs -->\n\n<!DOCTYPE html>\n<html>\n  <head>\n    <title>Dashboard</title>\n    <link rel=\"stylesheet\" href=\"/stylesheets/style.css\" />\n  </head>\n  <body>\n    <h1>Dashboard</h1>\n    <p>Only authenticated users should access this page.</p>\n\n    <p>Id - <%= profile.id %></p>\n    <p>Email - <%= profile.email %></p>\n  </body>\n</html>\n```",
+      "source_content_hash": "9d94f385ee1fa08488c5b89f1d687a3818edf97c4d6ee69df2feb15effbd0e0a",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {}
+    },
+    {
+      "segment_id": "a5a5c34e",
+      "source_content": "From the command line, let's restart the express app then visit the authorize the URL [http://localhost:3000/sso/authorize](http://localhost:3000/sso/authorize).",
+      "source_content_hash": "4b8b8743f27d09378df9c44e3c0430be96e30444dcdc6382e8928866128b37ac",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "从命令行重启Express应用，然后访问授权URL [http://localhost:3000/sso/authorize](http://localhost:3000/sso/authorize)。"
+      }
+    },
+    {
+      "segment_id": "a1cac8e0",
+      "source_content": "If you've configured everything okay, it should redirect you to the Auth0 authentication page, then click on the Sign up link and register there",
+      "source_content_hash": "92aae1f14a1a544f08555263dd45a0ff482f413de7991a7b75cf8c26bf4591cd",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "若配置正确，系统将重定向至Auth0认证页面，点击注册链接完成注册。"
+      }
+    },
+    {
+      "segment_id": "e99b1eb5",
+      "source_content": "If the authentication is successful, the app will redirect you to the dashboard and display the `id`, `email` of the user.",
+      "source_content_hash": "fa5dc82f271ebd61c5b6c607f1a935bf951cea27ee9d530a5b7a312b37edd5e3",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "认证成功后，应用将重定向至仪表板并显示用户的 `id` 和 `email`。"
+      }
+    },
+    {
+      "segment_id": "f894b163",
+      "source_content": "![Dashboard](/img/blog/add-saml-sso-to-node-express-app/express-dashboard.png)",
+      "source_content_hash": "fd987e3d4144f49fcc92e96dae9581d1f743110bb1a4b06e77ae2eb67de8c342",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![仪表板](/img/blog/add-saml-sso-to-node-express-app/express-dashboard.png)"
+      }
+    },
+    {
+      "segment_id": "6bb40e64",
+      "source_content": "## Conclusion",
+      "source_content_hash": "be031d37bb75d96ef08ca9ec5b0e83bb6f91172f60d3c31a78feae8d7dc4a0b0",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 结语"
+      }
+    },
+    {
+      "segment_id": "40e5a2ef",
+      "source_content": "Congratulations, you should now have a functioning SAML SSO integrated with your express.js app using the SAML Jackson and Auth0.",
+      "source_content_hash": "5cee69185b899304a7cef8043cb1b007cc2320ff2dc42a59681c2771d3561558",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "恭喜！您已成功通过SAML Jackson和Auth0为Express.js应用集成SAML单点登录功能。"
+      }
+    },
+    {
+      "segment_id": "0c760a60",
+      "source_content": "## References",
+      "source_content_hash": "65b72d86eeeb214ab8ca5fd24cb7cd7773e58084e95b670040df03e21e8c6fa7",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 参考资源"
+      }
+    },
+    {
+      "segment_id": "9b52f634",
+      "source_content": "To learn more about SAML Jackson, take a look at the following resources:",
+      "source_content_hash": "0820d9da573a7ec51ec14928b32b36b4847fd166ca0aaf48b95fb643a4beea7a",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "了解更多SAML Jackson相关信息，请查阅以下资源："
+      }
+    },
+    {
+      "segment_id": "7c9c2610",
+      "source_content": "- [SAML Jackson Documentation](https://boxyhq.com/docs/jackson/overview)\n- [SAML Jackson GitHub](https://github.com/boxyhq/jackson)\n- [Express web app that shows how to use SAML Jackson](https://github.com/boxyhq/jackson-examples/tree/main/apps/express)",
+      "source_content_hash": "4585d016c05afbed677995bfcbdc743deb94524d70b10e2e131b0dd6b5d83fed",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- [SAML Jackson官方文档](https://boxyhq.com/docs/jackson/overview)\n- [SAML Jackson GitHub仓库](https://github.com/boxyhq/jackson)\n- [演示SAML Jackson用法的Express示例应用](https://github.com/boxyhq/jackson-examples/tree/main/apps/express)"
+      }
+    },
+    {
+      "segment_id": "46a44d60",
+      "source_content": "Your feedback and contributions are welcome!",
+      "source_content_hash": "e3a9be19dca5e22ec992471127307231c895dd71356aa7dccc6cf154072bebf4",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "欢迎提交反馈与贡献！"
+      }
+    }
+  ],
+  "target_i18n_subpath": "docusaurus-plugin-content-blog/2022-03-16-add-saml-sso-to-node-express-app.md",
+  "last_updated_timestamp": "2025-06-08T18:49:09.322279+00:00",
+  "schema_version": "1.0",
+  "translated_versions": {
+    "zh-CN": "9bd259a66e8ae1a4a362308f5565014d2704414529cbeced9f04c98fdf485cb7"
+  }
+}

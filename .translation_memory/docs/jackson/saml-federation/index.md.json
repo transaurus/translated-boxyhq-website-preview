@@ -1,0 +1,92 @@
+{
+  "source_file_path_relative_to_docusaurus_root": "docs/jackson/saml-federation/index.md",
+  "source_file_content_hash": "bd2ba95596713302937f1a6cda782a5f95d861d2177ebf489c9e053ea9b2d2f3",
+  "segments": [
+    {
+      "segment_id": "58cfcc64",
+      "source_content": "---\ntitle: SAML Federation\nsidebar_label: SAML Federation\n---",
+      "source_content_hash": "daddc0fadcef7a5d5a930fcbaca89a967c387d44b72228fe4a34362abe7bb281",
+      "node_type": "yaml",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_58cfcc64"
+      }
+    },
+    {
+      "segment_id": "b3de8742",
+      "source_content": "# SAML Federation",
+      "source_content_hash": "73a7eda3b5c7394b57dc7a9573ffa6b67e7b08dec7929c1242f187b3be6f89f0",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "# SAML 联合认证"
+      }
+    },
+    {
+      "segment_id": "3fbbcc07",
+      "source_content": "SAML Federation is an enterprise feature and you need to have an enterprise license to use this feature.",
+      "source_content_hash": "678a6225dae29b830cfd1738c2511125532dfe310bf833043487836a4a820bda",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "SAML联合认证是企业级功能，需持有企业许可证方可使用。"
+      }
+    },
+    {
+      "segment_id": "7e5c5a39",
+      "source_content": "This feature allows you to federate multiple Identity Providers (IdPs) without needing any additional plugins or code changes. Extremely useful in cases where the SAML support is restricted to a single provider and you need to support multiple IdPs. Contact us to find out more.",
+      "source_content_hash": "876d3a1b77ada0a4b73cccbec22693874c44b87d46d7bb40bc139f07a6220361",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "该功能允许您无需额外插件或代码修改即可实现多身份提供商（IdP）联合认证。在SAML支持仅限于单一提供商而您需要对接多IdP的场景中尤为实用。请联系我们获取更多信息。"
+      }
+    },
+    {
+      "segment_id": "9fcbdce9",
+      "source_content": "## SAML Federation Flow",
+      "source_content_hash": "c97d9808cc374c03dccb29d9c66fcc363ea09f500c9f06c558057467d94619b4",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## SAML联合认证流程"
+      }
+    },
+    {
+      "segment_id": "ad8fd492",
+      "source_content": "Here is how the SAML Federation flow works if you are using Jackson as a SAML IdP and want to federate with another identity provider (IdP) (Eg: Okta):",
+      "source_content_hash": "d3386804fa4431d788176bed951a20173f506000e1030ce66e1f7aa2d63f702c",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "若您使用Jackson作为SAML身份提供商（IdP）并需与其他IdP（如Okta）联合认证，流程如下："
+      }
+    },
+    {
+      "segment_id": "4ddf6ae7",
+      "source_content": "- The user accesses the Service Provider's (SP) login page\n- The user clicks on the \"Login with SAML\" button\n- The SP sends SAML Request to Jackson's SSO endpoint\n- Jackson displays the list of IdP available for the user to choose from (if there is more than one IdP) based on the requested tenant and product combination\n- Jackson redirects the user to the chosen IdP for authentication\n- After successful authentication, IdP sends (POST) SAML Response to Jackson's ACS endpoint\n- Jackson process SAML Response from the IdP and create a new SAML Response to send (POST) back to the SP's ACS endpoint\n- SP process SAML Response from Jackson and create a new session for the user (Depending on the SP's implementation)",
+      "source_content_hash": "503b2c73457abfabfef7dce0ce2db60b231d80b1181dd396b8d62f78c8f0ba61",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- 用户访问服务提供商（SP）的登录页面\n- 用户点击\"使用SAML登录\"按钮\n- SP向Jackson的SSO端点发送SAML请求\n- Jackson根据请求的租户和产品组合显示可选IdP列表（若存在多个IdP）\n- Jackson将用户重定向至所选IdP进行认证\n- 认证成功后，IdP向Jackson的ACS端点提交（POST方式）SAML响应\n- Jackson处理来自IdP的SAML响应，生成新的SAML响应并提交（POST方式）至SP的ACS端点\n- SP处理来自Jackson的SAML响应并为用户创建新会话（具体取决于SP的实现方式）"
+      }
+    },
+    {
+      "segment_id": "f2c2bdd0",
+      "source_content": "Visit [Create SAML Federation App](/docs/admin-portal/enterprise-sso#saml-federation) to learn how to create and configure a SAML Federation App.",
+      "source_content_hash": "739eaa1dbe936f250ba403cae38cdbaab59903ddc5bb6fb0d6fbdfb0f0cd9cc6",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "请参阅[创建SAML联合认证应用](/docs/admin-portal/enterprise-sso#saml-federation)了解配置方法。"
+      }
+    }
+  ],
+  "target_i18n_subpath": "docusaurus-plugin-content-docs/current/jackson/saml-federation/index.md",
+  "last_updated_timestamp": "2025-06-08T18:49:09.300488+00:00",
+  "schema_version": "1.0",
+  "translated_versions": {
+    "zh-CN": "bd2ba95596713302937f1a6cda782a5f95d861d2177ebf489c9e053ea9b2d2f3"
+  }
+}

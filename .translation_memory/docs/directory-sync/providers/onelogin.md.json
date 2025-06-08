@@ -1,0 +1,632 @@
+{
+  "source_file_path_relative_to_docusaurus_root": "docs/directory-sync/providers/onelogin.md",
+  "source_file_content_hash": "e13d90be9d470e6f21b96acba40950d8c8490d4af16b43850d7ff929df3d2f44",
+  "segments": [
+    {
+      "segment_id": "58cfcc64",
+      "source_content": "---\ntitle: OneLogin SCIM v2.0\nsidebar_label: OneLogin SCIM v2.0\n---",
+      "source_content_hash": "454d5131d4eaf3fa6b3557d2df17e181c956409d8e231b6161c15cc18f583272",
+      "node_type": "yaml",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_58cfcc64"
+      }
+    },
+    {
+      "segment_id": "b3de8742",
+      "source_content": "# OneLogin SCIM v2.0",
+      "source_content_hash": "81c938fc28523ec79013cd3508e1ef9f3f86eb4b09ec99923c41aa292effbffb",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "# OneLogin SCIM v2.0 配置指南"
+      }
+    },
+    {
+      "segment_id": "3fbbcc07",
+      "source_content": "The following guide will walk you through the process of configuring SAML Jackson to use the OneLogin SCIM v2.0 directory provider.",
+      "source_content_hash": "b61e1891ba65b17f960013fe157bd9a429d2af8c5908d5b39d6a0f14bfb4895b",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "本指南将逐步介绍如何配置 SAML Jackson 以使用 OneLogin SCIM v2.0 目录服务提供商。"
+      }
+    },
+    {
+      "segment_id": "279b6a65",
+      "source_content": "---",
+      "source_content_hash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "node_type": "thematicBreak",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "---"
+      }
+    },
+    {
+      "segment_id": "9fcbdce9",
+      "source_content": "### Create OneLogin Application",
+      "source_content_hash": "5c41c870ca55f007ae3d896df1724a6fb1443683eee5a6a8fc7d09f745ec3c3b",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 创建 OneLogin 应用"
+      }
+    },
+    {
+      "segment_id": "ad8fd492",
+      "source_content": "Click **Applications** from the top navigation menu and click **Add App** button.",
+      "source_content_hash": "91fbd28339f30be29c821a17a86c52ede91a8f9b571921b59576c68e87d3ef3d",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "点击顶部导航菜单中的 **Applications**，然后点击 **Add App** 按钮。"
+      }
+    },
+    {
+      "segment_id": "86b54d44",
+      "source_content": "![OneLogin SCIM Step 1](/images/docs/jackson/dsync-providers/onelogin/1.png)",
+      "source_content_hash": "701f68a1015b43be9bbe9a4c8d367a0ab3d2ae955eeae2b08e96bb6d8c640bf5",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![OneLogin SCIM 步骤1](/images/docs/jackson/dsync-providers/onelogin/1.png)"
+      }
+    },
+    {
+      "segment_id": "39b3772c",
+      "source_content": "Search for **SCIM** from the search box and choose the app called **SCIM Provisioner with SAML (SCIM V2 Enterprise)** from the list of apps.",
+      "source_content_hash": "78fbf8343383f4e42b7f1b2f6a4bf42809319ab6dd4459124d2d6ec68c7c9702",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "在搜索框中输入 **SCIM**，从应用列表中选择名为 **SCIM Provisioner with SAML (SCIM V2 Enterprise)** 的应用。"
+      }
+    },
+    {
+      "segment_id": "1acb9a05",
+      "source_content": "![OneLogin SCIM Step 2](/images/docs/jackson/dsync-providers/onelogin/2.png)",
+      "source_content_hash": "6cdda194c80a54c70512176f3bd66d35d45012e9473a7a2d301fbaa1031cc5ba",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![OneLogin SCIM 步骤2](/images/docs/jackson/dsync-providers/onelogin/2.png)"
+      }
+    },
+    {
+      "segment_id": "2df4f75f",
+      "source_content": "Give the app a name and click the **Save** button.",
+      "source_content_hash": "5ca8ab755b91f8c43dc7d947fa8e97793e5030018095e4494d0b3dc524bc11f6",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "为应用命名后点击 **Save** 按钮。"
+      }
+    },
+    {
+      "segment_id": "98cfbd53",
+      "source_content": "![iOneLogin SCIM Step 3](/images/docs/jackson/dsync-providers/onelogin/3.png)",
+      "source_content_hash": "b5cff0c08eac7081caec7e77975544c59ee483db7c375e2ce1ff296986f0056e",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![OneLogin SCIM 步骤3](/images/docs/jackson/dsync-providers/onelogin/3.png)"
+      }
+    },
+    {
+      "segment_id": "ccc88b4c",
+      "source_content": "At this stage, you've successfully created the OneLogin SCIM app.",
+      "source_content_hash": "7d70d50ef9b8d4991d43236af6b49b7b88f111574117ed3778b6a02f0116fec8",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "至此，您已成功创建 OneLogin SCIM 应用。"
+      }
+    },
+    {
+      "segment_id": "a5403c6e",
+      "source_content": "---",
+      "source_content_hash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "node_type": "thematicBreak",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "---"
+      }
+    },
+    {
+      "segment_id": "d06306f7",
+      "source_content": "### Enable OneLogin SCIM Provisioning",
+      "source_content_hash": "a8c07fa009ba8e8df73433cb51ac49a70e2d19680fbe5621246436ddfd471a73",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 启用 OneLogin SCIM 配置"
+      }
+    },
+    {
+      "segment_id": "73ab96a3",
+      "source_content": "In your application, click the **Configuration** tab on the left.",
+      "source_content_hash": "744ad1190d729cda4a0ce5c1528845503585984d072372e040c93c5ab7238507",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "在您的应用中，点击左侧的 **Configuration** 选项卡。"
+      }
+    },
+    {
+      "segment_id": "7499a4e7",
+      "source_content": "Enter the following information:",
+      "source_content_hash": "be3f280060a145ef46b0d279c4fa8f60cd2e2f9e8ac74eceac5fe4af6e9d2045",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "输入以下信息："
+      }
+    },
+    {
+      "segment_id": "7a2e981c",
+      "source_content": "- SCIM Base URL\n- SCIM Bearer Token",
+      "source_content_hash": "63eb1b675dd40a8cb8c4f0d6f66981c2ebd81bb20977c72f6fccde0781eb0ad8",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- SCIM 基础URL\n- SCIM Bearer Token"
+      }
+    },
+    {
+      "segment_id": "c3a738de",
+      "source_content": "You'll receive these information from Jackson when you create the directory sync connection either via the API or the Admin Portal.",
+      "source_content_hash": "3d4d57049055d1ea55a496e448dde8eb725d7cd3555673c786665439dd4c9c68",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "这些信息将在您通过 API 或管理门户创建目录同步连接时由 Jackson 提供。"
+      }
+    },
+    {
+      "segment_id": "3cfe6286",
+      "source_content": "Click the button **Enable** to test the connection to see if the credentials are correct and click the button to **Save** to save the credentials.",
+      "source_content_hash": "ba766935c1c7742e99bca8a4393c9dedc03b67fde19ee4c3c7a354b97458213f",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "点击 **Enable** 按钮测试连接以验证凭证是否正确，然后点击 **Save** 按钮保存凭证。"
+      }
+    },
+    {
+      "segment_id": "1042b50d",
+      "source_content": "![OneLogin SCIM Step 4](/images/docs/jackson/dsync-providers/onelogin/4.png)",
+      "source_content_hash": "97691ce336790d27ae7e2f06cab9bbd92a52f638348351d54ecf04a86e93f3d1",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![OneLogin SCIM 步骤4](/images/docs/jackson/dsync-providers/onelogin/4.png)"
+      }
+    },
+    {
+      "segment_id": "aa1e7006",
+      "source_content": "Next click the **Provisioning** tab and check the **Enable provisioning** checkbox. Click the **Save** button to save the changes.",
+      "source_content_hash": "f7113b87615b3bf05bb09bcc62c07dcea7a8ab5b11e533c6c56d09e71e488179",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "接着点击 **Provisioning** 选项卡，勾选 **Enable provisioning** 复选框。点击 **Save** 按钮保存更改。"
+      }
+    },
+    {
+      "segment_id": "13d9cd70",
+      "source_content": "![OneLogin SCIM Step 5](/images/docs/jackson/dsync-providers/onelogin/5.png)",
+      "source_content_hash": "0f5b5abaa01335138b97e784f4173ccc292acb739f7a4261be4c3dbb1cb7c0cd",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![OneLogin SCIM 步骤5](/images/docs/jackson/dsync-providers/onelogin/5.png)"
+      }
+    },
+    {
+      "segment_id": "29528c8d",
+      "source_content": "Next click the **Parameters** tab and select the row **Groups** from the table.",
+      "source_content_hash": "47fc548e1737f876a0edbec2efa3811ea6d5320636c80d36464c3fab598916e6",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "然后点击 **Parameters** 选项卡，从表格中选择 **Groups** 行。"
+      }
+    },
+    {
+      "segment_id": "c504c207",
+      "source_content": "![OneLogin SCIM Step 6](/images/docs/jackson/dsync-providers/onelogin/6.png)",
+      "source_content_hash": "35b345db69fd039085d0d52b9a139fa9729b9a050d4490d84b929a60fd475bc0",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![OneLogin SCIM 步骤6](/images/docs/jackson/dsync-providers/onelogin/6.png)"
+      }
+    },
+    {
+      "segment_id": "98d26038",
+      "source_content": "In the popup window, check the box **Include in User Provisioning** and click the **Save** button.",
+      "source_content_hash": "861281a7395d39e5d20f8b7dda0658c88607788863b7e6703d226fb13d3050e0",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "在弹出窗口中勾选 **Include in User Provisioning** 选项，点击 **Save** 按钮。"
+      }
+    },
+    {
+      "segment_id": "d3649a1e",
+      "source_content": "![OneLogin SCIM Step 7](/images/docs/jackson/dsync-providers/onelogin/7.png)",
+      "source_content_hash": "139603648d053289ace8f266ba01cda3d53a7e32d4b31c4ebb0d26bf1f3c457a",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![OneLogin SCIM 步骤7](/images/docs/jackson/dsync-providers/onelogin/7.png)"
+      }
+    },
+    {
+      "segment_id": "6e9a41d8",
+      "source_content": "---",
+      "source_content_hash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "node_type": "thematicBreak",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "---"
+      }
+    },
+    {
+      "segment_id": "7283cdac",
+      "source_content": "### Assign Users",
+      "source_content_hash": "a6766ca81034fb4cec29363bba807307a2deb897ec0bce01eaf5ba41f74810bc",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 分配用户"
+      }
+    },
+    {
+      "segment_id": "1131ef75",
+      "source_content": "In order to assign users to your app, select **Users** from the top navigation menu and choose the user you want to assign to the app.",
+      "source_content_hash": "b2ea8c7049dd9f046e2d01961819b71a59fd88d5123c65730d75d1ad7b30573e",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "要为应用分配用户，请从顶部导航菜单中选择 **Users**，然后选择要分配的用户。"
+      }
+    },
+    {
+      "segment_id": "8b2a52b1",
+      "source_content": "From the user page, click the **Application** tab on the left and click the plus sign.",
+      "source_content_hash": "3a6e6e61e382506f2496f17baec8ca3ab9aed3f2fc361c335ac68da7991f61b6",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "在用户页面中，点击左侧的 **Application** 选项卡，然后点击加号图标。"
+      }
+    },
+    {
+      "segment_id": "5dae11e3",
+      "source_content": "![OneLogin SCIM Step 8](/images/docs/jackson/dsync-providers/onelogin/8.png)",
+      "source_content_hash": "4862c312e464d08448cab6698385d24c3a5cff47b24e97a0d42adaafcbe7f24d",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![OneLogin SCIM 步骤8](/images/docs/jackson/dsync-providers/onelogin/8.png)"
+      }
+    },
+    {
+      "segment_id": "0bb95128",
+      "source_content": "A popup window will show you the list of apps that you can assign the user to. Select the app you created earlier and click the **Continue** button.",
+      "source_content_hash": "efa59cb4d245fba5acfe0363036e49a3795636808c29694846ca1eae17f211ad",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "弹出窗口将显示可分配的应用列表。选择您之前创建的应用，点击 **Continue** 按钮。"
+      }
+    },
+    {
+      "segment_id": "657c2b20",
+      "source_content": "![OneLogin SCIM Step 9](/images/docs/jackson/dsync-providers/onelogin/9.png)",
+      "source_content_hash": "e7c2ccac2297490c4eec33eb2bc57ca73f02b52ac3e46b86920bbb4cbbd53161",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![OneLogin SCIM 步骤9](/images/docs/jackson/dsync-providers/onelogin/9.png)"
+      }
+    },
+    {
+      "segment_id": "e7772088",
+      "source_content": "Click **Save** on the next modal window to confirm the assignment.",
+      "source_content_hash": "e5e7bb062b25c2500fc14e83870685f8aa200b7899907c4600d85221ac0721b9",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "在下一个模态窗口中点击 **Save** 确认分配。"
+      }
+    },
+    {
+      "segment_id": "eab056be",
+      "source_content": "![OneLogin SCIM Step 10](/images/docs/jackson/dsync-providers/onelogin/10.png)",
+      "source_content_hash": "58f975babc57f73bd6d53957fa234f1216368f9424ac2c5978c4d6915a5cd63c",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![OneLogin SCIM 步骤10](/images/docs/jackson/dsync-providers/onelogin/10.png)"
+      }
+    },
+    {
+      "segment_id": "f01228d3",
+      "source_content": "Depending on your configuration, You may have to approve the assignment.",
+      "source_content_hash": "9d5783a929c9d12a6985e9095d76c4c66034a731769a4b2f516302640c743030",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "根据您的配置，可能需要审批此次分配。"
+      }
+    },
+    {
+      "segment_id": "afa378f7",
+      "source_content": "If you see a text **Pending** in the table, click that text. That'll bring up a modal window, click the button **Approve** to approve the assignment.",
+      "source_content_hash": "68b6c874d9300b851d02dfd27d54c2849ee3eb7a6dd53feb50a825a04ef03520",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "如果在表格中看到显示为**待处理**的文本，请点击该文本。这将弹出一个模态窗口，点击**批准**按钮以确认分配。"
+      }
+    },
+    {
+      "segment_id": "e8e162a9",
+      "source_content": "![OneLogin SCIM Step 11](/images/docs/jackson/dsync-providers/onelogin/11.png)",
+      "source_content_hash": "c3b6341fa7648c07c811e06746d04611ef6254420f585b13d7580b489ae10c80",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![OneLogin SCIM 步骤11](/images/docs/jackson/dsync-providers/onelogin/11.png)"
+      }
+    },
+    {
+      "segment_id": "463ed165",
+      "source_content": "At this point, the user will be assigned to the app.",
+      "source_content_hash": "7f858b9f73965154e697280d445ecfe9a7d68711dda1177cc2465194ef988e47",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "至此，该用户将被成功分配至应用程序。"
+      }
+    },
+    {
+      "segment_id": "2ff0f46f",
+      "source_content": "---",
+      "source_content_hash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "node_type": "thematicBreak",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "---"
+      }
+    },
+    {
+      "segment_id": "0a103a02",
+      "source_content": "### Push Groups",
+      "source_content_hash": "b163d1b2d892a5da6533bc1faab5c543d669f24cffa2dc322f6ede4844371c7a",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 推送群组"
+      }
+    },
+    {
+      "segment_id": "8126f763",
+      "source_content": "In order to push groups to your app, you've to create a new **Role** in your app.",
+      "source_content_hash": "544b6e53a1efcdc9aa9bb10530d6ca3b75066a187f433ce0188c43de8b798ade",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "若要将群组推送至您的应用程序，需先在应用中创建新**角色**。"
+      }
+    },
+    {
+      "segment_id": "74dd7937",
+      "source_content": "In the top navigation, select **Users** and then **Roles** from the dropdown.",
+      "source_content_hash": "66640e4b9296dbeb2089145be15608e191b8de2242320227adb7349efada1be9",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "在顶部导航栏中选择**用户**，然后从下拉菜单中选择**角色**。"
+      }
+    },
+    {
+      "segment_id": "5803caac",
+      "source_content": "Click **New Role** to create a new role.",
+      "source_content_hash": "9f4184015e3f59b7e6f9611d8ee704322c291a64f5596e84c82d197a4a503e4d",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "点击**新建角色**以创建新角色。"
+      }
+    },
+    {
+      "segment_id": "51867d16",
+      "source_content": "![OneLogin SCIM Step 12](/images/docs/jackson/dsync-providers/onelogin/12.png)",
+      "source_content_hash": "420a629959be6d77421751c8e6586a91dad5d808c27368bc58c03e12c97283b6",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![OneLogin SCIM 步骤12](/images/docs/jackson/dsync-providers/onelogin/12.png)"
+      }
+    },
+    {
+      "segment_id": "785750ac",
+      "source_content": "Enter a name for the role, select the app you created earlier and click the **Save** button.",
+      "source_content_hash": "be4872b30e2a9a1507d125fe93098f85a70e257ae9ccccc99eba25f69c398635",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "输入角色名称，选择先前创建的应用程序，点击**保存**按钮。"
+      }
+    },
+    {
+      "segment_id": "82e90254",
+      "source_content": "![OneLogin SCIM Step 13](/images/docs/jackson/dsync-providers/onelogin/13.png)",
+      "source_content_hash": "3b410a669c92cac1134b1157328e0600d650d766b3f79f0982b4c792f558c5f5",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![OneLogin SCIM 步骤13](/images/docs/jackson/dsync-providers/onelogin/13.png)"
+      }
+    },
+    {
+      "segment_id": "2822251a",
+      "source_content": "Click the **Users** tab for the role and search for the user you want to assign the role to.",
+      "source_content_hash": "4ba5c67059061302e6f8bdafca60a20d15741698fd002586da13a96f342d37f0",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "点击角色的**用户**标签页，搜索需分配该角色的用户。"
+      }
+    },
+    {
+      "segment_id": "25212439",
+      "source_content": "Click the button **Add To Role** to assign the user to the role and click the **Save** button.",
+      "source_content_hash": "df9b28ee545a39575f26a256082897fa7ce1036d200e4d2393add68a75560be0",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "点击**添加至角色**按钮分配用户，随后点击**保存**按钮。"
+      }
+    },
+    {
+      "segment_id": "d79a4831",
+      "source_content": "![OneLogin SCIM Step 14](/images/docs/jackson/dsync-providers/onelogin/14.png)",
+      "source_content_hash": "9f098bc41c57bca42768fa18838cd66402373e2b9eef9fd03acb8dbdad3b2e05",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![OneLogin SCIM 步骤14](/images/docs/jackson/dsync-providers/onelogin/14.png)"
+      }
+    },
+    {
+      "segment_id": "2838eb68",
+      "source_content": "Click **Save** in the next modal to confirm the assignment.",
+      "source_content_hash": "d743d65f79fed1be12c6fc0e999d8c9e7ed8254ae257ed288dc77f3594eb35be",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "在后续模态窗口中点击**保存**以确认分配。"
+      }
+    },
+    {
+      "segment_id": "4be28ed1",
+      "source_content": "![OneLogin SCIM Step 15](/images/docs/jackson/dsync-providers/onelogin/15.png)",
+      "source_content_hash": "c6dfba9b6f2b1feaf6a5cdf2244a96c612b0284f81354f2176da2f0054705f5c",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![OneLogin SCIM 步骤15](/images/docs/jackson/dsync-providers/onelogin/15.png)"
+      }
+    },
+    {
+      "segment_id": "0e80209e",
+      "source_content": "Go back to your app and click the **Rule** tab on the left and click the **Add Rule** button.",
+      "source_content_hash": "22d0fe54ecfff22e482b9eb3f504ae1e28b2dafb55fab920bcefc5080ace4b6d",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "返回您的应用程序，点击左侧**规则**标签页，点击**添加规则**按钮。"
+      }
+    },
+    {
+      "segment_id": "7bc8bb24",
+      "source_content": "Give the rule a name. Under the **Actions**, select the **Set Groups in your-app-name** from the dropdown, then select for each **role** with values that matches **your-app-name**. Click the **Save** button.",
+      "source_content_hash": "8ea0116f95a1f35eeec75548803b0202e8c6de29defbd35594bdfc79d7d2fd7b",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "为规则命名。在**操作**部分，从下拉菜单中选择**在您的应用名称中设置群组**，然后为每个**角色**选择与**您的应用名称**匹配的值。点击**保存**按钮。"
+      }
+    },
+    {
+      "segment_id": "6693c38c",
+      "source_content": "![OneLogin SCIM Step 16](/images/docs/jackson/dsync-providers/onelogin/16.png)",
+      "source_content_hash": "9f91a5e85dddb5a4df3b2cffd4487ab6d387f4a1e1527ffbb68c3684f3f82b0a",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![OneLogin SCIM 步骤16](/images/docs/jackson/dsync-providers/onelogin/16.png)"
+      }
+    },
+    {
+      "segment_id": "e9313fef",
+      "source_content": "Click the **Users** tab on the left, you may see **Pending** provisions in the table. Click that text to approve the assignment.",
+      "source_content_hash": "a165add1257d6b91f07d502b21e9e0d7d91ab464cf78552e244ef4b8e0cc9c97",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "点击左侧**用户**标签页，可能会在表格中看到**待处理**的配置项。点击该文本以批准分配。"
+      }
+    },
+    {
+      "segment_id": "1b4de6df",
+      "source_content": "![OneLogin SCIM Step 17](/images/docs/jackson/dsync-providers/onelogin/17.png)",
+      "source_content_hash": "005843a848c77381570669c2892a690e40648996c39d3e13e9f55caf14596005",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![OneLogin SCIM 步骤17](/images/docs/jackson/dsync-providers/onelogin/17.png)"
+      }
+    },
+    {
+      "segment_id": "1958bc43",
+      "source_content": "Click **Approve** in the next modal to confirm the assignment.",
+      "source_content_hash": "4b125668e8913b17b71db7fa96cec2ee591c83ec176a2bc3dbd48bf5c4269f19",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "在后续模态窗口中点击**批准**以确认分配。"
+      }
+    },
+    {
+      "segment_id": "a8610918",
+      "source_content": "![OneLogin SCIM Step 18](/images/docs/jackson/dsync-providers/onelogin/18.png)",
+      "source_content_hash": "0c883200bc11f66255869d71725ba35ce52650b5659d75f2a1407ae501edd4f2",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![OneLogin SCIM 步骤18](/images/docs/jackson/dsync-providers/onelogin/18.png)"
+      }
+    },
+    {
+      "segment_id": "b9b8694c",
+      "source_content": "### FAQ",
+      "source_content_hash": "f985d80cd209759f3dc9c3a755b37f9025cb0004b5067b9678ae0300b3e76200",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 常见问题"
+      }
+    },
+    {
+      "segment_id": "ed644f52",
+      "source_content": "#### Why don't I see any event when a group is removed in OneLogin?",
+      "source_content_hash": "864ee8eb5f054d8eaa77d414206426df1f1019b2ab1834b82687c170602e354b",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "#### 为什么OneLogin中删除群组时没有触发任何事件？"
+      }
+    },
+    {
+      "segment_id": "b9331170",
+      "source_content": "It is a known issue with OneLogin SCIM. OneLogin does not dispatch a specific deprovisioning event for groups that are deleted, so you won't see any event such as `group.deleted` or `group.user_removed` when a group is removed. It is recommended to remove the users from the group before deleting the group itself from the SCIM application.",
+      "source_content_hash": "008d244e7ab37e01d0d05625a2dc8b9bd798152008dbafbf7876aa06a03d9828",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "这是OneLogin SCIM的已知问题。OneLogin不会为已删除的群组发送特定的取消配置事件，因此当群组被移除时，您不会收到诸如`group.deleted`或`group.user_removed`之类的事件。建议在从SCIM应用程序中删除群组之前，先移除群组中的所有用户。"
+      }
+    }
+  ],
+  "target_i18n_subpath": "docusaurus-plugin-content-docs/current/directory-sync/providers/onelogin.md",
+  "last_updated_timestamp": "2025-06-08T18:49:09.320816+00:00",
+  "schema_version": "1.0",
+  "translated_versions": {
+    "zh-CN": "e13d90be9d470e6f21b96acba40950d8c8490d4af16b43850d7ff929df3d2f44"
+  }
+}

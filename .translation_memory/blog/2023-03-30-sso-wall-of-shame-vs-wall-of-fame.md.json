@@ -1,0 +1,122 @@
+{
+  "source_file_path_relative_to_docusaurus_root": "blog/2023-03-30-sso-wall-of-shame-vs-wall-of-fame.md",
+  "source_file_content_hash": "b59c7ba68503b19e916a2912e0cb31b5de4810bae39d997af300d69bebd7350d",
+  "segments": [
+    {
+      "segment_id": "58cfcc64",
+      "source_content": "---\nslug: sso-wall-of-shame-vs-wall-of-fame\ntitle: 'SSO \"Wall of Shame\" vs \"Wall of Fame\"'\ntags_disabled:\n  [developer, security, cybersecurity, devsecops, appsec, sso, open-source]\nimage: /img/blog/shame-vs-fame.png\nauthors:\n  - name: Sama - Carlos Samame\n    title: Co-founder & COO @BoxyHQ\n    url: https://www.linkedin.com/in/samame\n    image_url: /images/authors/sama.jpg\n  - name: Deepak Prabhakara\n    title: Co-founder & CEO @BoxyHQ\n    url: https://github.com/deepakprabhakara\n    image_url: /images/authors/deepak.jpg\n---",
+      "source_content_hash": "0b5834e6b4039efe248af7adc6bb7000adb2b8fd02951fa16c82d389149d6cc8",
+      "node_type": "yaml",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_58cfcc64"
+      }
+    },
+    {
+      "segment_id": "39b3772c",
+      "source_content": "Unless you have been living under a rock, you have probably heard of the SSO Wall of Shame. This is a list of vendors that treat single sign-on as a luxury feature, not a core security requirement. There have been numerous complaints regarding the companies that have made it onto this list, and rightfully so. In a downturn economy and in times when security and privacy are critical, many organizations see an opportunity to generate even more revenue.",
+      "source_content_hash": "bbb5b2e1dc80f345d25a0b3f564919eb6a2c2a8b534dbb5bfffff6fededc0a0d",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "除非你与世隔绝，否则很可能听说过\"SSO耻辱墙\"。这份名单记录了那些将单点登录(SSO)视为奢侈品而非核心安全需求的供应商。上榜企业招致诸多非议实属必然——在经济下行、安全隐私至关重要的当下，许多机构却将此视为创收良机。"
+      }
+    },
+    {
+      "segment_id": "1acb9a05",
+      "source_content": "This is a small example, listed in alphabetical order of some of the most well-known companies that have ended up on the “Wall of Shame” (see the screenshot below). You can find more information and the full list at [sso.tax](https://sso.tax). It is clear that raising prices for enterprise SSO and other security features, such as Audit Logs (to track critical events), is just part of their revenue model.",
+      "source_content_hash": "10d75c0f97461673847739c2b38add1c6aae2cfc09861bb05ab5fe9b1a0f6a74",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "以下按字母顺序列举了部分登上\"耻辱墙\"的知名企业（参见下方截图）。完整名单详见[sso.tax](https://sso.tax)。显然，对企业SSO和审计日志（追踪关键事件）等安全功能加价，不过是其盈利模式的冰山一角。"
+      }
+    },
+    {
+      "segment_id": "2df4f75f",
+      "source_content": "![sso tax list](/img/blog/sso-tax-list.png)",
+      "source_content_hash": "c09b769673063bbcedc7988177b2bbba616829f9ae834f8abc9fc4920c707f72",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![sso税单列表](/img/blog/sso-tax-list.png)"
+      }
+    },
+    {
+      "segment_id": "98cfbd53",
+      "source_content": "But is this the right thing to do? It’s hard to judge from the outside, and clearly companies need to make a profit while showing growth, especially when you are backed by Venture Capital. Having said that, at BoxyHQ we believe that we can all do better (we are also Venture funded). Nonetheless, cybersecurity taxes should stop, and we should all focus on increasing our security posture and making a positive impact. Take for example, Hubspot charging 6300% more for SSO functionality! That is a clear example of how absurd and abusive some companies can be.",
+      "source_content_hash": "7eea89ebb891b617c8bd962350db0a68ee4068f91ce985a8a03db8f948de6bae",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "但此举是否正当？外界难以评判，尤其对需要盈利增长的风投支持企业而言。然而在BoxyHQ（同为风投背景），我们坚信能做得更好。网络安全税应当终止，我们更应聚焦提升安全防护、创造积极影响。以Hubspot为例，其SSO功能溢价高达6300%！这充分暴露了某些企业的荒谬与贪婪。"
+      }
+    },
+    {
+      "segment_id": "ccc88b4c",
+      "source_content": "Now, we ask ourselves, how about the “Wall of Fame”? This is a separate list of companies that lead by example and don’t take advantage of their customer base. If you do a quick search, you will find some interesting companies listed. Grafana, Cal.com, and Sumo Logic, just to name a few.",
+      "source_content_hash": "b78ff823ceb34f0a0db0e047c6aa9d28b905f6841dbf0977a260418499fbc8db",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "那么\"荣誉墙\"呢？这份独立名单记录了以身作则、不剥削客户的典范企业。简单搜索就能发现Grafana、Cal.com、Sumo Logic等值得玩味的名字。"
+      }
+    },
+    {
+      "segment_id": "d9172fa4",
+      "source_content": "To understand why startups normally lean this way, it’s important to consider the enterprise deal process. With RFPs, security questionnaires, and other compliance-related procedures, closing an enterprise deal becomes all-consuming for a startup. This can justify an enterprise pricing tier. Given a startups early evolution of products, , Enterprise SSO becomes an easy candidate to distinguish the pricing tier gap between charging SMBs and what they can charge enterprises. But building and maintaining SSO is expensive and time-consuming. SAML is not necessarily the easiest protocol implementation to get right. And add to this the customer support issues that come with onboarding large enterprise teams onto the product. But as a startup matures the product needs to have enough core enterprise features and not merely depend on undifferentiated features like SSO.",
+      "source_content_hash": "0e2bcdf3e283c33f1fc3e7353bb9a16ca28fbf740ededf62130a64076b321d98",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "理解初创企业的定价逻辑，需考量企业级交易流程：RFP、安全问卷等合规程序会让初创公司疲于应付，这似乎能合理化分级定价。但随产品成熟，企业级功能应超越SSO这类基础配置——毕竟构建维护SAML协议本就耗时费力，还要应对大型企业团队入驻的客服压力。"
+      }
+    },
+    {
+      "segment_id": "26524352",
+      "source_content": "To take it full circle, it would be nice to see a full list of the SSO Wall of Fame. Then we could ensure support for the companies with integrity, who have clearly not been overtaken by greed. Unfortunately because of our bandwidth, we can not commit to full ownership of this initiative, but can offer some practical advice on how companies could start offering SSO pricing tiers for free or at a nominal price increase:",
+      "source_content_hash": "ed1573262374cd9a6133dc0af45be7f59ed226cd1a60d073c0320045def53bb4",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "理想状态下，我们期待看到完整的SSO荣誉墙，以此支持那些未被贪婪吞噬的诚信企业。虽无力主导此倡议，我们仍可提供实用建议："
+      }
+    },
+    {
+      "segment_id": "86b525ab",
+      "source_content": "- Charge for other core enterprise features instead of SSO. If your product is not quite to that level of maturity, please read on.\n- Instead of charging for SSO, charge for the security process’s that comes with enterprise deals. If a company wants you to go through its security and compliance process, rather pay a premium to enhance its security posture and reduce compliance risk from its vendors.\n- If that scenario isn’t possible then consider segmenting SSO pricing based on the number of users or seats. SMBs will not have a very large number of seats so this could be a possible way to separate your pricing.\n- If your Enterprise tier is not based on seats, a natural progression is to base pricing on usage.",
+      "source_content_hash": "a9e519408119b2876cd12209e99a934ebad2ab2020faa8aeddbf716f7aceeaad",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- 对企业核心功能而非SSO收费（若产品尚未成熟请继续阅读）\n- 将企业级安全合规流程本身设为付费项，而非SSO功能\n- 按用户席位分级定价（SMB席位通常较少）\n- 若企业版非席位制，可采用用量计费模式"
+      }
+    },
+    {
+      "segment_id": "97ae4a01",
+      "source_content": "We are trying to do our part by providing a free open–source enterprise-grade SSO (called SAML Jackson), that any developer, team, or organization can plug into with just a few lines of code. Check out the GitHub repo [here](https://github.com/boxyhq/jackson). Feedback is much appreciated and a star will help us raise security awareness. 🙂",
+      "source_content_hash": "fe933bd61819973c9c913095b3d8f36ef39e8bbdfbd1373319ede7838eb7eda7",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "我们正通过开源企业级SSO解决方案SAML Jackson贡献力量，开发者仅需几行代码即可集成。欢迎访问[GitHub仓库](https://github.com/boxyhq/jackson)，您的反馈与星标将助力提升安全意识🙂"
+      }
+    },
+    {
+      "segment_id": "c3a738de",
+      "source_content": "Stay safe, do good, and avoid the dark side of the SSO tax!",
+      "source_content_hash": "b197c20a27f14679e9bd2dc9884d98fb5d1f6b8b65f9c86089fd559cad19999d",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "谨记：守护安全，践行善举，远离SSO税的黑暗面！"
+      }
+    }
+  ],
+  "target_i18n_subpath": "docusaurus-plugin-content-blog/2023-03-30-sso-wall-of-shame-vs-wall-of-fame.md",
+  "last_updated_timestamp": "2025-06-08T18:49:09.309782+00:00",
+  "schema_version": "1.0",
+  "translated_versions": {
+    "zh-CN": "b59c7ba68503b19e916a2912e0cb31b5de4810bae39d997af300d69bebd7350d"
+  }
+}

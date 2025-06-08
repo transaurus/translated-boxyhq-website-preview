@@ -1,0 +1,52 @@
+{
+  "source_file_path_relative_to_docusaurus_root": "docs/jackson/sso-providers/index.md",
+  "source_file_content_hash": "5c59a4a00bf155b749f4cad620caa8e6e4b47038a30b80ab6751931cb040f5e7",
+  "segments": [
+    {
+      "segment_id": "58cfcc64",
+      "source_content": "---\ntitle: SAML SSO Providers\nsidebar_label: SSO Providers\n---",
+      "source_content_hash": "31ecf423f73501a5f001e8084bf9c73d32f84e854e5bf622a9927e9caa953d82",
+      "node_type": "yaml",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_58cfcc64"
+      }
+    },
+    {
+      "segment_id": "b3de8742",
+      "source_content": "# SAML SSO Providers",
+      "source_content_hash": "d6050fc01828e50436ec27e5a6a82bd2ae39ed6865918d4369efb69e24c3f1f0",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "# SAML SSO 提供商"
+      }
+    },
+    {
+      "segment_id": "3fbbcc07",
+      "source_content": "SAML Jackson supports the following SSO providers:",
+      "source_content_hash": "40c12d92b7a4d62ef189ab59935e5f72fea3b78c9effb4bfc338e258df662116",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "SAML Jackson 支持以下 SSO 提供商："
+      }
+    },
+    {
+      "segment_id": "4a5b6a68",
+      "source_content": "- [Generic SAML 2.0 Provider](./generic-saml.md)\n- [Microsoft Entra ID (formerly Azure AD)](./azure.md)\n- [Microsoft AD FS](./microsoft-adfs.md)\n- [Okta](./okta.md)\n- [Auth0](./auth0.md)\n- [Google](./google.md)\n- [OneLogin](./onelogin.md)\n- [PingOne](./pingone.md)\n- [JumpCloud](./jumpcloud.md)\n- [Rippling](./rippling.md)\n- [OpenID Connect Provider](./generic-oidc.md)",
+      "source_content_hash": "11071af8ef026308f27c2287c29a775ec95c91be5bd6de671b04f080edd81d17",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- [通用 SAML 2.0 提供商](./generic-saml.md)\n- [Microsoft Entra ID（原 Azure AD）](./azure.md)\n- [Microsoft AD FS](./microsoft-adfs.md)\n- [Okta](./okta.md)\n- [Auth0](./auth0.md)\n- [Google](./google.md)\n- [OneLogin](./onelogin.md)\n- [PingOne](./pingone.md)\n- [JumpCloud](./jumpcloud.md)\n- [Rippling](./rippling.md)\n- [OpenID Connect 提供商](./generic-oidc.md)"
+      }
+    }
+  ],
+  "target_i18n_subpath": "docusaurus-plugin-content-docs/current/jackson/sso-providers/index.md",
+  "last_updated_timestamp": "2025-06-08T18:49:09.296555+00:00",
+  "schema_version": "1.0",
+  "translated_versions": {
+    "zh-CN": "5c59a4a00bf155b749f4cad620caa8e6e4b47038a30b80ab6751931cb040f5e7"
+  }
+}

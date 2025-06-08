@@ -1,0 +1,632 @@
+{
+  "source_file_path_relative_to_docusaurus_root": "guides/jackson/integrations/bubble.md",
+  "source_file_content_hash": "7b3574ed23b7fd3e9a4c988366d0f7a71f8699f1bd969b2bb5419314f4949bdd",
+  "segments": [
+    {
+      "segment_id": "58cfcc64",
+      "source_content": "---\ntitle: BoxyHQ SAML SSO Bubble Plugin\nsidebar_label: Bubble.io\n---",
+      "source_content_hash": "a4449c1900d011df6776edfff11df0cd5ac03f864c4df3d365bc4ea7adc7fd6b",
+      "node_type": "yaml",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_58cfcc64"
+      }
+    },
+    {
+      "segment_id": "b3de8742",
+      "source_content": "# SAML SSO Bubble Plugin",
+      "source_content_hash": "31f6ae62f28d0e058bd3f333a4ac69ba7dae5e11a943c08811ad82de38ddbb26",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "# SAML SSO Bubble插件"
+      }
+    },
+    {
+      "segment_id": "3fbbcc07",
+      "source_content": "This guide will help you setup the BoxyHQ SAML SSO Bubble Plugin to add SAML SSO authentication to your Bubble application.",
+      "source_content_hash": "9b95e487485e09ff80eca7761dac451f1b4a50085517cf618c810fbdafcc49fb",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "本指南将帮助您配置BoxyHQ SAML SSO Bubble插件，为您的Bubble应用添加SAML单点登录认证功能。"
+      }
+    },
+    {
+      "segment_id": "7e5c5a39",
+      "source_content": "There is no easy way to add SAML SSO authentication to a Bubble application. This plugin provides a way to add SAML SSO authentication to your Bubble application with minimal effort.",
+      "source_content_hash": "cd148bacea61174677c5d583d7ef56dcbc0ec8533f8af4e6eb125426efa2a736",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "目前没有简单的方法能为Bubble应用添加SAML单点登录认证。本插件提供了一种最低成本实现方案。"
+      }
+    },
+    {
+      "segment_id": "8d66f911",
+      "source_content": "This plugin contains API calls and Actions for connecting a Bubble.io application with the BoxyHQ SAML Jackson instance (Our SaaS or self-hosted) for SSO authentication.",
+      "source_content_hash": "ab2715060405d68c6c67c16ea83f5ece1dd317044ed733e368566e94a00a4a2a",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "该插件包含API调用和操作项，用于将Bubble.io应用与BoxyHQ SAML Jackson实例（SaaS版或自托管版）进行SSO认证集成。"
+      }
+    },
+    {
+      "segment_id": "ad8fd492",
+      "source_content": "Please head to [BoxyHQ SaaS](https://app.eu.boxyhq.com/auth/join) to create an SSO connection that you can then use in this Bubble plugin. You can also self-host SAML Jackson to use this plugin. Please follow the instructions in the [SAML Jackson Deployment Guides](https://boxyhq.com/guides/jackson#deployment-guides) to setup your SAML Jackson instance.",
+      "source_content_hash": "61b23f8578b8c41ed2b989500f4a226579c9b6c90f94480db264932c60d40358",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "请前往[BoxyHQ SaaS平台](https://app.eu.boxyhq.com/auth/join)创建SSO连接以便在插件中使用。您也可以自托管SAML Jackson来使用本插件，具体请参照[SAML Jackson部署指南](https://boxyhq.com/guides/jackson#deployment-guides)进行配置。"
+      }
+    },
+    {
+      "segment_id": "86b54d44",
+      "source_content": "Try the [Example Bubble App](https://boxyhq-saml-sso.bubbleapps.io/version-test) to see the plugin in action.",
+      "source_content_hash": "d4a99cfc7341402f1a7c481d70ab849a44b7e2df5c3e1a59f09ab60cf6e799fa",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "可体验[示例Bubble应用](https://boxyhq-saml-sso.bubbleapps.io/version-test)查看插件实际效果。"
+      }
+    },
+    {
+      "segment_id": "d350c018",
+      "source_content": "## Install the plugin",
+      "source_content_hash": "cb5cd5d8f9bbd391b0c5a6ed0258802b595ebdce21038ff27bbe3a9d08215f6d",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 安装插件"
+      }
+    },
+    {
+      "segment_id": "1acb9a05",
+      "source_content": "Here are the quick steps to install the plugin from the Bubble editor:",
+      "source_content_hash": "e2112c2ceaf1b09be7bc6b1c096b5348cb159ac881da947c51776f2f792c8ba2",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "通过Bubble编辑器快速安装步骤："
+      }
+    },
+    {
+      "segment_id": "da23c906",
+      "source_content": "- Go to your application's Plugins tab from left navigation.\n- Click on the **Add plugins** button from the top right corner.\n- Search for **BoxyHQ SAML SSO** and click on the **Install** button.",
+      "source_content_hash": "5cddce570793791872089eea961a1dffe0110d4aa804c575fcb02c3d78117b8c",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- 从左导航栏进入应用的Plugins选项卡\n- 点击右上角**Add plugins**按钮\n- 搜索**BoxyHQ SAML SSO**并点击**Install**按钮"
+      }
+    },
+    {
+      "segment_id": "79b2d0b9",
+      "source_content": "## Configure the plugin",
+      "source_content_hash": "47536aa5efad53607babbbbc4931f3ddea201359236658049f5a2d476e8fba5c",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 配置插件"
+      }
+    },
+    {
+      "segment_id": "d9172fa4",
+      "source_content": "Next step is to configure the plugin. Make sure you add the following values in the plugin settings:",
+      "source_content_hash": "a686f73cb681235d66b8a2d92a14ca9b775ff8606fdc1f6fd47f95837c9e9856",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "下一步需配置插件参数，请确保在插件设置中添加以下值："
+      }
+    },
+    {
+      "segment_id": "5da9e02b",
+      "source_content": "- `BoxyHQ Instance URL`: The URL of your SAML Jackson instance (if self-hosting). Otherwise leave it blank and it will default to our hosted solution.\n\n- `Callback URL`: The URL where the user will be redirected after successful authentication with the IdP. This URL should be the same as the URL you have configured while adding the SAML connection in SAML Jackson.\n\n- `Client Secret Verifier`: This is optional. If you have configured a client secret verifier in SAML Jackson, you can add it here. If you have not configured a client secret verifier, you can leave this field blank.",
+      "source_content_hash": "1731cd80d551815236c3782ca35ddd5b836c64573ab5bb15529ca7f82b51911a",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- `BoxyHQ实例URL`：自托管SAML Jackson实例的URL（若使用自托管方案）。否则留空将默认使用我们的托管服务。\n\n- `回调URL`：用户在IdP认证成功后跳转的URL。该URL需与SAML Jackson中配置的SAML连接回调地址一致。\n\n- `客户端密钥校验器`：可选参数。若在SAML Jackson中配置了客户端密钥校验器可在此填写。未配置则留空。"
+      }
+    },
+    {
+      "segment_id": "517051a7",
+      "source_content": "![Configure the plugin](./bubble/step-1.png)",
+      "source_content_hash": "79b3742171819e4bcc479bacebbb1633dbae0ad8f67a738e4a08b54fb77e94fc",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![配置插件](./bubble/step-1.png)"
+      }
+    },
+    {
+      "segment_id": "135468ee",
+      "source_content": "Now you are ready to setup Workflows in your application to use the plugin.",
+      "source_content_hash": "08f659cfe55d6fdac78ed4911aa36e6dd0205a5028cc8881e0b3330be4a4d525",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "完成上述配置后，即可在应用中设置工作流来使用插件功能。"
+      }
+    },
+    {
+      "segment_id": "782c902a",
+      "source_content": "## Plugin Actions",
+      "source_content_hash": "a5155e1ce62bfaa93908b64f661302b4a55dc1f0e4c35f24cab26aa43683f45f",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 插件操作项"
+      }
+    },
+    {
+      "segment_id": "50746522",
+      "source_content": "The plugin consists of the following Actions:",
+      "source_content_hash": "ee8f7bafc8115766fee4f5c8221458194e3a3b285ef4fb553e6f44ef89bc83cf",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "本插件包含以下操作项："
+      }
+    },
+    {
+      "segment_id": "54268405",
+      "source_content": "### Get Authorization URL",
+      "source_content_hash": "66d8b6dac33988a2596aaeb1b427a36c8570146978da515d4311fbb426381fa8",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 获取授权URL"
+      }
+    },
+    {
+      "segment_id": "8af76f3d",
+      "source_content": "This action returns the URL to initiate the SAML SSO authentication flow. After successful authentication with the IdP, the user will be redirected to the `Callback URL` which you can configure in the plugin settings.",
+      "source_content_hash": "20500faf27f39228d572a8e54d22af2041ee4188b8c2e31d31ffd4ad3c2422b7",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "该操作返回用于初始化SAML SSO认证流程的URL。用户通过IdP认证后，将跳转至插件设置中配置的`回调URL`。"
+      }
+    },
+    {
+      "segment_id": "c674e260",
+      "source_content": "### Fetch User Profile",
+      "source_content_hash": "0d72a4b900175fa6282dd8c47065fb455899ffcce076af4f0bc76a1efc02428f",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 获取用户资料"
+      }
+    },
+    {
+      "segment_id": "a44047a5",
+      "source_content": "This action returns the user profile of the authenticated user. This action should be used after the user is redirected to the `Callback URL` after successful authentication with the IdP.",
+      "source_content_hash": "d477c58619a012c4a17c1f287d65970d7c788ab8b8541f5aa65ab4a1e77bdd4f",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "该操作返回已认证用户的资料信息。应在用户通过IdP认证并跳转至`回调URL`后使用。"
+      }
+    },
+    {
+      "segment_id": "cb5b269c",
+      "source_content": "## Setup Workflows",
+      "source_content_hash": "42177b36a9f1e67453d511ad5d88c4c4d4e231c77d13a2f1dd1b9b5a53b4b7fe",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 设置工作流"
+      }
+    },
+    {
+      "segment_id": "b36c6338",
+      "source_content": "Go to your application's **Workflows** tab from left navigation. You need to add 2 workflows to your application to use the plugin:",
+      "source_content_hash": "7a5bdfac86f73a660d52dd48afa52b68fd7fe9071cdf86098a02498453c0d897",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "从左导航栏进入应用的**Workflows**选项卡，需添加2个工作流："
+      }
+    },
+    {
+      "segment_id": "2c1b51df",
+      "source_content": "### Login Workflow",
+      "source_content_hash": "61ca8c157d2225fca493d2cc2da1c786b6d9c3615d8247a55dac36ceae04c743",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 登录工作流"
+      }
+    },
+    {
+      "segment_id": "e536ea0d",
+      "source_content": "This workflow will be triggered when the user clicks on SAML SSO login button on your application.",
+      "source_content_hash": "6802453b109deef4774dda1d78e42165ee27f691bf103fddc912b2f483eef527",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "当用户点击应用中的SAML SSO登录按钮时触发此工作流。"
+      }
+    },
+    {
+      "segment_id": "40158b4b",
+      "source_content": "Choose **BoxyHQ - Get Authorization URL** from the list of Actions.",
+      "source_content_hash": "86510399764b6df6e8255f824321abdb8de27fde0095b3ea0137c2ce78a0e4d3",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "从操作列表中选择**BoxyHQ - 获取授权URL**。"
+      }
+    },
+    {
+      "segment_id": "6ea4c715",
+      "source_content": "![BoxyHQ - Get Authorization URL Action](./bubble/step-2.png)",
+      "source_content_hash": "8154d24a25b967370b9b92ac745d87dbc4393025ded21e8a2d3341a6d4e90389",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![BoxyHQ - 获取授权URL操作](./bubble/step-2.png)"
+      }
+    },
+    {
+      "segment_id": "79ad944d",
+      "source_content": "Add the following values in the Action:",
+      "source_content_hash": "73a2225b48f17393a7d7f6256b08f5b403eb46ba207a97b4046f04284f7cdb52",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "在操作中添加以下参数值："
+      }
+    },
+    {
+      "segment_id": "2eb5ba30",
+      "source_content": "- `tenant`: A multi-tenant enterprise app must attach SSO connections to a tenant identifier. For example, an app can use any of the following as its tenant identifier: `domain`, `organization id`, `team id` or other unique identifier. This value will be used to fetch the SAML connection from SAML Jackson. For example: `boxyhq`.\n\n- `product`: The unique identifier of the your application. This value can be obtained from the SaaS `Instructions` section after you have created a `Product`. If you are self-hosting then this is defined by you when creating the SSO connection. It can be static if you are using a single product with SAML Jackson. For example: `my-bubble-app`.\n\n- `state`: A random string that will be used to verify the state of the request. This value will be passed back to your application in the `Callback URL`. You can use this value to verify the authenticity of the request.",
+      "source_content_hash": "3e52ee637ce61c9fedf114dc1d8de402bd8beba979b1153f6c095e63ca74632e",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- `tenant`（租户标识符）：多租户企业应用必须将SSO连接关联到租户标识符。例如，应用可以使用以下任意一项作为租户标识符：`domain`（域名）、`organization id`（组织ID）、`team id`（团队ID）或其他唯一标识符。该值将用于从SAML Jackson获取SAML连接。示例：`boxyhq`。\n\n- `product`（产品标识符）：您的应用程序的唯一标识符。该值可在SaaS平台的`Instructions`（使用说明）部分创建`Product`（产品）后获取。若为自托管部署，则此值由您在创建SSO连接时定义。若SAML Jackson仅用于单一产品，该值可为静态值。示例：`my-bubble-app`。\n\n- `state`（状态参数）：用于验证请求状态的随机字符串。该值将通过`Callback URL`（回调URL）回传至您的应用，可用于验证请求的真实性。"
+      }
+    },
+    {
+      "segment_id": "147e8550",
+      "source_content": "![BoxyHQ - Get Authorization URL Action](./bubble/step-3.png)",
+      "source_content_hash": "989a52233b67dedcbd3aef8fdcde5f90070cbe2a996629bd7c2de82e2911296c",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![BoxyHQ - Get Authorization URL Action](./bubble/step-3.png)"
+      }
+    },
+    {
+      "segment_id": "883231d4",
+      "source_content": "This action will return `Authorization URL` which you can use to redirect the user to the IdP for authentication.",
+      "source_content_hash": "8883df8df2b5dcd6ed8e9a203da24ee7401addf051eefb1de131c803f94b1618",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "此操作将返回`Authorization URL`（授权URL），可用于将用户重定向至身份提供商（IdP）进行认证。"
+      }
+    },
+    {
+      "segment_id": "6cc549f2",
+      "source_content": "![BoxyHQ - Get Authorization URL Action](./bubble/step-4.png)",
+      "source_content_hash": "c83c87f56678cf5dcf9a923fe20ebe3bc6493c707607055dd4e4655ccd896cc7",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![BoxyHQ - Get Authorization URL Action](./bubble/step-4.png)"
+      }
+    },
+    {
+      "segment_id": "98355e36",
+      "source_content": "### SSO Callback Workflow",
+      "source_content_hash": "23ef4c26abc0dd163dedd1ed8fd8b0a38666cc9b4b62a894b77a30690405dbb9",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### SSO回调工作流"
+      }
+    },
+    {
+      "segment_id": "7736989b",
+      "source_content": "This workflow will be triggered when the user is redirected back to your application after successful authentication with the IdP.",
+      "source_content_hash": "dbbef8b248d9e40b8a29079c3a5e55afa1e2b8dc9a24a8cd2ad0ee1541b248b1",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "当用户在IdP完成认证后被重定向回您的应用时，将触发此工作流。"
+      }
+    },
+    {
+      "segment_id": "6270d577",
+      "source_content": "Make sure you have added a new page in your application and configured the `Callback URL` in the plugin settings to point to this page. For example: `https://my-bubble-app.com/sso-callback`.",
+      "source_content_hash": "1c443308aa044dd6bc00f7e99e052e81b71089f69cd8cb10e9937b2a2eab71e5",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "请确保已在应用中创建新页面，并将插件设置中的`Callback URL`配置指向该页面。示例：`https://my-bubble-app.com/sso-callback`。"
+      }
+    },
+    {
+      "segment_id": "a1fa5396",
+      "source_content": "The callback URL will contain the following query parameters:",
+      "source_content_hash": "51ab889dc3895c68b8079ad18eed65ac1c323b283c7708ffddffe262e2f9a68c",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "回调URL将包含以下查询参数："
+      }
+    },
+    {
+      "segment_id": "cc9271fb",
+      "source_content": "- `code`: The authorization code that can be used to fetch the user profile from SAML Jackson.\n- `state`: The state value that was passed in the `Login Workflow`.",
+      "source_content_hash": "e08c46bf1d608917aeeb4978056ca645ceea82aa84718a307d45ecde8466bbb5",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- `code`：授权码，可用于从SAML Jackson获取用户资料。\n- `state`：在`登录工作流`中传递的状态值。"
+      }
+    },
+    {
+      "segment_id": "74dd7937",
+      "source_content": "Here is an example of the callback URL: `https://my-bubble-app.com/sso-callback?code=52d7d591ba2c2e6efa4a8595edf9ac718b3658a7&state=random-state`",
+      "source_content_hash": "ad9c78fefa28bd0020a6d8ae944c8634c6106f21874b080a0bf4f5d11434416d",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "回调URL示例：`https://my-bubble-app.com/sso-callback?code=52d7d591ba2c2e6efa4a8595edf9ac718b3658a7&state=random-state`"
+      }
+    },
+    {
+      "segment_id": "61dc1473",
+      "source_content": ":::info\nYou can verify the authenticity of the request by comparing the `state` value in the query parameters with the `state` value that was passed in the `Login Workflow`. If the values of the `state` match, you can proceed to fetch the user profile from SAML Jackson.\n\nThis verification is out of scope of this plugin. You can skip this step if you don't want to verify the authenticity of the request. However, it is recommended to verify the authenticity of the request.\n:::",
+      "source_content_hash": "6173c46f301625979a89e6feff3e3d300d822771dfa2ca99a247c1e95bbc4b4d",
+      "node_type": "containerDirective",
+      "translatable": true,
+      "translations": {
+        "zh-CN": ":::info\n可通过比较查询参数中的`state`值与`登录工作流`传递的`state`值来验证请求真实性。若两者匹配，则可继续从SAML Jackson获取用户资料。\n\n此验证步骤超出本插件范围。若无需验证请求真实性可跳过此步骤，但建议进行验证。\n:::"
+      }
+    },
+    {
+      "segment_id": "82e90254",
+      "source_content": "Let's add the following Actions to the `SSO Callback Workflow`:",
+      "source_content_hash": "9f07528dd3db6457e4b072758c5ef626609aadd27fe1c4a4e706e0c4a8e880c0",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "请在`SSO回调工作流`中添加以下操作："
+      }
+    },
+    {
+      "segment_id": "e06c002e",
+      "source_content": "#### Action: BoxyHQ - Fetch User Profile",
+      "source_content_hash": "a2ed9a8f0ff2472b99d669c2ddf850e7d597512c0d5533a8ae67ed6fd88b4077",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "#### 操作：BoxyHQ - 获取用户资料"
+      }
+    },
+    {
+      "segment_id": "25212439",
+      "source_content": "Choose **BoxyHQ - Fetch User Profile** from the list of Actions.",
+      "source_content_hash": "d00d2d4230d5aa302708509769ce4cb77ff1301f0c2ca9254f239ea2696bfa89",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "从操作列表中选择**BoxyHQ - Fetch User Profile**。"
+      }
+    },
+    {
+      "segment_id": "d79a4831",
+      "source_content": "Add the following values in the Action:",
+      "source_content_hash": "73a2225b48f17393a7d7f6256b08f5b403eb46ba207a97b4046f04284f7cdb52",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "在操作中配置以下值："
+      }
+    },
+    {
+      "segment_id": "2838eb68",
+      "source_content": "`code`: The authorization code that was passed in the query parameters. You can use the dynamic value `Get data from page URL` to fetch the value of the `code` query parameter.",
+      "source_content_hash": "4cdc7350e3e1fe4624c6f955564241c24ba086b0d0f63fe162c322ae3fee827d",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "`code`：查询参数中传递的授权码。可使用动态值`Get data from page URL`获取`code`查询参数的值。"
+      }
+    },
+    {
+      "segment_id": "4be28ed1",
+      "source_content": "The Action will return the following values:",
+      "source_content_hash": "afb887eff7e2af404e42cfcb4c507e52144e35bbc40c6e830b3bee8f846f57df",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "该操作将返回以下值："
+      }
+    },
+    {
+      "segment_id": "664ad8b1",
+      "source_content": "- `profile id` - The unique identifier of the user in IdP.\n- `profile email` - The email address of the user.\n- `profile first name` - The first name of the user.\n- `profile last name` - The last name of the user.\n- `requested tenant` - The tenant identifier that was passed in the `Login Workflow`.\n- `requested product` - The product identifier that was passed in the `Login Workflow`.\n- `profile raw attributes` - The raw attributes that was returned by the IdP. This value will be a JSON string.",
+      "source_content_hash": "aa467e4be1efc6faceed09443d3d1093c2654bdfb562a5a5e414308de8895bfc",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- `profile id` - 用户在IdP中的唯一标识符\n- `profile email` - 用户的电子邮件地址\n- `profile first name` - 用户的名字\n- `profile last name` - 用户的姓氏\n- `requested tenant` - `登录工作流`中传递的租户标识符\n- `requested product` - `登录工作流`中传递的产品标识符\n- `profile raw attributes` - IdP返回的原始属性（JSON字符串格式）"
+      }
+    },
+    {
+      "segment_id": "1b4de6df",
+      "source_content": "![BoxyHQ - Fetch User Profile Action](./bubble/step-5.png)",
+      "source_content_hash": "80e6f1a0d4b05f96c78093b5d36fbf5821476abb95c8cea96ebdd3aca9fc6daa",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![BoxyHQ - Fetch User Profile Action](./bubble/step-5.png)"
+      }
+    },
+    {
+      "segment_id": "37fca32e",
+      "source_content": "#### Action: Create an user account for someone else",
+      "source_content_hash": "866616676fed13cf755384b5ba89f41c317fa59f5857d7466678fcbc6a740641",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "#### 操作：为他人创建用户账户"
+      }
+    },
+    {
+      "segment_id": "a8610918",
+      "source_content": "You can use the **Create an user account for someone else** Action to create a new user account in your application. This Action will create a new user account in your application if the user does not already exist. If the user already exists, it will update the user account with the new values.",
+      "source_content_hash": "f7c8d11fdc2cf984123c3c0d736a6b6e8096344baf1828b3aaccf4cbea9f83dd",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "您可以使用**为他人创建用户账户**操作在您的应用中创建新用户账户。若用户不存在，此操作将新建账户；若用户已存在，则更新其账户信息。"
+      }
+    },
+    {
+      "segment_id": "a6c928a1",
+      "source_content": "Make sure you checked the **Return the user if the account already exists** checkbox in the Action.",
+      "source_content_hash": "3bbcba14312bca5474dc1d739ee1b5d237742a0fb21969a49ad13c239a86e309",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "请确保在操作中勾选**若账户已存在则返回该用户**复选框。"
+      }
+    },
+    {
+      "segment_id": "b6152880",
+      "source_content": "You can configure the values as per your requirements.",
+      "source_content_hash": "d9fad98fe909c0b4f93d7980aa91fcce71f7971b56f1566784bf32a53f5f0613",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "您可根据需求配置相关参数值。"
+      }
+    },
+    {
+      "segment_id": "b9331170",
+      "source_content": "![BoxyHQ - Get Authorization URL Action](./bubble/step-6.png)",
+      "source_content_hash": "3fc87493518d255459eb76504c8dec725bd149147532835d0280230c828ec302",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![BoxyHQ - 获取授权URL操作](./bubble/step-6.png)"
+      }
+    },
+    {
+      "segment_id": "2bb63d77",
+      "source_content": "#### Action: Assign a temp password to a user",
+      "source_content_hash": "2c5946e7eabcd780b9278ef98cb286466c0d6237e67bd53c40dec7e6c14ca9b1",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "#### 操作：为用户分配临时密码"
+      }
+    },
+    {
+      "segment_id": "53aa2b95",
+      "source_content": "Bubble requires a password to be set for a user to login to the application. To overcome this limitation, we can set a temporary password for the user account and use that password to login to the application. You can choose the **Assign a temp password to a user** Action to set a temporary password for the user account.",
+      "source_content_hash": "c75bf5a018d025692e47c2ba645065039984871bdb3dfbf5b49598c5edb0f3ac",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "Bubble平台要求用户必须设置密码才能登录应用。为解决此限制，我们可为用户账户设置临时密码用于登录。选择**为用户分配临时密码**操作即可设置临时密码。"
+      }
+    },
+    {
+      "segment_id": "c766290e",
+      "source_content": "#### Action: Log the user in",
+      "source_content_hash": "c0fdf9b9450a5add5c00810de709ac57ed94d13bbc2b372544854f149486e8b2",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "#### 操作：用户登录"
+      }
+    },
+    {
+      "segment_id": "5c7d994c",
+      "source_content": "You can use the **Log the user in** Action to login the user to your application.",
+      "source_content_hash": "596ad56cce109235b55487dba226dc1f0fad850fdf671c99d83223260c0c0f83",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "使用**用户登录**操作可使该用户登录您的应用。"
+      }
+    },
+    {
+      "segment_id": "1ecf0882",
+      "source_content": "Add the following values in the Action:",
+      "source_content_hash": "73a2225b48f17393a7d7f6256b08f5b403eb46ba207a97b4046f04284f7cdb52",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "在操作中添加以下参数值："
+      }
+    },
+    {
+      "segment_id": "1fe5236e",
+      "source_content": "- `Email`: The email address of the user. You can use the dynamic value `profile email` to fetch the email address from the `Fetch User Profile` Action.\n- `Password`: The temporary password that was set for the user account. You can use the dynamic value `temp password` to fetch the temporary password from the `Assign a temp password to a user` Action.",
+      "source_content_hash": "3902c1373f4915801fab94b16aba7a01a3f253c7e8a39ba6684ba2c70668dfe0",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- `邮箱`：用户邮箱地址。可通过动态值`profile email`从`获取用户资料`操作中提取。\n- `密码`：为用户账户设置的临时密码。可通过动态值`temp password`从`分配临时密码`操作中提取。"
+      }
+    },
+    {
+      "segment_id": "9c2ab4c8",
+      "source_content": "#### Action: Redirect to a page",
+      "source_content_hash": "b252345647199dd7a12669770368ae8f3c52750b4e585caffd6d3cb6271d8f46",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "#### 操作：跳转至页面"
+      }
+    },
+    {
+      "segment_id": "a9c2a503",
+      "source_content": "You can use the **Redirect to a page** Action to redirect the user to an authenticated page in your application.",
+      "source_content_hash": "72d4b4b62bf4e9761e43593e9fb7cd657e4426232b1dc928bdf70aaeaf126a11",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "使用**跳转至页面**操作可将用户重定向至应用内已认证的页面。"
+      }
+    },
+    {
+      "segment_id": "73776161",
+      "source_content": "## Next Steps",
+      "source_content_hash": "94792dd5969e771cc2c3d1210355ca64b0d1b19f0b908b4aec6b19ca3dbde26a",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 后续步骤"
+      }
+    },
+    {
+      "segment_id": "f7e6e884",
+      "source_content": "Please reach out to our team for any questions or help with the setup. We are happy to help!",
+      "source_content_hash": "6bc9ebd9008a9e67ee23f1c69ed245a37b4acb1bf6d92bca64c66b9a5dbe0ef1",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "如有任何问题或需要协助配置，请联系我们的团队，我们将竭诚为您服务！"
+      }
+    }
+  ],
+  "target_i18n_subpath": "docusaurus-plugin-content-docs-guides/current/jackson/integrations/bubble.md",
+  "last_updated_timestamp": "2025-06-08T18:49:09.302162+00:00",
+  "schema_version": "1.0",
+  "translated_versions": {
+    "zh-CN": "7b3574ed23b7fd3e9a4c988366d0f7a71f8699f1bd969b2bb5419314f4949bdd"
+  }
+}

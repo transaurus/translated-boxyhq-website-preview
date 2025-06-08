@@ -1,0 +1,282 @@
+{
+  "source_file_path_relative_to_docusaurus_root": "docs/directory-sync/webhooks.md",
+  "source_file_content_hash": "3816696897c99b86d95248b04312c5fa16c8de2093866a6ae197d22d25bab8d2",
+  "segments": [
+    {
+      "segment_id": "58cfcc64",
+      "source_content": "---\ntitle: Directory Sync Webhooks\nsidebar_label: Webhooks\n---",
+      "source_content_hash": "47edfde6f35b5fd64305629153358123d1af5941abb82e0ad3250eff7acaf213",
+      "node_type": "yaml",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_58cfcc64"
+      }
+    },
+    {
+      "segment_id": "4d1292be",
+      "source_content": "import Tabs from '@theme/Tabs';\nimport TabItem from '@theme/TabItem';",
+      "source_content_hash": "86702643a5c3bdf74257ff6062535897129ed9144c4f5b70edfe338fef3e5c73",
+      "node_type": "mdxjsEsm",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_4d1292be"
+      }
+    },
+    {
+      "segment_id": "d912d376",
+      "source_content": "# Webhooks",
+      "source_content_hash": "9e09fffc3a27a106f7f711513a02643bfbc807af2aeef5a72342bb2482a51b51",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "# Webhook 网络钩子"
+      }
+    },
+    {
+      "segment_id": "8ac585fb",
+      "source_content": "A webhook is an HTTP request, triggered by an event in a source system and sent to a destination system (Eg: your app), often with a payload of data.",
+      "source_content_hash": "4cd058f61eb7cd48c0d0b9071fe41ed6a2da6c868489ef94b6f3afcb4148b12a",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "Webhook 是一种 HTTP 请求，由源系统中的事件触发并发送到目标系统（例如您的应用程序），通常携带数据负载。"
+      }
+    },
+    {
+      "segment_id": "180bddb1",
+      "source_content": "SAML Jackson use webhooks to notify your application any time changes are made to directory users and groups. You can use webhooks to trigger actions in your application, such as creating a new user in your application, or updating a user in your application based on the changes made in the directory.",
+      "source_content_hash": "b0c24a4e48e5cf5290d07557d5c816393bd7c9ed4f8cffeb8b97675d3b1fd4e4",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "SAML Jackson 使用 webhook 在目录用户和组发生变更时通知您的应用程序。您可以通过 webhook 触发应用内的操作，例如根据目录中的变更在您的应用中创建新用户或更新用户信息。"
+      }
+    },
+    {
+      "segment_id": "e14c9928",
+      "source_content": "## Configure Webhooks",
+      "source_content_hash": "d18db06901f3cfeb1ae0f2f41af01bbce510673d3b8bd7cb7827b53e6c28023e",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 配置 Webhook"
+      }
+    },
+    {
+      "segment_id": "42ad8e83",
+      "source_content": "SAML Jackson allows you to configure a webhook and secret while creating a directory sync connection either in the Admin Portal or the API. You can change the webhook and secret at any time.",
+      "source_content_hash": "ebf7e0aa97eb27df142ddfc74f34f3d5665a888f87816eb9b3a9a05d30800417",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "SAML Jackson 允许您在创建目录同步连接时（通过管理门户或API）配置 webhook 地址和密钥。您可以随时修改这些配置。"
+      }
+    },
+    {
+      "segment_id": "034de896",
+      "source_content": "- [Admin Portal](../admin-portal/directory-sync)\n- [API Reference](api-reference#create-a-new-directory)",
+      "source_content_hash": "e512dacc9a2180ab9ad154412a556a4be53758eddc0ead9b64b6332d10320289",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- [管理门户](../admin-portal/directory-sync)\n- [API参考](api-reference#create-a-new-directory)"
+      }
+    },
+    {
+      "segment_id": "63622bf0",
+      "source_content": "## Receive Events",
+      "source_content_hash": "1b241bfe2a1aca3fbcb3efff5dba9179550a42ea4ece087a7281a624e1f0c933",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 接收事件"
+      }
+    },
+    {
+      "segment_id": "98cfbd53",
+      "source_content": "SAML Jackson will make a POST request to your webhook endpoint when a change is made to a directory user or group. Your webhook endpoint should be able to receive the webhook request and respond with a 200 status code.",
+      "source_content_hash": "c0eb2c7c0225da135c10f065c885d195ac4aa87cd3df02cbabe2f9d0badcc47d",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "当目录用户或组发生变更时，SAML Jackson 会向您的 webhook 端点发送 POST 请求。您的 webhook 端点应能接收请求并返回 200 状态码。"
+      }
+    },
+    {
+      "segment_id": "ccc88b4c",
+      "source_content": "You can start receiving events in your app using the below steps:",
+      "source_content_hash": "61f2448fdf418b54fc5d6c2cb1b900f8022cf73c468a263b0359e1a1af925f54",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "通过以下步骤开始接收事件："
+      }
+    },
+    {
+      "segment_id": "1d13125b",
+      "source_content": "- Create a webhook endpoint as an HTTP endpoint (URL) on your server.\n- Create a directory sync connection and configure a webhook endpoint.\n- Configure the SCIM app on your Identity Provider.\n- Handle the webhook request and respond with a 200 status code.",
+      "source_content_hash": "fb4bc8c307fe4ff25aee211713367cab56955ce6c8a2934dd633e5c66f7a6b89",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- 在服务器上创建 HTTP 端点（URL）作为 webhook 接收地址\n- 创建目录同步连接并配置 webhook 端点\n- 在身份提供商处配置 SCIM 应用\n- 处理 webhook 请求并返回 200 状态码"
+      }
+    },
+    {
+      "segment_id": "4daf5cdd",
+      "source_content": "To see the full list of events, please see the [Events and Types](events) page.",
+      "source_content_hash": "c2d9a583e817ecdf7daa94d72e868d2c23a34b79eee0542f4d12abb03a50cdb6",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "完整事件列表请参阅[事件与类型](events)页面。"
+      }
+    },
+    {
+      "segment_id": "bdc231b1",
+      "source_content": "Here is a sample webhook request look like:",
+      "source_content_hash": "100e84fa3fa0367bd4a4beac8e4c41930e8748158a571668fb589261a2a198df",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "以下是典型的 webhook 请求示例："
+      }
+    },
+    {
+      "segment_id": "be2d5397",
+      "source_content": "```json\nPOST /your-webhook-endpoint\nContent-Type: application/json\nBoxyHQ-Signature: t=xxx,s=xxxx\n\n{\n  \"directory_id\": \"58b5cd9dfaa39d47eb8f5f88631f9a629a232016\",\n  \"event\": \"user.created\",\n  \"tenant\": \"boxyhq\",\n  \"product\": \"jackson\",\n  \"data\": {\n    \"id\": \"038e767b-9bc6-4dbd-975e-fbc38a8e7d82\",\n    \"first_name\": \"Deepak\",\n    \"last_name\": \"Prabhakara\",\n    \"email\": \"deepak@boxyhq.com\",\n    \"active\": true,\n    \"raw\": {...}\n  }\n}\n```",
+      "source_content_hash": "da4cda9d81aeaa39ace9704894ee5abc72fc86b14779d587633509a1e89cb552",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_be2d5397"
+      }
+    },
+    {
+      "segment_id": "7cde057a",
+      "source_content": ":::caution\nIf the webhook request fails, SAML Jackson will not retry the webhook request. A log will be created in the SAML Jackson Admin Portal if you've enabled webhook event logging.\n:::",
+      "source_content_hash": "70292628499e0d841f3328308d88632b3e78ba831e69a425aca6f75e2af897ba",
+      "node_type": "containerDirective",
+      "translatable": true,
+      "translations": {
+        "zh-CN": ":::caution\n若 webhook 请求失败，SAML Jackson 不会自动重试。如已启用 webhook 事件日志，管理门户中将生成相关日志记录。\n:::"
+      }
+    },
+    {
+      "segment_id": "c431704b",
+      "source_content": "## Secure Webhooks",
+      "source_content_hash": "b2b1770d2de5b1bcc5c9c99f31060a2656bf68d875988601b3fa4ab4fe493730",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## Webhook 安全验证"
+      }
+    },
+    {
+      "segment_id": "79ad944d",
+      "source_content": "Use the webhook signature (**BoxyHQ-Signature**) to verify the webhook request is from SAML Jackson. The signature is generated using the **webhook secret** you configured in the directory sync connection.",
+      "source_content_hash": "c6827b4e175669ea044888896e00d8e9edc0469d74ab8ee21e95216a72938b22",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "使用请求头中的签名（**BoxyHQ-Signature**）验证 webhook 请求是否来自 SAML Jackson。该签名通过目录同步连接中配置的**webhook密钥**生成。"
+      }
+    },
+    {
+      "segment_id": "531437ca",
+      "source_content": "Signature contains comma separated values of the following:",
+      "source_content_hash": "62e6170e8e2c486a2d1b161125db21936e905f35f6d721c74364f7b31e7ed3c7",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "签名包含以下逗号分隔的值："
+      }
+    },
+    {
+      "segment_id": "645e08e3",
+      "source_content": "- **t** The timestamp of the webhook request.\n- **s** The signature of the webhook request.",
+      "source_content_hash": "356ecab7b803e2391b519f4631b63c3f9b15090be0a903a51efe102ae02f953a",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- **t** 请求时间戳\n- **s** 请求签名"
+      }
+    },
+    {
+      "segment_id": "e7772088",
+      "source_content": "An example of the webhook signature is below:",
+      "source_content_hash": "245d8c2e663d85f05c04206a9ef3d8b5438b42e945e2c30ea07f22a2cd46333c",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "签名示例如下："
+      }
+    },
+    {
+      "segment_id": "bc137a19",
+      "source_content": "```\nBoxyHQ-Signature: t=1545010989801,s=xxxx\n```",
+      "source_content_hash": "f9a7f5ef670844bc50a42b18ae59291127dd795e597930f42a97dfe5d43d8fb2",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_bc137a19"
+      }
+    },
+    {
+      "segment_id": "93028a4e",
+      "source_content": "## Verify Webhooks Signature",
+      "source_content_hash": "096ee24d22ffdc1b979c3338e04c3c547c6166d7f525df018cdabcf9a9f8bf50",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 验证 Webhook 签名"
+      }
+    },
+    {
+      "segment_id": "e8e162a9",
+      "source_content": "You can verify the webhook signature by using the following steps:",
+      "source_content_hash": "1e01f9661e58b5138f146d5c30f4be72add7601ad261e806a25a88c0fc61baa8",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "按以下步骤验证签名有效性："
+      }
+    },
+    {
+      "segment_id": "5efe9dee",
+      "source_content": "- Extract the **t** and **s** values from the webhook signature.\n- Create the signed payload string by concatenating:\n  - The timestamp (t)\n  - The character `.`\n  - The actual JSON payload\n- Compute the `HMAC-SHA256` hash of the signed payload string using your webhook secret.\n- Compare the signature in the request header with the computed signature.",
+      "source_content_hash": "02f289b66d773c833484aaac9ad09d31a129f158ec0bc1b72f144615e21b6705",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- 从签名中提取 **t** 和 **s** 值\n- 拼接签名字符串：\n  - 时间戳 (t)\n  - 字符 `.`\n  - 原始 JSON 负载\n- 使用 webhook 密钥计算签名字符串的 `HMAC-SHA256` 哈希值\n- 对比请求头中的签名与计算得到的签名"
+      }
+    },
+    {
+      "segment_id": "74dd7937",
+      "source_content": "Once the signature is verified, you can use the webhook payload to perform any action in your application.",
+      "source_content_hash": "f15512efbd40e3a38e8b6ee1c91148f121fd366644348a723af90ea8bc3b1236",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "验证通过后，即可使用 webhook 负载数据执行应用内操作。"
+      }
+    },
+    {
+      "segment_id": "5dd0e3a7",
+      "source_content": "```javascript showLineNumbers\n// Your webhook secret\nconst secret = 'your-secret-here';\n\n// The signature header from the webhook request.\nconst signatureHeader =\n  't=1657016083300,s=9ece981128a8f2a96f95e3d0be68c37b825d5c15f5b8982e0b7e198a76621866';\n\n// JSON body from the webhook request.\nconst body = {...}\n\nconst [t, s] = signatureHeader.split(',');\n\nconst timestamp = t.split('=')[1];\nconst signature = s.split('=')[1];\n\nconst signedPayload = `${timestamp}.${JSON.stringify(body)}`;\n\nconst expectedSignature = crypto\n  .createHmac('sha256', secret)\n  .update(signedPayload)\n  .digest('hex');\n\n// Compare the expectedSignature to the signature\nif(signature === expectedSignature) {\n  // The webhook request is valid\n} else {\n  // The webhook request is invalid\n}\n```",
+      "source_content_hash": "17d0a39969ac94a14f0df10b1514e4e1e4ea62dc28c8379cbcf8a2df0441fb12",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_5dd0e3a7"
+      }
+    }
+  ],
+  "target_i18n_subpath": "docusaurus-plugin-content-docs/current/directory-sync/webhooks.md",
+  "last_updated_timestamp": "2025-06-08T18:49:09.321332+00:00",
+  "schema_version": "1.0",
+  "translated_versions": {
+    "zh-CN": "3816696897c99b86d95248b04312c5fa16c8de2093866a6ae197d22d25bab8d2"
+  }
+}

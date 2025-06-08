@@ -1,0 +1,182 @@
+{
+  "source_file_path_relative_to_docusaurus_root": "blog/2024-03-08-achieving-seamless-sso-integration-why-blocksurvey-selected-boxyhq.md",
+  "source_file_content_hash": "1de2a42ed3e7fbd520f45c058f12c0a88e1fdea29912fa636c1768f12998cb06",
+  "segments": [
+    {
+      "segment_id": "58cfcc64",
+      "source_content": "---\ndescription: \"Explore how BlockSurvey enhanced platform security with BoxyHQ's SSO, boosting client trust and streamlining access for users.\"\nslug: achieving-seamless-sso-integration-why-blocksurvey-selected-boxyhq\ntitle: 'Achieving Seamless SSO Integration: Why BlockSurvey Selected BoxyHQ'\ntags_disabled: [security, sso, enterpriseready]\nimage: /images/success-stories/blocksurvey-case-study.png\nhide_table_of_contents: true\nauthor: Schalk Neethling\nauthor_title: Customer Success, Community, DevRel - @BoxyHQ\nauthor_url: https://github.com/schalkneethling\nauthor_image_url: /images/authors/schalk.jpg\n---",
+      "source_content_hash": "7e7f0a9d101fed7da2acf1908d1dad992f23c853034fdecae8b71ae162ac86ef",
+      "node_type": "yaml",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_58cfcc64"
+      }
+    },
+    {
+      "segment_id": "17011a71",
+      "source_content": "import FeaturedQuote from \"../src/components/FeaturedQuote\";\nimport LearnMoreCTA from \"../src/components/ctas/LearnMoreCTA\";\nimport SignupCTA from \"../src/components/ctas/SignupCTA\";",
+      "source_content_hash": "a28b4a3bd17e93ac6f365d297f206a7a21f2f6a9d7fe893f83bccc52218ee4ee",
+      "node_type": "mdxjsEsm",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_17011a71"
+      }
+    },
+    {
+      "segment_id": "39b3772c",
+      "source_content": "Data privacy has become a paramount concern, BlockSurvey stands out as a beacon of trust and security. Committed to empowering users with complete ownership over their data, BlockSurvey faced the challenge of ensuring enterprise-level security and privacy for its customers. The solution? BoxyHQ’s Single Sign-On powered by the [open-source SAML Jackson](https://github.com/boxyhq/jackson).",
+      "source_content_hash": "83f5a0bea3d9f9fc2acb0bf63d51dc813e74b258a0b1ac4bc770fef2af9d551e",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "在数据隐私成为首要关注焦点的时代，BlockSurvey凭借其可信度与安全性脱颖而出。该平台致力于让用户完全掌控自身数据，但面临如何为企业客户提供高级别安全与隐私保障的挑战。最终他们选择了由[开源项目SAML Jackson](https://github.com/boxyhq/jackson)驱动的BoxyHQ单点登录解决方案。"
+      }
+    },
+    {
+      "segment_id": "8f488ab5",
+      "source_content": "<LearnMoreCTA label=\"Learn more about BlockSurvey\" url=\"https://blocksurvey.io/\" />",
+      "source_content_hash": "6e51e4df039cec1879d14d5c31ee0ab7a479da4f2861d75a10165a668dd2e0d9",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_8f488ab5"
+      }
+    },
+    {
+      "segment_id": "63622bf0",
+      "source_content": "## What was the motivation to implement Enterprise SSO?",
+      "source_content_hash": "b54c756ef15108a21d9974ed1dfc28782cfa0cdb53c7b76b8b597d2e0b7c7c31",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 实施企业级SSO的动机是什么？"
+      }
+    },
+    {
+      "segment_id": "98cfbd53",
+      "source_content": "**Raja Ilayaperumal (BlockSurvey):** We were motivated to implement Enterprise SSO to enhance our platform's security and privacy. We aim to provide users with a seamless and secure login experience, protecting sensitive data collected through surveys. This step was crucial for fostering trust with their clients, particularly in sectors where data privacy is paramount.",
+      "source_content_hash": "22c41b55195ca4bb554f9b9ab01923be542a39630fcb4e862cceb965dd4d56ef",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "**Raja Ilayaperumal (BlockSurvey):** 我们实施企业级SSO的动机在于提升平台安全性和隐私保护能力。通过为调查问卷收集的敏感数据提供无缝且安全的登录体验，这一举措对建立客户信任至关重要——尤其是在数据隐私敏感的行业领域。"
+      }
+    },
+    {
+      "segment_id": "79b2d0b9",
+      "source_content": "## What factors led you to select BoxyHQ (SAML Jackson) for this implementation?",
+      "source_content_hash": "092838f0c0fcf3162b7c78d502bf8f672dae335e8110791c37c98a70c5238687",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 选择BoxyHQ（SAML Jackson）进行实施的关键因素是什么？"
+      }
+    },
+    {
+      "segment_id": "d9172fa4",
+      "source_content": "**Raja (BlockSurvey):** We chose BoxyHQ (SAML Jackson) for its Enterprise SSO implementation due to BoxyHQ's flexibility, ease of integration with SuperTokens, and ability to meet specific security and privacy needs. BoxyHQ’s exceptional documentation and the choice to self-host the solution using our infrastructure made BoxyHQ an obvious choice for us.",
+      "source_content_hash": "7e99d709d25a4cba8a4d25807abb34ac44d9757cf64bd917540fc952015bcef9",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "**Raja (BlockSurvey):** 我们选择BoxyHQ（SAML Jackson）实施企业SSO，主要基于其与SuperTokens的灵活集成能力、满足特定安全隐私需求的特性。BoxyHQ出色的技术文档支持以及允许使用自有基础设施自托管方案的特性，使其成为我们的不二之选。"
+      }
+    },
+    {
+      "segment_id": "599822a5",
+      "source_content": "<SignupCTA campaign=\"blog-blocksurvey\" />",
+      "source_content_hash": "9602fe59402e6ce36e0543ca869207a90e30e3aab67eb61f38dc3926e7f986a1",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_599822a5"
+      }
+    },
+    {
+      "segment_id": "b25f21be",
+      "source_content": "## Can you elaborate on the direct benefits and second-order benefits you observed following the adoption of BoxyHQ?",
+      "source_content_hash": "74136616c541eda994f15ebeafa303af065f915292c24b1be3aa0985b6d6b076",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 能否详细说明采用BoxyHQ后观察到的直接效益与衍生效益？"
+      }
+    },
+    {
+      "segment_id": "7499a4e7",
+      "source_content": "**Raja (BlockSurvey):** Following the adoption of BoxyHQ's solution, we observed direct benefits such as enhanced security and a streamlined login process. Additionally, offering single sign-on to our enterprise clients boosts their confidence in adopting and utilizing our platform. This, in turn, increases client engagement, contributing to our business growth and reputation in the market. In addition, our choice to offer SSO and use BoxyHQ has since empowered us to confidently encourage our clients to adopt SSO, a transition that is actively taking place.",
+      "source_content_hash": "32775444e9e6689d917178cf9dd80421bfeb14147edc98d55272915956c55167",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "**Raja (BlockSurvey):** 采用BoxyHQ解决方案后，我们获得了安全性提升和登录流程简化等直接效益。更重要的是，向企业客户提供单点登录功能显著增强了他们采用我们平台的信心，从而提升客户参与度，推动业务增长并增强市场声誉。此外，通过BoxyHQ实现SSO后，我们现在能更有信心地推动客户采用SSO方案，目前这一转型正在积极进行中。"
+      }
+    },
+    {
+      "segment_id": "109ace10",
+      "source_content": "## In terms of business impact, how much time did it save BlockSurvey?",
+      "source_content_hash": "78d773f443988edb72eb67bdebf42c69f39937e107ea6820aed8d7448129c43e",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 从商业影响来看，BoxyHQ为BlockSurvey节省了多少时间？"
+      }
+    },
+    {
+      "segment_id": "135468ee",
+      "source_content": "**Raja (BlockSurvey):** Thanks to the swift and proactive assistance from the BoxyHQ team, our first SSO integration and client onboarding went smoothly. While we did encounter a minor hiccup, as one does when working with large and complex software implementations, the BoxyHQ team quickly assisted and resolved the issue, allowing us to launch the feature on time.",
+      "source_content_hash": "0eabc6d0ef921c880f83a00bb7fca02a35155f55362ee4f8783d9de6d9e85fff",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "**Raja (BlockSurvey):** 得益于BoxyHQ团队快速主动的支持，我们首次SSO集成和客户 onboarding 过程非常顺利。虽然在处理大型复杂软件实施时难免遇到小问题，但BoxyHQ团队迅速协助解决了故障，确保我们如期上线该功能。"
+      }
+    },
+    {
+      "segment_id": "1641af73",
+      "source_content": "<FeaturedQuote personName=\"Raja Ilayaperumal\" personRole=\"Co-Founder & CTO - BlockSurvey\" pictureSrc=\"/images/success-stories/raja-blocksurvey\">\n BoxyHQ’s SSO is a key factor in engaging enterprise clients. This functionality boosts their confidence in adopting and utilizing our platform. With our inaugural client already onboarded, we're thrilled by the positive reception.\n</FeaturedQuote>",
+      "source_content_hash": "118714a34d4451b5d7445392b14318a6cf51e685eb339b6d708ba087891d2394",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_1641af73"
+      }
+    },
+    {
+      "segment_id": "54268405",
+      "source_content": "## Have you seen any significant growth in acquiring enterprise clients as a direct result of utilizing SSO?",
+      "source_content_hash": "d6806c8e9ed7121e803d694246396fac36930b9e220115a2cbbebdd17afec87b",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 使用SSO是否直接带来了企业客户数量的显著增长？"
+      }
+    },
+    {
+      "segment_id": "8af76f3d",
+      "source_content": "**Raja (BlockSurvey):** The implementation of BoxyHQ's solution has boosted client confidence in adopting and utilizing our platform. With our inaugural client already successfully onboarded and expressing positive reception, we anticipate a substantial and lasting impact on our business in the long run. As we continue to onboard organizations, BoxyHQ's role in our expansion is indispensable, underscoring its significance in our growth strategy.",
+      "source_content_hash": "e3d94de7b2ea80d05b6c3f0e53adf75bcb7588393b234157d35b6b63037c0bfa",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "**Raja (BlockSurvey):** BoxHQ解决方案的实施极大增强了客户采用我们平台的信心。随着首个客户成功入驻并获得积极反馈，我们预期这将对企业产生深远持久的积极影响。在持续接入更多组织的过程中，BoxyHQ对我们的扩张战略具有不可替代的作用。"
+      }
+    },
+    {
+      "segment_id": "2f83a0f4",
+      "source_content": "<LearnMoreCTA label=\"Read BlockSurvey's Success Story\" newWindow={false} url=\"/success-stories/a-secure-privacy-first-ai-driven-data-collection-platform-blocksurvey\" />",
+      "source_content_hash": "a490c8b995a1f468dde9b5ca7040714dece8162324c50a0086c913dece6ef4e6",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_2f83a0f4"
+      }
+    }
+  ],
+  "target_i18n_subpath": "docusaurus-plugin-content-blog/2024-03-08-achieving-seamless-sso-integration-why-blocksurvey-selected-boxyhq.md",
+  "last_updated_timestamp": "2025-06-08T18:49:09.313486+00:00",
+  "schema_version": "1.0",
+  "translated_versions": {
+    "zh-CN": "1de2a42ed3e7fbd520f45c058f12c0a88e1fdea29912fa636c1768f12998cb06"
+  }
+}

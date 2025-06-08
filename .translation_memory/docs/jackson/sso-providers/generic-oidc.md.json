@@ -1,0 +1,62 @@
+{
+  "source_file_path_relative_to_docusaurus_root": "docs/jackson/sso-providers/generic-oidc.md",
+  "source_file_content_hash": "2581a69e5e5bd3749d1bcaa2df5e3a61655036a6d42e36544a8d64af1d09e6f4",
+  "segments": [
+    {
+      "segment_id": "58cfcc64",
+      "source_content": "---\ntitle: Set up app in your OpenID Connect Identity Provider\nsidebar_label: OpenID Connect Provider\n---",
+      "source_content_hash": "f8a0a725498c28662acd3bd7293d58647df8a2d4725dd78203fbe10ced636aae",
+      "node_type": "yaml",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_58cfcc64"
+      }
+    },
+    {
+      "segment_id": "b3de8742",
+      "source_content": "# OIDC Provider setup",
+      "source_content_hash": "2f3752ea99f7cad34118ec5d94f8a813767c4ddc47ee9afaa552bfc0c80836f0",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "# OIDC 提供商设置"
+      }
+    },
+    {
+      "segment_id": "3fbbcc07",
+      "source_content": "To allow apps or clients to login using an OIDC Identity Provider, we must register an application with the IdP. The process might slightly vary from one IdP to another (refer your IdP documentation), but there are a few things in common.",
+      "source_content_hash": "4b82a8572e643819e6fd7611fd352ae569545d01311379cfa9d014c8328e40ba",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "要允许应用或客户端通过OIDC身份提供商登录，我们需要在IdP中注册一个应用程序。具体流程可能因不同IdP而略有差异（请参考您的IdP文档），但存在几个通用配置项。"
+      }
+    },
+    {
+      "segment_id": "4a5b6a68",
+      "source_content": "- **Callback URL**: This will be the URL where Jackson receives the OIDC Authorization response. Make sure to set the full HTTPS URL obtained by concatenating Jackson endpoint with [oidcPath](../deploy/env-variables.md#oidcpath) env. The default value set for `oidcPath` in Jackson service is `/api/oauth/oidc`.\n- **Client/Application ID**: The OIDC Identity Provider normally will generate a unique identifier for the registered App. Make a note of this to be used later when creating the SSO connection with Jackson.\n- **Client Secret**: Along with the Client ID, the IdP also generates a client secret which is used to authenticate the client while issuing tokens. Make a note of this to be used later when creating the SSO connection with Jackson.",
+      "source_content_hash": "61ab58c597be368adbfa8054ba75bf545e91ed2991eb56ee4fe908403289d6b6",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- **回调URL**：这是Jackson接收OIDC授权响应的端点。请确保设置为完整的HTTPS URL，即Jackson服务端点与[oidcPath](../deploy/env-variables.md#oidcpath)环境变量的拼接结果。Jackson服务中`oidcPath`的默认值为`/api/oauth/oidc`。\n- **客户端/应用ID**：OIDC身份提供商通常会为注册的应用生成唯一标识符。请记录此ID，后续在Jackson中创建SSO连接时需要用到。\n- **客户端密钥**：IdP在生成客户端ID的同时会生成一个用于令牌签发时验证客户端身份的密钥。请记录此密钥，后续在Jackson中创建SSO连接时需要用到。"
+      }
+    },
+    {
+      "segment_id": "2a852f16",
+      "source_content": ":::info\nSince Jackson acts as a proxy between the app and the OIDC Identity Provider, here the application/client is Jackson.\n:::",
+      "source_content_hash": "ee16fa0fd94878bbdab8bd12888c577e49f8d6c665fb1eb1b54183f5d56cdb94",
+      "node_type": "containerDirective",
+      "translatable": true,
+      "translations": {
+        "zh-CN": ":::info\n由于Jackson在应用与OIDC身份提供商之间扮演代理角色，此处的应用程序/客户端即指Jackson服务本身。\n:::"
+      }
+    }
+  ],
+  "target_i18n_subpath": "docusaurus-plugin-content-docs/current/jackson/sso-providers/generic-oidc.md",
+  "last_updated_timestamp": "2025-06-08T18:49:09.300701+00:00",
+  "schema_version": "1.0",
+  "translated_versions": {
+    "zh-CN": "2581a69e5e5bd3749d1bcaa2df5e3a61655036a6d42e36544a8d64af1d09e6f4"
+  }
+}

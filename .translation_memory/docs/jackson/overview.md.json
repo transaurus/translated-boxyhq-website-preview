@@ -1,0 +1,212 @@
+{
+  "source_file_path_relative_to_docusaurus_root": "docs/jackson/overview.md",
+  "source_file_content_hash": "315eea1c9a359e52eb8b477cd4f64840eb178aca9e2d089b9d8545301adc499f",
+  "segments": [
+    {
+      "segment_id": "58cfcc64",
+      "source_content": "---\ntitle: Enterprise SSO Docs\n---",
+      "source_content_hash": "1a50b56c716301f3d41cc991c910d9eacd7cdf95105797ce06ce454ac9e5b273",
+      "node_type": "yaml",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_58cfcc64"
+      }
+    },
+    {
+      "segment_id": "f85bbfb4",
+      "source_content": "# Enterprise SSO",
+      "source_content_hash": "6b754786b4b4947cdf0341a37fa42fb27b1a4da117eafc3afb021c5a471c7d84",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "# 企业级单点登录(SSO)"
+      }
+    },
+    {
+      "segment_id": "6ef78e84",
+      "source_content": "Jackson is our Single Sign-On (SSO) service for SAML/OIDC Identity Providers [SSO in a box from BoxyHQ].",
+      "source_content_hash": "12fa349334226cf6d1741108d855b96776627305138795872e91c838ab17e11c",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "Jackson是我们为SAML/OIDC身份提供商提供的单点登录(SSO)服务[BoxyHQ开箱即用的SSO解决方案]。"
+      }
+    },
+    {
+      "segment_id": "53eaf0e1",
+      "source_content": "Jackson implements SSO as an OAuth 2.0 flow, abstracting away all the complexities of the underlying SAML/OIDC protocol. Check out our [GitHub repo](https://github.com/boxyhq/jackson).",
+      "source_content_hash": "0c8d899e20890633383f698968b524268fcedc1f9d2567f18bccbae772a3d933",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "Jackson通过OAuth 2.0流程实现SSO，抽象了底层SAML/OIDC协议的所有复杂性。查看我们的[GitHub仓库](https://github.com/boxyhq/jackson)。"
+      }
+    },
+    {
+      "segment_id": "8a5f6a7b",
+      "source_content": "## Architecture",
+      "source_content_hash": "a7e56472b11bd3c838bc8199601f5a5527112a003c69fbf95b012bc13573a193",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 架构设计"
+      }
+    },
+    {
+      "segment_id": "180bddb1",
+      "source_content": "![Enterprise SSO Architecture](/images/docs/jackson/enterprise-sso-arch.png)",
+      "source_content_hash": "fdb116d6eebe51cf428ed1d34e05b8409db4c627977b93cbdafef80b0bc97830",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![企业级SSO架构图](/images/docs/jackson/enterprise-sso-arch.png)"
+      }
+    },
+    {
+      "segment_id": "cf898102",
+      "source_content": "We have developed Jackson from scratch adopting a modular architecture as shown below. The business logic is separated into controllers which helps us in incremental adoption of features.",
+      "source_content_hash": "9cc4b9fbd7d28140dbc7b6cb50605176ee6cd38a3f729fc8ad756b76038fd6d3",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "我们采用模块化架构从零开发了Jackson系统。业务逻辑被分离到各个控制器中，这有助于我们逐步采用新功能。"
+      }
+    },
+    {
+      "segment_id": "42ad8e83",
+      "source_content": "![Implementation Architecture](/images/docs/jackson/jackson-architecture.png)",
+      "source_content_hash": "e0dc8afc0dcdee34d4d16f2e6254557be536579a1f7350a36b32679708719da0",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![实现架构图](/images/docs/jackson/jackson-architecture.png)"
+      }
+    },
+    {
+      "segment_id": "aee0e40d",
+      "source_content": "## Key Features",
+      "source_content_hash": "9214cf33ff90e03f0531d7f7aa0acc0dc8c37a382092e325d7e26659930e0c52",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 核心特性"
+      }
+    },
+    {
+      "segment_id": "418617bd",
+      "source_content": "### Own your own data​",
+      "source_content_hash": "0ed82ea936e35a1309f1cdc25f61b08a3b957fe00f41323e3dd844da080add8b",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 数据自主掌控​"
+      }
+    },
+    {
+      "segment_id": "1b8c1887",
+      "source_content": "- An open-source solution that allows you to keep control of your data\n- Supports Bring Your Own Database (BYOD) and can be used with any database\n- Built-in support for MySQL, MariaDB, Postgres, MongoDB, Redis, PlanetScale\n- Works great with databases from popular hosting providers",
+      "source_content_hash": "118c29e6e8614e295c1b5870e0dd2f783775d8c53be01d4918b68acdfbe50ee8",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- 开源解决方案让您完全掌控数据\n- 支持自带数据库(BYOD)，兼容任意数据库\n- 内置支持MySQL、MariaDB、Postgres、MongoDB、Redis、PlanetScale\n- 完美适配主流云服务商的数据库服务"
+      }
+    },
+    {
+      "segment_id": "3c36424c",
+      "source_content": "### Flexible and easy to use​",
+      "source_content_hash": "658f18559b384a4c1171959f772c316632de4abe32c52cfec892a50e0fb549ac",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 灵活易用​"
+      }
+    },
+    {
+      "segment_id": "5da9e02b",
+      "source_content": "- Designed to work with OAuth 2.0 / OpenID Connect 1.0 flow\n- Integrate with your existing OAuth 2.0 / OpenID Connect 1.0 library",
+      "source_content_hash": "15cb14f2fdff09e01d77cbe5304fef4c78fbe9c061fd32e484352285021a61ad",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- 专为OAuth 2.0/OpenID Connect 1.0流程设计\n- 可与现有OAuth 2.0/OpenID Connect 1.0库集成"
+      }
+    },
+    {
+      "segment_id": "0037ff70",
+      "source_content": "### Support",
+      "source_content_hash": "3e57a62e66c9cf8978c247efe296eb9b3372ee226c7e308b8e1e5a242f3a0c7d",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 技术支持"
+      }
+    },
+    {
+      "segment_id": "bdc231b1",
+      "source_content": "Reach out to the maintainer at one of the following places:",
+      "source_content_hash": "c8fa92d98baa1493b6f9edf3b6e034bb36ce365b471954c332138455334d5ffe",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "通过以下渠道联系维护团队："
+      }
+    },
+    {
+      "segment_id": "5d66c9dc",
+      "source_content": "- [GitHub Discussions](https://github.com/boxyhq/jackson/discussions)\n- [GitHub Issues](https://github.com/boxyhq/jackson/issues)\n- The email which is located [in GitHub profile](https://github.com/deepakprabhakara)",
+      "source_content_hash": "0b04b16e6a0394477e27c42dfcee17478dd286799cd1c38ef2e42e0c8cdabd45",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- [GitHub讨论区](https://github.com/boxyhq/jackson/discussions)\n- [GitHub问题追踪](https://github.com/boxyhq/jackson/issues)\n- [GitHub个人资料](https://github.com/deepakprabhakara)中的联系邮箱"
+      }
+    },
+    {
+      "segment_id": "9f9e64f5",
+      "source_content": "### Community",
+      "source_content_hash": "49c4b973c58e8d9160b242c21ae91496c8759ccaa675ed42e9ad9498f0be9f91",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 社区支持"
+      }
+    },
+    {
+      "segment_id": "bdfae007",
+      "source_content": "- [Discord](https://discord.gg/uyb7pYt4Pa)\n- [Twitter](https://twitter.com/boxyhq)",
+      "source_content_hash": "11054f3fb7c9e5ec30f5e40759790d654c518d5ba9e5ca84edf4e4aab6a2cfc3",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- [Discord社区](https://discord.gg/uyb7pYt4Pa)\n- [Twitter账号](https://twitter.com/boxyhq)"
+      }
+    },
+    {
+      "segment_id": "8bddee80",
+      "source_content": "### License",
+      "source_content_hash": "c90c420e9d736e555be8f90a85b819d98f245b98903deab5edc8a1e3fe8db186",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 开源许可"
+      }
+    },
+    {
+      "segment_id": "a9d49f92",
+      "source_content": "[Apache 2.0 License](https://github.com/boxyhq/jackson/blob/main/LICENSE)",
+      "source_content_hash": "f99942b6c0fa9c6099c50d29be5f101c28e9776a965daeb3231aaf0a3446aac2",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "[Apache 2.0许可证](https://github.com/boxyhq/jackson/blob/main/LICENSE)"
+      }
+    }
+  ],
+  "target_i18n_subpath": "docusaurus-plugin-content-docs/current/jackson/overview.md",
+  "last_updated_timestamp": "2025-06-08T18:49:09.310259+00:00",
+  "schema_version": "1.0",
+  "translated_versions": {
+    "zh-CN": "315eea1c9a359e52eb8b477cd4f64840eb178aca9e2d089b9d8545301adc499f"
+  }
+}

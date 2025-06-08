@@ -1,0 +1,75 @@
+{
+  "locales": [
+    "zh-CN"
+  ],
+  "folder_patterns": [
+    {
+      "source_dir_relative_to_docusaurus_root": "docs",
+      "target_i18n_subpath": "docusaurus-plugin-content-docs/current",
+      "original_agent_pattern": {
+        "source_pattern": "docs/**/*",
+        "translation_pattern": "i18n/%locale%/docusaurus-plugin-content-docs/current/**/%original_file_name%",
+        "type": "docs",
+        "description": "Main documentation content using the default docs plugin"
+      },
+      "type": "docs",
+      "description": "Main documentation content using the default docs plugin",
+      "ignore_patterns": null
+    },
+    {
+      "source_dir_relative_to_docusaurus_root": "guides",
+      "target_i18n_subpath": "docusaurus-plugin-content-docs-guides/current",
+      "original_agent_pattern": {
+        "source_pattern": "guides/**/*",
+        "translation_pattern": "i18n/%locale%/docusaurus-plugin-content-docs-guides/current/**/%original_file_name%",
+        "type": "docs-guides",
+        "description": "Guides documentation content using a separate docs plugin instance with id 'guides'"
+      },
+      "type": "docs-guides",
+      "description": "Guides documentation content using a separate docs plugin instance with id 'guides'",
+      "ignore_patterns": null
+    },
+    {
+      "source_dir_relative_to_docusaurus_root": "blog",
+      "target_i18n_subpath": "docusaurus-plugin-content-blog",
+      "original_agent_pattern": {
+        "source_pattern": "blog/**/*",
+        "translation_pattern": "i18n/%locale%/docusaurus-plugin-content-blog/**/%original_file_name%",
+        "type": "blog",
+        "description": "Main blog posts using the default blog plugin"
+      },
+      "type": "blog",
+      "description": "Main blog posts using the default blog plugin",
+      "ignore_patterns": null
+    },
+    {
+      "source_dir_relative_to_docusaurus_root": "success-stories",
+      "target_i18n_subpath": "docusaurus-plugin-content-blog-success-stories",
+      "original_agent_pattern": {
+        "source_pattern": "success-stories/**/*",
+        "translation_pattern": "i18n/%locale%/docusaurus-plugin-content-blog-success-stories/**/%original_file_name%",
+        "type": "blog-success-stories",
+        "description": "Success stories blog posts using a separate blog plugin instance with id 'success-stories'"
+      },
+      "type": "blog-success-stories",
+      "description": "Success stories blog posts using a separate blog plugin instance with id 'success-stories'",
+      "ignore_patterns": null
+    },
+    {
+      "source_dir_relative_to_docusaurus_root": "i18n/en",
+      "target_i18n_subpath": "",
+      "original_agent_pattern": {
+        "source_pattern": "i18n/en/**/*.json",
+        "translation_pattern": "i18n/%locale%/**/%original_file_name%",
+        "type": "json_translations",
+        "description": "JSON translation files for React components, theme labels, and other translatable strings"
+      },
+      "type": "json_translations",
+      "description": "JSON translation files for React components, theme labels, and other translatable strings",
+      "ignore_patterns": null
+    }
+  ],
+  "docusaurus_root_dir_relative_to_repo": "",
+  "docusaurus_config_filepath_relative_to_repo": "docusaurus.config.js",
+  "source_language": "en"
+}

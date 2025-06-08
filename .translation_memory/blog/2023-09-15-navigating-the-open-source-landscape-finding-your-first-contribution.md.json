@@ -1,0 +1,582 @@
+{
+  "source_file_path_relative_to_docusaurus_root": "blog/2023-09-15-navigating-the-open-source-landscape-finding-your-first-contribution.md",
+  "source_file_content_hash": "250a7d25ddd89279c1c44cc5c4c5f770a1f8297c86a1e20f6fa979f2f05aaa70",
+  "segments": [
+    {
+      "segment_id": "58cfcc64",
+      "source_content": "---\nslug: navigating-the-open-source-landscape-finding-your-first-contribution\ntitle: '🧭 Navigating the Open Source Landscape: ⭐Finding Your First Contribution'\nauthor: Nathan Tarbert\nauthor_title: Community Success Engineer @BoxyHQ\nauthor_url: https://github.com/NathanTarbert\nauthor_image_url: /images/authors/nathan.jpg\ntags_disabled: [open-source, sso, enterprise-ready]\nimage: /img/blog/navigating-open-source-blog/contributors-blog-cover.png\nlink:\n  - rel: canonical\n    href: https://dev.to/nathan_tarbert/navigating-the-open-source-landscape-finding-your-first-contribution-3fap\n---",
+      "source_content_hash": "0ffa8c06e0963b19a5548071c5826a74b3fbf087421f4adf5d3d28870cb23786",
+      "node_type": "yaml",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_58cfcc64"
+      }
+    },
+    {
+      "segment_id": "cf898102",
+      "source_content": "🕵️‍♂️ Embarking on your journey and learning how to contribute to open source is an exciting step towards honing your programming skills, collaborating with experts, and giving back to the global developer community. However, the challenge often lies in finding the right project to kickstart your open-source journey.",
+      "source_content_hash": "93bb568251eb8c9f8199d1e34cd7ff844ae249214eee0de12b9456093f114b96",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "🕵️‍♂️ 踏上开源贡献之旅是提升编程技能、与专家协作并回馈全球开发者社区的激动人心的一步。然而，挑战往往在于如何找到合适的项目来开启你的开源征程。"
+      }
+    },
+    {
+      "segment_id": "3daf1b88",
+      "source_content": "## Don’t Overcomplicate the Process",
+      "source_content_hash": "0eb16748a545218346a7fad0336ce2153a9c07d157ae6fd42df79e5cf807d99f",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 别让过程复杂化"
+      }
+    },
+    {
+      "segment_id": "f6168993",
+      "source_content": "Before we get too deep into how-tos, let's simplify these steps and look at a step-by-step process to help you discover open-source projects that align with your interests and expertise.",
+      "source_content_hash": "cb00fefdf364bac280932a2ef51c9e6c21991eadb461de6dc52f942e75880e08",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "在深入探讨具体方法之前，我们先简化步骤，通过一个循序渐进的流程帮助你找到与兴趣和专长相匹配的开源项目。"
+      }
+    },
+    {
+      "segment_id": "f5f6d2ce",
+      "source_content": "![Lets do this](/img/blog/navigating-open-source-blog/lets-do-this.gif)",
+      "source_content_hash": "ad953bad35088469f7c4a774ea96eb55b76b5c4009394fb428781ee7f466a31d",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![开始行动](/img/blog/navigating-open-source-blog/lets-do-this.gif)"
+      }
+    },
+    {
+      "segment_id": "2fdadb08",
+      "source_content": "Make sure you take a moment to identify your interests and skills before you start searching for open-source projects. This is extremely important because defining what sparks your excitement will be your fuel to start this journey.",
+      "source_content_hash": "60ed17d6a2ce8a5a7d1590461aace227e2a5a04d0d9abc3c780611191eb45c36",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "在开始搜索开源项目前，请先明确你的兴趣点和技能领域。这至关重要，因为定义能激发你热情的方向将成为这段旅程的动力源泉。"
+      }
+    },
+    {
+      "segment_id": "ed7dde9c",
+      "source_content": "## Goals and Interests",
+      "source_content_hash": "321a267ba86ec4637e902571b1ccead521a1d52ea0d77bc22c1bf86aa6f6ba58",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 目标与兴趣"
+      }
+    },
+    {
+      "segment_id": "a76548f8",
+      "source_content": "Let’s talk about what gets you out of bed in the morning and drives you to want to code and contribute to this vast world called open-source! Are you passionate about security, web development, machine learning, or mobile app development? Also, determine your programming languages of proficiency, frameworks you're comfortable with, and areas you'd like to explore further.",
+      "source_content_hash": "90643575f1b49cfeb414b6d805c5dd8c5f14d37f097dda8201c74f0cff795800",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "让我们聊聊那些让你清晨跃跃欲试、渴望为开源世界贡献代码的驱动力！你是否热衷于安全、Web开发、机器学习或移动应用开发？同时明确你精通的编程语言、熟悉的框架以及希望深入探索的领域。"
+      }
+    },
+    {
+      "segment_id": "f2f30ae8",
+      "source_content": "## Open Source Collaboration using GitHub",
+      "source_content_hash": "f5b9971c5c4c1a1d396af23d2d840e52e4d3d81f375de9ed4e04ee2ab313e660",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 基于GitHub的开源协作"
+      }
+    },
+    {
+      "segment_id": "dfe931a2",
+      "source_content": "Numerous platforms and directories host a plethora of open-source projects, making your search more manageable. GitHub is a central hub for open-source collaboration, offering a user-friendly platform for hosting, sharing, and collaborating on software projects. They are just one of the many SCMs (Source Code Managers) but for the simplicity of this article, I will be using it to demonstrate how to explore the world of open source.",
+      "source_content_hash": "53d1b6f01ab9903c7e676a846c1190e8aeb5fccaff3543e40a7c49e911f400ea",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "众多平台和目录托管着海量开源项目，能有效缩小你的搜索范围。GitHub作为开源协作的核心枢纽，提供了友好的项目托管、共享和协作平台。它只是众多源代码管理器（SCM）之一，但为简化本文示例，我将以其为工具演示如何探索开源世界。"
+      }
+    },
+    {
+      "segment_id": "0037ff70",
+      "source_content": "## Explore Platforms and Directories",
+      "source_content_hash": "0229014ad693b5879a68052d43ae4305ac990f185d23d40fcff0a5a29fef9849",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 探索平台与目录"
+      }
+    },
+    {
+      "segment_id": "bdc231b1",
+      "source_content": "Now that we have a clearer direction on what sparks your interests, let's take a look at how to find open-source projects that you can start contributing to.",
+      "source_content_hash": "08a71ce7b26f64d206e2448dd6165f0582b8d14517ed7dcba424d8560055ded8",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "既然已明确兴趣方向，现在让我们看看如何找到可供贡献的开源项目。"
+      }
+    },
+    {
+      "segment_id": "97ae4a01",
+      "source_content": "![Github dashboard](/img/blog/navigating-open-source-blog/git-dashboard.png)\n_Click on the GitHub icon menu in the top left corner._",
+      "source_content_hash": "eac4b2b286051863654f92480d03fa5bd81aca0ae98f47bf66a65b58c9d31080",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![GitHub仪表盘](/img/blog/navigating-open-source-blog/git-dashboard.png)\n_点击左上角的GitHub图标菜单_"
+      }
+    },
+    {
+      "segment_id": "33331f27",
+      "source_content": "If we search for open-source we get a long list back but we have the ability to explore trending repositories, search by programming language, and even filter by topics of interest.",
+      "source_content_hash": "309a9911492f3e8b4f7e849bd642f654bde725a80d76e4a6ed263d982a9be19f",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "搜索\"开源\"会返回大量结果，但我们可以浏览热门仓库、按编程语言筛选，甚至根据兴趣主题过滤。"
+      }
+    },
+    {
+      "segment_id": "50746522",
+      "source_content": "![Github explore](/img/blog/navigating-open-source-blog/git-explore.png)",
+      "source_content_hash": "f264d15b44a65d000ca6be742ebfa0dd93a0d6df7ad5c13c8e55587984ecc0c6",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![GitHub探索页](/img/blog/navigating-open-source-blog/git-explore.png)"
+      }
+    },
+    {
+      "segment_id": "54268405",
+      "source_content": "## Utilize Keywords and Tags",
+      "source_content_hash": "180629db10d7ca2eb3049cacdd8bc3e52d33e35d55b083e340bf0d988225f35b",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 善用关键词与标签"
+      }
+    },
+    {
+      "segment_id": "8af76f3d",
+      "source_content": "When searching on platforms like GitHub, utilize relevant keywords and tags. For instance, if you're interested in TypeScript web development, you might use tags like \"typescript\", “javascript”, \"react\" and, \"nextjs\" to narrow down your search.",
+      "source_content_hash": "47d1caa5f029e480c751c4152d65a04d70c69c90e30210e086d11d6ded0b8a49",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "在GitHub等平台搜索时，使用相关关键词和标签。例如若你对TypeScript网页开发感兴趣，可使用\"typescript\"、\"javascript\"、\"react\"和\"nextjs\"等标签缩小范围。"
+      }
+    },
+    {
+      "segment_id": "a9d49f92",
+      "source_content": "![Github languages](/img/blog/navigating-open-source-blog/git-languages.png)",
+      "source_content_hash": "6581d2082a0ee1fc0b0b2dcf0be0022a42f3596e5a52d9d542ab5b2c29a706d8",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![GitHub语言筛选](/img/blog/navigating-open-source-blog/git-languages.png)"
+      }
+    },
+    {
+      "segment_id": "a44047a5",
+      "source_content": "If you would like to narrow your search even further and combine keywords, just wrap them in []. For example, if I want to make the search extremely narrow and I am looking for a project to contribute to with both \"nextjs\" and \"python\"?\nLet's wrap [nextjs], [python] in the search and see what comes back.",
+      "source_content_hash": "b39ac3fcb14ec800c898b4b3af6cf1e90cb0bc36d9b8ec45f8d362053cbd3224",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "如需进一步精确搜索并组合关键词，可用方括号包裹。例如想寻找同时包含\"nextjs\"和\"python\"的项目？尝试在搜索框中输入[nextjs] [python]查看结果。"
+      }
+    },
+    {
+      "segment_id": "98d26038",
+      "source_content": "![narrow github search](/img/blog/navigating-open-source-blog/github-search.png)",
+      "source_content_hash": "079f3d2b70a7d449f4fcdd82213e42c6329e2d7236d4af8f852fc5a01b5b400d",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![GitHub精确搜索](/img/blog/navigating-open-source-blog/github-search.png)"
+      }
+    },
+    {
+      "segment_id": "d3649a1e",
+      "source_content": "If you are initially searching broadly, an extensive list will be returned but for the sake of time let's take a look at [BoxyHQ](https://boxyhq.com/enterprise-sso). They are passionate about open-source and welcome contributions to their docs, guides, blogs, and codebase.",
+      "source_content_hash": "8c86b6c2ba18d8a5d9aa54da51ee37fc34fa2ba23882df4d07a93d7d69cb7e33",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "若初始搜索范围较广，会返回大量结果。为节省时间，我们以[BoxyHQ](https://boxyhq.com/enterprise-sso)为例——他们热爱开源，欢迎对文档、指南、博客和代码库的贡献。"
+      }
+    },
+    {
+      "segment_id": "4d52a261",
+      "source_content": "Let’s hop into the **[SAML Jackson](https://github.com/boxyhq/jackson)** repo...(_clever isn’t it?_ 😉).",
+      "source_content_hash": "1f3e90e9927c0df4fa6d972604aaca1849d4be714a0903ccfb425fb99eea2df2",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "现在进入**[SAML Jackson](https://github.com/boxyhq/jackson)**代码库...(这命名很巧妙吧? 😉)。"
+      }
+    },
+    {
+      "segment_id": "23dfb152",
+      "source_content": "[![saml jackson](/img/blog/navigating-open-source-blog/saml-jackson.gif)](https://github.com/boxyhq/jackson)",
+      "source_content_hash": "14f72bcd5ae009f4dcb9366057683b85d11cf3177e65d2605a1ef3486e42b50b",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "[![SAML Jackson动图](/img/blog/navigating-open-source-blog/saml-jackson.gif)](https://github.com/boxyhq/jackson)"
+      }
+    },
+    {
+      "segment_id": "1131ef75",
+      "source_content": "**By the way, giving a star shows you value that project!**",
+      "source_content_hash": "d9aff82d7a802a43861b91b85e97564504676330c3de7a612dc26d377644dbba",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "**顺便提醒：给项目点星标表示你的认可！**"
+      }
+    },
+    {
+      "segment_id": "8b2a52b1",
+      "source_content": "[Click on the picture above](https://github.com/boxyhq/jackson)",
+      "source_content_hash": "d0105009fcae501631527bd0d10287b9d351c65fd8b01981e6f2f6d3206de3e2",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "[点击上方图片](https://github.com/boxyhq/jackson)"
+      }
+    },
+    {
+      "segment_id": "5dae11e3",
+      "source_content": "If we take a look at the “Issues” tab we can see there is quite a mix of tasks from “enhancements” to “good-first-issues”. This is one of the best places to start because the features or fixes are in a list and the complexity is usually in an easy-to-read tag.",
+      "source_content_hash": "61e350809dd7f72f543888983d5693b29da35e8d1358f8680232116b55c22a7c",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "查看\"Issues\"标签页时，我们会发现任务类型丰富多样，既有\"功能增强\"也有\"新手友好型问题\"。这里是最佳切入点之一，因为需求或修复项都以列表形式清晰呈现，且复杂度通常通过易于理解的标签标注。"
+      }
+    },
+    {
+      "segment_id": "0bb95128",
+      "source_content": "![github issues](/img/blog/navigating-open-source-blog/good-first-issue.png)",
+      "source_content_hash": "76749eefa74e230d2b5a42ed47a392cf55fbe381458bbe65b99ce333a5adef17",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![github issues](/img/blog/navigating-open-source-blog/good-first-issue.png)"
+      }
+    },
+    {
+      "segment_id": "3ef18741",
+      "source_content": "## Evaluate Project Health",
+      "source_content_hash": "15242fa931c6f7bbab69ff7475f06af611247e1ffc95fbe5b9f923363bb0570a",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 评估项目健康度"
+      }
+    },
+    {
+      "segment_id": "e7772088",
+      "source_content": "Once you've found a project that piques your interest, assess its **health** and **activity**. Look for signs of an active contributing community:",
+      "source_content_hash": "f09c1e1644285e2ee72e20e8934ce370c7ae3c41925d708061a5208c22aba562",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "当发现感兴趣的项目后，需评估其**活跃度**与**健康状况**。可通过以下特征判断社区贡献活跃程度："
+      }
+    },
+    {
+      "segment_id": "eab056be",
+      "source_content": "**Recent commits:**",
+      "source_content_hash": "3a969f30c5c1fbead01da01e1f64c7af5c657b0bcb66e6c3ed2aa9d0dd73f0fc",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "**近期提交记录:**"
+      }
+    },
+    {
+      "segment_id": "aa0bd54f",
+      "source_content": "- Frequent commits indicate ongoing development.",
+      "source_content_hash": "d59b3fe3b99859061b9a639ed349311d9b0604ad5407e452043f43031f0d7efd",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- 频繁提交意味着项目持续开发中"
+      }
+    },
+    {
+      "segment_id": "afa378f7",
+      "source_content": "**Open issues:**",
+      "source_content_hash": "299df50c247281ec8aa39f47be745b6ec9216926af6e246d0104550d103d6f08",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "**待解决问题:**"
+      }
+    },
+    {
+      "segment_id": "1316cb90",
+      "source_content": "- A balance between open and closed issues suggests an active issues tracking process.",
+      "source_content_hash": "5aff8265a94a07ca80e642979551931d0433b9b2633444fb269ea218196a4a6a",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- 开放与关闭问题数量的平衡说明存在有效的问题追踪机制"
+      }
+    },
+    {
+      "segment_id": "463ed165",
+      "source_content": "**Pull requests:**",
+      "source_content_hash": "1daa6379ce579e2fd95c4c578986ae33f33bbe7ea80cf20314aa403f24f76621",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "**合并请求:**"
+      }
+    },
+    {
+      "segment_id": "536b7b6b",
+      "source_content": "- Open pull requests and merged ones indicate collaboration.",
+      "source_content_hash": "1e37a5ed56cab547bac3f31282a85d59f09fc4d8cf698ba2ef1927aca185a23b",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- 开放的PR和已合并的PR表明存在协作开发"
+      }
+    },
+    {
+      "segment_id": "fbc2db85",
+      "source_content": "You can also make sure the project is still alive and well by clicking on the **activity** link.",
+      "source_content_hash": "54a9a67a6e41eff2853f47178889c363018d2ed5002968433cb3b574c7216b75",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "点击**activity**链接可进一步验证项目是否保持活跃状态。"
+      }
+    },
+    {
+      "segment_id": "8126f763",
+      "source_content": "![Github activity](/img/blog/navigating-open-source-blog/github-activity-link.png)",
+      "source_content_hash": "62f409affb9cd69e0537071843584eef56890056d4391ba5704500b614716ee3",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![Github activity](/img/blog/navigating-open-source-blog/github-activity-link.png)"
+      }
+    },
+    {
+      "segment_id": "3a8d2b95",
+      "source_content": "## Community engagement",
+      "source_content_hash": "d0a29e03e1b48f947e16a827ac9e3df9095a13277cfa0e14d43de458c500ba81",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 社区参与度"
+      }
+    },
+    {
+      "segment_id": "5803caac",
+      "source_content": "A good place to start is to look for project “Discussions” or an external community such as Slack or Discord.",
+      "source_content_hash": "ebc0629efe86e459ec97eb559822d1b06a501ed917e0f769a367b17789103a4d",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "建议从项目的\"Discussions\"板块或外部社区（如Slack/Discord）着手了解。"
+      }
+    },
+    {
+      "segment_id": "51867d16",
+      "source_content": "![Github communities](/img/blog/navigating-open-source-blog/git-community.png)",
+      "source_content_hash": "886dbe489a377c6021d9d480f037a6bde295c544a57a5df1652cc371fd26fbf4",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![Github communities](/img/blog/navigating-open-source-blog/git-community.png)"
+      }
+    },
+    {
+      "segment_id": "785750ac",
+      "source_content": "Engage with the project's community by introducing yourself, asking questions, and expressing your interest in contributing. Being an active part of the community enhances your chances of finding a suitable project, not to mention it’s a great way to network and make friends.",
+      "source_content_hash": "74da7a7da5ed87136f6c915225e2e70dc3e277f174d546816bfd90633fd5c9ec",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "通过自我介绍、提问和表达贡献意愿来融入社区。积极参与不仅能提高项目匹配度，更是拓展人脉的绝佳途径。"
+      }
+    },
+    {
+      "segment_id": "82e90254",
+      "source_content": "If you are curious, [BoxyHQ’s Discord](https://discord.boxyhq.com) is an active place to learn more about how contributors interact. This is also a place to start asking questions to find out how you can start contributing.",
+      "source_content_hash": "a1af59d28baaf6151ad038de7712abd44285dfe2a67bc117430dd497e4ec87d3",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "若感兴趣，可加入[BoxyHQ的Discord](https://discord.boxyhq.com)观察贡献者互动模式，这也是咨询如何开始贡献的理想场所。"
+      }
+    },
+    {
+      "segment_id": "e06c002e",
+      "source_content": "## Time to Get Started",
+      "source_content_hash": "9cf7fa2c3e3d87dead324109d1bdad8af62feeb63fe31183c063053d7c330ba6",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 启程时刻"
+      }
+    },
+    {
+      "segment_id": "25212439",
+      "source_content": "Before you commit to a project, thoroughly read its documentation and contribution guidelines. These documents provide insights into the project's structure, coding standards, and expectations for contributors. It's important to be aligned with the project's values and procedures.",
+      "source_content_hash": "3b65e2daedecccafb4d73cd1486a68f46195c6f6f0b35eee04c2637e75cd87ae",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "在正式投入前，请仔细阅读项目文档和贡献指南。这些材料能帮助您理解项目结构、编码规范及贡献者期望，确保与项目价值观和流程保持一致。"
+      }
+    },
+    {
+      "segment_id": "94145a94",
+      "source_content": "## Start with Beginner-Friendly Issues",
+      "source_content_hash": "d53a500b73719c65a8a063df038d501bb7598f2cecfd262afa4cd146f14270a4",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 从新手友好型任务入手"
+      }
+    },
+    {
+      "segment_id": "2838eb68",
+      "source_content": "Projects often label issues as \"beginner-friendly\" or \"good-first-issue.\" These issues are designed to be accessible to newcomers and are an excellent starting point. They allow you to get a feel for the project's codebase and workflow without overwhelming complexity.",
+      "source_content_hash": "1570272565f117aadf63fcadc8704dda13b3d8e4a6f16f6ea2a5b1331a3b78be",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "项目通常会用\"beginner-friendly\"或\"good-first-issue\"标签标注适合新手的任务。这些任务能让您在不被复杂度过高困扰的情况下，逐步熟悉代码库和工作流程。"
+      }
+    },
+    {
+      "segment_id": "42a5832e",
+      "source_content": "## Contribute and Collaborate",
+      "source_content_hash": "ed7d2f3c1ecc645eb73c48bcbafc411254c058583ca19cf770065e4dacae7f32",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 开始贡献与协作"
+      }
+    },
+    {
+      "segment_id": "0e80209e",
+      "source_content": "Once you've selected a project, don't hesitate to contribute. For beginners to open-source contributions, this will start putting teamwork into context. Start small with your chosen beginner-friendly issue. Collaborate openly, seek guidance when needed, and learn from code reviews and feedback.",
+      "source_content_hash": "a46cd56c413c53b68639e802c9168e1957e35d2d7e34fab339bfe2c7c440d54b",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "选定项目后请勇敢迈出第一步。对于开源新手而言，这是理解团队协作的起点。从标注为新手友好的小任务开始，保持开放协作态度，必要时寻求指导，并通过代码审查反馈不断学习。"
+      }
+    },
+    {
+      "segment_id": "7bc8bb24",
+      "source_content": "![Keep developing](/img/blog/navigating-open-source-blog/keep-developing.gif)",
+      "source_content_hash": "6905b9cdcad12d6735f338fb445cd6a10ce76c080b348890ad7c4f59cc0e4c39",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![Keep developing](/img/blog/navigating-open-source-blog/keep-developing.gif)"
+      }
+    },
+    {
+      "segment_id": "6693c38c",
+      "source_content": "One final detail, GitHub tracks your activity as well as contributions so if building an open-source contributor resume is important to you this is definitely a great way to accomplish this.",
+      "source_content_hash": "9950722cf2a0374675ee3980bafd24c4f77f1ae131a66dfdd0c286e368b983d5",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "最后提醒：GitHub会追踪您的活动与贡献记录，若您希望建立开源贡献者履历，这无疑是绝佳的实现方式。"
+      }
+    },
+    {
+      "segment_id": "e9313fef",
+      "source_content": "**Congratulations on this new chapter!**",
+      "source_content_hash": "1078971802ba2f826b3fce1b46b657a7f86dc334a1085b279975788b00eb1514",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "**祝贺您开启新篇章!**"
+      }
+    },
+    {
+      "segment_id": "1b4de6df",
+      "source_content": "![Code CLI](/img/blog/navigating-open-source-blog/cli.gif)",
+      "source_content_hash": "7fe7e3b14a040cc7a5e9b91656b88178e1c500c8aefe57ecff9fbf25d134c68b",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![Code CLI](/img/blog/navigating-open-source-blog/cli.gif)"
+      }
+    },
+    {
+      "segment_id": "37fca32e",
+      "source_content": "## 👩‍🏫 Let's Take a Step Back and Look at Some Learnings",
+      "source_content_hash": "885a23229086ff07fb24e7675600cb3c3b00d7edb1e621acd27a918309f9ea5c",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 👩‍🏫 回顾关键学习要点"
+      }
+    },
+    {
+      "segment_id": "a8610918",
+      "source_content": "⭐ Finding the right open-source project to contribute to is a crucial step in your journey as a newcomer to the open-source community❤️.",
+      "source_content_hash": "d711619ec88eeb11a139138b69e812794e97da73230a46d7a33c61bad848c658",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "⭐ 选择合适的开源贡献项目是您作为开源新人成长道路上的关键一步❤️"
+      }
+    },
+    {
+      "segment_id": "a6c928a1",
+      "source_content": "💖 By identifying your interests, utilizing platforms and directories, assessing project health, and engaging with the community, you can discover projects that align with your skills and passion.",
+      "source_content_hash": "1c8943f06fb0f6dde9152978a258879f7b3f87c716b8a0f7440bda798f405a8f",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "💖 通过明确兴趣方向、善用平台目录、评估项目健康度及参与社区互动，您能找到与技能和热情相匹配的项目"
+      }
+    },
+    {
+      "segment_id": "b6152880",
+      "source_content": "✨ Remember that the process might require patience, but the rewards of meaningful contributions, skill growth, and community engagement are well worth the effort.",
+      "source_content_hash": "e4ec0b38d7f0360bd041f7921e95fde5c5f3a2fa2bf9d2bf886d0d9fdcb19ef4",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "✨ 这个过程可能需要耐心，但收获的有价值贡献、技能提升和社区融入体验绝对值得付出"
+      }
+    },
+    {
+      "segment_id": "b9331170",
+      "source_content": "🚀 So, dive into the open-source landscape, explore, and make your mark as a valued contributor.",
+      "source_content_hash": "1741da73a2b03f4f231e366e691ad747533e21d3432d7b8183e01a178c608327",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "🚀 现在，就深入开源生态圈，探索属于您的贡献之路吧"
+      }
+    }
+  ],
+  "target_i18n_subpath": "docusaurus-plugin-content-blog/2023-09-15-navigating-the-open-source-landscape-finding-your-first-contribution.md",
+  "last_updated_timestamp": "2025-06-08T18:49:09.323574+00:00",
+  "schema_version": "1.0",
+  "translated_versions": {
+    "zh-CN": "250a7d25ddd89279c1c44cc5c4c5f770a1f8297c86a1e20f6fa979f2f05aaa70"
+  }
+}

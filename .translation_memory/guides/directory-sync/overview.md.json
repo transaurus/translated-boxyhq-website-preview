@@ -1,0 +1,62 @@
+{
+  "source_file_path_relative_to_docusaurus_root": "guides/directory-sync/overview.md",
+  "source_file_content_hash": "e099dd2850cb977a13d727ae9ab2ca59ab24d3a47247332dcd58e2287c854ff9",
+  "segments": [
+    {
+      "segment_id": "58cfcc64",
+      "source_content": "---\ntitle: Directory Sync Guide\nhide_table_of_contents: true\nslug: /directory-sync\n---",
+      "source_content_hash": "cb1905790db60838e29f28f27e4836cb8d2f3a03c8ad719e6f4ced980b9536a9",
+      "node_type": "yaml",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_58cfcc64"
+      }
+    },
+    {
+      "segment_id": "a703643c",
+      "source_content": "# Framework Guides",
+      "source_content_hash": "b168c93d742ff8e6c4a150fd10cf7a6a3c9220d0c3296ce04f2d417dafdd3237",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "# 框架指南"
+      }
+    },
+    {
+      "segment_id": "53eaf0e1",
+      "source_content": "This guide describes how to add Directory Sync to different languages & frameworks.",
+      "source_content_hash": "1ce46f65c655afd80695a8abc5b5f6cb9d18944564381c45fe5ec6edf3b556b3",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "本指南描述如何在不同语言与框架中实现目录同步功能。"
+      }
+    },
+    {
+      "segment_id": "b608d7f0",
+      "source_content": "import FrameworksGuide from '../../src/components/guides/dsync/FrameworksGuide.js';",
+      "source_content_hash": "b2bfa4026d3653353dbd490d51425c1f00ec0f6e115d169d6d4057d3aff17de9",
+      "node_type": "mdxjsEsm",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_b608d7f0"
+      }
+    },
+    {
+      "segment_id": "5da3670c",
+      "source_content": "<div className=\"container\" style={{ padding: 0 }}>\n  <div className=\"row is-multiline\">\n    <FrameworksGuide />\n  </div>\n</div>",
+      "source_content_hash": "4f73eb88ab57edb5bf86a0d5301ee270428cc147ef9955649967afdca35119c8",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_5da3670c"
+      }
+    }
+  ],
+  "target_i18n_subpath": "docusaurus-plugin-content-docs-guides/current/directory-sync/overview.md",
+  "last_updated_timestamp": "2025-06-08T18:49:09.289912+00:00",
+  "schema_version": "1.0",
+  "translated_versions": {
+    "zh-CN": "e099dd2850cb977a13d727ae9ab2ca59ab24d3a47247332dcd58e2287c854ff9"
+  }
+}

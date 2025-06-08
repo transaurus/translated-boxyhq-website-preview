@@ -1,0 +1,142 @@
+{
+  "source_file_path_relative_to_docusaurus_root": "guides/jackson/overview.mdx",
+  "source_file_content_hash": "16571b1de59664410595f8c6430f78418bb50913ce5ea312110b0ac75184a978",
+  "segments": [
+    {
+      "segment_id": "58cfcc64",
+      "source_content": "---\ntitle: Enterprise SSO Guide\nhide_table_of_contents: true\nslug: /jackson\n---",
+      "source_content_hash": "1e176c961fd821032ab7d1b4170fcd510b0a14c93abbd13794545eca4c4af4e6",
+      "node_type": "yaml",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_58cfcc64"
+      }
+    },
+    {
+      "segment_id": "a703643c",
+      "source_content": "# Enterprise SSO Guide",
+      "source_content_hash": "c8c18134045a83f8b267247b51cfeb9beeb0347393106de00afb2ce745312558",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "# 企业级SSO指南"
+      }
+    },
+    {
+      "segment_id": "53eaf0e1",
+      "source_content": "The documentation is divided into 3 sections.",
+      "source_content_hash": "5df26920bc7489005961dd8e10e6beb9d436430f8404b8878131b2d12c1f9ef2",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "本文档分为三个部分。"
+      }
+    },
+    {
+      "segment_id": "b608d7f0",
+      "source_content": "import DeploymentsGuide from '../../src/components/guides/jackson/DeploymentsGuide.js';\nimport IntegrationsGuide from '../../src/components/guides/jackson/IntegrationsGuide.js';\nimport FrameworksGuide from '../../src/components/guides/jackson/FrameworksGuide.js';",
+      "source_content_hash": "16c054ba4d42e205a289694e68701d02011dde9733a8c4174ff9df49fa3efba3",
+      "node_type": "mdxjsEsm",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_b608d7f0"
+      }
+    },
+    {
+      "segment_id": "e14c9928",
+      "source_content": "## Deployment Guides",
+      "source_content_hash": "acd2aee7673c411dde8be84f5c01a8d207be1c61d18b0f62cad8f7845ccc43af",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 部署指南"
+      }
+    },
+    {
+      "segment_id": "42ad8e83",
+      "source_content": "If you want to self host SAML Jackson, the recommended approach is to use one of the recommended one click installation options.",
+      "source_content_hash": "9c3ed728bbf519fe11e5961fe4d9445ac963f3834d7b4bd72fac7baf21a6d317",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "如需自托管SAML Jackson，推荐使用一键安装方案。"
+      }
+    },
+    {
+      "segment_id": "09a8fe76",
+      "source_content": "<div className=\"container\" style={{ padding: 0 }}>\n  <div className=\"row is-multiline\">\n    <DeploymentsGuide />\n  </div>\n</div>",
+      "source_content_hash": "6d25f2fd188bb0dc233c2095125cd90e1b5a910ae587841c30cddd53385e071e",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_09a8fe76"
+      }
+    },
+    {
+      "segment_id": "ed7dde9c",
+      "source_content": "## Framework Guides",
+      "source_content_hash": "75cda20d851372ae643e7a03588c80523a0dc206d05ac07a1c452623fb7ed4fa",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 框架指南"
+      }
+    },
+    {
+      "segment_id": "a76548f8",
+      "source_content": "Step-by-step guides to quickly integrate SAML SSO into your application.",
+      "source_content_hash": "5da7530fc631f04d3f398148c88c8eb125ec8421cdae0adccd4a1a1f6634c56e",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "逐步指导您快速将SAML SSO集成至应用程序。"
+      }
+    },
+    {
+      "segment_id": "9329e3e0",
+      "source_content": "<div className=\"container\" style={{ padding: 0 }}>\n  <div className=\"row is-multiline\">\n    <FrameworksGuide />\n  </div>\n</div>",
+      "source_content_hash": "4f73eb88ab57edb5bf86a0d5301ee270428cc147ef9955649967afdca35119c8",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_9329e3e0"
+      }
+    },
+    {
+      "segment_id": "f422383e",
+      "source_content": "## Integrations Guides",
+      "source_content_hash": "fa59c6ed374a8c24e1ff0cc03414a6acedca3b60613ac788ce9db884172136bd",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 集成指南"
+      }
+    },
+    {
+      "segment_id": "97ae4a01",
+      "source_content": "SAML Jackson works with a large number of Open source tools.",
+      "source_content_hash": "0899338bdcf201bd1766c67f8552037a90b0dce2d39b1fa8119835994d29ed7a",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "SAML Jackson可与大量开源工具协同工作。"
+      }
+    },
+    {
+      "segment_id": "100eac36",
+      "source_content": "<div className=\"container\" style={{ padding: 0 }}>\n  <div className=\"row is-multiline\">\n    <IntegrationsGuide />\n  </div>\n</div>",
+      "source_content_hash": "a845dbac6d9bed6b49b7a3a19778221d05a5c3c635a67c4d2b3244c46d6dc291",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_100eac36"
+      }
+    }
+  ],
+  "target_i18n_subpath": "docusaurus-plugin-content-docs-guides/current/jackson/overview.mdx",
+  "last_updated_timestamp": "2025-06-08T18:49:09.298089+00:00",
+  "schema_version": "1.0",
+  "translated_versions": {
+    "zh-CN": "16571b1de59664410595f8c6430f78418bb50913ce5ea312110b0ac75184a978"
+  }
+}

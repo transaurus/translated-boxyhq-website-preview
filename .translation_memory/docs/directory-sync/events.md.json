@@ -1,0 +1,322 @@
+{
+  "source_file_path_relative_to_docusaurus_root": "docs/directory-sync/events.md",
+  "source_file_content_hash": "a6d587ab315c0a04ae8844872ce4cdc269feb2b0205d0b6204a23d2cfd8ee5bd",
+  "segments": [
+    {
+      "segment_id": "58cfcc64",
+      "source_content": "---\ntitle: Directory Sync Webhook Events\nsidebar_label: Events\n---",
+      "source_content_hash": "36ebd4d70f194e3a6a82797244557bc0fe54521b7fb75767075ef0d4ec4701fa",
+      "node_type": "yaml",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_58cfcc64"
+      }
+    },
+    {
+      "segment_id": "b3de8742",
+      "source_content": "# Events",
+      "source_content_hash": "3f672ecd900458ab4b1580bce31c327cb90567ed6f4b88e81c44015b488a7abf",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "# 事件"
+      }
+    },
+    {
+      "segment_id": "3fbbcc07",
+      "source_content": "SAML Jackson uses webhooks to notify your application any time changes are made to directory, users, groups, and memberships.",
+      "source_content_hash": "858308d50d237d624db50de014e6397825e99a34ffb6f5fef3a0dbb6536b98cc",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "SAML Jackson 通过 Webhook 在目录、用户、群组及成员关系发生变更时通知您的应用程序。"
+      }
+    },
+    {
+      "segment_id": "1cc03ec8",
+      "source_content": "## User Events",
+      "source_content_hash": "b118b27559bab5c66c1d1b3944dae03ae0987f0194bfc82e0123c687b2b58367",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 用户事件"
+      }
+    },
+    {
+      "segment_id": "8d66f911",
+      "source_content": "We'll notify you of the following 3 events related to users. Each event will be sent to the webhook URL you've configured in the Directory Sync app.",
+      "source_content_hash": "44c7c2400bdfad9c2acd9dc8004dc1f56ffd53803f76c65235c6683dc71c4897",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "我们将通知您以下3类与用户相关的事件。每个事件都将发送至您在目录同步应用中配置的Webhook URL。"
+      }
+    },
+    {
+      "segment_id": "899bc9b4",
+      "source_content": "<details>\n  <summary>user.created - New user has been assigned to the app.</summary>\n  <p>\n\n```json\n{\n  \"directory_id\": \"58b5cd9dfaa39d47eb8f5f88631f9a629a232016\",\n  \"event\": \"user.created\",\n  \"tenant\": \"boxyhq\",\n  \"product\": \"jackson\",\n  \"data\": {\n    \"id\": \"038e767b-9bc6-4dbd-975e-fbc38a8e7d82\",\n    \"first_name\": \"Deepak\",\n    \"last_name\": \"Prabhakara\",\n    \"email\": \"deepak@boxyhq.com\",\n    \"active\": true,\n    \"raw\": {\n      \"schemas\": [\"urn:ietf:params:scim:schemas:core:2.0:User\"],\n      \"userName\": \"deepak@boxyhq.com\",\n      \"name\": {\n        \"givenName\": \"Deepak\",\n        \"familyName\": \"Prabhakara\"\n      },\n      \"emails\": [\n        {\n          \"primary\": true,\n          \"value\": \"deepak@boxyhq.com\",\n          \"type\": \"work\"\n        }\n      ],\n      \"title\": \"CEO\",\n      \"displayName\": \"Deepak Prabhakara\",\n      \"locale\": \"en-US\",\n      \"externalId\": \"00u1ldzzogFkXFmvT5d7\",\n      \"groups\": [],\n      \"active\": true,\n      \"id\": \"038e767b-9bc6-4dbd-975e-fbc38a8e7d82\"\n    }\n  }\n}\n```\n\n  </p>\n\n</details>",
+      "source_content_hash": "184a5320a063b27373bb18d395bee952194cecce8fe6cee398ef5850f87c9a6a",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_899bc9b4"
+      }
+    },
+    {
+      "segment_id": "60e88cae",
+      "source_content": "<details>\n  <summary>user.updated - A user's properties has been updated.</summary>\n  <p>\n\n```json\n{\n  \"directory_id\": \"58b5cd9dfaa39d47eb8f5f88631f9a629a232016\",\n  \"event\": \"user.updated\",\n  \"tenant\": \"boxyhq\",\n  \"product\": \"jackson\",\n  \"data\": {\n    \"id\": \"ebc31d6e-7d62-4f81-b9e5-eb5f1a04ee92\",\n    \"first_name\": \"Kiran\",\n    \"last_name\": \"Krishnan\",\n    \"email\": \"kiran@boxyhq.com\",\n    \"active\": true,\n    \"raw\": {\n      \"schemas\": [\"urn:ietf:params:scim:schemas:core:2.0:User\"],\n      \"userName\": \"kiran@boxyhq.com\",\n      \"name\": {\n        \"givenName\": \"Kiran\",\n        \"familyName\": \"Krishnan\"\n      },\n      \"emails\": [\n        {\n          \"primary\": true,\n          \"value\": \"kiran@boxyhq.com\",\n          \"type\": \"work\"\n        }\n      ],\n      \"displayName\": \"Kiran Krishnan\",\n      \"addresses\": [\n        {\n          \"primary\": true,\n          \"region\": \"Kerala\"\n        }\n      ],\n      \"locale\": \"en-US\",\n      \"externalId\": \"00u3e3cmpdDydXdzV5d7\",\n      \"active\": true,\n      \"id\": \"ebc31d6e-7d62-4f81-b9e5-eb5f1a04ee92\",\n      \"groups\": []\n    }\n  }\n}\n```\n\n  </p>\n</details>",
+      "source_content_hash": "19c46f481323124d057097af58629501491b6c215ab4c13c8d140bcb03a308ec",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_60e88cae"
+      }
+    },
+    {
+      "segment_id": "32dbde37",
+      "source_content": "<details>\n  <summary>user.deleted - A user has been removed from the Directory Provider.</summary>\n  <p>\n\n```json\n{\n  \"directory_id\": \"58b5cd9dfaa39d47eb8f5f88631f9a629a232016\",\n  \"event\": \"user.deleted\",\n  \"tenant\": \"boxyhq\",\n  \"product\": \"jackson\",\n  \"data\": {\n    \"id\": \"ebc31d6e-7d62-4f81-b9e5-eb5f1a04ee92\",\n    \"first_name\": \"Kiran\",\n    \"last_name\": \"Krishnan\",\n    \"email\": \"kiran@boxyhq.com\",\n    \"active\": false,\n    \"raw\": {\n      \"schemas\": [\"urn:ietf:params:scim:schemas:core:2.0:User\"],\n      \"userName\": \"kiran@boxyhq.com\",\n      \"name\": {\n        \"givenName\": \"Kiran\",\n        \"familyName\": \"Krishnan\"\n      },\n      \"emails\": [\n        {\n          \"primary\": true,\n          \"value\": \"kiran@boxyhq.com\",\n          \"type\": \"work\"\n        }\n      ],\n      \"displayName\": \"Kiran Krishnan\",\n      \"addresses\": [\n        {\n          \"primary\": true,\n          \"region\": \"Kerala\"\n        }\n      ],\n      \"locale\": \"en-US\",\n      \"externalId\": \"00u3e3cmpdDydXdzV5d7\",\n      \"active\": false,\n      \"id\": \"ebc31d6e-7d62-4f81-b9e5-eb5f1a04ee92\",\n      \"groups\": []\n    }\n  }\n}\n```\n\n  </p>\n</details>",
+      "source_content_hash": "9b8a52d05431f0d6867a65aa8f82de361007a7d1f6f2daa15c1b314528454933",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_32dbde37"
+      }
+    },
+    {
+      "segment_id": "531ec0bb",
+      "source_content": "## Group Events",
+      "source_content_hash": "197c3e3e29ec154512dd1255bea1427f1fd09a31f69fc18ea19c654cd7b590c0",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 群组事件"
+      }
+    },
+    {
+      "segment_id": "d2a3d4c7",
+      "source_content": "We'll notify you of the following 5 events related to groups and memberships. Each event will be sent to the webhook URL you've configured in the Directory Sync app.",
+      "source_content_hash": "f9aab0b18c2391bb0c58e6fad5e4eb9a95c0a6107da390c17be91378bf3e0de5",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "我们将通知您以下5类与群组及成员关系相关的事件。每个事件都将发送至您在目录同步应用中配置的Webhook URL。"
+      }
+    },
+    {
+      "segment_id": "e59d0121",
+      "source_content": "<details>\n  <summary>group.created - New group has been added to the app.</summary>\n  <p>\n\n```json\n{\n  \"directory_id\": \"58b5cd9dfaa39d47eb8f5f88631f9a629a232016\",\n  \"event\": \"group.created\",\n  \"tenant\": \"boxyhq\",\n  \"product\": \"jackson\",\n  \"data\": {\n    \"id\": \"29e3adde-b4bb-45fc-bf65-2b44f29fd6f6\",\n    \"name\": \"dev\",\n    \"raw\": {\n      \"schemas\": [\"urn:ietf:params:scim:schemas:core:2.0:Group\"],\n      \"displayName\": \"dev\",\n      \"members\": [],\n      \"id\": \"29e3adde-b4bb-45fc-bf65-2b44f29fd6f6\"\n    }\n  }\n}\n```\n\n  </p>\n</details>",
+      "source_content_hash": "0e25a88145632bfba75dbbe58805ef88492decb4e64b73b35a4422a9a31d2787",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_e59d0121"
+      }
+    },
+    {
+      "segment_id": "b232c140",
+      "source_content": "<details>\n  <summary>group.updated - A group's properties has been updated.</summary>\n  <p>\n\n```json\n{\n  \"directory_id\": \"58b5cd9dfaa39d47eb8f5f88631f9a629a232016\",\n  \"event\": \"group.updated\",\n  \"tenant\": \"boxyhq\",\n  \"product\": \"jackson\",\n  \"data\": {\n    \"id\": \"29e3adde-b4bb-45fc-bf65-2b44f29fd6f6\",\n    \"name\": \"developers\",\n    \"raw\": {\n      \"schemas\": [\"urn:ietf:params:scim:schemas:core:2.0:Group\"],\n      \"displayName\": \"developers\",\n      \"members\": [],\n      \"id\": \"29e3adde-b4bb-45fc-bf65-2b44f29fd6f6\"\n    }\n  }\n}\n```\n\n  </p>\n</details>",
+      "source_content_hash": "d66afd31651478658b85637e253c1014e91e2c946b25202272897e6a76425c0f",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_b232c140"
+      }
+    },
+    {
+      "segment_id": "151776a7",
+      "source_content": "<details>\n  <summary>group.deleted - A group has been removed from the app.</summary>\n  <p>\n\n```json\n{\n  \"directory_id\": \"58b5cd9dfaa39d47eb8f5f88631f9a629a232016\",\n  \"event\": \"group.deleted\",\n  \"tenant\": \"boxyhq\",\n  \"product\": \"jackson\",\n  \"data\": {\n    \"id\": \"29e3adde-b4bb-45fc-bf65-2b44f29fd6f6\",\n    \"name\": \"developers\",\n    \"raw\": {\n      \"schemas\": [\"urn:ietf:params:scim:schemas:core:2.0:Group\"],\n      \"displayName\": \"developers\",\n      \"members\": [],\n      \"id\": \"29e3adde-b4bb-45fc-bf65-2b44f29fd6f6\"\n    }\n  }\n}\n```\n\n  </p>\n</details>",
+      "source_content_hash": "77e9ec09db8bc455cbd488b9ef8a7a0746c8c211b6dff18fc305bd17b927ad23",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_151776a7"
+      }
+    },
+    {
+      "segment_id": "6dfa230f",
+      "source_content": "<details>\n  <summary>group.user_added - A user has been added to a directory group.</summary>\n  <p>\n\n```json\n{\n  \"directory_id\": \"58b5cd9dfaa39d47eb8f5f88631f9a629a232016\",\n  \"event\": \"group.user_added\",\n  \"tenant\": \"boxyhq\",\n  \"product\": \"jackson\",\n  \"data\": {\n    \"id\": \"ebc31d6e-7d62-4f81-b9e5-eb5f1a04ee92\",\n    \"first_name\": \"Kiran\",\n    \"last_name\": \"Krishnan\",\n    \"email\": \"kiran@boxyhq.com\",\n    \"active\": true,\n    \"raw\": {\n      \"schemas\": [\"urn:ietf:params:scim:schemas:core:2.0:User\"],\n      \"userName\": \"kiran@boxyhq.com\",\n      \"name\": {\n        \"givenName\": \"Kiran\",\n        \"familyName\": \"Krishnan\"\n      },\n      \"emails\": [\n        {\n          \"primary\": true,\n          \"value\": \"kiran@boxyhq.com\",\n          \"type\": \"work\"\n        }\n      ],\n      \"displayName\": \"Kiran Krishnan\",\n      \"addresses\": [\n        {\n          \"primary\": true,\n          \"region\": \"Kerala\"\n        }\n      ],\n      \"locale\": \"en-US\",\n      \"externalId\": \"00u3e3cmpdDydXdzV5d7\",\n      \"active\": true,\n      \"id\": \"ebc31d6e-7d62-4f81-b9e5-eb5f1a04ee92\",\n      \"title\": \"Developer\",\n      \"groups\": []\n    },\n    \"group\": {\n      \"id\": \"29e3adde-b4bb-45fc-bf65-2b44f29fd6f6\",\n      \"name\": \"developers\",\n      \"raw\": {\n        \"schemas\": [\"urn:ietf:params:scim:schemas:core:2.0:Group\"],\n        \"displayName\": \"developers\",\n        \"members\": [],\n        \"id\": \"29e3adde-b4bb-45fc-bf65-2b44f29fd6f6\"\n      }\n    }\n  }\n}\n```\n\n  </p>\n</details>",
+      "source_content_hash": "8a94576e5d10ff6fef03a9495c98cfc96f312ab348b379b3adcdca0d95b42f10",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_6dfa230f"
+      }
+    },
+    {
+      "segment_id": "0f32bed8",
+      "source_content": "<details>\n  <summary>group.user_removed - A user has been removed from a directory group.</summary>\n  <p>\n\n```json\n{\n  \"directory_id\": \"58b5cd9dfaa39d47eb8f5f88631f9a629a232016\",\n  \"event\": \"group.user_removed\",\n  \"tenant\": \"boxyhq\",\n  \"product\": \"jackson\",\n  \"data\": {\n    \"id\": \"ebc31d6e-7d62-4f81-b9e5-eb5f1a04ee92\",\n    \"first_name\": \"Kiran\",\n    \"last_name\": \"Krishnan\",\n    \"email\": \"kiran@boxyhq.com\",\n    \"active\": true,\n    \"raw\": {\n      \"schemas\": [\"urn:ietf:params:scim:schemas:core:2.0:User\"],\n      \"userName\": \"kiran@boxyhq.com\",\n      \"name\": {\n        \"givenName\": \"Kiran\",\n        \"familyName\": \"Krishnan\"\n      },\n      \"emails\": [\n        {\n          \"primary\": true,\n          \"value\": \"kiran@boxyhq.com\",\n          \"type\": \"work\"\n        }\n      ],\n      \"displayName\": \"Kiran Krishnan\",\n      \"addresses\": [\n        {\n          \"primary\": true,\n          \"region\": \"Kerala\"\n        }\n      ],\n      \"locale\": \"en-US\",\n      \"externalId\": \"00u3e3cmpdDydXdzV5d7\",\n      \"active\": true,\n      \"id\": \"ebc31d6e-7d62-4f81-b9e5-eb5f1a04ee92\",\n      \"title\": \"Developer\",\n      \"groups\": []\n    },\n    \"group\": {\n      \"id\": \"29e3adde-b4bb-45fc-bf65-2b44f29fd6f6\",\n      \"name\": \"developers\",\n      \"raw\": {\n        \"schemas\": [\"urn:ietf:params:scim:schemas:core:2.0:Group\"],\n        \"displayName\": \"developers\",\n        \"members\": [],\n        \"id\": \"29e3adde-b4bb-45fc-bf65-2b44f29fd6f6\"\n      }\n    }\n  }\n}\n```\n\n  </p>\n</details>",
+      "source_content_hash": "fea575ab8d0b1ab833234629a4e683b8e6e0d53ac30bd679f869aa01ae14ef61",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_0f32bed8"
+      }
+    },
+    {
+      "segment_id": "a6f3574e",
+      "source_content": "## Directory Events",
+      "source_content_hash": "0d597533afd3c48346f00ecec31d1d471cb8158acf11fff379ee85beca85359b",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 目录事件"
+      }
+    },
+    {
+      "segment_id": "d67645cb",
+      "source_content": "To configure the webhook, you have to set the following environment variables.",
+      "source_content_hash": "30e56820523c8814d5dbb24ce668c02220cbb4b9f4dd7defb0b315ffa27ad0a7",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "配置Webhook需设置以下环境变量："
+      }
+    },
+    {
+      "segment_id": "e417c3e9",
+      "source_content": "- `WEBHOOK_URL` - The URL to which the webhook events will be sent.\n- `WEBHOOK_SECRET` - The secret key used to sign the webhook events.",
+      "source_content_hash": "8b35ea871ce4dd8b71ad6c8e9a4f3ac4dae9b73d7791190cbceb14851ec305a0",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- `WEBHOOK_URL` - 接收Webhook事件的目标URL\n- `WEBHOOK_SECRET` - 用于签名Webhook事件的密钥"
+      }
+    },
+    {
+      "segment_id": "b41b4d77",
+      "source_content": "We'll notify you of the following 4 events related to the directory connections.",
+      "source_content_hash": "b1be888d08803ec7326801f1274549a2f7357f646646e68631d5246d4b9a2221",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "我们将通知您以下4类与目录连接相关的事件："
+      }
+    },
+    {
+      "segment_id": "c44ba990",
+      "source_content": "<details>\n<summary>\n  dsync.created - New connection has been created.\n</summary>\n<p>\n\n```json\n{\n  \"event\": \"dsync.created\",\n  \"tenant\": \"boxyhq\",\n  \"product\": \"demo\",\n  \"data\": {\n    \"id\": \"d8aa6c93-c960-4925-9b31-4a4d2ad3bb44\",\n    \"name\": \"Okta Directory\",\n    \"type\": \"okta-scim-v2\"\n  }\n}\n```\n\n</p>\n</details>",
+      "source_content_hash": "2aa026e3b28fad6ece3e2857a272a0f536427e2bcc8dfce38d44562ef17a348e",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_c44ba990"
+      }
+    },
+    {
+      "segment_id": "e98e75d1",
+      "source_content": "<details>\n<summary>\n  dsync.deactivated - A connection has been deactivated.\n</summary>\n<p>\n\n```json\n{\n  \"event\": \"dsync.deactivated\",\n  \"tenant\": \"boxyhq\",\n  \"product\": \"demo\",\n  \"data\": {\n    \"id\": \"d8aa6c93-c960-4925-9b31-4a4d2ad3bb44\",\n    \"name\": \"Okta Directory\",\n    \"type\": \"okta-scim-v2\"\n  }\n}\n```\n\n</p>\n</details>",
+      "source_content_hash": "11c97469133186d8fbdae72103043f758ecb3d4e9c54c8980a1ad5b05cfd485e",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_e98e75d1"
+      }
+    },
+    {
+      "segment_id": "01754ba1",
+      "source_content": "<details>\n<summary>\n  dsync.activated - A connection has been activated.\n</summary>\n<p>\n\n```json\n{\n  \"event\": \"dsync.activated\",\n  \"tenant\": \"boxyhq\",\n  \"product\": \"demo\",\n  \"data\": {\n    \"id\": \"d8aa6c93-c960-4925-9b31-4a4d2ad3bb44\",\n    \"name\": \"Okta Directory\",\n    \"type\": \"okta-scim-v2\"\n  }\n}\n```\n\n</p>\n</details>",
+      "source_content_hash": "07153203f08d2aa60964b7a837172cd6327421c2a558f155d8b056f4f155dc4f",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_01754ba1"
+      }
+    },
+    {
+      "segment_id": "8c37a1c1",
+      "source_content": "<details>\n<summary>\n  dsync.deleted - A connection has been deleted.\n</summary>\n<p>\n\n```json\n{\n  \"event\": \"dsync.deleted\",\n  \"tenant\": \"boxyhq\",\n  \"product\": \"demo\",\n  \"data\": {\n    \"id\": \"d8aa6c93-c960-4925-9b31-4a4d2ad3bb44\",\n    \"name\": \"Okta Directory\",\n    \"type\": \"okta-scim-v2\"\n  }\n}\n```\n\n</p>\n</details>",
+      "source_content_hash": "181168a6b0f950dd5225a5f1c0dde1559461272d6a848be187dd2955697fa8ae",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_8c37a1c1"
+      }
+    },
+    {
+      "segment_id": "5651bec6",
+      "source_content": "## Frequently Asked Questions",
+      "source_content_hash": "8ac79955795784ca48016ad46dca860ea42f34c6a8ebe91234df048fec4462dd",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 常见问题"
+      }
+    },
+    {
+      "segment_id": "486ab0ab",
+      "source_content": "### Which Identity Providers do not send an event for user deletion?",
+      "source_content_hash": "aa07a71982cc74b89f5313844880f6e5b83aef4f897dd8a0d10c4e163eb49124",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 哪些身份提供商不会发送用户删除事件？"
+      }
+    },
+    {
+      "segment_id": "8be3f6dc",
+      "source_content": "Following Identity Providers do not send `user.deleted` event:",
+      "source_content_hash": "fdfe45c6696b2cc71b88d7765c6f718747993fd99c09d7f510630cc846ff819d",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "以下身份提供商不会发送`user.deleted`事件："
+      }
+    },
+    {
+      "segment_id": "0c7ec98b",
+      "source_content": "- Okta\n- Microsoft Entra ID (formerly Azure AD)",
+      "source_content_hash": "c346ac8ceaddc8431e647818590c5e67cd9f17920765ba8826cebc06d1df531e",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- Okta\n- Microsoft Entra ID（原Azure AD）"
+      }
+    },
+    {
+      "segment_id": "4ea2c99a",
+      "source_content": "### How to determine whether a user has been deleted if the Identity Provider does not send a webhook event for user deletion?",
+      "source_content_hash": "bd48300703247d03e494ff4def2263ba2ea677622dcd4e6fbfd80d0c9b98e423",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 当身份提供商未发送用户删除的Webhook事件时，如何判断用户是否被删除？"
+      }
+    },
+    {
+      "segment_id": "3353b597",
+      "source_content": "To receive notifications when a user is deleted, it's important to note that not all Identity Providers send requests for this. However, you can listen for the `user.updated` event from SAML Jackson and examine the `active` property to determine whether a user has been deleted. In case the user is deleted, the `active` property will be assigned the value `false`.",
+      "source_content_hash": "41f1b2a8b5e796a4174052bdda0700123aba09927916a1704318ae05e132bb9b",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "请注意，并非所有身份提供商都会发送用户删除请求。您可以通过监听SAML Jackson的`user.updated`事件，检查`active`属性值来判断用户是否被删除。当用户被删除时，该属性值将变为`false`。"
+      }
+    },
+    {
+      "segment_id": "714a0305",
+      "source_content": "### Which SCIM version does SAML Jackson support?",
+      "source_content_hash": "bda96985bdabadeb43dd1014d2fdd3b09081db6676ae60d78af9349b4fcc0f94",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### SAML Jackson支持哪个SCIM版本？"
+      }
+    },
+    {
+      "segment_id": "b136c0e9",
+      "source_content": "At the moment, SAML Jackson supports SCIM version 2.0.",
+      "source_content_hash": "7b91bbd3e56b4d1608e6a86be9fac0d21f3ff52ec77f5c6ab8f47ace31a4f5bd",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "当前SAML Jackson支持SCIM 2.0版本。"
+      }
+    }
+  ],
+  "target_i18n_subpath": "docusaurus-plugin-content-docs/current/directory-sync/events.md",
+  "last_updated_timestamp": "2025-06-08T18:49:09.311168+00:00",
+  "schema_version": "1.0",
+  "translated_versions": {
+    "zh-CN": "a6d587ab315c0a04ae8844872ce4cdc269feb2b0205d0b6204a23d2cfd8ee5bd"
+  }
+}

@@ -1,0 +1,272 @@
+{
+  "source_file_path_relative_to_docusaurus_root": "guides/jackson/configuring-saml-sso.md",
+  "source_file_content_hash": "4af9dbfba1207c1f7c3fc81e573aea61d08436d1daa7c69e8cd2d7a0df766912",
+  "segments": [
+    {
+      "segment_id": "58cfcc64",
+      "source_content": "---\ntitle: UI Best Practices for Configuring SAML Single Sign-On\ndescription: UI Best Practices for Configuring SAML Single Sign-On\nsidebar_label: Configuring SAML SSO\n---",
+      "source_content_hash": "e9be1bff053d8ae51dfd9225e0f00a39b32b7e3d03dd6d9ed4aa188b03a17c2a",
+      "node_type": "yaml",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_58cfcc64"
+      }
+    },
+    {
+      "segment_id": "a703643c",
+      "source_content": "# Configuring SAML Single Sign-On",
+      "source_content_hash": "06e6f494531815ea0f682b9f33af0d7ba7d8218938363cdd02024255eee51878",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "# 配置SAML单点登录"
+      }
+    },
+    {
+      "segment_id": "53eaf0e1",
+      "source_content": "For an overview of our SAML SSO, read [SSO Building blocks](/blog/sso-building-blocks).",
+      "source_content_hash": "4374a65574d8e6a28d972aa0e8097ea53249209ed50c5121f7ca77d2be0ec64f",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "关于SAML单点登录的概述，请阅读[SSO基础构建模块](/blog/sso-building-blocks)。"
+      }
+    },
+    {
+      "segment_id": "8ac585fb",
+      "source_content": "This guide aims to give you some ideas about configuring the SAML SSO for your tenants and the best practices you can follow while implementing the same.",
+      "source_content_hash": "b6671798f923e3169177dcbc3a3547e138b5ccca6c28cdb33fc438a13315c6d3",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "本指南旨在为您提供配置租户SAML单点登录的思路，以及在实施过程中可遵循的最佳实践。"
+      }
+    },
+    {
+      "segment_id": "ba4f48ff",
+      "source_content": "## SSO connection identifier",
+      "source_content_hash": "b872346fad8534c88edc68bce8871c3c16493e1aad2c3cbfe5049d1b199f74de",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## SSO连接标识符"
+      }
+    },
+    {
+      "segment_id": "cf898102",
+      "source_content": "A multi-tenant enterprise app must attach SSO connections to a **tenant identifier**. For example, an app can use any of the following as its tenant identifier.",
+      "source_content_hash": "5fc6dbcc9343b05244a4cbaded8d42b4f9f9b661c64c25b31bd2c1274a3d275d",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "多租户企业应用必须将SSO连接关联到**租户标识符**。例如，应用可以使用以下任意一项作为租户标识符："
+      }
+    },
+    {
+      "segment_id": "84758135",
+      "source_content": "- Email domain\n- Organization Id or Organization slug\n- Team Id or Team slug\n- Other unique identifiers",
+      "source_content_hash": "905849803c6ff50fdecaf5a6408a241f47ca30bdff00b4e82c8244dbdebcb8bb",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- 邮箱域名\n- 组织ID或组织别名\n- 团队ID或团队别名\n- 其他唯一标识符"
+      }
+    },
+    {
+      "segment_id": "2df4f75f",
+      "source_content": "Typically, the app asks users to enter their tenant identifier to initiate the authentication flow. Then the app tries to find the proper SSO connection based on the tenant identifier. Finally, the app redirects users to their Identity Provider if a valid SSO connection is found, or the app displays an appropriate error message if the connection is not found.",
+      "source_content_hash": "6ceb017d4b85c7c6cbbe0129f5d549b6a5779b5e9951e65471b1d72a42b699a2",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "通常，应用会要求用户输入租户标识符以启动认证流程。随后应用会根据该标识符查找对应的SSO连接。若找到有效连接，则将用户重定向至其身份提供商（IdP）；若未找到，则显示相应错误信息。"
+      }
+    },
+    {
+      "segment_id": "98cfbd53",
+      "source_content": "If your app asks for the work email address, it must extract the domain part and use it as the tenant identifier.",
+      "source_content_hash": "2681eae344b0122e28f8a3d7393a37d22635247a32f24fd5455eb48f06f5cd35",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "如果应用要求输入工作邮箱地址，则需提取域名部分作为租户标识符。"
+      }
+    },
+    {
+      "segment_id": "ccc88b4c",
+      "source_content": "Let's see what other apps use to identify the SSO Connections:",
+      "source_content_hash": "7c4f78691f0676cad4bc07db779c98453ee81a1603a696e62addf2f6793832be",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "以下是其他应用采用的SSO连接标识方式："
+      }
+    },
+    {
+      "segment_id": "1d13125b",
+      "source_content": "- Airtable uses the Email domain\n- Vercel uses the Team slug\n- Netlify uses the Team Id\n- Sentry uses the Organization Id",
+      "source_content_hash": "fa42cc353647ee569b3ca2ac95342e8ac094d59a5c2060acd8fffe6266fd2421",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- Airtable使用邮箱域名\n- Vercel使用团队别名\n- Netlify使用团队ID\n- Sentry使用组织ID"
+      }
+    },
+    {
+      "segment_id": "4daf5cdd",
+      "source_content": "Read more about [UI Best Practices for login with SAML Single Sign-On](/guides/jackson/login-with-saml-sso).",
+      "source_content_hash": "044650d5f4f5753916731f3c62115d82c7bc88c21cf7e8e8ebde75b7d9027760",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "了解更多关于[SAML单点登录的UI最佳实践](/guides/jackson/login-with-saml-sso)。"
+      }
+    },
+    {
+      "segment_id": "f422383e",
+      "source_content": "## SSO settings UI",
+      "source_content_hash": "bf93b051e945587399b6be419b9b85b258168edd3fc3c0cfce5756daf3fc1e62",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## SSO设置界面"
+      }
+    },
+    {
+      "segment_id": "97ae4a01",
+      "source_content": "An app should allow each tenant to configure SAML SSO for their users.",
+      "source_content_hash": "2495fbc27e5de5706907db60477f9f25fe23dc3ab27052773fa1438ea948c5cc",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "应用应允许每个租户为其用户配置SAML单点登录。"
+      }
+    },
+    {
+      "segment_id": "c3a738de",
+      "source_content": "Depending on your application's tenant architecture, you can put the SAML SSO configuration page under the organization or team settings page.",
+      "source_content_hash": "03c7856a5295d1ab271bc3e18a85a600522e7f4f1f3719de9c6348f2d8cc0164",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "根据应用的租户架构设计，可将SAML SSO配置页面置于组织或团队的设置页面下。"
+      }
+    },
+    {
+      "segment_id": "3cfe6286",
+      "source_content": "Since the SAML SSO is an exclusive security-facing feature for enterprises, the best place to put the configuration page is under the **Security** tab.",
+      "source_content_hash": "68d30205d6742315b5780af1503a0c63591fb0526e4fff3ef3b611bfe01d75a6",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "由于SAML SSO是企业专属的安全功能，最佳实践是将其配置页面放在**安全**选项卡下。"
+      }
+    },
+    {
+      "segment_id": "1042b50d",
+      "source_content": "Here is how Sentry does the SAML SSO configuration for their customers.",
+      "source_content_hash": "5940474f4da32c6db53f214c3636337851df556987c748dc43d58b3ba4d22547",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "以下是Sentry为其客户配置SAML SSO的示例："
+      }
+    },
+    {
+      "segment_id": "68123cc1",
+      "source_content": "<p>\n  <img\n    src=\"/images/guides/sso/sentry-metadata.png\"\n    style={{ border: '1px solid black' }}\n    title=\"The SAML SSO settings\"\n  />\n</p>",
+      "source_content_hash": "36f871d41d7b725d335899da52fea00fb323c3716501754e50090a1f331bac3e",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_68123cc1"
+      }
+    },
+    {
+      "segment_id": "98d26038",
+      "source_content": "To create an [SSO connection with SAML Jackson](/docs/jackson/sso-flow/#2-sso-connection-api), you must pass the tenant identifier, product name, and XML metadata. So your settings page UI must display a form to capture the XML Metadata.",
+      "source_content_hash": "b54082e916c99edd4dabb8629ae61814b088bbc99e045c66e9eb0217ad4bd819",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "要创建[通过SAML Jackson的SSO连接](/docs/jackson/sso-flow/#2-sso-connection-api)，必须传递租户标识符、产品名称和XML元数据。因此设置页面需提供表单以获取XML元数据。"
+      }
+    },
+    {
+      "segment_id": "d3649a1e",
+      "source_content": "Typically, an Administrator user with a higher privilege does the SAML SSO configuration for their tenant.",
+      "source_content_hash": "11ba9cccf68c272e79421933a5999397c5c0c33a7cdb6ddc30a8e7be6c6aa2bd",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "通常由具备更高权限的管理员用户为其租户配置SAML SSO。"
+      }
+    },
+    {
+      "segment_id": "e50bebbf",
+      "source_content": "## Additional SSO settings",
+      "source_content_hash": "e7cea8e5cc3381d6adfdb6abac2efc2ae0fd2108565d05dcf55ebe90b4efebd1",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 附加SSO设置"
+      }
+    },
+    {
+      "segment_id": "23dfb152",
+      "source_content": "You can consider a few additional settings while implementing the SAML SSO into your app.",
+      "source_content_hash": "3359c4cff3b9b61e08a6b93e6c3467bb2fcafbe72151769e0b0dedde6f295a39",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "在应用中实施SAML SSO时，可考虑以下附加设置："
+      }
+    },
+    {
+      "segment_id": "1131ef75",
+      "source_content": "**Enforcing SAML**",
+      "source_content_hash": "23af3f0c91570de8ae304cd704172d158e5e6ba2ffd8be705d00c34a5abaa802",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "**强制SAML认证**"
+      }
+    },
+    {
+      "segment_id": "8b2a52b1",
+      "source_content": "For additional security, SAML SSO can be enforced for a tenant so that all tenant members must authenticate via an identity provider (IdP).",
+      "source_content_hash": "72f5806b8f0f0cd753c1c7cd920b3e481681899edd1bdcf6ec127e3866301837",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "为增强安全性，可对租户强制执行SAML SSO，要求所有成员必须通过身份提供商（IdP）进行认证。"
+      }
+    },
+    {
+      "segment_id": "5dae11e3",
+      "source_content": "**Default role**",
+      "source_content_hash": "67dfe7b601653b8f5fffee2051e1fbd9d92e2b2894aeeddeb462978aa58396ee",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "**默认角色**"
+      }
+    },
+    {
+      "segment_id": "0bb95128",
+      "source_content": "Allow the tenants to choose a default role. Every member who creates a new account via SSO will be assigned the default role that has been set.",
+      "source_content_hash": "bb32df108a9693a56604d0addced3cf75a49472b30ad6b280895acccdbe730fc",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "允许租户设置默认角色。所有通过SSO创建新账户的成员都将被分配预设的默认角色。"
+      }
+    }
+  ],
+  "target_i18n_subpath": "docusaurus-plugin-content-docs-guides/current/jackson/configuring-saml-sso.md",
+  "last_updated_timestamp": "2025-06-08T18:49:09.316310+00:00",
+  "schema_version": "1.0",
+  "translated_versions": {
+    "zh-CN": "4af9dbfba1207c1f7c3fc81e573aea61d08436d1daa7c69e8cd2d7a0df766912"
+  }
+}

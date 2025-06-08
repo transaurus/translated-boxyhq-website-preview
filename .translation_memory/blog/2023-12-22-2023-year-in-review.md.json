@@ -1,0 +1,352 @@
+{
+  "source_file_path_relative_to_docusaurus_root": "blog/2023-12-22-2023-year-in-review.md",
+  "source_file_content_hash": "e75d918f68cc2021734b233ea482babeaa7353c2bd5a3fa260fea213686f59a2",
+  "segments": [
+    {
+      "segment_id": "58cfcc64",
+      "source_content": "---\nslug: boxyhq-2023-year-in-review\ntitle: Progress and Challenges in Securing The Web Ecosystem in 2023 - A Year in Review\nauthor: Schalk Neethling\nauthor_title: Customer Success, Community, DevRel - @BoxyHQ\nauthor_url: https://github.com/schalkneethling\nauthor_image_url: /images/authors/schalk.jpg\ntags_disabled: [enterprise-readiness]\nimage: /img/blog/boxyhq-2023-year-in-review.jpg\n---",
+      "source_content_hash": "39b1597541feb9f6d0548e2b8ddc576c23dd4c74dcfc05912de7fe510d57d014",
+      "node_type": "yaml",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_58cfcc64"
+      }
+    },
+    {
+      "segment_id": "8d66f911",
+      "source_content": "The year 2023 marked a turning point in web security, with the industry witnessing both groundbreaking advancements and formidable challenges. This report offers a panoramic view of the web ecosystem, highlighting the collective efforts and pivotal breakthroughs across the sector. Dive into a detailed exploration of the year's most impactful developments in securing the web ecosystem.",
+      "source_content_hash": "11cbc00263267e43e9a45a613e3204702c46924123a230a46d7c8cb83087a854",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "2023年标志着网络安全的一个转折点，行业既见证了突破性进展，也面临着严峻挑战。本报告全景呈现了网络生态系统的整体状况，重点展示了全行业为保障网络安全所做出的集体努力和关键突破。深入探究本年度在保护网络生态系统方面最具影响力的发展。"
+      }
+    },
+    {
+      "segment_id": "70153c6e",
+      "source_content": "## Quick Stats - The tl;dr",
+      "source_content_hash": "95a031a6cf54fa81bb26c2d2bf295d072a44c2c3e92993ba232385fd228e94ed",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 速览数据 - 一句话总结"
+      }
+    },
+    {
+      "segment_id": "4ddf6ae7",
+      "source_content": "- The cost of a data breach has reached another record with the average cost per incident now a staggering **$4.45M** (million dollars per incident) - [IBM Report: Half of Breached Organizations Unwilling to Increase Security Spend Despite Soaring Breach Costs](https://newsroom.ibm.com/2023-07-24-IBM-Report-Half-of-Breached-Organizations-Unwilling-to-Increase-Security-Spend-Despite-Soaring-Breach-Costs)\n- The DevSecOps advantage sits at around **$1.7M** (million dollars). In other words, those organizations with an effective DevSecOps team or solution decrease their incident costs by $1.7M on average. - [IBM Report: Half of Breached Organizations Unwilling to Increase Security Spend Despite Soaring Breach Costs](https://newsroom.ibm.com/2023-07-24-IBM-Report-Half-of-Breached-Organizations-Unwilling-to-Increase-Security-Spend-Despite-Soaring-Breach-Costs)\n- “By 2028 the global cost of cybercrimes is estimated to increase by **69%** to a whopping US **$13.82 trillion**” - [Top Cybersecurity Trends In 2023](https://www.forbes.com/sites/forbestechcouncil/2023/10/17/top-cybersecurity-trends-in-2023/)\n- The Zero Trust framework or “do not trust, verify” is gaining momentum. As a result, more reliance on effective identity management, access control, and secure authentication has Gartner estimating growth of the market to **$10B** (billion dollars) by 2026. Along with Passkeys, SSO improves the general user experience and further drives adoption and investment.",
+      "source_content_hash": "54a7783dc11f21d125eda60fc152e291973a9df1f1f672c60a6155a2b2f63b88",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- 数据泄露成本再创新高，平均每起事件造成的损失高达**445万美元** - [IBM报告：尽管数据泄露成本飙升，半数遭入侵企业仍不愿增加安全支出](https://newsroom.ibm.com/2023-07-24-IBM-Report-Half-of-Breached-Organizations-Unwilling-to-Increase-Security-Spend-Despite-Soaring-Breach-Costs)\n- DevSecOps优势约为**170万美元**。换言之，拥有高效DevSecOps团队或解决方案的组织平均可减少170万美元的入侵成本 - [IBM报告：尽管数据泄露成本飙升，半数遭入侵企业仍不愿增加安全支出](https://newsroom.ibm.com/2023-07-24-IBM-Report-Half-of-Breached-Organizations-Unwilling-to-Increase-Security-Spend-Despite-Soaring-Breach-Costs)\n- \"到2028年，全球网络犯罪成本预计将增长**69%**，达到惊人的**13.82万亿美元**\" - [2023年网络安全趋势](https://www.forbes.com/sites/forbestechcouncil/2023/10/17/top-cybersecurity-trends-in-2023/)\n- 零信任框架（\"永不信任，始终验证\"）势头正劲。由此带来的身份管理、访问控制和安全认证需求增长，使得Gartner预计该市场规模到2026年将达到**100亿美元**。与通行密钥(Passkeys)类似，单点登录(SSO)改善了用户体验，进一步推动了采用率和投资增长。"
+      }
+    },
+    {
+      "segment_id": "418617bd",
+      "source_content": "## The Dark Side",
+      "source_content_hash": "ba76e09967263414b5faead839b79d7abf200964519a5b6ad672062c47fd0c0e",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 阴暗面"
+      }
+    },
+    {
+      "segment_id": "1b8c1887",
+      "source_content": "- \"Cybercriminals launched approximately 7.9 million Distributed Denial of Service (DDoS) attacks in the first half of 2023, representing a 31% year-over-year increase.” - [NETSCOUT Identified Nearly 7.9 Million DDoS Attacks in 1H2023 According to Its Latest DDoS Threat Intelligence Report](https://www.netscout.com/press-releases/netscout-identified-nearly-79-million-ddos-attacks-1h2023)\n- Security incidents due to vulnerable open source dependencies are sadly still a significant problem. According to Sonatype, “Sonatype logged 245,032 malicious packages this year alone, indicating that one in eight open source downloads now pose known and avoidable risks.” Avoidable? This highlights a clear problem in how open source is used. The reason Sonatype states that these are largely avoidable is that 96% of the time, there was already a fix for the vulnerability, but the vulnerable dependencies were never updated. Another example of this was recently reported by [The Register concerning the Log4j vulnerability](https://www.theregister.com/2023/12/11/log4j_vulnerabilities/).\n- There are a lot of concerns around artificial intelligence, too many for a single bullet point. For us at BoxyHQ, concerns around AI's handling of personal data and enterprise data is especially poignant. The power and utility of AI systems lie in their ability to collect and process vast amounts of data and finding in it anomolies and patterns in a metter of weeks or days. Tasks that would take us years. On the slip side of this same coin lies the risk that this vast amount of information could be mishandled, leading to unintentional breaches or leaks. This could result in sensitive information falling into the wrong hands, leading to identity theft, financial fraud, and other forms of abuse. One way to combat this is through open sourcing the AI systems and algorithms, allowing for greater transparency and accountability. This is we are keenly following the work of the folks at the Open Source Initiative (OSI) in [defining the definition for Open Source AI](https://blog.opensource.org/closing-the-2023-rounds-of-deep-dive-ai-with-first-draft-piece-of-the-definition-of-open-source-ai/).",
+      "source_content_hash": "c4c10a14e06cdf8d8bc446a5f507fe080509942f72189d2ff84a8e0bd17a3eaf",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- \"2023年上半年，网络犯罪分子发起了约790万次分布式拒绝服务(DDoS)攻击，同比增长31%\" - [NETSCOUT最新DDoS威胁情报报告：2023年上半年识别近790万次DDoS攻击](https://www.netscout.com/press-releases/netscout-identified-nearly-79-million-ddos-attacks-1h2023)\n- 开源依赖漏洞导致的安全事件仍是一个严重问题。Sonatype指出：\"Sonatype今年已记录245,032个恶意软件包，这意味着现在每八个开源下载中就有一个存在已知且可避免的风险\"。可避免？这突显了开源使用方式的明显问题。Sonatype认为这些风险大多可避免的原因是，96%的情况下漏洞已有修复方案，但存在漏洞的依赖项从未被更新。《The Register》最近关于Log4j漏洞的报道也印证了这一点。\n- 人工智能引发的担忧不胜枚举。对BoxyHQ而言，AI处理个人数据和企业数据的方式尤为关键。AI系统的强大功能源于其收集和处理海量数据的能力，能在数周或数日内发现异常和模式——这些工作人类需要数年完成。但硬币的另一面是，这些海量信息若处理不当，可能导致无意间的数据泄露，致使敏感信息落入不法分子之手，引发身份盗窃、金融欺诈等滥用行为。解决途径之一是开源AI系统和算法，提高透明度和问责制。我们正密切关注开源倡议组织(OSI)在定义开源AI方面的工作。"
+      }
+    },
+    {
+      "segment_id": "fa430ad4",
+      "source_content": "## The Happy Path",
+      "source_content_hash": "74443cd20a9d62b71583a6f1825ebb1671b02ac67487f162645f2a65cc0dcd0d",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 光明之路"
+      }
+    },
+    {
+      "segment_id": "77bf3ec9",
+      "source_content": "- With eight out of ten security professionals stating that security is critical and as a result investment in securing infrastructure on the up, it is not all doom and gloom. When surveyed 59% of organisations reported that they did not suffer a security breach in the past year and 64% said they do not expect a breach in the coming year. In fact, because of this increased investment, 88% of respondents stated that their data security is either very strong or somewhat strong. - [New Survey Uncovers How Companies Are Confronting Data Security Challenges Head-On](https://thehackernews.com/2023/09/new-survey-uncovers-how-companies-are.html)\n- AI and Cybersecurity automation are changing the game. According to IBM’s AI and cybersecurity report those corporations who invested in these technologies have saved $1.67 million this year alone. - [Top Cybersecurity Trends In 2023](https://www.forbes.com/sites/forbestechcouncil/2023/10/17/top-cybersecurity-trends-in-2023/?sh=8620cc87e1d9)\n- With the news that [IBM demonstrated useful Quantum computing](https://www.tomshardware.com/tech-industry/quantum-computing/ibm-demonstrates-useful-quantum-computing-within-133-qubit-heron-announces-entry-into-quantum-centric-supercomputing-era) with the 133-qubit Heron Quantum Processing Unit (QPU), it is encouraging to read that in 2023 1.7% of TLS 1.3 traffic [served by Cloudflare used post-Quantum encryption](https://blog.cloudflare.com/radar-2023-year-in-review/#encryption).",
+      "source_content_hash": "5e6fda12e75f239171743fe9f5b876bb820522125085a145d6cbbd7f12251176",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- 八成安全专业人士认为安全至关重要，因此基础设施安全投资正在增长，这并非全是悲观消息。调查显示，59%的企业表示过去一年未遭遇安全漏洞，64%预计来年也不会发生。事实上，由于投资增加，88%的受访者认为其数据安全非常或较为稳固。——[新调查揭示企业如何直面数据安全挑战](https://thehackernews.com/2023/09/new-survey-uncovers-how-companies-are.html)\n- 人工智能与网络安全自动化正在改变游戏规则。根据IBM报告，投资这些技术的企业今年已节省170万美元。——[2023年顶级网络安全趋势](https://www.forbes.com/sites/forbestechcouncil/2023/10/17/top-cybersecurity-trends-in-2023/?sh=8620cc87e1d9)\n- 随着[IBM展示133量子位Heron量子处理器实用计算能力](https://www.tomshardware.com/tech-industry/quantum-computing/ibm-demonstrates-useful-quantum-computing-within-133-qubit-heron-announces-entry-into-quantum-centric-supercomputing-era)的新闻传出，令人振奋的是2023年Cloudflare服务的TLS 1.3流量中[1.7%已采用后量子加密](https://blog.cloudflare.com/radar-2023-year-in-review/#encryption)。"
+      }
+    },
+    {
+      "segment_id": "0037ff70",
+      "source_content": "## Authentication in the Enterprise",
+      "source_content_hash": "bdbdd3da54187387a7f909e2ca507ded8c21a31c22723fa8ea744c37ee7e4b1d",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 企业级身份认证"
+      }
+    },
+    {
+      "segment_id": "bdc231b1",
+      "source_content": "Before looking at security news in the wider web security ecosystem, we want to focus on two topics that are of particular importance and relevance to us here at BoxyHQ.",
+      "source_content_hash": "0cac88e729d495d6797d0bf97eee4bac9147bbfd07385dd363f12bbe0a5c3a75",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "在探讨更广泛的网络安全动态之前，我们聚焦于对BoxyHQ至关重要的两大主题。"
+      }
+    },
+    {
+      "segment_id": "97ae4a01",
+      "source_content": "Let’s start with authentication. For around 84% of companies, the security of their authentication systems is a top 5 priority. The vast majority of these companies, around 45%, rely on single sign-on, followed by multi-factor, two-factor, and continuous authentication at around 36%.",
+      "source_content_hash": "bcb1dea99662a3f0dbf7efcb44e07640fb591b59efc8f4aab59ea26a49eec26f",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "首先是认证系统。约84%的企业将认证安全列为前五大优先事项，其中45%依赖单点登录(SSO)，其次是多因素认证(36%)、双因素认证和持续认证。"
+      }
+    },
+    {
+      "segment_id": "c3a738de",
+      "source_content": "Even though there is a general trend to consolidate cybersecurity tools, around 76% of companies need to support and integrate with multiple identity providers. The reasons for this range from specific use cases such as IT requirements, hardware, and operating systems, to failover, cyber insurance requirements, and multi-vendor support.",
+      "source_content_hash": "1e53e1f399e04379bfbcea371c0db4bb304f865b582ef6ae73bce1682df36025",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "尽管存在整合网络安全工具的趋势，76%的企业仍需支持多个身份提供商。原因包括IT需求、硬件/操作系统兼容性、故障转移、网络安全保险要求及多供应商支持等特定场景。"
+      }
+    },
+    {
+      "segment_id": "0b717733",
+      "source_content": "> This is one area where BoxyHQ can help. Read more [about our SSO solution](https://boxyhq.com/enterprise-sso?utm_source=2023-year-in-review).",
+      "source_content_hash": "d00fe4f05bfd9e1bb9f7855833471b4ed08495685f115566a52d0b74a879de97",
+      "node_type": "blockquote",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "> 这正是BoxyHQ的用武之地。了解更多[关于我们的SSO解决方案](https://boxyhq.com/enterprise-sso?utm_source=2023-year-in-review)。"
+      }
+    },
+    {
+      "segment_id": "1042b50d",
+      "source_content": "How people authenticate is also rapidly evolving. More and more services are turning away from password-based authentication and towards multi-factor authentication, FIDO (Fast Identity Online), and more narrowly, Passkeys.",
+      "source_content_hash": "745a775e72a4f3ea326f246175b7a87e13b919076927bc0a1a1cc429971cd0ab",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "认证方式也在快速演变。越来越多服务正从密码认证转向多因素认证、FIDO（快速身份在线）以及更具体的Passkeys。"
+      }
+    },
+    {
+      "segment_id": "2a3daf97",
+      "source_content": "> **What is the difference between 2FA and MFA?** 2FA is a subset of MFA which requires exactly two distinct forms of identification. Multi-Factor Authentication on the other hand can require three or more such as a password, biometric data, and an OTP. The practice commonly revolved around something you know (password), you are (biometrics), and you have (a cellular phone).",
+      "source_content_hash": "a58f16cf0fe043dc26920ae2ae7e2cb239841207cc7195f39c98c2ddf09a62b9",
+      "node_type": "blockquote",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "> **双因素认证(2FA)与多因素认证(MFA)有何区别？** 2FA是MFA的子集，要求两种独立验证方式；而MFA可要求三种及以上（如密码+生物识别+OTP）。通常基于\"所知（密码）、所有（手机）、所是（生物特征）\"原则。"
+      }
+    },
+    {
+      "segment_id": "13d9cd70",
+      "source_content": "Passkeys especially have seen increased adoption during 2023 thanks to the [FIDO2 standard](https://fidoalliance.org/fido2/), increased support for [WebAuthn](https://developer.mozilla.org/en-US/docs/Web/API/Web_Authentication_API) (a collaboration between the [FIDO Alliance](https://fidoalliance.org/) and the [W3C](https://w3.org/)) in modern browsers, hardware support, efforts by providers such as Apple, Microsoft, Google, and [1Password](https://1password.com/product/passkeys), and sites such as GitHub, Microsoft, Google, Tailscale, Shopify, and Amazon [among others](https://www.passkeys.io/who-supports-passkeys) adding support for passkey based authentication.",
+      "source_content_hash": "868a00996745eb5ef3c59b1e909dd9c74eb6ad94651c37fbf424dbcdf6d78d93",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "Passkeys在2023年加速普及，得益于[FIDO2标准](https://fidoalliance.org/fido2/)、现代浏览器对[WebAuthn](https://developer.mozilla.org/en-US/docs/Web/API/Web_Authentication_API)（[FIDO联盟](https://fidoalliance.org/)与[W3C](https://w3.org/)合作成果）的增强支持、硬件兼容性，以及苹果/微软/谷歌/[1Password](https://1password.com/product/passkeys)等厂商的推动，GitHub、微软、谷歌、Tailscale、Shopify和亚马逊等[支持站点](https://www.passkeys.io/who-supports-passkeys)的落地应用。"
+      }
+    },
+    {
+      "segment_id": "29528c8d",
+      "source_content": "Passkeys use what is known as public-key cryptography, and have been around since the seventies. In fact, it is the same technology that powers SSL/TLS. Unlike TLS which authenticates systems, Passkeys identifies and authenticates people. With this method, there are two keys, a private and a public key. The private key is stored on your device and is never sent over the network, unlike a password. When you want to log into a website, the site will send a challenge to your device. On the device, you will be asked to perform a simple action such as unlocking your device or providing a fingerprint.",
+      "source_content_hash": "95a9254edafa825943d417f9ed233a6313473dd05348a04ca23bf8c5f30feb0a",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "Passkeys采用公钥加密技术，这项技术自上世纪七十年代就已存在。事实上，它与SSL/TLS所使用的技术原理相同。不同于TLS用于系统认证，Passkeys用于人员身份识别与验证。该方法采用公私钥对：私钥存储在用户设备中且永不通过网络传输（与密码不同），当登录网站时，站点会向设备发送质询请求。设备将要求用户执行简单操作（如解锁设备或提供指纹）以验证身份。"
+      }
+    },
+    {
+      "segment_id": "c504c207",
+      "source_content": "Once successful, the device will sign the challenge using the private key and send the signed challenge back to the server for verification. The benefit of services such as 1Password is that you do not have to create a separate private key on each device, but can sync the same private key across devices using a 1Password secure vault. With this said, organisations can choose not to support passkey syncing. This allows an organisation to tie authentication to a physical device, for example, a company-issued smartphone.",
+      "source_content_hash": "6a435ea739f825fb9f4629bada3a5bc81b35288c9e11d696ae33aa1d959f653d",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "验证通过后，设备会使用私钥对质询进行签名，并将签名后的响应返回服务器进行校验。1Password等服务的优势在于无需在每个设备单独生成私钥，而是通过加密保险库实现跨设备同步。但企业也可选择禁用密钥同步功能，从而将认证绑定到特定物理设备（如公司配发的智能手机）。"
+      }
+    },
+    {
+      "segment_id": "98d26038",
+      "source_content": "It is still early days, but Passkeys holds a lot of promise for a passwordless future.",
+      "source_content_hash": "b9666e9c61d5c26a8d25a08bdca28f9e11e8ec6c22f43ba3f2ec0ce151a2bf82",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "虽然尚处早期阶段，Passkeys在实现无密码未来方面展现出巨大潜力。"
+      }
+    },
+    {
+      "segment_id": "af52d59d",
+      "source_content": "## Minimum Viable Secure Product (MVSP)",
+      "source_content_hash": "4ca52548740e694457747aa7fa04140ba373ce1759903500858ae320c756f594",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 最小可行安全产品（MVSP）"
+      }
+    },
+    {
+      "segment_id": "4d52a261",
+      "source_content": "The [MVSP framework](http://mvsp.dev/) defines a list of fundamental application security controls that should be integrated into enterprise-ready products and services. Launched in October 2021 by launch partners Google, Okta, Salesforce, and Slack the working group has since grown to also include Netflix, Unisys, and BoxyHQ among others.",
+      "source_content_hash": "df84b37dc49784bcad5986a547713cbd2f7fcc3ddfad8a5c892b5b6e1a769f74",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "[MVSP框架](http://mvsp.dev/)定义了企业级产品服务应集成的基础安全控制措施。该框架由Google、Okta、Salesforce和Slack于2021年10月联合发起，现工作组已扩展纳入Netflix、Unisys和BoxyHQ等成员。"
+      }
+    },
+    {
+      "segment_id": "23dfb152",
+      "source_content": "As is done every year, this year saw a review of the security controls that form part of the framework. Most notably, expanded guidance around external vulnerability reporting to protect bug hunters, and discouraging additional costs for access to basic security features. The latter aligns [with the secure-by-design whitepaper](https://www.cisa.gov/news-events/news/next-chapter-secure-design) which also saw its second iteration published in October 2023.",
+      "source_content_hash": "e568828e802f381c45485c649a485f504265b5e5e7115cbb995482101eba3e17",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "依照年度惯例，今年对框架内的安全控制措施进行了审查，重点更新包括：完善外部漏洞报告机制以保护漏洞发现者，以及反对对基础安全功能额外收费。后者与[安全设计白皮书](https://www.cisa.gov/news-events/news/next-chapter-secure-design)理念一致，该白皮书2023年10月也发布了第二版。"
+      }
+    },
+    {
+      "segment_id": "1131ef75",
+      "source_content": "If you are a small business or startup and are considering selling your products to enterprise, some of the benefits of adopting MVSP include:",
+      "source_content_hash": "8fb359dd888fabb202c1412f49d54b22407fea5236e1a90a38536714bf7c2450",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "若您是企业服务领域的初创公司，采用MVSP可带来以下收益："
+      }
+    },
+    {
+      "segment_id": "ea0c7bae",
+      "source_content": "- Up to 68% reduction in the time required for third parties to complete a procurement assessment process. Google has reported that it has seen this in its procurement process.\n- Increase in data-driven decision-making in earlier phases.",
+      "source_content_hash": "2fa8bff3bdc6910ea6c96146cb4d9f48729013e842e409dd217f0d2a3c82ac64",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- 第三方采购评估流程耗时最高减少68%（Google采购流程已验证）\n- 决策阶段前移推动数据驱动型决策"
+      }
+    },
+    {
+      "segment_id": "531437ca",
+      "source_content": "A decrease in procurement time can make a critical difference in the success of startups.",
+      "source_content_hash": "767926114a4f20d6be4395e650b7bc3731d64be7ca699a650a0062385737bf40",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "采购周期缩短对初创企业的成败往往具有决定性影响。"
+      }
+    },
+    {
+      "segment_id": "01f0fa9f",
+      "source_content": "> Talking about reduced time to market, have you seen the [BoxyHQ open-source SaaS starter kit on GitHub](https://github.com/boxyhq/saas-starter-kit)?",
+      "source_content_hash": "6e7bf4ec9a1d1473521d0dd1a9082910c7d5fd4b989cde5de0675212cf493067",
+      "node_type": "blockquote",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "> 说到缩短上市时间，您是否关注过[GitHub上BoxyHQ开源的SaaS入门套件](https://github.com/boxyhq/saas-starter-kit)？"
+      }
+    },
+    {
+      "segment_id": "ee8401db",
+      "source_content": "### Other Security News from around the Web",
+      "source_content_hash": "7c2bc40ee528e0e876d099621ab2d6b53dd394be3d9c0567a9306fbcfdc4407f",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 其他网络安全动态"
+      }
+    },
+    {
+      "segment_id": "76dbcc76",
+      "source_content": "- **On March 16, 2023**, Socket.dev introduced “safe npm”. From their announcement post: “Socket’s “safe npm” CLI tool transparently wraps the npm command and protects developers from malware, typosquats, install scripts, protestware, telemetry, and more—11 issues in all.” - [Introducing \"safe npm\"](https://socket.dev/blog/introducing-safe-npm)\n- **June 27, 2023**, further strengthening the case for the adoption of Passkeys, The FIDO Alliance published guidance for the deployment of Passkeys in the Enterprise. - [Deploying Passkeys ion the Enterprise](https://fidoalliance.org/fido-alliance-publishes-guidance-for-deploying-passkeys-in-the-enterprise/)\n- On **June 27, 2023**, Darcy Clarke wrote about as they termed it, “[The massive bug at the heart of the npm ecosystem](https://blog.vlt.sh/blog/the-massive-hole-in-the-npm-ecosystem)” also referred to as manifest confusion concerning the NPM JavaScript package registry.\n- **On July 24, 2023**, Daniel Appelquist posted on the W3C blog announcing the secure the web forward workshop. Based on the results of a survey on MDN Web Docs concerning web security, “60% of developers find the addressed security aspects 'Somewhat challenging' or 'Very challenging'.” This makes it clear that collaboration and education concerning these topics are sorely needed to ensure that we secure the web forward. - [Securing the web forward workshop](https://www.w3.org/blog/2023/securing-the-web-forward-addressing-developer-concerns-in-web-security/)\n- **On September 12, 2023**, the Cybersecurity & Infrastructure Security Agency (CISA) published its Open Source Security Roadmap. To quote from the announcement: “The roadmap lays out four key priorities to help secure the open source software ecosystem: (1) establishing CISA’s role in supporting the security of open source software, (2) driving visibility into open source software usage and risks, (3) reducing risks to the federal government, and (4) hardening the open source ecosystem.” - [CISA Open Source Software Security Roadmap](https://www.cisa.gov/resources-tools/resources/cisa-open-source-software-security-roadmap)\n- **On September 18, 2023**, [Gitlab released a critical security release](https://about.gitlab.com/releases/2023/09/18/security-release-gitlab-16-3-4-released/) of both its community and enterprise versions. As highlighted in their release page: “An issue has been discovered in GitLab EE affecting all versions starting from 13.12 before 16.2.7 and all versions starting from 16.3 before 16.3.4. It was possible for an attacker to run pipelines as an arbitrary user via scheduled security scan policies.”\n- **On October 23, 2023**, a cross-site request forgery security vulnerability in the popular Axios NPM module was disclosed and has since been patched in version 1.6.0\n- **On November 27, 2023**, [BoxyHQ launched their Single Sign-On, Directory Sync, and Audit logs SaaS service](https://www.producthunt.com/products/boxyhq#boxyhq-saas) on Product Hunt.\n- Originally proposed in **September 2022**, the European Union has made updates to a possible final Cybersecurity Resilience Act to be finalized and enacted in early December 2023. One of the notable changes is the exception of open-source projects from the act. - [Infosec in Brief](https://www.theregister.com/2023/12/04/infosec_in_brief/) | [EU Cybersecurity Act](https://digital-strategy.ec.europa.eu/en/policies/cybersecurity-act)\n- **On December 9 2023** the European Union reached a provisional agreement with the Council for the adoption of the first [EU Artificial Intelligence Act](https://www.europarl.europa.eu/topics/en/article/20230601STO93804/eu-ai-act-first-regulation-on-artificial-intelligence).\n- Two new code hosting platforms have seen the light of day, further improving the problem of a single point of failure for open-source software. These are [Codeberg](https://codeberg.org/), a German not-for-profit, and [Vlt](https://www.vlt.sh/) (/vōlt/) which is under active development.",
+      "source_content_hash": "9ac5c8f9a402ccecfec40ed8c27f83d19c5d0b75f7afb6c842f397bdcdb1460f",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- **2023年3月16日**，Socket.dev推出\"safe npm\"工具。据其公告称：\"Socket的'safe npm' CLI工具透明封装了npm命令，可保护开发者免受恶意软件、域名抢注、安装脚本、抗议软件、遥测数据收集等11类问题的侵害。\" - [推出\"safe npm\"](https://socket.dev/blog/introducing-safe-npm)\n- **2023年6月27日**，FIDO联盟发布《企业级Passkeys部署指南》，进一步推动Passkeys技术的普及。 - [企业级Passkeys部署指南](https://fidoalliance.org/fido-alliance-publishes-guidance-for-deploying-passkeys-in-the-enterprise/)\n- **2023年6月27日**，Darcy Clarke撰文揭露npm生态系统的重大缺陷，即\"清单混淆\"(manifest confusion)问题。 - [npm生态系统的巨大漏洞](https://blog.vlt.sh/blog/the-massive-hole-in-the-npm-ecosystem)\n- **2023年7月24日**，Daniel Appelquist在W3C博客宣布将举办\"Securing the Web Forward\"研讨会。根据MDN Web Docs的调查显示：\"60%的开发者认为相关安全议题'具有挑战性'或'极具挑战性'\"，凸显了加强协作与教育的必要性。 - [Securing the Web Forward研讨会](https://www.w3.org/blog/2023/securing-the-web-forward-addressing-developer-concerns-in-web-security/)\n- **2023年9月12日**，美国网络安全和基础设施安全局(CISA)发布《开源软件安全路线图》，提出四大重点方向：(1)确立CISA在开源软件安全中的角色；(2)提升开源软件使用及风险的可见性；(3)降低联邦政府面临的风险；(4)强化开源生态系统。 - [CISA开源软件安全路线图](https://www.cisa.gov/resources-tools/resources/cisa-open-source-software-security-roadmap)\n- **2023年9月18日**，[Gitlab发布重大安全更新](https://about.gitlab.com/releases/2023/09/18/security-release-gitlab-16-3-4-released/)，修复了企业版和社区版中存在的安全漏洞：\"攻击者可能通过计划的安全扫描策略以任意用户身份运行流水线\"。\n- **2023年10月23日**，热门NPM模块Axios披露了跨站请求伪造(CSRF)安全漏洞，已在1.6.0版本中修复。\n- **2023年11月27日**，[BoxyHQ在Product Hunt上发布其单点登录(SSO)、目录同步和审计日志SaaS服务](https://www.producthunt.com/products/boxyhq#boxyhq-saas)。\n- 最初于**2022年9月**提出的《欧盟网络安全弹性法案》在2023年12月初完成修订，其中值得注意的是将开源项目排除在法案适用范围之外。 - [信息安全简报](https://www.theregister.com/2023/12/04/infosec_in_brief/) | [欧盟网络安全法案](https://digital-strategy.ec.europa.eu/en/policies/cybersecurity-act)\n- **2023年12月9日**，欧盟理事会就首部[《欧盟人工智能法案》](https://www.europarl.europa.eu/topics/en/article/20230601STO93804/eu-ai-act-first-regulation-on-artificial-intelligence)达成临时协议。\n- 两个新兴代码托管平台相继问世，进一步改善了开源软件单点故障问题：德国非营利组织[Codeberg](https://codeberg.org/)和正在积极开发中的[Vlt](https://www.vlt.sh/)(/vōlt/)平台。"
+      }
+    },
+    {
+      "segment_id": "a4bf4268",
+      "source_content": "### Industry Reports",
+      "source_content_hash": "703d4b03f51b8a4e5337ef0a5e556c33f9971ee75c67cdc5154629da614dfec9",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 行业报告"
+      }
+    },
+    {
+      "segment_id": "cc9271fb",
+      "source_content": "- [The State of Authentication Report](https://www.secureauth.com/resource/state-of-authentication-report/)\n- [The 2023 State of API Report](https://www.postman.com/state-of-api/)\n- [The State of API Security](https://www.infoworld.com/article/3709450/the-state-of-api-security-in-2023.html)\n- [The State of the Software Supply Chain](https://www.sonatype.com/state-of-the-software-supply-chain/open-source-supply-demand-security)\n- [The State of Open Source Software](https://octoverse.github.com/) aka GitHub Octoverse\n- [The State of Web Development](https://www.netlify.com/resources/ebooks/the-state-of-web-development-2023/)\n- [The Cost of Data Breaches Report](https://www.ibm.com/reports/data-breach) - IBM\n- [2023 Cyber Threat Report](https://www.sonicwall.com/2023-cyber-threat-report/)\n- [AI and Automation for Cybersecurity](https://www.ibm.com/downloads/cas/9NGZA7GK) [PDF Download] - IBM",
+      "source_content_hash": "a987d338efa7a37533b8a0e90977e0468ec7c01da8fd7c5cef01b013c1e006f5",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- [认证现状报告](https://www.secureauth.com/resource/state-of-authentication-report/)\n- [2023年API现状报告](https://www.postman.com/state-of-api/)\n- [API安全现状](https://www.infoworld.com/article/3709450/the-state-of-api-security-in-2023.html)\n- [软件供应链现状](https://www.sonatype.com/state-of-the-software-supply-chain/open-source-supply-demand-security)\n- [开源软件现状](https://octoverse.github.com/)（GitHub Octoverse）\n- [Web开发现状](https://www.netlify.com/resources/ebooks/the-state-of-web-development-2023/)\n- [数据泄露成本报告](https://www.ibm.com/reports/data-breach) - IBM\n- [2023年网络威胁报告](https://www.sonicwall.com/2023-cyber-threat-report/)\n- [AI与自动化在网络安全中的应用](https://www.ibm.com/downloads/cas/9NGZA7GK) [PDF下载] - IBM"
+      }
+    },
+    {
+      "segment_id": "5baf88e2",
+      "source_content": "### In Conclusion",
+      "source_content_hash": "49551a2ad70f44dba8b814e4f5631045c630ccceccdcbddfd99c1ab141c959bf",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 总结"
+      }
+    },
+    {
+      "segment_id": "cfea4c31",
+      "source_content": "- Keeping up with the ever-evolving web security landscape is crucial for developers.\n- The focus on Minimum Viable Security will continue to increase as security becomes increasingly important to companies.\n- Adoption of new means of authentication such as Passkeys and more generally, passwordless authentication will continue to grow.\n- Artificial intelligence's role in security and addressing threats from cybercrime will continue to rapidly evolve and be utilised by more and more security teams.\n- Quantum computing is entering the space and like AI is something to keep an eye on.\n- As with MVS, more and more companies will adopt a Zero Trust mindset and framework when it comes to securing their, and their customer’s data.",
+      "source_content_hash": "228f6acea6d7fc58713131b12c5a68ceefee60f25e608c4124a5ac1283ab3769",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- 紧跟不断演变的网络安全形势对开发者至关重要。\n- 随着安全性对企业日益重要，对\"最小可行安全\"（Minimum Viable Security）的关注将持续增加。\n- 无密码认证等新型认证方式的采用将持续增长，尤其是Passkeys技术。\n- 人工智能在安全领域的作用及应对网络犯罪威胁的应用将快速演进，被更多安全团队采用。\n- 量子计算已进入该领域，与AI一样值得密切关注。\n- 如同MVS理念，越来越多的企业将采用零信任（Zero Trust）思维框架来保护自身及客户数据安全。"
+      }
+    },
+    {
+      "segment_id": "2838eb68",
+      "source_content": "We hope you found this post insightful and that you now have ample reading material for the long festive weekend. As most of us head out to a well deserved break, we at BoxyHQ wish you a peaceful, relaxing and safe festive season.",
+      "source_content_hash": "6895581dc8ba992cad4a8dfd3b730859d3d565156c6daf906cb94c2849a952a4",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "希望本文能为您带来启发，并为这个长假提供充足的阅读材料。在我们大多数人享受应得的假期时，BoxyHQ团队祝您度过一个平安、放松且安全的节日季。"
+      }
+    },
+    {
+      "segment_id": "4be28ed1",
+      "source_content": "One last thing for [John Wick fans](https://socket.dev/blog/npm-registry-spam-john-wick). 🎄",
+      "source_content_hash": "1a644fa65be5ea6637b24634058e0eb47577ad1c4cd1a52f318ee227af2de10e",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "最后送给[《疾速追杀》影迷们](https://socket.dev/blog/npm-registry-spam-john-wick)的彩蛋。🎄"
+      }
+    }
+  ],
+  "target_i18n_subpath": "docusaurus-plugin-content-blog/2023-12-22-2023-year-in-review.md",
+  "last_updated_timestamp": "2025-06-08T18:49:09.307245+00:00",
+  "schema_version": "1.0",
+  "translated_versions": {
+    "zh-CN": "e75d918f68cc2021734b233ea482babeaa7353c2bd5a3fa260fea213686f59a2"
+  }
+}

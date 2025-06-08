@@ -1,0 +1,282 @@
+{
+  "source_file_path_relative_to_docusaurus_root": "docs/jackson/upgrade.md",
+  "source_file_content_hash": "aa433664897c44d3adccfe8ee52527586b1bd5087c6335b5143ed0f947ca6885",
+  "segments": [
+    {
+      "segment_id": "76e4a56a",
+      "source_content": "# Upgrade Guide",
+      "source_content_hash": "a7b8232e352c80fef8ce1c1f69a3c97f09735bd55eac9d026ff3d95b71feb4bf",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "# 升级指南"
+      }
+    },
+    {
+      "segment_id": "adbc947a",
+      "source_content": "## Upgrading to v1.44.0",
+      "source_content_hash": "39ab29753dc70a67526f9895dfb7481a48c212067624b836bc28a2265aff43e3",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 升级至 v1.44.0"
+      }
+    },
+    {
+      "segment_id": "e7ec8f99",
+      "source_content": "Please check the note on ESM libraries and dynamic imports issue [here](./deploy/npm-library.md#)",
+      "source_content_hash": "af1b628eb5ee6943188e4a8b17ab2800d951d0dcef3d3a96b7201b0d6faddb67",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "请查阅关于ESM库和动态导入问题的说明[此处](./deploy/npm-library.md#)"
+      }
+    },
+    {
+      "segment_id": "a703643c",
+      "source_content": "## Upgrading to v1.25.0",
+      "source_content_hash": "236d4e99808b877805990be8f7a5edc155c0e832e246cc6f04ea938378ddd234",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 升级至 v1.25.0"
+      }
+    },
+    {
+      "segment_id": "53eaf0e1",
+      "source_content": "The `namespace` column length has been increased to 256 characters to support larger values.",
+      "source_content_hash": "3a33f99918d44f9ccae717e6870a5d6adba7125dc56f80b2a44a005e7578f0fe",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "`namespace`列的长度已增至256个字符以支持更大值。"
+      }
+    },
+    {
+      "segment_id": "8ac585fb",
+      "source_content": "This change affects all the instances with `sql` as the db engine. If you are not running manual migration then the namespace column will be dropped and populated again. It is highly advisable to back up your data before upgrading.",
+      "source_content_hash": "9d6a52381dde7b49098b3e9f0f53b1bd986a6ac52df0d1220afb374cef73c02e",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "此变更影响所有使用`sql`作为数据库引擎的实例。若未执行手动迁移，namespace列将被删除后重新创建。强烈建议在升级前备份数据。"
+      }
+    },
+    {
+      "segment_id": "ba4f48ff",
+      "source_content": "## Upgrading to v1.21.0",
+      "source_content_hash": "ae6543551e1a98b25042061f0267b2363dabca69b8ab2c1873cef348c8d93937",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 升级至 v1.21.0"
+      }
+    },
+    {
+      "segment_id": "cf898102",
+      "source_content": "Google DSync Connections will be supported on the back of following changes related to Authorization. These will ease the process of surfacing up the OAuth endpoints for Google SCIM.",
+      "source_content_hash": "6436823670d99478d71d651380260df1f83d5bca4243b3aeeb945cef0522d271",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "Google目录同步连接将基于以下授权相关变更获得支持。这些变更将简化Google SCIM的OAuth端点配置流程。"
+      }
+    },
+    {
+      "segment_id": "84758135",
+      "source_content": "1. Removed `DSYNC_GOOGLE_REDIRECT_URI`, `GOOGLE_REDIRECT_URI` env vars for Jackson service.\n2. Removed `dsync.providers.google.callbackUrl` from npm.\n3. Our npm will take in new options - `dsync.providers.google.authorizePath` and `dsync.providers.google.callbackPath`. These will be used alongside `externalUrl` to construct the full path",
+      "source_content_hash": "c4eee3d72df8629bfe040c16b0d0d37f5edf25ec8a3a2ddf28e868870be123b2",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "1. 移除了Jackson服务中的`DSYNC_GOOGLE_REDIRECT_URI`、`GOOGLE_REDIRECT_URI`环境变量\n2. 移除了npm中的`dsync.providers.google.callbackUrl`配置项\n3. npm新增配置选项`dsync.providers.google.authorizePath`和`dsync.providers.google.callbackPath`，这些将与`externalUrl`共同构建完整路径"
+      }
+    },
+    {
+      "segment_id": "418617bd",
+      "source_content": "## Upgrading to v1.14.0",
+      "source_content_hash": "7812f7bcf0ce2b3ab3d764228f8c1b1e6d250549a16303547584b66ea997b51a",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 升级至 v1.14.0"
+      }
+    },
+    {
+      "segment_id": "2fdadb08",
+      "source_content": "We have changed the schema bit to introduce a new column called `namespace` to speed up scans. You will have to run the migration scripts if you are manually managing migrations. For example PlanetScale where auto migrations are not supported due to a difference between MySQL and PlanetScale.",
+      "source_content_hash": "9f7d60519cf6dcff7e8d3365dc0f4e62aff7b5e20e2936d85784ddc7627eed11",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "我们修改了数据库模式，新增`namespace`列以加速扫描。若您手动管理迁移（例如PlanetScale因MySQL与其差异不支持自动迁移），需运行迁移脚本。"
+      }
+    },
+    {
+      "segment_id": "ed7dde9c",
+      "source_content": "## Upgrading to v1.11.0",
+      "source_content_hash": "f31b066533f2594133615bcf717a97771eea8bf526638a4a50436af37f20dfe4",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 升级至 v1.11.0"
+      }
+    },
+    {
+      "segment_id": "a76548f8",
+      "source_content": "We have patched the SSO connection (`/api/v1/connections`) DELETE handler to accept payload (client/Secret or tenant/product/strategy) as part of query parameters. Earlier, the payload was expected to be part of the body which is non-standard and is no longer supported in Next.js.",
+      "source_content_hash": "edd4a95068174e70b10d441078a71a0fb1efd7e57bf82fdd67c951bd19e813c8",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "我们已修复SSO连接(`/api/v1/connections`)的DELETE处理器，现支持通过查询参数传递有效载荷(client/Secret或tenant/product/strategy)。此前要求将有效载荷放在请求体中，这不符合标准且Next.js已不再支持。"
+      }
+    },
+    {
+      "segment_id": "f2f30ae8",
+      "source_content": "## Upgrading to v1.9.7",
+      "source_content_hash": "ffdc0f830368f88ed30cabff9959c7fc42e36e5d2b2b8e723d41606178f812ff",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 升级至 v1.9.7"
+      }
+    },
+    {
+      "segment_id": "dfe931a2",
+      "source_content": "We discovered and fixed a database connection leak introduced in v1.9.1, if you are using versions 1.9.1 to 1.9.6 then please upgrade to v1.9.7",
+      "source_content_hash": "26b2a35830bff8703230a21d06d3c08b2d282698106f3b3dbaab2dc224f0bf87",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "我们发现并修复了v1.9.1版本引入的数据库连接泄漏问题。若您正在使用1.9.1至1.9.6版本，请立即升级至v1.9.7。"
+      }
+    },
+    {
+      "segment_id": "0037ff70",
+      "source_content": "## Upgrading to v1.8.0",
+      "source_content_hash": "8b9586a278bb43a6f9536cdb84bd019b7419f2702ce9fbc7a31cffa6eb18af68",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 升级至 v1.8.0"
+      }
+    },
+    {
+      "segment_id": "fc8eadc3",
+      "source_content": "1. We support bringing your own database (BYOD), this is a very tricky feature to support and we are still iterating on the schema which works as seamlessly as possible across the range of databases we support. Unfortunately, not everything goes smoothly here and we have encountered some length issues on newer versions of MySQL and MariaDB. The best way forward was to change the schema of the keys we use from length 1500 to 250 which is compatible with the newer versions. As a result, this will break your updates if you are using MySQL, MariaDB, or MS SQL Server. If you encounter this please reach out and we'll guide you through the update process. If you haven't gone into production yet then please update to v1.8.0 before you deploy it to production.",
+      "source_content_hash": "0a089d28a635a82fe75453596a8f868fb3a40a5f64f4ee0528b2f1167b08eec3",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "1. 我们新增了自带数据库(BYOD)支持功能。由于需要适配多种数据库，我们在模式设计上进行了多次迭代。最新版MySQL和MariaDB存在字段长度限制问题，为此我们将关键字段长度从1500调整为250。此变更将影响MySQL、MariaDB和MS SQL Server用户的升级流程。若遇问题请联系我们获取指导。若尚未投入生产环境，请在部署前升级至v1.8.0。"
+      }
+    },
+    {
+      "segment_id": "3b7478ea",
+      "source_content": "## Upgrading to v1.3.10",
+      "source_content_hash": "e5f297a117d5a2766dd97a2f57a4fde36ae6024b8734d43dd861ccfa29d4f3fe",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 升级至 v1.3.10"
+      }
+    },
+    {
+      "segment_id": "33808f76",
+      "source_content": "1. For users of our npm library, `directorySync` has been renamed to `directorySyncController`.",
+      "source_content_hash": "1a9fad7f1130c5e5fa81a0c94e73e489641a00ae0a7414baf71fd474eed6e0d4",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "1. 对于npm库用户，原`directorySync`已重命名为`directorySyncController`"
+      }
+    },
+    {
+      "segment_id": "9f9e64f5",
+      "source_content": "## Upgrading to v1.3.6",
+      "source_content_hash": "f7042349f17112e5ae97b2cefb775b62bf8ea63de29734268cb6360a4ac6a2d6",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 升级至 v1.3.6"
+      }
+    },
+    {
+      "segment_id": "bdfae007",
+      "source_content": "1. `samlSPConfig.get()` is now async since we introduced a global certificate instead of per tenant certificate to ease the SAML setup process.",
+      "source_content_hash": "5ab119b6066b2f9beb4b6fc8f4362a813e96177cb9b297aceae39df1aeb57591",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "1. `samlSPConfig.get()`方法现改为异步，因为我们引入了全局证书替代租户级证书以简化SAML配置流程"
+      }
+    },
+    {
+      "segment_id": "35a77014",
+      "source_content": "## Upgrading to v1.3.0",
+      "source_content_hash": "c02d977bad3c3a043479f0ece55ffb9fbe3e3b548893bcab9e9f0d7e96cf5c3a",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 升级至 v1.3.0"
+      }
+    },
+    {
+      "segment_id": "b93ddfac",
+      "source_content": "1. Landed support for OpenID Identity Providers.\n2. Landed new API (`/api/v1/connections`) to support setting up both SAML/OIDC SSO Connections.",
+      "source_content_hash": "f0df9db8670ce06d2f0612030ada4d023626c66fbe2177f9327fd3cceda904a8",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "1. 新增OpenID身份提供商支持\n2. 新增API端点(`/api/v1/connections`)用于配置SAML/OIDC SSO连接"
+      }
+    },
+    {
+      "segment_id": "b50c461f",
+      "source_content": "> **Note:** The previous API for SAML configuration `/api/v1/saml/config` has been deprecated, and would be completely removed in a future release.",
+      "source_content_hash": "36cf7b46e30f771be0d64e29ba112d3833ef88b827d7246ffed87d5f117cfb32",
+      "node_type": "blockquote",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "> **注意：** 原SAML配置接口`/api/v1/saml/config`已被弃用，将在未来版本中彻底移除"
+      }
+    },
+    {
+      "segment_id": "b4ef1e56",
+      "source_content": "3. Renamed env variable `PRE_LOADED_CONFIG` to [`PRE_LOADED_CONNECTION`](deploy/env-variables.md#pre_loaded_connection) for Jackson service. In the case of npm `preLoadedConfig` becomes`preLoadedConnection`.\n4. Make sure to set the value for [`oidcPath`](deploy/env-variables.md#oidcpath) in case you are using the npm.",
+      "source_content_hash": "0ccec03efa41dd83f056c2223ca5389c53614ec309080b19e8203091b0a65a01",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "3. 将Jackson服务的环境变量`PRE_LOADED_CONFIG`重命名为[`PRE_LOADED_CONNECTION`](deploy/env-variables.md#pre_loaded_connection)。对于npm用户，`preLoadedConfig`参数更名为`preLoadedConnection`。\n4. 若使用npm包，请确保设置[`oidcPath`](deploy/env-variables.md#oidcpath)参数值。"
+      }
+    },
+    {
+      "segment_id": "af52d59d",
+      "source_content": "## Backups",
+      "source_content_hash": "1a380ad2ebdbcef1e4ed38ed08428d51cfccadcb186ecc0d7e1b6bca33ff8f22",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 备份指南"
+      }
+    },
+    {
+      "segment_id": "4d52a261",
+      "source_content": "Please remember to take backups before upgrading Jackson. We cannot stress how important this step is, although we take precautions to avoid bugs they sometimes do slip by us. Having backups will not only help you recover from these rare events but should be part of your disaster recovery process. If you need any help with this please do not hesitate to reach out to us.",
+      "source_content_hash": "8914179faf42adec86e6a81a2dd1cb46f511b903fec3b39aaaedbbf1842a1fcd",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "升级Jackson前请务必进行数据备份。此步骤至关重要——尽管我们会尽力避免缺陷，但偶发问题仍可能出现。备份不仅能帮助您从这些罕见事件中恢复，更应成为灾难恢复流程的常规环节。如需协助，请随时联系我们。"
+      }
+    }
+  ],
+  "target_i18n_subpath": "docusaurus-plugin-content-docs/current/jackson/upgrade.md",
+  "last_updated_timestamp": "2025-06-08T18:49:09.297656+00:00",
+  "schema_version": "1.0",
+  "translated_versions": {
+    "zh-CN": "aa433664897c44d3adccfe8ee52527586b1bd5087c6335b5143ed0f947ca6885"
+  }
+}

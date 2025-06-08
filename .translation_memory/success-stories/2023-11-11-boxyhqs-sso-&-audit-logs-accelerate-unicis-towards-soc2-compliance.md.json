@@ -1,0 +1,392 @@
+{
+  "source_file_path_relative_to_docusaurus_root": "success-stories/2023-11-11-boxyhqs-sso-&-audit-logs-accelerate-unicis-towards-soc2-compliance.md",
+  "source_file_content_hash": "8a2f621ea0f1e6884ae5707fb53c8d5ae2d9f03a979bc16bfd7038dc242ce41a",
+  "segments": [
+    {
+      "segment_id": "58cfcc64",
+      "source_content": "---\nslug: boxyhqs-sso-&-audit-logs-accelerate-unicis-towards-soc2-compliance\ntitle: \"SSO & Audit Logs Accelerate Unicis Towards SOC2 Compliance\"\ntags_disabled: [security, cybersecurity, devsecops, sso]\nimage: /images/success-stories/unicis-case-study.png\nhide_table_of_contents: true\n---",
+      "source_content_hash": "580d09d52889f2aed5a86b5ba7d64b6bc3ac0de9e9ceece1f4419f193f45aace",
+      "node_type": "yaml",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_58cfcc64"
+      }
+    },
+    {
+      "segment_id": "623f74e7",
+      "source_content": "import LearnMoreCTA from \"../src/components/ctas/LearnMoreCTA\";\nimport FeaturedQuote from \"../src/components/FeaturedQuote\";\nimport SignupCTA from \"../src/components/ctas/SignupCTA\";",
+      "source_content_hash": "00ee7a5cc2eabfacc6faf08d517e820e19e38542f8e03adbe98caab442d4b6f6",
+      "node_type": "mdxjsEsm",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_623f74e7"
+      }
+    },
+    {
+      "segment_id": "180bddb1",
+      "source_content": "At [Unicis](https://www.unicis.tech/), their vision is to create a world where compliance is effortless, efficient, and transparent for every business. We strive to achieve this by providing a single, comprehensive application that addresses all compliance, privacy, risk and security concerns.",
+      "source_content_hash": "841218c7a44e7c3477d84c8fc6df84969b12c15fb894cc251bde0315c93023a8",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "[Unicis](https://www.unicis.tech/)的愿景是打造一个让合规对每家企业都变得轻松、高效且透明的世界。我们致力于通过提供一款全面集成的应用程序，解决所有合规性、隐私性、风险管理和安全问题来实现这一目标。"
+      }
+    },
+    {
+      "segment_id": "e14c9928",
+      "source_content": "## Introduction",
+      "source_content_hash": "d753efbab681fa4da82470d9a83b1c202de58f92fd498e77a269c1163bc4714b",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 简介"
+      }
+    },
+    {
+      "segment_id": "42ad8e83",
+      "source_content": "Unicis.Tech OÜ is a technology company specializing in building applications for security, privacy, and compliance teams. Committed to delivering the most secure and compliant platform, they recognized the need to implement Enterprise Single Sign-On (SSO) and Audit Logs as essential components of their security and compliance strategy.",
+      "source_content_hash": "03a533438faf5981815ef0784b0f2fb98a6a20095bcfe707c955ec661122bb73",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "Unicis.Tech OÜ是一家专注于为安全、隐私和合规团队构建应用程序的技术公司。为确保提供最安全合规的平台，他们意识到企业级单点登录(SSO)和审计日志是实现安全与合规战略的核心组件。"
+      }
+    },
+    {
+      "segment_id": "09a8fe76",
+      "source_content": "<SignupCTA campaign=\"success-story-unicis\" />",
+      "source_content_hash": "301922d0a2f441028169f0cf86f4ffbffa8473e0147d79373f1aab9f45d305fb",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_09a8fe76"
+      }
+    },
+    {
+      "segment_id": "1485a88b",
+      "source_content": "<FeaturedQuote personName=\"Predrag Tasevski\" personRole=\"Founder & CEO Unicis.Tech\" pictureSrc=\"/images/success-stories/predrag-tasevski-unicis\">\nWe looked at a lot of SSO solutions before choosing BoxyHQ. Some of the reasons we chose BoxyHQ are ease of use and scalability!\n</FeaturedQuote>",
+      "source_content_hash": "902282b4d9d3a2a600b13e9e27e43c930bcd584bbf315784ed7a574731be6699",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_1485a88b"
+      }
+    },
+    {
+      "segment_id": "ed7dde9c",
+      "source_content": "## Motivation for Implementing Enterprise SSO and Audit Logs",
+      "source_content_hash": "80ec43ea4d9d45f55095f34a30425abefc01e4a9649e5681a1ab2851bdc39679",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 实施企业SSO与审计日志的动机"
+      }
+    },
+    {
+      "segment_id": "a76548f8",
+      "source_content": "Unicis.Tech's motivation to implement Enterprise SSO and Audit Logs was driven by their commitment to enhancing security and compliance for their platform. These two key components play a crucial role in achieving these goals.",
+      "source_content_hash": "fb9ac643305c77aef42aeedf6a6ec629108120d9ac225dd4b88d984e3968491e",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "Unicis.Tech推动实施企业SSO和审计日志的核心动力源于其对平台安全性与合规性的持续提升。这两大关键组件在实现这些目标中发挥着决定性作用。"
+      }
+    },
+    {
+      "segment_id": "4b1d2d7d",
+      "source_content": "Enterprise Single Sign-On (SSO) simplifies user access by eliminating the need for users to repeatedly enter their credentials for different applications. This not only enhances convenience but also reduces the risk of phishing attacks and password fatigue.",
+      "source_content_hash": "2645ed29f07ce0a5865bb9203b3b56ad4af9a0d36f2233a739c803e9764421a9",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "企业单点登录(SSO)通过免除用户在不同应用间重复输入凭证的需求，既优化了使用体验，又有效降低了钓鱼攻击风险和密码疲劳现象。"
+      }
+    },
+    {
+      "segment_id": "dfe931a2",
+      "source_content": "Audit Logs track all user activity within an application, including login attempts, file access, and configuration changes. This data serves as a valuable resource for investigating security incidents, resolving issues, and complying with regulatory requirements.",
+      "source_content_hash": "bd3dd2057874390cd7bdc841255498a33e9ca761a36dc53e64a69e2b26f67a45",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "审计日志完整记录应用内所有用户活动，包括登录尝试、文件访问和配置变更。这些数据成为调查安全事件、解决问题及满足监管要求的重要依据。"
+      }
+    },
+    {
+      "segment_id": "4daf5cdd",
+      "source_content": "Not to mention, Unicis.Tech is subject to various global regulations, including GDPR, ISO/IEC, PCI-DSS, and SOC 2. SSO and audit logs are essential for meeting these regulatory requirements, ensuring their platform remains compliant.",
+      "source_content_hash": "b85ba83fe21d9f084ffe3750ab06bf816dea6a6d74d8e5ed36e38946d1d78d75",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "值得注意的是，Unicis.Tech需遵守包括GDPR、ISO/IEC、PCI-DSS和SOC 2在内的多项全球法规。SSO与审计日志正是满足这些监管要求、确保平台持续合规的关键要素。"
+      }
+    },
+    {
+      "segment_id": "f422383e",
+      "source_content": "## Choosing BoxyHQ's (Jackson) for SSO Solution",
+      "source_content_hash": "fb2823d0dd0b10be4ec28d55e9a01cfc3d6d982325ec8d60f0cea1650f33b73d",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 选择BoxyHQ的Jackson作为SSO解决方案"
+      }
+    },
+    {
+      "segment_id": "97ae4a01",
+      "source_content": "**Ease of Use:** BoxyHQ provided an intuitive and straightforward integration for SSO. It was easy to set up and configure, connecting seamlessly with various Identity Providers.",
+      "source_content_hash": "32c04de8859046b8f486e0b4d53ab7827b1ce1cb7e13a3d6caa7c62c002b0beb",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "**易用性：** BoxyHQ提供了直观简便的SSO集成方案，可轻松设置配置并与各类身份提供商无缝对接。"
+      }
+    },
+    {
+      "segment_id": "c3a738de",
+      "source_content": "**Open-Source and Affordability:** BoxyHQ's status as an open-source enterprise SSO solution, utilizing familiar technologies like Next.js and embedded libraries, made it a cost-effective choice.",
+      "source_content_hash": "3dbf3a476770966a546b35b7dd1d0800f6dabfb3501b8df45c2f491d74f60df9",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "**开源与经济性：** 作为基于Next.js等熟悉技术的开源企业SSO解决方案，BoxyHQ具有显著的成本优势。"
+      }
+    },
+    {
+      "segment_id": "3cfe6286",
+      "source_content": "**Scalability:** BoxyHQ's SSO solution demonstrated the capability to support a wide range of organizations, from small enterprises to large corporations.",
+      "source_content_hash": "8ec131c502fa1c958ea547d5d3f3e6e600a4cdbb6f3c314155114b9951433bfc",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "**可扩展性：** BoxyHQ的SSO解决方案展现出从中小企业到大型集团的全规模组织支持能力。"
+      }
+    },
+    {
+      "segment_id": "1042b50d",
+      "source_content": "**Security:** BoxyHQ's adherence to industry-standard security protocols provided Unicis.Tech with complete control over their data, ensuring the security and privacy of their platform.",
+      "source_content_hash": "5c1727afbcee6f7ea8d6b90a5c69a56c523d9e3061610067f19fa37ea969fd2b",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "**安全性：** BoxyHQ遵循行业标准安全协议，使Unicis.Tech能完全掌控数据，确保平台安全与隐私。"
+      }
+    },
+    {
+      "segment_id": "68123cc1",
+      "source_content": "<FeaturedQuote personName=\"Predrag Tasevski\" personRole=\"Founder & CEO Unicis.Tech\" pictureSrc=\"/images/success-stories/predrag-tasevski-unicis\">\nBoxyHQ's solution has helped our team save a lot of time. Prior to implementing BoxyHQ, we no longer needed to develop or integrate an expensive solution to connect to Identity Providers (SSO) and build our own Audit Log service.\n</FeaturedQuote>",
+      "source_content_hash": "18056c842f94564709df50faca8bc3131836d78da8684fe3ed51420c9e4da4b4",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_68123cc1"
+      }
+    },
+    {
+      "segment_id": "6f930b2f",
+      "source_content": "## Direct and Soft Benefits of SSO and Audit Logs",
+      "source_content_hash": "069acb18014819320729fdab2ac8949e61747812c5dcfd1dedfade35ba2db2e0",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## SSO与审计日志的直接与间接效益"
+      }
+    },
+    {
+      "segment_id": "c504c207",
+      "source_content": "Unicis.Tech has observed both direct and soft benefits following the adoption of SSO and Audit Logs:",
+      "source_content_hash": "c826238723ed0b6a3b38b5455e6d811ffc04722c866b39ec63907d5c736be15c",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "Unicis.Tech在采用SSO和审计日志后收获了多重效益："
+      }
+    },
+    {
+      "segment_id": "c6cc90a0",
+      "source_content": "## Direct Benefits",
+      "source_content_hash": "e3de4ecce8ad8aee561179ab1a994bfcd11317b844536e2c12c4fb49dcc4edd5",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 直接效益"
+      }
+    },
+    {
+      "segment_id": "d3649a1e",
+      "source_content": "**Improved Security:** SSO has enhanced security by reducing the risk of password fatigue and phishing attacks. Audit logs expedite the identification of security incidents.",
+      "source_content_hash": "acca1254db1aab8d64005cc1476ccb1bb85de101a7e492a560ac8d5f7a3e1174",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "**安全增强：** SSO通过减少密码疲劳和钓鱼攻击风险提升安全性，审计日志则加速安全事件识别。"
+      }
+    },
+    {
+      "segment_id": "4d52a261",
+      "source_content": "**Reduced IT Workload:** SSO and audit logs automate tasks like user provisioning and de-provisioning while providing valuable insights into user activity, reducing the IT workload.",
+      "source_content_hash": "8f13c17df7fc696f316a42959efe5a387d1ed00a99c4e7c1751de1ca343679ce",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "**IT负担减轻：** SSO与审计日志自动化处理用户配置/撤销等任务，并通过用户活动洞察降低IT工作量。"
+      }
+    },
+    {
+      "segment_id": "23dfb152",
+      "source_content": "**Compliance:** SSO and audit logs assist Unicis.Tech in meeting regulatory requirements such as GDPR, PCI-DSS, and SOC 2.",
+      "source_content_hash": "24f5814c0746aa5aadea0297e3e9b10a73bcefeb7f45beb086a7f9ab2a50d78e",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "**合规达标：** SSO和审计日志助力Unicis.Tech满足GDPR、PCI-DSS和SOC 2等监管要求。"
+      }
+    },
+    {
+      "segment_id": "e912d935",
+      "source_content": "## Soft Benefits",
+      "source_content_hash": "99a1aaed1d24b6a1064f18a6edc3b66a6c15b1323df81e54c4831197ecdbee25",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 间接效益"
+      }
+    },
+    {
+      "segment_id": "8b2a52b1",
+      "source_content": "**Increased Employee Productivity:** SSO streamlines the login process, allowing employees to access applications more efficiently, thus increasing their productivity.",
+      "source_content_hash": "c2a120ff2229a973eef8fb1bee8d3a2523e9fea1a14bc498466714f4ccc66eab",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "**员工效率提升：** SSO简化登录流程，使员工能更高效地访问应用，从而提升生产力。"
+      }
+    },
+    {
+      "segment_id": "5dae11e3",
+      "source_content": "**Improved Employee Satisfaction:** SSO enhances employee satisfaction by simplifying access to necessary applications, making work more convenient.",
+      "source_content_hash": "c23f7a2f3fcf5379b66324571ea9031b9258dd8768f2264610d1cbeac86575fa",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "**员工满意度提高：** 通过简化必要应用的访问流程，SSO使工作更便捷，提升员工满意度。"
+      }
+    },
+    {
+      "segment_id": "0bb95128",
+      "source_content": "**Enhanced Customer Trust:** The presence of SSO and audit logs demonstrates a commitment to protecting customer data, which enhances trust among customers.",
+      "source_content_hash": "3722fe823053cdb95bf1071d66d65651f2ff797389d1b8bca94ec81cfb6a8d64",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "**客户信任增强：** SSO与审计日志的存在彰显对客户数据保护的承诺，从而强化客户信任。"
+      }
+    },
+    {
+      "segment_id": "3ef18741",
+      "source_content": "## Business Impact and Time Savings",
+      "source_content_hash": "b5924abbd86ac68794ae617a3dffab858bd2a2ea8c248672165b7a31585ed64e",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 商业影响与时间效益"
+      }
+    },
+    {
+      "segment_id": "e7772088",
+      "source_content": "BoxyHQ's solution has significantly saved Unicis.Tech's team time and resources. They estimate that it has allowed them to focus on more critical projects, reducing the workload by approximately a quarter of the time. It has enabled them to streamline various processes, including connecting to Identity Providers and building their audit log solution.",
+      "source_content_hash": "f721795d65439ef43b0e00c29d2bea69d25f99da00018f3c31aa6393af88b3da",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "BoxyHQ的解决方案为Unicis.Tech团队显著节省了时间和资源。据估算，该方案使他们能将精力集中在更关键的项目上，减少了约四分之一的工作量，并实现了与身份提供商的无缝对接及审计日志解决方案的高效构建。"
+      }
+    },
+    {
+      "segment_id": "32db7046",
+      "source_content": "<FeaturedQuote personName=\"Predrag Tasevski\" personRole=\"Founder & CEO Unicis.Tech\" pictureSrc=\"/images/success-stories/predrag-tasevski-unicis\">\n  The BoxyHQ SSO and Audit Logs solution meets all requirements for SOC 2 compliance. This has saved us a lot of time and effort in meeting our compliance goals.\n</FeaturedQuote>",
+      "source_content_hash": "189aa41a9d54bab8baff92ba7171d6f92f04c6c16ba5551259c43b64476d84ee",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_32db7046"
+      }
+    },
+    {
+      "segment_id": "93028a4e",
+      "source_content": "## Impact on Achieving SOC 2 Compliance",
+      "source_content_hash": "027967390622220277cbf2b49dfaadc7654ef3e89ea7e848366cc4c7a2b8e7fd",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 对实现SOC 2合规的影响"
+      }
+    },
+    {
+      "segment_id": "e8e162a9",
+      "source_content": "While Unicis.Tech is still working towards SOC 2 compliance, and BoxyHQ's SSO and audit logs solution has accelerated their progress significantly. BoxyHQ meets all the requirements for SOC 2 compliance, saving Unicis.Tech substantial time and effort in reaching their compliance goals.",
+      "source_content_hash": "0c8d828c7bab8b5a09ee10bc7f14469a269ec2bfa393d0a0df909e3f78da4b19",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "尽管Unicis.Tech仍在推进SOC 2合规认证，但BoxyHQ的SSO和审计日志解决方案已显著加速了这一进程。BoxyHQ完全满足SOC 2合规的所有要求，为Unicis.Tech节省了大量达成合规目标所需的时间和精力。"
+      }
+    },
+    {
+      "segment_id": "b936dd6a",
+      "source_content": "## Acquiring Enterprise Clients",
+      "source_content_hash": "6595b25d7fb45ccde54c71aa88c7fbc41f29f55a05ef4132df073b86ec4ea8b5",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 企业客户获取"
+      }
+    },
+    {
+      "segment_id": "a5c5772a",
+      "source_content": "Unicis.Tech has experienced substantial growth in acquiring enterprise clients due to the implementation of SSO. Many enterprise clients require vendors to have SSO and audit logs in place. Implementing BoxyHQ's solution has allowed Unicis.Tech to meet these demands and secure new business deals.",
+      "source_content_hash": "061c053550b44d024e1d10f175270bb442f1997a1941d27c5f349c5fe5055c49",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "通过实施SSO，Unicis.Tech在企业客户获取方面取得了显著增长。许多企业客户要求供应商必须具备SSO和审计日志功能，而BoxyHQ的解决方案使Unicis.Tech能够满足这些需求并成功签订新的商业协议。"
+      }
+    },
+    {
+      "segment_id": "0a103a02",
+      "source_content": "## In Summary",
+      "source_content_hash": "8ea8b6df3ff4eb379cfa69138f0ac33f6422625e548a471265c4f48dd8b04b8f",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 总结"
+      }
+    },
+    {
+      "segment_id": "8126f763",
+      "source_content": "Unicis.Tech's adoption of BoxyHQ for Enterprise SSO and Audit Logs has yielded numerous benefits, ranging from improved security and compliance to enhanced productivity and customer trust. Their recommendation of BoxyHQ's solution underscores its efficacy in providing a comprehensive and cost-effective security solution for businesses seeking to meet their security and compliance needs.",
+      "source_content_hash": "1e8253731cd931a6b41de24bd717faad13495de6294dca88f3de45bc399142f7",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "Unicis.Tech采用BoxyHQ的企业级SSO和审计日志方案带来了多重效益，包括提升安全性、加强合规性、提高生产力及增强客户信任。他们对BoxyHQ解决方案的推荐，印证了该方案在为需要满足安全与合规需求的企业提供全面且高性价比解决方案方面的卓越成效。"
+      }
+    },
+    {
+      "segment_id": "897e0025",
+      "source_content": "<LearnMoreCTA label=\"Read the full interview\" newWindow={false} url=\"/blog/unicis-tech-unlocks-security-with-boxyhq-a-conversation-with-the-founder\" />",
+      "source_content_hash": "8471e98b130fb2e5d87bbaceeee71ceb0e0c78b06551aeb6d5f8aecb8f78ad1e",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_897e0025"
+      }
+    }
+  ],
+  "target_i18n_subpath": "docusaurus-plugin-content-blog-success-stories/2023-11-11-boxyhqs-sso-&-audit-logs-accelerate-unicis-towards-soc2-compliance.md",
+  "last_updated_timestamp": "2025-06-08T18:49:09.300902+00:00",
+  "schema_version": "1.0",
+  "translated_versions": {
+    "zh-CN": "8a2f621ea0f1e6884ae5707fb53c8d5ae2d9f03a979bc16bfd7038dc242ce41a"
+  }
+}

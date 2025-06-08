@@ -1,0 +1,342 @@
+{
+  "source_file_path_relative_to_docusaurus_root": "guides/jackson/login-with-saml-sso.md",
+  "source_file_content_hash": "49888c7d96718117e6e8e8d18e6d7d0f154079b34d4ffd17cad9793484364b73",
+  "segments": [
+    {
+      "segment_id": "58cfcc64",
+      "source_content": "---\ntitle: UI Best Practices for Log in with SAML Single Sign-On\ndescription: UI Best Practices for Log in with SAML Single Sign-On\nsidebar_label: Log in with SAML SSO\n---",
+      "source_content_hash": "aa561c7983a894c86b0656ecc38ec86c19c92999c3ef25ea612007f116b3a555",
+      "node_type": "yaml",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_58cfcc64"
+      }
+    },
+    {
+      "segment_id": "a703643c",
+      "source_content": "# Log in with SAML Single Sign-On",
+      "source_content_hash": "fa40b9e770c3c2faed11e5efe6c0a4ae88c9c6adf8bade9c13ba1d1c54f2959b",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "# 使用SAML单点登录"
+      }
+    },
+    {
+      "segment_id": "53eaf0e1",
+      "source_content": "Let's see how enterprise apps have implemented the SAML SSO into their authentication flow.",
+      "source_content_hash": "1227d86fea3a6815f2839cdac2de0825d9518b148d4f0eb5bea0202ff7dc557c",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "让我们看看企业应用如何将SAML SSO集成到其认证流程中。"
+      }
+    },
+    {
+      "segment_id": "8a5f6a7b",
+      "source_content": "## Service Provider Initiated SSO",
+      "source_content_hash": "2bc214d0951f901b3fb28f411a658ea87981c7d1bd6b7564761b6b90c777a06e",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 服务提供商发起的SSO"
+      }
+    },
+    {
+      "segment_id": "180bddb1",
+      "source_content": "You can use several approaches while implementing your app's SP-initiated SAML SSO login.",
+      "source_content_hash": "326e65f1842fff1cf8f8f98c26e96a3a6a99bedea2a4908298b9108a93caaaa5",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "在实现应用的SP发起的SAML SSO登录时，您可采用多种方式。"
+      }
+    },
+    {
+      "segment_id": "4269e691",
+      "source_content": "- Dedicated page for SAML SSO\n- Dynamic password fields\n- Subdomain for tenants\n- Separate the email and password fields",
+      "source_content_hash": "79038cb174fcf12e582a8fc6c4af9ebfc091da2cd17e5aae99524431e28f3a21",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- 专设SAML SSO页面\n- 动态密码字段\n- 租户子域名\n- 分离邮箱与密码字段"
+      }
+    },
+    {
+      "segment_id": "bc633244",
+      "source_content": "### Dedicated page for SAML SSO",
+      "source_content_hash": "edec109906b10b39e3f8f3fcb1bc32bf0ade4a217c941172c490291672874aee",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 专设SAML SSO页面"
+      }
+    },
+    {
+      "segment_id": "2df4f75f",
+      "source_content": "With this approach, you would put a button on your login page for `Login with SAML SSO`. Users are taken to the SAML SSO page when they click the button.",
+      "source_content_hash": "7f829cbaa87a3913a4e8e2cb36192585492b1411cfb8dd4b1a9f6a8bab1bc1b1",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "此方式会在登录页面设置\"使用SAML SSO登录\"按钮。用户点击后将跳转至SAML SSO专属页面。"
+      }
+    },
+    {
+      "segment_id": "98cfbd53",
+      "source_content": "**Postman** takes this approach to enable SAML SSO for their enterprise users.",
+      "source_content_hash": "dfec3051531817a8928b4adca8da876e9b20ee99feadc034832fcd90af4554af",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "**Postman**即采用此方式为其企业用户启用SAML SSO。"
+      }
+    },
+    {
+      "segment_id": "1941846d",
+      "source_content": "<img src=\"/images/guides/sso/postman-1.png\" style={{ border: '1px solid black' }} />",
+      "source_content_hash": "76822407a56d0b11ad32997e9b1e2451ffd8dc22ff028461332616bbb5825c1c",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_1941846d"
+      }
+    },
+    {
+      "segment_id": "2a3434e4",
+      "source_content": "<img src=\"/images/guides/sso/postman-2.png\" style={{ border: '1px solid black' }} />",
+      "source_content_hash": "46250ca03cb6174a7fe8ffb6dedc83c2675f3d0319ff865d0a3b32294008cd10",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_2a3434e4"
+      }
+    },
+    {
+      "segment_id": "26524352",
+      "source_content": "The user flow would be something similar to the one below.",
+      "source_content_hash": "8d31954fac716bcb5f26df3c1d9bf9639618a3f8be9ae92b62d4348a667e2b39",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "用户流程大致如下："
+      }
+    },
+    {
+      "segment_id": "86b525ab",
+      "source_content": "- Users visit the login page.\n- Click the button \"Login with SAML SSO\"\n- The app redirects the user to the SAML SSO page.\n- The user enters their email address or tenant ID.\n- The app examines the domain or tenant ID to see if SSO is enabled.\n- If SSO is enabled, the app redirects the user to their IdP.",
+      "source_content_hash": "00e2d00258ebb238173e045086e8ff6658606fb04ac33b12e41b60d9af098142",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- 用户访问登录页\n- 点击\"使用SAML SSO登录\"按钮\n- 应用重定向至SAML SSO页面\n- 用户输入邮箱或租户ID\n- 应用校验域名/租户ID是否启用SSO\n- 若启用，则重定向至对应身份提供商(IdP)"
+      }
+    },
+    {
+      "segment_id": "62a6890b",
+      "source_content": "### Dynamic password fields",
+      "source_content_hash": "71b7a5335f479401bac73f52c47455e593263d8c391b5f5c91b0332d1a5ef853",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 动态密码字段"
+      }
+    },
+    {
+      "segment_id": "3cfe6286",
+      "source_content": "This approach hides the password field if SSO is enabled for a domain.",
+      "source_content_hash": "1fa946b6022da33eb1d12bd5a2f0bc2e92e18faad64054ee84e6109ff34703b2",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "此方式会在域名启用SSO时隐藏密码字段。"
+      }
+    },
+    {
+      "segment_id": "1042b50d",
+      "source_content": "You can see this approach on the **Dropbox** login form.",
+      "source_content_hash": "6a66a3b9a15cd9364ba02598fd6f84de7770e19ba991bbac4685226bfe142d35",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "**Dropbox**的登录表单即采用此方案。"
+      }
+    },
+    {
+      "segment_id": "68123cc1",
+      "source_content": "<img src=\"/images/guides/sso/dropbox-1.png\" style={{ border: '1px solid black' }} />",
+      "source_content_hash": "59a9c934628b971119eae4c481beb7e2996cabe21feb23de5958d82a4ce641df",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_68123cc1"
+      }
+    },
+    {
+      "segment_id": "92b13a72",
+      "source_content": "<img src=\"/images/guides/sso/dropbox-2.png\" style={{ border: '1px solid black' }} />",
+      "source_content_hash": "460e90e2d117a64e9ebc16f6f1dcca702a99d025080c0c27499df3c59da138b5",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_92b13a72"
+      }
+    },
+    {
+      "segment_id": "29528c8d",
+      "source_content": "The user flow would be something similar to the one below.",
+      "source_content_hash": "8d31954fac716bcb5f26df3c1d9bf9639618a3f8be9ae92b62d4348a667e2b39",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "用户流程大致如下："
+      }
+    },
+    {
+      "segment_id": "ddd2c7ae",
+      "source_content": "- Users visit the login page.\n- The user enters their email address.\n- The app examines the domain to see if SSO is enabled.\n- If SSO is enabled, the app hides the password field from the login form.\n- The user submits the login form.\n- The app redirects the user to their IdP.",
+      "source_content_hash": "2f595db2bd0d20a5ed1f24f7874e78a49bbb3d03dc73404e0f367e203f1b6544",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- 用户访问登录页\n- 输入邮箱地址\n- 应用校验域名是否启用SSO\n- 若启用则隐藏密码字段\n- 用户提交登录表单\n- 应用重定向至身份提供商(IdP)"
+      }
+    },
+    {
+      "segment_id": "1a316f80",
+      "source_content": "### Subdomain for tenants",
+      "source_content_hash": "904a7e3e5d82023ce300c80f202458803ece1578d537827e269ecfde3bb462cc",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 租户子域名"
+      }
+    },
+    {
+      "segment_id": "40158b4b",
+      "source_content": "One approach you can take is to configure a subdomain for each tenant. First, display a form to enter the tenant ID, and then the application redirects users to the subdomain page to show the available authentication mechanism enabled for the tenant.",
+      "source_content_hash": "f98b4ee7b9a8455a119171eec00f66320ec7b94d03215e3b97e4b1e7144d39b1",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "可为每个租户配置子域名。先展示租户ID输入表单，随后将用户重定向至子域名页面，显示该租户启用的认证机制。"
+      }
+    },
+    {
+      "segment_id": "6ea4c715",
+      "source_content": "You can see this approach on the **Freshchat or Freshworks** login form.",
+      "source_content_hash": "787287302c9765d5a4a8b8ca4965c438826a5df25d747cef022b210f84f61b0a",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "**Freshchat/Freshworks**的登录表单即采用此方案。"
+      }
+    },
+    {
+      "segment_id": "28a7cb9f",
+      "source_content": "<img src=\"/images/guides/sso/freshchat-1.png\" style={{ border: '1px solid black' }} />",
+      "source_content_hash": "e4274336adc26255e13e3caa9ed1361bdc874b6a73f260d0213e2c96576cd5f2",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_28a7cb9f"
+      }
+    },
+    {
+      "segment_id": "706eae60",
+      "source_content": "<p align=\"center\">\n  <img\n    src=\"/images/guides/sso/freshchat-2.png\"\n    width=\"70%\"\n    style={{ border: '1px solid black' }}\n  />\n</p>",
+      "source_content_hash": "26db68c8d9c1ad8f19d597641800ad7d180aa326895eb824a176009243f4e429",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_706eae60"
+      }
+    },
+    {
+      "segment_id": "883231d4",
+      "source_content": "The user flow would be something similar to the one below.",
+      "source_content_hash": "8d31954fac716bcb5f26df3c1d9bf9639618a3f8be9ae92b62d4348a667e2b39",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "用户流程大致如下："
+      }
+    },
+    {
+      "segment_id": "4fe53981",
+      "source_content": "- Users visit the login page.\n- The user enters their tenant name.\n- The app examines the tenant's existence and redirects the user to the tenant's subdomain page.\n- The subdomain page display a login form with the authentication mechanisms enabled for the tenant.\n- If SSO is enabled, the user can choose \"Login with SAML SSO\".",
+      "source_content_hash": "9a068c5d902a42b305ea150cbb6d9a44cac49637fa0d3d4acb430a724693e1ce",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- 用户访问登录页\n- 输入租户名称\n- 应用验证租户存在性并重定向至租户子域名页\n- 子域名页面展示该租户启用的认证机制\n- 若启用SSO，用户可选择\"使用SAML SSO登录\""
+      }
+    },
+    {
+      "segment_id": "8a9b6c26",
+      "source_content": "### Separate the email and password fields",
+      "source_content_hash": "9731b3b0e437ded731dc0ddc74c401b7a2472a1cc5ea256eab41f6e8d9df3ddb",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 分离邮箱与密码字段"
+      }
+    },
+    {
+      "segment_id": "a1fa5396",
+      "source_content": "This approach splits the login process into multiple stages. First, the login form displays an email field without a password field. Next, a user enters their email address, and the application checks to see which authentication mechanism is enabled for the current user.",
+      "source_content_hash": "295cb2061bfe59da19429e875e22fbabd1b83137c506abcea4ba693b6f448949",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "此方式将登录流程分阶段进行：先展示无密码字段的邮箱表单，用户提交后，应用检查该用户启用的认证机制。"
+      }
+    },
+    {
+      "segment_id": "ec619944",
+      "source_content": "**Box** uses this approach for its authentication flow.",
+      "source_content_hash": "84b5738cb0fa65ddc895aa391b45eef59e78b6d9072b33c2ee2346ce45f4f7d4",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "**Box**即采用此认证流程。"
+      }
+    },
+    {
+      "segment_id": "46cf9aca",
+      "source_content": "<img src=\"/images/guides/sso/box-1.png\" style={{ border: '1px solid black' }} />",
+      "source_content_hash": "ea274eeb4f2510d7e13b2c58ea404e1da651f79516b94da0a3e71928640e5f50",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_46cf9aca"
+      }
+    },
+    {
+      "segment_id": "0750bfa1",
+      "source_content": "The user flow would be something similar to the one below.",
+      "source_content_hash": "8d31954fac716bcb5f26df3c1d9bf9639618a3f8be9ae92b62d4348a667e2b39",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "用户流程大致如下："
+      }
+    },
+    {
+      "segment_id": "2fc7ec55",
+      "source_content": "- Users visit the login page.\n- The user enters their email address and submit the login form.\n- The app examines the email address to see if SSO is enabled.\n- If SSO is enabled, the app redirects the users to their IdP instead of taking them to a password flow.",
+      "source_content_hash": "b314dbcd7d1800644e03457a69d7c6ff41c2315f728817cd8b4785a48831ae9d",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- 用户访问登录页\n- 输入邮箱并提交表单\n- 应用检查邮箱是否启用SSO\n- 若启用则直接重定向至身份提供商(IdP)，而非进入密码流程"
+      }
+    }
+  ],
+  "target_i18n_subpath": "docusaurus-plugin-content-docs-guides/current/jackson/login-with-saml-sso.md",
+  "last_updated_timestamp": "2025-06-08T18:49:09.322033+00:00",
+  "schema_version": "1.0",
+  "translated_versions": {
+    "zh-CN": "49888c7d96718117e6e8e8d18e6d7d0f154079b34d4ffd17cad9793484364b73"
+  }
+}

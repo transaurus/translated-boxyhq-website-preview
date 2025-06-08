@@ -1,0 +1,52 @@
+{
+  "source_file_path_relative_to_docusaurus_root": "docs/index.mdx",
+  "source_file_content_hash": "63b5dde52970d2bf408c0eb9f3972eba0591bb2e8e522a75d4ec2fe8186f5667",
+  "segments": [
+    {
+      "segment_id": "58cfcc64",
+      "source_content": "---\ntitle: Documentation\ndescription: BoxyHQ's official documentation for SSO, Directory Sync, Audit Logs, and Privacy Vault. Deploy our enterprise-ready solutions into your application with ease.\nhide_table_of_contents: true\n---",
+      "source_content_hash": "70295ed4017718b260ac079bec045c804cdf3773ffafffd30e76a5179a6951a5",
+      "node_type": "yaml",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_58cfcc64"
+      }
+    },
+    {
+      "segment_id": "10c4cb47",
+      "source_content": "import Link from '@docusaurus/Link';",
+      "source_content_hash": "56dc96329cdb0969073dce7e6f42230cd90f6d01767f6a6b1d34d18fe2506461",
+      "node_type": "mdxjsEsm",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_10c4cb47"
+      }
+    },
+    {
+      "segment_id": "53eaf0e1",
+      "source_content": "Accelerate your Time to Market while enhancing your company's security! BoxyHQ’s suite of security, privacy and enterprise compliance solutions empowers organizations to rapidly develop and deploy compliant cloud applications while fortifying themselves in the era of AI. From enterprise-grade Single Sign-On, Directory Sync, and Audit Logs to Privacy Vault and AI Security. Open source and free.",
+      "source_content_hash": "c850816238ccd8cb5d3aeaedae0fcc8f36c61f1a33954e707c8b0f436eee7ec4",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "加速产品上市周期，同时增强企业安全性！BoxyHQ的安全、隐私与企业合规解决方案套件，赋能组织快速开发并部署合规的云应用程序，在AI时代筑牢防线。从企业级单点登录(SSO)、目录同步和审计日志，到隐私保险库与AI安全防护。开源且免费。"
+      }
+    },
+    {
+      "segment_id": "88aa2da8",
+      "source_content": "<div className=\"container\" style={{ padding: 0 }}>\n  <div className=\"row is-multiline\">\n    <div className=\"col col--6 margin-bottom--sm\">\n      <Link\n        className=\"card\"\n        to=\"/docs/jackson/overview\"\n        style={{ height: '100%' }}\n      >\n        <div className=\"card__body\">\n          <h4>Enterprise SSO</h4>\n          <div>\n            A SAML/OIDC SSO service designed as an OAuth 2.0 flow. Integrate SSO\n            with just a few lines of code.\n          </div>\n        </div>\n      </Link>\n    </div>\n    <div className=\"col col--6 margin-bottom--sm\">\n      <Link\n        className=\"card\"\n        to=\"/docs/directory-sync/overview\"\n        style={{ height: '100%' }}\n      >\n        <div className=\"card__body\">\n          <h4>Directory Sync</h4>\n          <div>\n            Directory sync helps organizations automate the provisioning and\n            de-provisioning of their users. It is based on the SCIM 2.0\n            protocol.\n          </div>\n        </div>\n      </Link>\n    </div>\n  </div>\n  <div className=\"row is-multiline\">\n    <div className=\"col col--6 margin-bottom--sm\">\n      <Link\n        className=\"card\"\n        to=\"/docs/admin-portal/overview\"\n        style={{ height: '100%' }}\n      >\n        <div className=\"card__body\">\n          <h4>Admin Portal</h4>\n          <div>\n            Manage our Enterprise SSO and Directory Sync products via an easy to\n            use web interface\n          </div>\n        </div>\n      </Link>\n    </div>\n  </div>\n</div>",
+      "source_content_hash": "343be77fdb1aa33c1937c01d4f20553348b0ece93973238a62045c241bbba9fe",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_88aa2da8"
+      }
+    }
+  ],
+  "target_i18n_subpath": "docusaurus-plugin-content-docs/current/index.mdx",
+  "last_updated_timestamp": "2025-06-08T18:49:09.289425+00:00",
+  "schema_version": "1.0",
+  "translated_versions": {
+    "zh-CN": "63b5dde52970d2bf408c0eb9f3972eba0591bb2e8e522a75d4ec2fe8186f5667"
+  }
+}

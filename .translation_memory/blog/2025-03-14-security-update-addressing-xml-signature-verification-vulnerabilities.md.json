@@ -1,0 +1,202 @@
+{
+  "source_file_path_relative_to_docusaurus_root": "blog/2025-03-14-security-update-addressing-xml-signature-verification-vulnerabilities.md",
+  "source_file_content_hash": "103e2dcf3e9858d62193cb19af545850a758b7f2458f6edcbcaf9e8045b0faba",
+  "segments": [
+    {
+      "segment_id": "58cfcc64",
+      "source_content": "---\nslug: security-update-addressing-xml-signature-verification-vulnerabilities\ntitle: 'Security Update: Addressing XML Signature Verification Vulnerabilities'\ntags_disabled: [developer, security, cybersecurity, saml]\nimage: /img/blog/matthew-henry-fPxOowbR6ls-unsplash.jpg\nauthor: Deepak Prabhakara\nauthor_title: Co-founder & CEO @BoxyHQ\nauthor_url: https://github.com/deepakprabhakara\nauthor_image_url: /images/authors/deepak.jpg\n---",
+      "source_content_hash": "6c0188258a14925d612a90da295cf66f88810ab543a6a0a73d65ffa3ea126f98",
+      "node_type": "yaml",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_58cfcc64"
+      }
+    },
+    {
+      "segment_id": "8d66f911",
+      "source_content": "At BoxyHQ, security is a top priority. At BoxyHQ, security is a top priority. Recently, a vulnerability was disclosed in a library we use. Thanks to coordinated efforts between our team, [Alexander Tan](https://hackerone.com/ahacker1), library maintainer Chris Barth, WorkOS, and other vendors, we patched the issue efficiently and responsibly.",
+      "source_content_hash": "ef700a569b44d07b48ce1b836391eeb5188da6f60320ddef87bad01203e3b638",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "在BoxyHQ，安全是我们的首要任务。最近，我们使用的一个库中披露了一个漏洞。得益于我们团队、[Alexander Tan](https://hackerone.com/ahacker1)、库维护者Chris Barth、WorkOS以及其他供应商之间的协调努力，我们高效且负责任地修复了该问题。"
+      }
+    },
+    {
+      "segment_id": "ad8fd492",
+      "source_content": "No customers were affected, and our multi-tenancy security measures provide additional protection against such risks.",
+      "source_content_hash": "9518c62d04227d97b5307aed62f500e02f6117e65409d506670e35a238eb043f",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "没有客户受到影响，我们的多租户安全措施为此类风险提供了额外防护。"
+      }
+    },
+    {
+      "segment_id": "cbe57f9d",
+      "source_content": "## Vulnerability Details",
+      "source_content_hash": "173eed526830162c17f32e0927a914e3efe3c07a78ac8b10ed545adf93bcd57a",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 漏洞详情"
+      }
+    },
+    {
+      "segment_id": "39b3772c",
+      "source_content": "XML Signature Verification Bypass via DigestValue Comment [GHSA-x3m8-899r-f7c3](https://github.com/node-saml/xml-crypto/security/advisories/GHSA-x3m8-899r-f7c3)",
+      "source_content_hash": "ea3c27c89f4f7ebe6419be19f3f98ecdc1c91883ccfa129377c1828f0d339de7",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "通过DigestValue注释绕过XML签名验证 [GHSA-x3m8-899r-f7c3](https://github.com/node-saml/xml-crypto/security/advisories/GHSA-x3m8-899r-f7c3)"
+      }
+    },
+    {
+      "segment_id": "3b695c37",
+      "source_content": "- This vulnerability allows an attacker to bypass XML signature verification by injecting an XML comment within the `<DigestValue>` element.\n- As a result, an altered or malicious XML document could be accepted as valid, potentially leading to security risks such as data manipulation or authentication bypass.\n- The issue has been patched by ensuring strict parsing and validation of `<DigestValue>`.",
+      "source_content_hash": "898d73dc131cd518da6e87fdb94c939f2bc4dded7a2a77f520a2081600bd2ba2",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- 该漏洞允许攻击者通过在`<DigestValue>`元素内注入XML注释来绕过XML签名验证。\n- 可能导致篡改或恶意的XML文档被误认为有效，从而引发数据操纵或身份验证绕过等安全风险。\n- 已通过严格解析和验证`<DigestValue>`修复该问题。"
+      }
+    },
+    {
+      "segment_id": "98cfbd53",
+      "source_content": "XML Signature Verification Bypass via Multiple SignedInfo References [GHSA-9p8x-f768-wp2g](https://github.com/node-saml/xml-crypto/security/advisories/GHSA-9p8x-f768-wp2g)",
+      "source_content_hash": "b56a0dd519bc00e2ca76f69905afbfa019f23b369739c3c140069c2bf1c36c99",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "通过多个SignedInfo引用绕过XML签名验证 [GHSA-9p8x-f768-wp2g](https://github.com/node-saml/xml-crypto/security/advisories/GHSA-9p8x-f768-wp2g)"
+      }
+    },
+    {
+      "segment_id": "0cc488ed",
+      "source_content": "- This flaw occurs when an XML signature contains multiple `<SignedInfo>` references, leading to ambiguity in the verification process.\n- An attacker could exploit this to trick the verification mechanism into validating a signature against an unintended portion of the document.\n- The fix enforces stricter handling of `<SignedInfo>` references to prevent such bypass techniques.",
+      "source_content_hash": "e2ca2b8ce0dca2506014560ce10003d047ced14876db6002da39c58c15799792",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- 当XML签名包含多个`<SignedInfo>`引用时，会导致验证过程出现歧义。\n- 攻击者可利用此漏洞诱使验证机制对文档的非目标部分进行验证。\n- 修复方案通过强制严格处理`<SignedInfo>`引用来防止此类绕过技术。"
+      }
+    },
+    {
+      "segment_id": "26524352",
+      "source_content": "These vulnerabilities underscore the importance of robust XML signature verification to prevent tampering and unauthorized access.",
+      "source_content_hash": "ac4fbe9a55594075aba1b23e07a66cd8c148e7aa4fb52dfdc743a571c26c1b09",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "这些漏洞凸显了强健的XML签名验证对防止篡改和未授权访问的重要性。"
+      }
+    },
+    {
+      "segment_id": "b25f21be",
+      "source_content": "## Coordinated Disclosure in Action",
+      "source_content_hash": "b41e5eaa6e1fc3d0ec17e56a86d1756a322dd31a77506f83d12640bb4e01c3f9",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 协同披露实践"
+      }
+    },
+    {
+      "segment_id": "7499a4e7",
+      "source_content": "Security vulnerabilities are inevitable in software, but how we handle them makes the difference. Our process prioritizes transparency, collaboration, and rapid remediation:",
+      "source_content_hash": "58909f3cc2f95b8dbeabf936e53335689cef40027dbb464717bf0892e551e168",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "软件中的安全漏洞不可避免，但处理方式至关重要。我们的流程优先考虑透明度、协作和快速修复："
+      }
+    },
+    {
+      "segment_id": "7a2e981c",
+      "source_content": "- Verified the issue and assessed its impact.\n- Coordinated with WorkOS and other vendors to mitigate risks.\n- Deployed an interim patch while a full fix was developed.\n- Worked with Alexander Tan and the library maintainer to resolve the issue.\n- Released a final patch with clear guidance for affected users.",
+      "source_content_hash": "201ace260f33ec302f5a2b2a9434d300539b063787666862ae8e3eb7a7430794",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- 验证问题并评估其影响\n- 与WorkOS及其他供应商协调降低风险\n- 在开发完整修复方案期间部署临时补丁\n- 与Alexander Tan及库维护者合作解决问题\n- 发布最终补丁并向受影响用户提供明确指南"
+      }
+    },
+    {
+      "segment_id": "50746522",
+      "source_content": "This structured approach ensured a swift response while minimizing risks.",
+      "source_content_hash": "3fc15032c9422bdde010106d0df3962b61034bbdbe0b9238e156b00bc1d2faf6",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "这种结构化方法确保了快速响应，同时将风险降至最低。"
+      }
+    },
+    {
+      "segment_id": "54268405",
+      "source_content": "## Security is a Community Effort",
+      "source_content_hash": "d4d8d4c6c4cc83ba1e4923fc8ced9782a68847232dc26f18cbd4d46a2dec6eb3",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 安全是社区的共同事业"
+      }
+    },
+    {
+      "segment_id": "8af76f3d",
+      "source_content": "Cybersecurity thrives on collaboration. Alexander’s responsible disclosure, the maintainer’s prompt response, and vendor cooperation were instrumental in resolving this issue effectively. Open collaboration strengthens the software ecosystem, enabling us to respond proactively to threats.",
+      "source_content_hash": "3eeabf22faf30f71fe2d3bcde647b79750668b4446dceda9a79780a6d10a74a3",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "网络安全依赖于协作。Alexander负责任的披露、维护者的迅速响应以及供应商的合作对有效解决此问题至关重要。开放的协作强化了软件生态系统，使我们能够主动应对威胁。"
+      }
+    },
+    {
+      "segment_id": "c674e260",
+      "source_content": "## Looking Ahead",
+      "source_content_hash": "8de2e48b0ce5868db1661d22f34f84b1fe7ebfa6e077027919cbbd74d039bd0c",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 展望未来"
+      }
+    },
+    {
+      "segment_id": "a44047a5",
+      "source_content": "We appreciate the collective effort that made this fix possible—special thanks to Alexander Tan and WorkOS for their contributions. Our commitment to security remains unwavering, and we encourage developers and researchers to engage in open dialogue about potential risks.",
+      "source_content_hash": "9f772bc6952f8e3bf43a3ff3b3dc02adca71b2427d8a4221927004f107d7776b",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "我们感谢促成此次修复的集体努力——特别感谢Alexander Tan和WorkOS的贡献。我们对安全的承诺坚定不移，并鼓励开发者和研究人员就潜在风险展开开放对话。"
+      }
+    },
+    {
+      "segment_id": "f7ef78f9",
+      "source_content": "For security concerns, contact us at security@boxyhq.com. A detailed blog post on the exploit and mitigation will be released soon.",
+      "source_content_hash": "967aebf43f3364a652f7fb17a80223c1ba72d76f8377492b239421b3250d3467",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "如有安全问题，请联系security@boxyhq.com。关于该漏洞利用和缓解措施的详细博文即将发布。"
+      }
+    },
+    {
+      "segment_id": "b36c6338",
+      "source_content": "Thanks to everyone who contributed to resolving this issue!",
+      "source_content_hash": "ef449ac437f115c9d2fbba15ce27ded101b18d7d9c397c2db2fc87bb50181893",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "感谢所有为解决问题做出贡献的人！"
+      }
+    }
+  ],
+  "target_i18n_subpath": "docusaurus-plugin-content-blog/2025-03-14-security-update-addressing-xml-signature-verification-vulnerabilities.md",
+  "last_updated_timestamp": "2025-06-08T18:49:09.319631+00:00",
+  "schema_version": "1.0",
+  "translated_versions": {
+    "zh-CN": "103e2dcf3e9858d62193cb19af545850a758b7f2458f6edcbcaf9e8045b0faba"
+  }
+}

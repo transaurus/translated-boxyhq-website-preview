@@ -1,0 +1,202 @@
+{
+  "source_file_path_relative_to_docusaurus_root": "success-stories/2024-03-08-a-secure-privacy-first-ai-driven-data-collection-platform-blocksurvey.md",
+  "source_file_content_hash": "fe02d0030350e32ca2ce5278b141bce29523276282c4ca985ec7dd7240a64f96",
+  "segments": [
+    {
+      "segment_id": "58cfcc64",
+      "source_content": "---\ndescription: \"Discover how BlockSurvey's partnership with BoxyHQ's SSO elevates data privacy and boosts enterprise client trust. A story of innovation and security.\"\nslug: a-secure-privacy-first-ai-driven-data-collection-platform-blocksurvey\ntitle: 'A Secure, Privacy-First AI-driven Data Collection Platform: BlockSurvey'\ntags_disabled: [security, sso, enterpriseready]\nimage: /images/success-stories/blocksurvey-case-study.png\nhide_table_of_contents: true\n---",
+      "source_content_hash": "fb6fbf4a62fd7ba3354a1f6e24e713cfd697566b8a577ae0a4b21a5b7a0cbe2c",
+      "node_type": "yaml",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_58cfcc64"
+      }
+    },
+    {
+      "segment_id": "73ddcfdf",
+      "source_content": "import FeaturedQuote from \"../src/components/FeaturedQuote\";\nimport LearnMoreCTA from \"../src/components/ctas/LearnMoreCTA\";\nimport SignupCTA from \"../src/components/ctas/SignupCTA\";",
+      "source_content_hash": "a28b4a3bd17e93ac6f365d297f206a7a21f2f6a9d7fe893f83bccc52218ee4ee",
+      "node_type": "mdxjsEsm",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_73ddcfdf"
+      }
+    },
+    {
+      "segment_id": "ad8fd492",
+      "source_content": "[BlockSurvey](https://blocksurvey.io), is a pioneering decentralized AI-driven data collection platform, designed with the core mission of enhancing privacy and security in the digital data collection process. By leveraging cutting-edge blockchain technology, BlockSurvey empowers both individuals and organizations to gather and disseminate information via forms and surveys in an environment where confidentiality and data protection are paramount. This innovative approach not only safeguards the respondents' privacy but also ensures the integrity of the data collected.",
+      "source_content_hash": "07c85b8362fc2be541032ff1ecf9c980ecea1fc69a829439c44a2277aa7633f6",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "[BlockSurvey](https://blocksurvey.io) 是一款开创性的去中心化AI驱动数据收集平台，其核心使命是增强数字数据收集过程中的隐私与安全性。通过运用尖端的区块链技术，BlockSurvey 使个人和组织能够在确保机密性与数据保护的前提下，通过表单和调查问卷收集与传播信息。这种创新方法不仅保障了受访者的隐私，也确保了所收集数据的完整性。"
+      }
+    },
+    {
+      "segment_id": "cbe57f9d",
+      "source_content": "## Introduction",
+      "source_content_hash": "d753efbab681fa4da82470d9a83b1c202de58f92fd498e77a269c1163bc4714b",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 引言"
+      }
+    },
+    {
+      "segment_id": "39b3772c",
+      "source_content": "In a world where data privacy has become a paramount concern, BlockSurvey stands out as a beacon of trust and security. Committed to empowering users with complete ownership over their data, BlockSurvey faced the challenge of ensuring enterprise-level security and privacy for its customers.",
+      "source_content_hash": "7ab3ef4beded60522396add7b6346e93acb01364f73f670a1ca49b3caedc43e4",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "在数据隐私成为全球关注焦点的时代，BlockSurvey 作为信任与安全的标杆脱颖而出。秉持让用户完全掌控自身数据的理念，BlockSurvey 面临着为企业客户提供企业级安全与隐私保障的挑战。"
+      }
+    },
+    {
+      "segment_id": "1acb9a05",
+      "source_content": "**The solution?** BoxyHQ’s Single Sign-On powered by the open-source SAML Jackson.",
+      "source_content_hash": "aa51bb948e731d2a062c14ac2eeecdc2474a3be1a0bafde2d2bef476ce385e88",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "**解决方案是什么？** BoxyHQ 基于开源项目 SAML Jackson 构建的单点登录系统。"
+      }
+    },
+    {
+      "segment_id": "5dfba1c3",
+      "source_content": "<SignupCTA campaign=\"success-story-blocksurvey\" />",
+      "source_content_hash": "a22d564858d25fe27300c073f4c3b6996ecfe24aa1fa8b640865b5361f8e79af",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_5dfba1c3"
+      }
+    },
+    {
+      "segment_id": "95b38f97",
+      "source_content": "## The Challenge",
+      "source_content_hash": "bb5160d5b322da94d24f234e1b92a6470bed053fd0f11d30850b6b19f8cfc6c9",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 挑战"
+      }
+    },
+    {
+      "segment_id": "ccc88b4c",
+      "source_content": "At the heart of BlockSurvey's mission is the promise of unparalleled data privacy and security. But with great promise comes the challenge of implementation, especially as BlockSurvey sought to expand its offerings to enterprise clients. They needed a robust SSO solution that not only streamlined access management but also reinforced their commitment to privacy and security.",
+      "source_content_hash": "32c43f4c417e896ebc0e96d3c571578aefea3ecffdad7aa58db32d856c680b9d",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "BlockSurvey 的核心使命是提供无与伦比的数据隐私与安全承诺。但随着其向企业客户扩展服务范围，实现这一承诺面临着巨大挑战。他们需要一套强大的单点登录解决方案，既能简化访问管理，又能强化其隐私与安全承诺。"
+      }
+    },
+    {
+      "segment_id": "3c36424c",
+      "source_content": "## The Solution",
+      "source_content_hash": "85aef9fe7503ca480a1dbc8de4cdd0317c4517f3d1969ca7572a8ce8e13eb16b",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 解决方案"
+      }
+    },
+    {
+      "segment_id": "26524352",
+      "source_content": "BoxyHQ emerged as the perfect partner in this journey. With its open-source SSO solution, BoxyHQ offered the flexibility, ease of integration, and, most importantly, the security assurance BlockSurvey was seeking. The decision to collaborate with BoxyHQ was driven by a shared vision for privacy and security, making BoxyHQ's SAML Jackson the cornerstone of BlockSurvey's enterprise security framework.",
+      "source_content_hash": "045354f15b03a2225cfb90c0695e8573fa96e6999f566f7b96cad2847f6b205d",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "BoxyHQ 成为了这段旅程中的理想合作伙伴。其开源单点登录解决方案提供了 BlockSurvey 所追求的灵活性、易集成性以及至关重要的安全保障。双方对隐私与安全的共同愿景促使 BlockSurvey 选择与 BoxyHQ 合作，使 BoxyHQ 的 SAML Jackson 成为 BlockSurvey 企业安全框架的基石。"
+      }
+    },
+    {
+      "segment_id": "99d14dfd",
+      "source_content": "<FeaturedQuote personName=\"Raja Ilayaperumal\" personRole=\"Co-Founder & CTO - BlockSurvey\" pictureSrc=\"/images/success-stories/raja-blocksurvey\">\n BlockSurvey is committed to empowering individuals and organizations with control over their data. BoxyHQ, as our chosen platform for Enterprise SSO integration, is pivotal in this journey.\n</FeaturedQuote>",
+      "source_content_hash": "9a2cfc6bc24736d8f083709432650436c9def710770999b9bcfaf546d4f88c98",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_99d14dfd"
+      }
+    },
+    {
+      "segment_id": "109ace10",
+      "source_content": "## The Impact",
+      "source_content_hash": "bfd46a2e0a158e12670fc2bb22a3d49c22626fc3dd5f88eefa7ffb2d74c9595b",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 成效"
+      }
+    },
+    {
+      "segment_id": "135468ee",
+      "source_content": "The integration of BoxyHQ's SSO solution transformed BlockSurvey's operational and security landscape. Not only did it enhance user experience by streamlining the login process, but it also significantly bolstered client confidence. The direct benefits were immediate: a seamless, secure, and efficient login experience for users across the board.",
+      "source_content_hash": "614aa0e55e2cbdee0cddedbd815818febce4d3cbb03410b312c52e92b8265438",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "BoxyHQ 单点登录解决方案的集成彻底改变了 BlockSurvey 的运营与安全格局。它不仅通过简化登录流程提升了用户体验，更显著增强了客户信心。直接效益立竿见影：为所有用户提供了无缝、安全且高效的登录体验。"
+      }
+    },
+    {
+      "segment_id": "33331f27",
+      "source_content": "But the ripple effects went deeper. As noted by Raja Ilayaperumal, Co-Founder and CTO of BlockSurvey, \"With our inaugural client already onboarded, we're thrilled by the positive reception. We anticipate a substantial and lasting impact on our business in the long run.\" This partnership has paved the way for BlockSurvey to onboard enterprise clients more effectively, marking a significant milestone in their growth journey.",
+      "source_content_hash": "5d963e62d2e9ee35840fa3e910cb82a9065007ab1d1c73619e159c5a7720b22c",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "但深层影响更为深远。正如 BlockSurvey 联合创始人兼首席技术官 Raja Ilayaperumal 所述：\"随着首位客户的成功入驻，我们对其积极反响倍感振奋。我们预期这将对企业产生深远持久的积极影响。\" 该合作为 BlockSurvey 更高效地接纳企业客户铺平了道路，标志着其发展历程中的重要里程碑。"
+      }
+    },
+    {
+      "segment_id": "8d04259b",
+      "source_content": "## Conclusion",
+      "source_content_hash": "be031d37bb75d96ef08ca9ec5b0e83bb6f91172f60d3c31a78feae8d7dc4a0b0",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 结语"
+      }
+    },
+    {
+      "segment_id": "95e9ba12",
+      "source_content": "The collaboration between BlockSurvey and BoxyHQ is more than just a technical integration; it's a partnership that enhances the very essence of privacy and security in digital data collection platforms. By leveraging BoxyHQ's expertise in enterprise single sign-on (SSO), BlockSurvey is not only able to offer a superior product but also reinforce its commitment to data privacy and security, ensuring a safer digital space for all users.",
+      "source_content_hash": "be40f6ade6be13d56b3e50f3c6d49b8447134b570c1fef4c98c3db63f825864f",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "BlockSurvey 与 BoxyHQ 的合作不仅是技术集成，更是强化数字数据收集平台隐私与安全本质的伙伴关系。通过运用 BoxyHQ 在企业单点登录（SSO）领域的专业能力，BlockSurvey 不仅能提供更优质的产品，更巩固了其对数据隐私与安全的承诺，为所有用户营造更安全的数字空间。"
+      }
+    },
+    {
+      "segment_id": "8af76f3d",
+      "source_content": "Discover how BoxyHQ can empower your business with secure, scalable, and user-friendly SSO solutions. Read more about our [Enterprise SSO](/enterprise-sso) offerings and how we can help elevate your security standards.",
+      "source_content_hash": "1c29a4560f07d716af2275855450d5e609dc7cb6aecb8ec406c5c2a7ba9f5961",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "了解 BoxyHQ 如何通过安全、可扩展且用户友好的单点登录解决方案赋能您的业务。阅读更多关于我们[企业单点登录](/enterprise-sso)服务的信息，探索我们如何帮助提升您的安全标准。"
+      }
+    },
+    {
+      "segment_id": "2f83a0f4",
+      "source_content": "<LearnMoreCTA label=\"Read the interview with BlockSurvey\" newWindow={false} url=\"/blog/achieving-seamless-sso-integration-why-blocksurvey-selected-boxyhq\" />",
+      "source_content_hash": "2fcfc4af53c60ad1d1dca918435408c599ff1ae09474eb88d859f86ec9e623d4",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_2f83a0f4"
+      }
+    }
+  ],
+  "target_i18n_subpath": "docusaurus-plugin-content-blog-success-stories/2024-03-08-a-secure-privacy-first-ai-driven-data-collection-platform-blocksurvey.md",
+  "last_updated_timestamp": "2025-06-08T18:49:09.316792+00:00",
+  "schema_version": "1.0",
+  "translated_versions": {
+    "zh-CN": "fe02d0030350e32ca2ce5278b141bce29523276282c4ca985ec7dd7240a64f96"
+  }
+}

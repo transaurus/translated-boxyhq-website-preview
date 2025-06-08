@@ -1,0 +1,382 @@
+{
+  "source_file_path_relative_to_docusaurus_root": "blog/2024-01-16-changelog-saml-jackson-2023.md",
+  "source_file_content_hash": "20ce1e63fb9aedea29f35d695f32955ba4adc40f34c6d8df71f3fdb048782095",
+  "segments": [
+    {
+      "segment_id": "58cfcc64",
+      "source_content": "---\nslug: changelog-saml-jackson-2023\ntitle: 'BoxyHQ Changelog: Transforming Enterprise SSO and Directory Sync in 2023 with SAML Jackson'\nauthor: Schalk Neethling\nauthor_title: Customer Success, Community, DevRel - @BoxyHQ\nauthor_url: https://github.com/schalkneethling\nauthor_image_url: /images/authors/schalk.jpg\ntags_disabled: [changelog]\nimage: /img/blog/saml-jackson-2023-changelog.jpg\n---",
+      "source_content_hash": "30721172921218dbc6b5793545027458a981562733150191d4a7ce274493ae08",
+      "node_type": "yaml",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_58cfcc64"
+      }
+    },
+    {
+      "segment_id": "8d66f911",
+      "source_content": "2023 was a landmark year for [BoxyHQ's SAML Jackson project](https://github.com/boxyhq/jackson), marked by a [series of innovative updates](https://github.com/boxyhq/jackson/releases?page=1) that have redefined how we approach Single Sign-On (SSO) and Directory Sync. In this roundup, we celebrate not just our achievements but the invaluable contributions of our vibrant community. From introducing our first enterprise feature, SAML Federation, to enhancing user experience with improved UI/UX for SAML setup, every step we took was aimed at empowering developers and organisations around the globe.",
+      "source_content_hash": "564097ab124654e5c5a0e390bf80c9fbfad55378784d7b5605018f8451a4c237",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "2023年是[BoxyHQ的SAML Jackson项目](https://github.com/boxyhq/jackson)具有里程碑意义的一年，我们通过[一系列创新性更新](https://github.com/boxyhq/jackson/releases?page=1)重新定义了单点登录(SSO)和目录同步的实现方式。本文不仅回顾我们的成就，更致敬活跃社区的无价贡献。从推出首个企业级功能SAML联邦认证，到通过改进SAML配置界面提升用户体验，我们的每一步都致力于赋能全球开发者和组织。"
+      }
+    },
+    {
+      "segment_id": "ad8fd492",
+      "source_content": "Our journey through the year saw remarkable milestones such as the integration of [RFC9207](https://datatracker.ietf.org/doc/html/rfc9207) support for OIDC connections, the introduction of configurable Setup Link expiry times, and giving you control over your privacy with `DO_NOT_TRACK` and `BOXYHQ_NO_ANALYTICS`. In addition, we've made strides in strengthening security and simplifying the troubleshooting process with features like the SAML Tracer for debugging SAML configuration errors.",
+      "source_content_hash": "3a930042edecd98d9d020799c9cdd007dec574809bb93792334a987cf631efa0",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "这一年的旅程中，我们实现了诸多重要里程碑：支持OIDC连接的[RFC9207](https://datatracker.ietf.org/doc/html/rfc9207)规范、可配置的设置链接有效期、通过`DO_NOT_TRACK`和`BOXYHQ_NO_ANALYTICS`赋予隐私控制权。我们还通过SAML追踪器等功能强化安全性，简化了SAML配置错误的排查流程。"
+      }
+    },
+    {
+      "segment_id": "86b54d44",
+      "source_content": "In response to user feedback, we've also [introduced a Software as a Service (SaaS) option](https://app.eu.boxyhq.com/auth/join), catering to those who prefer a hosted solution. As an open-core company, we are excited to complement our offerings with this proprietary SaaS solution, meeting the diverse needs of our user base.",
+      "source_content_hash": "cfb24b01e49f4b1e9690933c9421667829ca2b6ec7c3cc01d850bd99675b635e",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "响应社区需求，我们[推出了软件即服务(SaaS)方案](https://app.eu.boxyhq.com/auth/join)，为偏好托管服务的用户提供选择。作为开源核心公司，我们很高兴能通过这项专有SaaS解决方案满足用户的多样化需求。"
+      }
+    },
+    {
+      "segment_id": "39b3772c",
+      "source_content": "As we look back at these pivotal moments, we are reminded of the collective spirit that drives open-source innovation. Each release encapsulates our commitment to delivering robust, user-friendly, and scalable solutions, thanks to the feedback and contributions from users like you.",
+      "source_content_hash": "befe89b127f95082d7d05dde5eeb3d4b650a7df6331a6bba9daa7030124ec2df",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "回顾这些关键时刻，我们始终铭记驱动开源创新的集体精神。每个版本都凝聚着我们对构建稳健、易用、可扩展解决方案的承诺，这离不开像您这样的用户反馈与贡献。"
+      }
+    },
+    {
+      "segment_id": "1acb9a05",
+      "source_content": "Join us as we delve into these highlights from 2023 and the first sparks of 2024, showcasing how BoxyHQ's Jackson continues to evolve, ensuring secure and efficient identity management for all.",
+      "source_content_hash": "13a00e69f106798aebb16030a4fc3c35c38ba3d1e113193ffd5b2c4dafa9e1a9",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "让我们共同细数2023年的亮点与2024年的新篇章，见证BoxyHQ Jackson如何持续进化，为所有人提供更安全高效的身份管理方案。"
+      }
+    },
+    {
+      "segment_id": "63622bf0",
+      "source_content": "## Notable releases during the first quarter of 2023",
+      "source_content_hash": "082a648aa184d5b3e16b29841ef3efd171968d614b557583d388d670bb0184f6",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 2023年第一季度重要版本"
+      }
+    },
+    {
+      "segment_id": "95b38f97",
+      "source_content": "### SAML Jackson 1.6.0",
+      "source_content_hash": "9cdd25162fa30248140b0bb5b53c4f90f7bd5700589d722b8ac626f2387464fb",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### SAML Jackson 1.6.0"
+      }
+    },
+    {
+      "segment_id": "0cc488ed",
+      "source_content": "- Enterprise SSO login support for Admin Portal\n- We demonstrate our commitment to privacy by adding anonymous analytics to better understand the usage of our product. At the same time, we put the controls in your hands by allowing you to turn all analytics off using `DO_NOT_TRACK` or `BOXYHQ_NO_ANALYTICS`. Even when enabled, we do not collect any information that identifies users or machines.\n- Admin Portal now supports our Audit Logs service ([Retraced](https://github.com/retracedhq/retraced))\n- Added our first enterprise feature, SAML Federation, which allows one single SAML connection to be multiplexed to a federation of SAML connections.\n- Setup Links now provides an easy way to share a unique link with your customers so they can configure their SSO and Directory Sync connections",
+      "source_content_hash": "fd43485f3deeafd8c36369f1d3b47487d52ec43926f4428870e55e296a84bda8",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- 管理门户支持企业SSO登录\n- 新增匿名分析功能以了解产品使用情况，同时通过`DO_NOT_TRACK`或`BOXYHQ_NO_ANALYTICS`参数将控制权完全交给用户（即使启用也不会收集任何用户或设备识别信息）\n- 管理门户集成审计日志服务([Retraced](https://github.com/retracedhq/retraced))\n- 推出首个企业功能SAML联邦认证，实现单SAML连接多联邦连接复用\n- 设置链接功能支持生成专属链接供客户配置SSO和目录同步连接"
+      }
+    },
+    {
+      "segment_id": "b25f21be",
+      "source_content": "### SAML Jackson 1.7.0",
+      "source_content_hash": "a6f7e79a1fb3bb2a046a4a0c73ea0fb1ea5f34ec7f8bd84680bf5a9936e3f14f",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### SAML Jackson 1.7.0"
+      }
+    },
+    {
+      "segment_id": "f2c8a42b",
+      "source_content": "- Support for multiple Directory Sync connections per tenant and product",
+      "source_content_hash": "f7487514966145a15ea7242f08d1460871700b56f03aa8ea1ad1d750455efed5",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- 支持每个租户和产品创建多个目录同步连接"
+      }
+    },
+    {
+      "segment_id": "109ace10",
+      "source_content": "### SAML Jackson 1.8.0",
+      "source_content_hash": "b34c56192331d3f6b9a2018793fcf7fdc6389690e0701d5ebe4cff305e177134",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### SAML Jackson 1.8.0"
+      }
+    },
+    {
+      "segment_id": "157151e9",
+      "source_content": "- Friendly mappings for well-known SSO providers (instead of showing the domain names)\n- Updated schema for MySQL, MariaDB, and MS-SQL to prevent `ER_TOO_LONG_KEY` error.",
+      "source_content_hash": "0d68b6849a829aedf0bcff66fba475341ac85fccaa272f24683bc34b1da7bc3a",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- 为知名SSO提供商显示友好名称（替代域名显示）\n- 更新MySQL/MariaDB/MS-SQL表结构防止`ER_TOO_LONG_KEY`错误"
+      }
+    },
+    {
+      "segment_id": "9f9e64f5",
+      "source_content": "### SAML Jackson 1.9.0",
+      "source_content_hash": "62325dff22ad8918eb2dd7d0c05a1b18d309bd792196278e227021ecfbf3f22c",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### SAML Jackson 1.9.0"
+      }
+    },
+    {
+      "segment_id": "bdfae007",
+      "source_content": "- Added fallback for OIDC discovery URL when configuring OIDC connection.\n- Added UI for our Data Privacy Vault product (private beta)",
+      "source_content_hash": "224e2a23b8efbeeee27e39bd4412ae6613be156168cde0a2dbf192a101e39373",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- OIDC连接配置时增加发现URL备用方案\n- 数据隐私保险库产品UI上线（封闭测试阶段）"
+      }
+    },
+    {
+      "segment_id": "8bddee80",
+      "source_content": "## Notable releases during the second quarter of 2023",
+      "source_content_hash": "961a1c7de899d87e210821cd4e9b803e047b974d337aaed97a6e964ead152d3b",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 2023年第二季度重要版本"
+      }
+    },
+    {
+      "segment_id": "c674e260",
+      "source_content": "### SAML Jackson 1.10.0",
+      "source_content_hash": "466c448edbaa78704d27d367015edd74143b4f2fa680e29f330a18d9acf6bf0a",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### SAML Jackson 1.10.0"
+      }
+    },
+    {
+      "segment_id": "40251870",
+      "source_content": "- Added a new feature that eases debugging of SAML configuration errors. You can access this from the SAML Tracer tab in the Admin Portal. View all errors that happen during the SAML login flow and get all the context you need to resolve the issue.\n- Support for DynamoDB as a storage engine\n- Batch operations from Azure AD Directory Sync are now fully supported\n- Webhook events for SSO and Directory Sync connection operations\n- Ability to activate/deactivate SSO and Directory Sync connections\n- New provider support for Directory Sync: Google Workspace. Google's SCIM 2.0 support is minimalistic so we instead tie in directly into their APIs to give you all the Directory Sync features",
+      "source_content_hash": "4916c03e7f8f9b97c62154e2f53bd1aa9722ce1b0012ff48875a9149c6148f28",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- 新增简化SAML配置错误调试的功能。您可通过管理门户中的SAML追踪器选项卡访问该功能，查看SAML登录流程中的所有错误，并获取解决问题所需的完整上下文。\n- 新增对DynamoDB作为存储引擎的支持\n- 现已全面支持Azure AD目录同步的批量操作\n- 新增SSO和目录同步连接操作的Webhook事件通知\n- 支持启用/禁用SSO和目录同步连接\n- 新增目录同步供应商支持：Google Workspace。由于Google的SCIM 2.0支持较为基础，我们直接对接其API以提供完整的目录同步功能"
+      }
+    },
+    {
+      "segment_id": "e50bebbf",
+      "source_content": "## Notable releases during the third quarter of 2023",
+      "source_content_hash": "94c891cc267f1ef9d84a24836e6c37060d6af6d6db4b8fa815d834929bc05c6f",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 2023年第三季度重要版本更新"
+      }
+    },
+    {
+      "segment_id": "7283cdac",
+      "source_content": "### SAML Jackson 1.11.0",
+      "source_content_hash": "2b35ca0504303b378ff16fbae81d440a9d027cb3a78484b93da86fc8faea2977",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### SAML Jackson 1.11.0"
+      }
+    },
+    {
+      "segment_id": "3df4f066",
+      "source_content": "- New APIs to fetch SSO and Directory Sync connections by product\n- [Breaking change] DELETE APIs no longer accept body on next.js (as per spec), query params are now used instead\n- Setup Links API\n- API to filter SAML traced by product",
+      "source_content_hash": "85f05007bc63bd724ce882e3d62b123252d268a721397b05d3b86813e5ea0d3b",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- 新增按产品获取SSO和目录同步连接的API\n- [重大变更] 根据规范要求，DELETE API在next.js中不再接受请求体，改为使用查询参数\n- 新增配置链接(Setup Links)API\n- 新增按产品过滤SAML追踪记录的API"
+      }
+    },
+    {
+      "segment_id": "8c6d7ee7",
+      "source_content": "### SAML Jackson 1.12.0",
+      "source_content_hash": "e8d83909513abdae7a3bd117c53854a1765c77707a365bf207414b1f262b4db8",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### SAML Jackson 1.12.0"
+      }
+    },
+    {
+      "segment_id": "645e08e3",
+      "source_content": "- SAML setup UI/UX improvements\n- Windows local build setup\n- [Open Telemetry](https://opentelemetry.io/) metrics for Directory Sync",
+      "source_content_hash": "9a88b6e3aa56685a3faa6f2df4e000a92521c3e23af86f608d7daae911788c50",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- SAML配置界面用户体验优化\n- 新增Windows本地构建支持\n- 为目录同步添加[OpenTelemetry](https://opentelemetry.io/)指标监控"
+      }
+    },
+    {
+      "segment_id": "047c2395",
+      "source_content": "## Notable releases during the final quarter of 2023",
+      "source_content_hash": "43094ddd0cf20dc5bfa5859d66c3a759148167c3d3e0e39f7226e59e37fbe5c5",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 2023年第四季度重要版本更新"
+      }
+    },
+    {
+      "segment_id": "daed5acb",
+      "source_content": "### SAML Jackson 1.13.0",
+      "source_content_hash": "82b3bd119ad247401d0fe5a310eba325361c6cb3baf72b86a8ff5a49afed8e63",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### SAML Jackson 1.13.0"
+      }
+    },
+    {
+      "segment_id": "4fe53981",
+      "source_content": "- OIDC issuer is now set correctly to the external URL and matches RFC.\n- APIs for managing SAML Federation connections",
+      "source_content_hash": "35d38d301042b0c949fbba0cb07d1e9c55b65b47df0b36886233ce54c4806205",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- OIDC颁发者(Issuer)现正确设置为外部URL并符合RFC规范\n- 新增管理SAML联邦连接的API"
+      }
+    },
+    {
+      "segment_id": "58ed925f",
+      "source_content": "### SAML Jackson 1.14.0",
+      "source_content_hash": "b9741d8d5b697ac6fc6fd6afdeff191c5e5ee573614fe2059a8e7eb8c17d6373",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### SAML Jackson 1.14.0"
+      }
+    },
+    {
+      "segment_id": "5efe9dee",
+      "source_content": "- The database schema has been updated to introduce a new column called namespace to speed up scans.\n- Directory Sync: connection update API\n- Error logging when health check fails\n- Support for multiple certificates in metadata and validation when no cert is present in the SAML response",
+      "source_content_hash": "264612bdb4e6da285a6e22b927857af9b19c2db35c93bd989a26f61a74edc9d9",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- 数据库架构更新，新增namespace列以加速扫描\n- 目录同步：新增连接更新API\n- 健康检查失败时记录错误日志\n- 支持元数据中的多证书配置及SAML响应无证书时的验证"
+      }
+    },
+    {
+      "segment_id": "1c598ecd",
+      "source_content": "### SAML Jackson 1.15.0",
+      "source_content_hash": "694cb01853f6a8a69a7d94ad9f1ea38c4c40d8c7a01632abb864c628a1e0ace5",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### SAML Jackson 1.15.0"
+      }
+    },
+    {
+      "segment_id": "887c863e",
+      "source_content": "- Batching of Directory Sync events to handle heavy traffic which can be enabled with the DSYNC_WEBHOOK_BATCH_SIZE flag.\n- Added `Strict-Transport-Security`, `X-Frame-Options` and `X-Content-Type-Options` headers.\n- Attach friendly provider names to OIDC connections as well\n- Support fallback to certificates that don't come with the signing attribute\n- Fixed setup link URL creation for embedded npm\n- Fixed SCIM implementation to pass all the Okta Runscope tests",
+      "source_content_hash": "7f01bcd6fb037eadf4dc2b0e2e423f8327f74db965731bacb3f29a7edda16a7e",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- 新增目录同步事件批处理功能（通过DSYNC_WEBHOOK_BATCH_SIZE标志启用），以应对高流量场景\n- 新增`Strict-Transport-Security`、`X-Frame-Options`和`X-Content-Type-Options`安全头\n- 为OIDC连接附加友好供应商名称\n- 支持回退到不含签名属性的证书\n- 修复嵌入式npm的配置链接URL生成问题\n- 优化SCIM实现以通过所有Okta Runscope测试"
+      }
+    },
+    {
+      "segment_id": "e33a2404",
+      "source_content": "## During the first two weeks of 2024",
+      "source_content_hash": "cb34a4575e54c03b8201c46311f369bc903dec41a1c45d64383043963416bc27",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 2024年前两周更新"
+      }
+    },
+    {
+      "segment_id": "82e90254",
+      "source_content": "Since the start of the year, we have landed a couple of great new features and have a lot more planned.",
+      "source_content_hash": "faf1dc0f2fc9eec4d52bb725572115b10ab6215046e0e548ad172fed924680d3",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "新年伊始，我们已实现多项重要功能，并有更多计划正在推进。"
+      }
+    },
+    {
+      "segment_id": "dee20070",
+      "source_content": "- Setup Link expiry time is now configurable (`SETUP_LINK_EXPIRY_DAYS` env var or by passing in an expiryDays attribute in the API call)\n- RFC9207 support for OIDC connections\n- Added close function to controller and DB interfaces, this can be used to terminate the database connection\n- Support product branding (Enterprise Edition feature)",
+      "source_content_hash": "7297767918700ccc2aa79e78917399af50bc2a6ca29b9f1ac155e5019cb7ed64",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- 配置链接过期时间现可配置（通过SETUP_LINK_EXPIRY_DAYS环境变量或API调用中的expiryDays属性）\n- 新增对OIDC连接的RFC9207规范支持\n- 在控制器和数据库接口中添加close函数，用于终止数据库连接\n- 支持产品品牌定制（企业版功能）"
+      }
+    },
+    {
+      "segment_id": "71169a2d",
+      "source_content": "## Conclusion",
+      "source_content_hash": "be031d37bb75d96ef08ca9ec5b0e83bb6f91172f60d3c31a78feae8d7dc4a0b0",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 总结"
+      }
+    },
+    {
+      "segment_id": "c1eaf30b",
+      "source_content": "As we reflect on the remarkable journey of BoxyHQ's Jackson in 2023 and early 2024, we're filled with a sense of pride and gratitude. Our journey, highlighted by groundbreaking features and continuous improvements, is a true testament to the power of collaboration and the open-source ethos. We extend our heartfelt thanks to every member of our community for their invaluable contributions, feedback, and trust in SAML Jackson.",
+      "source_content_hash": "0fba5e10785ac442eba6f8e39a499b40cc29173ade2ad6db0102126edbbf2bee",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "回顾BoxyHQ的Jackson项目在2023年至2024年初的卓越历程，我们充满自豪与感激。通过突破性功能和持续改进的旅程，充分展现了协作精神和开源理念的力量。衷心感谢社区每位成员的宝贵贡献、反馈以及对SAML Jackson的信任。"
+      }
+    },
+    {
+      "segment_id": "f0984c2a",
+      "source_content": "Looking ahead, we're excited to continue this journey with you, further innovating and enhancing our solutions to meet the ever-evolving challenges of identity management. If you find value in our projects, consider [giving us a star on GitHub](https://github.com/boxyhq/jackson) – it's a great way to show support and help more people discover our work. And if you know someone who could benefit from our tools, we'd be honoured if you spread the word.",
+      "source_content_hash": "931c3e97623d7b8827dee9ab2a9a3d2d2daafb3f1cb1db1cec7f829975e8693e",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "展望未来，我们期待继续与您同行，通过持续创新来应对身份管理领域的演进挑战。若认可我们的项目价值，欢迎在[GitHub上为我们加星](https://github.com/boxyhq/jackson)——这是表达支持并帮助更多人发现我们工作的好方式。若您认识可能受益于我们工具的人，也欢迎推荐。"
+      }
+    },
+    {
+      "segment_id": "a81544fd",
+      "source_content": "Stay tuned for more updates as we forge ahead, committed to empowering developers and organisations with the best in SSO and Directory Sync technologies.",
+      "source_content_hash": "037feed30040b202e3587d4b46e2ad1477272df43c0ce0c6d74aad5b9d66cd01",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "请持续关注更多更新，我们将继续致力于为开发者和组织提供最优秀的SSO与目录同步技术解决方案。"
+      }
+    }
+  ],
+  "target_i18n_subpath": "docusaurus-plugin-content-blog/2024-01-16-changelog-saml-jackson-2023.md",
+  "last_updated_timestamp": "2025-06-08T18:49:09.321790+00:00",
+  "schema_version": "1.0",
+  "translated_versions": {
+    "zh-CN": "20ce1e63fb9aedea29f35d695f32955ba4adc40f34c6d8df71f3fdb048782095"
+  }
+}

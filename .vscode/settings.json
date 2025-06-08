@@ -1,0 +1,11 @@
+{
+  "files.exclude": {
+    "build/**": true
+  },
+  "cSpell.words": [
+    "anothertenant",
+    "boxyhq",
+    "Unencrypted"
+  ],
+  "editor.formatOnSave": true
+}

@@ -1,0 +1,392 @@
+{
+  "source_file_path_relative_to_docusaurus_root": "blog/2024-02-20-what-is-saml-and-why-you-should-care.md",
+  "source_file_content_hash": "57193c2ed32c14fddff4366c5c958ed7f6528ff33dab97f002e05f5d7176a059",
+  "segments": [
+    {
+      "segment_id": "58cfcc64",
+      "source_content": "---\ndescription: 'What is SAML? What role does it play in enterprise single sign-on (SSO)? Learn what these technologies are and how BoxyHQ simplifies the implementation process for developers.'\nslug: what-is-saml-and-why-you-should-care\ntitle: 'What is SAML and why you should care'\ntags_disabled: [saml, boxyhq, single-sign-on, sso, open-source, developerfirst]\nimage: /images/blog/what-is-saml.png\nhide_table_of_contents: false\nauthor: Schalk Neethling\nauthor_title: Customer Success, Community, DevRel - @BoxyHQ\nauthor_url: https://github.com/schalkneethling\nauthor_image_url: /images/authors/schalk.jpg\n---",
+      "source_content_hash": "e1060f375f3fc29e6d08ba4609322b2364b1f0a627bb0632e0c5112444430c37",
+      "node_type": "yaml",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_58cfcc64"
+      }
+    },
+    {
+      "segment_id": "17011a71",
+      "source_content": "import LearnMoreCTA from \"../src/components/ctas/LearnMoreCTA\";\nimport Picture from '../src/components/Picture';\nimport SignupCTA from \"../src/components/ctas/SignupCTA\";",
+      "source_content_hash": "91ce5a66f51a395934decc974101cf529811daf812e48cfc7598e09ba6344462",
+      "node_type": "mdxjsEsm",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_17011a71"
+      }
+    },
+    {
+      "segment_id": "39b3772c",
+      "source_content": "In today's digital world, secure authentication is not just a necessity; it's a cornerstone of trust between services and their users. Navigating the complexities of SAML and implementing robust single sign-on (SSO) solutions can be daunting for many organizations. This document explores the critical role of SAML in enhancing web security, the challenges businesses face in adopting it, and introduces BoxyHQ's streamlined approach to simplifying this process, making advanced security accessible to all.",
+      "source_content_hash": "1a138538d112bdee3288ca0de70f1a122601665e98b187c6294b15902ee6dddc",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "在当今数字世界中，安全认证不仅是必需品，更是服务与用户之间信任的基石。对于许多组织而言，驾驭SAML的复杂性并实施稳健的单点登录(SSO)解决方案可能令人望而生畏。本文探讨了SAML在增强网络安全中的关键作用、企业在采用过程中面临的挑战，并介绍了BoxyHQ简化这一流程的解决方案，使先进安全技术变得触手可及。"
+      }
+    },
+    {
+      "segment_id": "bc633244",
+      "source_content": "## SAML from 30,000 feet",
+      "source_content_hash": "08e3b5bca65cff71463188ba941c8a85cfb003dc9af76c601c2e7605ade10525",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 从宏观视角看SAML"
+      }
+    },
+    {
+      "segment_id": "2df4f75f",
+      "source_content": "SAML, short for Security Assertion Markup Language, is an open standard that utilizes XML to define a framework for exchanging authentication and authorization data. SAML 2.0, its latest version, is primarily used for web browser single sign-on, allowing users to access multiple services with a single set of credentials. This functionality is especially relevant to us, as the [Web Browser SSO Profile](https://en.wikipedia.org/wiki/SAML_2.0#Web_browser_SSO_profile) is our main area of interest, enabling seamless and secure user access across different web applications.",
+      "source_content_hash": "e7a5826dc67a96d0eb8397f67970f404ac71785950ae9ed42769a5703f3e5fe5",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "SAML（安全断言标记语言）是一种开放标准，利用XML定义认证和授权数据交换框架。其最新版本SAML 2.0主要用于Web浏览器单点登录，允许用户使用同一组凭证访问多个服务。这一功能对我们尤为重要，因为[Web浏览器SSO配置文件](https://en.wikipedia.org/wiki/SAML_2.0#Web_browser_SSO_profile)正是我们关注的核心领域，它能实现跨Web应用的无缝安全访问。"
+      }
+    },
+    {
+      "segment_id": "95b38f97",
+      "source_content": "## Why SAML?",
+      "source_content_hash": "bf4d11f643f58b47f84acbff0a61d0f52ce9882b90ce60f667fae293decc3206",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 为什么选择SAML？"
+      }
+    },
+    {
+      "segment_id": "ccc88b4c",
+      "source_content": "To implement single sign-on across the same secure domain is simple and can be achieved using cookies, for example. However, as soon as one needs to implement single sign-on across multiple secure domains the process quickly becomes complex and error-prone. There is a need for single sign-on across multiple secure domains however, but attempts to solve this problem in the past led to a proliferation of bespoke implementations which were not interoperable.",
+      "source_content_hash": "127df43ad6816ead8beaab0d7403d3f288fd99afa0d06178c8fe84c72d6f0ade",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "在相同安全域内实现单点登录较为简单，例如可通过cookie实现。但当需要跨多个安全域实施单点登录时，该过程会迅速变得复杂且易出错。尽管跨域单点登录存在实际需求，但过去解决此问题的尝试导致了大量无法互操作的自定义实现方案泛滥。"
+      }
+    },
+    {
+      "segment_id": "d9172fa4",
+      "source_content": "This led to the definition and standardization of the Web Browser SSO profile to promote interoperability. In addition, SAML specifies three roles; the principal, the identity provider (IdP), and the service provider (SP). The principal is often also referred to as the subject and is commonly a human user but could also be another application, for example. An identity provider is a centralized source of truth about the principal. There are several identity providers such as Keycloak, Aerobase, Gluu, and Okta. And the service provider? Well, if you are building a SaaS application, the service provider is you!",
+      "source_content_hash": "fa675651d66796248f5a207ddd50ba1b8e0665e72b4a9fb95b2980c8b977dd7a",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "这促使了Web浏览器SSO配置文件的定义和标准化以提升互操作性。此外，SAML明确规定了三种角色：主体(principal)、身份提供商(IdP)和服务提供商(SP)。主体通常也被称为主题(subject)，一般是人类用户，但也可能是其他应用程序。身份提供商是关于主体的集中式权威数据源，常见的有Keycloak、Aerobase、Gluu和Okta等。而服务提供商？如果您正在构建SaaS应用，那么您就是服务提供商！"
+      }
+    },
+    {
+      "segment_id": "26524352",
+      "source_content": "And finally, as the name suggests, SAML is used to make assertions, a term one might be familiar with in a testing context when writing code. In the SAML context, assertions are being made about the principal and primarily assertions that allow the service provider to make an access control decision.",
+      "source_content_hash": "07f284207408ee1e54529ce428e536eb699419b76c71ed79da753841ccc6d076",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "最后，正如其名称所示，SAML用于生成断言(assertions)——这个术语在编写测试代码时可能较为熟悉。在SAML语境中，断言是针对主体作出的声明，主要是使服务提供商能够做出访问控制决策的断言。"
+      }
+    },
+    {
+      "segment_id": "73ab96a3",
+      "source_content": "Bringing it all together, SAML is a way for us to implement single sign-on across multiple secure domains, using an open, interoperable standard that defines a markup language, protocols, bindings, and profiles. We use all of this to make assertions about a principal, by querying an IdP which in turn allows the service provider to make an informed and trusted access control decision.",
+      "source_content_hash": "7df3b5f425cb40be3fce0ce50cf74e3e75c7b758b1a3ba3bef678edaca74d19d",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "综上所述，SAML是一种通过开放、可互操作的标准实现跨安全域单点登录的方法，该标准定义了标记语言、协议、绑定和配置文件。我们利用所有这些要素，通过查询身份提供商来生成关于主体的断言，从而使服务提供商能够做出明智且可信的访问控制决策。"
+      }
+    },
+    {
+      "segment_id": "a1b3d8cb",
+      "source_content": "## SAML Authentication flow",
+      "source_content_hash": "912886c2f24b10b3001de6df57c04a4954586a44fa6aea89452e808fad2ae643",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## SAML认证流程"
+      }
+    },
+    {
+      "segment_id": "517051a7",
+      "source_content": "The way SAML fits into the authentication flow is less complicated than the sum of its parts so, let’s walk through an example. Before we look at SAML specifically we need to take a step back and look at what single sign-on is.",
+      "source_content_hash": "ce23a35cc09904a8e02a096226af2de1e289aaeb77c84f96524bea4477322ae5",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "SAML在认证流程中的作用比其各个组成部分的总和更为简单，让我们通过示例来解析。在具体讨论SAML之前，我们需要先退一步理解单点登录的本质。"
+      }
+    },
+    {
+      "segment_id": "80d9e13c",
+      "source_content": "### What is Single Sign-On?",
+      "source_content_hash": "a7850e0cbff18e9d3afc51f01f1b9fc00d809a49c3dcc772a29c46fc5757c938",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 什么是单点登录？"
+      }
+    },
+    {
+      "segment_id": "33331f27",
+      "source_content": "Single sign-on is quite literally as the name suggests. It is a means to sign into multiple applications using a single set of credentials. Let’s walk through this and we will then layer SAML on top. When joining a company you typically get access to multiple applications. Now, one way a company can grant access to these applications is for you to create an account at each provider using your company email address and your chosen password. That would look something like this:",
+      "source_content_hash": "6f1aead828fe1ed60a27b9a3938f1de8d90268f9a729fc14717991fba325d1ad",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "单点登录正如其字面含义所示，是通过单一凭证登录多个应用的方法。让我们逐步解析这个概念，随后再叠加SAML层。当加入公司时，您通常会获得多个应用的访问权限。公司授予这些应用访问权限的一种方式是让您在每个提供商处使用公司邮箱和自设密码创建账户。这种情况如下图所示："
+      }
+    },
+    {
+      "segment_id": "ff6ab177",
+      "source_content": "<Picture alt=\"llustration of a person facing three separate authentication processes leading to different services highlighting the complexity without Single Sign-On.\" pictureSrc=\"/images/blog/no-single-sign-on\" height=\"613\" width=\"1229\" />",
+      "source_content_hash": "43de5b465f8208ad99cb38773cd1dd89ae1d415eb674e00805722ddc02d46c83",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_ff6ab177"
+      }
+    },
+    {
+      "segment_id": "95e9ba12",
+      "source_content": "Even if you are using a password manager, you still need to manage three separate accounts. When you leave the company, the company now also faces the problem of ensuring that your access to each of these service providers is terminated. Therefore, for security and an improved user experience, companies chose to use an identity provider.",
+      "source_content_hash": "e5693fa6ac10c39adf5c35b2922216abe2eadb3bf2a6cf10dd510dd5c1393840",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "即使使用密码管理器，您仍需管理三个独立账户。当您离职时，公司还面临确保您在每个服务提供商的访问权限被终止的问题。因此，出于安全性和用户体验改善的考虑，企业选择使用身份提供商。"
+      }
+    },
+    {
+      "segment_id": "8af76f3d",
+      "source_content": "Through this identity provider, you authenticate once (single sign-on) and then gain access to each application using the same credentials. You never authenticate with the service provider, but instead authenticate once at the identity provider and the identity provider forwards you to the service provider. When you leave the company, your access is revoked by de-provisioning your account at the identity provider. This would look something like this:",
+      "source_content_hash": "6be318d5e9881cd700793a2330b42d5b31130c730c55bc3f90009c32fce39542",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "通过这个身份提供商，您只需认证一次（单点登录），随后即可使用同一组凭证访问每个应用程序。您无需在服务提供商处进行认证，而是在身份提供商处完成一次认证后，由身份提供商将您重定向至服务提供商。当您离职时，公司只需在身份提供商处撤销您的账户即可终止所有访问权限。整个流程大致如下："
+      }
+    },
+    {
+      "segment_id": "2f83a0f4",
+      "source_content": "<Picture alt=\"Graphic showing streamlined authentication with Single Sign-On where a figure is connected to a single IdP, which leads to different services symbolizing simplified access to multiple services.\" pictureSrc=\"/images/blog/single-sign-on\" height=\"613\" width=\"1229\" />",
+      "source_content_hash": "7b3cb48dcae7eded88543d32463e6fcbe46398195ae6b250a3c907e24c923b0c",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_2f83a0f4"
+      }
+    },
+    {
+      "segment_id": "a44047a5",
+      "source_content": "And that, in a nutshell, is what single sign-on is. I am sure you can see why this is a leap forward for both companies and users.",
+      "source_content_hash": "2c36f4ede153b4e87201ce83c57af2a6a26b9336bd872536a0b34dbd4fa80293",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "简而言之，这就是单点登录的核心机制。相信您已经理解为何这对企业和用户而言都是重大进步。"
+      }
+    },
+    {
+      "segment_id": "b72935b5",
+      "source_content": "<LearnMoreCTA label=\"Learn more about Enterprise SSO\" url=\"/enterprise-sso\" />",
+      "source_content_hash": "55bb334f0d3f55b1a253b557cf728971917ccbb05d34a726c3e84595eddda9e0",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_b72935b5"
+      }
+    },
+    {
+      "segment_id": "60410af6",
+      "source_content": "### The role of SAML",
+      "source_content_hash": "0685746c3125ce21c60ab7207f2ef30eb56ce7b433686ef28d04eb88a91b37f7",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### SAML的作用"
+      }
+    },
+    {
+      "segment_id": "b9aaa519",
+      "source_content": "Where does SAML fit into all of this then? SAML is what makes the authentication and communication between the identity provider and the service providers possible. It is what allows the service provider to assert that the principal (the user) is who they say they are allowing the service provider to make an access control decision.",
+      "source_content_hash": "dddc2753144f22c8321f0d038fd8da788bc7c67a21937a815ea00115aeb22ea4",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "那么SAML在其中扮演什么角色？SAML是实现身份提供商与服务提供商之间认证与通信的桥梁。它使得服务提供商能够确认主体（用户）身份的真实性，从而做出访问控制决策。"
+      }
+    },
+    {
+      "segment_id": "e536ea0d",
+      "source_content": "There are two ways that a SAML authentication flow is triggered. The one most often used is known as an IdP-initiated flow. As the name suggests, with this flow the user starts at the identity provider and is then directed to the service provider along with a SAML response. You have most likely seen this scenario at your workplace where you log into a dashboard (sso.mycompany.com) and are presented with all of the service providers (applications) you have access to. Clicking on any of these will take you to the service provider without being prompted to sign in again.",
+      "source_content_hash": "9176b71bae4e967e7a2f441432f282be9dbe04b8076e0f2f561389b771bcaddd",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "SAML认证流程有两种触发方式。最常用的是IdP发起的流程（IdP-initiated flow），即用户从身份提供商处开始认证，随后携带SAML响应被定向至服务提供商。您可能在工作中见过这种场景：登录公司仪表盘(sso.mycompany.com)后，所有可访问的应用程序会集中展示，点击任意应用都无需重复登录。"
+      }
+    },
+    {
+      "segment_id": "40158b4b",
+      "source_content": "This is because the service provider will have what is known as an assertion consumer service (ACS) which understands and can validate the SAML response that was sent from the IdP. The IdP therefore needs to know how to produce a SAML response and the service provider needs to know how to read, parse, and validate said SAML response. At this stage, you will have noticed that there has been no SAML request from either the IdP or the service provider.",
+      "source_content_hash": "907fcb9502b1b4fe8107415876bb5bfe3b5fa9cd7740b93c73d91ac5557a52c3",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "这是因为服务提供商会配置断言消费服务(ACS)，用于解析和验证来自IdP的SAML响应。此时IdP需要生成SAML响应，而服务提供商需要具备解析验证能力。值得注意的是，此流程中IdP和服务提供商都未发起SAML请求。"
+      }
+    },
+    {
+      "segment_id": "6ea4c715",
+      "source_content": "A SAML request comes into play with another flow known as the service provider (SP) initiated flow. In this flow, the user starts at the service provider. The service provider will then produce a SAML request and send this along with the user to the configured identity provider endpoint. At this point, the IdP will authenticate the user and return the user to the service provider along with the SAML response as before. While the supported flows are often determined by the service provider, it is common to support both. This means that both the IdP and the service provider need to know how to produce a request and handle a response.",
+      "source_content_hash": "7a26695e6ab661df6f9168d8278d09e1244908a22f3834e7682c6c12af9150b4",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "另一种SP发起的流程(SP-initiated flow)则会用到SAML请求。用户从服务提供商处开始访问，服务提供商生成SAML请求并将用户重定向至预配置的IdP端点。IdP完成用户认证后，会像之前一样携带SAML响应将用户返回服务提供商。虽然支持的流程通常由服务提供商决定，但两者兼存的情况很常见，这意味着IdP和服务提供商都需要具备请求生成与响应处理能力。"
+      }
+    },
+    {
+      "segment_id": "c315c636",
+      "source_content": "## The thing about SAML",
+      "source_content_hash": "c6c895489020b24fc35fb6aab6fa587d2ec6fff5a036f57c6a31100a99f9ed60",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 关于SAML的现状"
+      }
+    },
+    {
+      "segment_id": "531437ca",
+      "source_content": "The technical details of all of this will be detailed in a separate article, but suffice it to say that there are several moving parts. If you are a service provider who will sell your software-as-a-service (SaaS) to enterprise or governmental institutions, there is a high likelihood that you will need to support SAML for single sign-on.",
+      "source_content_hash": "40ff975a6060bed6a94b3cf639292bc71c4efa89ed33d4cba8b1a499bf1a0f6b",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "具体技术细节将另文详述，但必须指出整个体系包含多个复杂组件。如果您是面向企业或政府机构提供SaaS服务的厂商，极有可能需要支持SAML单点登录。"
+      }
+    },
+    {
+      "segment_id": "bd92edfc",
+      "source_content": "### Why am I calling it out in this way?",
+      "source_content_hash": "577698d062d62940c5b3d5176d9a57506ffd55f76ac59e001a7d4e5f709f1735",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 为何特别强调这点？"
+      }
+    },
+    {
+      "segment_id": "7f71ff2a",
+      "source_content": "Well, because there is something I have not yet mentioned about SAML. SAML is an older standard (2.0 was released in 2005) and is incrementally being replaced by modern standards such as WebAuthn, OAuth2, and OpenID Connect which is built on top of OAuth2.",
+      "source_content_hash": "b93b578faf94a39003a36464213864980c16c7b97dcd45196656e067f764ce71",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "因为SAML有个关键特性尚未提及：作为较旧的标准（2.0版发布于2005年），它正逐步被WebAuthn、OAuth2及基于OAuth2的OpenID Connect等现代标准取代。"
+      }
+    },
+    {
+      "segment_id": "147e8550",
+      "source_content": "It is therefore common for modern tools, frameworks, and companies to use these newer standards over SAML. However, as with many evolutions in technology, switching takes time, costs money and resources, and carries risks. While there are no hard numbers, especially in industries such as healthcare, finance, and governmental institutions, SAML is still the predominant solution and will be for some time to come.",
+      "source_content_hash": "ec7a7c0b324fbf02c3e89b6fe78d27a77accb9d03988734e5524f6f6e723457d",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "因此现代工具、框架和企业更倾向采用新标准。但如同所有技术演进，迁移过程需要时间成本且伴随风险。虽然没有精确统计数据，但在医疗、金融和政府机构等领域，SAML仍是主流解决方案并将持续存在。"
+      }
+    },
+    {
+      "segment_id": "883231d4",
+      "source_content": "While calling out those industries, they are by no means the only industries that still rely on SAML. Even in the tech space, companies such as Microsoft still have systems and processes that are SAML-based. It is therefore in your best interest to support SAML to not miss out on a potential contract opportunity.",
+      "source_content_hash": "fa4108ff5d79fc6eee96d1ea5d455c2b2bb707a0aa3e2ac14427ea6b40978532",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "需要说明的是，这些行业绝非仅存的SAML用户。即便在科技领域，微软等企业仍在使用基于SAML的系统和流程。因此支持SAML对避免错失商业机会至关重要。"
+      }
+    },
+    {
+      "segment_id": "6cc549f2",
+      "source_content": "So what can you do about it? One option is to implement support today or just in time as the need arises. Unless this is your core business, doing so can place significant strain on your available resources now and in the future as the SAML implementation, like all other areas of your product, will need to be maintained and edge cases handled as they arise. Even though SAML is an open standard that has been around for over 20 years, there are nuances between implementations.",
+      "source_content_hash": "e6727ff8ba47945dd98b3bbfa5268a4fe7095e5c6c2c4a0da4f490e01d7d6712",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "那么该如何应对这一挑战？一种方案是立即实施支持，或在需求出现时及时响应。除非这是您的核心业务，否则这样做会给现有及未来的资源带来巨大压力——因为与产品其他模块一样，SAML实现需要持续维护，并处理随时可能出现的边界情况。尽管SAML作为开放标准已存在20余年，但不同实现之间仍存在细微差异。"
+      }
+    },
+    {
+      "segment_id": "98355e36",
+      "source_content": "## How does BoxyHQ solve this problem?",
+      "source_content_hash": "81c7b284f43c63e71b9de1e9cd08c54bd57bd4c2c040ad29174e2c14ce44c5a8",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## BoxyHQ如何解决这个问题？"
+      }
+    },
+    {
+      "segment_id": "7736989b",
+      "source_content": "Instead of spending valuable brain space, resources, and money trying to solve all of this, you can let BoxyHQ be your proxy between the SAML-based IdP and yourself. This means that your application only needs to use and understand OAuth2 or OpenID Connect. BoxyHQ’s SAML Jackson will take care of translating between these protocols and SAML in addition to dealing with any nuances between implementations and identity providers.",
+      "source_content_hash": "cbe1992a7255f0d08678953d3e16e9c780b2a7ee5bf979f411aec2e6d3526f6f",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "与其耗费宝贵的脑力、资源和资金自行解决所有问题，不如让BoxyHQ充当您与基于SAML的身份提供商之间的代理桥梁。这意味着您的应用程序只需兼容OAuth2或OpenID Connect协议。BoxyHQ的SAML Jackson组件将负责这些协议与SAML之间的转换，同时处理不同实现和身份提供商之间的兼容性问题。"
+      }
+    },
+    {
+      "segment_id": "41b1e179",
+      "source_content": "<Picture alt=\"An image depicting a diagram illustrating single sign-on integration using BoxyHQ, with multiple Identity Providers (IdPs) connected through a single API for simplified authentication.\" pictureSrc=\"/images/blog/with-boxyhq\" height=\"613\" width=\"1229\" />",
+      "source_content_hash": "c5f2f8a03dd8a2bf3797cf2d740841b3e016119feb053c79370e1aaf66cbf7cb",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_41b1e179"
+      }
+    },
+    {
+      "segment_id": "a1fa5396",
+      "source_content": "With BoxyHQ sitting in between you and the identity providers as a proxy service provider, you can build your application and not be concerned about SAML or how the flow is being initiated. In addition, you get access to an administration portal where you can configure your products and connections including setup links that allow you to create a shareable link allowing you to create an SSO connection without exposing any sensitive information.",
+      "source_content_hash": "9b284f14f3f4cc8636791d5b90c9d002009e004ca604d19785c1782bae6d7344",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "通过BoxyHQ作为代理服务提供商居中协调，您可以在开发应用时完全无需考虑SAML协议或认证流程的发起方式。此外，您还将获得一个管理门户，用于配置产品与连接关系——包括可生成共享链接的设置功能，使您能在不暴露敏感信息的前提下快速建立SSO连接。"
+      }
+    },
+    {
+      "segment_id": "ec619944",
+      "source_content": "Try our SaaS product offering today for free, and when you are ready to commit, you can stay as a SaaS customer and let us take care of the infrastructure in addition to SAML. Because of our open-source nature, you can also choose to self-host and later enable additional enterprise features and premium support for your self-hosted instance. Details on our products can be found on our pricing page, or get in touch today and open new doors for future growth.",
+      "source_content_hash": "952940d291b9f885c94ec59b08ed886125b9d8b00a19a26802f2290c007fa07a",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "立即免费试用我们的SaaS产品，当您准备正式使用时，既可继续作为SaaS客户由我们托管基础设施及处理SAML事务，也可基于我们的开源特性选择自主部署方案，后续还能为自托管实例启用更多企业级功能和高级支持。产品详情请访问定价页面，或立即联系我们，为未来增长开启新机遇。"
+      }
+    },
+    {
+      "segment_id": "46cf9aca",
+      "source_content": "<SignupCTA campaign=\"what-is-saml\" />",
+      "source_content_hash": "c0229ed0c1945c9149c05bd53bfa8f9254a1cfd4a583fda75d75f941fce8ac34",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_46cf9aca"
+      }
+    }
+  ],
+  "target_i18n_subpath": "docusaurus-plugin-content-blog/2024-02-20-what-is-saml-and-why-you-should-care.md",
+  "last_updated_timestamp": "2025-06-08T18:49:09.301917+00:00",
+  "schema_version": "1.0",
+  "translated_versions": {
+    "zh-CN": "57193c2ed32c14fddff4366c5c958ed7f6528ff33dab97f002e05f5d7176a059"
+  }
+}

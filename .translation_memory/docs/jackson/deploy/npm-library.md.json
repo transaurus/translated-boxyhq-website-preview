@@ -1,0 +1,512 @@
+{
+  "source_file_path_relative_to_docusaurus_root": "docs/jackson/deploy/npm-library.md",
+  "source_file_content_hash": "0446557aec126716d69b764fb58a14f5fddb32fad188d6e853fa3c6611c8379c",
+  "segments": [
+    {
+      "segment_id": "76e4a56a",
+      "source_content": "# NPM Library",
+      "source_content_hash": "2e09bf6b43e2022841c832155c9dff576f67f95cc5f820a4b7e67b8c7e5a0e41",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "# NPM 库"
+      }
+    },
+    {
+      "segment_id": "a37198cd",
+      "source_content": "import Tabs from '@theme/Tabs';\nimport TabItem from '@theme/TabItem';",
+      "source_content_hash": "86702643a5c3bdf74257ff6062535897129ed9144c4f5b70edfe338fef3e5c73",
+      "node_type": "mdxjsEsm",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_a37198cd"
+      }
+    },
+    {
+      "segment_id": "bb42506b",
+      "source_content": "SAML Jackson is available as an [npm package](https://www.npmjs.com/package/@boxyhq/saml-jackson) that can be integrated into any **Node.js** based web application framework.",
+      "source_content_hash": "cd165de060a2b47908f13de87b1629201d1bc63496a62f27564bf76e79055364",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "SAML Jackson 提供 [npm 包](https://www.npmjs.com/package/@boxyhq/saml-jackson)形式，可集成至任何基于 **Node.js** 的 Web 应用框架。"
+      }
+    },
+    {
+      "segment_id": "3fbbcc07",
+      "source_content": "Install the SDK using the command below.",
+      "source_content_hash": "14e48eb748ec1d36bb6309d0ae3ba3fd3112c5258515d0aba2dcc32d96dcf3db",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "使用以下命令安装 SDK："
+      }
+    },
+    {
+      "segment_id": "71b63116",
+      "source_content": "```bash\nnpm install @boxyhq/saml-jackson\n```",
+      "source_content_hash": "9fdbc1a826a9325911607bfcb9c2f03c2e16f75fdb2893412b31bf610d141448",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_71b63116"
+      }
+    },
+    {
+      "segment_id": "2a852f16",
+      "source_content": ":::info\n\nESM libraries and dynamic imports\n\nHandling `jose` and `openid-client` in Bundled Server-Side Code:\n\nOur npm library dynamically imports the `jose` and `openid-client` packages because they have transitioned to ESM (ECMAScript Modules).\n\nIf you are bundling your server-side code (e.g., in Next.js), these dependencies may be excluded during the build process. To ensure they are included, follow these steps:\n\n- Add dummy imports for jose and openid-client in your code.\n\n- Configure `outputFileTracingIncludes` in your Next.js settings to explicitly include these dependencies.\n\nSimilar adjustments may be required for other frameworks that bundle server-side code.\n\n:::",
+      "source_content_hash": "c2cb9bfe30754a7f1acdbcbcdc491ebb62686f522f371be9a105bc5a40526a89",
+      "node_type": "containerDirective",
+      "translatable": true,
+      "translations": {
+        "zh-CN": ":::info\n\nESM 库与动态导入\n\n在捆绑服务端代码中处理 `jose` 和 `openid-client`：\n\n我们的 npm 库会动态导入 `jose` 和 `openid-client` 包，因为它们已转为 ESM（ECMAScript 模块）格式。\n\n若您正在捆绑服务端代码（例如 Next.js 项目），这些依赖可能在构建过程中被排除。请按以下步骤确保包含它们：\n\n- 在代码中添加对 jose 和 openid-client 的虚拟导入\n\n- 在 Next.js 配置中设置 `outputFileTracingIncludes` 以显式包含这些依赖\n\n其他捆绑服务端代码的框架也需要类似调整。\n\n:::"
+      }
+    },
+    {
+      "segment_id": "2b88bb9d",
+      "source_content": "---",
+      "source_content_hash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "node_type": "thematicBreak",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "---"
+      }
+    },
+    {
+      "segment_id": "a1b3d8cb",
+      "source_content": "## Configuration Options",
+      "source_content_hash": "57d292b766061d61ca84b157c3cbe12847c18fc1c85c920fb05f17bf53705132",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 配置选项"
+      }
+    },
+    {
+      "segment_id": "517051a7",
+      "source_content": "Please note that the initialization of `@boxyhq/saml-jackson` is async, you cannot run it at the top level.",
+      "source_content_hash": "f6da3d708f16337bb1cdb31ba202133703b8b9af9220a6bed20b1622cb9ada1b",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "请注意 `@boxyhq/saml-jackson` 的初始化是异步操作，不能在顶层直接调用。"
+      }
+    },
+    {
+      "segment_id": "4dd51304",
+      "source_content": "```js\nimport jackson, {\n  type IConnectionAPIController,\n  type IOAuthController,\n} from '@boxyhq/saml-jackson';\n\nlet oauth: IOAuthController;\nlet connection: IConnectionAPIController;\n\n(async function init() {\n  const jackson = await require('@boxyhq/saml-jackson').controllers({\n    externalUrl: 'https://your-app.com',\n    samlAudience: 'https://saml.boxyhq.com',\n    oidcPath: '/api/oauth/oidc',\n    samlPath: '/api/oauth/saml',\n    db: {\n      engine: 'sql',\n      type: 'postgres',\n      url: 'postgres://postgres:postgres@localhost:5432/postgres',\n    },\n  });\n\n  oauth = jackson.oauthController;\n  connection = jackson.connectionAPIController;\n})();\n```",
+      "source_content_hash": "25ed7924ae5320f9bd2086c9e936ef428d9771baf3467e86a78823faa89b551b",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_4dd51304"
+      }
+    },
+    {
+      "segment_id": "42c293cc",
+      "source_content": "---",
+      "source_content_hash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "node_type": "thematicBreak",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "---"
+      }
+    },
+    {
+      "segment_id": "a5a4323e",
+      "source_content": "## Single Sign-On Connections",
+      "source_content_hash": "cc54bbabc5a0d4fda2c574b471321a1900b672eb802f3f975c3019b0858602f4",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 单点登录连接"
+      }
+    },
+    {
+      "segment_id": "3ef18741",
+      "source_content": "### Create SAML Connection",
+      "source_content_hash": "5bb3ed8c5788092b5c8cb4108a31e64fc617efad36a14cde280711847595639d",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 创建 SAML 连接"
+      }
+    },
+    {
+      "segment_id": "e7772088",
+      "source_content": "Create a new SAML Single Sign-On connection.",
+      "source_content_hash": "776f46859c879f57082fb8776afd5bd750645e42e5ad8382fc9a2532dbcf82f8",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "创建新的 SAML 单点登录连接。"
+      }
+    },
+    {
+      "segment_id": "32db7046",
+      "source_content": "<Tabs>\n<TabItem value=\"01\" label=\"Request\" default>\n\n```js\nawait connection.createSAMLConnection({\n  tenant: 'boxyhq',\n  product: 'your-app',\n  rawMetadata: '<raw-saml-metadata>', // Visit https://mocksaml.com to download Metadata\n  redirectUrl: ['https://your-app.com/*'],\n  defaultRedirectUrl: 'https://your-app.com/sso/callback',\n});\n```\n\n</TabItem>\n\n<TabItem value=\"02\" label=\"Response\">\n\n```json\n{\n  \"defaultRedirectUrl\": \"https://your-app.com/sso/callback\",\n  \"redirectUrl\": [\"https://your-app.com/*\"],\n  \"tenant\": \"boxyhq\",\n  \"product\": \"your-app\",\n  \"clientID\": \"f7c909a5c72a5535847acf32558b2429a5172dd6\",\n  \"clientSecret\": \"cc6ba07bc42c2f449c9b0a3cc41c256dea08f705e1b44fdc\",\n  \"forceAuthn\": false,\n  \"idpMetadata\": {\n    \"sso\": {\n      \"postUrl\": \"https://mocksaml.com/api/saml/sso\",\n      \"redirectUrl\": \"https://mocksaml.com/api/saml/sso\"\n    },\n    \"slo\": {},\n    \"entityID\": \"https://saml.example.com/entityid\",\n    \"thumbprint\": \"d797f3829882233d3f01e49643f6a1195f242c94\",\n    \"validTo\": \"Jul  1 21:46:38 3021 GMT\",\n    \"loginType\": \"idp\",\n    \"provider\": \"saml.example.com\"\n  },\n  \"certs\": {\n    \"publicKey\": \"-----BEGIN CERTIFICATE----- ... -----END CERTIFICATE-----\\r\\n\",\n    \"privateKey\": \"-----BEGIN RSA PRIVATE KEY----- ... -----END RSA PRIVATE KEY-----\\r\\n\"\n  }\n}\n```\n\n</TabItem>\n</Tabs>",
+      "source_content_hash": "1d3b0001f4d5b722fc2114f97b1395c3ff953953f8c0ca7345cb9b72c9ad8afa",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_32db7046"
+      }
+    },
+    {
+      "segment_id": "c7fa1e8d",
+      "source_content": "### Update SAML Connection",
+      "source_content_hash": "d594fea39cbe9ae00a1c1f7985584289aa3a101b8a668148412fbe9dc7c0b87f",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 更新 SAML 连接"
+      }
+    },
+    {
+      "segment_id": "a6c928a1",
+      "source_content": "Update a SAML Single Sign-On connection.",
+      "source_content_hash": "4d2c4b7ef4e8248564ecfd82a079c2095807c8d52796827d985445340d9e01d0",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "更新现有 SAML 单点登录连接。"
+      }
+    },
+    {
+      "segment_id": "3917a88d",
+      "source_content": "```js\nawait connection.updateSAMLConnection({\n  tenant: 'boxyhq',\n  product: 'your-app',\n  rawMetadata: '<raw-saml-metadata>',\n  redirectUrl: ['https://your-app.com/*'],\n  defaultRedirectUrl: 'https://your-app.com/sso/callback-updated',\n  clientID: '<clientID of the SAML SSO Connection>',\n  clientSecret: '<clientSecret of the SAML SSO Connection>',\n});\n```",
+      "source_content_hash": "e826413855df544054bd44d4e4819ea649bbd71e079cb60a6b9042bcc2118088",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_3917a88d"
+      }
+    },
+    {
+      "segment_id": "a461a67b",
+      "source_content": "### Create OIDC Connection",
+      "source_content_hash": "7279ec343aaa11de82ebea1b5e291fc1483556d739652695f376d9040602a248",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 创建 OIDC 连接"
+      }
+    },
+    {
+      "segment_id": "e77cf7c6",
+      "source_content": "Create a new OIDC Single Sign-On connection.",
+      "source_content_hash": "9d36dbb987fb75688d14a315f165bef18d418044636e214e0cdc7674ccc35b23",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "创建新的 OIDC 单点登录连接。"
+      }
+    },
+    {
+      "segment_id": "82025b2f",
+      "source_content": "<Tabs>\n<TabItem value=\"01\" label=\"Request\" default>\n\n```js\nawait connection.createOIDCConnection({\n  tenant: 'boxyhq',\n  product: 'your-app',\n  redirectUrl: ['https://your-app.com/*'],\n  defaultRedirectUrl: 'https://your-app.com/sso/callback',\n  oidcDiscoveryUrl:\n    'https://accounts.google.com/.well-known/openid-configuration',\n  oidcClientId: '<OpenID Client ID>',\n  oidcClientSecret: '<OpenID Client Secret>',\n});\n```\n\n</TabItem>\n\n<TabItem value=\"02\" label=\"Response\">\n\n```json\n{\n  \"defaultRedirectUrl\": \"https://your-app.com/sso/callback\",\n  \"redirectUrl\": [\"https://your-app.com/*\"],\n  \"tenant\": \"boxyhq\",\n  \"product\": \"your-app\",\n  \"clientID\": \"749f95c4bd02b4adb6c0633249e70d5ad45b75e2\",\n  \"clientSecret\": \"2d730ac71c74e7d49dccf362c9a61005b6246cc65d6d0fa4\",\n  \"oidcProvider\": {\n    \"discoveryUrl\": \"https://accounts.google.com/.well-known/openid-configuration\",\n    \"clientId\": \"<OpenID Client ID>\",\n    \"clientSecret\": \"<OpenID Client Secret>\",\n    \"provider\": \"accounts.google.com\"\n  }\n}\n```\n\n</TabItem>\n</Tabs>",
+      "source_content_hash": "94cac60eccee32483b518b0c680e895245373d3da82889fdec59d107fdd6eb7d",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_82025b2f"
+      }
+    },
+    {
+      "segment_id": "2b5df263",
+      "source_content": "### Update OIDC Connection",
+      "source_content_hash": "7cead2a583f48d064504ab7de57f9f17659d4f251438c184ee525cfed6d4403c",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 更新 OIDC 连接"
+      }
+    },
+    {
+      "segment_id": "e29bd639",
+      "source_content": "Update an OIDC Single Sign-On connection.",
+      "source_content_hash": "e7ec8ce5304dad9578c480470113d6d824958f2f9311cb61658d996d5252cced",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "更新现有 OIDC 单点登录连接。"
+      }
+    },
+    {
+      "segment_id": "44ecd2e3",
+      "source_content": "```js\nawait connection.updateOIDCConnection({\n  tenant: 'boxyhq',\n  product: 'your-app',\n  redirectUrl: ['https://your-app.com/*'],\n  defaultRedirectUrl: 'https://your-app.com/sso/callback',\n  oidcDiscoveryUrl:\n    'https://accounts.google.com/.well-known/openid-configuration',\n  oidcClientId: '<OpenID Client ID>',\n  oidcClientSecret: '<OpenID Client Secret>',\n  clientID: '<clientID of the OIDC SSO Connection>',\n  clientSecret: '<clientSecret of the OIDC SSO Connection>',\n});\n```",
+      "source_content_hash": "46aa3752191e1a6e5baef73aa7392aa76a858597ae1b697d24f59ae7f3bffc55",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_44ecd2e3"
+      }
+    },
+    {
+      "segment_id": "8159e12a",
+      "source_content": "### Get SAML/OIDC Connections",
+      "source_content_hash": "74977e26d9e7174c1552b9f2ad9409c65bd9b33d64d6a6793673611dc2b8a2b2",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 获取 SAML/OIDC 连接"
+      }
+    },
+    {
+      "segment_id": "6e5d54a8",
+      "source_content": "Get the details of an existing SAML or OIDC Single Sign-On connection.",
+      "source_content_hash": "fe50ecab8a7a2c0a9d690e99030387c4db2cc86e7da9a497022d2cb5767b4ccc",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "获取现有 SAML 或 OIDC 单点登录连接的详细信息。"
+      }
+    },
+    {
+      "segment_id": "d7cf3ad8",
+      "source_content": "<Tabs>\n<TabItem value=\"01\" label=\"Request\" default>\n\n```js\n// Using tenant and product\nawait connection.getConnections({\n  tenant: 'boxyhq',\n  product: 'your-app',\n});\n\n// Using the client ID\nawait connection.getConnections({\n  clientID: '<clientID of the SSO Connection to be retrieved>.',\n});\n```\n\n</TabItem>\n<TabItem value=\"02\" label=\"Response\">\n\n```json\n[\n  {\n    \"defaultRedirectUrl\": \"https://your-app.com/sso/callback\",\n    \"redirectUrl\": [\"https://your-app.com/*\"],\n    \"tenant\": \"boxyhq\",\n    \"product\": \"your-app\",\n    \"clientID\": \"...\",\n    \"clientSecret\": \"...\",\n    \"forceAuthn\": false,\n    \"idpMetadata\": {\n      \"sso\": {\n        \"postUrl\": \"https://mocksaml.com/api/saml/sso\",\n        \"redirectUrl\": \"https://mocksaml.com/api/saml/sso\"\n      },\n      \"slo\": {},\n      \"entityID\": \"https://saml.example.com/entityid\",\n      \"thumbprint\": \"d797f3829882233d3f01e49643f6a1195f242c94\",\n      \"validTo\": \"Jul  1 21:46:38 3021 GMT\",\n      \"loginType\": \"idp\",\n      \"provider\": \"saml.example.com\"\n    },\n    \"certs\": {\n      \"publicKey\": \"-----BEGIN CERTIFICATE----- ... -----END CERTIFICATE-----\\r\\n\",\n      \"privateKey\": \"-----BEGIN RSA PRIVATE KEY----- ... -----END RSA PRIVATE KEY-----\\r\\n\"\n    }\n  }\n]\n```\n\n</TabItem>\n</Tabs>",
+      "source_content_hash": "fd4270f40260d05399e35507e6381c1db990e0225db20002f540af9f1d520fa7",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_d7cf3ad8"
+      }
+    },
+    {
+      "segment_id": "68f08256",
+      "source_content": "### Delete SAML/OIDC Connection",
+      "source_content_hash": "53a10ccbcc285a90c5e83e01a9df3da112bd6cf5a9b00f04f5d5207b9fe176fe",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 删除 SAML/OIDC 连接"
+      }
+    },
+    {
+      "segment_id": "5d3138c7",
+      "source_content": "Update a SAML or OIDC Single Sign-On connection.",
+      "source_content_hash": "b5a3c122253ce164576f9484ab0356080b463d75e9976a56ce540ba765d9637a",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "删除现有 SAML 或 OIDC 单点登录连接。"
+      }
+    },
+    {
+      "segment_id": "7b9b1777",
+      "source_content": "```js\n// Using tenant and product\nawait connection.deleteConnections({\n  tenant: 'boxyhq',\n  product: 'your-app',\n});\n\n// Using client ID and client secret\nawait connection.deleteConnections({\n  clientID: '<clientID of the SSO Connection>',\n  clientSecret: '<clientSecret of the SSO Connection>',\n});\n```",
+      "source_content_hash": "25e6210ee7c8b12fbfb1ed9d266313de69ee10fafea97e073c9cd0aa094b3a19",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_7b9b1777"
+      }
+    },
+    {
+      "segment_id": "8d0188f6",
+      "source_content": "---",
+      "source_content_hash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "node_type": "thematicBreak",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "---"
+      }
+    },
+    {
+      "segment_id": "d59d3f3c",
+      "source_content": "## Single Sign-On Authentication",
+      "source_content_hash": "6fbf09dbe6c79bfd568cf9cf2d31ea7a14448b6a23c94a2554cc007f7ef6b8fd",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 单点登录认证"
+      }
+    },
+    {
+      "segment_id": "92505e51",
+      "source_content": "### Handle OAuth 2.0 (or OIDC) Authorization request",
+      "source_content_hash": "bb12c84ad98f82e45f9a0464c2d696eb7292a203a0e640a93dbf2a6f03705caa",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 处理 OAuth 2.0（或 OIDC）授权请求"
+      }
+    },
+    {
+      "segment_id": "2f8456b2",
+      "source_content": "To initiate the flow, the application must trigger an OAuth 2.0 (or OIDC) redirect to the authorization endpoint of your app. You'll use the `authorize` method within the authorization handler.",
+      "source_content_hash": "5d39e4377926be96c697d37bab5142b404efbf2c650083cae6aef5f2b350f1ad",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "要启动流程，应用必须触发 OAuth 2.0（或 OIDC）重定向至您应用的授权端点。您需要在授权处理器中使用 `authorize` 方法。"
+      }
+    },
+    {
+      "segment_id": "1d39fdbf",
+      "source_content": "`authorize` will resolve the SSO URL (`redirect_url`) based on the connection configured for the tenant/product. The app needs to redirect the user to this URL. Keep in mind that the SSO URL structure is different based on the type of SSO Connection. For a SAML Connection, this will contain the `SAMLRequest` whereas for an OIDC Connection the SSO URL will be the Authorization endpoint with the OIDC request params (scope, response_type, etc.) attached.",
+      "source_content_hash": "f536b01e32a45542f453571d5503b65944d7a69223919ef9e0b9491767a95ef4",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "`authorize` 方法会根据租户/产品配置的连接解析 SSO URL（`redirect_url`）。应用需将用户重定向至该 URL。请注意：SSO URL 结构因连接类型而异——SAML 连接会包含 `SAMLRequest`，而 OIDC 连接的 SSO URL 将是附带 OIDC 请求参数（scope、response_type 等）的授权端点。"
+      }
+    },
+    {
+      "segment_id": "f7d07d6c",
+      "source_content": "<Tabs>\n<TabItem value=\"01\" label=\"Request\" default>\n\n```ts\nawait oauth.authorize({\n  tenant: 'boxyhq',\n  product: 'your-app',\n  redirect_uri:\n    '<app redirect URI to which Jackson sents back the authorization code after authentication>',\n  state:\n    '<opaque value from the app which will be returned back from Jackson, this is need to prevent CSRF attacks>',\n  response_type: 'code',\n  code_challenge:\n    '<transformed value of code_verifier used to prevent interception of authorization_code in PKCE flow>',\n  code_challenge_method:\n    '<transformation method applied on code_verifier to generate code_challenge>',\n  scope:\n    '<can contain space separated values such as openid or even encoded tenant/product>',\n  nonce:\n    '<string value used to associate a client session with an ID Token in openid flow, and to mitigate replay attacks>',\n  idp_hint:\n    '<this will contain the clientID of the SSO connection that the user selects in the case of multiple ones configured for a tenant/product>',\n  prompt: '<pass \"login\" to force authentication at the SAML IdP>',\n});\n```\n\n</TabItem>\n\n<TabItem value=\"02\" label=\"Response\">\n\n```json\n{\n  \"redirect_url\": \"https://mocksaml.com/api/saml/sso?RelayState=boxyhq_jackson_...&SAMLRequest=nVbZkqs4En33V1T4...\",\n  \"authorize_form\": \"\"\n}\n```\n\n</TabItem>\n</Tabs>",
+      "source_content_hash": "fa98a2112c19989d2d4b51a5b331a12fac2011c72affc839b7155993cae58a4c",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_f7d07d6c"
+      }
+    },
+    {
+      "segment_id": "73b08a54",
+      "source_content": "### Handle IdP Response",
+      "source_content_hash": "29bf3e295d1cedbce5f0080860df546ad7d18e349ee87ac2f44c3c228ddd4966",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 处理身份提供商响应"
+      }
+    },
+    {
+      "segment_id": "7e031d10",
+      "source_content": "The response is sent back to your app after authentication at IdP. After the handling of this response, the profile of the authenticated user is extracted and stored against a short-lived code that is then sent back to the app. To handle the response use the appropriate method as detailed below:",
+      "source_content_hash": "08448e1ab88531548b723473a0542b779d07c5155657adeb5df8389d68c0d196",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "身份提供商完成认证后会将响应返回至您的应用。处理该响应后，系统会提取认证用户档案并关联至短期有效的代码返回给应用。请根据以下说明使用对应方法处理响应："
+      }
+    },
+    {
+      "segment_id": "28d66ee4",
+      "source_content": "#### SAML Response",
+      "source_content_hash": "1600a220a4612e14bf94540313f95a5d8811a55edbfa1f02023be368f7af7357",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "#### SAML 响应"
+      }
+    },
+    {
+      "segment_id": "0974dfbb",
+      "source_content": "Handle the response from the SAML Identity Provider. After successful authentication, IdP sends back (via browser POST) the `SAMLResponse` and `RelayState` to the Assertion Consumer Service (ACS) URL (`samlPath`) of the app. You'll use the `samlResponse` method within your ACS endpoint. This will parse and validate the SAML Response after which the user profile is extracted.",
+      "source_content_hash": "8cd00edbca649a1b8e4caf97aa6b2729817357fe8fb6e9892221f8c291adcaea",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "处理来自SAML身份提供商的响应。认证成功后，IdP会通过浏览器POST方式将`SAMLResponse`和`RelayState`发送至应用的断言消费者服务(ACS) URL（即`samlPath`）。您需要在ACS端点内使用`samlResponse`方法。该方法将解析并验证SAML响应，随后提取用户资料。"
+      }
+    },
+    {
+      "segment_id": "34111a55",
+      "source_content": "<Tabs>\n<TabItem value=\"01\" label=\"Request\" default>\n\n```js\nawait oauth.samlResponse({\n  SAMLResponse: '<SAML Response from the SAML IdP>',\n  RelayState: '<Relaystate from the original SAML request to the IdP>',\n});\n```\n\n</TabItem>\n\n<TabItem value=\"02\" label=\"Response\">\n\n```json\n{\n  \"redirect_url\": \"https://your-app.com/sso/callback?code=5db7257fde94e062f6243572e31818d6e64c3097&state=c38ee339-6b82-43d3-838f-4036820acce9\"\n}\n```\n\n</TabItem>\n</Tabs>",
+      "source_content_hash": "280972816cb55c3464220ffaaab64dc2d5b0a96c0435a7c162701eb092b02242",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_34111a55"
+      }
+    },
+    {
+      "segment_id": "7020a57c",
+      "source_content": "#### OIDC Response",
+      "source_content_hash": "f782cae3b96e183a46149e3ebeb07f160b86512961c94695ff7dbb93554ef077",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "#### OIDC响应"
+      }
+    },
+    {
+      "segment_id": "d58af824",
+      "source_content": "Handle the response from the OIDC Identity Provider. After successful authentication, IdP sends back (via browser redirect) the `code` and `state` to the redirect URL (`oidcPath`) that handles the OIDC response. You'll use the `oidcAuthzResponse` method within your `oidcPath` handler. This will exchange the `code` for tokenSet (id_token and access_token) from the OIDC Provider. The \"userinfo\" endpoint of the OIDC Provider also gets invoked. Both the `id_token` claims and `userinfo` response are used to form the user profile.",
+      "source_content_hash": "57e3a68d19030196e8335ba9fa2b6bad880a75f092da15170446a6431a543dd1",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "处理来自OIDC身份提供商的响应。认证成功后，IdP会通过浏览器重定向方式将`code`和`state`发送至处理OIDC响应的重定向URL（即`oidcPath`）。您需要在`oidcPath`处理器内使用`oidcAuthzResponse`方法。该方法将通过OIDC提供商将`code`兑换为tokenSet（包含id_token和access_token），并调用OIDC提供商的\"userinfo\"端点。最终结合`id_token`声明和`userinfo`响应生成用户资料。"
+      }
+    },
+    {
+      "segment_id": "85a41517",
+      "source_content": "<Tabs>\n<TabItem value=\"01\" label=\"Request\" default>\n\n```js\nawait oauth.oidcAuthzResponse({\n  code: '<code received from OIDC IdP after authentication>',\n  state: '<state from the original OIDC request to the IdP>',\n});\n```\n\n</TabItem>\n\n<TabItem value=\"02\" label=\"Response\">\n\n```json\n{\n  \"redirect_url\": \"https://your-app.com/sso/callback?code=5db7257fde94e062f6243572e31818d6e64c3097&state=c38ee339-6b82-43d3-838f-4036820acce9\"\n}\n```\n\n</TabItem>\n</Tabs>",
+      "source_content_hash": "2f46e0e0d5714e9089af87078bf6af8c3ee3d8d0eb9915ba01a4b0f3bf726804",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_85a41517"
+      }
+    },
+    {
+      "segment_id": "faaf88af",
+      "source_content": "### Request Access Token",
+      "source_content_hash": "61c0c6a2ba0c4a1c52c6019a99c59ebd8e61cb9992ba14a109cf9475d4667001",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 请求访问令牌"
+      }
+    },
+    {
+      "segment_id": "d14a9e24",
+      "source_content": "Requests an `access_token` by passing the authorization `code` from the previous step along with other authentication details.",
+      "source_content_hash": "4424ed32788af4c5d014788f725ea49fc7564e75c239f74062b59954784a1151",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "通过传递上一步获取的授权`code`及其他认证信息，请求获取`access_token`。"
+      }
+    },
+    {
+      "segment_id": "e96d771a",
+      "source_content": "<Tabs>\n<TabItem value=\"01\" label=\"Request\" default>\n\n```js\nconst tenant = 'boxyhq';\nconst product = 'your-app';\n\nawait oauth.token({\n  code: '<Authorization code received from Jackson at redirect_url after login at IdP>',\n  redirect_uri:\n    '<redirect_uri used in original authorization request to Jackson>',\n  client_id: `tenant=${tenant}&product=${product}`,\n  client_secret: 'dummy',\n  grant_type: 'authorization_code',\n});\n```\n\n</TabItem>\n\n<TabItem value=\"02\" label=\"Response\">\n\n```json\n{\n  \"access_token\": \"6b81f03b60c34e46e740d96c7e6242923736a2d1\",\n  \"token_type\": \"bearer\",\n  \"expires_in\": 300\n}\n```\n\n</TabItem>\n</Tabs>",
+      "source_content_hash": "70594a7e58bd0ce8498bbbd36cfbba586dbaec40e36d28f2098b8590921ca1cc",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_e96d771a"
+      }
+    },
+    {
+      "segment_id": "ad3aada7",
+      "source_content": "### Fetch User Profile",
+      "source_content_hash": "0d72a4b900175fa6282dd8c47065fb455899ffcce076af4f0bc76a1efc02428f",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 获取用户资料"
+      }
+    },
+    {
+      "segment_id": "3bb26da2",
+      "source_content": "Once the `access_token` has been fetched, you can use it to retrieve the user profile from the Identity Provider.",
+      "source_content_hash": "cad58fa6930ab6a2308c8147ec245351b49cf4a86bd9c803c8058346d5930193",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "获取`access_token`后，可用其从身份提供商处检索用户资料。"
+      }
+    },
+    {
+      "segment_id": "6728aadb",
+      "source_content": "<Tabs>\n<TabItem value=\"01\" label=\"Request\" default>\n\n```js\nconst accessToken = '<Access token from code exchange step above>';\n\nawait oauth.userInfo(accessToken);\n```\n\n</TabItem>\n\n<TabItem value=\"02\" label=\"Response\">\n\n```json\n{\n  \"raw\": {\n    \"id\": \"1dda9fb491dc01bd24d2423ba2f22ae561f56ddf2376b29a11c80281d21201f9\",\n    \"email\": \"samuel@example.com\",\n    \"firstName\": \"Samuel\",\n    \"lastName\": \"Jackson\",\n    \"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier\": \"samuel@example.com\"\n  },\n  \"id\": \"1dda9fb491dc01bd24d2423ba2f22ae561f56ddf2376b29a11c80281d21201f9\",\n  \"email\": \"samuel@example.com\",\n  \"firstName\": \"Samuel\",\n  \"lastName\": \"Jackson\",\n  \"requested\": {\n    \"client_id\": \"f7c909a5c72a5535847acf32558b2429a5172dd6\",\n    \"state\": \"c38ee339-6b82-43d3-838f-4036820acce9\",\n    \"redirect_uri\": \"https://your-app.com/sso/callback\",\n    \"tenant\": \"boxyhq\",\n    \"product\": \"your-app\",\n    \"scope\": []\n  }\n}\n```\n\n</TabItem>\n</Tabs>",
+      "source_content_hash": "7d79175e7447d5246293f3154bb94bf7f2b21b8ce7d52793678dd361a0e30403",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_6728aadb"
+      }
+    }
+  ],
+  "target_i18n_subpath": "docusaurus-plugin-content-docs/current/jackson/deploy/npm-library.md",
+  "last_updated_timestamp": "2025-06-08T18:49:09.300199+00:00",
+  "schema_version": "1.0",
+  "translated_versions": {
+    "zh-CN": "0446557aec126716d69b764fb58a14f5fddb32fad188d6e853fa3c6611c8379c"
+  }
+}

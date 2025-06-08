@@ -1,0 +1,222 @@
+{
+  "source_file_path_relative_to_docusaurus_root": "docs/jackson/local-development.md",
+  "source_file_content_hash": "4a1082df6736823f52eabf186d07c825ac501b8341046a695acd7c7c9669f35e",
+  "segments": [
+    {
+      "segment_id": "76e4a56a",
+      "source_content": "# Local Development",
+      "source_content_hash": "ddbc628bb04cf7a835cc6206e3239a838306dab6b5fe1b24ba9613c22ab48cb8",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "# 本地开发"
+      }
+    },
+    {
+      "segment_id": "faebdc62",
+      "source_content": "This guide will help you to setup and run SAML Jackson in development mode.",
+      "source_content_hash": "5de76a4781b7bd92e7b2885a7372ca133f9c0d9dbd74d0febc9922747d7f89e6",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "本指南将帮助您在开发模式下设置并运行SAML Jackson。"
+      }
+    },
+    {
+      "segment_id": "f85bbfb4",
+      "source_content": "## Clone the repo",
+      "source_content_hash": "4a7af2bf5cb2c15506d71cd334cac209a5d4b7195275f6eeca5aae819ff9df64",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 克隆代码库"
+      }
+    },
+    {
+      "segment_id": "efa96cff",
+      "source_content": "```bash\ngit clone https://github.com/boxyhq/jackson.git\n\ncd jackson\n```",
+      "source_content_hash": "00c7fbafcb76d9b0bc7878216d14fd9e6150fb8873c86e18389c597aec6a419c",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_efa96cff"
+      }
+    },
+    {
+      "segment_id": "ba4f48ff",
+      "source_content": "## Install dependencies",
+      "source_content_hash": "bc6a57fef0737c876db5699e8e3f8ad93781358af49dd4a1533b42370f39725d",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 安装依赖"
+      }
+    },
+    {
+      "segment_id": "cf898102",
+      "source_content": "Run the following command to install the Node dependencies.",
+      "source_content_hash": "31b22512de21f7f751f6cf304d44809aa731c3d53d26c95dc56bacb1953e5f33",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "运行以下命令安装Node依赖项。"
+      }
+    },
+    {
+      "segment_id": "93be3c14",
+      "source_content": "```bash\nnpm install\n```",
+      "source_content_hash": "eb5a50fc58daf7363e311766e9dd31ad61d85de38cdea9e5921158421a5cb4bb",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_93be3c14"
+      }
+    },
+    {
+      "segment_id": "418617bd",
+      "source_content": "## Setup environment variables",
+      "source_content_hash": "d17ee09a3e91527e19fbe73a81bebe58799b265683d0f7292048c75783c73d93",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 配置环境变量"
+      }
+    },
+    {
+      "segment_id": "41a8ae85",
+      "source_content": "```bash\ncp .env.example .env\n```",
+      "source_content_hash": "20fded08d3cbbca59ec2590725f1cc1dae7e53761fbb3f88084ded281c45cc43",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_41a8ae85"
+      }
+    },
+    {
+      "segment_id": "a76548f8",
+      "source_content": "Please refer to [environment variables](./deploy/env-variables.md) to read on setting environment variables.",
+      "source_content_hash": "5db59ed80d30bdf8695772d96d6be18285a26d0a77fda34915445de6827e060a",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "请参阅[环境变量](./deploy/env-variables.md)了解如何设置环境变量。"
+      }
+    },
+    {
+      "segment_id": "f2f30ae8",
+      "source_content": "## Setup the database",
+      "source_content_hash": "6a3b5751de4a04c06761eafd2d0f20ba771d7ffb9ac7f1a68f94f76546538a93",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 设置数据库"
+      }
+    },
+    {
+      "segment_id": "dfe931a2",
+      "source_content": "Run the following command to create database instances for the local development. Make sure you have Docker installed on your machine.",
+      "source_content_hash": "7514ecfc3f5108752e9304ae503558a3bdadadfc145b94064da97864cfee5e18",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "运行以下命令为本地开发创建数据库实例。请确保您的机器已安装Docker。"
+      }
+    },
+    {
+      "segment_id": "a2110253",
+      "source_content": "```bash\nnpm run dev-dbs\n```",
+      "source_content_hash": "fe5fd290b41b67f371ac60c60b0bcd7e74f7e3df76d345dde120a4b49cb0e194",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_a2110253"
+      }
+    },
+    {
+      "segment_id": "3b7478ea",
+      "source_content": "## Start the development server",
+      "source_content_hash": "a08e93ee43a38918da886646606b1cdf877d3a433b2eb7b0a2ef390ffadc48de",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 启动开发服务器"
+      }
+    },
+    {
+      "segment_id": "c3a738de",
+      "source_content": "Start the development server by running the following command.",
+      "source_content_hash": "304d3401220a62a6a0954432f7ebc6bdce76930c907be93391216d77facceb44",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "通过运行以下命令启动开发服务器。"
+      }
+    },
+    {
+      "segment_id": "bca33820",
+      "source_content": "```bash\nnpm run dev\n```",
+      "source_content_hash": "e4ff51db0038ca229a48b7cc64192499bfb28766ddfd60f57a0a1c43fc2b0547",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_bca33820"
+      }
+    },
+    {
+      "segment_id": "35a77014",
+      "source_content": "## Testing Jackson in your local environment",
+      "source_content_hash": "3c45992d3852529f7ed810ebc6dc71f30e890d8b549c8cd84c8c47e93610bf54",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 在本地环境中测试Jackson"
+      }
+    },
+    {
+      "segment_id": "13d9cd70",
+      "source_content": "The Jackson service can be accessed locally using the following URL",
+      "source_content_hash": "7016da264c2e3e918ee4f4256fa30c59eb36a3af4365b16b164bb9c4797f4092",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "可通过以下URL在本地访问Jackson服务"
+      }
+    },
+    {
+      "segment_id": "229d6705",
+      "source_content": "```bash\nhttp://localhost:5225\n```",
+      "source_content_hash": "bad66731ef070ad01c321a633de3a03fed3fb527afba8d835b1f0c43d71b1a25",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_229d6705"
+      }
+    },
+    {
+      "segment_id": "98d26038",
+      "source_content": "You can visit the following URL to see if the Jackson was started successfully!",
+      "source_content_hash": "97e98dc07aa583919a2f39022861a1816ecfc34ab1f87402ff7b239f6edbe393",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "您可以访问以下URL确认Jackson是否成功启动！"
+      }
+    },
+    {
+      "segment_id": "f275f5fd",
+      "source_content": "```bash\nhttp://localhost:5225/api/hello\n```",
+      "source_content_hash": "79d1e0393adc6661960449738832e5dacceb229584797a741e3051ad8af13d43",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_f275f5fd"
+      }
+    }
+  ],
+  "target_i18n_subpath": "docusaurus-plugin-content-docs/current/jackson/local-development.md",
+  "last_updated_timestamp": "2025-06-08T18:49:09.301378+00:00",
+  "schema_version": "1.0",
+  "translated_versions": {
+    "zh-CN": "4a1082df6736823f52eabf186d07c825ac501b8341046a695acd7c7c9669f35e"
+  }
+}

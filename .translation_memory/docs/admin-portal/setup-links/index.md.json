@@ -1,0 +1,52 @@
+{
+  "source_file_path_relative_to_docusaurus_root": "docs/admin-portal/setup-links/index.md",
+  "source_file_content_hash": "c8df0afc9bb6671be90c31403ef8a8589f95cd910d73e4f67bd68f5196efe013",
+  "segments": [
+    {
+      "segment_id": "76e4a56a",
+      "source_content": "# Setup Links",
+      "source_content_hash": "434b3580eab14f676d5dba9551a4d40c186ff8df250407b9915b1e36d212de4c",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "# 设置链接"
+      }
+    },
+    {
+      "segment_id": "faebdc62",
+      "source_content": "Admin portal can be used to create setup links for",
+      "source_content_hash": "0e7fd844f9c038b417029b15c174b0660a2b29da342e75da12ba374582195a08",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "管理门户可用于创建以下产品的设置链接："
+      }
+    },
+    {
+      "segment_id": "17ded777",
+      "source_content": "- [Enterprise SSO](./setup-links/jackson)\n- [Directory-Sync](./setup-links/directory-sync)",
+      "source_content_hash": "93fcc599ab51185d0adfac1a6cf1ac093fdd9c8418ea6e065427f45d7a2d31b8",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- [企业级SSO](./setup-links/jackson)\n- [目录同步](./setup-links/directory-sync)"
+      }
+    },
+    {
+      "segment_id": "3fbbcc07",
+      "source_content": "Setup links can be shared with anyone to let them set up connections for the products.\nThese links come in handy for admins to facilitate setup by non-admin users without revealing any sensitive information or giving admin access unnecessarily.",
+      "source_content_hash": "5c55603322a1d6144d48fd19c0fb657563c14cd84e76aea8f3a7afabd2d19c88",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "设置链接可分享给任何人用于配置产品连接。\n这些链接便于管理员让非管理员用户完成配置，既无需暴露敏感信息，也避免了不必要地授予管理权限。"
+      }
+    }
+  ],
+  "target_i18n_subpath": "docusaurus-plugin-content-docs/current/admin-portal/setup-links/index.md",
+  "last_updated_timestamp": "2025-06-08T18:49:09.292506+00:00",
+  "schema_version": "1.0",
+  "translated_versions": {
+    "zh-CN": "c8df0afc9bb6671be90c31403ef8a8589f95cd910d73e4f67bd68f5196efe013"
+  }
+}

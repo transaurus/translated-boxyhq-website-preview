@@ -1,0 +1,402 @@
+{
+  "source_file_path_relative_to_docusaurus_root": "guides/directory-sync/frameworks/nextjs.md",
+  "source_file_content_hash": "e7ac7ee07d3ea65d1eb43568956ee03e38e3e290aee6a47be66a035399798ffb",
+  "segments": [
+    {
+      "segment_id": "58cfcc64",
+      "source_content": "---\ntitle: Implement Directory Sync (SCIM) to your Next.js App using Jackson\nsidebar_label: Next.js\n---",
+      "source_content_hash": "d1c9c14786638e82ba7c2f010a654f2956b55559b6118fbba9f2bc241faebc19",
+      "node_type": "yaml",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_58cfcc64"
+      }
+    },
+    {
+      "segment_id": "4d1292be",
+      "source_content": "import Tabs from '@theme/Tabs';\nimport TabItem from '@theme/TabItem';",
+      "source_content_hash": "86702643a5c3bdf74257ff6062535897129ed9144c4f5b70edfe338fef3e5c73",
+      "node_type": "mdxjsEsm",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_4d1292be"
+      }
+    },
+    {
+      "segment_id": "d912d376",
+      "source_content": "# Next.js",
+      "source_content_hash": "7ef94f143cc691ef4d04e8833d2cfb29d042cb11af2d7d51303a97a6a4ba2836",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "# Next.js"
+      }
+    },
+    {
+      "segment_id": "8ac585fb",
+      "source_content": "This guide will teach you to implement SCIM Provisioning in your Next.js app.",
+      "source_content_hash": "ff5f9c600916930b07a0dc2c6e94ae8927a3d8440e374ae39831aec24f3bb0a5",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "本指南将教你如何在Next.js应用中实现SCIM用户配置功能。"
+      }
+    },
+    {
+      "segment_id": "ba4f48ff",
+      "source_content": "## Quickstart",
+      "source_content_hash": "ebaf70c948e27bbbfe8ff692dc238f043c2f16243c14adaf32ff611b2fa85071",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 快速开始"
+      }
+    },
+    {
+      "segment_id": "cf898102",
+      "source_content": "Directory sync helps organizations automate the provisioning and de-provisioning of their users in the Enterprise SaaS app. As a result, it streamlines the user lifecycle management process by saving valuable organizational hours, creating a single truth source of the user identity data.",
+      "source_content_hash": "8d3c428281d3a0c2f4f05e7ac6cdc74dd960d7eed3c3a2e74110d4fea6d01d79",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "目录同步功能可帮助企业自动化管理其SaaS应用中的用户配置与注销流程。通过建立统一的用户身份数据源，该功能能显著节省组织管理时间，简化用户生命周期管理。"
+      }
+    },
+    {
+      "segment_id": "3daf1b88",
+      "source_content": "### Install SAML Jackson",
+      "source_content_hash": "649737b1a6678e52262ba416d8356f38e9b902683dab3eb0ac35677a3ce74499",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 安装SAML Jackson"
+      }
+    },
+    {
+      "segment_id": "f6168993",
+      "source_content": "Let’s start by installing SAML Jackson to your Next.js app.",
+      "source_content_hash": "4a2097a45ac22d12525928d953317c3528f44f0c25728ae594df12a0f311202f",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "首先在Next.js应用中安装SAML Jackson组件。"
+      }
+    },
+    {
+      "segment_id": "cbbebf8e",
+      "source_content": "```bash\nnpm i --save @boxyhq/saml-jackson\n```",
+      "source_content_hash": "812541629967c649211aa86e10cd476b3ac843eaf54089dade89546d0e3b3b9a",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_cbbebf8e"
+      }
+    },
+    {
+      "segment_id": "ed7dde9c",
+      "source_content": "### Initialize SAML Jackson",
+      "source_content_hash": "cfeeb83d046b57fbbe8c607867305e0258eff6e1a2807877308b660880c8c880",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 初始化SAML Jackson"
+      }
+    },
+    {
+      "segment_id": "a76548f8",
+      "source_content": "Create a new file, `jackson.ts` that holds the Jackson initialization.",
+      "source_content_hash": "6e49eef95de484f2ff00681626abb5607edb588050546ad60ae07c9c10e33e79",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "新建`jackson.ts`文件用于存放Jackson初始化配置。"
+      }
+    },
+    {
+      "segment_id": "0c911872",
+      "source_content": "```javascript title=\"lib/jackson.ts\"\nimport type { JacksonOption, IDirectorySyncController } from '@boxyhq/saml-jackson';\nimport jackson from '@boxyhq/saml-jackson';\n\nlet directorySyncController: IDirectorySyncController;\n\nconst g = global as any;\n\nconst opts = {\n  externalUrl: `http://localhost:3000/`,\n  samlPath: '/',\n  scimPath: '/api/scim',\n  db: {\n    engine: 'sql',\n    type: 'postgres',\n    url: \"postgres://username:password@localhost:5432/your-database-name\",\n  },\n} as JacksonOption;\n\nexport default async function init() {\n  if (!g.directorySyncController) {\n    const ret = await jackson(opts);\n\n    directorySyncController = ret.directorySyncController;\n    g.directorySyncController = directorySyncController;\n  } else {\n    directorySyncController = g.directorySyncController;\n  }\n\n  return {\n    directorySyncController,\n  };\n}\n```",
+      "source_content_hash": "62f8868961ea59c4d50660a99fa09eef3af4458a3f522355806faccb64bfb25c",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_0c911872"
+      }
+    },
+    {
+      "segment_id": "c315c636",
+      "source_content": "### Create the Directory",
+      "source_content_hash": "ff9a156858289044b7f4610efea608f1be51ac64157c918f22a08499d530d579",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 创建目录"
+      }
+    },
+    {
+      "segment_id": "531437ca",
+      "source_content": "The first step towards the integration is creating a directory for a tenant.",
+      "source_content_hash": "140a4fd9500b39ada29c1ddd3068a14af94088e29df180f5bb70f7248446907a",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "集成第一步是为租户创建目录。"
+      }
+    },
+    {
+      "segment_id": "06e24cc0",
+      "source_content": "Directory Sync providers (Identity Providers) require you to provide a **SCIM Base URL** and **SCIM Auth token**. Both are unique for each directory your app users create.",
+      "source_content_hash": "0ab4a3064806924115a0d4fbb57d97e4d0955b556ee0544cbb8dbc2a1c5f2665",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "目录同步服务商（身份提供商）要求提供**SCIM基础URL**和**SCIM认证令牌**，这两个参数对每个用户创建的目录都是唯一的。"
+      }
+    },
+    {
+      "segment_id": "7d13cf22",
+      "source_content": "```javascript\nconst { data, error } = await directorySyncController.directories.create({\n  name: 'any-name',\n  type: 'okta-scim-v2',\n  tenant: \"tenant-identifier\"\n  product: \"product-identifier\"\n});\n```",
+      "source_content_hash": "2f000face675f850cbad325c8a2bed274046d66c6e42f12bf535e9880be38be0",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_7d13cf22"
+      }
+    },
+    {
+      "segment_id": "e8e162a9",
+      "source_content": "The response will looks like as below:",
+      "source_content_hash": "b6427455723ddcf9d4b4669709d8d8227936b20aa8cf02cda4dd6aac7c81e805",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "响应示例如下："
+      }
+    },
+    {
+      "segment_id": "9f4336b3",
+      "source_content": "```javascript\n{\n  \"data\": {\n    \"id\": \"58b5cd9dfaa39d47eb8f5f88631f9a629a232016\",\n    \"name\": \"any-name\",\n    \"tenant\": \"tenant-identifier\",\n    \"product\": \"product-identifier\",\n    \"type\": \"okta-scim-v2\",\n    \"log_webhook_events\": false,\n    \"scim\": {\n      \"path\": \"/api/scim/58b5cd9dfaa39d47eb8f5f88631f9a629a232016\",\n      \"secret\": \"IJzAoevjD_liiiy-VkDtXg\",\n      \"endpoint\": \"http://localhost:5225/api/scim/58b5cd9dfaa39d47eb8f5f88631f9a629a232016\"\n    },\n    \"webhook\": {\n      \"endpoint\": \"\",\n      \"secret\": \"\"\n    }\n  },\n  \"error\": null\n}\n```",
+      "source_content_hash": "2f14f8c0074b07d298051c0970279a8f82a232c04efd7f78535047ab03d70884",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_9f4336b3"
+      }
+    },
+    {
+      "segment_id": "a2c0166e",
+      "source_content": "Note the keys `scim.endpoint` and `scim.secret` from the above JSON. Your users need these values while configuring SCIM app on their Identity Provider.",
+      "source_content_hash": "63252713fda924fc7101ec3d137f6cfd1df3873179557ed8c1078cb58ba656eb",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "请注意JSON中的`scim.endpoint`和`scim.secret`字段值，用户在身份提供商处配置SCIM应用时需要这些参数。"
+      }
+    },
+    {
+      "segment_id": "c1eaf30b",
+      "source_content": "Typically you'll have to provide some UI where the users can create the directory for their providers and display `SCIM Base URL` and `SCIM Auth Token` for the directory the user created. Usually, this UI comes under organization settings or team settings.",
+      "source_content_hash": "317cd2ecabb6bd00d06cb4676b4a6a25fc0b540cf17c4707f88796523fd2e506",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "通常需要提供用户界面让用户为其服务商创建目录，并展示所创建目录的`SCIM基础URL`和`SCIM认证令牌`。这类UI通常位于组织设置或团队设置模块。"
+      }
+    },
+    {
+      "segment_id": "f0984c2a",
+      "source_content": "For example, see the demo below.",
+      "source_content_hash": "5207901c19bdcb39be4ef2dc65c3d29408dd8acd48587ea8225e67a1b9f17eb1",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "参考下方演示示例："
+      }
+    },
+    {
+      "segment_id": "a81544fd",
+      "source_content": "![create-directory](/videos/create-directory.gif)",
+      "source_content_hash": "f48b5eb34f97bb18d14f4ca514d85e34ca3c7dfa3c8761788c4add10902c133d",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![创建目录](/videos/create-directory.gif)"
+      }
+    },
+    {
+      "segment_id": "0801d969",
+      "source_content": "You can retrieve the supported list of Directory Sync providers by calling the method `directorySyncController.providers()`.",
+      "source_content_hash": "98c27592f9d7688e503e41c0d703e2829939c86de864de6eccc5c3726ca6c2ad",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "可通过调用`directorySyncController.providers()`方法获取支持的目录同步服务商列表。"
+      }
+    },
+    {
+      "segment_id": "ab39e8a7",
+      "source_content": "### Understand SCIM API Requests",
+      "source_content_hash": "517882c62477ea1927c1fab4409e8eaac920b793b6a19d1e337fbf7269204204",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 理解SCIM API请求"
+      }
+    },
+    {
+      "segment_id": "d21af28f",
+      "source_content": "A key piece to implementing SCIM is building a RESTful API that IdP's SCIM provisioning can call to provision users and groups to your app. The requests will come to the `SCIM Base URL (scim.endpoint)`.",
+      "source_content_hash": "37b1e3e016cf86ad35e8131a2355d8d70080a4b92b50e739033ac8c3e95843fd",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "实现SCIM的核心是构建RESTful API，用于接收身份提供商的SCIM配置请求，将用户和群组同步至您的应用。所有请求都将发送至`SCIM基础URL(scim.endpoint)`。"
+      }
+    },
+    {
+      "segment_id": "44aaa880",
+      "source_content": "Here are the calls your API should be able to receive from IdP SCIM provisioning for a given `SCIM Base URL (scim.endpoint)`.",
+      "source_content_hash": "5ee00c29494182419f730dc9e878404c3c010e1c34fc645de29c03a3d1ea6805",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "以下是您的API需要能够处理的来自身份提供商SCIM配置的请求类型（针对给定的SCIM基础URL）："
+      }
+    },
+    {
+      "segment_id": "638efb88",
+      "source_content": "#### Users Provisioning",
+      "source_content_hash": "e2df3466874840eaf9165de5c23872f787c0a16ec765f72b975040f57bbcfacd",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "#### 用户配置"
+      }
+    },
+    {
+      "segment_id": "1e3521c4",
+      "source_content": "| Route      | Methods    |\n| ---------- | ---------- |\n| /Users     | POST       |\n| /Users/:id | GET        |\n| /Users/:id | PUT, PATCH |\n| /Users/:id | DELETE     |",
+      "source_content_hash": "feafe8eb3a0aabc622b7f07fbfba0e234f252d12b7ea9dce5be033ce802c3b63",
+      "node_type": "table",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_1e3521c4"
+      }
+    },
+    {
+      "segment_id": "2bb63d77",
+      "source_content": "#### Push Groups and Group Memberships",
+      "source_content_hash": "fcf69eb4947dc297e4fb502b7bc1f949d44301a1194c74c1725f1c4e609a8236",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "#### 推送群组及成员关系"
+      }
+    },
+    {
+      "segment_id": "873a1e9b",
+      "source_content": "| Route       | Methods    |\n| ----------- | ---------- |\n| /Groups     | POST       |\n| /Groups/:id | GET        |\n| /Groups/:id | PUT, PATCH |\n| /Groups/:id | DELETE     |",
+      "source_content_hash": "51061e22d5806a83ae7fe76f82b9084ba29f93b3fd395fd2cc4bdba85c10281d",
+      "node_type": "table",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_873a1e9b"
+      }
+    },
+    {
+      "segment_id": "13292277",
+      "source_content": "### Handle SCIM API Requests",
+      "source_content_hash": "d0daf95c981730f2ce826cf207e411b4d5acb22c1adba94c905ba0f98e15e66f",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 处理SCIM API请求"
+      }
+    },
+    {
+      "segment_id": "e478ec2c",
+      "source_content": "Now let's add the route to handle the incoming requests from the Directory Sync providers.",
+      "source_content_hash": "dc4c00141b4476f3d53ad983f02e07fae9ba8a43739a3d5ff0d0de4da0dfcc3e",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "现在添加路由来处理来自目录同步服务商的请求。"
+      }
+    },
+    {
+      "segment_id": "e908327f",
+      "source_content": "```javascript title=\"pages/api/scim/[...directory].ts\"\nimport type { NextApiRequest, NextApiResponse } from 'next';\nimport type { DirectorySyncRequest, HTTPMethod, DirectorySyncEvent } from '@boxyhq/saml-jackson';\n\nimport jackson from '../../../lib/jackson';\n\nexport default async function handler(req: NextApiRequest, res: NextApiResponse) {\n  const { directorySyncController } = await jackson();\n\n  const { method, query, body } = req;\n\n  const directory = query.directory as string[];\n  const [directoryId, path, resourceId] = directory; // Extract the params\n\n  // Construct the event\n  const request: DirectorySyncRequest = {\n    method: method as HTTPMethod,\n    body: body ? JSON.parse(body) : undefined,\n    directoryId: directoryId,\n    resourceId: resourceId,\n    resourceType: path === 'Users' ? 'users' : 'groups',\n    apiSecret: extractAuthToken(req),\n    query: {\n      count: req.query.count ? parseInt(req.query.count as string) : undefined,\n      startIndex: req.query.startIndex ? parseInt(req.query.startIndex as string) : undefined,\n      filter: req.query.filter as string,\n    },\n  };\n\n  // Handle the requests\n  // highlight-start\n  const { status, data } = await directorySyncController.requests.handle(request, async (event: DirectorySyncEvent) => {\n    console.log(event); // Do something with the event\n  });\n  // highlight-end\n\n  // Send the response back\n  return res.status(status).json(data);\n}\n\n// Fetch the auth token from the request headers\nconst extractAuthToken = (req: NextApiRequest): string | null => {\n  const authHeader = req.headers.authorization || null;\n\n  return authHeader ? authHeader.split(' ')[1] : null;\n};\n```",
+      "source_content_hash": "7376de0797fe288cbf96e10db19674a29a9dd3c3fd8b09b90a66d055f768d095",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_e908327f"
+      }
+    },
+    {
+      "segment_id": "0427bb2b",
+      "source_content": "`pages/api/scim/[...directory].ts` is a catch all paths route. Matched parameters will be sent as a query parameter to the page, and it will always be an array.",
+      "source_content_hash": "536d54d662c827db052b3515613df0d5fa40f09f308c0621561417d04af87e74",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "`pages/api/scim/[...directory].ts`是通配路径路由，匹配参数将以查询参数形式传递给页面，且始终以数组形式传递。"
+      }
+    },
+    {
+      "segment_id": "4899bc54",
+      "source_content": "Look at the highlighted lines, and you can pass an async callback method to the `directorySyncController.requests.handle` as a second argument. This method will be called with SCIM event as the first argument.",
+      "source_content_hash": "05ade299b4c6a1f53972a60ac222a4bf36d2f528e987469085ad2c644ba0dec8",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "重点注意：可向`directorySyncController.requests.handle`传递异步回调方法作为第二个参数。该方法的首个参数将接收SCIM事件对象。"
+      }
+    },
+    {
+      "segment_id": "b27c61de",
+      "source_content": "Checkout the documentation for [SCIM events and Types](/docs/directory-sync/events) to understand more about the events.",
+      "source_content_hash": "84133ad5a64c5033175a07c7a8b7aa614465e71471f526d46b61695e0698b5e8",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "查阅[SCIM事件与类型文档](/docs/directory-sync/events)以深入了解事件机制。"
+      }
+    },
+    {
+      "segment_id": "af016b8e",
+      "source_content": "Use these events to trigger actions in your application, such as creating a new user in your application, or updating a user in your application based on the changes made in the directory.",
+      "source_content_hash": "6a86385449b7e0a32c9bc1133c7f5822b02daf7f110151b5721b3cf9daef3530",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "利用这些事件触发应用内操作，例如根据目录变更创建新用户或更新现有用户信息。"
+      }
+    },
+    {
+      "segment_id": "3bff4086",
+      "source_content": "### Configure the Identity Provider",
+      "source_content_hash": "977410e8639eef01e3c5dc587a4a63b5a167ac3af7372c0c92c78645956dddb3",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 配置身份提供商"
+      }
+    },
+    {
+      "segment_id": "015c0c6e",
+      "source_content": "Your users should typically do this step at their end. We've [detailed documentation](/docs/directory-sync/providers/) for each Directory Sync provider.",
+      "source_content_hash": "343dc8f1b000db6f4ac1b7afe5afc8e9a8dc3c344d2524e041e271f2cdb3130c",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "此步骤通常由终端用户自行完成。我们为每个目录同步服务商提供了[详细配置文档](/docs/directory-sync/providers/)。"
+      }
+    }
+  ],
+  "target_i18n_subpath": "docusaurus-plugin-content-docs-guides/current/directory-sync/frameworks/nextjs.md",
+  "last_updated_timestamp": "2025-06-08T18:49:09.324772+00:00",
+  "schema_version": "1.0",
+  "translated_versions": {
+    "zh-CN": "e7ac7ee07d3ea65d1eb43568956ee03e38e3e290aee6a47be66a035399798ffb"
+  }
+}

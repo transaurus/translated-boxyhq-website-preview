@@ -1,0 +1,212 @@
+{
+  "source_file_path_relative_to_docusaurus_root": "blog/2023-9-23-boosting-trust-and-efficiency-a-conversation-with-supademos-ceo.md",
+  "source_file_content_hash": "b495cafb0e31e0428cc9ebfb2059653d7be965e0adeefc7944bbd50e3b4558d2",
+  "segments": [
+    {
+      "segment_id": "58cfcc64",
+      "source_content": "---\nslug: boosting-trust-and-efficiency-a-conversation-with-supademos-ceo\ntitle: \"Boosting Trust and Efficiency: A Conversation with Supademo's CEO\"\ndescription: \"We interviewed Jospeh Lee from Supademo to find out how they leveraged BoxyHQ's Enterprise SSO solution.\"\ntags_disabled:\n  [\n    developer,\n    security,\n    cybersecurity,\n    devsecops,\n    open-source,\n    developerfirst,\n    case-study,\n  ]\nimage: /images/success-stories/supademo-case-study.png\nhide_table_of_contents: true\nauthor: Nathan Tarbert\nauthor_title: Community Engineer @BoxyHQ\nauthor_url: https://github.com/NathanTarbert\nauthor_image_url: /images/authors/nathan.jpg\n---",
+      "source_content_hash": "c2303b6e5f54d1f89e8b65a8d233e863b5954a433550de3c21ee6c75fb2c377d",
+      "node_type": "yaml",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_58cfcc64"
+      }
+    },
+    {
+      "segment_id": "2fdadb08",
+      "source_content": "Supademo is on a mission to help teams communicate products more effectively starting with the fastest way to create intuitive click-through demos and guides.\nThis, in turn, leads to more deals closed, better onboarding, and reduced support tickets, among many other glorious things.",
+      "source_content_hash": "73552c9130e2296bb60dec28b47bf08d3d748931dddef4d1c6410453cae34619",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "Supademo的使命是帮助团队更高效地传递产品价值，我们提供最快速创建直观点击演示与指南的解决方案。\n这最终将带来更多成交订单、更顺畅的客户 onboarding 体验以及更少的客服工单，同时创造诸多其他卓越价值。"
+      }
+    },
+    {
+      "segment_id": "ccc88b4c",
+      "source_content": "**Q:** Thank you for joining us today, Joseph Lee, CEO, and co-founder of Supademo.",
+      "source_content_hash": "2c6f032f59e2d9080520a3dd80208b38e7a056416503b37e9588300fc50bc3ff",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "**问：** 感谢您今天参与我们的访谈，Supademo CEO兼联合创始人Joseph Lee。"
+      }
+    },
+    {
+      "segment_id": "d9172fa4",
+      "source_content": "**Joseph Lee (Supademo):** Thank you for having me. It's a pleasure to share our journey.",
+      "source_content_hash": "88438712839b9231c49e71cfcdc307a2f7da7faebb2e44dd1dca320e76a6e70f",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "**Joseph Lee (Supademo):** 感谢邀请。很荣幸能分享我们的发展历程。"
+      }
+    },
+    {
+      "segment_id": "26524352",
+      "source_content": "**Q:** Joseph, can you start by telling us what motivated Supademo to implement enterprise Single Sign-On (SSO)?",
+      "source_content_hash": "50f38dbb31fccf3e9f4196dec0aa24a94f002d399beb6bc6fddc92f0c0b60074",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "**问：** Joseph能否先谈谈，是什么促使Supademo决定实施企业级单点登录(SSO)方案？"
+      }
+    },
+    {
+      "segment_id": "73ab96a3",
+      "source_content": "**Joseph Lee (Supademo):** Absolutely. We decided to implement enterprise SSO due to significant demand from larger customers who wanted to leverage Supademo across their departments. These customers were already accustomed to the security and convenience offered by SAML SSO and wanted to easily maintain access and permissions across multiple services. While SSO wasn't a deal breaker for the deal to go through, we wanted to ensure that our customers didn't need to go out of their way to adjust their preferred workflow.",
+      "source_content_hash": "d5a171ef055588d436563322c07547ca93392a048ead1dfc8826d1f473e015f2",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "**Joseph Lee (Supademo):** 当然。我们实施企业SSO主要源于大型客户的强烈需求，这些客户希望跨部门使用Supademo。他们已习惯SAML SSO提供的安全与便捷，希望能统一管理多服务平台的访问权限。虽然SSO并非成交的必要条件，但我们希望客户无需改变其惯用工作流程。"
+      }
+    },
+    {
+      "segment_id": "7499a4e7",
+      "source_content": "**Q:** That makes sense. And why did you choose BoxyHQ's Jackson for this implementation?",
+      "source_content_hash": "ad8f4daefc0b3194012e66fe1d1c17f37f15bb5d7438e14d148fe8f79c25d4c3",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "**问：** 理解。那么为什么选择BoxyHQ的Jackson来实现这一功能？"
+      }
+    },
+    {
+      "segment_id": "517051a7",
+      "source_content": "**Joseph Lee (Supademo):** A big part of why Supademo chose BoxyHQ was due to its reputation. Several Supademo customers had recommended BoxyHQ as a service provider, and we noticed several well-known customers were leveraging Jackson for their SSO with glowing reviews. We considered several other alternatives but ultimately chose BoxyHQ due to their responsiveness and hands-on support, which were top-notch.",
+      "source_content_hash": "6fe7e2d0b10bb3eff4dfd2796a81885ff90aa0e2c5b702f99c91d25385b87717",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "**Joseph Lee (Supademo):** 选择BoxyHQ的关键因素是其行业口碑。多家Supademo客户推荐了BoxyHQ服务，我们也注意到许多知名企业采用Jackson实现SSO并获得高度评价。虽然评估了其他方案，但BoxyHQ的快速响应和专家级支持最终打动了我们。"
+      }
+    },
+    {
+      "segment_id": "135468ee",
+      "source_content": "**Q**: That's great to hear. Now, could you elaborate on both the direct benefits and soft benefits you observed following the adoption of the solution?",
+      "source_content_hash": "8454b2ccbcf06a8862a44ca82fb044a0f7a8ca7f4392569e42e5765e9df067c7",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "**问：** 很高兴听到这些。能否具体说明采用该方案后获得的直接效益和隐性收益？"
+      }
+    },
+    {
+      "segment_id": "33331f27",
+      "source_content": "**Joseph Lee (Supademo):** Certainly. Supademo has seen plenty of soft benefits of working with BoxyHQ - but some of the biggest include the lack of maintenance effort, ease of adoption, and direct time savings for our entire engineering team. The latter point is especially important, as it allows us to refocus our energy on Supademo's core mission: helping teams communicate their products more effectively to others.",
+      "source_content_hash": "8d437c2f48d76c942146cd0586c3b66be293b0a98057d2de66ac8cf5375a1145",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "**Joseph Lee (Supademo):** 当然。与BoxyHQ合作带来的隐性收益包括：近乎零维护成本、极低的学习门槛，以及为整个工程团队节省的大量时间。最后一点尤为重要，这让我们能集中精力实现Supademo的核心使命——帮助团队更高效地向他人展示产品价值。"
+      }
+    },
+    {
+      "segment_id": "50746522",
+      "source_content": "As for direct benefits, we were able to close several enterprise partnerships with BoxyHQ's help and provide them with a secure and streamlined authentication process within the Supademo platform. This has helped increase our clients' trust in Supademo.",
+      "source_content_hash": "0b10b72148504fa428500ebef469fa3d40282f495419efc326640e8736bca6b7",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "直接效益方面，在BoxyHQ支持下我们成功签约多家企业客户，为其提供安全流畅的Supademo平台认证流程。这显著提升了客户对我们的信任度。"
+      }
+    },
+    {
+      "segment_id": "95e9ba12",
+      "source_content": "**Q:** That's remarkable. In terms of business impact, how much time did it save your team?",
+      "source_content_hash": "fc38108e601baaf56e0c7d33ef0cad921159b4ba452f5add5a094d3da4f647e8",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "**问：** 成效显著。在业务影响层面，这个方案为团队节省了多少时间？"
+      }
+    },
+    {
+      "segment_id": "8af76f3d",
+      "source_content": "**Joseph Lee (Supademo):** With BoxyHQ, we were able to ship SSO capabilities in days - which is a massive savings compared to our initial estimate of 1-2 months for an in-house solution. As a result, Supademo was able to abstract out complexities, reduce potential errors, and provide more value to clients faster with BoxyHQ.",
+      "source_content_hash": "1b6d9b055f32ab43cf41cc0ba022c61074e5a5b6e394576f5d0acbda02e14871",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "**Joseph Lee (Supademo):** 通过BoxyHQ，我们仅用数天就实现了SSO功能——相比自研方案预估的1-2个月周期，这是巨大的效率提升。这使得Supademo能规避技术复杂性、减少潜在错误，更快地为客户创造价值。"
+      }
+    },
+    {
+      "segment_id": "a9d49f92",
+      "source_content": "**Q:** Impressive time savings indeed. Have you seen any significant growth in acquiring enterprise clients as a direct result of utilizing SSO?",
+      "source_content_hash": "669158e504774094dc8b86512d519679d6a520b2c7dddedc80805dc4c3b5ec21",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "**问：** 确实节省了大量时间。SSO的实施是否直接促进了企业客户增长？"
+      }
+    },
+    {
+      "segment_id": "a44047a5",
+      "source_content": "**Joseph Lee (Supademo):** Absolutely. We've seen considerable traction and interest from multiple enterprise-level customers after implementing SSO. Supademo's BoxyHQ integration has been an asset that we'll continue to leverage to grow our team and add more value to customers.",
+      "source_content_hash": "d9c339bcfebdc56a31cb48f32df8945bc140924df1df8fe4801df4761064854b",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "**Joseph Lee (Supademo):** 毫无疑问。实现SSO后，我们获得了大量企业级客户的关注。BoxyHQ集成已成为Supademo持续拓展团队、提升客户价值的重要资产。"
+      }
+    },
+    {
+      "segment_id": "f7ef78f9",
+      "source_content": "**Q:** That's fantastic to hear. From your perspective, how do you view this successful partnership with BoxyHQ?",
+      "source_content_hash": "63fa2d96e31df2d8704c1b6547ffc661f2d158144ff3b887d10b4df9200c7973",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "**问：** 非常鼓舞人心。您如何看待与BoxyHQ的这次成功合作？"
+      }
+    },
+    {
+      "segment_id": "b36c6338",
+      "source_content": "**Joseph Lee (Supademo):** Supademo's trust in BoxyHQ has been built not only from the underlying tech but also from the exceptional support received. Implementation was a breeze, and Boxy's continued responsiveness is a testament to our customer-centric mission - something that we share at Supademo.",
+      "source_content_hash": "45fb4e7af029c9e11cf4f52a79fc3d72ae02f1750622043b6c6b07d7da5a324b",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "**Joseph Lee (Supademo):** Supademo对BoxyHQ的信任不仅源于其技术实力，更来自卓越的支持服务。实施方案过程顺畅，Boxy持续高效的响应能力完美契合了我们\"以客户为中心\"的理念——这也是Supademo始终坚持的价值观。"
+      }
+    },
+    {
+      "segment_id": "b9aaa519",
+      "source_content": "**Q:** Thank you, Joseph Lee, for sharing your valuable insights into Supademo's journey with enterprise SSO. Your experiences provide a compelling example of how innovation and strategic partnerships can drive success in today's dynamic business landscape.",
+      "source_content_hash": "6e21bf61d42ae7607e65e7ca388636fc0a3ddeb89eed8a0b181d67251863ebc6",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "**问：** 感谢Joseph Lee分享Supademo在企业SSO领域的宝贵经验。您的案例有力证明了创新与战略合作如何推动企业在当今动态商业环境中取得成功。"
+      }
+    },
+    {
+      "segment_id": "e536ea0d",
+      "source_content": "**Joseph Lee (Supademo):** You're very welcome. It's been a pleasure to be part of this discussion, and I hope our experiences can inspire others in their endeavors. Thank you for having me.",
+      "source_content_hash": "cbcbbc2e4d208d784966569c3c5b958a8d3d0219a56d8b376d1ddb4e9a10788a",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "**Joseph Lee (Supademo):** 非常感谢邀请。能参与这次讨论是我的荣幸，希望我们的经验能对其他探索者有所启发。感谢你们的邀请。"
+      }
+    },
+    {
+      "segment_id": "60e88cae",
+      "source_content": "<div style={{ textAlign: \"center\" }}>\n  <a href=\"/success-stories/cost-efficiency-unleashed-how-boxyhqs-sso-saved-supademo-time-and-money\" className=\"button button-primary\">Read Spike's success story</a>\n</div>",
+      "source_content_hash": "de1322952bb26f7a52593c314dcbef436b752a19746eb5a50e6566de007f836c",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_60e88cae"
+      }
+    }
+  ],
+  "target_i18n_subpath": "docusaurus-plugin-content-blog/2023-9-23-boosting-trust-and-efficiency-a-conversation-with-supademos-ceo.md",
+  "last_updated_timestamp": "2025-06-08T18:49:09.288021+00:00",
+  "schema_version": "1.0",
+  "translated_versions": {
+    "zh-CN": "b495cafb0e31e0428cc9ebfb2059653d7be965e0adeefc7944bbd50e3b4558d2"
+  }
+}

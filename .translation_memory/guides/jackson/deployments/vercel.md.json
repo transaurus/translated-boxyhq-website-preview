@@ -1,0 +1,132 @@
+{
+  "source_file_path_relative_to_docusaurus_root": "guides/jackson/deployments/vercel.md",
+  "source_file_content_hash": "97707bf73c9c04001d84a30f281ec33f4b790959ed23d42896c994f14eedb6d2",
+  "segments": [
+    {
+      "segment_id": "58cfcc64",
+      "source_content": "---\ntitle: Deploy Enterprise SSO on Vercel\nsidebar_label: Vercel\n---",
+      "source_content_hash": "332abe69257bd20b14ec7a8b478936dcd082497056948952029ce0f1058fdc8a",
+      "node_type": "yaml",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_58cfcc64"
+      }
+    },
+    {
+      "segment_id": "b3de8742",
+      "source_content": "# Vercel",
+      "source_content_hash": "0e0ac36d370000251c9af1648bbd97603fa86e0b6dd3a14e6c6b3c653274d4f6",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "# Vercel"
+      }
+    },
+    {
+      "segment_id": "3fbbcc07",
+      "source_content": "This guide will walk you through the configuration and deployment of SAML Jackson on Vercel. We'll be using the Vercel **Deploy Button** that enables users to deploy apps to Vercel without leaving the web browser and with little or no configuration.",
+      "source_content_hash": "be1bef0baeacf3084ad017ea087d0c51c0de4dd7cee27f90cf1b256d9e1f386a",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "本指南将引导您在Vercel上配置和部署SAML Jackson。我们将使用Vercel的**一键部署按钮**，该功能允许用户无需离开浏览器且几乎无需配置即可将应用部署至Vercel。"
+      }
+    },
+    {
+      "segment_id": "7e5c5a39",
+      "source_content": "If you don’t have a Vercel account, create one [here](https://vercel.com/signup).",
+      "source_content_hash": "c43261e8428f4a74bc87560b666afd2f6a33dd1314d1ab344b0ea637aab108f6",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "若您尚未拥有Vercel账户，请先[注册](https://vercel.com/signup)。"
+      }
+    },
+    {
+      "segment_id": "9fcbdce9",
+      "source_content": "## Deploy SAML Jackson",
+      "source_content_hash": "a0e13097fd2993ace1af0660cd109771e83dbf0f0f2632299e31ec073db6315f",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 部署SAML Jackson"
+      }
+    },
+    {
+      "segment_id": "9e760345",
+      "source_content": "- Fork the the SAML Jackson [GitHub repository](https://github.com/boxyhq/jackson/fork).\n- Go to the forked repo and click the **Deploy** button from the README section.\n- Select your username under **GIT SCOPE**.\n- Enter a **name** for your project, choose whether you want your repo `private` or `public`, and click **Create**.\n- Fill the **Environment Variables** as per the [documentation](/docs/jackson/deploy/env-variables).\n- After you've filled everything click the **Deploy** button.",
+      "source_content_hash": "e11e9978ba35bdefae5d8e470a7156e947d9cb95d9af680dab2506b424ec5cd9",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- Fork SAML Jackson的[GitHub仓库](https://github.com/boxyhq/jackson/fork)。\n- 进入您fork的仓库，点击README部分的**Deploy**按钮。\n- 在**GIT SCOPE**下选择您的用户名。\n- 为项目输入**名称**，选择仓库可见性（`private`或`public`），点击**Create**。\n- 根据[文档](/docs/jackson/deploy/env-variables)填写**环境变量**。\n- 填写完成后点击**Deploy**按钮开始部署。"
+      }
+    },
+    {
+      "segment_id": "418617bd",
+      "source_content": "### Verify deployment",
+      "source_content_hash": "fe01a68db10bb5432ec745b029e25e0536fcef810f0b2a41e26c8e75b29e16f4",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 验证部署"
+      }
+    },
+    {
+      "segment_id": "2fdadb08",
+      "source_content": "You can visit the path `/api/hello` on your app to see if the Jackson was started successfully! If the installation was successful, you'll see the following output on the screen.",
+      "source_content_hash": "70c9bcb9cb6211e26f41440ae4d09d1b0f95fe77e024b0a886c15f1415bced92",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "您可以通过访问应用路径`/api/hello`来验证Jackson是否成功启动。若部署成功，页面将显示如下输出内容。"
+      }
+    },
+    {
+      "segment_id": "3569d545",
+      "source_content": "```javascript\n{\n  name: 'Jules Winnfield';\n}\n```",
+      "source_content_hash": "11bd99500e50a387cd8629e794d1f593dd3e743eecc6e7eb51e07b9813194fe9",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_3569d545"
+      }
+    },
+    {
+      "segment_id": "48847fd4",
+      "source_content": "## Next steps",
+      "source_content_hash": "3a5d9cbc49e6e5f0c98349dd1cd7cfe5713807fc5f02234240621031925d1f32",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 后续步骤"
+      }
+    },
+    {
+      "segment_id": "4daf5cdd",
+      "source_content": "At this stage you have a functional SAML Jackson instance running on your server!",
+      "source_content_hash": "1ad8ad32d96c0df5d4208e9d8755a2942dc2dd39542bec883819f7bc3c524e5d",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "至此，您已在服务器上成功运行了一个功能完备的SAML Jackson实例！"
+      }
+    },
+    {
+      "segment_id": "fc8eadc3",
+      "source_content": "- Got a question? [Ask here](https://discord.gg/uyb7pYt4Pa)\n- [Sign into Admin Portal](/docs/admin-portal/overview#authentication-methods)\n- [Add SAML Configurations](/docs/admin-portal/enterprise-sso)",
+      "source_content_hash": "4b72a6f948ed79acb70ec44fca1bf20aa8d8d44cd60cbc0aa81410f145c31552",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- 遇到问题？[在此提问](https://discord.gg/uyb7pYt4Pa)\n- [登录管理门户](/docs/admin-portal/overview#authentication-methods)\n- [添加SAML配置](/docs/admin-portal/enterprise-sso)"
+      }
+    }
+  ],
+  "target_i18n_subpath": "docusaurus-plugin-content-docs-guides/current/jackson/deployments/vercel.md",
+  "last_updated_timestamp": "2025-06-08T18:49:09.305931+00:00",
+  "schema_version": "1.0",
+  "translated_versions": {
+    "zh-CN": "97707bf73c9c04001d84a30f281ec33f4b790959ed23d42896c994f14eedb6d2"
+  }
+}

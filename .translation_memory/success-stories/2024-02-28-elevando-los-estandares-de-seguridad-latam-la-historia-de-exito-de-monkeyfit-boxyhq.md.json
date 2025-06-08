@@ -1,0 +1,192 @@
+{
+  "source_file_path_relative_to_docusaurus_root": "success-stories/2024-02-28-elevando-los-estandares-de-seguridad-latam-la-historia-de-exito-de-monkeyfit-boxyhq.md",
+  "source_file_content_hash": "f3284c11ff8ce234ea823d3d458555d9174a8c49007b30fb569b336fb981a1f5",
+  "segments": [
+    {
+      "segment_id": "58cfcc64",
+      "source_content": "---\ndescription: 'MonkeyFit, una empresa de software de LATAM, adoptó el SSO de BoxyHQ para mejorar la seguridad, el cumplimiento y el alcance en el mercado. Aprende cómo su éxito puede ser tu modelo a seguir.'\nslug: elevando-los-estandares-de-seguridad-latam-la-historia-de-exito-de-monkeyfit-boxyhq\ntitle: 'Mejorando los Estándares de Seguridad en LatAm: La Historia de Éxito de MonkeyFit - BoxyHQ'\ntags_disabled: [security, sso, enterpriseready]\nimage: /images/success-stories/monkeyfit-case-study.png\nhide_table_of_contents: true\n---",
+      "source_content_hash": "58b6603bd55b785459452f2311aa0df4d54ec6ded4ba213abfe99cd8260e2a15",
+      "node_type": "yaml",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_58cfcc64"
+      }
+    },
+    {
+      "segment_id": "73ddcfdf",
+      "source_content": "import FeaturedQuote from \"../src/components/FeaturedQuote\";\nimport LearnMoreCTA from \"../src/components/ctas/LearnMoreCTA\";\nimport SignupCTA from \"../src/components/ctas/SignupCTA\";",
+      "source_content_hash": "a28b4a3bd17e93ac6f365d297f206a7a21f2f6a9d7fe893f83bccc52218ee4ee",
+      "node_type": "mdxjsEsm",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_73ddcfdf"
+      }
+    },
+    {
+      "segment_id": "ad8fd492",
+      "source_content": "En el siempre cambiante panorama tecnológico, las empresas enfrentan una multitud de desafíos en cuanto a escalabilidad, seguridad y cumplimiento normativo. El viaje de MonkeyFit, detallado en un caso de estudio, demuestra el poder de soluciones estratégicas para superar tales obstáculos. Su pasión por ofrecer software de nivel mundial y productos seguros en Perú y América Latina los llevó a adoptar la solución de Inicio Unico de Sesión - [Single Sign-On](/enterprise-sso) (SSO) de BoxyHQ, una elección que catalizó avances significativos en sus operaciones comerciales y posición en el mercado dentro de la región.",
+      "source_content_hash": "bc84643c2e99f33892af34b83fa074a8e6fcbd6ef97e80d5c036ae3891afac84",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "在瞬息万变的技术环境中，企业面临着可扩展性、安全性和合规性等多重挑战。MonkeyFit的历程通过案例研究展示了战略解决方案如何助力企业突破这些障碍。该公司怀着为秘鲁和拉丁美洲提供世界级安全软件的激情，选择了BoxyHQ的企业级[单点登录](/enterprise-sso)(SSO)解决方案，这一决策显著推动了其商业运营和市场地位的提升。"
+      }
+    },
+    {
+      "segment_id": "cc3676fa",
+      "source_content": "<LearnMoreCTA label=\"Read the MonkeyFit case study in English\" newWindow={false} url=\"/success-stories/elevating-latam-security-standards-the-monkeyfit-boxyhq-success-story\" />",
+      "source_content_hash": "537bd3f52c122ac3486f5a6e4ba6a123f7c9e3e7446a1f035622ef48b02dc6c4",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_cc3676fa"
+      }
+    },
+    {
+      "segment_id": "d350c018",
+      "source_content": "## El Catalizador del Cambio",
+      "source_content_hash": "5b5e3da7a051b9e8a445d13c38932ff876b78541a00caf2a7f81ad650cc5d75d",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 变革的催化剂"
+      }
+    },
+    {
+      "segment_id": "1acb9a05",
+      "source_content": "[MonkeyFit](https://www.monkeyfitpass.com/) reconoció la necesidad de implementar SSO empresarial para cumplir con estrictos controles de seguridad para un cliente clave. Esta necesidad no solo se trataba de asegurar datos, sino también de sentar las bases para un crecimiento escalable. La elección de BoxyHQ, con su naturaleza bien documentada y de código abierto (open-source), fue crucial. Simplificó la implementación y ofreció un marco adaptable que era crucial para los requisitos específicos de MonkeyFit.",
+      "source_content_hash": "107bc07dc0d4fe6cc9a3602c5163116d0ae9aa6a92f4f53af178fbb433ae2579",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "[MonkeyFit](https://www.monkeyfitpass.com/)意识到需要实施企业SSO以满足关键客户严格的安全管控要求。这不仅关乎数据安全，更是为可扩展增长奠定基础。选择文档完善、开源的BoxyHQ解决方案至关重要——其简化了实施流程，并提供能适配MonkeyFit特殊需求的灵活框架。"
+      }
+    },
+    {
+      "segment_id": "5dfba1c3",
+      "source_content": "<FeaturedQuote personName=\"José (Pepo) Arellano\" personRole=\"CEO & Cofundador - MonkeyFit\" pictureSrc=\"/images/success-stories/jose-pepo-arellano-monkeyfit\">\n Gracias a que SAML Jackson se encuentra Dockerizado, no tenemos problemas de downtime en una funcionalidad critica de la plataforma como lo es el signin y el signup.\n</FeaturedQuote>",
+      "source_content_hash": "42272c108ffabd8f3b56d97b1e2021fc5ede69bd6e447599455841a9fd045a71",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_5dfba1c3"
+      }
+    },
+    {
+      "segment_id": "79b2d0b9",
+      "source_content": "## Soluciones y Beneficios: Un Enfoque de Doble Beneficio",
+      "source_content_hash": "604561e054bf06e3066f9c8ce16ed359f1340aad96f049dfff9a0e6a22844f08",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 双重效益的解决方案"
+      }
+    },
+    {
+      "segment_id": "d9172fa4",
+      "source_content": "La adopción de la solución SSO de BoxyHQ generó tanto beneficios directos como indirectos. Directamente, simplificó el proceso de integración con proveedores de identidad, reduciendo significativamente el tiempo de desarrollo, estimado en aproximadamente cinco sprints (iteraciones). Esta ganancia de eficiencia no solo fue una medida de tiempo ahorrado, sino también un testimonio de la base de conocimientos enriquecida y del marco de desarrollo acelerado que MonkeyFit ahora disfrutaba.",
+      "source_content_hash": "d61974a374cb7e34b8b4785983e535490f440d7f237dcda4626a5f41c142e527",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "采用BoxyHQ的SSO方案产生了直接与间接双重效益。直接效益包括简化与身份提供商的集成流程，预计节省约五个冲刺周期(sprint)的开发时间。这种效率提升不仅是时间成本的节约，更标志着MonkeyFit获得了加速开发的知识体系和框架。"
+      }
+    },
+    {
+      "segment_id": "26524352",
+      "source_content": "Los beneficios indirectos, a menudo pasados por alto, fueron igualmente transformadores. La naturaleza Dockerizada de la solución aseguró cero tiempo de inactividad para funcionalidades críticas como los procesos de inicio de sesión y registro. Además, al servir como intermediario entre proveedores de identidad, amplió el soporte tanto para los protocolos SAML como OIDC, ampliando el atractivo de MonkeyFit a una amplia gama de clientes futuros.",
+      "source_content_hash": "156ea5680173159490c357f4f7e2ba8bd859121701c02d20eff84b71bf84c23b",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "常被忽视的间接效益同样具有变革性：方案的Docker化部署确保登录/注册等核心功能零停机；作为身份提供商中间层，同时支持SAML和OIDC协议，极大拓展了未来客户群体的兼容性。"
+      }
+    },
+    {
+      "segment_id": "b25f21be",
+      "source_content": "## Un Testimonio de Innovación",
+      "source_content_hash": "99123220ada208f5a37326b14e5224cf99ab2963f6e63bda6607ca5ee59dcdfe",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 创新实践的见证"
+      }
+    },
+    {
+      "segment_id": "7499a4e7",
+      "source_content": "Reflexionando sobre el viaje, un portavoz de MonkeyFit destacó el impacto transformador de la solución de BoxyHQ: \"Durante el desarrollo, SAML Jackson proporcionó un flujo bien documentado y claro para hacer llamadas a la herramienta, reduciendo el tiempo en picos y en I+D en comparación con una integración directa con proveedores de identidad.\"",
+      "source_content_hash": "1b88704198b521af6d8c9d7da75cb814877837a23709b02c8d43f58fa0f53dc7",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "MonkeyFit发言人总结道：\"在开发过程中，SAML Jackson提供了文档完善、调用逻辑清晰的流程，相比直接对接身份提供商，显著减少了技术调研和尖峰处理时间。\""
+      }
+    },
+    {
+      "segment_id": "e7c54101",
+      "source_content": "<SignupCTA campaign=\"success-story-monkeyfit-es\" label=\"Regístrate hoy\" />",
+      "source_content_hash": "88b63f9e981956d1eef25c422d169787559bfbe4cf4fd40653b1e0303cc9a34e",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_e7c54101"
+      }
+    },
+    {
+      "segment_id": "80d9e13c",
+      "source_content": "## Más Allá de la Implementación: El Camino hacia el Cumplimiento Normativo y el Crecimiento",
+      "source_content_hash": "1f2910aaf1f0aad24cbb67629295d0c6e4f937c3b20927ee4d0ba01303770887",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 超越实施：合规与增长之路"
+      }
+    },
+    {
+      "segment_id": "33331f27",
+      "source_content": "La decisión estratégica de incorporar BoxyHQ no solo facilitó eficiencias operativas, sino que también alineó a MonkeyFit más cerca de alcanzar el cumplimiento SOC 2, un hito crucial para cualquier empresa tecnológica. Además, este movimiento mejoró significativamente su capacidad para atraer clientes empresariales, especialmente de sectores con una mayor conciencia de las prácticas de seguridad de la información.",
+      "source_content_hash": "0e441942f8a0090ab95461696bb37a4ecfb4ae269921ac852b2a207b8e6547f3",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "这一战略决策不仅提升运营效率，更推动MonkeyFit接近SOC 2合规里程碑——这对科技企业至关重要。同时极大增强了其吸引企业客户的能力，特别是在信息安全意识较强的行业领域。"
+      }
+    },
+    {
+      "segment_id": "8d04259b",
+      "source_content": "### Conclusión: Un Modelo de Éxito",
+      "source_content_hash": "9e2d1c3dd52e659c983a846c1abb83489cb2852ed3d97e3c13f0fa6cb090a02c",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 成功范式：战略技术资产"
+      }
+    },
+    {
+      "segment_id": "95e9ba12",
+      "source_content": "El viaje de MonkeyFit es un estudio de caso convincente para empresas tecnológicas que navegan por las complejidades del crecimiento, la seguridad y el cumplimiento normativo. Al elegir una solución que ofrecía beneficios tanto inmediatos como a largo plazo, MonkeyFit no solo satisfizo sus necesidades de seguridad inmediatas, sino que también estableció un plan para una expansión sostenible y una mayor competitividad en el mercado. Este estudio de caso sirve como un modelo para otras empresas que buscan aprovechar la tecnología no solo como una herramienta para resolver desafíos presentes, sino como un activo estratégico para el crecimiento futuro.",
+      "source_content_hash": "701fb0e60d5fcbddd9de752a63f184e7afca39c4d25147a981ab82111cad0fdf",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "MonkeyFit的历程为科技公司应对增长、安全与合规性挑战提供了极具说服力的案例研究。通过选择兼具即时与长期效益的解决方案，MonkeyFit不仅满足了当前的安全需求，更制定了可持续扩张与增强市场竞争力的路线图。该案例为其他企业树立了典范——将技术不仅视为解决当下难题的工具，更作为未来发展的战略资产。"
+      }
+    },
+    {
+      "segment_id": "f5276727",
+      "source_content": "<LearnMoreCTA label=\"Lea la entrevista con MonkeyFit\" newWindow={false} url=\"/blog/aprovechando-boxyhq-sso-para-un-mayor-alcance-de-mercado-y-cumplimiento-monkeyfit\" />",
+      "source_content_hash": "80c1d510c5bdfa7a40a47026a0aec4c40565fb0e90233ea47ec99d7b7da267fc",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_f5276727"
+      }
+    }
+  ],
+  "target_i18n_subpath": "docusaurus-plugin-content-blog-success-stories/2024-02-28-elevando-los-estandares-de-seguridad-latam-la-historia-de-exito-de-monkeyfit-boxyhq.md",
+  "last_updated_timestamp": "2025-06-08T18:49:09.290969+00:00",
+  "schema_version": "1.0",
+  "translated_versions": {
+    "zh-CN": "f3284c11ff8ce234ea823d3d458555d9174a8c49007b30fb569b336fb981a1f5"
+  }
+}

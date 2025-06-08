@@ -1,0 +1,122 @@
+{
+  "source_file_path_relative_to_docusaurus_root": "docs/jackson/sso-flow/example-flow.md",
+  "source_file_content_hash": "e62946df757dda52deb2eb7b3aa86db5a112bd71e13c7b5a7521b2d0228a1290",
+  "segments": [
+    {
+      "segment_id": "58cfcc64",
+      "source_content": "---\ntitle: Example flow\nsidebar_label: Example flow\n---",
+      "source_content_hash": "e0e24ab631f42e4d7613466fd4f1a7b69941ec3c8ff26cb9bc33554fdb4ae307",
+      "node_type": "yaml",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_58cfcc64"
+      }
+    },
+    {
+      "segment_id": "b3de8742",
+      "source_content": "## Scenario",
+      "source_content_hash": "00a66fcef9ead0edaf0c73b17514eee009ae4ee6a22ae7f65d57d819aa0032ea",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 场景示例"
+      }
+    },
+    {
+      "segment_id": "3fbbcc07",
+      "source_content": "Let's say you have a customer `acme.com` who is using two of your SaaS offerings. For now let's call them:",
+      "source_content_hash": "eb286408c99efb0cf6c9a2c63dc8dd4082c62ba3de2e0b30d001726febab18b8",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "假设您有一个客户`acme.com`正在使用您的两项SaaS服务。暂将其命名为："
+      }
+    },
+    {
+      "segment_id": "4a5b6a68",
+      "source_content": "- `CRM (Customer Relationship Management)` - Should integrate with the customer (of acme.com) facing SAML Identity Provider (Azure AD)\n- `HRM (Human Resource Management)` - Should integrate with the Google workspace account of `acme.com` employees.",
+      "source_content_hash": "6c5cbd9da6f049ab1b030f4bf717968fb8ea33759ca744914b92b39132386824",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- `CRM（客户关系管理）` - 需与面向客户（acme.com的客户）的SAML身份提供商（Azure AD）集成\n- `HRM（人力资源管理系统）` - 需与`acme.com`员工的Google Workspace账户集成"
+      }
+    },
+    {
+      "segment_id": "180bddb1",
+      "source_content": "Let's see how SSO works in this case.",
+      "source_content_hash": "74f3826d053175237172d47b018acab830970d84c4e43848966e7afd7025241b",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "以下展示该场景下的SSO工作原理"
+      }
+    },
+    {
+      "segment_id": "e14c9928",
+      "source_content": "## Configure the SSO Connection",
+      "source_content_hash": "98f305b16f5bd58fd0dfa1362066a1b8e496abd4475a6f1b70b56afd25621281",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 配置SSO连接"
+      }
+    },
+    {
+      "segment_id": "42ad8e83",
+      "source_content": "First as the application developer, you'll need to [add](./index.md#21-add-connection) the SSO connections for CRM and HRM. This will be saved (marked as SAML Metadata and OIDC Metadata in the below diagram) within Jackson and later used to orchestrate the IdP login.",
+      "source_content_hash": "cd5e70ffa1bc54a7cab5b53a22c5c864e9ce77b9c2e3cc25403580084e56291f",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "首先作为应用开发者，您需要为CRM和HRM[添加](./index.md#21-add-connection)SSO连接。这些配置（下图标注为SAML元数据和OIDC元数据）将保存在Jackson中，后续用于协调身份提供商的登录流程。"
+      }
+    },
+    {
+      "segment_id": "aee0e40d",
+      "source_content": "## Login flow",
+      "source_content_hash": "5996379d24f12483083564406b53e8a919f6895777c4fd6b867c937dd8135c5a",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 登录流程"
+      }
+    },
+    {
+      "segment_id": "f5f6d2ce",
+      "source_content": "Jackson uses the Authorization Code flow as outlined by the numbered steps below.",
+      "source_content_hash": "ca8c4df78d717d4387315047700e562f45ba9a0631074c7d72ae56fadceaf733",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "Jackson采用授权码流程，具体步骤如下："
+      }
+    },
+    {
+      "segment_id": "1b8c1887",
+      "source_content": "1. The Client (Browser app) initiates the login by redirecting to Jackson [`authorize`](./index.md#31-authorize) endpoint. Jackson will parse the tenant/product in the request and use it to redirect the user to the configured IdP.\n2. Step 2 varies based on the Identity Provider type. For SAML IdP, Jackson would construct the SAML request, sign it and send it to IdP. The IdP validates the request and redirects the user to the login screen. For OIDC IdP, Jackson constructs an OpenID Connect request and redirects the user to the OIDC Provider authorization endpoint.\n3. Once the user is logged in successfully, the IdP redirects back to Jackson. For SAML, the response contains the user profile. In the case of OIDC, the response contains the authorization code that is used by Jackson to obtain token and userprofile from the OIDC IdP. Jackson generates a short lived code and stores the user profile against it.\n4. The authorization code generated in the previous step is sent to the client app.\n5. The client [`exchanges`](./index.md#32-code-exchange) the code for token and uses it to query the [`userInfo`](./index.md#33-profile-request) endpoint of Jackson to get the complete user profile.",
+      "source_content_hash": "fdcf29971ceeaefa848b8c51138ee4ee68377d7286670568fc4f2893236c9ea0",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "1. 客户端（浏览器应用）通过重定向至Jackson的[`authorize`](./index.md#31-authorize)端点发起登录。Jackson将解析请求中的租户/产品信息，并据此将用户重定向至配置的身份提供商。\n2. 第二步根据身份提供商类型有所不同：对于SAML身份提供商，Jackson会构建SAML请求并签名后发送至IdP，IdP验证请求后将用户重定向至登录页面；对于OIDC身份提供商，Jackson会构建OpenID Connect请求并重定向用户至OIDC提供商的授权端点。\n3. 用户成功登录后，身份提供商将重定向回Jackson。SAML响应包含用户档案，OIDC响应则包含授权码（Jackson用其从OIDC身份提供商获取令牌和用户档案）。Jackson生成短期有效的代码并将用户档案与之关联存储。\n4. 上一步生成的授权码发送至客户端应用。\n5. 客户端通过[兑换](./index.md#32-code-exchange)代码获取令牌，并调用Jackson的[`userInfo`](./index.md#33-profile-request)端点获取完整用户档案。"
+      }
+    },
+    {
+      "segment_id": "4b1d2d7d",
+      "source_content": "![SSO Flow](/images/docs/jackson/sso-flow.png)",
+      "source_content_hash": "2fe2ad155012f35e89a81e44df897d82f173796d9aa2176d53b320fcfccfe78f",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![SSO流程](/images/docs/jackson/sso-flow.png)"
+      }
+    }
+  ],
+  "target_i18n_subpath": "docusaurus-plugin-content-docs/current/jackson/sso-flow/example-flow.md",
+  "last_updated_timestamp": "2025-06-08T18:49:09.310709+00:00",
+  "schema_version": "1.0",
+  "translated_versions": {
+    "zh-CN": "e62946df757dda52deb2eb7b3aa86db5a112bd71e13c7b5a7521b2d0228a1290"
+  }
+}

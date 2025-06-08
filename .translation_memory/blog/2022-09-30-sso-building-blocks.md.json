@@ -1,0 +1,342 @@
+{
+  "source_file_path_relative_to_docusaurus_root": "blog/2022-09-30-sso-building-blocks.md",
+  "source_file_content_hash": "17823dceec6b29e6f1cfb323f1735ae7ba3a5121d7618eeca76901ae69632a0f",
+  "segments": [
+    {
+      "segment_id": "58cfcc64",
+      "source_content": "---\nslug: sso-building-blocks\ntitle: SSO Building blocks - SAML, OAuth 2.0 and OpenID Connect\nauthor: Aswin V\nauthor_title: Senior Developer @BoxyHQ\nauthor_url: https://twitter.com/av__2021\nauthor_image_url: /images/authors/aswin.jpg\ntags_disabled: [sso, engineering, saml-jackson, oauth-2.0]\nimage: /images/docs/jackson/sso-flow.png\n---",
+      "source_content_hash": "c030fff7c47bea751616b98a0a0d669f2fb3a12f3b5beb3bb43efd703af87926",
+      "node_type": "yaml",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_58cfcc64"
+      }
+    },
+    {
+      "segment_id": "8d66f911",
+      "source_content": "We have already covered SAML at a high level from both [user](2022-06-30-understanding-saml-sso-the-basics-from-the-user-side.md) and [application provider](2022-06-30-understanding-saml-sso-the-basics-from-the-solution-providers-side.md) points of view.",
+      "source_content_hash": "bff5557eda3a4d4284edbc19dd9c6c3d9ac17bf0d946ab557ed761f8f64e6b48",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "我们已从[用户](2022-06-30-understanding-saml-sso-the-basics-from-the-user-side.md)和[应用提供商](2022-06-30-understanding-saml-sso-the-basics-from-the-solution-providers-side.md)两个角度对SAML进行了宏观层面的解析。"
+      }
+    },
+    {
+      "segment_id": "ad8fd492",
+      "source_content": "In this post, we'll dive into the technicalities of SAML, OAuth 2.0 and OpenID Connect and how these come together to serve as building blocks for Jackson SSO.",
+      "source_content_hash": "ecf3180e63bb448865c60b0868e0fff1c1402889dbd4758b6aafa7d0dc60cca9",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "本文将深入探讨SAML、OAuth 2.0和OpenID Connect的技术细节，以及这些技术如何共同构建Jackson SSO的基石。"
+      }
+    },
+    {
+      "segment_id": "cbe57f9d",
+      "source_content": "## SAML",
+      "source_content_hash": "81ea58ec59fc6890cf1f19e5e6fdfdb2003d86954e948b236e1855aa19b64115",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## SAML"
+      }
+    },
+    {
+      "segment_id": "39b3772c",
+      "source_content": "SAML was designed for traditional web applications in the early 2000s. The goal was to provide a seamless user experience for applications by federating authentication to an IdP. As a result, applications no longer had to maintain identities for users. All they had to do was to redirect the browser to the IdP which would then authenticate the user and return an assertion about the logged-in user. This assertion in effect was a token, asserting to the app that the user authenticated at the IdP and the assertion is valid for the set period contained within it.",
+      "source_content_hash": "8e93a3b035122895b8db93a848a9c5e92df55cb00300d005a3402643737551b5",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "SAML专为2000年代初期的传统Web应用设计，其目标是通过将认证委托给身份提供商（IdP）来为应用提供无缝用户体验。应用不再需要维护用户身份，只需将浏览器重定向至IdP——后者对用户进行认证后，返回关于已登录用户的断言。该断言本质上是一个令牌，向应用声明用户已在IdP完成认证，且断言在有效期内持续有效。"
+      }
+    },
+    {
+      "segment_id": "1acb9a05",
+      "source_content": "While SAML gave us a solution to the problem of SSO or federated identity, it does not address the issue of authorization.",
+      "source_content_hash": "d1bf556b5c8f6c1cae7f27531d8e9d2c8e6749eca4c1d7709c9f6d8554cfa131",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "虽然SAML解决了SSO（单点登录）和联邦身份问题，但并未涉及授权机制。"
+      }
+    },
+    {
+      "segment_id": "2df4f75f",
+      "source_content": "The need for authorization arose with the dawn of Single Page Apps (SPA) and native platforms such as mobile. More and more logic started moving from backend to frontend and an ecosystem of apps that could talk to one another (via HTTP(S)) sprung up. For eg:- You could reserve movie tickets and send invitations to your Facebook friends. This meant that applications started acting on behalf of the end-user, requesting data (friend list) from other services (Facebook). One way we could solve it was by sharing our credentials (for services) with the app. Nothing could be more dangerous than this, because now the application can virtually do anything the user could do. This paved the path for standards like OAuth that provides us with a mechanism to grant controlled and limited access to resources on behalf of the user.",
+      "source_content_hash": "b861d1c87c1d5a9c3ae52a4732b0b751e9f6952fca58e413f0108c365ca22af4",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "随着单页应用（SPA）和移动端等原生平台的兴起，授权需求日益凸显。越来越多的逻辑从后端迁移至前端，应用间通过HTTP(S)相互通信的生态系统逐渐形成。例如：用户可通过应用预订电影票并向Facebook好友发送邀请。这意味着应用开始代表终端用户向其他服务（如Facebook）请求数据（好友列表）。传统解决方案是向应用共享服务凭证，但这极其危险——应用将获得等同于用户的所有权限。这催生了OAuth等标准协议，通过机制化授权实现受控的有限资源访问。"
+      }
+    },
+    {
+      "segment_id": "95b38f97",
+      "source_content": "## OAuth 2.0",
+      "source_content_hash": "d121dfab3e243002d6ab4f0b36218d681b36b59145b32fb9c56f2d307657cba9",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## OAuth 2.0"
+      }
+    },
+    {
+      "segment_id": "ccc88b4c",
+      "source_content": "The OAuth 2.0 Authorization framework enables a third-party application/client to obtain limited access to an HTTP service on behalf of the resource owner (or user). In the final step of this process, the client receives a short-lived access token that can be used to access the protected resources.",
+      "source_content_hash": "392f3dc2057330fad088299b733afcea703099081fc80a800bfbd15b8ff2c8ac",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "OAuth 2.0授权框架使第三方应用/客户端能够代表资源所有者（用户）获取对HTTP服务的受限访问权限。流程最终阶段，客户端将获得短期有效的访问令牌，用于访问受保护资源。"
+      }
+    },
+    {
+      "segment_id": "d9172fa4",
+      "source_content": "The flow starts with the app redirecting the user agent to an intermediary Authorization server (AS). The AS authenticates the user and obtains permission from the user to access resources. Once that's done, AS redirects back to the client with an Authorization code. The Authorization code is a grant or a credential representing the user's authorization to be used by the client. In the final step, the client uses this code to obtain an access token. This flow otherwise called Authorization Code grant is one of 4 grant types that are supported. For sake of simplicity, we can omit the others for now.",
+      "source_content_hash": "fbbfacc7244fdf2c1970e20861190e13a192b1585e501f5ce599fa709a259f62",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "流程始于应用将用户代理重定向至授权服务器（AS）。AS对用户进行认证并获取资源访问许可后，携带授权代码重定向回客户端。该代码作为用户授权的凭证，最终被客户端用于换取访问令牌。此流程称为授权码许可（Authorization Code grant），是OAuth 2.0支持的四种许可类型之一，其余类型暂不赘述。"
+      }
+    },
+    {
+      "segment_id": "26524352",
+      "source_content": "The above-mentioned flow offers a few benefits:",
+      "source_content_hash": "20563d794aefde06d33106821db8b50a8e8349acf1501427fcb5272ef5078bdf",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "该流程具备以下优势："
+      }
+    },
+    {
+      "segment_id": "86b525ab",
+      "source_content": "- The user only authenticates with the authorization server and the credentials are never shared with the app.\n- The access token is not transmitted<sup>\\*</sup> via the user agent but directly to the client via an HTTP request.\n- The Client can be authenticated by the authorization server by using a client secret.",
+      "source_content_hash": "356254ca1b8adbd57adf178b6829a7a196537ce7ed1beda03e065aba9e8a5433",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- 用户仅需向授权服务器认证，凭证绝不暴露给应用\n- 访问令牌不通过用户代理传输<sup>*</sup>，而是通过HTTP请求直达客户端\n- 授权服务器可通过客户端密钥验证客户端身份"
+      }
+    },
+    {
+      "segment_id": "517051a7",
+      "source_content": "**\\*** _It's worth mentioning the fact that another grant type 'implicit grant' does return an access token via the user agent in the redirect URL fragment_",
+      "source_content_hash": "fc2b5e86691f2d51a75be98aae16f3eae60c802454a2a715bd2cc7e8ba9cefaa",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "**\\*** _需特别说明：另一种\"隐式许可\"类型确实会通过重定向URL片段返回访问令牌_"
+      }
+    },
+    {
+      "segment_id": "80d9e13c",
+      "source_content": "#### Using OAuth 2.0 for authentication",
+      "source_content_hash": "d04189e6e2e242dcfd3bffb8ca9d3848daf2acd21845406fe914d939bbfbe46a",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "#### 将OAuth 2.0用于认证"
+      }
+    },
+    {
+      "segment_id": "33331f27",
+      "source_content": "Since authentication usually occurs before issuing the access token, it is usually assumed that possession of an access token is proof that authentication happened. The access token is then used to query the Identity API to obtain user details.",
+      "source_content_hash": "8db37929f98f274887f4566f9e4dc0c04f9d1ba3fb6773bf2840abe328434501",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "由于认证通常发生在颁发访问令牌之前，通常认为持有访问令牌即代表认证已完成。随后该令牌被用于查询身份API以获取用户详情。"
+      }
+    },
+    {
+      "segment_id": "50746522",
+      "source_content": "However, this does not fully serve as proof of authentication and has several pitfalls:",
+      "source_content_hash": "108271a6f2d342491689ceb01eecef3a2e769bd40d73bcaf628fad0ea0859e12",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "但这并不能完全作为认证凭证，且存在若干缺陷："
+      }
+    },
+    {
+      "segment_id": "aa83231c",
+      "source_content": "- The access token is opaque to the client and its intended audience is the protected resource server.\n- There is no way to know if the user is still around because information about the authentication event is not exposed.\n- In situations where clients get an access token directly in the return URL (implicit grant), there is a high chance that an attacker can inject their malicious token. This can be mitigated by using the Authorization code flow as the token is retrieved from the token endpoint directly.\n- OAuth does not define a standard set of fields for the Identity API. For eg:- While one IdP could use `user_id` for the user identifier, the same could be `subject` in another one. This requires different handling on the client side from one IdP to another.",
+      "source_content_hash": "d8e9030577744ffe26e4876214861ae80290c746fadaac34a4c7e8768d616601",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- 访问令牌对客户端是不透明的，其目标受众是受保护的资源服务器。\n- 由于认证事件的信息未被暴露，无法判断用户是否仍处于登录状态。\n- 在客户端直接从返回URL获取访问令牌（隐式授权）的情况下，攻击者有可能注入恶意令牌。通过使用授权码流程可缓解此风险，因为令牌是直接从令牌端点获取的。\n- OAuth未对身份API的字段集进行标准化。例如：某个身份提供商可能使用`user_id`作为用户标识符，而另一个可能使用`subject`。这要求客户端针对不同身份提供商进行差异化处理。"
+      }
+    },
+    {
+      "segment_id": "29528c8d",
+      "source_content": "A new standard called 'OpenID Connect' which builds on top of OAuth 2.0 brings new artifacts like ID tokens that can serve as reliable proof of authentication and also standardizes things like `scope` and `claims`.",
+      "source_content_hash": "291f3af2f62d2be272478456769bf26f24d61b4e6351686fd7cbeb22bded5d8b",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "基于OAuth 2.0构建的新标准\"OpenID Connect\"引入了ID令牌等新机制，可作为可靠的认证凭证，同时标准化了`scope`和`claims`等要素。"
+      }
+    },
+    {
+      "segment_id": "11c76fcc",
+      "source_content": "## OpenID Connect (OIDC)",
+      "source_content_hash": "288a524b080a0b2a949d738b234ddff40f35f291b01f4adead7c5ccd5754e1b4",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## OpenID Connect (OIDC)"
+      }
+    },
+    {
+      "segment_id": "98d26038",
+      "source_content": "OpenID Connect 1.0 is a simple identity layer on top of the OAuth 2.0 protocol. It supports 3 flows of which Authorization code and implicit flow are similar to the ones defined in OAuth 2.0. The notable difference here is the return of an ID Token in JWT format (JSON Web Token). The claims in the ID Token help the client reliably confirm the identity of the user. The audience(`aud`) claim will be set to the client id which means the ID token is intended to be consumed by the client alone. Conforming to the OAuth 2.0 spec, an access token is still returned which can be used to obtain information about the user from the \"userinfo\" endpoint. OIDC also standardizes the claims in the ID Token as well as the \"userinfo\" response.",
+      "source_content_hash": "14fae8dbf0ac2459246a7fb1df3e0bdd324d6dbcf383dc82af2c944001c74d5b",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "OpenID Connect 1.0是在OAuth 2.0协议基础上构建的简单身份层。它支持三种流程，其中授权码流程和隐式流程与OAuth 2.0定义类似。关键区别在于会返回JWT格式（JSON Web Token）的ID令牌。ID令牌中的声明(claims)可帮助客户端可靠确认用户身份。受众(`aud`)声明会被设置为客户端ID，这意味着ID令牌专供该客户端使用。遵循OAuth 2.0规范，仍会返回访问令牌用于从\"userinfo\"端点获取用户信息。OIDC还标准化了ID令牌和\"userinfo\"响应中的声明。"
+      }
+    },
+    {
+      "segment_id": "af52d59d",
+      "source_content": "## Assembling the SSO puzzle",
+      "source_content_hash": "2e9dae7e34a27fc687dfe27f4dc45033c25a4900fbac104539e556fec49a2648",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 构建SSO拼图"
+      }
+    },
+    {
+      "segment_id": "4d52a261",
+      "source_content": "Now that we have all the pieces of the SSO puzzle, bringing it together in Jackson would look something like the one below.",
+      "source_content_hash": "3da2128229c8ab1726a42b58a3377a636d0fb3090fa95e4f61e542df023c9a25",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "现在我们已掌握SSO的所有组件，在Jackson中整合后的流程如下所示。"
+      }
+    },
+    {
+      "segment_id": "23dfb152",
+      "source_content": "![SSO Flow](/images/docs/jackson/sso-flow.png)",
+      "source_content_hash": "2fe2ad155012f35e89a81e44df897d82f173796d9aa2176d53b320fcfccfe78f",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![SSO流程](/images/docs/jackson/sso-flow.png)"
+      }
+    },
+    {
+      "segment_id": "1131ef75",
+      "source_content": "Allow me to explain.",
+      "source_content_hash": "44639278fc764c5811c24df1cf98a33f24a86e0c08145ffe785c9f5ca6255618",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "请允许我进行说明。"
+      }
+    },
+    {
+      "segment_id": "8b2a52b1",
+      "source_content": "We need to support two kinds of SSO Identity Providers - SAML and OIDC. For the sake of discussion, consider the scenario of two apps where one (CRM) needs to log in with Azure AD via SAML and another (HRM) needs to log in with Google Workspace via OIDC.",
+      "source_content_hash": "1da66c5c8ffd4ef36d86e2b42fdfc07d50a3ea39db62362a971bd38e1c30ac07",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "我们需要支持两类SSO身份提供商——SAML和OIDC。假设有两个应用场景：一个CRM系统需要通过SAML登录Azure AD，另一个HRM系统需要通过OIDC登录Google Workspace。"
+      }
+    },
+    {
+      "segment_id": "126950d7",
+      "source_content": "#### Setup SSO Connection",
+      "source_content_hash": "f2112fbb4fe04037128f4005420d83454f928ce0e4c973c0e394ec4b8f896bf1",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "#### 配置SSO连接"
+      }
+    },
+    {
+      "segment_id": "0bb95128",
+      "source_content": "The preliminary step (marked by the green arrow above) is to add the SSO Connection to Jackson. For SAML IdP, this would mean saving the XML metadata from the IdP. The metadata would contain the SSO URL to send the SAML request to plus the public key to verify the SAML assertion signature. In the case of OIDC IdP, we need the discovery URL and client credentials (clientID and clientSecret of the registered app). The discovery URL can be used to query metadata about IdP such as authorization and token endpoints while the client credentials will be used to authenticate the Jackson client orchestrating the OIDC flow.",
+      "source_content_hash": "536e80db8e6ae5dd08ac5b5fd4559f51db4b17124fb5e2850dcaa7f260a918ed",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "初步步骤（上图中绿色箭头标示）是向Jackson添加SSO连接。对于SAML身份提供商，这意味着保存来自IdP的XML元数据。该元数据包含发送SAML请求的SSO URL以及验证SAML断言签名的公钥。对于OIDC身份提供商，我们需要发现URL和客户端凭证（注册应用的clientID和clientSecret）。发现URL可用于查询IdP的元数据（如授权和令牌端点），而客户端凭证将用于认证执行OIDC流程的Jackson客户端。"
+      }
+    },
+    {
+      "segment_id": "3ef18741",
+      "source_content": "#### Login flow",
+      "source_content_hash": "d873c979ba78ac6bac797cf2a21dab342636d30d68e97782da18c2da51339223",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "#### 登录流程"
+      }
+    },
+    {
+      "segment_id": "e7772088",
+      "source_content": "Jackson supports both OAuth 2.0 and OpenID flows. The OAuth 2.0 flow is made secure by supporting Authorization Code flow with PKCE. By including the scope `openid` in the client request Jackson will switch to OpenID flow.",
+      "source_content_hash": "280aff89956675e4b38d5821ed04fcdf5e708757c0f911f722718e07a947a19f",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "Jackson同时支持OAuth 2.0和OpenID流程。通过支持带PKCE的授权码流程，OAuth 2.0流程变得更为安全。当客户端请求中包含`openid`范围时，Jackson将切换至OpenID流程。"
+      }
+    },
+    {
+      "segment_id": "eab056be",
+      "source_content": "The login process follows the below steps:",
+      "source_content_hash": "be8e2cb845043e18ffbd9ab906a123fa1f794436e02843cb98dfb024eed1e1e9",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "登录流程遵循以下步骤："
+      }
+    },
+    {
+      "segment_id": "aa0bd54f",
+      "source_content": "1. The Client (Browser app) initiates the login by redirecting to Jackson's `authorize` endpoint. Jackson will parse the tenant/product in the request and use it to redirect the user to the configured IdP.\n2. Step 2 varies based on the Identity Provider type. For SAML IdP, Jackson would construct the SAML request, sign it and send it to IdP. The IdP validates the request and authenticates the user. For OIDC IdP, Jackson constructs an OpenID Connect request and redirects the user to the OIDC Provider authorization endpoint.\n3. Once the user is logged in successfully, the IdP redirects back to Jackson. For SAML, the response contains the user profile. In the case of OIDC, the response contains the authorization code that is used by Jackson to obtain the token and user profile from the OIDC IdP. Jackson generates a short-lived `authorization code` and stores the user profile against it.\n4. The `authorization code` generated in the previous step is sent to the client app.\n5. The client exchanges the code for the token and uses it to query the userInfo endpoint of Jackson to get the complete user profile. In the case of OpenID flow, ID Token is returned by Jackson and contains the basic user profile.",
+      "source_content_hash": "27e3d50adbc14b5a423ddceb8bed49bc80419de3912fce284f4fa141a8aa5e95",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "1. 客户端（浏览器应用）通过重定向至Jackson的`authorize`端点发起登录。Jackson将解析请求中的租户/产品信息，并据此将用户重定向至配置的身份提供商（IdP）。\n2. 第二步根据身份提供商类型有所不同。对于SAML IdP，Jackson会构建SAML请求、进行签名后发送至IdP。IdP验证请求并对用户进行认证。对于OIDC IdP，Jackson会构建OpenID Connect请求并将用户重定向至OIDC提供商的授权端点。\n3. 用户成功登录后，IdP将重定向回Jackson。对于SAML，响应中包含用户档案。对于OIDC，响应包含授权码，Jackson使用该授权码从OIDC IdP获取令牌和用户档案。Jackson生成一个短期有效的`authorization code`并将用户档案与之关联存储。\n4. 上一步生成的`authorization code`会被发送至客户端应用。\n5. 客户端用该授权码交换令牌，并通过查询Jackson的userInfo端点获取完整用户档案。在OpenID流程中，Jackson会返回包含基本用户档案的ID Token。"
+      }
+    },
+    {
+      "segment_id": "b936dd6a",
+      "source_content": "## Final thoughts",
+      "source_content_hash": "9cbe53196c3e323b679e3b0a85955f4be1d8060f79f25d5b1ff06278a316d248",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 最终思考"
+      }
+    },
+    {
+      "segment_id": "a5c5772a",
+      "source_content": "So in a nutshell, Jackson acts as a proxy between the client app and the IdP doing the heavy lifting of orchestrating SAML/OIDC flows with the configured IdPs. This way you can quickly scale your app auth to any number of providers allowing you to focus on your core product.",
+      "source_content_hash": "e23891b2bc2bc0f3867144b1340a6655c2ba956bce3167c10ad0bc460726b0eb",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "简而言之，Jackson充当了客户端应用与IdP之间的代理，承担了与配置的IdP进行SAML/OIDC流程协调的重任。通过这种方式，您可以快速扩展应用认证至任意数量的提供商，从而专注于核心产品开发。"
+      }
+    }
+  ],
+  "target_i18n_subpath": "docusaurus-plugin-content-blog/2022-09-30-sso-building-blocks.md",
+  "last_updated_timestamp": "2025-06-08T18:49:09.302752+00:00",
+  "schema_version": "1.0",
+  "translated_versions": {
+    "zh-CN": "17823dceec6b29e6f1cfb323f1735ae7ba3a5121d7618eeca76901ae69632a0f"
+  }
+}

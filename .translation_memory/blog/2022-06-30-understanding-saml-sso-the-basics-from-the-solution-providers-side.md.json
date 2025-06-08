@@ -1,0 +1,112 @@
+{
+  "source_file_path_relative_to_docusaurus_root": "blog/2022-06-30-understanding-saml-sso-the-basics-from-the-solution-providers-side.md",
+  "source_file_content_hash": "32bf175399272cec9180304c5ba0183fbb684ea7d51c685931c61b54899356b2",
+  "segments": [
+    {
+      "segment_id": "58cfcc64",
+      "source_content": "---\nslug: understanding-saml-sso-the-basics-from-the-solution-providers-side\ntitle: Understanding SAML SSO, the basics from the solution provider's side\nauthor: Jay Singh\nauthor_title: Marketing Consultant\nauthor_url: https://www.linkedin.com/in/jaydsingh/\nauthor_image_url: /images/authors/jay.jpg\ntags_disabled: [enterprise-readiness, saml, saml-jackson, sso, single-sign on]\nimage: /img/blog/sso/with-boxyhq.png\n---",
+      "source_content_hash": "eda6075cb14d3db171b76f8ea713112f30a37c682f8ff71264fc71f4183a57df",
+      "node_type": "yaml",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_58cfcc64"
+      }
+    },
+    {
+      "segment_id": "8d66f911",
+      "source_content": "This article follows my first article in which I explain the basics of SAML from the users' side. If you haven't read that one already I would recommend reading that one first [here](./2022-06-30-understanding-saml-sso-the-basics-from-the-user-side.md). In this article, we are going to take a look at what SAML authentication and setup look like from the solution providers' perspective.",
+      "source_content_hash": "043e8336a49ea83c407125984a11c88adb774b0002771aaee74720bf0622a1f3",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "本文承接我此前撰写的[《从用户视角理解SAML SSO基础》](./2022-06-30-understanding-saml-sso-the-basics-from-the-user-side.md)，若您尚未阅读建议先行浏览。本文将重点解析解决方案供应商视角下的SAML认证与配置流程。"
+      }
+    },
+    {
+      "segment_id": "ad8fd492",
+      "source_content": "If you are a B2B solutions provider and you plan to have enterprise customers they will likely ask that your product supports SAML SSO. This is because the customer will already be using an IDP to manage user access and security to their services. Anything outside this will be a risk and not fit into their user's workflows.",
+      "source_content_hash": "7ebd6317782a4ab45686337fb8b6e282db1f941663860125e810abd90ff4a05e",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "作为B2B解决方案供应商，若计划拓展企业客户，则需确保产品支持SAML单点登录——因为企业客户通常已采用IDP统一管理其服务体系的用户访问权限与安全策略。任何脱离该体系的方案都将被视为风险源且无法融入其现有工作流。"
+      }
+    },
+    {
+      "segment_id": "86b54d44",
+      "source_content": "Most larger solution providers have already invested a lot of time and money into building SAML integrations with IDP providers but this leaves smaller competitors with less time and resources at a disadvantage as they often haven't been able to prioritize enterprise security features over the core product build.",
+      "source_content_hash": "ed9fb9a4e038309983cdd7216df2f597852be1bfde2f968e9e2fa141d81d78ee",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "多数大型供应商已投入大量资源构建与各IDP的SAML集成，这使得资源有限的中小型竞争者处于劣势——他们往往被迫在核心产品开发与企业级安全功能之间做出取舍。"
+      }
+    },
+    {
+      "segment_id": "39b3772c",
+      "source_content": "The main reason why smaller companies don’t implement SAML as part of the standard build is that it traditionally takes a long time as they have to build a custom integration with each IDP provider their customers use. Well, this is now an old issue because we have created BoxyHQ which allows you to connect to our free product with one single integration that then connects to all the IDPs for you! Let's take a look at what the integrations with and without BoxyHQ look like first.",
+      "source_content_hash": "aeb103f0edfaf3f99d4c690414c4165e841f1b42d9c413d464874240a5f6a4e7",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "中小企业未将SAML纳入标准构建的主因在于：传统方式需为每个客户使用的IDP定制开发集成方案，耗时漫长。如今这个问题已被BoxyHQ解决——通过与我们免费产品的单次集成，即可自动连接所有IDP！下面通过对比图直观展示差异："
+      }
+    },
+    {
+      "segment_id": "1acb9a05",
+      "source_content": "![Without BoxyHQ](/img/blog/sso/without-boxyhq.png)",
+      "source_content_hash": "8050caf79be585fa4f9370837ce944b78c22e49efda925010b91749a6e8624b7",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![无BoxyHQ方案](/img/blog/sso/without-boxyhq.png)"
+      }
+    },
+    {
+      "segment_id": "2df4f75f",
+      "source_content": "In the diagram above we can see what it looks like when you build a custom SAML integration with each IDP. As you can see for each IDP you have to connect all the instances of your product and build a unique integration. This can take months and take the focus away from your team building your core product. We believe that enterprise readiness should be accessible and easy for businesses of all sizes so we built BoxyHQ. Let's see what that looks like.",
+      "source_content_hash": "b60f16fbe6001d6337ff8d9c8853141d14bbe76c0d7b38c1b0b66e648462207b",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "上图展示了传统模式下为每个IDP定制开发SAML集成的场景。如图所示，每个IDP都需要单独对接产品实例并构建专属集成通道，整个过程可能耗时数月，导致团队偏离核心产品开发。我们坚信企业级能力应普惠所有规模的企业，因此打造了BoxyHQ。接下来请看优化后的方案："
+      }
+    },
+    {
+      "segment_id": "98cfbd53",
+      "source_content": "![With BoxyHQ](/img/blog/sso/with-boxyhq.png)",
+      "source_content_hash": "ca64966a2277618ed76ee3cbb4d6237e8cc8a04bc9edd74dd02eeca2637b91db",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![BoxyHQ方案](/img/blog/sso/with-boxyhq.png)"
+      }
+    },
+    {
+      "segment_id": "ccc88b4c",
+      "source_content": "As you can see from the image above with BoxyHQ you only have to connect your product with a straightforward integration to BoxyHQ and then we manage and connect you to all the IDPs! It is that simple and you can deploy SAML SSO for your clients in as little as 8 days. We are also open source and free so you don't need to worry about big maintenance bills, we will even offer you custom support during the integration.",
+      "source_content_hash": "2b834833046bbdf72f6f068ff39f03155384fa09d0930074822f5b893a1636c5",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "如图所示，采用BoxyHQ后仅需完成产品与我们的标准化对接，后续所有IDP的连接维护均由我们处理！整个过程仅需8天即可为客户部署SAML SSO。作为开源免费产品，您无需担忧高昂维护成本，我们还将提供集成阶段的专属技术支持。"
+      }
+    },
+    {
+      "segment_id": "d9172fa4",
+      "source_content": "If you are interested in becoming enterprise-ready without the hassle then let's chat! You can [book](https://cal.com/deepak-boxyhq/demo) a free consultation call and chat with our CEO about how we can help. Let's start the journey together.",
+      "source_content_hash": "4de3c13d6421a47472cdf1999bb2ad42169cfe5147be1d857c25752209e073d0",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "若您希望零负担实现企业级能力，欢迎[预约](https://cal.com/deepak-boxyhq/demo)免费咨询，与我们的CEO直接探讨合作方案。让我们携手开启这段旅程。"
+      }
+    }
+  ],
+  "target_i18n_subpath": "docusaurus-plugin-content-blog/2022-06-30-understanding-saml-sso-the-basics-from-the-solution-providers-side.md",
+  "last_updated_timestamp": "2025-06-08T18:49:09.309553+00:00",
+  "schema_version": "1.0",
+  "translated_versions": {
+    "zh-CN": "32bf175399272cec9180304c5ba0183fbb684ea7d51c685931c61b54899356b2"
+  }
+}

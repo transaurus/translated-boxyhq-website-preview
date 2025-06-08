@@ -1,0 +1,182 @@
+{
+  "source_file_path_relative_to_docusaurus_root": "blog/2024-02-21-sso-vs-identity-federation.md",
+  "source_file_content_hash": "dd6de2aab5b07dc7b9b06cb7bc70ed6a53216ec13aa791328446d0f6074b8e06",
+  "segments": [
+    {
+      "segment_id": "58cfcc64",
+      "source_content": "---\ndescription: \"Read how Unosecur improved operations with BoxyHQ's Enterprise SSO, enhancing security and streamlining access in our case study.\"\nslug: sso-vs-identity-federation-optimizing-authentication-for-modern-enterprises\ntitle: 'SSO vs. Identity Federation: Optimizing Authentication for Modern Enterprises'\ntags_disabled:\n  [\n    authentication,\n    security,\n    sso,\n    identity-federation,\n    open-source,\n    developerfirst,\n  ]\nimage: /images/blog/sso-identity-federation.png\nhide_table_of_contents: true\nauthor: Sama - Carlos Samame\nauthor_title: Co-founder & COO @BoxyHQ\nauthor_url: https://www.linkedin.com/in/samame/\nauthor_image_url: /images/authors/sama.jpg\n---",
+      "source_content_hash": "a9ed2b1776d916f33322374f62af24f18bafdb0b659602da1b5836ce211fa7cb",
+      "node_type": "yaml",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_58cfcc64"
+      }
+    },
+    {
+      "segment_id": "fcd52337",
+      "source_content": "import LearnMoreCTA from \"../src/components/ctas/LearnMoreCTA\";\nimport Picture from '../src/components/Picture';",
+      "source_content_hash": "f57cf8dd6c72c7f8e7e8dd938c2cc00dd993efd71da68a80f8577bf0c3b62410",
+      "node_type": "mdxjsEsm",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_fcd52337"
+      }
+    },
+    {
+      "segment_id": "f2c2bdd0",
+      "source_content": "In today's interconnected digital ecosystem, businesses are constantly seeking efficient and secure solutions to manage user authentication across multiple applications and domains. Identity Federation and Single Sign-On (SSO) stand out as two prominent approaches, each offering distinct advantages and use cases. Let's explore the differences between Identity Federation and SSO, their benefits, and how they address the evolving needs of enterprises.",
+      "source_content_hash": "4eba5685d075db55c2bdcb815e4cea7e7006663009187e2148af3c88d3beeff4",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "在当今互联的数字生态系统中，企业不断寻求高效安全的解决方案来管理跨多个应用和域的用户身份验证。身份联邦与单点登录（SSO）作为两种主流方案，各自具备独特的优势和应用场景。让我们深入探讨身份联邦与SSO的差异、优势，以及它们如何应对企业不断演进的需求。"
+      }
+    },
+    {
+      "segment_id": "fa430ad4",
+      "source_content": "## Single Sign-On (SSO): Simplifying Access, Enhancing Security",
+      "source_content_hash": "077ea02972dc803c89c764c573b19d574ae95a307a445781ecf5254274e2ca8e",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 单点登录（SSO）：简化访问流程，强化安全防护"
+      }
+    },
+    {
+      "segment_id": "4b1d2d7d",
+      "source_content": "Single Sign-On (SSO) revolutionizes the user authentication experience by enabling users to access multiple applications with a single set of credentials. Whether it's employees navigating various internal tools or customers interacting with diverse services, SSO streamlines login processes, enhances productivity, and bolsters security. Key features of SSO include:",
+      "source_content_hash": "7b94015ec3b8a33d8013114b41d9fe8aed7ca0f6b4abb74a572eb324a6a6a251",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "单点登录（SSO）通过允许用户使用同一组凭证访问多个应用，彻底改变了身份验证体验。无论是员工使用内部工具还是客户使用多样化服务，SSO都能简化登录流程、提升生产效率并增强安全性。SSO的核心优势包括："
+      }
+    },
+    {
+      "segment_id": "c6dea11f",
+      "source_content": "1. **Seamless Access:** Users enjoy a frictionless login experience, eliminating the need to remember and enter multiple passwords for different applications.\n2. **Enhanced Security:** By reducing the number of credentials users manage, SSO mitigates the risk of password-related vulnerabilities and unauthorized access.\n3. **Improved User Experience:** SSO fosters a seamless and intuitive login process, boosting user satisfaction and productivity.\n4. **Cost Savings:** Organizations benefit from reduced IT support costs associated with password management and help desk inquiries.",
+      "source_content_hash": "e3f9c017f244a4cdce5f5415988023be7bb90876721130b1541951197748cd43",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "1. **无缝访问**：用户享受无摩擦的登录体验，无需记忆和输入多个应用的密码。\n2. **安全增强**：通过减少用户管理的凭证数量，SSO有效降低了密码相关漏洞和未授权访问的风险。\n3. **体验优化**：SSO提供直观流畅的登录流程，显著提升用户满意度和工作效率。\n4. **成本节约**：企业可减少与密码管理和技术支持相关的IT运维成本。"
+      }
+    },
+    {
+      "segment_id": "109ace10",
+      "source_content": "## Identity Federation (FIM): Extending Access Across Boundaries",
+      "source_content_hash": "6d936f957c4beecbff146c6ac4ac8dc952d04de7c38b472bfb37c1590632c5c4",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 身份联邦（FIM）：跨越边界的访问扩展"
+      }
+    },
+    {
+      "segment_id": "135468ee",
+      "source_content": "Identity Federation expands upon the capabilities of SSO by facilitating seamless authentication across organizational boundaries and disparate domains. By establishing trusted relationships between entities, Identity Federation enables users to authenticate once and access resources across multiple organizations or service providers. Key features of Identity Federation include:",
+      "source_content_hash": "97372e760f64e55108261027f7ec2a5ff3abbb34e4847d768ec087d0eeeae928",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "身份联邦在SSO基础上进一步突破，实现跨组织和异构域的无缝认证。通过建立实体间的信任关系，身份联邦允许用户一次认证即可访问多个组织或服务提供商的资源。其核心特性包括："
+      }
+    },
+    {
+      "segment_id": "e7bc8c38",
+      "source_content": "1. **Cross-Domain Authentication:** Users can seamlessly access resources across different organizational boundaries without the need for separate authentication processes.\n2. **Interoperability:** Identity Federation leverages standard protocols like SAML, OAuth, and OpenID Connect to ensure interoperability and secure identity exchange between domains.\n3. **Enhanced Collaboration:** By enabling seamless access to external applications and resources, Identity Federation fosters collaboration, partnerships, and innovation across organizations.\n4. **Scalability and Flexibility:** Identity Federation accommodates the dynamic needs of modern enterprises, supporting remote work, cloud-based services, and distributed teams.",
+      "source_content_hash": "ca8aa5a549b5b3741ac8989a0177731235f24fea6ad8e971f0ea8645af92ccf3",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "1. **跨域认证**：用户无需重复验证即可跨组织边界访问资源。\n2. **互操作性**：采用SAML、OAuth和OpenID Connect等标准协议，确保域间身份交换的安全互通。\n3. **协作增强**：通过无缝接入外部应用和资源，促进跨组织的合作与创新。\n4. **弹性扩展**：适配现代企业需求，支持远程办公、云服务和分布式团队。"
+      }
+    },
+    {
+      "segment_id": "68123cc1",
+      "source_content": "<Picture alt=\"Illustration of Single Sign-On and Identity Federation process with five icons representing a user, secure cloud, sync, email, and computer.\" pictureSrc=\"/images/blog/sso-fim\" height=\"582\" width=\"800\" />",
+      "source_content_hash": "f58f286783cd8e820ed1fb61073a9b9e69a303dace22e77b09bb48460743ac08",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_68123cc1"
+      }
+    },
+    {
+      "segment_id": "f44c1398",
+      "source_content": "## Identity Providers (IdPs): The Backbone of Identity Federation",
+      "source_content_hash": "2ce80b43e8e6c39999292d9d79b89a1d481db62ccd95bc52a2d761e7e0c9828f",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 身份提供商（IdP）：身份联邦的核心支柱"
+      }
+    },
+    {
+      "segment_id": "29528c8d",
+      "source_content": "Central to Identity Federation is the concept of Identity Providers (IdPs). IdPs serve as the authoritative source for user authentication and identity verification. They establish trusted relationships with Service Providers (SPs) to enable seamless authentication and access to resources across different domains. IdPs play a crucial role in ensuring the security, interoperability, and scalability of Identity Federation solutions.",
+      "source_content_hash": "8f2460ca0e6974134ef9b1a3c9ae75716ca14216612a3b1246518ef1a9d7a853",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "身份联邦的核心在于身份提供商（IdP）概念。IdP作为用户认证和身份核验的权威源，与服务提供商（SP）建立信任关系以实现跨域无缝访问。IdP在保障身份联邦解决方案的安全性、互通性和可扩展性方面发挥着关键作用。"
+      }
+    },
+    {
+      "segment_id": "11c76fcc",
+      "source_content": "## Choosing the Right Solution",
+      "source_content_hash": "c4ca213fccfcc31563e5def6e0c5e69bc456e745de2171950c24b35f934f1e04",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 方案选型指南"
+      }
+    },
+    {
+      "segment_id": "98d26038",
+      "source_content": "When selecting between Identity Federation and Single Sign-On, enterprises should consider their specific requirements, security posture, and scalability needs. While SSO excels in simplifying access within organizational boundaries, Identity Federation extends authentication capabilities across domains, supporting collaboration and partnership initiatives. By implementing a comprehensive authentication strategy that leverages both SSO and Identity Federation, enterprises can optimize security, productivity, and user experience in today's digital landscape.",
+      "source_content_hash": "1a82e5dc9be91648acd8a2e47895fc67507bd0ab8002049d4628f8c7852f7081",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "企业在选择身份联邦或单点登录时，需综合考虑安全需求、组织架构和扩展性要求。SSO擅长简化组织内部访问，而身份联邦则能扩展跨域认证能力，支持协作生态建设。通过整合两种方案的认证策略，企业可在数字时代实现安全防护、生产效率和用户体验的最优平衡。"
+      }
+    },
+    {
+      "segment_id": "bc38848e",
+      "source_content": "<LearnMoreCTA label=\"Learn more about BoxyHQ's Products\" url=\"/products/overview\" />",
+      "source_content_hash": "2096f3dc2454bede3719b856552f3067e327a7d6cf1589bd483606772f81702c",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_bc38848e"
+      }
+    },
+    {
+      "segment_id": "e50bebbf",
+      "source_content": "## Conclusion",
+      "source_content_hash": "be031d37bb75d96ef08ca9ec5b0e83bb6f91172f60d3c31a78feae8d7dc4a0b0",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 结语"
+      }
+    },
+    {
+      "segment_id": "23dfb152",
+      "source_content": "In the realm of user authentication, Identity Federation and Single Sign-On represent two powerful approaches for simplifying access, enhancing security, and fostering collaboration. By understanding the nuances of each solution and aligning them with organizational goals, enterprises can navigate the complexities of modern authentication challenges and unlock new opportunities for innovation and growth. Whether it's streamlining internal workflows or facilitating external partnerships, Identity Federation and Single Sign-On are indispensable tools in the arsenal of today's digital enterprises.",
+      "source_content_hash": "b5e127096c64398779c1f8946969daa53571f636588852c5b4199fc637790b72",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "在用户认证领域，身份联邦与单点登录作为两大技术范式，为简化访问、强化安全和促进协作提供了强大支撑。通过理解技术差异并匹配组织目标，企业能够应对现代认证挑战，开启创新增长的新机遇。无论是优化内部流程还是构建外部合作生态，身份联邦与单点登录已成为数字化企业不可或缺的战略工具。"
+      }
+    }
+  ],
+  "target_i18n_subpath": "docusaurus-plugin-content-blog/2024-02-21-sso-vs-identity-federation.md",
+  "last_updated_timestamp": "2025-06-08T18:49:09.319391+00:00",
+  "schema_version": "1.0",
+  "translated_versions": {
+    "zh-CN": "dd6de2aab5b07dc7b9b06cb7bc70ed6a53216ec13aa791328446d0f6074b8e06"
+  }
+}

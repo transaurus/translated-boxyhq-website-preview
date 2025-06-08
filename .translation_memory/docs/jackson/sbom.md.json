@@ -1,0 +1,112 @@
+{
+  "source_file_path_relative_to_docusaurus_root": "docs/jackson/sbom.md",
+  "source_file_content_hash": "ebb28711d6d9b36584c3c0203d3b49eeab7e5d3a396ae8464e1e1a740065063e",
+  "segments": [
+    {
+      "segment_id": "76e4a56a",
+      "source_content": "# Software Bill Of Materials (SBOM) Reports",
+      "source_content_hash": "2db7af4c5105a8f541909c7cc7778a6ab63accdf36d8247bc1b57f2b374f1507",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "# 软件物料清单 (SBOM) 报告"
+      }
+    },
+    {
+      "segment_id": "faebdc62",
+      "source_content": "[SBOM](https://en.wikipedia.org/wiki/Software_bill_of_materials) is a list of components in a piece of software. It is like a list of ingredients of a product and is quickly becoming a standard for software supply chain risk management. The ecosystem is growing with tools that help you verify, scan and monitor all your dependencies.",
+      "source_content_hash": "3a8cb7e7fb6a094c08f02a66148f4a95582a567050671e8d37485a92bf7b72ef",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "[SBOM](https://en.wikipedia.org/wiki/Software_bill_of_materials) 是软件组件构成的清单，类似于产品的成分表，正迅速成为软件供应链风险管理的新标准。随着生态系统的完善，现已有多种工具可帮助您验证、扫描和监控所有依赖项。"
+      }
+    },
+    {
+      "segment_id": "f85bbfb4",
+      "source_content": "## Report Standards",
+      "source_content_hash": "281dcf9686b18a21ae915fc79bcb50f7b1488c85c685cbdb3fc1c97b2e32beca",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 报告标准"
+      }
+    },
+    {
+      "segment_id": "6ef78e84",
+      "source_content": "SBOM reports primarily use [SPDX](https://en.wikipedia.org/wiki/Software_Package_Data_Exchange) & [CycloneDX](https://cyclonedx.org/) standards.",
+      "source_content_hash": "8e52f3e5d1f4a4e1faf3e8e30c64b200860a0a83ee74b1310b956038d0d58488",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "SBOM报告主要采用[SPDX](https://en.wikipedia.org/wiki/Software_Package_Data_Exchange)和[CycloneDX](https://cyclonedx.org/)标准。"
+      }
+    },
+    {
+      "segment_id": "d912d376",
+      "source_content": "## Reports",
+      "source_content_hash": "8d645461c8a1b8d271fb24b3e2d38149f197347890493d9a6dbae5d0e6807a9a",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 报告"
+      }
+    },
+    {
+      "segment_id": "c8518a04",
+      "source_content": "> **Note:** This is supported for all versions >=0.3.8",
+      "source_content_hash": "abd9a70ef8f4fac43d3b5e832ed20f4df41c1a1a6d5c6759e6575bed52e27371",
+      "node_type": "blockquote",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "> **注意：** 该功能支持所有版本号 >=0.3.8 的发行版"
+      }
+    },
+    {
+      "segment_id": "180bddb1",
+      "source_content": "You can find the SBOM reports as artifacts in our container registry at the locations below. They are updated every time there is change in the codebase and tagged by the exact version we release.",
+      "source_content_hash": "02ccedc63ac09b6297065733930b45876d67befbb3a0ef9786a910033cea7d2b",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "您可以在以下容器注册表路径中找到作为构建产物的SBOM报告。这些报告会在代码库变更时更新，并标注我们发布的精确版本号。"
+      }
+    },
+    {
+      "segment_id": "87e3966e",
+      "source_content": "| Location                                        | Files                         | Context                               |\n| ----------------------------------------------- | ----------------------------- | ------------------------------------- |\n| `ghcr.io/boxyhq/jackson/sbom:service-<version>` | `sbom.spdx`, `sbom.cyclonedx` | SAML Jackson service                  |\n| `ghcr.io/boxyhq/jackson/sbom:npm-<version>`     | `sbom.spdx`, `sbom.cyclonedx` | NPM package                           |\n| `ghcr.io/boxyhq/jackson/sbom:docker-<version>`  | `sbom.spdx`, `sbom.cyclonedx` | Docker Image for SAML Jackson service |",
+      "source_content_hash": "aae960631d9cd270ba558ca6f74d6157b578dce2a82dedb0b73a021ab5eb0f34",
+      "node_type": "table",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_87e3966e"
+      }
+    },
+    {
+      "segment_id": "f5f6d2ce",
+      "source_content": "You can use [oras](https://oras.land) (or a similar OCI artifacts tool) to retrieve these files.",
+      "source_content_hash": "eba374cc766ef5c594fe8b73915807c6b82ed9b4954f7d17c83b45270f4f51e5",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "您可以使用[oras](https://oras.land)（或其他兼容的OCI构件工具）获取这些文件。"
+      }
+    },
+    {
+      "segment_id": "41a8ae85",
+      "source_content": "```bash\noras pull ghcr.io/boxyhq/jackson/sbom:service-<version>\n```",
+      "source_content_hash": "9998983f9e350cf53bc4f722952ce9e939eb79236326efe0af628d816c92861d",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_41a8ae85"
+      }
+    }
+  ],
+  "target_i18n_subpath": "docusaurus-plugin-content-docs/current/jackson/sbom.md",
+  "last_updated_timestamp": "2025-06-08T18:49:09.299235+00:00",
+  "schema_version": "1.0",
+  "translated_versions": {
+    "zh-CN": "ebb28711d6d9b36584c3c0203d3b49eeab7e5d3a396ae8464e1e1a740065063e"
+  }
+}

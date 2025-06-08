@@ -1,0 +1,222 @@
+{
+  "source_file_path_relative_to_docusaurus_root": "blog/2022-02-21-how-early-stage-startups-should-sell-to-enterprises.md",
+  "source_file_content_hash": "57620c5849b34bae7049512bfcb62d737d806ea3b0c01550ffbcbd16bdcbc08c",
+  "segments": [
+    {
+      "segment_id": "58cfcc64",
+      "source_content": "---\nslug: how-early-stage-startups-should-sell-to-enterprises\ntitle: How early-stage startups should sell to enterprises\nauthor: Sama - Carlos Samame\nauthor_title: Co-founder & COO @BoxyHQ\nauthor_url: https://www.linkedin.com/in/samame/\nauthor_image_url: /images/authors/sama.jpg\ntags_disabled:\n  [enterprise-readiness, startups, enterprises, corporates, sales, founder]\nimage: /img/blog/mulyadi-dDlvuSKUDZM-unsplash.jpg\n---",
+      "source_content_hash": "4ab81b6021f0918e45bc262ac1ccb20c544c69ac87dd46e2460871330ef0f898",
+      "node_type": "yaml",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_58cfcc64"
+      }
+    },
+    {
+      "segment_id": "180bddb1",
+      "source_content": "You have decided to quit your job and start something on your own, congratulations! Welcome to a new way of living, as our little green friend told us some years ago “do or do not, there is no try”. Resilience and perseverance will be your two new best friends now; we all know that starting a company is not hard at all, but something hard at the beginning of the journey is finding product-market fit, especially if you are selling to enterprises (if you are an open-source founder, make sure you prioritize project-community fit first).",
+      "source_content_hash": "90cbab2034aff72b0ce7acf671c3f3886e2ea5e2fa2916934c3a86861184dc25",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "你已决定辞职自主创业，恭喜！欢迎来到全新的生活方式——正如我们绿色的小友多年前所言：\"要么做，要么不做，没有试试看这一说\"。韧性与毅力将成为你此刻最亲密的伙伴；众所周知创办公司本身并不难，但创业初期最难的是找到产品市场契合点，尤其是面向企业级客户时（如果你是开源项目创始人，请务必优先确保项目与社区契合度）。"
+      }
+    },
+    {
+      "segment_id": "cf898102",
+      "source_content": "![Star Wars Lego](/img/blog/mulyadi-dDlvuSKUDZM-unsplash.jpg)",
+      "source_content_hash": "f01f6523adeb36a833c9fd495d1720d54557b0bd062644319a106508211cee73",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![星球大战乐高](/img/blog/mulyadi-dDlvuSKUDZM-unsplash.jpg)"
+      }
+    },
+    {
+      "segment_id": "42ad8e83",
+      "source_content": "<div style={{fontSize: \"10px\", marginTop: \"-10px\", paddingBottom: \"20px\"}}>Photo by <a href=\"https://unsplash.com/@mullyadii?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText\">Mulyadi</a> on <a href=\"https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText\">Unsplash</a></div>",
+      "source_content_hash": "54b0928caae5cdd595a6add458abcdd9ea8f640ae8a11e4d03555a39aa8caf1d",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "<div style={{fontSize: \"10px\", marginTop: \"-10px\", paddingBottom: \"20px\"}}>摄影：<a href=\"https://unsplash.com/@mullyadii?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText\">Mulyadi</a> 发布于 <a href=\"https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText\">Unsplash</a></div>"
+      }
+    },
+    {
+      "segment_id": "f6168993",
+      "source_content": "Having worked for companies like Amazon Web Services & O2-Telefónica connecting enterprises with startups around the world, there are some best practices that I would like to share. We just have to remember that enterprises are conformed by groups of people, and every person is different. So please, don’t expect the secret sauce or the “right way” to do it. Even though each case will be unique, always look for the patterns of what works best for your company. I like to use the process DIA (Discover – Imagine – Act) to overcome challenges, so let me take you through it.",
+      "source_content_hash": "58ae1b5838224a2c67edfe3afe0bbef0395d89b8d5ee557ccdedfae9033ee22a",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "基于我在亚马逊云科技和O2-Telefónica等公司连接全球企业与初创企业的经验，我想分享一些最佳实践。必须牢记：企业是由人群构成的，而每个人都是独特的。所以请不要期待什么\"万能秘方\"或\"标准答案\"。尽管每个案例都具有独特性，但始终要寻找最适合贵公司的模式。我习惯采用DIA流程（发现-构想-行动）来应对挑战，下面将带你逐步解析。"
+      }
+    },
+    {
+      "segment_id": "418617bd",
+      "source_content": "## Discover",
+      "source_content_hash": "66e3e4d91b8ea94f5a62266816c1c2be3348859debd829698defa666179f633e",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 发现阶段"
+      }
+    },
+    {
+      "segment_id": "2fdadb08",
+      "source_content": "First, you have to understand the problem that you are solving. Is it really a problem or are you just in love with a good idea? Asking many times “why” will help you understand the hidden problem (the real one), and it will allow you to understand the needs that the enterprise has. Once you understand the needs of the enterprise, it is time to focus on understanding the needs of your user and your buyer, most of the time these are two different stakeholders within the organization. Is the need of the user a priority for the buyer, or is it just a distraction? You will see that in some organizations they are aligned and in others, they cannot even stand each other; so you must take the time to understand the dynamics between these stakeholders, and the culture of the enterprise itself (how they make decisions).",
+      "source_content_hash": "6202354a704825317dec3b07f8cd558ffa4254806a54e237d78068e4661a62e7",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "首先必须厘清你解决的问题本质——这究竟是真实痛点，还是你沉迷于某个好创意？通过反复追问\"为什么\"可以挖掘潜在问题（真实需求），进而理解企业的核心诉求。明确企业需求后，需要聚焦分析终端用户与采购决策者的需求差异——这两者在组织内通常是不同的利益相关方。终端用户的需求是否被决策者列为优先项？抑或只是干扰因素？你会发现在某些组织里两者目标一致，而在另一些机构中他们甚至水火不容；因此必须花时间理解这些利益相关方之间的动态关系，以及企业自身的决策文化。"
+      }
+    },
+    {
+      "segment_id": "f2c2bdd0",
+      "source_content": "Sales cycles are indeed long if you look at them from a startup’s point of view. Remember that this is the standard speed for enterprises. Startups speak AGILE and Enterprises speak SECURITY, and for many people, these two terms can’t go together (don’t worry, we are proving them wrong @BoxyHQ). Enterprises have got plenty of software they already depend on that needs to work with whatever your product can do for them. Their technology is usually old, I have seen many enterprises with Frankensteins, they think they need to create a third leg to run faster and they end up building unnecessary technologies that affect the quality and the speed of their solutions. You need to focus on the cost of the enterprise (time and resources) to integrate your solution, and to do that you have to make sure that the impact is big enough to be worth it.",
+      "source_content_hash": "916452c2b403e47e8b61fd2723f4f1da5be5bf57a7d7cfa9f8b87f63c36b46b4",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "从初创企业视角看，销售周期确实漫长。但要明白这对大企业只是常态节奏——初创企业讲AGILE敏捷开发，大企业谈SECURITY安全合规，在许多人眼中这两者水火不容（别担心，我们@BoxyHQ正在打破这种偏见）。企业已有大量赖以生存的遗留系统必须与你的产品兼容，他们的技术栈往往陈旧，我见过太多企业打造出\"科学怪人\"式系统：本想长出第三条腿跑得更快，结果却堆砌出拖累解决方案质量和速度的冗余技术。你必须精确评估企业集成你方案的时间与资源成本，并确保产生的商业价值足够显著。"
+      }
+    },
+    {
+      "segment_id": "a76548f8",
+      "source_content": "To make sure the impact you are generating is relevant to the enterprises focus on a few potential customers, as Jason Lemkin mentions “Almost all big companies now have innovation departments of some sort, as do many divisions and groups. The general idea is to bring in 1–2 new vendors a year that don’t risk taking the core business down but could have a material impact on the bottom line. If you truly can change the way they do business, you can often get a meeting. I’ve done this in both my start-ups in the earliest days with 10+ F500 companies in the first 90 days.”",
+      "source_content_hash": "2ed9050f5c3b1d09ac388f38bb230921d77d1043cf32c9207e22d438d3530f41",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "正如Jason Lemkin所言：\"如今几乎所有大企业都设有创新部门，许多业务单元也有类似机构。其核心目标是每年引入1-2个既能创造实质商业价值，又不会危及核心业务的新供应商。如果你真能改变他们的业务模式，往往能在创业初期90天内获得与10+家财富500强会面的机会。\"要确保你创造的影响力足够重大，请聚焦少量潜在客户。"
+      }
+    },
+    {
+      "segment_id": "4b1d2d7d",
+      "source_content": "This Discovery stage is also perfect to understand what your solution needs to have to be compliant; security is key for them. Startups that are not compliant with the enterprises’ requirements could delay the sales cycle, or what is worse they could lose the deal.",
+      "source_content_hash": "5b64be1ae383581409fd1149ae7f09f04b9a726c970238005d6bcb6e19ddb19d",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "发现阶段也是厘清解决方案合规要求的黄金时期——安全性是企业核心考量。不符合合规要求的初创企业可能延误销售周期，更糟的是直接丢失交易机会。"
+      }
+    },
+    {
+      "segment_id": "48847fd4",
+      "source_content": "## Imagine",
+      "source_content_hash": "3e5f99b48216fa209c49aec06726bffe2c1fbca3f018090a83ace674641bea21",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 构想阶段"
+      }
+    },
+    {
+      "segment_id": "4daf5cdd",
+      "source_content": "With all the information that you now have, it is time to visualize the future. Does your solution need some changes? Do you need new features to be compliant? Or could it be that maybe the enterprise doesn’t need all the features that you had in mind? Take some time to readjust your product as necessary, including how you are going to package it and how you are going to distribute it. Apply all the insights collected in the Discovery stage to test, measure, and iterate.",
+      "source_content_hash": "a36637feb1b11e33895e61b64f26be9c05114ea77e4470e8ecf55bbb48576d73",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "掌握了现有信息后，现在是展望未来的时刻。您的解决方案是否需要调整？是否需要新增功能以满足合规要求？亦或是企业其实并不需要您设想的所有功能？请花时间重新校准产品规划，包括产品打包方式和分发策略。运用在\"探索\"阶段收集的所有洞见进行测试、衡量和迭代。"
+      }
+    },
+    {
+      "segment_id": "bdc231b1",
+      "source_content": "A common error that I have seen from startups is not focusing on selecting the right partners, and just moving forward with inbound opportunities. Some of them could be good but overall is a distraction to say yes to anyone that wants to resell your solution, you need to plan ahead.",
+      "source_content_hash": "0a29245f1ad7b46465f5dd09a7ef6cb195afd8ca958801736b6b320646d6e3c7",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "初创企业常见的错误是未能聚焦于选择合适的合作伙伴，而只是被动跟进 inbound 商机。虽然部分机会可能优质，但若对任何想要转售您解决方案的请求都来者不拒，整体而言会分散注意力，必须提前做好规划。"
+      }
+    },
+    {
+      "segment_id": "97ae4a01",
+      "source_content": "Talking about planning, once you know who your internal sponsor is you need to facilitate the job for them. That is the person that will take your fights internally, so make sure you are giving them the right tools. If they see two concerns about integrating your solution, you should think of additional concerns and imagine how to mitigate each of them. You need to train your sponsor for unexpected scenarios that the decision committee will bring. Usually, enterprises ask for a “request for proposal” (RFP), the more you know about it, the better you will be prepared.",
+      "source_content_hash": "33d99dd8bd314ecdf7ee4183ba9519b308ae2fdadea985b9ae8a0c429d65e462",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "关于规划，在确定内部支持者后，您需要为其工作提供便利。这位支持者将在企业内部为您争取资源，因此请确保为其配备合适的工具。如果他们提出两个关于集成您解决方案的顾虑，您应该预判更多潜在问题并构思应对方案。需要为支持者做好培训，以应对决策委员会可能提出的意外质疑。企业通常会要求提交\"提案请求书\"(RFP)，了解越多相关细节，准备就越充分。"
+      }
+    },
+    {
+      "segment_id": "c3a738de",
+      "source_content": "As an imagination exercise, I love Amazon’s Working Backwards process and the PRFAQ - you can learn more about it [here](https://www.linkedin.com/pulse/applying-amazons-working-backwards-process-leaders-ian-mcallister/). It is helpful to visualize the impact you aim to have and work backwards from your customer needs to create a solution. It is similar to the Design Thinking process, but the PRFAQ adds the manifestation piece.",
+      "source_content_hash": "1c5a556159a78ca5570f3d02025db131da7975eff262e63d0a0d237423ebc377",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "在想象力训练方面，我推崇亚马逊的\"逆向工作法\"和PRFAQ机制——您可通过[此链接](https://www.linkedin.com/pulse/applying-amazons-working-backwards-process-leaders-ian-mcallister/)深入了解。这种方法有助于可视化预期影响，并从客户需求逆向推导解决方案。虽然与设计思维流程相似，但PRFAQ增加了具象化呈现的环节。"
+      }
+    },
+    {
+      "segment_id": "9f9e64f5",
+      "source_content": "## Act",
+      "source_content_hash": "527ff7e25a8856ce6d99852d7de852e5117c30c988d81bcd79ae407c573ab6a6",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 行动阶段"
+      }
+    },
+    {
+      "segment_id": "1042b50d",
+      "source_content": "Now is the time to act! But be careful, another mistake that many startups make is not executing at the right time, they spend too much time thinking (doing research) or they reach out to enterprises before making sure they are ready, burning your bridges. Timing is going to be key for you.",
+      "source_content_hash": "8afd5661fef8517ec1fd3e0ea3cc3b5e9553d77ffbd5551d94d8607a09f41267",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "现在就是行动时刻！但需警惕，许多初创企业会犯的另一错误是时机把握不当——要么过度思考（持续调研），要么在准备不足时就接触企业客户，导致自断后路。时机把控将成为关键成功要素。"
+      }
+    },
+    {
+      "segment_id": "aa1e7006",
+      "source_content": "They need to trust you and your solution, every contact point is an opportunity for them to trust you, so make sure to go to these meetings well prepared, doing the right questions but at the same time with some insights on the market, their competitors, technologies, etc. You should be an expert in your niche but at the same time, you should be smart enough to listen. The more you know about them, the better you can adapt your solution and at the same time influence them.",
+      "source_content_hash": "df873595238216905c2c1f42efc988066d51d73349372b51671d6798f44df411",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "企业需要建立对您及解决方案的信任，每个接触点都是信任构建的机会。因此务必充分准备每次会议，既要提出精准问题，又要展现对市场格局、竞争对手和技术趋势的洞察。您应当成为细分领域的专家，同时保持倾听的智慧。了解越深入，越能灵活调整方案并施加影响。"
+      }
+    },
+    {
+      "segment_id": "13d9cd70",
+      "source_content": "Make sure you have the right metrics for your success cases, it doesn’t matter if you were selling to SMEs before or if you already had a few Proof of Concepts (POCs) with enterprises. Large companies don’t want to feel they are a guinea pig, if you did a POC and you didn’t move forward afterward most executives will not see it as unsuccessful, period.",
+      "source_content_hash": "e693d0a7e6c29e5191952169802aca116fdf3557b95fa579a10462fda2e6d208",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "确保建立正确的成功案例指标体系。无论您此前是否面向中小企业销售，或已完成若干企业概念验证(POC)，大型企业都不愿成为试验品。若POC后未能推进，绝大多数高管会直接判定为失败案例。"
+      }
+    },
+    {
+      "segment_id": "29528c8d",
+      "source_content": "Be patient, agile enterprises could spend between 6 to 12 months in conversations before signing an agreement, but many could take years (I’ve seen one company spending 3+ years). While you are waiting, make sure you are at the top of their mind, always adding value, not asking for unnecessary coffees. Key people will resign, will get fired, will change roles, so make sure you find a way to navigate these transitions, you don’t want to start from scratch.",
+      "source_content_hash": "84b3f92c597f2e7dea164c7065a73908d42005dce7a7ad6143e6eec04d7cfbda",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "保持耐心：敏捷型企业可能需要6-12个月的沟通周期才会签署协议，有些甚至耗时数年（我曾见证超3年的案例）。在等待期间，要通过持续创造价值（而非无意义的咖啡邀约）保持心智占有率。关键人物可能离职、调岗或被解雇，需建立应对人事变通的机制，避免一切归零重来。"
+      }
+    },
+    {
+      "segment_id": "c504c207",
+      "source_content": "Each enterprise is a different world, and there are more things you will find out while spending time with them, but I hope you find this blog post insightful. If you have any comments or questions you would like to discuss, please feel free to reach out. We have free Enterprise-Ready office hours to help startups be compliant and accelerate their sales cycle with enterprises.",
+      "source_content_hash": "691ba095d0bbd176321d99448b1e00c926546548b3a4b470f8b76922ed14ad5e",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "每个企业都是独特宇宙，深入接触后您将发现更多规律。希望本文能带来启发。如有任何意见或问题，欢迎随时联系。我们提供免费的\"企业就绪\"咨询服务，帮助初创企业实现合规要求并加速企业销售周期。"
+      }
+    }
+  ],
+  "target_i18n_subpath": "docusaurus-plugin-content-blog/2022-02-21-how-early-stage-startups-should-sell-to-enterprises.md",
+  "last_updated_timestamp": "2025-06-08T18:49:09.315049+00:00",
+  "schema_version": "1.0",
+  "translated_versions": {
+    "zh-CN": "57620c5849b34bae7049512bfcb62d737d806ea3b0c01550ffbcbd16bdcbc08c"
+  }
+}

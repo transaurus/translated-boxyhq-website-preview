@@ -1,0 +1,502 @@
+{
+  "source_file_path_relative_to_docusaurus_root": "guides/jackson/frameworks/nextjs.md",
+  "source_file_content_hash": "0eb061f24d1b64d90976f1f1129d1b144d8d179d9fdf011e05db1e40c4dbab94",
+  "segments": [
+    {
+      "segment_id": "58cfcc64",
+      "source_content": "---\ntitle: Add SAML SSO to Next.js App with BoxyHQ\ndescription: Add SAML SSO to Next.js App with BoxyHQ\nsidebar_label: Next.js\n---",
+      "source_content_hash": "3786d0cef425832f955915db7af133d0312e48f713de669701f8c09437694384",
+      "node_type": "yaml",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_58cfcc64"
+      }
+    },
+    {
+      "segment_id": "10c4cb47",
+      "source_content": "import Tabs from '@theme/Tabs';\nimport TabItem from '@theme/TabItem';",
+      "source_content_hash": "86702643a5c3bdf74257ff6062535897129ed9144c4f5b70edfe338fef3e5c73",
+      "node_type": "mdxjsEsm",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_10c4cb47"
+      }
+    },
+    {
+      "segment_id": "1cc03ec8",
+      "source_content": "# Add SAML SSO to Next.js App",
+      "source_content_hash": "c5a06843dcc7a4eaac9cce8e0a176532a1fe6242a56f0eddc6cf7d0e1b02988a",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "# 为Next.js应用添加SAML单点登录"
+      }
+    },
+    {
+      "segment_id": "8d66f911",
+      "source_content": "This guide assumes that you have a Next.js app and want to enable SAML Single Sign-On authentication for your enterprise customers. By the end of this guide, you'll have an app that allows you to authenticate the users using SAML Single Sign-On.",
+      "source_content_hash": "87e616a3a358304ac36c558d12f93e4f643a44d8474fb299b3e2104a4066aa5b",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "本指南假设您已拥有一个Next.js应用，并希望为企业客户启用SAML单点登录认证。完成本指南后，您的应用将能够通过SAML单点登录对用户进行身份验证。"
+      }
+    },
+    {
+      "segment_id": "ad8fd492",
+      "source_content": "Visit the [GitHub repository](https://github.com/boxyhq/jackson) to view **BoxyHQ's SAML SSO.**",
+      "source_content_hash": "82d618c76ac626f243459fa94c7760998955149ec7b7660cf395122f0e8976b8",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "访问[GitHub仓库](https://github.com/boxyhq/jackson)查看**BoxyHQ的SAML单点登录方案**。"
+      }
+    },
+    {
+      "segment_id": "86b54d44",
+      "source_content": "Visit the [GitHub repository](https://github.com/boxyhq/saas-starter-kit) to view the source code for the **Next.js SAML SSO integration.**",
+      "source_content_hash": "b4171953001914c27f0349dbda2b4601c8c8d6afe79b7c2adf45de796a24bb3c",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "访问[GitHub仓库](https://github.com/boxyhq/saas-starter-kit)查看**Next.js SAML单点登录集成**的源代码。"
+      }
+    },
+    {
+      "segment_id": "39b3772c",
+      "source_content": "Integrating SAML SSO into an app involves the following steps.",
+      "source_content_hash": "b41d0c741a2a4a57f2f8fab371dffbd39dc33a404f97c74b706f4e166b827a0d",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "为应用集成SAML单点登录需要完成以下步骤。"
+      }
+    },
+    {
+      "segment_id": "3b695c37",
+      "source_content": "- Configure SAML Single Sign-On\n- Authenticate with SAML Single Sign-On",
+      "source_content_hash": "bc65b0d357e9559034fbd9763bb9510bb34ac402187fc17447e5e97d7258d38e",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- 配置SAML单点登录\n- 通过SAML单点登录进行认证"
+      }
+    },
+    {
+      "segment_id": "40f9552a",
+      "source_content": "## Configure SAML Single Sign-On",
+      "source_content_hash": "680e424938b66ff2cb309ca1f6c9211de5a6b470399378248e3e36eb698a42f6",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 配置SAML单点登录"
+      }
+    },
+    {
+      "segment_id": "f2c2bdd0",
+      "source_content": "This step allows your tenants to configure SAML connections for their users. Read the following guides to understand more about this.",
+      "source_content_hash": "44570eec6f1685f46ec726135e0ef1456876caf09b8afa825586b7f20c3776a4",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "此步骤允许您的租户为其用户配置SAML连接。阅读以下指南以了解更多信息。"
+      }
+    },
+    {
+      "segment_id": "b3f5c97c",
+      "source_content": "- [UI Best Practices for Configuring SAML Single Sign-On](/guides/jackson/configuring-saml-sso)\n- [SSO Connection API](/docs/jackson/sso-flow/)",
+      "source_content_hash": "088ba8b656d2059418e53604b3eba9e3f53a5c366eed28d0cbbe52042b6b3562",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- [SAML单点登录配置的UI最佳实践](/guides/jackson/configuring-saml-sso)\n- [SSO连接API](/docs/jackson/sso-flow/)"
+      }
+    },
+    {
+      "segment_id": "d06306f7",
+      "source_content": "## Authenticate with SAML Single Sign-On",
+      "source_content_hash": "beaad64d7ce66f37bfb7d59b009777c5c9085f0353a91b1fc2650dc70a7345bb",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 通过SAML单点登录进行认证"
+      }
+    },
+    {
+      "segment_id": "73ab96a3",
+      "source_content": "Once you add a SAML connection, the app can use this SAML connection to initiate the SSO authentication flow using SAML Jackson. The following sections focus more on the SSO authentication side.",
+      "source_content_hash": "fc68bfce93d6cc7f2c605992f3e55f423b3bbf0dd231b9da91e6a1ce02758c7d",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "添加SAML连接后，应用可使用该连接通过SAML Jackson发起SSO认证流程。以下章节将重点介绍SSO认证环节。"
+      }
+    },
+    {
+      "segment_id": "a1b3d8cb",
+      "source_content": "### Install SAML Jackson",
+      "source_content_hash": "649737b1a6678e52262ba416d8356f38e9b902683dab3eb0ac35677a3ce74499",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 安装SAML Jackson"
+      }
+    },
+    {
+      "segment_id": "517051a7",
+      "source_content": "To get started with SAML Jackson, use the Node Package Manager to add the package to your project's dependencies.",
+      "source_content_hash": "04489a1d8702cca5b2840eea2117cd881368451c50ceaa6a1f7fc05c01b1dae4",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "要开始使用SAML Jackson，请通过Node包管理器将该包添加至项目依赖。"
+      }
+    },
+    {
+      "segment_id": "4dd51304",
+      "source_content": "```bash\nnpm i --save @boxyhq/saml-jackson\n```",
+      "source_content_hash": "812541629967c649211aa86e10cd476b3ac843eaf54089dade89546d0e3b3b9a",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_4dd51304"
+      }
+    },
+    {
+      "segment_id": "8d04259b",
+      "source_content": "### Setup SAML Jackson",
+      "source_content_hash": "8dbe0621d592d23bc26b14e5d3d03a40b35ff72223b1a4ea44f54251a3574187",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 配置SAML Jackson"
+      }
+    },
+    {
+      "segment_id": "95e9ba12",
+      "source_content": "Setup the SAML Jackson to work with Next.js app.",
+      "source_content_hash": "266722288dd1817a77844e8b6ca0b17129deb7bcb3ad29edc9bd342ed2d232db",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "配置SAML Jackson以适配Next.js应用。"
+      }
+    },
+    {
+      "segment_id": "4ec2920d",
+      "source_content": "```bash title=\".env\"\nNEXTAUTH_URL=https://your-app.com\nNEXTAUTH_SECRET= #A random string is used to hash tokens, sign/encrypt cookies and generate cryptographic keys.\n```",
+      "source_content_hash": "fa16130328c0c2cd460f6bb2c7460a6af68abd7d0a756779ff467c69800665e2",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_4ec2920d"
+      }
+    },
+    {
+      "segment_id": "4795a13d",
+      "source_content": "```js title=\"lib/jackson.ts\"\nimport jackson, {\n  type IOAuthController,\n  type JacksonOption,\n} from \"@boxyhq/saml-jackson\";\n\nconst samlAudience = \"https://saml.boxyhq.com\";\nconst samlPath = \"/api/oauth/saml\";\n\nconst opts: JacksonOption = {\n  externalUrl: `${process.env.NEXTAUTH_URL}`,\n  samlAudience,\n  samlPath,\n  db: {\n    engine: \"sql\",\n    type: \"postgres\",\n    url: \"postgres://postgres:postgres@localhost:5432/postgres\",\n  },\n};\n\nlet oauthController: IOAuthController;\n\nconst g = global as any;\n\nexport default async function init() {\n  if (!g.oauthController) {\n    const ret = await jackson(opts);\n\n    oauthController = ret.oauthController;\n    g.oauthController = oauthController;\n  } else {\n    oauthController = g.oauthController;\n  }\n\n  return {\n    oauthController,\n  };\n}\n```",
+      "source_content_hash": "91e9c11434311d10b5cb273da8b7ecf7947de6da49f62149d7115f08c135f1ac",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_4795a13d"
+      }
+    },
+    {
+      "segment_id": "5803caac",
+      "source_content": "`samlPath` is where the identity provider POST the SAML response after authenticating the user.",
+      "source_content_hash": "2f6168dfcc21d047b9e3ee3e8215a6b4e05bb56cc5585926fe5286168c6529ff",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "`samlPath`是身份认证提供商在用户认证后提交SAML响应的端点。"
+      }
+    },
+    {
+      "segment_id": "51867d16",
+      "source_content": "We'll use [NextAuth.js](https://next-auth.js.org/) for the authentication. NextAuth is a complete open-source authentication solution for Next.js applications.",
+      "source_content_hash": "b95c9182057c2d6294814a90e585fb44c7ea2b202e5ab5a170dc13b4707d86bc",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "我们将使用[NextAuth.js](https://next-auth.js.org/)进行认证。NextAuth是为Next.js应用提供的完整开源认证解决方案。"
+      }
+    },
+    {
+      "segment_id": "59f28e14",
+      "source_content": "```bash\nnpm i --save next-auth\n```",
+      "source_content_hash": "d3bd3853225a0e0dd803df65ef4f6806c84c3d73240dede8e519572e9356721c",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_59f28e14"
+      }
+    },
+    {
+      "segment_id": "2822251a",
+      "source_content": "NextAuth ships with BoxyHQ SAML `boxyhq-saml` as a built-in SAML authentication provider. We'll use this provider to authenticate the users.",
+      "source_content_hash": "46bf9a303ee4a1da6e6a91ec83402b023e64cb49551cf4e4e202e07a773e21a8",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "NextAuth内置了BoxyHQ SAML提供商`boxyhq-saml`。我们将使用该提供商对用户进行认证。"
+      }
+    },
+    {
+      "segment_id": "efbe5e3f",
+      "source_content": "```js title=\"pages/api/auth/[...nextauth].ts\"\nimport NextAuth, { type NextAuthOptions } from 'next-auth';\nimport BoxyHQSAMLProvider from 'next-auth/providers/boxyhq-saml';\n\nexport const authOptions: NextAuthOptions = {\n  providers: [\n    BoxyHQSAMLProvider({\n      authorization: { params: { scope: '' } },\n      issuer: `${process.env.NEXTAUTH_URL}`,\n      clientId: 'dummy',\n      clientSecret: 'dummy',\n      httpOptions: {\n        timeout: 30000,\n      },\n    }),\n  ],\n  session: {\n    strategy: 'jwt',\n  },\n};\n\nexport default NextAuth(authOptions);\n```",
+      "source_content_hash": "300374a4b64b3d189b5d30dede54592dec1c4271bd490b0ce9a63f7171fa415f",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_efbe5e3f"
+      }
+    },
+    {
+      "segment_id": "ed644f52",
+      "source_content": "### Make Authentication Request",
+      "source_content_hash": "183248edcdad61d66651eee6f50bd53b3e36cb15c69d07c5b5f5cb3ef9d59611",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 发起认证请求"
+      }
+    },
+    {
+      "segment_id": "b9331170",
+      "source_content": "Let's add a route to begin the authenticate flow; this route initiates the SAML SSO flow by redirecting the users to their configured Identity Provider.",
+      "source_content_hash": "9f1a5a74765e0342025b8d3abead331db85a4586cd51c6fc90a1dec8fa6e055e",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "添加路由以启动认证流程，该路由通过将用户重定向至其配置的身份提供商来发起SAML SSO流程。"
+      }
+    },
+    {
+      "segment_id": "2f34b0ad",
+      "source_content": "```js title=\"pages/api/oauth/authorize.ts\"\nimport type { NextApiRequest, NextApiResponse } from \"next\";\nimport type { OAuthReq } from \"@boxyhq/saml-jackson\";\n\nimport jackson from \"../../../../lib/jackson\";\n\nexport default async function handler(\n  req: NextApiRequest,\n  res: NextApiResponse\n) {\n  const { oauthController } = await jackson();\n\n  const { redirect_url } = await oauthController.authorize(\n    req.query as unknown as OAuthReq\n  );\n\n  return res.redirect(302, redirect_url as string);\n}\n```",
+      "source_content_hash": "304b701ad87bac2676cb160e8168ddf1b4d4fe248c6557c11d6cdeccfdd9a2ac",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_2f34b0ad"
+      }
+    },
+    {
+      "segment_id": "8b448c8b",
+      "source_content": "### Receives SAML Response",
+      "source_content_hash": "912543b3a2cadb8fbe7efd3eaf46ead5479703a4751c9f002fc73bc2b7e11e1e",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 接收SAML响应"
+      }
+    },
+    {
+      "segment_id": "ad3e22c6",
+      "source_content": "After successful authentication, Identity Provider POST the SAML response to the Assertion Consumer Service (ACS) URL.",
+      "source_content_hash": "0f016308541eb26f22085f0c41690fd5a0187723fc099aa59b0b395be0c83db2",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "认证成功后，身份提供商将SAML响应POST至断言消费者服务(ACS)URL。"
+      }
+    },
+    {
+      "segment_id": "3e8f45da",
+      "source_content": "Let's add a route to handle the SAML response. Ensure the route matches the value of the `samlPath` you configured while initializing the SAML Jackson library and should be able to receives POST request.",
+      "source_content_hash": "caecd06d8dffbcaa8350297eaa52555518916b5bde96b2235660a5a0f4b11824",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "添加路由以处理SAML响应。确保该路由与初始化SAML Jackson库时配置的`samlPath`值匹配，且能够接收POST请求。"
+      }
+    },
+    {
+      "segment_id": "d58c5dc0",
+      "source_content": "```js title=\"pages/api/oauth/saml.ts\"\nimport type { NextApiRequest, NextApiResponse } from \"next\";\n\nimport jackson from \"../../../../lib/jackson\";\n\nexport default async function handler(\n  req: NextApiRequest,\n  res: NextApiResponse\n) {\n  const { oauthController } = await jackson();\n\n  const { RelayState, SAMLResponse } = req.body;\n\n  const { redirect_url } = await oauthController.samlResponse({\n    RelayState,\n    SAMLResponse,\n  });\n\n  return res.redirect(302, redirect_url as string);\n}\n```",
+      "source_content_hash": "dc52b3bdb520e177dae843599a2322650e9ab3d524ca85631b6548a9eb44b9c7",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_d58c5dc0"
+      }
+    },
+    {
+      "segment_id": "67edbbc4",
+      "source_content": "### Request Access Token",
+      "source_content_hash": "61c0c6a2ba0c4a1c52c6019a99c59ebd8e61cb9992ba14a109cf9475d4667001",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 请求访问令牌"
+      }
+    },
+    {
+      "segment_id": "61a78cbe",
+      "source_content": "Let's add another route for receiving the callback after the authentication.",
+      "source_content_hash": "922e0d010418710cc67393d5ba5459b46cc56fe440a033288e7d4fb2df091ede",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "添加另一个路由以接收认证后的回调。"
+      }
+    },
+    {
+      "segment_id": "39c48ff7",
+      "source_content": "The NextAuth requests an `access_token` by passing the authorization `code` along with authentication details, including the `grant_type`, `redirect_uri`, and `code_verifier`.",
+      "source_content_hash": "8bf9ffbbafe7d5adb14b87dc0a5de2157b38d48e813f4e6bba54f809d5a5a164",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "NextAuth通过传递授权`code`及包含`grant_type`、`redirect_uri`和`code_verifier`的认证详情来请求`access_token`。"
+      }
+    },
+    {
+      "segment_id": "b26685f5",
+      "source_content": "```js title=\"pages/api/oauth/token.ts\"\nimport type { NextApiRequest, NextApiResponse } from 'next';\n\nimport jackson from '../../../../lib/jackson';\n\nexport default async function handler(\n  req: NextApiRequest,\n  res: NextApiResponse\n) {\n  const { oauthController } = await jackson();\n\n  const response = await oauthController.token(req.body);\n\n  return res.json(response);\n}\n```",
+      "source_content_hash": "e7683e393359e5c5c58ed09238250b0583bdd158194c5c4ae9817f44df17feaa",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_b26685f5"
+      }
+    },
+    {
+      "segment_id": "8159e12a",
+      "source_content": "### Fetch User Profile",
+      "source_content_hash": "0d72a4b900175fa6282dd8c47065fb455899ffcce076af4f0bc76a1efc02428f",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 获取用户资料"
+      }
+    },
+    {
+      "segment_id": "6e5d54a8",
+      "source_content": "Once the `access_token` has been fetched, NextAuth can use it to retrieve the user profile from the Identity Provider. The `userInfo` method returns a response containing the user profile if the authorization is valid.",
+      "source_content_hash": "972c1cf34b32ea299f3152c2c663afa15ba90198dd025cfd12a0a42a858403ef",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "获取`access_token`后，NextAuth可用其从身份提供商检索用户资料。若授权有效，`userInfo`方法将返回包含用户资料的响应。"
+      }
+    },
+    {
+      "segment_id": "bf3146e1",
+      "source_content": "```js title=\"pages/api/oauth/userinfo.ts\"\nimport type { NextApiRequest, NextApiResponse } from 'next';\n\nimport jackson from '../../../../lib/jackson';\n\nexport default async function handler(\n  req: NextApiRequest,\n  res: NextApiResponse\n) {\n  const { oauthController } = await jackson();\n\n  const authHeader = req.headers['authorization'];\n\n  if (!authHeader) {\n    throw new Error('Unauthorized');\n  }\n\n  const token = authHeader.split(' ')[1];\n\n  const user = await oauthController.userInfo(token);\n\n  return res.json(user);\n}\n```",
+      "source_content_hash": "f7fb75790a582c8e4a528e7127618f9b06e12a5efee27e97f6501f5d57424db0",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_bf3146e1"
+      }
+    },
+    {
+      "segment_id": "01902900",
+      "source_content": "The entire response will look something like this:",
+      "source_content_hash": "24c284ebbb7472c2f05e9a9ae60848133d4cf840ea0df484e4de99af4fed3c13",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "完整的响应内容大致如下："
+      }
+    },
+    {
+      "segment_id": "4d54a1e8",
+      "source_content": "```json\n{\n  \"id\":\"<id from the Identity Provider>\",\n  \"email\": \"jackson@coolstartup.com\",\n  \"firstName\": \"SAML\",\n  \"lastName\": \"Jackson\",\n  \"requested\": {\n    \"tenant\": \"<tenant>\",\n    \"product\": \"<product>\",\n    \"client_id\": \"<client_id>\",\n    \"state\": \"<state>\"\n  },\n  \"raw\": {\n    ...\n  }\n}\n```",
+      "source_content_hash": "5aa1ce4635b3013ee315ac9ced87b396208cd8f8cec45142c40c58d9c33138cd",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_4d54a1e8"
+      }
+    },
+    {
+      "segment_id": "52dd49af",
+      "source_content": "### Authenticate User",
+      "source_content_hash": "0d068b485e5f9269baec72bdc4311c36a12b3266c4a631444dfa62a23d6c8350",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 用户认证"
+      }
+    },
+    {
+      "segment_id": "ceb4fd26",
+      "source_content": "Once the user has been retrieved from the Identity Provider, you may determine if the user exists in your application and authenticate the user. If the user does not exist in your application, you will typically create a new record in your database to represent the user.",
+      "source_content_hash": "a524473dc4cf8bceb72976ed06072a8c8da9a82f1bc67f4fb86a7d6c9648b1af",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "当从身份提供商处获取到用户信息后，您需要判断该用户是否已存在于您的应用中并进行认证。若用户不存在，通常需要在数据库中创建新记录来存储该用户信息。"
+      }
+    },
+    {
+      "segment_id": "89d451de",
+      "source_content": "### Starts OAuth sign-in flow",
+      "source_content_hash": "1f1c8610a6f665620fcca9a7b900a7902054470a8abe0d613b304477227af3b3",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 启动OAuth登录流程"
+      }
+    },
+    {
+      "segment_id": "32fb7230",
+      "source_content": "You can use NextAuth's `signIn` method to initiate the authentication with `boxyhq-saml` provider.",
+      "source_content_hash": "8a4c3251cf4fe2ba2a64e50b620f5f0f9c3761cdeea1900a28e91c397a310d1e",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "您可以使用NextAuth的`signIn`方法，通过`boxyhq-saml`提供商发起认证。"
+      }
+    },
+    {
+      "segment_id": "41e7f712",
+      "source_content": "You can pass the `tenant` and `product` as additional parameters to the `/api/oauth/authorize` endpoint through the third argument of `signIn()`.",
+      "source_content_hash": "b25f08412d4baa53994534a4c875abde283c615cfea2f98dd161db09bffb9353",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "可通过`signIn()`方法的第三个参数，向`/api/oauth/authorize`端点传递`tenant`和`product`等附加参数。"
+      }
+    },
+    {
+      "segment_id": "ce356af6",
+      "source_content": ":::info\nMake sure you add a valid SAML connection for the tenant and product combination. Otherwise, the authentication will fail. Read about creating SAML connections [here](/docs/jackson/deploy/npm-library#create-saml-connection)\n:::",
+      "source_content_hash": "243ba4e18b166b6c7f087309008a5e50c97b63f0a3d229458d0f69766b47c262",
+      "node_type": "containerDirective",
+      "translatable": true,
+      "translations": {
+        "zh-CN": ":::info\n请确保已为租户和产品组合配置有效的SAML连接，否则认证将失败。了解如何创建SAML连接请参阅[此处](/docs/jackson/deploy/npm-library#create-saml-connection)\n:::"
+      }
+    },
+    {
+      "segment_id": "070ff7a2",
+      "source_content": "For this example app to work, you need to add a SAML connection for the tenant `boxyhq.com` and product `saml-demo.boxyhq.com` before you can authenticate the users.",
+      "source_content_hash": "453f87b0bfbfa7388a763632007ddb89b73b8c6bd597f0f32b8a273b1273d5fb",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "要使本示例应用正常运行，您需要先为租户`boxyhq.com`和产品`saml-demo.boxyhq.com`添加SAML连接，才能对用户进行认证。"
+      }
+    },
+    {
+      "segment_id": "703442ed",
+      "source_content": "```js title=\"pages/login.tsx\"\nimport type { NextPage } from 'next';\nimport { useSession, signIn } from 'next-auth/react';\n\nconst Login: NextPage = () => {\n  const { data: session, status } = useSession();\n\n  if (status === 'loading') {\n    return <>Loading...</>;\n  }\n\n  if (status === 'authenticated') {\n    return <>Authenticated</>;\n  }\n\n  // Starts OAuth sign-in flow\n  signIn('boxyhq-saml', undefined, {\n    tenant: 'boxyhq.com',\n    product: 'saml-demo.boxyhq.com',\n  });\n\n  return <>Unauthenticated</>;\n};\n\nexport default Login;\n```",
+      "source_content_hash": "07eeec480479e6f8c03afe3883831d1c72b9654978e44415bb0cf4d83e36fb51",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_703442ed"
+      }
+    }
+  ],
+  "target_i18n_subpath": "docusaurus-plugin-content-docs-guides/current/jackson/frameworks/nextjs.md",
+  "last_updated_timestamp": "2025-06-08T18:49:09.304057+00:00",
+  "schema_version": "1.0",
+  "translated_versions": {
+    "zh-CN": "0eb061f24d1b64d90976f1f1129d1b144d8d179d9fdf011e05db1e40c4dbab94"
+  }
+}

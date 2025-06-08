@@ -1,0 +1,332 @@
+{
+  "source_file_path_relative_to_docusaurus_root": "docs/admin-portal/setup-links/jackson.md",
+  "source_file_content_hash": "96bda363bf8a2592908f20b84a0e225eeb1e77f162f50c839c3be13cc92787a3",
+  "segments": [
+    {
+      "segment_id": "58cfcc64",
+      "source_content": "---\ntitle: Setup Links (Enterprise SSO)\nsidebar_label: Enterprise SSO\ndescription: Setup Link to create a SSO Connection\n---",
+      "source_content_hash": "958e8d5a4089e069d011b207e35093d6b68d854fd0e25b73a5a4d4a79b4c35f7",
+      "node_type": "yaml",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_58cfcc64"
+      }
+    },
+    {
+      "segment_id": "a703643c",
+      "source_content": "# Setup Links (Enterprise SSO)",
+      "source_content_hash": "58628f88a1652009ed74405842f41d784d4e724a709bc3574a9cac72719dbf44",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "# 设置链接（企业SSO）"
+      }
+    },
+    {
+      "segment_id": "53eaf0e1",
+      "source_content": "The Setup link is used to create a shareable link that can be used to create an SSO Connection without exposing any sensitive information.\nLet's go through the steps to create a new Setup link",
+      "source_content_hash": "7a1cf5ca6461af406f7d638f290d2b4fae2ddc3cfb78ff2aadd4204f2649bd1a",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "设置链接用于创建可共享的链接，该链接可用于创建SSO连接而不会暴露任何敏感信息。\n让我们逐步了解如何创建新的设置链接"
+      }
+    },
+    {
+      "segment_id": "9fcbdce9",
+      "source_content": "## Create Setup Link",
+      "source_content_hash": "a35b38df9f8b7531dbbdca24e53d4a43144d813165650e4bb2124cc6711da4fb",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 创建设置链接"
+      }
+    },
+    {
+      "segment_id": "ad8fd492",
+      "source_content": "You can create a new Setup link for SSO from the Connections page using `New Setup Link` button",
+      "source_content_hash": "d2106cb457a6fffa4b3046b53bd497bfa14c8d2ed637b1c028ddc674f54e27d4",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "您可以通过连接页面使用\"新建设置链接\"按钮为SSO创建新的设置链接"
+      }
+    },
+    {
+      "segment_id": "86b54d44",
+      "source_content": "![connections page](/images/docs/admin-portal/setup-links/sso/connections-page.png)",
+      "source_content_hash": "801f053b591d51045a1567e25a54809726e12afbe8a74774a738d5aedf8fbbf8",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![connections page](/images/docs/admin-portal/setup-links/sso/connections-page.png)"
+      }
+    },
+    {
+      "segment_id": "39b3772c",
+      "source_content": "Another way is to go to the `Setup Links` section under `Enterprise SSO` menu and Click on Create New/New Setup Link button",
+      "source_content_hash": "11f79df51578d4d966eda918059d0d031f2f3b99a9a494107aa9f4afa2fc0d12",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "另一种方法是进入\"企业SSO\"菜单下的\"设置链接\"部分，点击创建新/新建设置链接按钮"
+      }
+    },
+    {
+      "segment_id": "1acb9a05",
+      "source_content": "![setup link list empty](/images/docs/admin-portal/setup-links/sso/setup-link-list-empty.png)",
+      "source_content_hash": "a90a05fc2516db8303786ddd5179d0e4f83676cbeb77d139153c1c72bc0cd83b",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![setup link list empty](/images/docs/admin-portal/setup-links/sso/setup-link-list-empty.png)"
+      }
+    },
+    {
+      "segment_id": "2df4f75f",
+      "source_content": "The create Setup Link for SSO page looks like below",
+      "source_content_hash": "8467eeb7c04efb2028f7d320ab78092bee4e3aca303e713eca666700bed08073",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "SSO的设置链接创建页面如下所示"
+      }
+    },
+    {
+      "segment_id": "98cfbd53",
+      "source_content": "![create setup link page](/images/docs/admin-portal/setup-links/sso/create-setup-link-page.png)",
+      "source_content_hash": "d53d32e60504d68d4a4cc6128fe7d69dc341c8ba4d612e98ba5c9d3e73c8183b",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![create setup link page](/images/docs/admin-portal/setup-links/sso/create-setup-link-page.png)"
+      }
+    },
+    {
+      "segment_id": "ccc88b4c",
+      "source_content": "Once the link is created you can see the the link info section at the bottom",
+      "source_content_hash": "0c4987b11be03b5591cb78782fa72187bff319c8281029e4c607dd22fcf66d11",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "链接创建后，您可以在底部看到链接信息部分"
+      }
+    },
+    {
+      "segment_id": "d9172fa4",
+      "source_content": "![link created](/images/docs/admin-portal/setup-links/sso/link-created.png)",
+      "source_content_hash": "aa08f0338ed93bd1e7c3d6463b2fddac9efe7d54a47fd83f3bbb446a01428976",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![link created](/images/docs/admin-portal/setup-links/sso/link-created.png)"
+      }
+    },
+    {
+      "segment_id": "26524352",
+      "source_content": "You can copy the link by clicking on the `Copy` button",
+      "source_content_hash": "f4b314fa0b359e0fc0b088c371fb1db2f47ade31574468693f01a26ba61dbe63",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "您可以通过点击\"复制\"按钮复制链接"
+      }
+    },
+    {
+      "segment_id": "73ab96a3",
+      "source_content": "![link copied](/images/docs/admin-portal/setup-links/sso/link-copied.png)",
+      "source_content_hash": "36919d7911ced6eed2d387b073a5fec07c095ed29cb890a9a9ff07547d96b1af",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![link copied](/images/docs/admin-portal/setup-links/sso/link-copied.png)"
+      }
+    },
+    {
+      "segment_id": "a1b3d8cb",
+      "source_content": "### Regenerate Link",
+      "source_content_hash": "3773fd4f4195d3628294c152add6fe4888f0d59dbf512572cde2cf2f3cfee798",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 重新生成链接"
+      }
+    },
+    {
+      "segment_id": "517051a7",
+      "source_content": "You can regenerate the link by clicking on `Regenerate` button",
+      "source_content_hash": "b4a425cb3451090506c9f732d2cb3e0cb7a7b002fabc974cfb957ed724e8fb73",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "您可以通过点击\"重新生成\"按钮重新生成链接"
+      }
+    },
+    {
+      "segment_id": "135468ee",
+      "source_content": "![link regenerate](/images/docs/admin-portal/setup-links/sso/link-regenerate.png)",
+      "source_content_hash": "58aa766f4005b2d335b2b6a83df20b5f3f0d2e8212b2a59f0b659ed214e290b2",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![link regenerate](/images/docs/admin-portal/setup-links/sso/link-regenerate.png)"
+      }
+    },
+    {
+      "segment_id": "33331f27",
+      "source_content": "Once you confirm Regenerate action you will see the new setup link in the link info section",
+      "source_content_hash": "0b23934eaaec839ecdede9bcd3be038fd9873cae6533405b43ffc57f810b5f52",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "确认重新生成操作后，您将在链接信息部分看到新的设置链接"
+      }
+    },
+    {
+      "segment_id": "50746522",
+      "source_content": "![link regenerated](/images/docs/admin-portal/setup-links/sso/link-regenerated.png)",
+      "source_content_hash": "9b50a5ab94130b9e9a6010643a697b4600729d45271846f74f11db8dd0141536",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![link regenerated](/images/docs/admin-portal/setup-links/sso/link-regenerated.png)"
+      }
+    },
+    {
+      "segment_id": "54268405",
+      "source_content": "### Actions from Setup Link list page",
+      "source_content_hash": "c439d94c6d1278dee0d899185601a9838a99e23f75339dabf6c8411798a6704f",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 设置链接列表页面操作"
+      }
+    },
+    {
+      "segment_id": "8bddee80",
+      "source_content": "#### You can perform `ACTIONS` like `Copy`, `View`, `Regenerate` & `Delete` from this page",
+      "source_content_hash": "900d0d02e1e3aefbf877d56675e8e2e5eefd08b814c5ae061aa7b162ad6a8909",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "#### 您可以在此页面上执行\"复制\"、\"查看\"、\"重新生成\"和\"删除\"等操作"
+      }
+    },
+    {
+      "segment_id": "a9d49f92",
+      "source_content": "Regenerate",
+      "source_content_hash": "1651031bf58d8eeac8dc9c3e3d5eba20380197e7f638115570bc729064544c06",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "重新生成"
+      }
+    },
+    {
+      "segment_id": "a44047a5",
+      "source_content": "![link regenerate from list](/images/docs/admin-portal/setup-links/sso/link-regenerate-from-list.png)",
+      "source_content_hash": "51d4d3f74c48f277ca689b385b5f8d91de04402910355b7df031de5d796a6ef9",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![link regenerate from list](/images/docs/admin-portal/setup-links/sso/link-regenerate-from-list.png)"
+      }
+    },
+    {
+      "segment_id": "f7ef78f9",
+      "source_content": "Delete",
+      "source_content_hash": "e2d0a54968ead24efc0dffa6ac78fc606dceec34a0f586177a74a54cc2272cf8",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "删除"
+      }
+    },
+    {
+      "segment_id": "b36c6338",
+      "source_content": "![link delete](/images/docs/admin-portal/setup-links/sso/link-delete.png)",
+      "source_content_hash": "bf5cc49139caeb406c0b71352dfc142e7b4682395f640d33ccc252693067c584",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![link delete](/images/docs/admin-portal/setup-links/sso/link-delete.png)"
+      }
+    },
+    {
+      "segment_id": "2c1b51df",
+      "source_content": "### Setup Link page",
+      "source_content_hash": "3f91b7199ff4518a27a584f94927093943489ebb779de26469ff2d0a7f452d55",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 设置链接页面"
+      }
+    },
+    {
+      "segment_id": "e536ea0d",
+      "source_content": "When you open the setup link you will be landed on SSO Connection create section as there are no connections to show",
+      "source_content_hash": "987daf5db03eeab3c76d64fc6a245df5b6f8d39526370f9c007c246b73130738",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "当您打开设置链接时，由于没有可显示的连接，您将进入SSO连接创建部分"
+      }
+    },
+    {
+      "segment_id": "40158b4b",
+      "source_content": "![setup link sso setup](/images/docs/admin-portal/setup-links/sso/setup-link-sso-setup.png)",
+      "source_content_hash": "8d7b768574156e1078ba7384960be7204d7d708ba77a10e4b35e757550ece9f5",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![setup link sso setup](/images/docs/admin-portal/setup-links/sso/setup-link-sso-setup.png)"
+      }
+    },
+    {
+      "segment_id": "c431704b",
+      "source_content": "### Create SSO Connection with Setup Link",
+      "source_content_hash": "46e6ebcf5c9564263209d9e339802c8e2a57db6c2006f088984d27900ffe8307",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 使用设置链接创建SSO连接"
+      }
+    },
+    {
+      "segment_id": "79ad944d",
+      "source_content": "You can create SSO Connection by filling the correct details",
+      "source_content_hash": "1e69a03b3032a48e6a80e2b01346b3c2d8403cea4129558a31def24e428064d4",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "您可以通过填写正确的详细信息来创建SSO连接"
+      }
+    },
+    {
+      "segment_id": "531437ca",
+      "source_content": "![setup link sso oidc](/images/docs/admin-portal/setup-links/sso/setup-link-sso-oidc.png)",
+      "source_content_hash": "1ab9b64af825501f3a03ffac605626bb627974a97193437b5762eb1d4ab278cd",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![setup link sso oidc](/images/docs/admin-portal/setup-links/sso/setup-link-sso-oidc.png)"
+      }
+    },
+    {
+      "segment_id": "06e24cc0",
+      "source_content": "As you can see that setup link makes it super easy & safe to create SSO Connections.",
+      "source_content_hash": "02da81b94652f5eb3d5d5b0e90a6deb406968ee8d2f9b9718242b133e6d9d101",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "如您所见，设置链接使创建SSO连接变得非常简单且安全。"
+      }
+    }
+  ],
+  "target_i18n_subpath": "docusaurus-plugin-content-docs/current/admin-portal/setup-links/jackson.md",
+  "last_updated_timestamp": "2025-06-08T18:49:09.318649+00:00",
+  "schema_version": "1.0",
+  "translated_versions": {
+    "zh-CN": "96bda363bf8a2592908f20b84a0e225eeb1e77f162f50c839c3be13cc92787a3"
+  }
+}

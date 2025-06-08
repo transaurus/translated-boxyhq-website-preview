@@ -1,0 +1,282 @@
+{
+  "source_file_path_relative_to_docusaurus_root": "docs/admin-portal/directory-sync.md",
+  "source_file_content_hash": "96b471ba45bcd0ee23eeab92f6ff0a66d8bc25aede9dac9523207f79d2fd037d",
+  "segments": [
+    {
+      "segment_id": "58cfcc64",
+      "source_content": "---\ntitle: Manage Directory Sync using Admin Portal\nsidebar_label: Directory Sync\n---",
+      "source_content_hash": "d8f633bf0bf9f03fb59e87fab13cd2d84babd4f0ed7d436d5e49dcc915fe0e11",
+      "node_type": "yaml",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_58cfcc64"
+      }
+    },
+    {
+      "segment_id": "b3de8742",
+      "source_content": "# Manage Directories",
+      "source_content_hash": "872738be2cfc519e832bae3a41eaf58074576b3c3cbd544e32b1c92e99a49850",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "# 管理目录同步"
+      }
+    },
+    {
+      "segment_id": "3fbbcc07",
+      "source_content": "On the Admin Portal **Directory Sync** menu, you can see the Directory connections.",
+      "source_content_hash": "6bbafefe93453164201f204f3c0d861370cf4149af04acd0c10beca94ad78780",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "在管理控制台的**目录同步**菜单中，您可以查看目录连接详情。"
+      }
+    },
+    {
+      "segment_id": "1cc03ec8",
+      "source_content": "## Create Directory Sync connection",
+      "source_content_hash": "b900425b65cbf37840ac412fc5d7e359320f476aee3d5576e96df7e3869b314f",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 创建目录同步连接"
+      }
+    },
+    {
+      "segment_id": "143e51c1",
+      "source_content": "1. From your Admin Portal, go to **Directory Sync**.\n2. Click **Create New**.\n3. Enter the following information:\n   - Enter **Directory name**\n   - Select the **Directory provider** from the list of [available providers](../directory-sync/providers/).\n   - Add the **Tenant**\n   - Add the **Product**\n   - Enter the **Webhook URL**\n   - Enter the **Webhook secret**",
+      "source_content_hash": "2dc1d483be65270b1bea48db4742111c380d359d5374a209716535b9ea1478cd",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "1. 进入管理控制台的**目录同步**模块\n2. 点击**新建连接**\n3. 填写以下信息：\n   - 输入**目录名称**\n   - 从[支持的提供商列表](../directory-sync/providers/)中选择**目录服务提供商**\n   - 填写**租户标识**\n   - 填写**产品标识**\n   - 输入**Webhook接收地址**\n   - 输入**Webhook安全密钥**"
+      }
+    },
+    {
+      "segment_id": "2df4f75f",
+      "source_content": "![Create Directory](/images/docs/admin-portal/dsync/create-directory.png)",
+      "source_content_hash": "9e20e705bb163f356276a27362ae286b8470667fff4e3aa4bcb7d3a450ebdcc7",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![创建目录](/images/docs/admin-portal/dsync/create-directory.png)"
+      }
+    },
+    {
+      "segment_id": "1856ef44",
+      "source_content": "---",
+      "source_content_hash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "node_type": "thematicBreak",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "---"
+      }
+    },
+    {
+      "segment_id": "79b2d0b9",
+      "source_content": "## Update Directory Sync connection",
+      "source_content_hash": "fc4db06843ab175f0c1ef4440fc2bd83b5232f801ae79da4989905c0a5857aff",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 更新目录同步连接"
+      }
+    },
+    {
+      "segment_id": "1d13125b",
+      "source_content": "1. From your Admin Portal, go to **Directory Sync**.\n2. From the list of directory sync connections, click edit icon.\n3. You can update the following information:\n   - Enter **Directory name**\n   - Enter the **Webhook URL**\n   - Enter the **Webhook secret**\n   - Toggle **Enable Webhook events logging**",
+      "source_content_hash": "f19723c6692c939a2fe0b798ac678132a0e04ad61e862cbcc3a1c587249447a7",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "1. 进入管理控制台的**目录同步**模块\n2. 在目录连接列表中点击编辑图标\n3. 可修改以下配置：\n   - 更新**目录名称**\n   - 修改**Webhook接收地址**\n   - 重置**Webhook安全密钥**\n   - 切换**启用Webhook事件日志**开关"
+      }
+    },
+    {
+      "segment_id": "517051a7",
+      "source_content": "![Update Directory](/images/docs/admin-portal/dsync/update-directory.png)",
+      "source_content_hash": "9823e001919e767e2ab6918c1b04f1f332932ce2f8193382fe5bae04f70f5318",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![更新目录](/images/docs/admin-portal/dsync/update-directory.png)"
+      }
+    },
+    {
+      "segment_id": "91afe33f",
+      "source_content": "---",
+      "source_content_hash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "node_type": "thematicBreak",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "---"
+      }
+    },
+    {
+      "segment_id": "782c902a",
+      "source_content": "## View directory users",
+      "source_content_hash": "fae12aade5add8d8e0d8890b2d38ded9ca34dca4b8b2e8978eaf28cbb7d9eb64",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 查看目录用户"
+      }
+    },
+    {
+      "segment_id": "8612da05",
+      "source_content": "1. From your Admin Portal, go to **Directory Sync**.\n2. From the list of directory sync connections, click database icon.\n3. Click the tab **Users**.\n4. Click the eye icon to view the user raw JSON data.",
+      "source_content_hash": "287438edeab522dcf83c828b756579264dbc28534bf2f3b23e73e9ddc23a10eb",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "1. 进入管理控制台的**目录同步**模块\n2. 在目录连接列表中点击数据库图标\n3. 选择**用户**标签页\n4. 点击眼睛图标查看用户原始JSON数据"
+      }
+    },
+    {
+      "segment_id": "13d9cd70",
+      "source_content": "![Users](/images/docs/admin-portal/dsync/users.png)",
+      "source_content_hash": "b72d864532d3314f131cd29a08735c5968e93ec446fcf6663e2782cf188d18cb",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![用户数据](/images/docs/admin-portal/dsync/users.png)"
+      }
+    },
+    {
+      "segment_id": "67c8996f",
+      "source_content": "---",
+      "source_content_hash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "node_type": "thematicBreak",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "---"
+      }
+    },
+    {
+      "segment_id": "11c76fcc",
+      "source_content": "## View directory groups",
+      "source_content_hash": "32b300fa1e45ab8f1f9338d7a6ef6336e85ec06d7ef61195aae58e6984cf7e99",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 查看目录群组"
+      }
+    },
+    {
+      "segment_id": "310e47b7",
+      "source_content": "1. From your Admin Portal, go to **Directory Sync**.\n2. From the list of directory sync connections, click database icon.\n3. Click the tab **Groups**.\n4. Click the eye icon to view the group raw JSON data.",
+      "source_content_hash": "d73a1da91d5c40ec010a746354d48b7cb7739d3e56d422bed1e81be9066dfbd1",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "1. 进入管理控制台的**目录同步**模块\n2. 在目录连接列表中点击数据库图标\n3. 选择**群组**标签页\n4. 点击眼睛图标查看群组原始JSON数据"
+      }
+    },
+    {
+      "segment_id": "e536ea0d",
+      "source_content": "![Groups](/images/docs/admin-portal/dsync/groups.png)",
+      "source_content_hash": "c76e2a084332bea641681e1b523ce3e361259bac794049e0fdfedcc500746367",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![群组数据](/images/docs/admin-portal/dsync/groups.png)"
+      }
+    },
+    {
+      "segment_id": "b760ab3f",
+      "source_content": "---",
+      "source_content_hash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "node_type": "thematicBreak",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "---"
+      }
+    },
+    {
+      "segment_id": "c431704b",
+      "source_content": "## View webhook events",
+      "source_content_hash": "92d2b5b17aee998c6643f77315f9da108697ce19d922a15909378374c3a22b67",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 查看Webhook事件"
+      }
+    },
+    {
+      "segment_id": "158e1f5d",
+      "source_content": "1. From your Admin Portal, go to **Directory Sync**.\n2. From the list of directory sync connections, click database icon.\n3. Click the tab **Webhook Events**.\n4. Click the eye icon to view the event raw JSON data.",
+      "source_content_hash": "4dba9eb859eb66a25ba10012aa9d3e6caaf888788e4020d8a9e1c18d91a9e649",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "1. 进入管理控制台的**目录同步**模块\n2. 在目录连接列表中点击数据库图标\n3. 选择**Webhook事件**标签页\n4. 点击眼睛图标查看事件原始JSON数据"
+      }
+    },
+    {
+      "segment_id": "657c2b20",
+      "source_content": "![Logs](/images/docs/admin-portal/dsync/logs.png)",
+      "source_content_hash": "1d7a8d25a830b565c233c98fa9d1c4ce9db5aaed912f9e4b41b79d7c173891d9",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![事件日志](/images/docs/admin-portal/dsync/logs.png)"
+      }
+    },
+    {
+      "segment_id": "e7772088",
+      "source_content": "Click the button **Clear Events** to delete all events from the database.",
+      "source_content_hash": "4af61c16d25ae6da1af458bae74179ca0b51b2220d064a2ada75b8cf324035b6",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "点击**清除事件**按钮可删除数据库中的所有事件记录"
+      }
+    },
+    {
+      "segment_id": "3fa01396",
+      "source_content": "---",
+      "source_content_hash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "node_type": "thematicBreak",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "---"
+      }
+    },
+    {
+      "segment_id": "b1cbdb65",
+      "source_content": "## Enable webhook events logging",
+      "source_content_hash": "de712235bd602debb49a74987da3cf2e4afe0e8464431be74a154d5905be9d4b",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 启用Webhook事件日志"
+      }
+    },
+    {
+      "segment_id": "caffd879",
+      "source_content": "1. From your Admin Portal, go to **Directory Sync**.\n2. From the list of directory sync connections, click edit icon.\n3. You can enable or disable the **Enable Webhook events logging**.",
+      "source_content_hash": "075c54a36b608697ac0edaa882fdaab68e55ac83278ef112f8106c68d2b5df2a",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "1. 进入管理控制台的**目录同步**模块\n2. 在目录连接列表中点击编辑图标\n3. 切换**启用Webhook事件日志**开关"
+      }
+    },
+    {
+      "segment_id": "463ed165",
+      "source_content": "By default, the webhook events are not logged.",
+      "source_content_hash": "736cf840be82b264e12df8bb3ad33924b5248f9935826819639fe577a90ee3af",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "默认情况下Webhook事件不会被记录"
+      }
+    }
+  ],
+  "target_i18n_subpath": "docusaurus-plugin-content-docs/current/admin-portal/directory-sync.md",
+  "last_updated_timestamp": "2025-06-08T18:49:09.317032+00:00",
+  "schema_version": "1.0",
+  "translated_versions": {
+    "zh-CN": "96b471ba45bcd0ee23eeab92f6ff0a66d8bc25aede9dac9523207f79d2fd037d"
+  }
+}

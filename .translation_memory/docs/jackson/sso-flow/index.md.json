@@ -1,0 +1,542 @@
+{
+  "source_file_path_relative_to_docusaurus_root": "docs/jackson/sso-flow/index.md",
+  "source_file_content_hash": "d8610fe174c0432e3ef1b81f4511c3da480941fa45bf6b585c97ef977f3484ad",
+  "segments": [
+    {
+      "segment_id": "a9b642df",
+      "source_content": "import Tabs from '@theme/Tabs';\nimport TabItem from '@theme/TabItem';",
+      "source_content_hash": "86702643a5c3bdf74257ff6062535897129ed9144c4f5b70edfe338fef3e5c73",
+      "node_type": "mdxjsEsm",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_a9b642df"
+      }
+    },
+    {
+      "segment_id": "4dbcc3b4",
+      "source_content": "# Single Sign-On (SSO)",
+      "source_content_hash": "e6110f2bc8ab58d667eea4c096fbbf23d32b3897e7e961350ac6b920769dd6d9",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "# 单点登录（SSO）"
+      }
+    },
+    {
+      "segment_id": "bb42506b",
+      "source_content": "Jackson takes a multi-tenanted approach to implementing SSO, abstracting away all the complexities of the underlying SAML/OIDC protocol. What this means is you can enable SSO for all (your) customers across products from a single instance of jackson, and works with both SAML and OIDC Identity Provider(IdP)s.",
+      "source_content_hash": "f3e89ddfe8c0dc1d0b45e37c7e97aa895ec853693a4d6beaff269003d9e85809",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "Jackson采用多租户方式实现SSO，抽象了底层SAML/OIDC协议的所有复杂性。这意味着您可以通过单个Jackson实例为所有（您的）客户跨产品启用SSO，并且同时支持SAML和OIDC身份提供商（IdP）。"
+      }
+    },
+    {
+      "segment_id": "e7ec881c",
+      "source_content": "> **Note:** All the APIs below support both `application/x-www-form-urlencoded` and `application/json` content types. Examples below use `application/x-www-form-urlencoded`.",
+      "source_content_hash": "c2de17b605378663b83e87c883496796a14cf6a1a3d32d23e2d7f45fde31be87",
+      "node_type": "blockquote",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "> **注意：** 以下所有API均支持`application/x-www-form-urlencoded`和`application/json`内容类型。下文示例使用`application/x-www-form-urlencoded`。"
+      }
+    },
+    {
+      "segment_id": "2f796981",
+      "source_content": "> **Note:** OAuth 2.0 protocol uses underscore casing for the parameters, we use camel casing for all our APIs. For example it's `client_id` in the OAuth 2.0 flow and `clientID` in our APIs.",
+      "source_content_hash": "346e1ea75799a0429a923393a83df4c14cbcbc9f680e7e3216a1c1944a904d7f",
+      "node_type": "blockquote",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "> **注意：** OAuth 2.0协议使用下划线命名参数，而我们的API采用驼峰命名。例如OAuth 2.0流程中使用`client_id`，而我们的API中使用`clientID`。"
+      }
+    },
+    {
+      "segment_id": "9fcbdce9",
+      "source_content": "## 1. Setting up SSO Provider",
+      "source_content_hash": "fdf3c841af6b330ad03955665e9a6fa9429db6af7baa3c78fa2cb84c0717c175",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 1. 配置SSO提供商"
+      }
+    },
+    {
+      "segment_id": "ad8fd492",
+      "source_content": "Please follow the instructions [here](./sso-providers) to guide your customers in setting up SAML/OIDC correctly for your product(s). You should create a copy of the doc and modify it with your custom settings, we have used the values that work for our demo apps.",
+      "source_content_hash": "f94f07ec98afc8df742f27a87a63959e0aabecdfcc32b0d317382b5a8fc89d49",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "请按照[此文档](./sso-providers)指导您的客户为产品正确配置SAML/OIDC。您应复制该文档并根据您的自定义设置进行修改，我们使用了适用于演示应用的默认值。"
+      }
+    },
+    {
+      "segment_id": "cbe57f9d",
+      "source_content": "## 2. SSO Connection API",
+      "source_content_hash": "74d1915012c05a00c2aa9faf4429b38bea970d85ff555ca2ea7b3247c149015f",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 2. SSO连接API"
+      }
+    },
+    {
+      "segment_id": "39b3772c",
+      "source_content": "You will need to provide a place in the UI for your customers (The account settings page is usually a good place for this) to configure this and then call the APIs below.",
+      "source_content_hash": "78c534c146f885f385f7379a27f7c20c7ad1956c0b8bdbd07f77a6bf379f5c0d",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "您需要在UI中为您的客户提供配置入口（通常账户设置页面是理想位置），然后调用以下API。"
+      }
+    },
+    {
+      "segment_id": "bc633244",
+      "source_content": "### 2.1 Add connection",
+      "source_content_hash": "7ccf9469233107d40f6226a078553d0d62f47533972c473b44b73873ea5e13cc",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 2.1 添加连接"
+      }
+    },
+    {
+      "segment_id": "5dfba1c3",
+      "source_content": "<Tabs>\n<TabItem value=\"saml\" label=\"SAML\" default>\n\nOnce your customer has set up the SAML app on their Identity Provider, the Identity Provider will generate an IdP or SP metadata file. Some Identity Providers only generate an IdP metadata file but it usually works for the SP login flow as well. It is an XML file that contains various attributes Jackson needs to validate incoming SAML login requests. This step is the equivalent of setting an OAuth 2.0 app and generating a client ID and client secret that will be used in the login flow.\n\nThe following API call sets up the connection in Jackson:\n\n```bash\ncurl --location --request POST 'http://localhost:5225/api/v1/connections' \\\n--header 'Authorization: Api-Key <Jackson API Key>' \\\n--header 'Content-Type: application/x-www-form-urlencoded' \\\n--data-urlencode 'encodedRawMetadata=Base64(<IdP/SP metadata XML>)' \\\n--data-urlencode 'defaultRedirectUrl=http://localhost:3366/login/saml' \\\n--data-urlencode 'redirectUrl=http://localhost:3366/*' \\\n--data-urlencode 'redirectUrl=http://localhost:3000/*' \\\n--data-urlencode 'tenant=boxyhq.com' \\\n--data-urlencode 'product=demo' \\\n--data-urlencode 'name=demo-connection' \\\n--data-urlencode 'description=Demo SAML connection'\n```\n\n- `metadataUrl`: URL containing the SAML metadata contents. Either this or `encodedRawMetadata` needs to be specified\n- `encodedRawMetadata`: Base64 encoding of the XML metadata your customer gets from their Identity Provider. Either this or `metadataUrl` needs to be specified\n- `defaultRedirectUrl`: The redirect URL to use in the IdP login flow. Jackson will call this URL after completing an IdP login flow\n- `redirectUrl`: Allowed redirect URL. Repeat this field multiple times to allow multiple redirect URLs. Jackson will disallow any redirects not on this list (or not the default URL above).\n- `tenant`: Jackson supports a multi-tenant architecture, this is a unique identifier you set from your side that relates back to your customer's tenant. This is normally an email, domain, an account id, or user-id. **Should not contain the : character since we use it as a delimiter internally**\n- `product`: Jackson support multiple products, this is a unique identifier you set from your side that relates back to the product your customer is using. **Should not contain the : character since we use it as a delimiter internally**\n- `name`: A friendly name to identify the SAML connection\n- `description`: A short description with some information of the connection\n\nThe response returns a JSON with `clientID` and `clientSecret` that can be stored against your tenant and product for a more secure OAuth 2.0 flow. If you do not want to store the `clientID` and `clientSecret` you can alternatively use `client_id=tenant=<tenantID>&product=<productID>` and use `dummy` (or the value you set for the [secret verifier](../deploy/env-variables.md#client_secret_verifier) env) as the value for `client_secret` when setting up the OAuth 2.0 flow. Additionally a `idpMetadata.provider` attribute is also returned which indicates the domain of your Identity Provider.\n</TabItem>\n<TabItem value=\"oidc\" label=\"OIDC\">\n\nOnce your customer has set up the [OIDC app](../sso-providers/generic-oidc.md) on their Identity Provider, the Identity Provider will generate a clientId and clientSecret.\n\nThe following API call sets up the connection in Jackson:\n\n```bash\ncurl --location --request POST 'http://localhost:5225/api/v1/connections' \\\n--header 'Authorization: Api-Key <Jackson API Key>' \\\n--header 'Content-Type: application/x-www-form-urlencoded' \\\n--data-urlencode 'defaultRedirectUrl=http://localhost:3366/login/oidc' \\\n--data-urlencode 'oidcDiscoveryUrl=<well-known url of OIDC Provider>' \\\n--data-urlencode 'oidcClientId=<clientId of IdP Registered App>' \\\n--data-urlencode 'oidcClientSecret=<clientSecret of IdP Registered App>' \\\n--data-urlencode 'redirectUrl=http://localhost:3366/*' \\\n--data-urlencode 'redirectUrl=http://localhost:3000/*' \\\n--data-urlencode 'tenant=boxyhq.com' \\\n--data-urlencode 'product=demo' \\\n--data-urlencode 'name=demo-connection' \\\n--data-urlencode 'description=Demo OIDC connection'\n```\n\n- `oidcDiscoveryUrl`: OpenID Providers supporting discovery make the metadata available at the endpoint obtained by concatenating issuer and `/.well-known/openid-configuration`\n- `oidcClientId`: The client identifier issued to the client during the IdP registration process.\n- `oidcClientSecret`: The client secret issued to the client during the IdP registration process.\n- `defaultRedirectUrl`: The redirect URL to use in the IdP login flow. Jackson will call this URL after completing an IdP login flow\n- `redirectUrl`: Allowed redirect URL. Repeat this field multiple times to allow multiple redirect URLs. Jackson will disallow any redirects not on this list (or not the default URL above).\n- `tenant`: Jackson supports a multi-tenant architecture, this is a unique identifier you set from your side that relates back to your customer's tenant. This is normally an email, domain, an account id, or user-id. **Should not contain the : character since we use it as a delimiter internally**\n- `product`: Jackson support multiple products, this is a unique identifier you set from your side that relates back to the product your customer is using. **Should not contain the : character since we use it as a delimiter internally**\n- `name`: A friendly name to identify the OIDC connection\n- `description`: A short description with some information of the connection\n\nThe response returns a JSON with `clientID` and `clientSecret` that can be stored against your tenant and product for a more secure OAuth 2.0 flow. If you do not want to store the `clientID` and `clientSecret` you can alternatively use `client_id=tenant=<tenantID>&product=<productID>` and use `dummy` (or the value you set for the [secret verifier](../deploy/env-variables.md#client_secret_verifier) env) as the value for `client_secret` when setting up the OAuth 2.0 flow. Additionally a `idpMetadata.provider` attribute is also returned which indicates the domain of your Identity Provider.\n</TabItem>\n</Tabs>",
+      "source_content_hash": "5edff47ecdb52aba65af999194fd19c4051f6a95959e32ea54b7acb64f732f5c",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_5dfba1c3"
+      }
+    },
+    {
+      "segment_id": "90d35b51",
+      "source_content": "### 2.2 Get connections",
+      "source_content_hash": "9838b5474eb0046165735649c3859bfdefc3d851a234daade5e3ca612f474487",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 2.2 获取连接"
+      }
+    },
+    {
+      "segment_id": "86348f98",
+      "source_content": "This endpoint can be used to retrieve SAML/OIDC connections configured for a tenant/product. This can be used to check and display the details to your customers. You can use either `clientID` or `tenant` and `product` combination.",
+      "source_content_hash": "5272be01495907e7b6089dc40ac9d5c18c75c512edc6210ca31c3b81bdd22677",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "此端点可用于检索为租户/产品配置的SAML/OIDC连接，用于向客户展示配置详情。您可以使用`clientID`或`tenant`与`product`组合进行查询。"
+      }
+    },
+    {
+      "segment_id": "0904148e",
+      "source_content": "<Tabs>\n<TabItem value=\"saml\" label=\"SAML\" default>\n\n```bash\ncurl -G --location 'http://localhost:5225/api/v1/connections' \\\n--header 'Authorization: Api-Key <Jackson API Key>' \\\n--header 'Content-Type: application/x-www-form-urlencoded' \\\n--data-urlencode 'tenant=boxyhq.com' \\\n--data-urlencode 'product=demo'\n```\n\n```bash\ncurl -G --location 'http://localhost:5225/api/v1/connections' \\\n--header 'Authorization: Api-Key <Jackson API Key>' \\\n--header 'Content-Type: application/x-www-form-urlencoded' \\\n--data-urlencode 'clientID=<Client ID>'\n```\n\nThe response returns a JSON with `idpMetadata.provider`indicating the domain of your Identity Provider. If an empty JSON payload is returned then we do not have any connection stored for the attributes you requested.\n</TabItem>\n<TabItem value=\"oidc\" label=\"OIDC\">\n\n```bash\ncurl -G --location 'http://localhost:5225/api/v1/connections' \\\n--header 'Authorization: Api-Key <Jackson API Key>' \\\n--header 'Content-Type: application/x-www-form-urlencoded' \\\n--data-urlencode 'tenant=boxyhq.com' \\\n--data-urlencode 'product=demo'\n```\n\n```bash\ncurl -G --location 'http://localhost:5225/api/v1/connections' \\\n--header 'Authorization: Api-Key <Jackson API Key>' \\\n--header 'Content-Type: application/x-www-form-urlencoded' \\\n--data-urlencode 'clientID=<Client ID>'\n```\n\nThe response returns a JSON with `oidcProvider.provider` indicating the domain of your Identity Provider. If an empty JSON payload is returned then we do not have any connection stored for the attributes you requested.\n</TabItem>\n</Tabs>",
+      "source_content_hash": "6087762e9e5f8d76946e9fd09a5561adef3f8d6616d98bdee13565e0c0dde44a",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_0904148e"
+      }
+    },
+    {
+      "segment_id": "d53c8ed4",
+      "source_content": "### 2.3 Update connection",
+      "source_content_hash": "bbd51b6719132d10c2138f19874af22338ddd9e8a1eb8a1f40146dbfb3982998",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 2.3 更新连接"
+      }
+    },
+    {
+      "segment_id": "1ecf0882",
+      "source_content": "This endpoint can be used to update an existing SSO Connection.",
+      "source_content_hash": "a6c35555ce696bd1a64c53cef27b9bc86fd42b66e1826a05fa5355959d5f2959",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "此端点用于更新现有SSO连接配置。"
+      }
+    },
+    {
+      "segment_id": "3d0666e5",
+      "source_content": "<Tabs>\n<TabItem value=\"saml\" label=\"SAML\" default>\n\n```bash\ncurl --location --request PATCH 'http://localhost:5225/api/v1/connections' \\\n--header 'Authorization: Api-Key <Jackson API Key>' \\\n--header 'Content-Type: application/x-www-form-urlencoded' \\\n--data-urlencode 'clientID=<Client ID>' \\ /* Required */\n--data-urlencode 'clientSecret=<Client Secret>' \\ /* Required */\n--data-urlencode 'encodedRawMetadata=Base64(<IdP/SP metadata XML>)' \\\n--data-urlencode 'defaultRedirectUrl=http://localhost:3366/login/saml' \\\n--data-urlencode 'redirectUrl=http://localhost:3366/*' \\\n--data-urlencode 'redirectUrl=http://localhost:3000/*' \\\n--data-urlencode 'tenant=boxyhq.com' \\ /* Required */\n--data-urlencode 'product=demo' \\ /* Required */\n--data-urlencode 'name=demo-connection' \\\n--data-urlencode 'description=Demo SAML connection'\n```\n\n</TabItem>\n<TabItem value=\"oidc\" label=\"OIDC\" default>\n\n```bash\ncurl --location --request PATCH 'http://localhost:5225/api/v1/connections' \\\n--header 'Authorization: Api-Key <Jackson API Key>' \\\n--header 'Content-Type: application/x-www-form-urlencoded' \\\n--data-urlencode 'clientID=<Client ID>' \\ /* Required */\n--data-urlencode 'clientSecret=<Client Secret>' \\ /* Required */\n--data-urlencode 'oidcDiscoveryUrl=<well-known url of OIDC Provider>' \\\n--data-urlencode 'oidcClientId=<clientId of IdP Registered App>' \\\n--data-urlencode 'oidcClientSecret=<clientSecret of IdP Registered App>' \\\n--data-urlencode 'defaultRedirectUrl=http://localhost:3366/login/oidc' \\\n--data-urlencode 'redirectUrl=http://localhost:3366/*' \\\n--data-urlencode 'redirectUrl=http://localhost:3000/*' \\\n--data-urlencode 'tenant=boxyhq.com' \\ /* Required */\n--data-urlencode 'product=demo' \\ /* Required */\n--data-urlencode 'name=demo-connection' \\\n--data-urlencode 'description=Demo OIDC connection'\n```\n\n</TabItem>\n</Tabs>",
+      "source_content_hash": "12d9357dd8dab100a17cce3a95c097da8ed506970df7d9b54ad5fd1fd6b6c010",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_3d0666e5"
+      }
+    },
+    {
+      "segment_id": "2b5df263",
+      "source_content": "### 2.4 Delete connections",
+      "source_content_hash": "8809504a19b55e12a64454a056cdb3151cad3fd64d9b79d2730a6e702ca63ded",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 2.4 删除连接"
+      }
+    },
+    {
+      "segment_id": "e29bd639",
+      "source_content": "This endpoint can be used to delete existing connections either by tenant/product or clientID.",
+      "source_content_hash": "eb8ac05558e158c6eb9d4e7839215ab967d6f68ea21c3cc88b2520171e9255e1",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "此端点可通过租户/产品组合或clientID删除现有连接。"
+      }
+    },
+    {
+      "segment_id": "44ecd2e3",
+      "source_content": "```bash\ncurl -X \"DELETE\" --location 'http://localhost:5225/api/v1/connections' \\\n--header 'Authorization: Api-Key <Jackson API Key>' \\\n--url-query 'tenant=boxyhq.com' \\\n--url-query 'product=demo'\n```",
+      "source_content_hash": "3acdd74954a5791f4feadb49e0adae13fd037018ce4dd2d09387ab03d36efa9f",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_44ecd2e3"
+      }
+    },
+    {
+      "segment_id": "0152e600",
+      "source_content": "```bash\ncurl -X \"DELETE\" --location 'http://localhost:5225/api/v1/connections' \\\n--header 'Authorization: Api-Key <Jackson API Key>' \\\n--url-query 'clientID=<Client ID>'\n--url-query 'clientSecret=<Client Secret>'\n```",
+      "source_content_hash": "36f95806f83bb3d733c5e4281838f21336ec2ba4ba1919c1a4c7a2c8565c03ed",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_0152e600"
+      }
+    },
+    {
+      "segment_id": "17fd5988",
+      "source_content": "## 3. OAuth 2.0 Flow",
+      "source_content_hash": "4dbf16c77ecf6e3e461ff77ddd2e1c76cf0db2a59667ec0d09c5d3be687ddaae",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 3. OAuth 2.0流程"
+      }
+    },
+    {
+      "segment_id": "e53b773f",
+      "source_content": ":::info\n\n#### OpenID Connect flow\n\nJackson also supports the [OIDC flow](https://openid.net/specs/openid-connect-core-1_0.html). By including `openid` in the `scope` param, an additional `id_token` is returned from the token endpoint which contains the user claims: `id, email, firstName, and lastName`. To enable the flow on Jackson, be sure to configure the keys and algorithm in [OpenID configuration](../deploy/env-variables.md#openid-configuration). If the authentication request contained `nonce` then it is passed unmodified to the ID Token, which the client can use to validate and mitigate replay attacks.\n:::",
+      "source_content_hash": "28daf1742e2dc66ba4f2c0866cd862c63a056aa050606b08c1b08538593d1826",
+      "node_type": "containerDirective",
+      "translatable": true,
+      "translations": {
+        "zh-CN": ":::info\n\n#### OpenID Connect流程\n\nJackson同时支持[OIDC流程](https://openid.net/specs/openid-connect-core-1_0.html)。当`scope`参数包含`openid`时，令牌端点将额外返回包含用户声明（`id, email, firstName, lastName`）的`id_token`。要启用此流程，请确保在[OpenID配置](../deploy/env-variables.md#openid-configuration)中配置密钥和算法。若认证请求包含`nonce`参数，该值将原样传递至ID Token供客户端验证，防止重放攻击。\n:::"
+      }
+    },
+    {
+      "segment_id": "7e563909",
+      "source_content": "Jackson has been designed to abstract the underlying SAML/OIDC login flow as a pure OAuth 2.0 flow. This means it's compatible with any standard OAuth 2.0 library out there, both client-side and server-side. It is important to remember that SSO Connection is configured per customer unlike OAuth 2.0 where you can have a single OAuth app supporting logins for all customers.",
+      "source_content_hash": "4355ee35cf0408054520a005823a4d8f3dad745407aaaa180394907dd3e083a9",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "Jackson的设计理念是将底层SAML/OIDC登录流程抽象为纯OAuth 2.0流程，这意味着其兼容所有标准OAuth 2.0库（包括客户端和服务器端）。需特别注意：SSO连接是按客户配置的，这与OAuth 2.0中单个应用可支持所有客户登录的模式不同。"
+      }
+    },
+    {
+      "segment_id": "90c4b96b",
+      "source_content": "Jackson also supports the [PKCE authorization flow](https://oauth.net/2/pkce/), so you can protect your SPAs.",
+      "source_content_hash": "4a025cfa71ca85c3df1467707330d75a7a1f79ef80cea65a29d1c716fc1d4245",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "Jackson还支持[PKCE授权流程](https://oauth.net/2/pkce/)，可有效保护单页应用（SPA）。"
+      }
+    },
+    {
+      "segment_id": "1f9058cd",
+      "source_content": "If for any reason you need to implement the flow on your own, the steps are outlined below:",
+      "source_content_hash": "07d95debd8356bcd995ac28e253bb6314cdbd996b4c4c80743ab65152cc7bfd3",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "如需自行实现该流程，步骤如下："
+      }
+    },
+    {
+      "segment_id": "dd21637d",
+      "source_content": "### 3.1 Authorize",
+      "source_content_hash": "ab53a92633a394e804bdc329adf9709b129136cf6147a6188a34b137a51737c4",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 3.1 授权"
+      }
+    },
+    {
+      "segment_id": "09f901c3",
+      "source_content": "The OAuth flow begins with redirecting your user to the `authorize` URL:",
+      "source_content_hash": "b28e2a77a089c6063d646740088915f868c09ff122f20ad6a1d5c43d4cc073e8",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "OAuth流程始于将用户重定向至`authorize` URL："
+      }
+    },
+    {
+      "segment_id": "ca792546",
+      "source_content": "```bash\nhttps://localhost:5225/api/oauth/authorize\n  ?response_type=code&provider=saml\n  &client_id=<clientID or tenant and product query params as described in the SSO connection API section above>\n  &redirect_uri=<redirect URL>\n  &state=<randomly generated state id>\n```",
+      "source_content_hash": "337db102376810aa9730128541cfea41222b451a905d84b81f8b701d19d154bb",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_ca792546"
+      }
+    },
+    {
+      "segment_id": "5ca58178",
+      "source_content": "- `response_type`: `code` is the only supported type for now but maybe extended in the future\n- `client_id`: Use the client_id returned by the SSO connection API or use `tenant=<tenantID>&product=<productID>` to use the tenant and product IDs instead. **Note:** Please don't forget to URL encode the query parameters including `client_id`.\n- `tenant`: Optionally you can provide use `dummy` as the value for `client_id` and specify the `tenant` and `product` custom attributes (if your OAuth 2.0 library allows it).\n- `product`: Should be specified if specifying `tenant` above\n- `idp_hint`: Can be used to select the Identity Provider if multiple connections match for the same `tenant/product`. Should point to the absolute \"clientID\" of the SSO Connection in Jackson.\n- `redirect_uri`: This is where the user will be taken back once the authorization flow is complete\n- `state`: Use a randomly generated string as the state, this will be echoed back as a query parameter when taking the user back to the `redirect_uri` above. You should validate the state to prevent XSRF attacks.\n- `nonce` (for OIDC flow): String value used to associate a Client session with an ID Token, and to mitigate replay attacks. The value is passed through unmodified from the Authentication Request to the ID Token. Sufficient entropy MUST be present in the nonce values used to prevent attackers from guessing values.\n- `forceAuthn` (for SAML SSO Connections): If passed in with the value `true`, the outgoing SAML request to IdP will have the param `ForceAuthn` set as true forcing the user to re-authenticate even if they have an active session.\n- `login_hint` (Relevant for OIDC IdPs like Google): If passed in, the parameter will be forwarded in the OIDC IdP authorize request. The IdP can use this value (normally an account identifier such as an email address) as a hint to skip the account selection page.",
+      "source_content_hash": "8262c54a6d664e1983dce4918f794685181001220e9fd65c5f7be81edbaf1078",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- `response_type`：目前仅支持`code`类型，未来可能会扩展\n- `client_id`：使用SSO连接API返回的client_id，或通过`tenant=<tenantID>&product=<productID>`直接使用租户和产品ID。**注意：**请勿忘记对包括`client_id`在内的查询参数进行URL编码。\n- `tenant`：可选方案，若OAuth 2.0库支持，可将`client_id`设为`dummy`并通过此参数指定自定义租户属性\n- `product`：若指定了`tenant`则必须同时指定此参数\n- `idp_hint`：当同一`tenant/product`匹配多个连接时，用于选择身份提供商。应指向Jackson中SSO连接的绝对\"clientID\"\n- `redirect_uri`：授权流程完成后用户将被重定向至此URI\n- `state`：使用随机生成的字符串作为状态值，该值将作为查询参数回传至`redirect_uri`。应验证此值以防止XSRF攻击\n- `nonce`（OIDC流程专用）：用于关联客户端会话与ID令牌的字符串值，可防范重放攻击。该值从认证请求原样传递至ID令牌，必须包含足够的随机性防止攻击者猜测\n- `forceAuthn`（SAML SSO连接专用）：当值为`true`时，发往IdP的SAML请求将强制设置`ForceAuthn`参数，即使用户已有活跃会话也需重新认证\n- `login_hint`（适用于Google等OIDC IdP）：该参数将被转发至OIDC IdP的授权请求，IdP可据此值（通常为邮箱等账户标识）跳过账户选择页面"
+      }
+    },
+    {
+      "segment_id": "4c707724",
+      "source_content": "> **NOTE**: You can also pass the encoded tenant/product in either `scope` or `access_type` or `resource` (Set `client_id` as `dummy`). This will come in handy for some setups where the client_id can't be set dynamically.",
+      "source_content_hash": "aa262adad97f09d7aaf32fbec0847418a89a88910b338431641641af1c29a4e6",
+      "node_type": "blockquote",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "> **注意**：您也可将编码后的tenant/product通过`scope`、`access_type`或`resource`参数传递（需将`client_id`设为`dummy`）。这在某些无法动态设置client_id的场景中特别实用。"
+      }
+    },
+    {
+      "segment_id": "d119b75c",
+      "source_content": "The user will be taken to the IdP based on the configured SAML/OIDC metadata.\nIn case of any errors, we return the `error`, `error_description` and `state` (from original request) (see [Error Response](https://www.oauth.com/oauth2-servers/authorization/the-authorization-response/)) back to the `redirect_uri` (`redirect_uri` is validated against the saml connection to prevent open redirects).",
+      "source_content_hash": "426808676979dc6b6f5fc107f22420b0622f628fe3160b045efd181eef057f8f",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "用户将被引导至基于配置的SAML/OIDC元数据的IdP。若出现错误，系统会将`error`、`error_description`及原始请求中的`state`参数（参见[错误响应](https://www.oauth.com/oauth2-servers/authorization/the-authorization-response/)）返回至`redirect_uri`（为防止开放重定向，`redirect_uri`会与saml连接进行匹配验证）。"
+      }
+    },
+    {
+      "segment_id": "2f833a4d",
+      "source_content": "### 3.2 Code Exchange",
+      "source_content_hash": "38365bcce7e8ea86c3b324005aa1ca01936cc1d47135bcb165cce0f5e023d327",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 3.2 授权码兑换"
+      }
+    },
+    {
+      "segment_id": "dfb6fc67",
+      "source_content": "Once the user logs in successfully at the IdP, IdP sends back the SAML/OIDC response to Jackson. For SAML, the response contains the user profile. In the case of OIDC, the response contains the authorization code that is used by Jackson to obtain token and userprofile from the OIDC IdP. Jackson generates a short lived `code` and stores the user profile against it. After successful authorization, the user is redirected back to the `redirect_uri`. The query parameters will include the `code` and `state` parameters. You should validate that the state matches the one you sent in the `authorize` request.",
+      "source_content_hash": "7a0cb7b7845861ec0d6b67e90d2f8c894298512f5e5ccb59543b0986c813a4bd",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "当用户在IdP成功登录后，IdP会向Jackson返回SAML/OIDC响应。SAML响应包含用户档案，OIDC响应则包含授权码（Jackson用此码从OIDC IdP获取令牌和用户档案）。Jackson会生成短期有效的`code`并关联用户档案，授权成功后用户被重定向至`redirect_uri`，其查询参数将包含`code`和`state`。您需验证该state是否与授权请求中的初始值匹配。"
+      }
+    },
+    {
+      "segment_id": "80dbdeb8",
+      "source_content": "The code can then be exchanged for a token by making the following request:",
+      "source_content_hash": "a36b5192d1dbff91e43084ef093b918941ce47b397f0801a588e26961cdbabf9",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "随后可通过以下请求将授权码兑换为令牌："
+      }
+    },
+    {
+      "segment_id": "4f217d4a",
+      "source_content": "```bash\ncurl --request POST \\\n  --url 'http://localhost:5225/api/oauth/token' \\\n  --header 'content-type: application/x-www-form-urlencoded' \\\n  --data 'grant_type=authorization_code' \\\n  --data 'client_id=<clientID or tenant and product query params as described in the SAML connection API section above>' \\\n  --data 'client_secret=<clientSecret or clientSecretVerifier if set (which otherwise defaults to \"dummy\")' \\\n  --data 'redirect_uri=<redirect URL>' \\\n  --data 'code=<code from the query parameter above>'\n```",
+      "source_content_hash": "6c87f6894344507cafe1f52a9604141a11ca582cc8cdc3a3baf6aaa5435f7ca8",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_4f217d4a"
+      }
+    },
+    {
+      "segment_id": "6f588b55",
+      "source_content": "- `grant_type`: `authorization_code` is the only supported flow, for now. We might extend this in the future\n- `client_id`: Use the clientID returned by the SSO connection API or use `tenant=<tenantID>&product=<productID>` to use the tenant and product IDs instead. **Note:** Please don't forget to URL encode the query parameters including `client_id`.\n- `client_secret`: Use the clientSecret returned by the SAML connection API or clientSecretVerifier (which defaults to \"dummy\") if using the tenant and product in the clientID\n- `redirect_uri`: This is where the user will be taken back once the authorization flow is complete. Use the same redirect_uri as the previous request",
+      "source_content_hash": "2e574a96b63b7a7c87daa84dde5d3c2aac1abcee2a18a1bd7672c690e67bcd7c",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- `grant_type`：目前仅支持`authorization_code`流程，未来可能扩展\n- `client_id`：使用SSO连接API返回的clientID，或通过`tenant=<tenantID>&product=<productID>`使用租户和产品ID组合。**注意：**请勿忘记对包括`client_id`在内的查询参数进行URL编码\n- `client_secret`：使用SAML连接API返回的clientSecret，若通过tenant和product指定clientID则使用clientSecretVerifier（默认为\"dummy\"）\n- `redirect_uri`：授权流程完成后用户将被重定向至此URI，需与先前请求保持一致"
+      }
+    },
+    {
+      "segment_id": "93f7c834",
+      "source_content": "If everything goes well you should receive a JSON response that includes the access token. This token is needed for the next step where we fetch the user profile.",
+      "source_content_hash": "646dbb048c3d955abcb727704adac5464ebbd17dd8408999a1a77e5be94147c4",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "若一切正常，您将收到包含访问令牌的JSON响应。此令牌是下一步获取用户档案的必要凭证。"
+      }
+    },
+    {
+      "segment_id": "f3924775",
+      "source_content": "```json\n{\n  \"access_token\": <access token>,\n  \"token_type\": \"bearer\",\n  \"expires_in\": 300\n}\n```",
+      "source_content_hash": "503fd258c82f0fd6cc8577733574d4ce632c236200d49011585d89f1fd6a0b4d",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_f3924775"
+      }
+    },
+    {
+      "segment_id": "16efe6ee",
+      "source_content": "### 3.3 Profile Request",
+      "source_content_hash": "15a98c25719a878d3d05139e87ce5e03ac0618c586c4a92744db4c06cf05a35e",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 3.3 用户资料请求"
+      }
+    },
+    {
+      "segment_id": "590d1cd9",
+      "source_content": "The short-lived access token can now be used to request the user's profile. You'll need to make the following request:",
+      "source_content_hash": "87cd7e477196a6e89a9664a957a77c37dd852d4c594fe75407811b6580daee67",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "此时，短期有效的访问令牌可用于请求用户资料。您需要发起以下请求："
+      }
+    },
+    {
+      "segment_id": "099d21ed",
+      "source_content": "```bash\ncurl --request GET \\\n  --url 'https://localhost:5225/api/oauth/userinfo' \\\n  --header 'authorization: Bearer <access token>'\n```",
+      "source_content_hash": "fbce2d5fcab35c2dc53e00b37c0bde221e8423fee58c1056b0cfcc8bbea91355",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_099d21ed"
+      }
+    },
+    {
+      "segment_id": "bed77f05",
+      "source_content": "If everything goes well you should receive a JSON response with the user's profile:",
+      "source_content_hash": "7612a48503834b5dcdcef6739da073506e81e9afeafc6dc748799d8b661eb594",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "如果一切顺利，您将收到包含用户资料的JSON响应："
+      }
+    },
+    {
+      "segment_id": "34dd1969",
+      "source_content": "```json\n{\n  \"id\": <id from the Identity Provider>,\n  \"email\": \"sjackson@coolstartup.com\",\n  \"firstName\": \"SAML\",\n  \"lastName\": \"Jackson\"\n  \"raw\": {\n    ...\n  },\n  \"requested\": {\n    ...\n  }\n}\n```",
+      "source_content_hash": "c99471bcb4468ed275c3b3b603d647ff26f6d842b110fc57e35ead5062bac669",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_34dd1969"
+      }
+    },
+    {
+      "segment_id": "1fedb5f8",
+      "source_content": "- `id`: The id of the user as provided by the Identity Provider. (SAML SLO request requires you to pass `id` as `nameId`. Save `id` if you have a plan to implement SLO in the future.)\n- `email`: The email address of the user as provided by the Identity Provider\n- `firstName`: The first name of the user as provided by the Identity Provider\n- `lastName`: The last name of the user as provided by the Identity Provider\n- `raw`: This contains all claims attributes returned by the SAML provider\n- `requested`: This contains the `tenant`, `product`, `client_id` and `state` from the authorize request. It can be used to reconcile context on the client side if needed",
+      "source_content_hash": "0633e832667f120053bc4002d04bed810eae6db464654b14101f6317ad735456",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- `id`: 由身份提供商提供的用户唯一标识（SAML单点登出请求要求将`id`作为`nameId`传递。若未来计划实现SLO功能，请保存此`id`值）\n- `email`: 身份提供商提供的用户邮箱地址\n- `firstName`: 身份提供商提供的用户名字\n- `lastName`: 身份提供商提供的用户姓氏\n- `raw`: 包含SAML提供商返回的所有声明属性\n- `requested`: 包含授权请求中的`tenant`、`product`、`client_id`和`state`参数，可用于在客户端按需重建上下文"
+      }
+    },
+    {
+      "segment_id": "b8925cfb",
+      "source_content": "## 4. SAML SLO",
+      "source_content_hash": "b8b9efef050edbbbb35ee9f24fb362b0bff84138915d3233dc424cdc68ec56b9",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 4. SAML单点登出(SLO)"
+      }
+    },
+    {
+      "segment_id": "95b3e282",
+      "source_content": "SLO is a SAML flow that allows an end-user to logout of a single session and be automatically logged out of all linked sessions created during the SSO process.",
+      "source_content_hash": "9d5b629dc5b037982a77c7916909ac0b9dcc83d1fe8e593475d19e19d3502dff",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "单点登出(SLO)是一种SAML流程，允许终端用户登出单个会话时，自动注销SSO过程中创建的所有关联会话。"
+      }
+    },
+    {
+      "segment_id": "1f92e934",
+      "source_content": "The SLO flow begins with redirecting your user to the `/api/logout` endpoint.",
+      "source_content_hash": "8c885d4b703c3b7c0cd9d8068f8db8d42d9f72d779ffe7978f92c8b9d73dd377",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "SLO流程始于将用户重定向至`/api/logout`端点："
+      }
+    },
+    {
+      "segment_id": "bdb6a28d",
+      "source_content": "```bash\nhttps://localhost:5225/api/logout\n  ?nameId=google-auth0-f92cc1834efc0f73e9c09\n  &tenant=boxyhq.com\n  &product=demo\n  &redirectUrl=http://www.example.com/logout\n```",
+      "source_content_hash": "184349e914448453c102ee6785f04f372d6edb48ea4aa8acfa398ae4090d6e3c",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_bdb6a28d"
+      }
+    },
+    {
+      "segment_id": "df5213a7",
+      "source_content": "- `nameId`: Identifies the subject of a SAML assertion (Typically the user who is authenticated)\n- `tenant`: The tentant\n- `product`: The product\n- `redirectUrl`: Post logout redirect URL",
+      "source_content_hash": "287651d958528783add9fd5514fbb3203f7966d9eb2e2f268eaa1bfc34392b74",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- `nameId`: 标识SAML断言的主体（通常为已认证的用户）\n- `tenant`: 租户标识\n- `product`: 产品标识\n- `redirectUrl`: 登出后重定向URL"
+      }
+    },
+    {
+      "segment_id": "e8bf4d18",
+      "source_content": "IdP will send a response (as a POST operation) to a specific URL (Single Logout URL) for the logout request. You need to register this URL on the IdP `/api/logout/callback` to handle the response.",
+      "source_content_hash": "7ae8ba4355da7bb1415f2c9d55b95a129c71f954b58266d89eb79b245a21da10",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "身份提供商(IdP)会将登出请求的响应（通过POST操作）发送至特定URL（单点登出URL）。您需要在IdP上注册该URL `/api/logout/callback` 以处理响应。"
+      }
+    },
+    {
+      "segment_id": "b682f1ac",
+      "source_content": "Jackson will redirect users to `redirectUrl` after the successful logout.",
+      "source_content_hash": "6a9fe18785aa1949577cce4d1643787acaa87ff8da218e4b277769f00e21682f",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "登出成功后，Jackson会将用户重定向至`redirectUrl`。"
+      }
+    },
+    {
+      "segment_id": "edc53889",
+      "source_content": ":::info\nYou should save the `id` returned by the `userinfo` for an user so that you can use the `id` as `nameId` with SLO request.\n:::",
+      "source_content_hash": "f0af72b9f1e0ee303d0abdfd109472211bf74bf4638295d33514e17cc278b9c7",
+      "node_type": "containerDirective",
+      "translatable": true,
+      "translations": {
+        "zh-CN": ":::info\n建议保存`userinfo`接口返回的用户`id`，以便在SLO请求中将其作为`nameId`参数使用。\n:::"
+      }
+    }
+  ],
+  "target_i18n_subpath": "docusaurus-plugin-content-docs/current/jackson/sso-flow/index.md",
+  "last_updated_timestamp": "2025-06-08T18:49:09.309275+00:00",
+  "schema_version": "1.0",
+  "translated_versions": {
+    "zh-CN": "d8610fe174c0432e3ef1b81f4511c3da480941fa45bf6b585c97ef977f3484ad"
+  }
+}

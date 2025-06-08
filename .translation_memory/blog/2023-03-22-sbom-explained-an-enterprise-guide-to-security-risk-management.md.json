@@ -1,0 +1,202 @@
+{
+  "source_file_path_relative_to_docusaurus_root": "blog/2023-03-22-sbom-explained-an-enterprise-guide-to-security-risk-management.md",
+  "source_file_content_hash": "bde7bbefa4f6ba8f6f72fc1f4d364246a3dc1c2a3ed0c66130bd23a8b196f0f2",
+  "segments": [
+    {
+      "segment_id": "58cfcc64",
+      "source_content": "---\nslug: sbom-explained-an-enterprise-guide-to-security-risk-management\ntitle: 'SBOM Explained: An enterprise guide to security risk management'\nauthor: Nathan Tarbert\nauthor_title: Community Success Engineer @BoxyHQ\nauthor_url: https://github.com/NathanTarbert\nauthor_image_url: /images/authors/nathan.jpg\ntags_disabled: [open-source]\nimage: /img/blog/security-lock.jpg\n---",
+      "source_content_hash": "f96b71bca047d95078decbb96eb16c2cd16cb4d9edbc4a711a1e6e63595e0b37",
+      "node_type": "yaml",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_58cfcc64"
+      }
+    },
+    {
+      "segment_id": "8d66f911",
+      "source_content": "In this age of technology, software companies are quickly shifting towards a strict compliance posture. You may ask yourself, why is that and what has changed over the last several years? This can be due to multiple factors but can mainly be boiled down into four categories.",
+      "source_content_hash": "f9cf54fdc7acc0fc5e4c68d69d03130b6c9956ded69df2c618238dd32d4384eb",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "在这个技术时代，软件公司正迅速转向严格的合规姿态。你可能会问，为什么会出现这种趋势？过去几年间发生了什么变化？这背后有多重因素，但主要可归结为以下四大类别。"
+      }
+    },
+    {
+      "segment_id": "9e760345",
+      "source_content": "- Security\n- Product Development\n- Compliance\n- Supply Chain & Risk Management",
+      "source_content_hash": "6a6752a07bf800e9b83b9f67d34fe4f897ddf4d91324cad6e6a7b4fb2cf08e23",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- 安全性\n- 产品开发\n- 合规性\n- 供应链与风险管理"
+      }
+    },
+    {
+      "segment_id": "aee0e40d",
+      "source_content": "## What is an SBOM or Software Bill of Materials?",
+      "source_content_hash": "b44f6fd4f1b38b60dfe7aa711c629eedc05787290455805d42adb23bd670d265",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 什么是SBOM（软件物料清单）？"
+      }
+    },
+    {
+      "segment_id": "f5f6d2ce",
+      "source_content": "You can think of your modern application as a cake you are baking. The list of ingredients you use to bake that cake would be the SBOM (Software Bill of Materials). In the case of software, it's open-source or private dependencies and third-party components. This list can be massive and can range from hundreds to thousands, especially when you factor in transitive dependencies (an indirect dependency of the component it relies on). This list gets very complex and is impossible to manage at scale at the enterprise level. Gone are the days when most enterprises or smaller-scale organizations would write applications from scratch. Rather, most applications are assembled using pre-built software packages, i.e open-source. Over the past decade, this has led to the rise and use of publicly available software components and agile development at an enormous rate.",
+      "source_content_hash": "da5a8a4305b082830cb95e9ee7b56f951e36836be4c6950967dad83057d4d95f",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "你可以将现代应用程序想象成正在烘焙的蛋糕。用于制作蛋糕的原料清单就是SBOM（软件物料清单）。对于软件而言，这些原料就是开源或私有依赖项以及第三方组件。这份清单可能非常庞大，从数百到数千不等，尤其是考虑到传递性依赖（组件所依赖的间接依赖项）时。这份清单会变得极其复杂，在企业层面几乎无法规模化管理。大多数企业或中小型组织从头编写应用程序的时代已经过去。如今，大多数应用程序都是使用预构建的软件包（即开源组件）组装而成。过去十年间，这导致公开可用的软件组件和敏捷开发的采用率大幅提升。"
+      }
+    },
+    {
+      "segment_id": "40f9552a",
+      "source_content": "## Security",
+      "source_content_hash": "52543dba9bf0d349a80a358376e059aa44e2bf43d10c6fe661eaa7b05f033fa4",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 安全性"
+      }
+    },
+    {
+      "segment_id": "f2c2bdd0",
+      "source_content": "More organizations now have security top-of-mind due to cyber attacks on business infrastructure becoming almost a daily occurrence. Companies are faced with major decisions that affect cost, efficiency, and productivity. There is an enormous risk and liability where a company’s code base lives in the cloud. This could be private or public but a good rule of thumb when you think about risk is not if we’re breached, but when. So precautions need to be taken to add layers of protection to software infrastructure.",
+      "source_content_hash": "162d561d70842535f772a8ec46c70a4091a454e3b370adc28df9fb3ed33442a3",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "由于针对企业基础设施的网络攻击几乎成为日常事件，越来越多的组织将安全性置于首位。公司面临着影响成本、效率和生产力的重大决策。代码库存储在云端（无论是私有还是公有）存在巨大的风险和责任。关于风险的黄金法则是：问题不在于\"是否\"会被入侵，而在于\"何时\"会被入侵。因此，必须采取预防措施，为软件基础设施添加多层防护。"
+      }
+    },
+    {
+      "segment_id": "a76548f8",
+      "source_content": "An SBOM would provide better visibility to companies in identifying and tracking security vulnerabilities that could enable timely patches. Updates in code should prompt a newly generated report (SBOM).",
+      "source_content_hash": "c6b671776d58773550a83ee9a115d3007c5a88ab4c4f6524f1c694db0be96792",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "SBOM能为企业提供更好的可见性，帮助识别和跟踪安全漏洞，从而及时打补丁。代码更新时应触发生成新的报告（SBOM）。"
+      }
+    },
+    {
+      "segment_id": "4b1d2d7d",
+      "source_content": "We could go a lot deeper around all the various ways precautions could be taken like scanning your application for vulnerabilities or penetration testing. A [minimum viable secure product](https://mvsp.dev/) is of course recommended for all enterprise-ready organizations. It could be as simple as having [audit logs](https://github.com/retracedhq/retraced) in place to record and search events internally on your application.",
+      "source_content_hash": "0067981c30b6fac409f2feeba4329614ad0c1a86850155f2c9ef9d81d79ef46c",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "我们可以深入探讨各种预防措施，例如扫描应用程序中的漏洞或进行渗透测试。对于所有面向企业的组织，推荐采用[最小可行安全产品](https://mvsp.dev/)。简单的措施可能包括部署[审计日志](https://github.com/retracedhq/retraced)来记录和搜索应用程序内部事件。"
+      }
+    },
+    {
+      "segment_id": "48847fd4",
+      "source_content": "## Product Development",
+      "source_content_hash": "faf0fb8744385ee8371674c595d5766e75524b0af1fc616a2cbfb8bfff17ab73",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 产品开发"
+      }
+    },
+    {
+      "segment_id": "4daf5cdd",
+      "source_content": "SBOMs can improve and help software development processes by providing a comprehensive list of all open-source dependencies and components used in a product. From an organizational standpoint, it is crucial to ensure that all software and related components are up-to-date and licensed correctly. Having this clear understanding is key to risk mitigation when it comes to understanding what is in a product and how it is constructed.\nTherefore, development teams can quickly improve transparency, communication, and collaborative decision-making with a faster time-to-market while ensuring industry compliance standards and regulations.",
+      "source_content_hash": "99a3e927f097aeeedf2eda6e6c4509f668a4c04252f3858d05f3e57b2cea4101",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "SBOM通过提供产品中所有开源依赖项和组件的完整清单，能够改进并助力软件开发流程。从组织角度来看，确保所有软件及相关组件保持最新且正确授权至关重要。清晰了解这些内容是降低风险的关键，有助于理解产品的构成和构建方式。\n因此，开发团队可以快速提升透明度、沟通效率和协作决策能力，从而缩短上市时间，同时确保符合行业合规标准和法规。"
+      }
+    },
+    {
+      "segment_id": "517051a7",
+      "source_content": "![matrix finger](/img/blog/matrix-finger.jpg)",
+      "source_content_hash": "f9053db5301dc163beae200bd2e9be17d09321334eaefc866af748030d1e5e5c",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![matrix finger](/img/blog/matrix-finger.jpg)"
+      }
+    },
+    {
+      "segment_id": "80d9e13c",
+      "source_content": "## Compliance",
+      "source_content_hash": "f95398972c757b727c92f5131ade8f843e1e384e3addc4263a6181bbf41bcf61",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 合规性"
+      }
+    },
+    {
+      "segment_id": "33331f27",
+      "source_content": "In 2021 the US Government issued an [executive order](https://www.gsa.gov/technology/it-contract-vehicles-and-purchasing-programs/information-technology-category/it-security/executive-order-14028) mandating all software companies that do business with the US government must provide a detailed inventory list (software bill of materials or SBOM) of all components related to the software they have produced and sold to any federal agency. The legislation is geared towards transparency with a view to the enhancement of security for our supply chain infrastructure. This has quickly prompted other countries to consider similar legislation.",
+      "source_content_hash": "3c33302202b2f564ecfc9531cae94160d05a542eb3d221c9deeec2b60e1508eb",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "2021年，美国政府发布了一项[行政命令](https://www.gsa.gov/technology/it-contract-vehicles-and-purchasing-programs/information-technology-category/it-security/executive-order-14028)，要求所有与美国政府有业务往来的软件公司必须提供详细的清单（软件物料清单或SBOM），列出其生产并销售给任何联邦机构的所有软件相关组件。该立法旨在提高透明度，以加强供应链基础设施的安全性。这迅速促使其他国家考虑类似的立法。"
+      }
+    },
+    {
+      "segment_id": "8d04259b",
+      "source_content": "## Supply Chain & Risk Management",
+      "source_content_hash": "2f54650a1f6244e0fcbd41872994cfd95c41329275a07b7e1e73a96125da7280",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 供应链与风险管理"
+      }
+    },
+    {
+      "segment_id": "95e9ba12",
+      "source_content": "It’s vital to take a proactive approach and have a top-down understanding of all software components that live in a software ecosystem. With that in mind, SBOMs are quickly becoming a standard for software supply chain risk management. With the expansion of sophisticated attacks, it’s more important than ever to take a systematic approach when it comes to the security of your organization.",
+      "source_content_hash": "8e8b3bf3183ac8e79954e50f3113e5c76e8a48bbd75b293539f2789a1132d869",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "采取主动措施并自上而下地了解软件生态系统中所有组件的构成至关重要。有鉴于此，SBOM正迅速成为软件供应链风险管理的标准。随着复杂攻击的增多，在组织安全方面采取系统化方法比以往任何时候都更加重要。"
+      }
+    },
+    {
+      "segment_id": "8af76f3d",
+      "source_content": "The ecosystem is growing with tools that help you verify, scan and monitor all your components and manifest files.",
+      "source_content_hash": "d8483aac2edc3d52e2e1a8fd9ef1811584147b8d6b7adb28501b286873cced88",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "生态系统正在不断发展，涌现出许多工具，可帮助你验证、扫描和监控所有组件及清单文件。"
+      }
+    },
+    {
+      "segment_id": "a9d49f92",
+      "source_content": "If you have an open-source product to sell to enterprises or the public sector, you will need to anticipate compliance and build an SBOM into your product. Especially if you are targeting entities in heavily regulated industries. Taking this into consideration, that’s what we did at BoxyHQ for each of our four products with guides that will help you navigate these decisions (Enterprise Single Sign On, Directory Sync, Audit Logs, and Data Privacy Vault). We chose to build [Cosign](https://www.sigstore.dev/) right into our tool - but many more are available. Here is a [curated list of SBOM-related tools.](https://github.com/awesomeSBOM/awesome-sbom)",
+      "source_content_hash": "4e4011a9d9b788af93ed7fe7682a99f077da694363cf4df4c97edd55bd9dc24f",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "如果您有一款面向企业或公共部门销售的开源产品，就必须预先考虑合规性要求，并将SBOM（软件物料清单）集成到产品中。尤其是在面向高度监管行业的实体时更需如此。基于这一考量，BoxyHQ为我们旗下四大产品（企业级单点登录、目录同步、审计日志和数据隐私保险库）均采取了这一策略，并提供了配套指南以协助您做出决策。我们选择将[Cosign](https://www.sigstore.dev/)直接构建到工具中——当然市面上还有更多可选方案，这里有一份[精选的SBOM相关工具列表](https://github.com/awesomeSBOM/awesome-sbom)。"
+      }
+    },
+    {
+      "segment_id": "a44047a5",
+      "source_content": "Please visit BoxyHQ’s website to learn more about producing an SBOM for your products. E.g. SBOM for our enterprise SSO: [BoxyHQ](https://boxyhq.com/docs/jackson/sbom)",
+      "source_content_hash": "97b450b702442befb8a710ab8b19137373244ecce891ca2a93556c4c056d0aad",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "欢迎访问BoxyHQ官网了解更多关于为产品生成SBOM的信息。例如我们的企业级SSO的SBOM文档：[BoxyHQ](https://boxyhq.com/docs/jackson/sbom)"
+      }
+    }
+  ],
+  "target_i18n_subpath": "docusaurus-plugin-content-blog/2023-03-22-sbom-explained-an-enterprise-guide-to-security-risk-management.md",
+  "last_updated_timestamp": "2025-06-08T18:49:09.292177+00:00",
+  "schema_version": "1.0",
+  "translated_versions": {
+    "zh-CN": "bde7bbefa4f6ba8f6f72fc1f4d364246a3dc1c2a3ed0c66130bd23a8b196f0f2"
+  }
+}

@@ -1,0 +1,92 @@
+{
+  "source_file_path_relative_to_docusaurus_root": "blog/2023-01-18-why-does-your-saas-application-need-audit-logs.md",
+  "source_file_content_hash": "2f29f26586e9d4312976d5a4eb2053caeeddd8915966048f8d66f210964e0e29",
+  "segments": [
+    {
+      "segment_id": "58cfcc64",
+      "source_content": "---\nslug: why-does-your-saas-application-need-audit-logs\ntitle: Why does your SaaS application need audit logs?\nauthor: Deepak Prabhakara\nauthor_title: Co-founder & CEO @BoxyHQ\nauthor_url: https://github.com/deepakprabhakara\nauthor_image_url: /images/authors/deepak.jpg\ntags_disabled: [audit-logs, enterprise-readiness]\nimage: /images/blog/audit-logs-widget.png\n---",
+      "source_content_hash": "48b6d3a62b8121dc2db84bb3918fd2368cbfbaf6043e75d050ff23580ce10a24",
+      "node_type": "yaml",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_58cfcc64"
+      }
+    },
+    {
+      "segment_id": "8d66f911",
+      "source_content": "Audit logs are an important tool for keeping track of activity within your SaaS application. These logs provide a detailed record of the actions taken by users and can be used to monitor for potential security breaches, compliance violations, and other issues. Let’s explore some of the key reasons why you need audit logs for your SaaS app.",
+      "source_content_hash": "36387c3628d66786a9539d55b5a81a8646aeece58d15c13daf7537838309a875",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "审计日志是追踪SaaS应用内活动的重要工具。这些日志详细记录了用户操作行为，可用于监控潜在安全漏洞、合规性违规等问题。以下是您的SaaS应用需要审计日志的关键原因："
+      }
+    },
+    {
+      "segment_id": "9e760345",
+      "source_content": "1. **Compliance:** Many industries are subject to strict regulations that require organizations to maintain detailed records of their activities. Audit logs can be used to demonstrate compliance with these regulations, and to provide evidence in the event of an audit or investigation.\n\n   The retention period requirements of some well-known compliance frameworks are listed below:\n\n   - ISO 27001: 3 years\n   - GDPR: Not very specific, as long as necessary\n   - HIPAA: 6 years\n   - PCI DSS: 1 year\n   - NIST: 3 years\n   - SOX: 7 years\n   - GLBA: 6 years\n\n2. **Cyber Insurance:** Obtaining cyber insurance usually comes with requirements around recording and retaining audit logs. These logs help with forensics during insurance claims, otherwise making investigation expensive and time-consuming for both insurers and the affected companies.\n3. **Security:** Audit logs can be used to detect and prevent security breaches. By monitoring for suspicious activity, such as repeated failed login attempts or changes to sensitive data, you can quickly identify and respond to potential threats. Additionally, audit logs can be used to reconstruct the events leading up to a security incident, which can help you identify the cause and prevent similar incidents in the future.\n4. **Accountability:** Audit logs make it possible to track the actions of individual users, which can be useful for identifying issues such as data breaches, compliance violations, and other problems. This information can be used to hold users accountable for their actions and to help you identify and address any issues that arise.\n5. **Troubleshooting:** Audit logs can be used to identify and diagnose issues that occur within your SaaS application. By reviewing the logs, you can see exactly what happened when a problem occurred, which can help you quickly identify the root cause and develop a solution.\n6. **Auditing:** Audit logs provide a record of the activities that occur within your SaaS application, which can be useful for internal audits. This information can be used to assess the effectiveness of your security controls and identify areas for improvement.",
+      "source_content_hash": "9fbfc5e82f022c7b5fcd6bb0ea65416929cf48c7e9d0ae5f9768d2e73bcea1d6",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "1. **合规性要求**  \n   许多行业受严格法规约束，要求组织保留详细活动记录。审计日志既能证明合规性，也能在审计或调查时提供证据。  \n   以下是常见合规框架的日志保留期限要求：  \n   - ISO 27001：3年  \n   - GDPR：未明确规定，需满足必要性原则  \n   - HIPAA：6年  \n   - PCI DSS：1年  \n   - NIST：3年  \n   - SOX：7年  \n   - GLBA：6年  \n\n2. **网络安全保险**  \n   获取网络安全保险通常要求记录并保留审计日志。这些日志能在保险索赔时辅助取证，否则调查过程对保险公司和受损企业都将耗费高昂成本和时间。  \n\n3. **安全保障**  \n   审计日志可检测和防范安全漏洞。通过监控可疑活动（如多次登录失败或敏感数据变更），能快速识别并应对威胁。此外，日志能重建安全事件发生前的操作序列，帮助定位原因并预防类似事件。  \n\n4. **责任追溯**  \n   通过追踪单个用户的操作，可识别数据泄露、合规违规等问题。这些信息既可用于追责，也能帮助发现并解决系统性隐患。  \n\n5. **故障排查**  \n   审计日志能诊断SaaS应用中的异常问题。通过复盘日志记录，可精准定位问题根源并制定解决方案。  \n\n6. **内部审计**  \n   审计日志提供了应用内活动的完整记录，可用于评估安全控制措施的有效性，并识别改进空间。"
+      }
+    },
+    {
+      "segment_id": "73ab96a3",
+      "source_content": "![Audit Logs](/images/blog/audit-logs-widget.png)",
+      "source_content_hash": "4f2a6a84ad21b050de9abd0e753bd7351fc82c11e3fc0608df7f1de2a6126834",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![审计日志](/images/blog/audit-logs-widget.png)"
+      }
+    },
+    {
+      "segment_id": "7499a4e7",
+      "source_content": "Audit logs are a powerful tool that can be used to improve the security, compliance, and overall performance of your SaaS application. By keeping detailed records of user activity, you can monitor for potential issues and quickly respond to problems as they arise. If your SaaS app doesn't have audit logs, you should consider implementing them as soon as possible to ensure the safety and security of your data and users. It is also becoming an important part of enterprise readiness.",
+      "source_content_hash": "de22563af46e66fc8ba0a24278c2e5de89c3c3ca8fb6f790655cb54201a50422",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "审计日志是提升SaaS应用安全性、合规性和整体性能的强大工具。通过详细记录用户活动，您能主动监控潜在风险并及时响应问题。如果您的SaaS应用尚未部署审计日志功能，建议尽快实施以保障数据和用户安全。这也正成为企业级应用 readiness 的关键组成部分。"
+      }
+    },
+    {
+      "segment_id": "109ace10",
+      "source_content": "## Introducing our Audit Logs product",
+      "source_content_hash": "a64b28042a9d70b60c01f64cfd700775eee9f75e7a5bac59835ea13287044b1e",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 审计日志产品发布"
+      }
+    },
+    {
+      "segment_id": "135468ee",
+      "source_content": "We are extremely thrilled to introduce our new Audit Logs product in collaboration with our friends at [Replicated](https://replicated.com). Retraced is a fully open-source audit log service that comes with an embeddable UI that's easily deployed to an infrastructure of your choice. We have spent years building and fine-tuning audit logs systems and think we have finally discovered an optimal solution to this nagging problem.",
+      "source_content_hash": "52adf22d6ebcff6dd91d7ace337f276ff36e6197bd9c68c7969c459883467af2",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "我们非常激动地宣布与合作伙伴[Replicated](https://replicated.com)联合推出全新审计日志产品。Retraced是一个全开源的审计日志服务，提供可嵌入式UI组件，支持灵活部署到任意基础设施。经过多年打磨，我们终于为这个棘手问题找到了最优解决方案。"
+      }
+    },
+    {
+      "segment_id": "33331f27",
+      "source_content": "It’s yet another important enterprise readiness feature to tick as you scale your offerings to the enterprise segment and complements our Enterprise SSO and Directory Sync products to give you a one-stop solution. Come check out the product at our [GitHub repo](https://github.com/retracedhq/retraced), we’d love to hear your feedback.",
+      "source_content_hash": "14d7f222b705d01a46a122febfc46d78d9bbfc0787e8134b477d189723074b70",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "这是拓展企业级市场时必备的又一关键功能，与我们的企业SSO和目录同步产品形成完整解决方案。欢迎访问[GitHub仓库](https://github.com/retracedhq/retraced)了解产品详情，期待您的反馈。"
+      }
+    }
+  ],
+  "target_i18n_subpath": "docusaurus-plugin-content-blog/2023-01-18-why-does-your-saas-application-need-audit-logs.md",
+  "last_updated_timestamp": "2025-06-08T18:49:09.310488+00:00",
+  "schema_version": "1.0",
+  "translated_versions": {
+    "zh-CN": "2f29f26586e9d4312976d5a4eb2053caeeddd8915966048f8d66f210964e0e29"
+  }
+}

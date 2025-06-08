@@ -1,0 +1,432 @@
+{
+  "source_file_path_relative_to_docusaurus_root": "docs/jackson/deploy/service.md",
+  "source_file_content_hash": "fd5d80e87c449dec55665f6de05bf156d039699eaf98e917b19bb506952ce005",
+  "segments": [
+    {
+      "segment_id": "76e4a56a",
+      "source_content": "# Service",
+      "source_content_hash": "ca7f7d217cb6815ce889b554b5f7e1ab01456ecb2a3761100ee35b5f05a87f12",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "# 服务"
+      }
+    },
+    {
+      "segment_id": "adbc947a",
+      "source_content": "## Health Check",
+      "source_content_hash": "83573c725c2afd375e7a3decd49197b35e912e9151de1aeb33e214bcc1c9169c",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 健康检查"
+      }
+    },
+    {
+      "segment_id": "e7ec8f99",
+      "source_content": "The service offers a readiness and health check endpoint that can be configured in orchestration tools like Docker Compose and Kubernetes.",
+      "source_content_hash": "2b357ee2ed31e324543926071da218d041464d3f7d65561cdce202a625d2a0bb",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "该服务提供就绪性和健康检查端点，可在Docker Compose和Kubernetes等编排工具中配置。"
+      }
+    },
+    {
+      "segment_id": "6ef78e84",
+      "source_content": "The `/api/health` GET endpoint returns a 200 when the service ready and healthy or a 5xx (typically 503) error if unhealthy. The response contains the current version of Jackson. For example: `{\"version\":\"1.0.0\"}`.",
+      "source_content_hash": "c7976eb91db0ba512acc88dd754379e6480a14e5e2f34017c525c7d33a8bc22b",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "`/api/health` GET端点会在服务就绪且健康时返回200状态码，若服务异常则返回5xx（通常为503）错误。响应中包含Jackson的当前版本，例如：`{\"version\":\"1.0.0\"}`。"
+      }
+    },
+    {
+      "segment_id": "d912d376",
+      "source_content": "## With Docker",
+      "source_content_hash": "106947808faaacaf5b08b6bf0e13be03b1fca1f997ac968c8487398db4d9ae06",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 使用Docker"
+      }
+    },
+    {
+      "segment_id": "8ac585fb",
+      "source_content": "The docker container can be found at [boxyhq/jackson](https://hub.docker.com/r/boxyhq/jackson/tags). It is preferable to use a specific version instead of the `latest` tag.",
+      "source_content_hash": "54afa237bb40f4b31e682f8261f1c7aa1f2e7fea8a39e3fba868f78dd85597f5",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "Docker容器位于[boxyhq/jackson](https://hub.docker.com/r/boxyhq/jackson/tags)。建议使用特定版本而非`latest`标签。"
+      }
+    },
+    {
+      "segment_id": "180bddb1",
+      "source_content": "Replace the values for `DB_URL`, `JACKSON_API_KEYS`, `NEXTAUTH_SECRET` and `NEXTAUTH_ADMIN_CREDENTIALS` with your own values before running docker run command.",
+      "source_content_hash": "3aa82956bd979184fd4747feaec1125408180720071f2a010d600fa18333371e",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "在运行docker run命令前，请将`DB_URL`、`JACKSON_API_KEYS`、`NEXTAUTH_SECRET`和`NEXTAUTH_ADMIN_CREDENTIALS`的值替换为您自己的配置。"
+      }
+    },
+    {
+      "segment_id": "4b395385",
+      "source_content": "```bash\ndocker run \\\n  -p 5225:5225 \\\n  -e DB_ENGINE=\"sql\" \\\n  -e DB_TYPE=\"postgres\" \\\n  -e DB_URL=\"postgres://postgres:postgres@postgres:5432/postgres\" \\\n  -e JACKSON_API_KEYS=\"secret\" \\\n  -e NEXTAUTH_URL=\"http://localhost:5225\" \\\n  -e EXTERNAL_URL=\"http://localhost:5225\" \\\n  -e NEXTAUTH_SECRET=\"super-secret\" \\\n  -e NEXTAUTH_ADMIN_CREDENTIALS=\"admin@company.com:secretpassword\" \\\n  -d boxyhq/jackson\n```",
+      "source_content_hash": "afd8ac10d324451185e3e4ac7e00ee54471eaff67660a53494a7dda4a8c005ba",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_4b395385"
+      }
+    },
+    {
+      "segment_id": "4b1d2d7d",
+      "source_content": "OR",
+      "source_content_hash": "829e5b28af38ab3379fd0b4f3fd4f2f161326bb38dfeaf83bc97d08f60f84c88",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "或"
+      }
+    },
+    {
+      "segment_id": "cb57d798",
+      "source_content": "```bash\ndocker run \\\n  -p 5225:5225 \\\n  -e DB_ENGINE=\"mongo\" \\\n  -e DB_URL=\"mongodb://localhost:27017/jackson\" \\\n  -e JACKSON_API_KEYS=\"secret\" \\\n  -e NEXTAUTH_URL=\"http://localhost:5225\" \\\n  -e EXTERNAL_URL=\"http://localhost:5225\" \\\n  -e NEXTAUTH_SECRET=\"super-secret\" \\\n  -e NEXTAUTH_ADMIN_CREDENTIALS=\"admin@company.com:secretpassword\" \\\n  -d boxyhq/jackson\n```",
+      "source_content_hash": "f65bca7596238aa97b87bab347dbb33593151edfa321fdf27cd0ed5ed2ddfad2",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_cb57d798"
+      }
+    },
+    {
+      "segment_id": "95e9ba12",
+      "source_content": "See the complete list of [Environment Variables](./env-variables.md)",
+      "source_content_hash": "b18ef49c7b6ae90636b2bcd83116e2c31031510d97569632172114686a53104b",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "完整环境变量列表参见[环境变量文档](./env-variables.md)"
+      }
+    },
+    {
+      "segment_id": "8af76f3d",
+      "source_content": "Kubernetes and docker-compose deployment files will be coming soon.",
+      "source_content_hash": "3d5a2aad8120d9f0df3dfc6a6adc06eeb323fc5a7967cf7a46a748f303523315",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "Kubernetes和docker-compose部署文件即将推出。"
+      }
+    },
+    {
+      "segment_id": "c674e260",
+      "source_content": "## Without Docker",
+      "source_content_hash": "c554831e0d57890dfdf9022ddea0fde105a34ae9a277995c249eac214ab3fd67",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 不使用Docker"
+      }
+    },
+    {
+      "segment_id": "a44047a5",
+      "source_content": "Please follow the below instructions.",
+      "source_content_hash": "c86be27d81847775e2a7a60a2b4414907cf46f889a73ca2fdcef5e1b77a8a0b4",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "请按以下步骤操作。"
+      }
+    },
+    {
+      "segment_id": "cb5b269c",
+      "source_content": "### Clone the repository",
+      "source_content_hash": "30bc22443de88091dabe3c4ee5a8e8e877118b4bc5ba963b819a3e48304de649",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 克隆仓库"
+      }
+    },
+    {
+      "segment_id": "b36c6338",
+      "source_content": "You can clone the source from the [Jackson GitHub repo](https://github.com/boxyhq/jackson/tree/release)",
+      "source_content_hash": "961c47fc7f7b6e95bf69ccc89dcab4b06a1c19490628f4cffc2c0779ce5d877a",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "可从[Jackson GitHub仓库](https://github.com/boxyhq/jackson/tree/release)克隆源码"
+      }
+    },
+    {
+      "segment_id": "eb80afe1",
+      "source_content": "```bash\ngit clone https://github.com/boxyhq/jackson\n```",
+      "source_content_hash": "3d8f4c77e01c11197be4f0ddd8d456d50dbfd1aac50664af22bcaa5acf6fd149",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_eb80afe1"
+      }
+    },
+    {
+      "segment_id": "3c08ed05",
+      "source_content": "```bash\ncd jackson\n```",
+      "source_content_hash": "1cb36bad6f82830ea2c8b1e484d426c82e2e3950909801e46ad0dceb19964eb7",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_3c08ed05"
+      }
+    },
+    {
+      "segment_id": "c315c636",
+      "source_content": "### Install dependencies",
+      "source_content_hash": "a791fe4ac85d3c06556aefb21a867972901c5fccd8c79b821a302ddf0295a2d6",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 安装依赖"
+      }
+    },
+    {
+      "segment_id": "5d4925eb",
+      "source_content": "```bash\nnpm install\n```",
+      "source_content_hash": "eb5a50fc58daf7363e311766e9dd31ad61d85de38cdea9e5921158421a5cb4bb",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_5d4925eb"
+      }
+    },
+    {
+      "segment_id": "ee8401db",
+      "source_content": "### Add environment variables",
+      "source_content_hash": "e2257f47f2d541ff0850169e7309059d2dbca24cc5d22dc6384b0ad11720c44e",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 添加环境变量"
+      }
+    },
+    {
+      "segment_id": "4fb3ded8",
+      "source_content": "```bash\ncp .env.example .env\n```",
+      "source_content_hash": "20fded08d3cbbca59ec2590725f1cc1dae7e53761fbb3f88084ded281c45cc43",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_4fb3ded8"
+      }
+    },
+    {
+      "segment_id": "6cc549f2",
+      "source_content": "Update `.env` with your values. See the complete list of [Environment Variables](./env-variables.md)",
+      "source_content_hash": "a13dbf664bbafff6b0d7d7b18cff009fc618ba15aea44498564da844ddd63292",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "更新`.env`文件中的配置值。完整环境变量列表参见[环境变量文档](./env-variables.md)"
+      }
+    },
+    {
+      "segment_id": "98355e36",
+      "source_content": "### Build and run",
+      "source_content_hash": "7c4df7f3edabf56d8d3de51dc51ff0c4f67ae16445ee236aa1c0c6387c14b4b0",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 构建并运行"
+      }
+    },
+    {
+      "segment_id": "7b2110d8",
+      "source_content": "```bash\nnpm run build\n```",
+      "source_content_hash": "63a8f5e37befde2b1b0a9f0b1ed0225b032578fec37b5ff91ff1b031b578e4aa",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_7b2110d8"
+      }
+    },
+    {
+      "segment_id": "d8159289",
+      "source_content": "```bash\nnpm run start\n```",
+      "source_content_hash": "5df40b124dcae91e1479fa134259159ecaf0e9aa43cb6ff81aa997f5e90b1ee3",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_d8159289"
+      }
+    },
+    {
+      "segment_id": "2e771fd0",
+      "source_content": "## Test the service is running",
+      "source_content_hash": "bd81bee09f8a4a593abcfeb3ba5137898ff47fe9f6ae95bb142288dd0036b13a",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 测试服务运行状态"
+      }
+    },
+    {
+      "segment_id": "0750bfa1",
+      "source_content": "Open a browser and visit [http://localhost:5225](http://localhost:5225).",
+      "source_content_hash": "04b90bee60872017881a82a8d6b6a71be35ad3f1cd3f0e739db63b3325004a57",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "打开浏览器访问[http://localhost:5225](http://localhost:5225)。"
+      }
+    },
+    {
+      "segment_id": "86348f98",
+      "source_content": "If you see a page asking you to sign in, congrats 🎉 you are seeing the [Admin Portal](../../admin-portal/overview).",
+      "source_content_hash": "c5c383931748a1cdd0e2c73921ec74e03bd0f27abc6819e9a4575b0bbe82f91a",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "若看到登录页面，恭喜您🎉 已成功进入[管理后台](../../admin-portal/overview)。"
+      }
+    },
+    {
+      "segment_id": "f6b04a59",
+      "source_content": "## Database",
+      "source_content_hash": "bcc6e0661e13f97f0e6635b9ee74f51ccdb3d63e8754adc9d95aa64f8a0b94a0",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 数据库"
+      }
+    },
+    {
+      "segment_id": "a311e967",
+      "source_content": "Jackson currently supports the following databases.",
+      "source_content_hash": "b8dd65d7a7181b8a1c6716a9ab2e16c0afaeb9794ee80b25972994a5819da29a",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "Jackson当前支持以下数据库："
+      }
+    },
+    {
+      "segment_id": "cfea4c31",
+      "source_content": "- Postgres\n- MySQL\n- Microsoft SQL Server\n- MariaDB\n- MongoDB\n- Redis\n- [PlanetScale](https://planetscale.com/) (MySQL compatible)\n- [Neon](https://neon.tech) (Serverless Postgres)\n- Amazon DynamoDB",
+      "source_content_hash": "9b2c6de7c25633f688d1657273e34311ce4c55e396ab6d2ca529568f8a1112fb",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- PostgreSQL\n- MySQL\n- Microsoft SQL Server\n- MariaDB\n- MongoDB\n- Redis\n- [PlanetScale](https://planetscale.com/)（兼容MySQL）\n- [Neon](https://neon.tech)（无服务器PostgreSQL）\n- Amazon DynamoDB"
+      }
+    },
+    {
+      "segment_id": "1f4b3b94",
+      "source_content": "### PlanetScale",
+      "source_content_hash": "2a865698ad8117bffe5aca956fb16fce8c6393fc4efed3e13fac2e2047ef595e",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### PlanetScale"
+      }
+    },
+    {
+      "segment_id": "a81544fd",
+      "source_content": "To connect PlanetScale database with Jackson, follow the below steps:",
+      "source_content_hash": "d207f2830cd27b477c368053b4763c1d19affed6f79f0c371b89c078ce51a029",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "连接PlanetScale数据库与Jackson的步骤如下："
+      }
+    },
+    {
+      "segment_id": "5cb70a3d",
+      "source_content": "1. Create a new database on PlanetScale\n2. Get your database [connection URL from the PlanetScale](https://planetscale.com/docs/tutorials/deploy-to-netlify#get-your-connection-string-from-planetscale)\n3. Set the following environment variables\n\n   - `DB_ENGINE=planetscale`\n   - `DB_TYPE=mysql`\n   - `DB_SSL=true`\n   - `DATABASE_URL=<PlanetScale connection URL>`\n\n4. Run the database migration to create the tables required by SAML Jackson",
+      "source_content_hash": "27c604e5261c6771f004d47c33b019722e76b96a1bfdeb9f978a002223098865",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "1. 在PlanetScale创建新数据库\n2. 从PlanetScale获取[数据库连接URL](https://planetscale.com/docs/tutorials/deploy-to-netlify#get-your-connection-string-from-planetscale)\n3. 设置以下环境变量：\n\n   - `DB_ENGINE=planetscale`\n   - `DB_TYPE=mysql`\n   - `DB_SSL=true`\n   - `DATABASE_URL=<PlanetScale连接URL>`\n\n4. 运行数据库迁移以创建SAML Jackson所需的表"
+      }
+    },
+    {
+      "segment_id": "7102653e",
+      "source_content": "```bash\ncd npm && PLANETSCALE_URL=<PlanetScale connection URL> npm run db:migration:run:planetscale\n```",
+      "source_content_hash": "e7d41b7c8d18137cc1ee01acd9c45df0f2ff9a0f4e0e45f73bb19a3558432293",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_7102653e"
+      }
+    },
+    {
+      "segment_id": "b9331170",
+      "source_content": "Make sure you have `?ssl={\"rejectUnauthorized\":true}` at the end of the PlanetScale connection URL.",
+      "source_content_hash": "76217060238e04941ea38291633d88a81d83933d3084b69658e9bcfc9b2d54a5",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "确保PlanetScale连接URL末尾包含`?ssl={\"rejectUnauthorized\":true}`参数。"
+      }
+    },
+    {
+      "segment_id": "8fcdd6d4",
+      "source_content": "Now you are ready to start the service.",
+      "source_content_hash": "57713765b34070e68309a5644f39702b5d9f2129e3bc6681d76e17e0f0b1b6d0",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "至此服务可正常启动。"
+      }
+    },
+    {
+      "segment_id": "c35e5786",
+      "source_content": "## SAML Tracer",
+      "source_content_hash": "4a195f46735c7609396786b346f788db3a80e3f754f08c1a51d69f2ae379353c",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## SAML追踪器"
+      }
+    },
+    {
+      "segment_id": "9c9e2b64",
+      "source_content": "Each error event in the SAML request/ response phase is captured to aid in troubleshooting the SAML setup. The record or trace contains context related to the flow, like tenant, product, etc. The Admin Portal will have a tab under Enterprise SSO -> SAML Tracer showing a paginated list of traces over time. Developers can inspect a trace and will be able to ascertain the real reason for the failure.",
+      "source_content_hash": "1895e0074401ee877799ee2ebe0957a1e6d8191cf488ccfa5cb3bb3df73a2b47",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "系统会捕获SAML请求/响应阶段的所有错误事件以辅助故障排查。每条追踪记录包含流程相关的上下文信息（如租户、产品等）。管理后台的\"企业SSO -> SAML追踪器\"标签页将展示分页的历史追踪列表，开发者可查看具体追踪记录以确定故障根源。"
+      }
+    },
+    {
+      "segment_id": "d53c8ed4",
+      "source_content": "## Deployment Guides (Coming soon)",
+      "source_content_hash": "16dce2cfb8e7529e2474009521137cfc2bbceaf457a54e59be7e7ed8e2f52b87",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 部署指南（即将推出）"
+      }
+    },
+    {
+      "segment_id": "ecba4df2",
+      "source_content": "- Heroku\n- DigitalOcean\n- Vercel\n- Docker\n- Kubernetes\n- AWS\n- GCP\n- Azure",
+      "source_content_hash": "cb6f8cb61c1663a27fa472e08b16af8ed562454cc539c7fa233badb7b9c90449",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- Heroku\n- DigitalOcean\n- Vercel\n- Docker\n- Kubernetes\n- AWS\n- GCP\n- Azure"
+      }
+    }
+  ],
+  "target_i18n_subpath": "docusaurus-plugin-content-docs/current/jackson/deploy/service.md",
+  "last_updated_timestamp": "2025-06-08T18:49:09.288864+00:00",
+  "schema_version": "1.0",
+  "translated_versions": {
+    "zh-CN": "fd5d80e87c449dec55665f6de05bf156d039699eaf98e917b19bb506952ce005"
+  }
+}

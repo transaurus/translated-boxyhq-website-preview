@@ -1,0 +1,142 @@
+{
+  "source_file_path_relative_to_docusaurus_root": "blog/2024-04-16-simplifying-identity-management-power-of-identity-federation.md",
+  "source_file_content_hash": "385542443fb8504f19f86220b16ef05f7df0d9b404faa087dfbf83ae0636506c",
+  "segments": [
+    {
+      "segment_id": "58cfcc64",
+      "source_content": "---\ndescription: \"BoxyHQ's Identity Federation Proxy efficiently streamlines user identity management across diverse customer-facing apps & IdP protocols, addressing the growing complexity businesses face as they expand.\"\nslug: simplifying-identity-management-power-of-identity-federation\ntitle: 'Simplifying Identity Management: The Power of Identity Federation'\ntags_disabled: [security, sso, enterpriseready, identity federation, iam]\nimage: /images/blog/simplifying-identity-management.png\nhide_table_of_contents: true\nauthor: Sama - Carlos Samame\nauthor_title: Co-founder & COO @BoxyHQ\nauthor_url: https://www.linkedin.com/in/samame/\nauthor_image_url: /images/authors/sama.jpg\n---",
+      "source_content_hash": "c8171850c0f1eefe95ee5d1a2bc9d8b51dc263e200ca4dca050489741010cdfa",
+      "node_type": "yaml",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_58cfcc64"
+      }
+    },
+    {
+      "segment_id": "ad8fd492",
+      "source_content": "Managing identities across multiple applications has become increasingly complex for businesses of all sizes. This complexity intensifies as organizations expand, underscoring the critical need for efficient identity management solutions. BoxyHQ's Identity Federation Proxy rises to this challenge by offering a robust solution that streamlines user identity management across all customer-facing applications, irrespective of their diverse configurations or Identity Provider (IdP) protocols.",
+      "source_content_hash": "1dcdb4c2653f71a5142c46bd4af6f20d4495d6dcfc015b09966f6a3f3998c0f1",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "对于各种规模的企业而言，跨多应用的身份管理正变得日益复杂。随着组织规模扩大，这种复杂性愈发凸显，使得高效身份管理解决方案成为刚需。BoxyHQ的身份联邦代理应运而生，通过强大解决方案统一管理所有客户端应用的用户身份，无论其配置差异或身份提供商（IdP）协议如何多样。"
+      }
+    },
+    {
+      "segment_id": "cbe57f9d",
+      "source_content": "## Streamlining Identity Management",
+      "source_content_hash": "3d3d1d4c109bb7e47622fa4bfb3fcff716d6c0a56582dc81936daffc71115c2f",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 简化身份管理流程"
+      }
+    },
+    {
+      "segment_id": "39b3772c",
+      "source_content": "BoxyHQ's Identity Federation capabilities provide a simple yet powerful solution. Serving as both a virtual Identity Provider (IdP) and a Service Provider simultaneously, it simplifies user identity management across various applications. This streamlined approach ensures seamless integration with applications, enhancing operational efficiency and alleviating the administrative burden.",
+      "source_content_hash": "f07d5ce0d98a305b016a7c6dedb5a0c15d9fa72e1d48951acdc16da5dafbcf3e",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "BoxyHQ的身份联邦能力提供简洁而强大的解决方案。作为虚拟身份提供商（IdP）和服务提供商的双重角色，它能统一管理各类应用的用户身份。这种流线型方法确保与应用程序的无缝集成，既提升运营效率，又减轻管理负担。"
+      }
+    },
+    {
+      "segment_id": "bc633244",
+      "source_content": "### Key Benefits of Identity Federation",
+      "source_content_hash": "7e7e7aa7169c0ec6a36d0bc1d06dca1958c7836318fd0804abe9fc7e2803db89",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 身份联邦的核心优势"
+      }
+    },
+    {
+      "segment_id": "da23c906",
+      "source_content": "1. **Enhanced Security:** By enabling federated authentication and single sign-on (SSO), BoxyHQ strengthens security measures across applications. Organizations can securely access multiple platforms without the need for repeated authentication, thereby bolstering the overall security posture.\n2. **Improved User Experience:** BoxyHQ's Identity Federation ensures seamless authentication. By unifying protocols like SAML, and OIDC, and integrating with identity providers like Microsoft and Okta, BoxyHQ simplifies user journeys. Engineering teams benefit as new software products or applications no longer need their authentication systems. This streamlines development, ensuring positive experiences for all stakeholders.",
+      "source_content_hash": "1eec8a78da8c38aaae48e19da41847f802ed27ff546ea4efb4c48feb811f4a3c",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "1. **安全增强**：通过启用联邦认证和单点登录（SSO），BoxyHQ强化了跨应用安全措施。组织可安全访问多平台而无需重复认证，从而全面提升安全态势。\n2. **体验优化**：BoxyHQ身份联邦实现无缝认证。通过统一SAML、OIDC等协议，并与Microsoft、Okta等身份提供商集成，简化用户旅程。工程团队无需为新软件产品开发独立认证系统，既能加速开发流程，又能确保所有利益相关方获得优质体验。"
+      }
+    },
+    {
+      "segment_id": "ed7dde9c",
+      "source_content": "## BoxyHQ's Role in Identity Federation",
+      "source_content_hash": "bd11b97f9aa14fec68c398d8a2510318d1cc24d4b927c9e86c58ceb47a04408a",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## BoxyHQ在身份联邦中的角色"
+      }
+    },
+    {
+      "segment_id": "a76548f8",
+      "source_content": "As a trusted leader in security, privacy, and enterprise compliance solutions, BoxyHQ empowers organizations with a suite of APIs designed to facilitate identity management endeavors. BoxyHQ's Identity Federation solution acts as a catalyst for organizational growth, facilitating the swift deployment of new software products with confidence and efficiency.",
+      "source_content_hash": "899acb05232293302d50ce326486fb8afcda5aa9715f4bc31aabb08bddf9fe59",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "作为安全、隐私和企业合规解决方案的行业领导者，BoxyHQ通过系列API赋能组织的身份管理实践。其身份联邦解决方案如同增长催化剂，助力企业快速部署新软件产品，同时确保信心与效率。"
+      }
+    },
+    {
+      "segment_id": "f2f30ae8",
+      "source_content": "### The BoxyHQ Advantage",
+      "source_content_hash": "f99208f8770764038bbc02fd18ef36007b5eacdaaf887983324a836fb1465932",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### BoxyHQ的独特价值"
+      }
+    },
+    {
+      "segment_id": "dfe931a2",
+      "source_content": "![The image displays BoxyHQ's Identity Federation solution, which allows internal applications like CRM and data tools to connect with various identity providers (IdPs) like Okta, OIDC, SAML, and Entra ID through a secure proxy. This proxy handles custom IdP mapping, attribute mapping, and reduces IT configuration complexity while requiring zero code changes. The solution enables seamless identity management across diverse customer-facing applications with different identity protocols.](/images/blog/identity-federation-in-action.png)",
+      "source_content_hash": "ef288e5477364d07c1f320eff9632a40cd3be8cb2826d791d4cdabbd7783fa5b",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![该图展示BoxyHQ身份联邦解决方案：通过安全代理连接CRM等内部应用与Okta、OIDC、SAML、Entra ID等身份提供商。代理处理自定义IdP映射与属性映射，降低IT配置复杂度且无需代码修改，实现跨协议客户应用的统一身份管理。](/images/blog/identity-federation-in-action.png)"
+      }
+    },
+    {
+      "segment_id": "4daf5cdd",
+      "source_content": "BoxyHQ's Identity Federation solution offers several advantages, including plug-and-play functionality, reduced time to market, and minimized development overhead. With its no-code/low-code approach, BoxyHQ simplifies the task of adding authentication and identity management to applications, empowering developers to implement robust mechanisms effortlessly.",
+      "source_content_hash": "c6fb6ecb09407da70136811c765ea1f184cb0468649591fbff6190fcf7f88edf",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "BoxyHQ身份联邦方案具备开箱即用、加速上市、降低开发成本等优势。采用无代码/低代码方式简化应用认证与身份管理功能添加，让开发者能轻松实现强健机制。"
+      }
+    },
+    {
+      "segment_id": "bdc231b1",
+      "source_content": "In conclusion, BoxyHQ's Identity Federation capabilities revolutionize identity management by offering simplicity, security, and enhanced user experiences. Organizations can navigate the complexities of identity management with ease, positioning themselves for success in today's dynamic business environment.",
+      "source_content_hash": "67ac83201ef99ee265a35ad5566f4bce0a1d6b367f0ffe004ba8844ce1f0c5bc",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "总之，BoxyHQ身份联邦能力通过简化流程、强化安全和优化体验，彻底革新身份管理。企业可从容应对身份管理复杂性，在当今动态商业环境中赢得先机。"
+      }
+    },
+    {
+      "segment_id": "97ae4a01",
+      "source_content": "Ready to simplify identity management? Let BoxyHQ be your trusted partner. [Contact us today](/identity-federation-proxy) to learn more!",
+      "source_content_hash": "979a1f524e86baa7b51e2c272683e4adcaae59d2909a6733cfb3a4f71287f3de",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "准备简化身份管理？让BoxyHQ成为您的战略伙伴。[立即联系我们](/identity-federation-proxy)获取方案详情！"
+      }
+    }
+  ],
+  "target_i18n_subpath": "docusaurus-plugin-content-blog/2024-04-16-simplifying-identity-management-power-of-identity-federation.md",
+  "last_updated_timestamp": "2025-06-08T18:49:09.312691+00:00",
+  "schema_version": "1.0",
+  "translated_versions": {
+    "zh-CN": "385542443fb8504f19f86220b16ef05f7df0d9b404faa087dfbf83ae0636506c"
+  }
+}

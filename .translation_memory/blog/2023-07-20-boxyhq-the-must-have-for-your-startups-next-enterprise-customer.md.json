@@ -1,0 +1,1402 @@
+{
+  "source_file_path_relative_to_docusaurus_root": "blog/2023-07-20-boxyhq-the-must-have-for-your-startups-next-enterprise-customer.md",
+  "source_file_content_hash": "2119f6b37d67b5daada0dd7325a7ebed3eedf1bedfbe58a471a8743cf38e02a0",
+  "segments": [
+    {
+      "segment_id": "58cfcc64",
+      "source_content": "---\nslug: boxyhq-the-must-have-for-your-startups-next-enterprise-customer\ntitle: \"BoxyHQ - The must-have for your startup's next enterprise customer\"\nauthor: Penaaz Valecha\nauthor_title: Content & Marketing Head @Scoutflo\nauthor_url: https://www.linkedin.com/in/penaazvalecha/\nauthor_image_url: /img/blog/scoutflo/Penaaz-headshot.jpg\ntags_disabled: [developer, security, saas, devsecops, appsec]\nimage: /img/blog/scoutflo/blog-dan-nelson-unsplash.jpg\nlink:\n  - rel: canonical\n    href: https://blog.scoutflo.com/boxyhq-the-must-have-for-your-startups-next-enterprise-customer/\n---",
+      "source_content_hash": "d9485ddc0e647007caac8c86402e28df8a911c69ac504a3bbcc3b4e2a2f57098",
+      "node_type": "yaml",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_58cfcc64"
+      }
+    },
+    {
+      "segment_id": "4b7cc23c",
+      "source_content": "<div style={{ color: \"gray\", fontSize: \"25px\", paddingTop: \"10px\" }}>\nAdd plug-and-play features to your SaaS product with BoxyHQ's product suite. Become enterprise-ready!\n</div>",
+      "source_content_hash": "498de5958bfaffd2ebe520ee8a97cacc3d2fb5a668f87792cb622808f6ed0ab5",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_4b7cc23c"
+      }
+    },
+    {
+      "segment_id": "09a8fe76",
+      "source_content": "<div style={{ marginBottom: \"-90px\", marginTop: \"-4px\" }}>\n<img src=\"/img/blog/scoutflo/blog-banner.png\"></img>\n</div>",
+      "source_content_hash": "d65816d7d1197dd93bb7b0164066bf96eb242615c8c3bcc68478515bcb1b19f3",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_09a8fe76"
+      }
+    },
+    {
+      "segment_id": "40f9552a",
+      "source_content": "## Introduction",
+      "source_content_hash": "d753efbab681fa4da82470d9a83b1c202de58f92fd498e77a269c1163bc4714b",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 简介"
+      }
+    },
+    {
+      "segment_id": "f2c2bdd0",
+      "source_content": "BoxyHQ enables you to add plug-and-play enterprise-ready features to your SaaS product.",
+      "source_content_hash": "797225fb5184ef8211f3014c97cd9e7fb069100fb202e445dcd7046c6c01f62e",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "BoxyHQ 让您能够为 SaaS 产品快速添加开箱即用的企业级功能。"
+      }
+    },
+    {
+      "segment_id": "fa430ad4",
+      "source_content": "## The Why",
+      "source_content_hash": "df08f993073ed1083ab50b05d3d3117dcaef22842556c9898c0cc627d146ee12",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 初衷"
+      }
+    },
+    {
+      "segment_id": "4b1d2d7d",
+      "source_content": "It initially started with identifying the pain of developers having a TON of responsibility — right from infrastructure to actually building the product.",
+      "source_content_hash": "571bb4d80d415e0624096f826c98eb41ff4b433832e7a70afc4754d0ee07752c",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "最初源于发现开发者承担着从基础设施到产品构建的繁重职责。"
+      }
+    },
+    {
+      "segment_id": "dfe931a2",
+      "source_content": "And with the growing cybersecurity attacks, they need to start thinking about security as well.",
+      "source_content_hash": "0472e939e063401eda705c23be250068c60909c839f6acea430faba02ed8cfb1",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "随着网络安全攻击日益增多，他们还需要开始考虑安全问题。"
+      }
+    },
+    {
+      "segment_id": "4daf5cdd",
+      "source_content": "![locks](/img/blog/scoutflo/blog-locks.jpeg)",
+      "source_content_hash": "617f2b611fb7b242e0c6b72ab7ab862f948520b8d8ac8336099e3b7d010567fd",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![locks](/img/blog/scoutflo/blog-locks.jpeg)"
+      }
+    },
+    {
+      "segment_id": "bdc231b1",
+      "source_content": "<div style={{ fontSize: \"10px\", marginTop: \"-10px\", paddingBottom: \"20px\" }}>Photo by <a href=\"https://unsplash.com/@flyd2069?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText\">FLY:D</a> on <a href=\"https://unsplash.com/@flyd2069?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyTex\">Unsplash</a></div>",
+      "source_content_hash": "3d861eeb171c609687d1201077b5f0662b3d967a88801ed02526ca76d252a8d2",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "<div style={{ fontSize: \"10px\", marginTop: \"-10px\", paddingBottom: \"20px\" }}>Photo by <a href=\"https://unsplash.com/@flyd2069?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText\">FLY:D</a> on <a href=\"https://unsplash.com/@flyd2069?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyTex\">Unsplash</a></div>"
+      }
+    },
+    {
+      "segment_id": "97ae4a01",
+      "source_content": "[Cyber-crimes are predicted to cost $10.5 trillion annually by 2025]",
+      "source_content_hash": "c74532fa6c2d78311903d86e097a8dbe90a4bbafe8a7f313f4071ff12ff75477",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "[预计到2025年网络犯罪每年将造成10.5万亿美元损失]"
+      }
+    },
+    {
+      "segment_id": "c3a738de",
+      "source_content": "The goal is to help smaller startups become <b>enterprise-ready.</b>",
+      "source_content_hash": "91da94f4798335287799d3249dc2840041568b6d6f9aa0fd6ff9297f261fb470",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "我们的目标是帮助初创公司实现<b>企业级就绪</b>。"
+      }
+    },
+    {
+      "segment_id": "3cfe6286",
+      "source_content": "Because until there’s an enterprise client coming in, security is usually an <i>afterthought.</i>",
+      "source_content_hash": "3c1b9cbe60ea9694f4459740cf812768e5eab957ad9f79dd6fc237fe8d796347",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "因为在获得企业客户前，安全性往往被当作<i>事后考虑</i>。"
+      }
+    },
+    {
+      "segment_id": "1042b50d",
+      "source_content": "But they (enterprise customers) are the ones who question your security posture, compliances and more — as a company.",
+      "source_content_hash": "bed58678f05a1810b622cf902b03869d6203a2aa1e7ff5b49804b7b40fbfe4fb",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "但正是这些企业客户会全面审视您的安全态势、合规性等公司层面的要素。"
+      }
+    },
+    {
+      "segment_id": "aa1e7006",
+      "source_content": "[About 70% of development teams skip crucial security steps due to time pressures.]",
+      "source_content_hash": "a203e7752977fc425c5b7f9b49553632588cfc1675217f70787671a143030166",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "[约70%的开发团队因时间压力跳过关键安全步骤]"
+      }
+    },
+    {
+      "segment_id": "13d9cd70",
+      "source_content": "That’s where BoxyHQ comes in.",
+      "source_content_hash": "8eee86a045011cdd9c50784f157be4163a41a9fd34bb93320f384772a527f24e",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "这正是 BoxyHQ 的用武之地。"
+      }
+    },
+    {
+      "segment_id": "6f930b2f",
+      "source_content": "#### <i>But wait… What is enterprise-readiness?</i>",
+      "source_content_hash": "572c907f525fb0759e5df4fc0114c3fa782967f51b17c38a4804a976dca420bf",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "#### <i>但等等...什么是企业级就绪？</i>"
+      }
+    },
+    {
+      "segment_id": "c504c207",
+      "source_content": "![Question](/img/blog/scoutflo/blog-question.png)",
+      "source_content_hash": "45c3e9b27027f38283fddecd373517e27249160ddf0506c21054a1290cf505f0",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![Question](/img/blog/scoutflo/blog-question.png)"
+      }
+    },
+    {
+      "segment_id": "98d26038",
+      "source_content": "In a nutshell, it’s being secure, scalable, stable, and easy to run in production.",
+      "source_content_hash": "23a6075ecb8457304268e67281314ac08a36f7a14d2f66ff60b6f8e43e1702fa",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "简而言之，就是具备安全性、可扩展性、稳定性，并能轻松投入生产环境运行。"
+      }
+    },
+    {
+      "segment_id": "d3649a1e",
+      "source_content": "According to <b>Sama — Carlos Samame (Co-Founder)</b>, there are 2 paths for startups towards the need to be enterprise-ready:",
+      "source_content_hash": "e67ea65839c2278ed828411870345637e5699a0c96e1e64a38a1b3aa467e2287",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "根据<b>联合创始人 Carlos Samame (Sama)</b>的观点，初创公司实现企业级就绪有两条路径："
+      }
+    },
+    {
+      "segment_id": "36ab8340",
+      "source_content": "1. Initially focused on smaller customers and now looking to expand.\n\n   OR\n\n2. Building a new product and targeting enterprise customers from Day 1.",
+      "source_content_hash": "bcab23d646b085dcc5f3e202589aa331584c6e5333e13e3b2ebef4fea73746fa",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "1. 初期服务中小客户，现在寻求扩展\n\n   或\n\n2. 从第一天起就瞄准企业客户开发新产品"
+      }
+    },
+    {
+      "segment_id": "8b2a52b1",
+      "source_content": "<i>But how do things look like from the enterprises’ end?</i>",
+      "source_content_hash": "f5d5cd8813b7c6c51993b00c29b558b26c0bbc5267765dfdac95ec140a45ad74",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "<i>但从企业端视角看是怎样的？</i>"
+      }
+    },
+    {
+      "segment_id": "5dae11e3",
+      "source_content": "Enterprise customers are often apprehensive (concerned) about trusting startups vs. established businesses. Because the stakes are usually much higher.",
+      "source_content_hash": "ceeec0bd0c1cc8bde02fb8825539391a822c7307b28296f6013f3f5c3c355aa3",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "企业客户往往对初创公司持谨慎态度（相较于成熟企业），因为涉及的风险通常更高。"
+      }
+    },
+    {
+      "segment_id": "a5a4323e",
+      "source_content": "#### They’re mainly looking for 2 things",
+      "source_content_hash": "82ed70669e79943525b3a13bcab16c7e18ddc16a60801e7dc46df41b90339105",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "#### 他们主要关注两点"
+      }
+    },
+    {
+      "segment_id": "a4bd3cfc",
+      "source_content": "1. Your other enterprise customers (helps credibility)\n\n2. Whether you follow the compliance requirements (key necessity)",
+      "source_content_hash": "ffefdb869d5ef1459a932d6303e6769f213f0f39c6430735ca867c8462f2bbd6",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "1. 您现有的企业客户（建立可信度）\n\n2. 是否满足合规要求（关键必要条件）"
+      }
+    },
+    {
+      "segment_id": "eab056be",
+      "source_content": "They look for quite a few standards to be met in a solution provider 👇🏻",
+      "source_content_hash": "0dd2e1cd0b75907987ba9fe8ef3cf1bb079ad28ae0b073d8bf0203a8a72e96a7",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "企业客户对解决方案提供商有多项标准要求 👇🏻"
+      }
+    },
+    {
+      "segment_id": "f01228d3",
+      "source_content": "![enterprise-ready1](/img/blog/scoutflo/blog-enterprise-ready1.webp)",
+      "source_content_hash": "1e1b42d7f98899085b6c5a04d28b2f00a2f23614b7f7be9b5ca8616bb46ec63e",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![enterprise-ready1](/img/blog/scoutflo/blog-enterprise-ready1.webp)"
+      }
+    },
+    {
+      "segment_id": "568a7359",
+      "source_content": "<div style={{ fontSize: \"10px\", marginTop: \"-10px\", paddingBottom: \"20px\" }}>\nSource <a href=\"https://www.enterpriseready.io/\">EnterpriseReady.io</a>\n</div>",
+      "source_content_hash": "0a7a21501dd5aace4bedb19589219decf9c744450262aa7bafacd29c818a5d36",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_568a7359"
+      }
+    },
+    {
+      "segment_id": "463ed165",
+      "source_content": "![enterprise-ready2](/img/blog/scoutflo/blog-enterprise-ready2.webp)",
+      "source_content_hash": "64591108f13c3f9e14287846145a0a81701809f3b871f31b85c9e5c774d368a1",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![enterprise-ready2](/img/blog/scoutflo/blog-enterprise-ready2.webp)"
+      }
+    },
+    {
+      "segment_id": "a5c5772a",
+      "source_content": "<div style={{ fontSize: \"10px\", marginTop: \"-10px\", paddingBottom: \"20px\" }}>Source <a href=\"https://www.enterpriseready.io/\">EnterpriseReady.io</a> </div>",
+      "source_content_hash": "8c4bde1383717ee8fb91c3330ceb5a7f04b9a722b81b464e63273f6f9f2be8f5",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "<div style={{ fontSize: \"10px\", marginTop: \"-10px\", paddingBottom: \"20px\" }}>来源 <a href=\"https://www.enterpriseready.io/\">EnterpriseReady.io</a> </div>"
+      }
+    },
+    {
+      "segment_id": "fbc2db85",
+      "source_content": "Before you feel overwhelmed, he further adds that you don’t need to start building all of this, and focus on 3 key areas:",
+      "source_content_hash": "c61db6ef276722b41ec089ee863b204df61aa18b0f1a39582f1e7d1d8fe8bfa2",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "在您感到压力之前，他补充说明您无需立即构建所有功能，只需聚焦三个关键领域："
+      }
+    },
+    {
+      "segment_id": "e032fbc6",
+      "source_content": "1. #### Customer obsession\n\n   Understand their current needs, pains, motivations, processes, and most importantly — whether the plenty of software they already use will work smoothly with yours.\n\n2. #### Time to market\n\n   Invest in off-the-shelf enterprise readiness solutions that you can integrate into your SaaS app vs. spending months building in-house. Spend more time on your core product vs. non-core features.\n\n3. #### Reduced engineering costs\n\n   Investing in external solutions saves developer time spent on coding, fixing bugs, and the overall learning curve.",
+      "source_content_hash": "e9b6049968347918171425d153819b095163e29ffcbd2a8950df8d667f7f4ed0",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "1. #### 客户至上\n\n   深入了解他们当前的需求、痛点、动机、工作流程，最重要的是——确保他们已使用的众多软件能与您的产品无缝协作。\n\n2. #### 缩短上市时间\n\n   投资现成的企业级就绪解决方案并集成到您的SaaS应用中，而非耗费数月自研。将更多时间投入核心产品而非非核心功能开发。\n\n3. #### 降低工程成本\n\n   采用外部解决方案可节省开发者在编码、修复缺陷及整体学习曲线上的时间投入。"
+      }
+    },
+    {
+      "segment_id": "2822251a",
+      "source_content": "<i>“People’s time is more expensive than developer tools.”</i>",
+      "source_content_hash": "e774d3ec3eee3214161bcaf87208bc3aae81d9cda3ae96424a192d9c27ba210c",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "<i>\"人力成本远高于开发工具的费用。\"</i>"
+      }
+    },
+    {
+      "segment_id": "25212439",
+      "source_content": "A great way is to rely on open easily available open source solutions.",
+      "source_content_hash": "7237916b44ae235ca4916b40b0c93748bcb76f1b2dc79d3033773361f9aaf305",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "最佳实践是依赖开源易得的解决方案。"
+      }
+    },
+    {
+      "segment_id": "d79a4831",
+      "source_content": "Source: [Be enterprise-ready: 3 reasons not to build enterprise features!](https://boxyhq.com/blog/three-reasons-not-to-build-enterprise-features)",
+      "source_content_hash": "995ce6dfc3a3db78acbd99912bd05fbfd08ddfcba62ce05c2a8c875fa4d13c65",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "来源：[企业级就绪指南：不自主研发企业功能的三大理由](https://boxyhq.com/blog/three-reasons-not-to-build-enterprise-features)"
+      }
+    },
+    {
+      "segment_id": "54bafb10",
+      "source_content": "## The BoxyHQ suite — in the chronological order of release",
+      "source_content_hash": "a7b672b2deb5c87574c52b4afbf24f93e9c9213f81238a2d649c5fbdf4c7d4b4",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## BoxyHQ产品套件——按发布时间排序"
+      }
+    },
+    {
+      "segment_id": "42a5832e",
+      "source_content": "### 1. Open Source SAML Jackson",
+      "source_content_hash": "c54295ef8bbce2dede665d80d50d7c3c9b44c27a47c31d6721b49067ff71643e",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 1. 开源SAML Jackson"
+      }
+    },
+    {
+      "segment_id": "0e80209e",
+      "source_content": "![Admin Portal](/img/blog/scoutflo/blog-admin-portal.jpeg)",
+      "source_content_hash": "b0ee5438921f386d8e993c024d6214b225d572bb0d559e31b5cf069e22eed453",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![管理门户](/img/blog/scoutflo/blog-admin-portal.jpeg)"
+      }
+    },
+    {
+      "segment_id": "7bc8bb24",
+      "source_content": "Yep, that’s the product’s name. Pulp Fiction fans get the reference but for others–",
+      "source_content_hash": "6575e095aa0e19d43c881ff7b8a0602b35fd614fac4d52820ae250559a30ee49",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "没错，这是产品名称。《低俗小说》影迷会心一笑，其他用户请注意——"
+      }
+    },
+    {
+      "segment_id": "6693c38c",
+      "source_content": "💡 <i>Pulp Fiction is a 1994 American crime film written and directed by Quentin Tarantino. Samuel Jackson starred in a leading role.</i>",
+      "source_content_hash": "173f20e3606bd2bb58aa38182af1ce3c90795a3ea7bed80e57aa0d515c698701",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "💡 <i>《低俗小说》是昆汀·塔伦蒂诺1994年执导的美国犯罪电影，塞缪尔·杰克逊担任主演。</i>"
+      }
+    },
+    {
+      "segment_id": "e9313fef",
+      "source_content": "SAML SSO was the first product created by Team BoxyHQ — pioneering their vision for enterprise readiness. (Launched on August 4, 2022)",
+      "source_content_hash": "7a284fe7e6c23e40afee1cefaceae69f45e9c26b532d3ad4c3c27a7dbdbba5a0",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "SAML单点登录是BoxyHQ团队打造的首个产品，开创了其企业级就绪的愿景（2022年8月4日发布）"
+      }
+    },
+    {
+      "segment_id": "1b4de6df",
+      "source_content": "SAML: Security Assertion Markup Language\nSSO: Single Sign-on",
+      "source_content_hash": "bdfcda8022eb445ad4d82b88f86802c697d7f5b597e242c687756b777af5fac9",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "SAML：安全断言标记语言\nSSO：单点登录"
+      }
+    },
+    {
+      "segment_id": "638efb88",
+      "source_content": "#### What does it do?",
+      "source_content_hash": "a8c837cea509663a356a7c3b4d983494e8ac2bfc003262e87576095188986361",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "#### 核心功能"
+      }
+    },
+    {
+      "segment_id": "558df877",
+      "source_content": "It offers an out-of-the-box solution for deploying SAML quickly and efficiently — helping your \\*enterprise customers manage access controls on their systems.",
+      "source_content_hash": "3f96149864f7f63dff32928d5c3b245e381355adac4b89918e23249090a09818",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "提供开箱即用的SAML快速部署方案，助力您的*企业客户*高效管控其系统访问权限。"
+      }
+    },
+    {
+      "segment_id": "64d57278",
+      "source_content": "#### How does it work?",
+      "source_content_hash": "dc01962b3098ee5a77f9eb1273cf991028c2f064211e312a8060cfe2a8aa817a",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "#### 工作原理"
+      }
+    },
+    {
+      "segment_id": "5f82a1e9",
+      "source_content": "Just connect your product to BoxyHQ and everything else is managed for you!",
+      "source_content_hash": "22461d1bea1e78df9ae9cdfb8c17dffe2698fa4d7b0dc661f4ec32cd7959620d",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "只需将产品接入BoxyHQ，其余工作均由我们托管！"
+      }
+    },
+    {
+      "segment_id": "6fc234cf",
+      "source_content": "BoxyHQ connects to almost every identity providers for you to go from the first line of code to fully support SAML in just a week!",
+      "source_content_hash": "59997064498306e4678ec1535d68fcdde538634b1ba1c1f9b23a1deb393701ed",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "BoxyHQ已集成主流身份提供商，助您在一周内从首行代码实现完整SAML支持！"
+      }
+    },
+    {
+      "segment_id": "4dd6a631",
+      "source_content": "### What are its benefits?",
+      "source_content_hash": "90d2442900452d984953a6bc454d5532346070b313c770f41a34bb6f866c318f",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 核心优势"
+      }
+    },
+    {
+      "segment_id": "f45239ba",
+      "source_content": "![Admin Portal](/img/blog/scoutflo/blog-admin-portal2.jpeg)",
+      "source_content_hash": "5978c37a22f9dbb6b8fdc5e6519e7fcea8894c72b68473150b71c0053a443a09",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![管理门户](/img/blog/scoutflo/blog-admin-portal2.jpeg)"
+      }
+    },
+    {
+      "segment_id": "8f1c1cd6",
+      "source_content": "#### Centralized management and increased security 🔒",
+      "source_content_hash": "10eceb8384435a99a3244904ffefa5d90253c714ede0e3fa6049f30b0ff2bb3e",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "#### 集中管控与强化安全 🔒"
+      }
+    },
+    {
+      "segment_id": "383fbdd2",
+      "source_content": "Enable your customers to manage access control on their own systems so they can:",
+      "source_content_hash": "ed101e25b354e1405386f248a553679f1dbbcc8c3c06ff6766cb7f0b9f9347aa",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "赋能客户自主管理其系统访问权限，实现："
+      }
+    },
+    {
+      "segment_id": "9ceae896",
+      "source_content": "- Have the right access\n- Prevent password sharing\n- Easily grant and revoke access as needed",
+      "source_content_hash": "5be43f0f5588d53309081447d2606ec634d5a259ce907ab4be57b22904b6859c",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- 精准权限分配\n- 杜绝密码共享\n- 便捷的权限授予与撤销"
+      }
+    },
+    {
+      "segment_id": "9c2ab4c8",
+      "source_content": "#### Better user experience ✨",
+      "source_content_hash": "37bc03797910f33e78d926388f6620a2d288de1c94329bb6450d506b3070f97d",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "#### 卓越用户体验 ✨"
+      }
+    },
+    {
+      "segment_id": "a9c2a503",
+      "source_content": "Just need to log in once to access all the external services on a dashboard with a single click. It’s simple and easy to use.",
+      "source_content_hash": "6e68f33504439aacf11d7fffa58b3581d76956e2bfbfdd1bebc7a0a7b9505d03",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "单次登录即可通过仪表盘一键访问所有外部服务，操作简单直观。"
+      }
+    },
+    {
+      "segment_id": "17ca27eb",
+      "source_content": "- Saves users’ time\n- Improves your product’s UX",
+      "source_content_hash": "1c2dd8a6a58a9c068dbdf91eda0ac3a343a8e911197009c69b3f178fb0fa4dcb",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- 节省用户时间\n- 提升产品用户体验"
+      }
+    },
+    {
+      "segment_id": "8b448c8b",
+      "source_content": "#### Reduces cost​s💲",
+      "source_content_hash": "7dbee9ebfc5d0db1b0a98c4b226d723c30fc17720e973579af1a61e54c5d82d9",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "#### 成本优化 💲"
+      }
+    },
+    {
+      "segment_id": "ad3e22c6",
+      "source_content": "All the account information is maintained and managed by the IdP vs. multiple services. This helps in saving costs.",
+      "source_content_hash": "f216817b049272f6227fdd6e434010b06bb2dd8d33b3e182820a7a8b5145a3bc",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "所有账户信息由身份提供商统一维护管理，避免多服务冗余，显著降低成本。"
+      }
+    },
+    {
+      "segment_id": "3e8f45da",
+      "source_content": "(IdP is the identity provider — the single point that let its users access all the services from it)",
+      "source_content_hash": "ff795be95ac4b632908c1397244e7451910a6430770a7e2dff2da0d63d6f8005",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "（身份提供商IdP作为统一入口，允许用户通过该平台访问所有服务）"
+      }
+    },
+    {
+      "segment_id": "4c787c52",
+      "source_content": "<i>“The idea behind SAML SSO is that by centralizing your access to an external system you can better manage access and permission as well as improve security.”</i>",
+      "source_content_hash": "8a5cebec88716287662468ef2da38eab0834d4fee3b0fb5e43b1d206ff6af233",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "<i>\"SAML SSO的精髓在于通过将访问权限集中委派给外部系统，实现更高效的权限管理与安全升级。\"</i>"
+      }
+    },
+    {
+      "segment_id": "e99d73d3",
+      "source_content": "- <i>Aswin Venugopal, Senior Software Engineer</i>",
+      "source_content_hash": "4e01ebfe364e1590020ea39ba0d56f5cf611621c83c4a4442fda77eda01eee8e",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- <i>高级软件工程师 Aswin Venugopal</i>"
+      }
+    },
+    {
+      "segment_id": "c6b2ca77",
+      "source_content": "### TL;DR",
+      "source_content_hash": "216375cfd413556232ef4b112b7b069b33f020b9b60abe44f9d205111340c7b9",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 一句话总结"
+      }
+    },
+    {
+      "segment_id": "3c6dd548",
+      "source_content": "#### Without BoxyHQ’s SAML SSO, on the user side 😔",
+      "source_content_hash": "31ebd04ff6e5d78c85546035ce2c7a195c1a6ce6e0606bc632ae2cf31e0fe75a",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "#### 未使用BoxyHQ SAML SSO的用户侧现状 😔"
+      }
+    },
+    {
+      "segment_id": "6f08f877",
+      "source_content": "![SSO connection without BoxyHQ](/img/blog/scoutflo/blog-sso-connection.webp)",
+      "source_content_hash": "992b298fa715d4616b908ab5bae5c3c2c6f2b61fda60b68eb9493aeff77b3841",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![未使用BoxyHQ的SSO连接](/img/blog/scoutflo/blog-sso-connection.webp)"
+      }
+    },
+    {
+      "segment_id": "2dbfc5f7",
+      "source_content": "<p style={{ textAlign: \"center\" }}>Without BoxyHQ</p>",
+      "source_content_hash": "20006964931fd44311a6431057db1a77c36b5dc6923a6ab49fb03818d44b8636",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "<p style={{ textAlign: \"center\" }}>未使用BoxyHQ</p>"
+      }
+    },
+    {
+      "segment_id": "5df815de",
+      "source_content": "- Spend a long time to build a SAML integration\n- Create integrations for each of your customer’s identity providers (IdP)\n- Spend time, energy, focus, and resources away from your core product",
+      "source_content_hash": "3f8518e0b26e01f225b5c7dbc2c9d84d38cf0c618fabf3a3f515429c8fa6d1b7",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- 耗费大量时间构建SAML集成\n- 为每个客户的身份提供商(IdP)单独创建集成\n- 将时间、精力、专注力和资源从核心产品中分流"
+      }
+    },
+    {
+      "segment_id": "16ae54ea",
+      "source_content": "#### With BoxyHQ’S SAML SSO authentication 🤠",
+      "source_content_hash": "4802b1745579f7a4bd1cede3094f34c09af0e35648991de310f4586838b53861",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "#### 使用BoxyHQ的SAML SSO认证方案 🤠"
+      }
+    },
+    {
+      "segment_id": "62d066b0",
+      "source_content": "![SSO connection with BoxyHQ](/img/blog/scoutflo/blog-sso-connection2.webp)",
+      "source_content_hash": "1f5e68728912604640a1707a0a51e1634da0c9633438e6b770eb8d096a206bb1",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![SSO connection with BoxyHQ](/img/blog/scoutflo/blog-sso-connection2.webp)"
+      }
+    },
+    {
+      "segment_id": "89cf7bac",
+      "source_content": "<p style={{ textAlign: \"center\" }}>With BoxyHQ</p>",
+      "source_content_hash": "647a207a60b078b58945564a003d67a97808db250ee7cde660b91c2eef1f8a18",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "<p style={{ textAlign: \"center\" }}>使用BoxyHQ</p>"
+      }
+    },
+    {
+      "segment_id": "ebb827a7",
+      "source_content": "- Centralize management\n- Improve security\n- Enhance user experience\n- Increase productivity\n- Save time, reduce costs",
+      "source_content_hash": "05f3a0868b120a2ad2243b529a556fe93e9deee5931eec954581b4be38bee1d3",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- 集中化管理\n- 提升安全性\n- 优化用户体验\n- 提高生产效率\n- 节省时间，降低成本"
+      }
+    },
+    {
+      "segment_id": "8d279c43",
+      "source_content": "### On the solution provider’s side, it looks like",
+      "source_content_hash": "152c311fbfa71b792d777bd6736e03d25a80b3657e83fdf64e2dd0cfe16f03ee",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 从解决方案提供商角度看"
+      }
+    },
+    {
+      "segment_id": "e5821418",
+      "source_content": "![SSO connection without BoxyHQ](/img/blog/scoutflo/blog-sso-connection3.webp)",
+      "source_content_hash": "2219662c9d13541d4bab0fdbbdf829dbbf52c9b00b38a91c51def2887e566c08",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![SSO connection without BoxyHQ](/img/blog/scoutflo/blog-sso-connection3.webp)"
+      }
+    },
+    {
+      "segment_id": "4e2e17c5",
+      "source_content": "<p style={{ textAlign: \"center\" }}>Without BoxyHQ</p>",
+      "source_content_hash": "20006964931fd44311a6431057db1a77c36b5dc6923a6ab49fb03818d44b8636",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "<p style={{ textAlign: \"center\" }}>未使用BoxyHQ</p>"
+      }
+    },
+    {
+      "segment_id": "b49a7009",
+      "source_content": "![SSO connection with BoxyHQ](/img/blog/scoutflo/blog-sso-connection4.webp)",
+      "source_content_hash": "26c90c8d19f2a3e9fa0e84cdfa4f13458f07205ba38f97cdce64e970239705f2",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![SSO connection with BoxyHQ](/img/blog/scoutflo/blog-sso-connection4.webp)"
+      }
+    },
+    {
+      "segment_id": "9ebd9d9b",
+      "source_content": "<p style={{ textAlign: \"center\" }}>With BoxyHQ</p>",
+      "source_content_hash": "647a207a60b078b58945564a003d67a97808db250ee7cde660b91c2eef1f8a18",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "<p style={{ textAlign: \"center\" }}>使用BoxyHQ</p>"
+      }
+    },
+    {
+      "segment_id": "295367fa",
+      "source_content": "Here, you only have to connect your product with a direct integration to BoxyHQ and then it manages and connects you to all the IDPs. You can deploy SAML SSO with just a few lines of code!",
+      "source_content_hash": "bd937fb8d2b2e965bacc68a75fa1bf8c1215c885cae3368a1cb21573fb98144f",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "您只需将产品与BoxyHQ直接集成，后续所有身份提供商的对接均由BoxyHQ管理。仅需几行代码即可部署SAML SSO！"
+      }
+    },
+    {
+      "segment_id": "6fad5db5",
+      "source_content": "🔗 The sources are linked [here](https://boxyhq.com/blog/understanding-saml-sso-the-basics-from-the-user-side) and [here](https://boxyhq.com/blog/understanding-saml-sso-the-basics-from-the-solution-providers-side) (official BoxyHQ blogs)",
+      "source_content_hash": "75ab1cde2b4d777f728ec67314e237021882bfc3e2a56512e5f73eca568e0f67",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "🔗 相关资源链接：[用户端基础指南](https://boxyhq.com/blog/understanding-saml-sso-the-basics-from-the-user-side) 和 [解决方案提供商指南](https://boxyhq.com/blog/understanding-saml-sso-the-basics-from-the-solution-providers-side)（BoxyHQ官方博客）"
+      }
+    },
+    {
+      "segment_id": "c5e0bb3d",
+      "source_content": "<i>“Deepak (Co-Founder) himself helped us implement SSO SAML in cal.com and we’re more than happy about it! it’s great to finally see an open source project tackle enterprise-ready features!”</i>",
+      "source_content_hash": "cd369dc251bff668e18cb2cd20f234bfa9f164d8d37a3e8623eb657792c39ed7",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "<i>\"联合创始人Deepak亲自协助我们在cal.com实现了SSO SAML集成，效果远超预期！终于有开源项目能完美解决企业级功能需求了！\"</i>"
+      }
+    },
+    {
+      "segment_id": "f2c67ca5",
+      "source_content": "— Peer Richelsen, Co-Founder at Cal.com",
+      "source_content_hash": "576801b08c8f68730c6e84c9c00df527b3a786647fddb0d39b5c9d2d98fc4ac2",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "—— Peer Richelsen, Cal.com联合创始人"
+      }
+    },
+    {
+      "segment_id": "3208eb29",
+      "source_content": "Note: Team BoxyHQ recently re-launched the enhanced [SAML SSO on Product Hunt](https://www.producthunt.com/products/boxyhq#open-source-saml-sso-by-boxyhq-2)! 🚀",
+      "source_content_hash": "aaee381d8bc02f2ad5c4f5a2583ede3bb68ce2765a2d05b361b3554af54f0e95",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "注：BoxyHQ团队近期在[Product Hunt](https://www.producthunt.com/products/boxyhq#open-source-saml-sso-by-boxyhq-2)重新发布了增强版SAML SSO！🚀"
+      }
+    },
+    {
+      "segment_id": "6ac93c98",
+      "source_content": "### 2. Open Source Directory Sync",
+      "source_content_hash": "fb7df322f8df9b7b6c7b87daba173fba58d22025204b2ebda4c74e8e680b31fb",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 2. 开源目录同步"
+      }
+    },
+    {
+      "segment_id": "b4204c03",
+      "source_content": "![Directory Sync Connection](/img/blog/scoutflo/blog-ds-connection.webp)",
+      "source_content_hash": "dda236e35376dfa7b2a5fc471a15ff2932873db014ed68c74142c973456b84cc",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![Directory Sync Connection](/img/blog/scoutflo/blog-ds-connection.webp)"
+      }
+    },
+    {
+      "segment_id": "e6ac016e",
+      "source_content": "Organizations use directories from different providers to manage user access to organization resources.",
+      "source_content_hash": "cb98471ac3be2d0675501392ea0b034ab1be2aa8ff1b491a9862f4838c80ff8b",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "企业使用不同供应商的目录系统来管理组织资源的用户访问权限。"
+      }
+    },
+    {
+      "segment_id": "dad05c50",
+      "source_content": "BoxyHQ’s Directory Sync lets orgs activate and deactivate user accounts, create groups, and keep their app in sync with the user directory in real time.",
+      "source_content_hash": "3b9417a74af53412b1567295560ca8d59638c9d2fef70ee25e1ef85fcea613ec",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "BoxyHQ目录同步方案支持：实时激活/停用用户账户、创建群组、保持应用与用户目录的实时同步。"
+      }
+    },
+    {
+      "segment_id": "eeeea5ce",
+      "source_content": "💡 <i>In an enterprise customer context, a directory is a central repository that holds information about employees, customers, and other resources in a company.</i>",
+      "source_content_hash": "3708ac4fc45f4487c206df151d41248a71977ab0c3a61d6c6c149aa4d5becf50",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "💡 <i>企业客户场景中，目录是存储员工、客户及公司其他资源信息的中央数据库。</i>"
+      }
+    },
+    {
+      "segment_id": "97496aad",
+      "source_content": "#### In simple words, you enable your customers to",
+      "source_content_hash": "fe5be36eef937d3f133129abcb317919081967b062c003bace2688dae70d746d",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "#### 简而言之，您能为客户实现："
+      }
+    },
+    {
+      "segment_id": "417c03c6",
+      "source_content": "- Have higher security standards\n- Centrally manage their user’s access lifecycle",
+      "source_content_hash": "3c5df16165956d3019a01b9bc0fa24867a5a8aaf04b1a70d0442f8cfc06ebbb1",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- 更高等级的安全标准\n- 集中化管理用户访问生命周期"
+      }
+    },
+    {
+      "segment_id": "be0f7233",
+      "source_content": "It supports the SCIM 2.0 protocol",
+      "source_content_hash": "394b7a3997a4af7f164811f750f8e646e2363da799691deb8b1624513b5ceb9b",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "支持SCIM 2.0协议"
+      }
+    },
+    {
+      "segment_id": "d8c366cc",
+      "source_content": "SCIM: System for Cross-domain Identity Management",
+      "source_content_hash": "6bb7e0845b51f2deb5d37eb1480ba1f96082609bafe5ddabab727e61877795c7",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "SCIM：跨域身份管理系统"
+      }
+    },
+    {
+      "segment_id": "833ce577",
+      "source_content": "<i>“Directory Sync streamlines the user lifecycle management process by saving valuable organizational hours, creating a single truth source of the user identity data, and facilitating them to keep the data secure.”</i>",
+      "source_content_hash": "45562e115a9e96fc01701083823099b6c6d2f96662d56e379bca5facb3f104d0",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "<i>\"目录同步通过节省组织管理时间、建立统一的用户身份数据源、保障数据安全，显著优化用户生命周期管理流程。\"</i>"
+      }
+    },
+    {
+      "segment_id": "f6479c91",
+      "source_content": "-<i>BoxyHQ Official Docs</i>",
+      "source_content_hash": "fa7f6b46540a2f38630e3142df6daf707190d040a92248bdfba09f6a559fbf37",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "-<i>BoxyHQ官方文档</i>"
+      }
+    },
+    {
+      "segment_id": "61e5dad6",
+      "source_content": "Learn more: [Examples & Resources (Directory Sync)](https://boxyhq.com/docs/directory-sync/examples)",
+      "source_content_hash": "0feb5220ad26204c6a08e426246741040f5f4467dd32f1a1d393439ee744734d",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "了解更多：[目录同步示例与资源](https://boxyhq.com/docs/directory-sync/examples)"
+      }
+    },
+    {
+      "segment_id": "43662a16",
+      "source_content": "### 3. Open Source Audit Logs",
+      "source_content_hash": "6476011dc8f2c7cb7dc164d54e0c707f08b2dd8c373613cb19ebb29fb849b48b",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 3. 开源审计日志"
+      }
+    },
+    {
+      "segment_id": "85821ad3",
+      "source_content": "![Open Source Audit Logs](/img/blog/scoutflo/blog-audit-logs.webp)",
+      "source_content_hash": "896a3106f5e1b2864ae8ef88e110353c0c8d7a6a8ad48f445fae84f53bb18755",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![Open Source Audit Logs](/img/blog/scoutflo/blog-audit-logs.webp)"
+      }
+    },
+    {
+      "segment_id": "228d01d5",
+      "source_content": "BoxyHQ’s Audit Logs ‘Retraced’ offer your enterprise customers the ability to record and search events that happen on your application.",
+      "source_content_hash": "eff8038206400e79822cf2d8099f491f639f58c8b6259574dfeed9ad63816a65",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "BoxyHQ审计日志系统\"Retraced\"让企业客户能够记录和检索应用程序中的所有操作事件。"
+      }
+    },
+    {
+      "segment_id": "85b17c36",
+      "source_content": "Note: Retraced was initially built by Replicated and has been enhanced by BoxyHQ.",
+      "source_content_hash": "2af42a0a077b83ab9f4c6b82fc51fe2b95c70e1ad9885311fc36363cbf0d88bd",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "注：Retraced最初由Replicated开发，现由BoxyHQ增强维护。"
+      }
+    },
+    {
+      "segment_id": "d3912b2e",
+      "source_content": "They provide a detailed record of user actions, and can be used to monitor potential security breaches, compliance violations, and other issues.",
+      "source_content_hash": "691a473c1058fef0ca362ebf75087a1310ed6579ccfe79effb7763b68c364eee",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "它们提供了用户操作的详细记录，可用于监控潜在的安全漏洞、合规性违规和其他问题。"
+      }
+    },
+    {
+      "segment_id": "2dbbb313",
+      "source_content": "<i>“The world’s best SaaS companies offer detailed Audit Logs, your SaaS should too as you move into serving the enterprise segment.”</i> -<i>Vanshika Srivastava</i>",
+      "source_content_hash": "f5f5b09a2a79f797d45ff48bce4ebc942c9cd4789bc1d7a6075b9ed95a53c918",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "<i>\"全球顶尖的SaaS公司都提供详尽的审计日志功能，当您的SaaS业务进军企业级市场时也应如此。\"</i> -<i>Vanshika Srivastava</i>"
+      }
+    },
+    {
+      "segment_id": "ad8a5f54",
+      "source_content": "#### Why are Audit Logs important?",
+      "source_content_hash": "8a187a6fea63af6df6b16b4d305ec281bb7d2c92b5ff22a9455b62e35ee9fca3",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "#### 为什么审计日志如此重要？"
+      }
+    },
+    {
+      "segment_id": "4033c370",
+      "source_content": "![Open Source Audit Logs2](/img/blog/scoutflo/blog-audit-logs2.jpeg)",
+      "source_content_hash": "df87196fb1e4a6fe3e0781b06599eadbcc8e3cb935762bcfe115a13ae020f91d",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![Open Source Audit Logs2](/img/blog/scoutflo/blog-audit-logs2.jpeg)"
+      }
+    },
+    {
+      "segment_id": "dfb6fc67",
+      "source_content": "For most companies, the ability to monitor the flow of data and be alerted to any breaches is super essential.",
+      "source_content_hash": "fdc187fc982ac86f3926deeab5085b509132ee678b66ab44d8afd9a0b5eb6ab5",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "对大多数企业而言，监控数据流向并及时发现任何违规行为至关重要。"
+      }
+    },
+    {
+      "segment_id": "80dbdeb8",
+      "source_content": "Audit logs help to pinpoint any misuse of information and ensure that data policies are followed ✅",
+      "source_content_hash": "4d57095f97438ce8f42b2e0600c5789624fef1cf4a3ced2d5e0540b389d882d2",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "审计日志有助于精确定位信息滥用情况，确保数据政策得到遵循 ✅"
+      }
+    },
+    {
+      "segment_id": "d3f13bf4",
+      "source_content": "This one simple API helps you become compliant fast, and ensure your customers get all the functionality and safety they need.",
+      "source_content_hash": "fe74c051d993ca382dacc1d0ff99ace1abf0eb2f0d266765caf94c908bc82458",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "这个简单的API能帮助您快速实现合规，确保客户获得所需的所有功能和安全保障。"
+      }
+    },
+    {
+      "segment_id": "13095ea3",
+      "source_content": "### 4. Admin Portal",
+      "source_content_hash": "c8c7aa49be53e8b0140acc4760d9559b923863b00f57b5b0f16f36de38895574",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 4. 管理门户"
+      }
+    },
+    {
+      "segment_id": "b0c30ab4",
+      "source_content": "![Admin Portal3](/img/blog/scoutflo/blog-admin-portal3.jpeg)",
+      "source_content_hash": "87150472af76c583d9573e47269322158a750391adea10b94c6dfe6fcfe7bd03",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![Admin Portal3](/img/blog/scoutflo/blog-admin-portal3.jpeg)"
+      }
+    },
+    {
+      "segment_id": "318fb07e",
+      "source_content": "Manage Enterprise SSO, Directory Sync, and Audit Logs products via an easy-to-use web interface.",
+      "source_content_hash": "a1ab4f6ded85deacc1c9c4eec9cb3791887129db88c51ec0c18684c11a2695f9",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "通过易用的网页界面管理企业SSO、目录同步和审计日志产品。"
+      }
+    },
+    {
+      "segment_id": "13440cd7",
+      "source_content": "It can help you streamline your workflows and increase productivity.",
+      "source_content_hash": "98cde0a0445ec1141dfc4d00f67f70484fc81ae939aa8495f6c9e2c66bec5ae5",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "可帮助简化工作流程并提高生产效率。"
+      }
+    },
+    {
+      "segment_id": "5d3138c7",
+      "source_content": "You can use the authentication method of your choice (Magic Link, Email and Passsword, SAML/OIDC Single-sign-on)",
+      "source_content_hash": "e18d4fbd9e970837ffb219c79f98eb536dc49b2a059d14e49def84deea8cbf35",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "您可以选择任意认证方式（魔法链接、邮箱密码登录、SAML/OIDC单点登录）"
+      }
+    },
+    {
+      "segment_id": "f6e7e6a7",
+      "source_content": "![Admin Portal4](/img/blog/scoutflo/blog-admin-portal4.jpeg)",
+      "source_content_hash": "2361b86c33bc54fc2fedaac15aa75b7b5d73231b651e30f94250df0622bbcef9",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![Admin Portal4](/img/blog/scoutflo/blog-admin-portal4.jpeg)"
+      }
+    },
+    {
+      "segment_id": "9c70c953",
+      "source_content": "BoxyHQ’s future products (where relevant) will also be available in the Admin Portal.",
+      "source_content_hash": "ac6d3bc6e249cc45acdfebd698e995c78074037cd1ff609966270516c8761b27",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "BoxyHQ未来的相关产品也将集成至管理门户。"
+      }
+    },
+    {
+      "segment_id": "93f7c834",
+      "source_content": "To enable the Admin Portal, you need to deploy [Jackson as a service](https://boxyhq.com/docs/jackson/deploy/service).",
+      "source_content_hash": "4c07dcc1000d0b0a3f63b5ccb3419b615952c1d32173e6c3937b1eed26b74c50",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "启用管理门户需先部署[Jackson服务](https://boxyhq.com/docs/jackson/deploy/service)。"
+      }
+    },
+    {
+      "segment_id": "fe3afe38",
+      "source_content": "### 5. Data Privacy Vault",
+      "source_content_hash": "2180a32d3a79e384267d7ca1337dbe63ace19d55e17a75f6a709cd48697d98ae",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 5. 数据隐私保险库"
+      }
+    },
+    {
+      "segment_id": "f50056c0",
+      "source_content": "![Privacy Vault](/img/blog/scoutflo/blog-privacy-vault.webp)",
+      "source_content_hash": "baab023cf7153306b5e140c61ec153cd4ce0bc9016956054c4da4597c1cf380f",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![Privacy Vault](/img/blog/scoutflo/blog-privacy-vault.webp)"
+      }
+    },
+    {
+      "segment_id": "30aa9816",
+      "source_content": "In the day and age of high cyber-crime, and increasingly sensitive data– you need to protect your customer’s data <i>and</i> trust.",
+      "source_content_hash": "d3863ad6693fec7b7e71c1a959f83244f91a0a08081fffc546e3fe72dbf69634",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "在网络犯罪猖獗、数据敏感性日益提升的时代，您需要同时保护客户数据<i>与</i>信任。"
+      }
+    },
+    {
+      "segment_id": "6085c028",
+      "source_content": "Privacy vault is BoxyHQ’s open-source solution to centralize, isolate, and govern all the sensitive data you collect.",
+      "source_content_hash": "607c264ff69ab520fe6b4228f9ee71fe0bdb79aaec74ad3b6798d9299cb19077",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "隐私保险库是BoxyHQ的开源解决方案，用于集中管理、隔离和治理收集的所有敏感数据。"
+      }
+    },
+    {
+      "segment_id": "16efe6ee",
+      "source_content": "#### With the Privacy Vault, you can",
+      "source_content_hash": "6a458746e097e1545c2c7c39bfbedb132d6e71705355ef93a2e94cfd6a5c727a",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "#### 隐私保险库能为您实现："
+      }
+    },
+    {
+      "segment_id": "ab7b2d04",
+      "source_content": "- Identify all the sensitive data from clients’ application database and move it to the vault.\n- Replace the sensitive data in their application database with (exchangeable) opaque tokens.\n- Gain control over where the sensitive data goes, who has access to it and for what duration.\n- Create access policies that adhere to data regulations and geographic regulations.\n- Get the ability to respond to DSRs (Data Subject Requests) from customers.",
+      "source_content_hash": "c8c052e37ef9c5da3100edea38bbfbf953e3aebbbab956c2006343a1bbc341cd",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- 识别客户应用数据库中的所有敏感数据并迁移至保险库\n- 用（可交换的）不透明令牌替换原数据库中的敏感数据\n- 掌控敏感数据的流向、访问者及访问时长\n- 创建符合数据法规和地域性规范的数据访问策略\n- 具备响应客户DSR（数据主体请求）的能力"
+      }
+    },
+    {
+      "segment_id": "9a53bcb1",
+      "source_content": "#### What users are saying 💬",
+      "source_content_hash": "1718b8a3e444e44450ede61b50ea4e96b939a6836cefb173185392bcc9996fed",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "#### 用户评价 💬"
+      }
+    },
+    {
+      "segment_id": "bed77f05",
+      "source_content": "![Cal.com](/img/blog/scoutflo/blog-calcom.webp)",
+      "source_content_hash": "a01f64ee4f9c547884c6ee766b1d07db8585def2339801ac0ff492cda29d9990",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![Cal.com](/img/blog/scoutflo/blog-calcom.webp)"
+      }
+    },
+    {
+      "segment_id": "46e586a3",
+      "source_content": "<i>“It let our team focus on what we do best (democratizing scheduling for everyone) without getting distracted by the needs of our enterprise customers. Did I mention it’s open-source and free?”</i>",
+      "source_content_hash": "9326ad22455573ce09a35ea1ddebb599ec7d851b4b80960cedd99b2d84776371",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "<i>\"它让我们的团队能专注于核心业务（为所有人提供民主化的日程安排服务），而不会被企业客户的需求分散注意力。顺便说一句——它还是开源免费的！\"</i>"
+      }
+    },
+    {
+      "segment_id": "191b81b4",
+      "source_content": "<div style={{ textAlign: \"center\", paddingTop: \"2rem\", paddingBottom: \"2rem\" }} >\n   <img src=\"/img/blog/scoutflo/blog-supertokens.webp\"/>\n</div>",
+      "source_content_hash": "d5f709ee5e40abc7fb5c3f6192770b9cf3a3cab8e4cd269d8f699a93259de066",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_191b81b4"
+      }
+    },
+    {
+      "segment_id": "f0db2ff1",
+      "source_content": "Super Tokens — An open-source authentication solution",
+      "source_content_hash": "d116d57d070d36aab25a5fc98d4a8439ab188662111c741b8015a61e93acc578",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "Super Tokens —— 开源认证解决方案"
+      }
+    },
+    {
+      "segment_id": "4e994fc3",
+      "source_content": "<i>“We at SuperTokens needed to provide SAML login to our users, and instead of building it from scratch, we found the perfect open source project — BoxyHQ!”</i>",
+      "source_content_hash": "317dc730a5fb3e5d5c8237546299cfc48ec4e3131cd37350df0b16da11d83a05",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "<i>\"当SuperTokens需要为用户提供SAML登录功能时，我们没有从零开发，而是发现了完美的开源项目——BoxyHQ！\"</i>"
+      }
+    },
+    {
+      "segment_id": "60e22db4",
+      "source_content": "![News](/img/blog/scoutflo/blog-news.webp)",
+      "source_content_hash": "9c1271930dcccd011d33a7274efd55ff05b87e0cbd898cc52476d9423739783f",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![News](/img/blog/scoutflo/blog-news.webp)"
+      }
+    },
+    {
+      "segment_id": "2ab62b74",
+      "source_content": "<p style={{ textAlign: \"center\" }}>Media Features</p>",
+      "source_content_hash": "b511441c171c5cc2234499f1e4f95c77da394f0697669cf6ce65b871e1a9b860",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "<p style={{ textAlign: \"center\" }}>媒体报道</p>"
+      }
+    },
+    {
+      "segment_id": "793be93c",
+      "source_content": "### Meet the Founders ✨",
+      "source_content_hash": "ceb719652561e5ca73f22c8706d7b58592744fc9902d24142a445d4be61cfe2e",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 创始人介绍 ✨"
+      }
+    },
+    {
+      "segment_id": "4786f22b",
+      "source_content": "![Founders - Deepak](/img/blog/scoutflo/blog-founders-deepak.webp)",
+      "source_content_hash": "15c170cb4f50fd4894fdff554910cc8d01dbd4d35d861dc4aff3d24340d15aae",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![Founders - Deepak](/img/blog/scoutflo/blog-founders-deepak.webp)"
+      }
+    },
+    {
+      "segment_id": "8517ac25",
+      "source_content": "<p style={{ textAlign: \"center\" }}>Deepak Prabhakara, CEO & Co-founder</p>",
+      "source_content_hash": "9558be1d2c0a21ae5e59d0a77ecfe1bdbc819855a1c379de984cd4ac0ec46a88",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "<p style={{ textAlign: \"center\" }}>Deepak Prabhakara，首席执行官兼联合创始人</p>"
+      }
+    },
+    {
+      "segment_id": "5e0ab881",
+      "source_content": "[Deepak](https://twitter.com/deepakprab) has over 2 decades of experience in design, architecture and development of complex software products across different SaaS and mobile platforms.",
+      "source_content_hash": "01ae1562c3695e7ad24d8b78cbacfe1c2d95b10f3fb93cc7f978e08e34bea1e9",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "[Deepak](https://twitter.com/deepakprab) 拥有超过20年的复杂软件产品设计和架构经验，横跨多个SaaS及移动平台。"
+      }
+    },
+    {
+      "segment_id": "d1996877",
+      "source_content": "![Founders - Sama](/img/blog/scoutflo/blog-founders-sama.webp)",
+      "source_content_hash": "0481db4c3e094dc91832c13bba6d2177f930f0530f2813ce874adde5b2004315",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![Founders - Sama](/img/blog/scoutflo/blog-founders-sama.webp)"
+      }
+    },
+    {
+      "segment_id": "95b3e282",
+      "source_content": "[Sama](https://twitter.com/caloique) has 15+ years of experience working at tech companies across different business areas and continents.",
+      "source_content_hash": "af03802b48bbb5150909f18ef8481347971448189a5f46f69396af085e760347",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "[Sama](https://twitter.com/caloique) 在科技公司拥有15年以上的工作经验，业务领域和地域跨度广泛。"
+      }
+    },
+    {
+      "segment_id": "db1c4f18",
+      "source_content": "### The BoxyHQ Pledge 📜",
+      "source_content_hash": "f046a017457607a337c11ef43f3cf8c0d437c615414ccdd61bb86fb5a783ae49",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### BoxyHQ宣言 📜"
+      }
+    },
+    {
+      "segment_id": "45d5dee4",
+      "source_content": "<i>“As long-time users and contributors to the open-source ecosystem, we want to do the right thing for the community. That means we will make sure that our core open-source code stays open. We will also strive to use open standards where possible. We want to collaborate with the community to build towards our vision to make security, compliance and privacy easy for developers so they can focus on their core product while being compliant...”</i>",
+      "source_content_hash": "96c269f3e989ca14d847ec277da47835f0ed9fb04a3fa76eb2b462046929b941",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "<i>“作为开源生态的长期使用者和贡献者，我们希望为社区做正确的事。这意味着我们将确保核心开源代码始终保持开放，并尽可能采用开放标准。我们期待与社区协作，共同实现愿景——让开发者能轻松实现安全、合规与隐私保护，从而专注于核心产品开发...”</i>"
+      }
+    },
+    {
+      "segment_id": "83d7d3bc",
+      "source_content": "Learn more here: [BoxyHQ pledges to keep our core open-source code open](https://boxyhq.com/pledge)",
+      "source_content_hash": "5d0b5c3538eab64b834c8bf7e85b758025a573b024d0a1d93db45d92c97f5c73",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "了解更多：[BoxyHQ承诺保持核心开源代码开放](https://boxyhq.com/pledge)"
+      }
+    },
+    {
+      "segment_id": "8e437dbf",
+      "source_content": "### What’s Next for BoxyHQ 🚀",
+      "source_content_hash": "f817e2e08277be724b3e913816198214a854c361997181de51f73929f88ff6b1",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### BoxyHQ未来计划 🚀"
+      }
+    },
+    {
+      "segment_id": "c9f6a516",
+      "source_content": "![Features](/img/blog/scoutflo/blog-features.webp)",
+      "source_content_hash": "e29a5721393ae59bff0767a942e898d03c76248153c7154adbc93e000abf3a50",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![Features](/img/blog/scoutflo/blog-features.webp)"
+      }
+    },
+    {
+      "segment_id": "b8954ec9",
+      "source_content": "Check out BoxyHQ’s [GitHub page](https://github.com/boxyhq), official [documentation](https://boxyhq.com/docs), and [Twitter](https://twitter.com/boxyhq) profile. 🚀",
+      "source_content_hash": "47adc06d74e1cb8d18670232369077c71649069882ec47bdc4f89502ee355af5",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "访问BoxyHQ的[GitHub页面](https://github.com/boxyhq)、官方[文档](https://boxyhq.com/docs)及[Twitter](https://twitter.com/boxyhq)主页。🚀"
+      }
+    },
+    {
+      "segment_id": "ebe673d6",
+      "source_content": "And don’t forget to follow Scoutflo on [Twitter](https://twitter.com/scout_flo?ref=boxyhq.com) if you haven’t already! ✨",
+      "source_content_hash": "bdc7c186159cae491dee44589bf723aa0ae1abc70aef299cd574784a34d5a228",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "别忘了在[Twitter](https://twitter.com/scout_flo?ref=boxyhq.com)上关注Scoutflo！✨"
+      }
+    },
+    {
+      "segment_id": "7e031d10",
+      "source_content": "We’re also active on LinkedIn 💙",
+      "source_content_hash": "31ff38b3e5a3ccedc9a5d623b0021a64c5cb4243511ec5bfe782cefcee600064",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "我们在LinkedIn上也很活跃 💙"
+      }
+    },
+    {
+      "segment_id": "71e7acda",
+      "source_content": "<div style={{ fontSize: \"10px\", marginTop: \"-10px\", paddingTop: \"2rem\", marginBottom: \"2rem\" }}>Cover photo by <a href=\"https://unsplash.com/@danny144?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText\">Dan Nelson</a> on <a href=\"https://unsplash.com/photos/ah-HeguOe9k?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText\">Unsplash</a></div>",
+      "source_content_hash": "d231570d2aafcb12c66f8ec85ad24ce728e9c08254212dfd606768b68a7e8a65",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "<div style={{ fontSize: \"10px\", marginTop: \"-10px\", paddingTop: \"2rem\", marginBottom: \"2rem\" }}>封面图片由<a href=\"https://unsplash.com/@danny144?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText\">Dan Nelson</a>在<a href=\"https://unsplash.com/photos/ah-HeguOe9k?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText\">Unsplash</a>拍摄</div>"
+      }
+    }
+  ],
+  "target_i18n_subpath": "docusaurus-plugin-content-blog/2023-07-20-boxyhq-the-must-have-for-your-startups-next-enterprise-customer.md",
+  "last_updated_timestamp": "2025-06-08T18:49:09.307943+00:00",
+  "schema_version": "1.0",
+  "translated_versions": {
+    "zh-CN": "2119f6b37d67b5daada0dd7325a7ebed3eedf1bedfbe58a471a8743cf38e02a0"
+  }
+}

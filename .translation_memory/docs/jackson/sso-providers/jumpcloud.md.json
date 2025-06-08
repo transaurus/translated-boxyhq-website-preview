@@ -1,0 +1,302 @@
+{
+  "source_file_path_relative_to_docusaurus_root": "docs/jackson/sso-providers/jumpcloud.md",
+  "source_file_content_hash": "c0df4a554a85462cac41674bef05a67a991f6f278eac1e0a32c4de21cbd01981",
+  "segments": [
+    {
+      "segment_id": "58cfcc64",
+      "source_content": "---\ntitle: Set up your own custom SAML application for JumpCloud SAML\nsidebar_label: JumpCloud SAML\n---",
+      "source_content_hash": "775c611f826395bca7848d2a38163d2b6abdae3717335cd44adc8b3707968119",
+      "node_type": "yaml",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_58cfcc64"
+      }
+    },
+    {
+      "segment_id": "b3de8742",
+      "source_content": "# JumpCloud SAML SSO",
+      "source_content_hash": "97d731d200c9372d80f57f44aee7303bcb71755f0132b5108ad7e4777c83363a",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "# JumpCloud SAML 单点登录配置"
+      }
+    },
+    {
+      "segment_id": "3fbbcc07",
+      "source_content": "In this section, we will show you how to set up your own custom SAML application for JumpCloud SAML.",
+      "source_content_hash": "ca9b99af1e7b304b4682394b8b7e36c8033525458c2cdfd72c336717ddc67170",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "本节将指导您如何为 JumpCloud SAML 设置自定义应用程序。"
+      }
+    },
+    {
+      "segment_id": "1cc03ec8",
+      "source_content": "## Create Application",
+      "source_content_hash": "a4c42fce6e36a4ed1120ec7f3eb7c050bd9ea2173680e61024ccfe8f6aaa2897",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 创建应用程序"
+      }
+    },
+    {
+      "segment_id": "8d66f911",
+      "source_content": "From your JumpCloud Admin console, click **SSO** from the left navigation menu.",
+      "source_content_hash": "c1cef0c0db19cd85e9fe553b15df9bf134b6cec8dfbc30d04790211230d20f13",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "在 JumpCloud 管理员控制台中，点击左侧导航菜单的 **SSO**。"
+      }
+    },
+    {
+      "segment_id": "ad8fd492",
+      "source_content": "If your application is already created, choose it from the list and move to the section [Configure Application](#configure-application)",
+      "source_content_hash": "1137b1c722a49032336fe1d2b3fd3b599f15d60bf8c23858936523cfc6344994",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "若应用程序已创建，请从列表中选择并跳转至[配置应用程序](#configure-application)章节。"
+      }
+    },
+    {
+      "segment_id": "86b54d44",
+      "source_content": "If you haven't created a SAML application, click plus icon and then **Custom SAML App** to create a new application",
+      "source_content_hash": "d6b87a59f1ebc71ff973b295165e042f61d24cd4b7451a10dcf4b004af78b7ed",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "若需新建 SAML 应用，点击加号图标后选择 **Custom SAML App** 创建新应用。"
+      }
+    },
+    {
+      "segment_id": "39b3772c",
+      "source_content": "![JumpCloud SAML Step 1](/images/docs/jackson/sso-providers/jumpcloud/1.png)",
+      "source_content_hash": "7874210fe913e362b1a0a32082ad7c94d9918c89fa22e7fbd149cd76b2831a03",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![JumpCloud SAML 步骤1](/images/docs/jackson/sso-providers/jumpcloud/1.png)"
+      }
+    },
+    {
+      "segment_id": "1acb9a05",
+      "source_content": "Give your application a **Display Label**.",
+      "source_content_hash": "2d9911f480ec7dc18e926fae41b4f3d87d97a80956333f38f506c5d4bfbf83a7",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "为应用程序填写 **显示标签**。"
+      }
+    },
+    {
+      "segment_id": "2df4f75f",
+      "source_content": "![JumpCloud SAML Step 2](/images/docs/jackson/sso-providers/jumpcloud/2.png)",
+      "source_content_hash": "5691721af085f453927b3817518a0e5e8c211a192a0a87fc8d419605965e3c34",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![JumpCloud SAML 步骤2](/images/docs/jackson/sso-providers/jumpcloud/2.png)"
+      }
+    },
+    {
+      "segment_id": "95b38f97",
+      "source_content": "## Configure Application",
+      "source_content_hash": "aa3cb32afcf17822a5ba904685b48592ccb953a514ebc2da0731fc9ce393d544",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 配置应用程序"
+      }
+    },
+    {
+      "segment_id": "ccc88b4c",
+      "source_content": "Next click on the **SSO** tab and enter the following values:",
+      "source_content_hash": "9031c8a458a784884eea2de8a9ce98e7f9f14966d56528ecf7e169bab497e651",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "点击 **SSO** 标签页并填写以下字段："
+      }
+    },
+    {
+      "segment_id": "1d13125b",
+      "source_content": "- **IdP Entity ID**\n- **SP Entity ID**\n- **ACS URL**",
+      "source_content_hash": "b71254e7177ef2d310173560a93d505d558d4bcc121965a39a146e3807399371",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- **IdP 实体 ID**\n- **SP 实体 ID**\n- **ACS URL**"
+      }
+    },
+    {
+      "segment_id": "73ab96a3",
+      "source_content": "Replace the values with the ones you have received from SAML Jackson.",
+      "source_content_hash": "3a0252490deba22aac834db0ee890225a76896363a384f397f251886c5af8ecf",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "请将上述值替换为从 SAML Jackson 获取的对应参数。"
+      }
+    },
+    {
+      "segment_id": "7499a4e7",
+      "source_content": "![JumpCloud SAML Step 3](/images/docs/jackson/sso-providers/jumpcloud/3.png)",
+      "source_content_hash": "2177158dfc7403b3eb5c16ae3f10b05eb020815d37e7f116192e58e02661ed9b",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![JumpCloud SAML 步骤3](/images/docs/jackson/sso-providers/jumpcloud/3.png)"
+      }
+    },
+    {
+      "segment_id": "109ace10",
+      "source_content": "## Attribute Mapping",
+      "source_content_hash": "ced521d3f2fec68e3b98cce4a507ed30e9cda40547fcc34bacfb25d1deb14981",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 属性映射"
+      }
+    },
+    {
+      "segment_id": "135468ee",
+      "source_content": "Under the **Attributes** section, you have to configure the following attributes:",
+      "source_content_hash": "5d146c74a30abf3a341a802cf2fe3396e30507a319fb1d9970af9384b5ec5878",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "在 **属性** 章节中配置以下属性："
+      }
+    },
+    {
+      "segment_id": "33331f27",
+      "source_content": "See the screenshot below.",
+      "source_content_hash": "484fb0ee90c5fa8ea70ce5cad0e59baf1dc7a4e18927a947a1fdaf6da53dfdca",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "参考下方截图。"
+      }
+    },
+    {
+      "segment_id": "60430721",
+      "source_content": "| Service Provider Attribute Name | JumpCloud Attribute Name |\n| ------------------------------- | ------------------------ |\n| email                           | email                    |\n| firstName                       | firstname                |\n| lastName                        | lastname                 |",
+      "source_content_hash": "8e7e8cf3e17a9e9eeb3eb56bfb62364ccb44d9057aedae08c6cefd6a0792ea6d",
+      "node_type": "table",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_60430721"
+      }
+    },
+    {
+      "segment_id": "a9d49f92",
+      "source_content": "Make sure you have checked the **Declare Redirect Endpoint** checkbox.",
+      "source_content_hash": "24332e16cee78910fe2a7d0057bc765852d8abfe877877e973d71f5d3609cbaa",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "确保勾选 **声明重定向端点** 复选框。"
+      }
+    },
+    {
+      "segment_id": "a44047a5",
+      "source_content": "Finally, click **Activate** to save the application configuration.",
+      "source_content_hash": "b68c38e496952fa4f85a4c5d7ac6a244000b340e0a455a0b71481f40b49f03c3",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "最后点击 **激活** 保存应用配置。"
+      }
+    },
+    {
+      "segment_id": "f7ef78f9",
+      "source_content": "![JumpCloud SAML Step 4](/images/docs/jackson/sso-providers/jumpcloud/4.png)",
+      "source_content_hash": "948a40b93400013d1431135cb5fd8764059509b7c1eecd620a19820150aa6fec",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![JumpCloud SAML 步骤4](/images/docs/jackson/sso-providers/jumpcloud/4.png)"
+      }
+    },
+    {
+      "segment_id": "b36c6338",
+      "source_content": "Now go back to the SAML app you just created, click the tab **SSO**, and click the button **Export Metadata** to download the metadata XML file.",
+      "source_content_hash": "7413f30e0d1e13b899fcdf9a27a9ca111a7d1349b526694e4abc65c41c7ebeba",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "返回已创建的 SAML 应用，点击 **SSO** 标签页中的 **导出元数据** 按钮下载 XML 元数据文件。"
+      }
+    },
+    {
+      "segment_id": "b9aaa519",
+      "source_content": "![JumpCloud SAML Step 5](/images/docs/jackson/sso-providers/jumpcloud/5.png)",
+      "source_content_hash": "0af20f728d18f4c3fcab50b229f9eec76e5ab54aea7d3c7fd575d745cde2faea",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![JumpCloud SAML 步骤5](/images/docs/jackson/sso-providers/jumpcloud/5.png)"
+      }
+    },
+    {
+      "segment_id": "1a316f80",
+      "source_content": "## Next steps",
+      "source_content_hash": "3a5d9cbc49e6e5f0c98349dd1cd7cfe5713807fc5f02234240621031925d1f32",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 后续步骤"
+      }
+    },
+    {
+      "segment_id": "40158b4b",
+      "source_content": "You've successfully configured your custom SAML application for JumpCloud. At this stage, you can assign users to your application and start using it.",
+      "source_content_hash": "ca7b2f23fa61791b1a44bdd4e0c684fcc3e6622573bf332d51a3ad8e6438f943",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "您已成功完成 JumpCloud 自定义 SAML 应用的配置。现在可为应用分配用户并开始使用。"
+      }
+    },
+    {
+      "segment_id": "c431704b",
+      "source_content": "## Resources",
+      "source_content_hash": "75c6211de8f8951e8037d10289e3e5d0177b8a172b593345006b5b42a8e08e0e",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 相关资源"
+      }
+    },
+    {
+      "segment_id": "158e1f5d",
+      "source_content": "- [JumpCloud](https://jumpcloud.com/) official website",
+      "source_content_hash": "f52242a69ae32676a28b795728e175ccdcb6d629e00466923d3cee37f17afb66",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- [JumpCloud](https://jumpcloud.com/) 官方网站"
+      }
+    },
+    {
+      "segment_id": "e0724a69",
+      "source_content": ":::tip\nGot a question? [Ask here](https://discord.gg/uyb7pYt4Pa)\n:::",
+      "source_content_hash": "205c5768df1b402d61a634ce459105e3be3777225d2575780c425cf0a7ceae4c",
+      "node_type": "containerDirective",
+      "translatable": true,
+      "translations": {
+        "zh-CN": ":::tip\n遇到问题？[点击提问](https://discord.gg/uyb7pYt4Pa)\n:::"
+      }
+    }
+  ],
+  "target_i18n_subpath": "docusaurus-plugin-content-docs/current/jackson/sso-providers/jumpcloud.md",
+  "last_updated_timestamp": "2025-06-08T18:49:09.316549+00:00",
+  "schema_version": "1.0",
+  "translated_versions": {
+    "zh-CN": "c0df4a554a85462cac41674bef05a67a991f6f278eac1e0a32c4de21cbd01981"
+  }
+}

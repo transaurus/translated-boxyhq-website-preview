@@ -1,0 +1,282 @@
+{
+  "source_file_path_relative_to_docusaurus_root": "blog/2023-5-11-build enterprise-software-with-no-code-thanks-to-bubble-io copy.md",
+  "source_file_content_hash": "69c928f2a984d5dcda7f7b677f6d6530d39a1ad477e2e496ea85dc32a5e5f1d7",
+  "segments": [
+    {
+      "segment_id": "58cfcc64",
+      "source_content": "---\nslug: build-enterprise-software-with-no-code-thanks-to-bubble-io\ntitle: 'Build Enterprise Software with No-Code Thanks to Bubble.io'\nauthor: Nathan Tarbert\nauthor_title: Community Success Engineer @BoxyHQ\nauthor_url: https://github.com/NathanTarbert\nauthor_image_url: /images/authors/nathan.jpg\ntags_disabled: [open-source, sso, enterprise-ready]\nimage: /img/blog/bubble-small.jpg\n---",
+      "source_content_hash": "ff93a3b53fe4905a2ee79734c7e3159c4406fa3361270c90fa8424a327a464be",
+      "node_type": "yaml",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_58cfcc64"
+      }
+    },
+    {
+      "segment_id": "8d66f911",
+      "source_content": "Building your enterprise applications on Bubble is now easier than ever with BoxyHQ, a single API to connect to enterprise Single Sign-On (SSO), and multiple security compliance features.",
+      "source_content_hash": "8bc72a9a93b02aed49f243e4b04daac70dd3b78f0f62c6a4e8a4c9c0660be23d",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "通过BoxyHQ这一连接企业级单点登录(SSO)与多项安全合规功能的统一API，在Bubble平台上构建企业应用变得前所未有的简单。"
+      }
+    },
+    {
+      "segment_id": "70153c6e",
+      "source_content": "## What is Bubble.io?",
+      "source_content_hash": "b70e3a9e54c286b94b44f0dbd5efa49311a142794c412b7db309a96ff1cc326b",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 什么是Bubble.io？"
+      }
+    },
+    {
+      "segment_id": "86b54d44",
+      "source_content": "Bubble is a visual drag-and-drop programming language. Instead of scripting code, users can leverage a visual interface to build applications - simple or complex. This makes building apps accessible to people (or teams) with a big idea - but no programming skills.",
+      "source_content_hash": "cc34d88b81e0fac28d91097978313428819208e9f7a10d9cb4f43fbfcf772263",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "Bubble是一种可视化拖拽式编程语言。用户无需编写代码，通过可视化界面即可构建简单或复杂的应用程序，这使得没有编程技能的个人（或团队）也能实现应用开发构想。"
+      }
+    },
+    {
+      "segment_id": "d350c018",
+      "source_content": "## What is a Bubble.io Plugin?",
+      "source_content_hash": "d01c1d999ffcdc5c3073ceaf1a365a9d223c0806d4c9a171c152c8839cc80762",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 什么是Bubble.io插件？"
+      }
+    },
+    {
+      "segment_id": "1acb9a05",
+      "source_content": "Plugins are third-party Bubble.io components that are not part of the Bubble core platform functionality. They can be freely provided by the creators or available as a paid plugin.",
+      "source_content_hash": "c95b9c2626aa338c6925ed482c1175a92acf37a12dc9a3f7d2adee8af174e35a",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "插件是Bubble.io平台的第三方组件，不属于核心功能模块。这些插件可能由创作者免费提供，也可能作为付费插件使用。"
+      }
+    },
+    {
+      "segment_id": "63622bf0",
+      "source_content": "## Bubble Makes It Simple",
+      "source_content_hash": "109827b5930a98fc6bfb57bfb26542d8a97365b7ab35e06899d346d36a439cb7",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## Bubble让开发变简单"
+      }
+    },
+    {
+      "segment_id": "98cfbd53",
+      "source_content": "One of the benefits of using a no-code platform like Bubble is that not only can you build an application quickly, but you also have the ability to architect complex features. If we look back just a few years, this was not possible. You would have 2 options:",
+      "source_content_hash": "8a72f65e5e5a6848c9db0a7ba7106a02ef9c131e0697d47ff768bcbda154e4a8",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "使用Bubble这类无代码平台的显著优势在于：不仅能快速构建应用，还能设计复杂功能。若回顾几年前，开发者只有两种选择："
+      }
+    },
+    {
+      "segment_id": "0cc488ed",
+      "source_content": "- Hire a developer or development team\n- Delegate to a developer or team",
+      "source_content_hash": "463991614844464de75ad69567ce243c57ecdb495a2e3e34e74181b43845fc0c",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- 雇佣开发人员或团队\n- 将项目外包给开发团队"
+      }
+    },
+    {
+      "segment_id": "4b1d2d7d",
+      "source_content": "But we live in an era where technology is continually evolving and individuals' or teams' creativity has no limits. We can put ourselves in the shoes of someone who doesn’t write code but wants to build a professional application - with Bubble.io this is now a possibility.",
+      "source_content_hash": "74bec7f45ca66175904a5eb95978a986cfd3b680259ec943442d1624a24b9658",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "如今我们身处技术持续演进的时代，个人或团队的创造力不再受限。即使不懂编程，也能通过Bubble.io构建专业级应用——这已成为现实。"
+      }
+    },
+    {
+      "segment_id": "48847fd4",
+      "source_content": "## Top 3 reasons small businesses or enterprises should switch to a no-code platform",
+      "source_content_hash": "90ca28bcdb29f68b906019fc0f5003dc4a5f25fdbcd51aac6b0af5c9f40c692a",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 中小企业应采用无代码平台的三大理由"
+      }
+    },
+    {
+      "segment_id": "4daf5cdd",
+      "source_content": "_This comes with a caveat that [Bubble does have a learning curve](https://coachingnocodeapps.com/how-long-does-it-take-to-learn-bubble-and-how-much-does-it-cost) but once you get familiar with the platform it’s much easier to build applications._",
+      "source_content_hash": "62825159288c38cfed7bcf9be7ae173ee3ec76610eab6b1ea0adc3edd11d5062",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "_需注意[Bubble存在学习曲线](https://coachingnocodeapps.com/how-long-does-it-take-to-learn-bubble-and-how-much-does-it-cost)，但熟悉平台后应用构建将变得轻松。_"
+      }
+    },
+    {
+      "segment_id": "f422383e",
+      "source_content": "## 1. Using a no-code solution like Bubble saves money on IT",
+      "source_content_hash": "af86cfc9b04b225d1647dab5242bdc9b69c3f11ffc5d519e0e49768b8afabfc4",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 1. 无代码方案显著降低IT成本"
+      }
+    },
+    {
+      "segment_id": "97ae4a01",
+      "source_content": "Typical app development workflow costs for SMBs (small to medium businesses) from design to implementation can range from $75,000 to $750,000. This can be crippling for startups which opens up a no-code solution as a better alternative. If we are talking about enterprise development, this number can reach up to millions.",
+      "source_content_hash": "59e58c9bd5a8a1b9a755f4fb8413054577c0eee233c44662004495d672d631ad",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "中小企业从设计到实现的应用开发成本通常在7.5万至75万美元之间，这对初创企业构成巨大压力。若涉及企业级开发，成本可能高达数百万美元。无代码方案成为更优选择。"
+      }
+    },
+    {
+      "segment_id": "62a6890b",
+      "source_content": "## 2. Time to value",
+      "source_content_hash": "2951b74c91cf07b5f1a3ce1533e4a2c36d3e281d26824a701f91666ce4ae9c37",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 2. 快速实现价值"
+      }
+    },
+    {
+      "segment_id": "3cfe6286",
+      "source_content": "This depends on what type of app you want to build. Some estimations are up to [80% in development time saved](https://medium.com/swlh/could-i-build-my-product-on-bubble-io-75923a41b9b6). Let’s take into consideration there is no need to set time-consuming tasks for a developer such as basic features and environment setup. This is all taken care of for you when building in Bubble’s platform.",
+      "source_content_hash": "2d99ad6ba719d962b0ea345895854f0f6f1f59451c51dd465bf9c43ac71e635e",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "根据应用类型不同，可节省高达[80%的开发时间](https://medium.com/swlh/could-i-build-my-product-on-bubble-io-75923a41b9b6)。Bubble平台已内置基础功能与环境配置，省去了开发者耗时的准备工作。"
+      }
+    },
+    {
+      "segment_id": "06c0f776",
+      "source_content": "## 3. Built-in SEO",
+      "source_content_hash": "e9305f4d9f63a570c2d54b42718d55a2bee4529bb7068ae7bf078e893e738e05",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 3. 内置SEO功能"
+      }
+    },
+    {
+      "segment_id": "aa1e7006",
+      "source_content": "Whether you are a startup or an enterprise team, but inexperienced in the art of Search Engine Optimization (SEO), not to worry, Bubble has built-in [SEO tools](https://manual.bubble.io/help-guides/customizing-an-application/seo#bubbles-seo-tools) that allow you to the ability to modify and customize how your application is seen by search engine crawlers. This would be in the advanced settings and great care should be taken when enabling or modifying these settings because, by default, your application will not be indexed.",
+      "source_content_hash": "38d1cb55beba84725c129a1c8cec7f106b2420b50ab7ca94d927b0b63e2d17ad",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "无论初创团队还是企业用户，若缺乏搜索引擎优化(SEO)经验也无需担心。Bubble提供[SEO工具](https://manual.bubble.io/help-guides/customizing-an-application/seo#bubbles-seo-tools)，可自定义应用在搜索引擎爬虫中的呈现方式（位于高级设置中）。需注意默认情况下应用不会被索引，修改这些设置时应当谨慎。"
+      }
+    },
+    {
+      "segment_id": "13d9cd70",
+      "source_content": "This brings a lot of value when you don’t necessarily need a professional marketing division to start with. Right out of the gate, you can build an application that has professional capabilities to successfully reach your target persona.",
+      "source_content_hash": "7ae849f9c5d821274c452a3e06cb5baa05740f15742b3f80676e9b82555c1a97",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "这意味着初创阶段无需专业营销团队，就能构建具备专业获客能力的应用程序。"
+      }
+    },
+    {
+      "segment_id": "6f930b2f",
+      "source_content": "## Can I add enterprise features on Bubble?",
+      "source_content_hash": "7de65945b29d2b5fd61bd336dbf4ea8a6dd770a8fdb075e6904944680072f10c",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 能在Bubble上添加企业级功能吗？"
+      }
+    },
+    {
+      "segment_id": "c504c207",
+      "source_content": "One of the foundational needs of any new business app is the ability for users to securely log in to password-protected areas - like a shopping cart or protected content. If we look at enterprise features like SAML SSO for instance, you may think this is a feature that is out of reach for a no-code platform, but you can simply search within the Bubble marketplace and a list of plugin creators has made this possible. Instantly you get a short list of plugins available for the functionality you would like to implement.",
+      "source_content_hash": "8936a147d97b94fbc3aebf1d8171a119cf13813e4b84539747680e91c776c9fa",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "任何商业应用的基础需求都包含用户安全登录功能（如购物车或受保护内容访问）。以SAML SSO为例，这类企业功能看似与无代码平台无缘，但只需在Bubble市场搜索，插件开发者已将其变为可能——您将立即获得可实现该功能的插件列表。"
+      }
+    },
+    {
+      "segment_id": "98d26038",
+      "source_content": "![BoxyHQ plugin](/img/blog/bubble-plugin.png)",
+      "source_content_hash": "db7e8a3338a171b62bb878355512949d13318d29c46713bc5fc19ead3925c1ce",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![BoxyHQ插件](/img/blog/bubble-plugin.png)"
+      }
+    },
+    {
+      "segment_id": "d3649a1e",
+      "source_content": "BoxyHQ is one of those creators. By simply installing the plugin into your Bubble.io app, you can be up and running with little configuration effort. We have written a step-by-step [guide](https://boxyhq.com/guides/jackson/integrations/bubble) to help you properly configure setting up SAML single sign-on for your small to medium business (SMB) or enterprise application.",
+      "source_content_hash": "b9dd1bfb8abafcd31b2d2fddacdf416e695fdaf15c367fc95e219ce9185b952e",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "BoxyHQ正是这样的插件开发者之一。只需将插件安装到您的Bubble.io应用中，您就能以极少的配置工作快速投入运行。我们编写了一份分步[指南](https://boxyhq.com/guides/jackson/integrations/bubble)，帮助您为中小型企业(SMB)或企业应用正确配置SAML单点登录功能。"
+      }
+    },
+    {
+      "segment_id": "4d52a261",
+      "source_content": "Once you have BoxyHQ’s plugin properly configured, you now have an application that will handle secure login access to your users using SAML single sign-on that will connect to any IdP (Identity Provider) like Okta, OneLogin, Azure AD, etc.",
+      "source_content_hash": "9a33446d5ca7aaad358c7033555ccc5999a2daeb3897976e7fb5e1dc5706ea74",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "当您正确配置好BoxyHQ插件后，您的应用就能通过SAML单点登录实现用户安全登录访问，该功能可对接任何身份提供商(IdP)，如Okta、OneLogin、Azure AD等。"
+      }
+    },
+    {
+      "segment_id": "23dfb152",
+      "source_content": "This is when you can breathe a sigh of relief because there is now no need to remember usernames and passwords. BoxyHQ’s plugin easily provides that solution for you. If you would like to test a [demo application](https://boxyhq-saml-sso.bubbleapps.io/version-test) click here to see the flow and enjoy the seamless experience you will have inside the Bubble platform.",
+      "source_content_hash": "32df8457da0df59185c11ec91aa7f6ecd10d7560e96af5588dd96a0d9aeb7fe9",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "此刻您终于可以松一口气了，因为再也不需要记忆用户名和密码。BoxyHQ插件为您完美解决了这一难题。若想体验[演示应用](https://boxyhq-saml-sso.bubbleapps.io/version-test)的登录流程，点击此处即可感受Bubble平台内丝滑流畅的操作体验。"
+      }
+    },
+    {
+      "segment_id": "1131ef75",
+      "source_content": "If you are interested in understanding what’s happening on the backend, we have a [guide](https://boxyhq.com/blog/understanding-saml-sso-the-basics-from-the-user-side) available that will walk you through the technical aspects of single sign-on.",
+      "source_content_hash": "312f7d9d8727ec0f030be579c34cce0c1f0c4ceb1459d21278db5fac58d1ddad",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "如果您想了解后端的技术实现原理，我们提供了详细[指南](https://boxyhq.com/blog/understanding-saml-sso-the-basics-from-the-user-side)，带您深入解析单点登录的技术细节。"
+      }
+    },
+    {
+      "segment_id": "8b2a52b1",
+      "source_content": "SSO can be complicated but BoxyHQ makes it simple to understand.",
+      "source_content_hash": "371bcb821a93990dea9c4aacda59f8778c9aa63cbdda6ef001b8a34ab6364b4d",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "单点登录可能很复杂，但BoxyHQ让它变得简单易懂。"
+      }
+    }
+  ],
+  "target_i18n_subpath": "docusaurus-plugin-content-blog/2023-5-11-build enterprise-software-with-no-code-thanks-to-bubble-io copy.md",
+  "last_updated_timestamp": "2025-06-08T18:49:09.304309+00:00",
+  "schema_version": "1.0",
+  "translated_versions": {
+    "zh-CN": "69c928f2a984d5dcda7f7b677f6d6530d39a1ad477e2e496ea85dc32a5e5f1d7"
+  }
+}

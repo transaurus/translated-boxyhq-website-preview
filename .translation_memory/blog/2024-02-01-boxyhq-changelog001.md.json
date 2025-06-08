@@ -1,0 +1,132 @@
+{
+  "source_file_path_relative_to_docusaurus_root": "blog/2024-02-01-boxyhq-changelog001.md",
+  "source_file_content_hash": "d27578d1537fb55890e03c58f433ef301ffba47b78cfe9e3d95957239682db73",
+  "segments": [
+    {
+      "segment_id": "58cfcc64",
+      "source_content": "---\nslug: changelog001\ntitle: 'BoxyHQ Changelog, January 2024: SAML Jackson, Retraced, and More'\nauthor: Schalk Neethling\nauthor_title: Customer Success, Community, DevRel - @BoxyHQ\nauthor_url: https://github.com/schalkneethling\nauthor_image_url: /images/authors/schalk.jpg\ntags_disabled: [changelog]\nimage: /images/blog/changelog001.jpg\n---",
+      "source_content_hash": "0c7647adb3148d2fb6ed18aae7376e483b72d00a7492ffa242686b0364439e1c",
+      "node_type": "yaml",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_58cfcc64"
+      }
+    },
+    {
+      "segment_id": "8d66f911",
+      "source_content": "Welcome to the first edition of the BoxyHQ Changelog! We are excited to share some of the highlights from the last two weeks, including notable updates to [SAML Jackson](https://github.com/boxyhq/jackson) (SSO and Directory Sync), [Retraced](https://github.com/retracedhq/retraced) (Audit Logs), and our [Open Source SaaS starter kit](https://github.com/boxyhq/saas-starter-kit).",
+      "source_content_hash": "1f27c46250d9cde48877ef8bd1f608aade3f591c0e7c11cfae6b30a19e558e21",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "欢迎阅读首期BoxyHQ更新日志！我们很高兴与您分享过去两周的重要更新，包括[SAML Jackson](https://github.com/boxyhq/jackson)（SSO与目录同步）、[Retraced](https://github.com/retracedhq/retraced)（审计日志）以及我们的[开源SaaS入门套件](https://github.com/boxyhq/saas-starter-kit)的显著改进。"
+      }
+    },
+    {
+      "segment_id": "70153c6e",
+      "source_content": "## SAML Jackson",
+      "source_content_hash": "5babd600fbceec64fc03242cb5f950191cf8b9e9bb8e0cd6d92ef903068a1fdc",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## SAML Jackson"
+      }
+    },
+    {
+      "segment_id": "86b54d44",
+      "source_content": "With SAML Jackson, our Single Sign-On (SSO) and Directory Sync solution, we are committed to delivering robust, user-friendly, and scalable solutions. In the last two weeks, we have made significant strides in this direction, here are some of the highlights of what landed between v1.16.1 and v1.18.2:",
+      "source_content_hash": "ccf5cfcc4e1ab33c04f60faaa915ab2fb99a9a24198799086441f1a48fea0ca7",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "在SAML Jackson（我们的单点登录与目录同步解决方案）方面，我们致力于提供强大、易用且可扩展的解决方案。过去两周我们取得了重要进展，以下是v1.16.1至v1.18.2版本的主要亮点："
+      }
+    },
+    {
+      "segment_id": "11c829ab",
+      "source_content": "- Added privacy respecting analytics for the number of connections.\n- Improvements to our custom branding support (add-on feature).\n- SAML Federation now supports bridging to OIDC.\n- Added error tracing for OIDC connections and related improvements.\n- Added a new statistics API endpoint for SSO and Directory Sync connection count.\n- Native integration with [Ory](https://www.ory.sh/).\n- Added support to associate multiple tenants with SAML Federation apps. This is especially useful for large enterprises.\n- General improvements to SAML Federation support.\n- There were also several dependency updates to ensure the security and performance of SAML Jackson.",
+      "source_content_hash": "c47fc116b57c0be32b85d1c56661cea4bad86efbdf32862c3c3acf9a3a80c81a",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- 新增了尊重隐私的连接数统计功能\n- 改进了自定义品牌支持（增值功能）\n- SAML联盟现在支持桥接至OIDC协议\n- 为OIDC连接添加错误追踪及相关改进\n- 新增统计API端点用于查询SSO和目录同步连接数\n- 原生集成[Ory](https://www.ory.sh/)平台\n- 支持将多个租户关联至SAML联盟应用（特别适合大型企业）\n- 对SAML联盟功能的整体优化\n- 多项依赖项更新以保障安全性和性能"
+      }
+    },
+    {
+      "segment_id": "d9172fa4",
+      "source_content": "You can find the [complete changelog here on GitHub](https://github.com/boxyhq/jackson/releases).",
+      "source_content_hash": "62698d03b1d49fc044c841cfa3f2820d2207081d8ea9f50f762c45f2c53472df",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "您可以在[GitHub查看完整更新日志](https://github.com/boxyhq/jackson/releases)。"
+      }
+    },
+    {
+      "segment_id": "d06306f7",
+      "source_content": "## Retraced and the SaaS Starter Kit",
+      "source_content_hash": "9e5c794815c840dc775e4fb744de00a915d893e1cfab55e61b4ed51f7164e3b0",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## Retraced与SaaS入门套件"
+      }
+    },
+    {
+      "segment_id": "73ab96a3",
+      "source_content": "Retraced, our Audit Logs solution, is a collaboration between BoxyHQ and [Replicated](https://www.replicated.com/). While this project did not have the same level of activity as SAML Jackson, it is a critical component of our offering. One exciting new feature that is coming soon to Retraced is SIEM (Security Information and Event Management) integration for those on the premium tier. This will allow you to send your audit logs to your SIEM of choice, such as [Splunk](https://www.splunk.com/).",
+      "source_content_hash": "95982eba66c49b72c317a5ee31a754d6f1bf58ee3eaaa056f56a066cc0b495eb",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "Retraced（我们的审计日志解决方案）是BoxyHQ与[Replicated](https://www.replicated.com/)的合作项目。虽然其更新频率不及SAML Jackson，但它是我们产品体系的关键组成部分。即将推出的新功能包括面向高级用户的SIEM（安全信息与事件管理）集成，支持将审计日志发送至[Splunk](https://www.splunk.com/)等SIEM平台。"
+      }
+    },
+    {
+      "segment_id": "7499a4e7",
+      "source_content": "You can always find the full changelog for Retraced [here on GitHub](https://github.com/retracedhq/retraced/releases).",
+      "source_content_hash": "cab24cd1811ae5d36f145a88de9c2de7305f4ffaaca6a984a9bc921ffa1aa2f6",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "您可以通过[GitHub获取Retraced完整更新记录](https://github.com/retracedhq/retraced/releases)。"
+      }
+    },
+    {
+      "segment_id": "9e89e13c",
+      "source_content": "> **NOTE:** Audit logs is currently a self-hosted only feature.",
+      "source_content_hash": "d80a44c505003ff2f16a6c09424011638377e4cdab5b96cc1466305adf569218",
+      "node_type": "blockquote",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "> **注意：** 审计日志目前仅支持自托管模式。"
+      }
+    },
+    {
+      "segment_id": "135468ee",
+      "source_content": "There has also been some improvements made to the [Open Source SaaS starter kit](https://github.com/boxyhq/saas-starter-kit) such as allowing a team to create an invite link making it easy for new members to join the team. We also landed several improvements to validation and error handling, and several dependency updates. If you are looking for a way to learn more about BoxyHQ and our various open source solution, [contributing to the SaaS starter kit](https://github.com/boxyhq/saas-starter-kit/issues) is a great way to get started. Consider this our invitation to you.",
+      "source_content_hash": "db1549fce2684ac4cfb6b8609e69faca03b2fe308b6cb007fef59b4ed1ce0668",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "[开源SaaS入门套件](https://github.com/boxyhq/saas-starter-kit)也有多项改进：团队可生成邀请链接简化新成员加入流程，增强了验证与错误处理机制，并更新了多个依赖项。如果您想深入了解BoxyHQ及我们的开源解决方案，[参与SaaS入门套件开发](https://github.com/boxyhq/saas-starter-kit/issues)将是最佳入门途径——我们在此诚挚邀请您加入。"
+      }
+    },
+    {
+      "segment_id": "33331f27",
+      "source_content": "That is it for this edition of the BoxyHQ Changelog. We hope you enjoyed this roundup of the last two weeks. If you have any questions, please feel free to reach out to us on [Mastodon](https://hachyderm.io/@boxyhq), [GitHub](https://github.com/boxyhq), [Discord](https://discord.boxyhq.com/), or on [Twitter/X](https://twitter.com/boxyhq).",
+      "source_content_hash": "55c4bb7b8498b57ff4632331bbe533688bb603f7b5464a1a23575cf2448a6b63",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "本期更新日志到此结束。如果您有任何疑问，欢迎通过[Mastodon](https://hachyderm.io/@boxyhq)、[GitHub](https://github.com/boxyhq)、[Discord](https://discord.boxyhq.com/)或[Twitter/X](https://twitter.com/boxyhq)联系我们。"
+      }
+    }
+  ],
+  "target_i18n_subpath": "docusaurus-plugin-content-blog/2024-02-01-boxyhq-changelog001.md",
+  "last_updated_timestamp": "2025-06-08T18:49:09.314506+00:00",
+  "schema_version": "1.0",
+  "translated_versions": {
+    "zh-CN": "d27578d1537fb55890e03c58f433ef301ffba47b78cfe9e3d95957239682db73"
+  }
+}

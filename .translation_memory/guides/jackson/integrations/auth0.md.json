@@ -1,0 +1,82 @@
+{
+  "source_file_path_relative_to_docusaurus_root": "guides/jackson/integrations/auth0.md",
+  "source_file_content_hash": "febcc9742c9a97f43d2ad64b8e44010315a869f423b216a72000fbd06febe313",
+  "segments": [
+    {
+      "segment_id": "58cfcc64",
+      "source_content": "---\ntitle: BoxyHQ SAML as Auth0 Social provider\nsidebar_label: Auth0\n---",
+      "source_content_hash": "df01dc500d9423671787b8a74599bea7fb8304bb98ea21823f2cb0200070c3bd",
+      "node_type": "yaml",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_58cfcc64"
+      }
+    },
+    {
+      "segment_id": "b3de8742",
+      "source_content": "# Auth0",
+      "source_content_hash": "a87de212e7ff8baa2403b9dcaf5d17c1546ad4a98ed436e881b44dc643fc9d3b",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "# Auth0"
+      }
+    },
+    {
+      "segment_id": "3fbbcc07",
+      "source_content": "[Auth0](https://auth0.com) doesn't need any introduction, it is one of the most popular Auth products out there. After the Okta acquisition though there's been pressure on Auth0 to focus on the Enterprise segment and unfortunately this has meant that as a startup you only get three Enterprise SSO connections (SAML or OIDC) for your apps before they try and get you onto a very expensive plan.",
+      "source_content_hash": "c7d449cde966fd95234fb69c372857f7a0b46c50340e8685bc96837cd83f12a4",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "[Auth0](https://auth0.com)无需过多介绍，它是最受欢迎的身份验证产品之一。然而在被Okta收购后，Auth0被迫将重心转向企业级市场，这导致初创公司只能免费获得三个企业级SSO连接（SAML或OIDC），之后就需要升级到昂贵的付费计划。"
+      }
+    },
+    {
+      "segment_id": "7e5c5a39",
+      "source_content": "As an early-stage startup this makes Enterprise SSO integration unaffordable, this is why we have created a seamless way to continue using Auth0 for auth but plug-in BoxyHQ for Enterprise SSO directly from Auth0. Your user management stays entirely in Auth0 but using BoxyHQ's OAuth 2.0 skin you can make Enterprise SAML or OIDC logins available to your customers.",
+      "source_content_hash": "83bde0ee22202d54ca3269038bfbfd54d00c2f72858bfa9f842203f9f5661002",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "对于早期初创企业而言，这使得企业级SSO集成变得难以负担。为此我们开发了无缝方案：继续使用Auth0进行基础身份验证，同时通过BoxyHQ直接从Auth0接入企业级SSO。用户管理仍完全保留在Auth0中，但借助BoxyHQ的OAuth 2.0封装层，您可以为客户提供企业级SAML或OIDC登录功能。"
+      }
+    },
+    {
+      "segment_id": "8d66f911",
+      "source_content": "Visit our [GitHub repo](https://github.com/boxyhq/jackson-examples/tree/main/apps/auth0-user-store) to see the source code for the Auth0 integration.",
+      "source_content_hash": "046f3daae86b34a3fb47373b1b06e644002b4e9880bf3be1fdeff9dc3bce4498",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "访问我们的[GitHub代码库](https://github.com/boxyhq/jackson-examples/tree/main/apps/auth0-user-store)查看Auth0集成的源代码。"
+      }
+    },
+    {
+      "segment_id": "70153c6e",
+      "source_content": "## Next steps",
+      "source_content_hash": "3a5d9cbc49e6e5f0c98349dd1cd7cfe5713807fc5f02234240621031925d1f32",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 后续步骤"
+      }
+    },
+    {
+      "segment_id": "4ddf6ae7",
+      "source_content": "- Got a question? [Ask here](https://discord.gg/uyb7pYt4Pa)",
+      "source_content_hash": "3d42b2d324c1d4391b652a72774e8ed6adad48f83e9f875f7f743e0f70b6c89a",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- 有问题需要咨询？[点击这里提问](https://discord.gg/uyb7pYt4Pa)"
+      }
+    }
+  ],
+  "target_i18n_subpath": "docusaurus-plugin-content-docs-guides/current/jackson/integrations/auth0.md",
+  "last_updated_timestamp": "2025-06-08T18:49:09.299421+00:00",
+  "schema_version": "1.0",
+  "translated_versions": {
+    "zh-CN": "febcc9742c9a97f43d2ad64b8e44010315a869f423b216a72000fbd06febe313"
+  }
+}

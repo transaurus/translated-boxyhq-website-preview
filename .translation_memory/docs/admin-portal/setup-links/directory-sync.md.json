@@ -1,0 +1,312 @@
+{
+  "source_file_path_relative_to_docusaurus_root": "docs/admin-portal/setup-links/directory-sync.md",
+  "source_file_content_hash": "7e2760e71de612b63746d62aa8b6062e13d52e0f43714261bab106a4a835704d",
+  "segments": [
+    {
+      "segment_id": "58cfcc64",
+      "source_content": "---\ntitle: Setup Links (Directory-Sync)\nsidebar_label: Directory Sync\ndescription: Setup Link to create a Directory Sync\n---",
+      "source_content_hash": "ae998060b8e669a0e315addba34925af8a59d0ff47ede3261a2b1d4ece49ec50",
+      "node_type": "yaml",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_58cfcc64"
+      }
+    },
+    {
+      "segment_id": "a703643c",
+      "source_content": "# Setup Links (Directory Sync)",
+      "source_content_hash": "d22fcf16ce112606afab5516848386aa13a524c4b8857aa610cc402fb8e7b138",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "# 设置链接（目录同步）"
+      }
+    },
+    {
+      "segment_id": "53eaf0e1",
+      "source_content": "The Setup link is used to create a shareable link that can be used to create an Directory Sync without exposing any sensitive information.\nLet's go through the steps to create a new Setup link",
+      "source_content_hash": "22b9b44927c7b285eeea6c40b9a3148779f4afe56338b90ce4a6d2f38f9942df",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "设置链接用于创建可共享的链接，该链接可用于创建目录同步而不会暴露任何敏感信息。\n让我们逐步了解创建新设置链接的步骤"
+      }
+    },
+    {
+      "segment_id": "9fcbdce9",
+      "source_content": "## Create Setup Link",
+      "source_content_hash": "a35b38df9f8b7531dbbdca24e53d4a43144d813165650e4bb2124cc6711da4fb",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 创建设置链接"
+      }
+    },
+    {
+      "segment_id": "ad8fd492",
+      "source_content": "You can create a new Setup link for Directory Sync from the Connections page using `New Setup Link` button",
+      "source_content_hash": "d280a75d8eea18136df62ea356a4696f70b1dc037e6f930ef69c35543de40d50",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "您可以通过连接页面上的`新建设置链接`按钮为目录同步创建新的设置链接"
+      }
+    },
+    {
+      "segment_id": "86b54d44",
+      "source_content": "![dsync connections page](/images/docs/admin-portal/setup-links/dsync/dsync-connections-page.png)",
+      "source_content_hash": "e40c5411109054c66dd73b65bf70286ba3f218ab8f510890aae6eb8343f7b917",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![dsync connections page](/images/docs/admin-portal/setup-links/dsync/dsync-connections-page.png)"
+      }
+    },
+    {
+      "segment_id": "39b3772c",
+      "source_content": "Another way is to go to the `Setup Links` section under `Directory Sync` menu and Click on Create New/New Setup Link button",
+      "source_content_hash": "6cdcd7cf797553f6b58923ff81d8c76e510bee21d3228d7603e81423acf67fad",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "另一种方法是进入`目录同步`菜单下的`设置链接`部分，点击创建新/新建设置链接按钮"
+      }
+    },
+    {
+      "segment_id": "1acb9a05",
+      "source_content": "![dsync setup link list empty](/images/docs/admin-portal/setup-links/dsync/dsync-setup-link-list-empty.png)",
+      "source_content_hash": "3c45940c4610607120d04242af5732c26e0bc9e4b6aab6de04b04b80c20b5988",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![dsync setup link list empty](/images/docs/admin-portal/setup-links/dsync/dsync-setup-link-list-empty.png)"
+      }
+    },
+    {
+      "segment_id": "2df4f75f",
+      "source_content": "The create Setup Link for Directory Sync page looks like below",
+      "source_content_hash": "5056842bec439de21f46a96d94d73d1e33fea8aec94d113fd0a94c94a62c3133",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "目录同步的设置链接创建页面如下所示"
+      }
+    },
+    {
+      "segment_id": "98cfbd53",
+      "source_content": "![dsync setup link create page](/images/docs/admin-portal/setup-links/dsync/dsync-setup-link-create-page.png)",
+      "source_content_hash": "3d9df4e7b2456a86415c1061a3b7bb1d9a6102c1643d2a4561a07566f5e9df36",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![dsync setup link create page](/images/docs/admin-portal/setup-links/dsync/dsync-setup-link-create-page.png)"
+      }
+    },
+    {
+      "segment_id": "ccc88b4c",
+      "source_content": "Once the link is created you can see the the link info section at the bottom",
+      "source_content_hash": "0c4987b11be03b5591cb78782fa72187bff319c8281029e4c607dd22fcf66d11",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "链接创建完成后，您可以在底部看到链接信息部分"
+      }
+    },
+    {
+      "segment_id": "d9172fa4",
+      "source_content": "![setup link created](/images/docs/admin-portal/setup-links/dsync/setup-link-created.png)",
+      "source_content_hash": "33845b377faf354f1218a59e81a8847bde61c5631f70f0634b6d44d0c0963887",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![setup link created](/images/docs/admin-portal/setup-links/dsync/setup-link-created.png)"
+      }
+    },
+    {
+      "segment_id": "26524352",
+      "source_content": "You can copy the link by clicking on the `Copy` button",
+      "source_content_hash": "f4b314fa0b359e0fc0b088c371fb1db2f47ade31574468693f01a26ba61dbe63",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "您可以通过点击`复制`按钮来复制链接"
+      }
+    },
+    {
+      "segment_id": "73ab96a3",
+      "source_content": "![setup link copied](/images/docs/admin-portal/setup-links/dsync/setup-link-copied.png)",
+      "source_content_hash": "ca4f607768732c57fc0d6fdfae6bb43b537c6d02caa78020e891c151cd19e896",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![setup link copied](/images/docs/admin-portal/setup-links/dsync/setup-link-copied.png)"
+      }
+    },
+    {
+      "segment_id": "a1b3d8cb",
+      "source_content": "### Regenerate Link",
+      "source_content_hash": "3773fd4f4195d3628294c152add6fe4888f0d59dbf512572cde2cf2f3cfee798",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 重新生成链接"
+      }
+    },
+    {
+      "segment_id": "517051a7",
+      "source_content": "You can regenerate the link by clicking on `Regenerate` button",
+      "source_content_hash": "b4a425cb3451090506c9f732d2cb3e0cb7a7b002fabc974cfb957ed724e8fb73",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "您可以通过点击`重新生成`按钮来重新生成链接"
+      }
+    },
+    {
+      "segment_id": "135468ee",
+      "source_content": "![setup link regenerate init](/images/docs/admin-portal/setup-links/dsync/setup-link-regenerate-init.png)",
+      "source_content_hash": "89c9f03f35e2f4425703e4f09a7ddabb59c8e05d64cb030f34728264e0ba4578",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![setup link regenerate init](/images/docs/admin-portal/setup-links/dsync/setup-link-regenerate-init.png)"
+      }
+    },
+    {
+      "segment_id": "33331f27",
+      "source_content": "Once you confirm Regenerate action you will see the new setup link in the link info section",
+      "source_content_hash": "0b23934eaaec839ecdede9bcd3be038fd9873cae6533405b43ffc57f810b5f52",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "确认重新生成操作后，您将在链接信息部分看到新的设置链接"
+      }
+    },
+    {
+      "segment_id": "50746522",
+      "source_content": "![setup link regenerated](/images/docs/admin-portal/setup-links/dsync/setup-link-regenerated.png)",
+      "source_content_hash": "9f4f67577e08dcc6c3b17038f9f52ff0c0b2fe81950d3d4b191820fb55a960e0",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![setup link regenerated](/images/docs/admin-portal/setup-links/dsync/setup-link-regenerated.png)"
+      }
+    },
+    {
+      "segment_id": "54268405",
+      "source_content": "### Actions from Setup Link list page",
+      "source_content_hash": "c439d94c6d1278dee0d899185601a9838a99e23f75339dabf6c8411798a6704f",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 从设置链接列表页面执行操作"
+      }
+    },
+    {
+      "segment_id": "8af76f3d",
+      "source_content": "You can perform `ACTIONS` like `Copy`, `View`, `Regenerate` & `Delete` from this page",
+      "source_content_hash": "4aaf2f666f1ffbbeb69e82dba8b85d064fdd3d94707199b73b06417fe14f1946",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "您可以在此页面上执行`复制`、`查看`、`重新生成`和`删除`等操作"
+      }
+    },
+    {
+      "segment_id": "a9d49f92",
+      "source_content": "![setup link list page](/images/docs/admin-portal/setup-links/dsync/setup-link-list-page.png)",
+      "source_content_hash": "836a285498522acf24afce7f5759938f6e4227f26049b562b48d6f9634ac3235",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![setup link list page](/images/docs/admin-portal/setup-links/dsync/setup-link-list-page.png)"
+      }
+    },
+    {
+      "segment_id": "6d28a77c",
+      "source_content": "### Setup Link Page",
+      "source_content_hash": "2e354eb0c693d25fc7ea8fcfca0f19702d8acaa77079757885679a5aea116ae0",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 设置链接页面"
+      }
+    },
+    {
+      "segment_id": "f7ef78f9",
+      "source_content": "When you open the setup link you will see the following",
+      "source_content_hash": "d89d804c40ea720b614604c041ec2cc1f6efa3da0dc1a88765af65b7e2283c31",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "当您打开设置链接时，您将看到以下内容"
+      }
+    },
+    {
+      "segment_id": "b36c6338",
+      "source_content": "![setup link page dsync](/images/docs/admin-portal/setup-links/dsync/setup-link-page-dsync.png)",
+      "source_content_hash": "42f83417cad4771b8023fde8cf657e8555c3d6fe9bdcfc819437fdbc281db898",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![setup link page dsync](/images/docs/admin-portal/setup-links/dsync/setup-link-page-dsync.png)"
+      }
+    },
+    {
+      "segment_id": "2c1b51df",
+      "source_content": "### Create Directory Sync Connection",
+      "source_content_hash": "e3231eeee3e09a3c106e431d6ef8cfd9c30f01d0199daae7350ae3d6a6c657bf",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 创建目录同步连接"
+      }
+    },
+    {
+      "segment_id": "e536ea0d",
+      "source_content": "You can open create Directory Sync by clicking on `New Directory` button & filling the correct details",
+      "source_content_hash": "930301a2067ab67421d98dad13b2128883f97a86a3f22e7e0c26aad9266c9a13",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "您可以通过点击`新建目录`按钮并填写正确的详细信息来创建目录同步"
+      }
+    },
+    {
+      "segment_id": "40158b4b",
+      "source_content": "![dsync setup link created](/images/docs/admin-portal/setup-links/dsync/dsync-setup-link-created.png)",
+      "source_content_hash": "c5fbedcd71c00c171f1b8ef9dbb2f6762956c8280bf0d9d567821619c47d0e14",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![dsync setup link created](/images/docs/admin-portal/setup-links/dsync/dsync-setup-link-created.png)"
+      }
+    },
+    {
+      "segment_id": "6ea4c715",
+      "source_content": "After creation of the directory sync you will see the info section",
+      "source_content_hash": "f146e88011aa46db3b1341744a74876dc6f7ad4ba9ab8d39d409d42abe5ed80a",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "目录同步创建完成后，您将看到信息部分"
+      }
+    },
+    {
+      "segment_id": "79ad944d",
+      "source_content": "![dsync created info](/images/docs/admin-portal/setup-links/dsync/dsync-created-info.png)",
+      "source_content_hash": "ac0abdc1f5fe22855fcda2f65238c86418d40a7a2559e4f1e7b0ee72b95eaca2",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![dsync created info](/images/docs/admin-portal/setup-links/dsync/dsync-created-info.png)"
+      }
+    }
+  ],
+  "target_i18n_subpath": "docusaurus-plugin-content-docs/current/admin-portal/setup-links/directory-sync.md",
+  "last_updated_timestamp": "2025-06-08T18:49:09.318896+00:00",
+  "schema_version": "1.0",
+  "translated_versions": {
+    "zh-CN": "7e2760e71de612b63746d62aa8b6062e13d52e0f43714261bab106a4a835704d"
+  }
+}

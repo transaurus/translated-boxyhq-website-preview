@@ -1,0 +1,262 @@
+{
+  "source_file_path_relative_to_docusaurus_root": "guides/jackson/integrations/ory.md",
+  "source_file_content_hash": "77b4fb5c209fbb1f11b344a3fcf08dd1244ca87a8b5a0acf5add8e60586abe3c",
+  "segments": [
+    {
+      "segment_id": "58cfcc64",
+      "source_content": "---\ntitle: BoxyHQ SSO and Ory Network\nsidebar_label: Ory Network\n---",
+      "source_content_hash": "21315cb705a2cbcb88fa296bc8c36fb77ed20af8f0d3c999eea49278ce8b252e",
+      "node_type": "yaml",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_58cfcc64"
+      }
+    },
+    {
+      "segment_id": "b3de8742",
+      "source_content": "# Ory Network",
+      "source_content_hash": "86775b55b7fcef5e8282230d0475c4a2f00b6eb917d8ced175215a4614ba6aa5",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "# Ory Network"
+      }
+    },
+    {
+      "segment_id": "3fbbcc07",
+      "source_content": "[Ory Network](https://www.ory.sh/network/) is a fully hosted identity infrastructure for scaling teams. Based on open standards and supported by a team of security experts, it’s the fastest way to build secure auth flows.",
+      "source_content_hash": "b7f9a8fb7e169a2f764864534b1fcafdbce270de6ff51e3daf0bf68b11138edc",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "[Ory Network](https://www.ory.sh/network/) 是一个完全托管的身份基础设施平台，专为成长型团队设计。基于开放标准并由安全专家团队支持，是构建安全认证流程的最快方式。"
+      }
+    },
+    {
+      "segment_id": "7e5c5a39",
+      "source_content": "We integrate with Ory Network to support SAML SSO. You can follow the step outlined below:",
+      "source_content_hash": "608cae5f6539106b8d7619e9bcc915177c7d34f4a676626b9d7532474e06176d",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "我们与Ory Network集成以支持SAML单点登录。您可以按照以下步骤操作："
+      }
+    },
+    {
+      "segment_id": "9fcbdce9",
+      "source_content": "## Deployment Options",
+      "source_content_hash": "c2692de12786ef71b3cc85770a58a3c9b5a66f4e18c4bf7ae9131fb92e25390e",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 部署选项"
+      }
+    },
+    {
+      "segment_id": "ad8fd492",
+      "source_content": "The easiest way to use the integration is to signup for a 30 day trial on our [SaaS solution](https://app.eu.boxyhq.com/auth/join). If you'd like to self-host (The Ory integration is an Enterprise Edition feature) please [reach out](mailto:support@boxyhq.com) to us to obtain an evaluation license.",
+      "source_content_hash": "f7b55f31a52cd4fd2dd1216a957fa2cb5a209b317032181f18b289180484d3e6",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "最简单的集成方式是注册使用我们[SaaS解决方案](https://app.eu.boxyhq.com/auth/join)的30天试用版。如需自托管（Ory集成是企业版功能），请[联系我们](mailto:support@boxyhq.com)获取评估许可证。"
+      }
+    },
+    {
+      "segment_id": "86b54d44",
+      "source_content": "Please note that we utilize the `B2B Organizations` feature of Ory Network which requires the Growth plan or higher with Ory.",
+      "source_content_hash": "42bc1458398ecb037b4c2cb495e43a838ed58acfa37e9c95dfc917c659dd24ea",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "请注意，我们使用了Ory Network的\"B2B组织\"功能，这需要Growth或更高等级的Ory订阅方案。"
+      }
+    },
+    {
+      "segment_id": "d350c018",
+      "source_content": "## Obtain the Ory Network Session Token",
+      "source_content_hash": "9218625b7b81386d6d9bbeda86daa459f45bf6bd6e9be64a114d491ed0b55b89",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 获取Ory Network会话令牌"
+      }
+    },
+    {
+      "segment_id": "1acb9a05",
+      "source_content": "Install the [Ory CLI](https://www.ory.sh/docs/guides/cli/installation) and then run `ory auth` to sign into your Ory Network account.",
+      "source_content_hash": "8496b31ff19712a00f49af88e2a86d89ab3f000e89905da26994bcdffb604eee",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "安装[Ory CLI](https://www.ory.sh/docs/guides/cli/installation)后运行`ory auth`命令登录您的Ory Network账户。"
+      }
+    },
+    {
+      "segment_id": "2df4f75f",
+      "source_content": "You will find the `session_token` in the `.ory-cloud.json` file in your home folder. Copy that out since you need this for the next step. The `session_token` starts with `ory_st` prefix.",
+      "source_content_hash": "8f67d34b1d4cf042a9fd66ee860f0f4113b65d6c0d76e6a745f31f5f1aa255a7",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "您可以在用户主目录的`.ory-cloud.json`文件中找到以`ory_st`为前缀的`session_token`会话令牌，复制该令牌用于后续步骤。"
+      }
+    },
+    {
+      "segment_id": "98cfbd53",
+      "source_content": "You will also need your Project ID which can be obtained from your Ory account.",
+      "source_content_hash": "cf609f348566243217bea3dddc74e53f9820fac6088e5af6f8c6802812d43a58",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "同时需要从Ory账户中获取您的项目ID。"
+      }
+    },
+    {
+      "segment_id": "ccc88b4c",
+      "source_content": "![Ory Project ID](./ory/ory-projectid.png)",
+      "source_content_hash": "d04d2a164d596444296a94575e705f230b639515d551cf521e7e601e94de4da6",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![Ory项目ID](./ory/ory-projectid.png)"
+      }
+    },
+    {
+      "segment_id": "3c36424c",
+      "source_content": "## Configure the Ory Session Token and Project ID",
+      "source_content_hash": "2c33cc85cc90af66721c369edcb89d672278c6b9b4509338f69095041ea98a36",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 配置Ory会话令牌和项目ID"
+      }
+    },
+    {
+      "segment_id": "26524352",
+      "source_content": "Log into your BoxyHQ account and create a new `Product` if you don't already have one. Our concept of `Product` is similar to Ory's `Project`.",
+      "source_content_hash": "2d1354c300eed96d079f1b71b06213d78a059e9666ec82a15218a96c3128af68",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "登录您的BoxyHQ账户，如尚未创建请新建一个\"产品\"（Product）。我们的\"产品\"概念与Ory的\"项目\"（Project）类似。"
+      }
+    },
+    {
+      "segment_id": "73ab96a3",
+      "source_content": "Navigate to `Settings` in the sidebar and then the `Ory Integration` tab. Paste your session token and Project ID in the input fields and click the Save button.",
+      "source_content_hash": "5b5d121f702cd2c1667eb2e1d532bbf8aa1b0f87c944a65f02d2b9635f6d5f86",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "在侧边栏导航至\"设置\"→\"Ory集成\"标签页，将会话令牌和项目ID粘贴至输入框后点击保存按钮。"
+      }
+    },
+    {
+      "segment_id": "7499a4e7",
+      "source_content": "![Ory and BoxyHQ Integration](./ory/ory-integration-ui.png)",
+      "source_content_hash": "1c5a462dc69f85b9423a05cb1bac23f3a290e3317fd9fb84e18237b8aec9401b",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![Ory与BoxyHQ集成界面](./ory/ory-integration-ui.png)"
+      }
+    },
+    {
+      "segment_id": "517051a7",
+      "source_content": "If you are self-hosting, you have to set these [environment variables](https://boxyhq.com/docs/jackson/deploy/env-variables#enterprise-features---ory-integration)",
+      "source_content_hash": "f32d069a01ae8e3a6267db4bf308e27ac99e37d351092d4bf25334be4ab8ec33",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "若采用自托管方案，需设置这些[环境变量](https://boxyhq.com/docs/jackson/deploy/env-variables#enterprise-features---ory-integration)"
+      }
+    },
+    {
+      "segment_id": "80d9e13c",
+      "source_content": "## Integration explained",
+      "source_content_hash": "aecd24ff721e0c468e857b0eac71ce098bfd8bc6a7f203dc889a81828ae81ffc",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 集成原理说明"
+      }
+    },
+    {
+      "segment_id": "33331f27",
+      "source_content": "Now whenever you [create a new SSO connection on BoxyHQ](https://boxyhq.com/guides/jackson/configuring-saml-sso) it automatically calls Ory APIs to setup a new Organization and a Generic OIDC connection. All the user management still flows through Ory Network. Please remember to use the domain as the `tenant` in BoxyHQ.",
+      "source_content_hash": "6ea0eddb03263eb2d840662902f2f8769e91e1f5ebd9ad967006137236000372",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "当您在BoxyHQ上[创建新的SSO连接](https://boxyhq.com/guides/jackson/configuring-saml-sso)时，系统会自动调用Ory API创建新组织和通用OIDC连接。所有用户管理仍通过Ory Network完成，请务必使用域名作为BoxyHQ中的\"租户\"（tenant）。"
+      }
+    },
+    {
+      "segment_id": "50746522",
+      "source_content": "![Ory Organization](./ory/ory-organization.png)",
+      "source_content_hash": "b05b688f8e38ec2a308728a17491bea8d0aae50516eec1f9ecdb254dca1e41e7",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![Ory组织架构](./ory/ory-organization.png)"
+      }
+    },
+    {
+      "segment_id": "95e9ba12",
+      "source_content": "![Ory Organization Details](./ory/ory-organization-details.png)",
+      "source_content_hash": "5684aacbfcc90df004f7314070329a75a41c61603748b414f6ab581f31b3a62b",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![Ory组织详情](./ory/ory-organization-details.png)"
+      }
+    },
+    {
+      "segment_id": "8af76f3d",
+      "source_content": "If you now navigate to your Ory Account Experience UI and enter an email associated with the domain you just configured then the `Sign in with SSO` button appears.",
+      "source_content_hash": "b5031f2690f23675c7f092ca7b510ad972543b9a6a0f541e0b3d3669a848c26f",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "此时访问Ory账户体验界面，输入已配置域名关联的邮箱后，将会出现\"通过SSO登录\"按钮。"
+      }
+    },
+    {
+      "segment_id": "a9d49f92",
+      "source_content": "![Ory Organization Details](./ory/ory-account-experience.png)",
+      "source_content_hash": "e3071402cccf9204c5c4765b0bd621a111ca706713a5c21446d6bfe8aa0997d6",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![Ory账户体验界面](./ory/ory-account-experience.png)"
+      }
+    },
+    {
+      "segment_id": "6d28a77c",
+      "source_content": "## Next steps",
+      "source_content_hash": "3a5d9cbc49e6e5f0c98349dd1cd7cfe5713807fc5f02234240621031925d1f32",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 后续步骤"
+      }
+    },
+    {
+      "segment_id": "b4ef1e56",
+      "source_content": "- If you need any help with the integration or have any questions then please [Contact us](mailto:support@boxyhq.com)",
+      "source_content_hash": "044a21d9a185eeaeb67ef528ca7d8fb74a8bd01309c903ebd946815f77e516bb",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- 如需集成协助或有任何疑问，请[联系我们](mailto:support@boxyhq.com)"
+      }
+    }
+  ],
+  "target_i18n_subpath": "docusaurus-plugin-content-docs-guides/current/jackson/integrations/ory.md",
+  "last_updated_timestamp": "2025-06-08T18:49:09.320580+00:00",
+  "schema_version": "1.0",
+  "translated_versions": {
+    "zh-CN": "77b4fb5c209fbb1f11b344a3fcf08dd1244ca87a8b5a0acf5add8e60586abe3c"
+  }
+}

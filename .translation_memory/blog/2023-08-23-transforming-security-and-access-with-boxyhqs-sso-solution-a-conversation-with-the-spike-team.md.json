@@ -1,0 +1,272 @@
+{
+  "source_file_path_relative_to_docusaurus_root": "blog/2023-08-23-transforming-security-and-access-with-boxyhqs-sso-solution-a-conversation-with-the-spike-team.md",
+  "source_file_content_hash": "2cad54e83c38239650644fb200bb5464534d2d08aa1a222310501538ec50ed28",
+  "segments": [
+    {
+      "segment_id": "58cfcc64",
+      "source_content": "---\nslug: transforming-security-and-access-with-boxyhqs-sso-solution-a-conversation-with-the-spike-team\ntitle: \"Transforming Security and Access: A Conversation with the Spike Team\"\ndescription: \"We interviewed Kaushik Thirthappa from Spike to find out how they leveraged BoxyHQ's Enterprise SSO solution.\"\ntags_disabled:\n  [\n    developer,\n    security,\n    cybersecurity,\n    devsecops,\n    open-source,\n    developerfirst,\n    case-study,\n  ]\nimage: /images/success-stories/spike-case-study.png\nhide_table_of_contents: true\nauthor: Nathan Tarbert\nauthor_title: Community Success Engineer @BoxyHQ\nauthor_url: https://github.com/NathanTarbert\nauthor_image_url: /images/authors/nathan.jpg\n---",
+      "source_content_hash": "a1969c84630458db5239a1c4982cd3e65112d22791012121ea8e37d96c189cd3",
+      "node_type": "yaml",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_58cfcc64"
+      }
+    },
+    {
+      "segment_id": "2fdadb08",
+      "source_content": "Spike is a powerful incident management platform with customers across 40+ countries. Their mission is to reduce the complexity of managing incidents and make it simple so teams of all sizes can use it.",
+      "source_content_hash": "566a4e37dadeb5c7dd65fc87d767767ee5b4cc93d27fc70163b40e5c7469339a",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "Spike是一款强大的事件管理平台，客户遍布40多个国家。其使命是降低事件管理的复杂性，使其简单化，从而让各种规模的团队都能使用。"
+      }
+    },
+    {
+      "segment_id": "f2c2bdd0",
+      "source_content": "**Q:** Can you share the motivation behind implementing enterprise Single Sign-On (SSO) at Spike?",
+      "source_content_hash": "9ed6823813206994b6dae06b7f24a982f101d3afa1ca847e350114f1baddf59c",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "**问：** 能否分享一下Spike实施企业单点登录（SSO）的动机？"
+      }
+    },
+    {
+      "segment_id": "a76548f8",
+      "source_content": "**Kaushik (Spike):** Incident management is needed for teams small and large. Over the years, we noticed a skew of enterprise inquiries at Spike and we were certain that a secure way to log in will be a needed feature. Thankfully, we caught the drift early on.",
+      "source_content_hash": "4341f527603301fbc9a4418a6940ced01f1825121347feafa27ff3fb22212064",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "**Kaushik（Spike）：** 事件管理是各种规模团队都需要的。多年来，我们注意到Spike收到的企业咨询有所倾斜，我们确信安全的登录方式将成为一个必要的功能。幸运的是，我们很早就察觉到了这一趋势。"
+      }
+    },
+    {
+      "segment_id": "4b1d2d7d",
+      "source_content": "SSO kinda opened doors for us with enterprises around the world",
+      "source_content_hash": "88a6136ee043fedeaea9f8632b50c5b61135f5091f10b8a91882f1f6f221cb72",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "SSO在某种程度上为我们打开了与全球企业合作的大门。"
+      }
+    },
+    {
+      "segment_id": "dfe931a2",
+      "source_content": "**Q:** How did BoxyHQ's SSO solution impact your operations?",
+      "source_content_hash": "4e868c3091f3f748595b9ba52852417397442462d1655c96fd1495ef372ec209",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "**问：** BoxyHQ的SSO解决方案对你们的运营产生了怎样的影响？"
+      }
+    },
+    {
+      "segment_id": "4daf5cdd",
+      "source_content": "**Kaushik (Spike):** Our job is to ensure we alert our customers every single time and there is no compromise there. BoxyHQ’s SSO solution came in as a boon to us at the right time. We could knock out the implementation in record time and start onboarding enterprise customers.",
+      "source_content_hash": "c829a6b649b63b98a87840b952f8aa407e82e0c958432d9b686578f65438e395",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "**Kaushik（Spike）：** 我们的工作是确保每次都能及时提醒客户，这一点绝不能妥协。BoxyHQ的SSO解决方案在关键时刻为我们带来了福音。我们能够以创纪录的时间完成实施，并开始接纳企业客户。"
+      }
+    },
+    {
+      "segment_id": "bdc231b1",
+      "source_content": "A secure way to log in is now enhanced with enforced login options for admins on Spike. Our enterprise customers found it incredibly easy to set up and get started changing the type of customers we onboard at Spike",
+      "source_content_hash": "05bf3721e6f445c6d643d0e9c7f8bdbd0bd0a240f2accb8cabf75bc8097784f1",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "现在，Spike为管理员提供了强制的登录选项，增强了登录的安全性。我们的企业客户发现设置和上手非常容易，这改变了我们在Spike上接纳的客户类型。"
+      }
+    },
+    {
+      "segment_id": "97ae4a01",
+      "source_content": "**Q:** What led you to choose BoxyHQ, specifically SAML Jackson, for your SSO needs?",
+      "source_content_hash": "69c73629bd1d04e24ec86050152536bb15b58bbf784ba3d9d295a587cd00a5ee",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "**问：** 是什么原因让你们选择BoxyHQ，特别是SAML Jackson，来满足SSO需求？"
+      }
+    },
+    {
+      "segment_id": "c3a738de",
+      "source_content": "**Kaushik (Spike):** Removing the hurdles of SSO was not easy when I got started with it.\nIn the early days, we contact many different vendors but could not find the right fit until we came across BoxyHQ.\nBoxy’s flexibility and easy solutions meant we could implement this fast, really really fast.\nAt Spike, we love open-source solutions and Boxy immediately gained our trust as we started to play around with Jackson’s APIs",
+      "source_content_hash": "dba289efd30289277ad3132dd77cfdb9d4cb1d6ea27b2014459a30ab6eea0f34",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "**Kaushik（Spike）：** 消除SSO的障碍并不容易。早期我们联系了许多不同的供应商，但直到遇到BoxyHQ才找到合适的解决方案。Boxy的灵活性和简便的解决方案意味着我们可以快速实现这一功能，非常非常快。在Spike，我们热爱开源解决方案，Boxy通过Jackson的API迅速赢得了我们的信任。"
+      }
+    },
+    {
+      "segment_id": "95e9ba12",
+      "source_content": "Besides, Boxy’s team was incredibly supportive throughout our transition and we are grateful for it.",
+      "source_content_hash": "34c067ea59a6aad0855a28da3c451181252c0f5238f76893115d8f242f88cc58",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "此外，Boxy的团队在整个过渡过程中给予了极大的支持，我们对此深表感激。"
+      }
+    },
+    {
+      "segment_id": "8af76f3d",
+      "source_content": "**Q**: Can you shed light on the direct and secondary benefits you've experienced?",
+      "source_content_hash": "4cefff629b32f86b19f43a62034324c19f2a5cb9352bf4d4cbaed6c14a1aa891",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "**问：** 能否谈谈你们所体验到的直接和间接好处？"
+      }
+    },
+    {
+      "segment_id": "a9d49f92",
+      "source_content": "**Divyansh (Spike):** The direct benefits are clear - streamlined access and enhanced security. But the secondary benefits are equally remarkable. We've saved considerable time and effort, enabling us to focus on our core mission - aiding engineering teams in incident management.",
+      "source_content_hash": "a27d16f460e4af0a28b6c4343cfcdd79ccf76b44a3afba5fc54b0c0fe53d2a3d",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "**Divyansh（Spike）：** 直接好处显而易见——简化了访问流程并增强了安全性。但间接好处同样显著。我们节省了大量的时间和精力，使我们能够专注于核心使命——帮助工程团队进行事件管理。"
+      }
+    },
+    {
+      "segment_id": "a44047a5",
+      "source_content": "**Q:** How impactful was BoxyHQ's SSO solution in terms of time saved and business efficiency?",
+      "source_content_hash": "60d6d9f62139dda8cee0c572a50857e23a6178e0e42234e0f3c68fcfa5bdb2e0",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "**问：** BoxyHQ的SSO解决方案在节省时间和提升业务效率方面有多大的影响？"
+      }
+    },
+    {
+      "segment_id": "f7ef78f9",
+      "source_content": "**Divyansh (Spike):** It's been transformative. We've saved weeks' worth of effort that would have gone into complex SSO implementation. BoxyHQ's solution accelerated the process, allowing us to allocate our resources more effectively.",
+      "source_content_hash": "7e90e8c503625e57ede99fe4fe85af0b1ecda9056a680d2b55b17e7716fe25c6",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "**Divyansh（Spike）：** 这是变革性的。我们节省了原本需要投入复杂SSO实施的数周时间。BoxyHQ的解决方案加速了这一过程，使我们能够更有效地分配资源。"
+      }
+    },
+    {
+      "segment_id": "b36c6338",
+      "source_content": "**Q:** That's great to hear, did adopting BoxyHQ's SSO solution result in acquiring new enterprise customers?",
+      "source_content_hash": "89ea81a2b3f1294e4a2cf89ea1e6395b72f019d761a330253e032e874e6e3a99",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "**问：** 听起来很棒，采用BoxyHQ的SSO解决方案是否带来了新的企业客户？"
+      }
+    },
+    {
+      "segment_id": "b9aaa519",
+      "source_content": "**Kaushik (Spike):** Absolutely! As a matter of fact, Yes. Thanks to Boxy, we could seamlessly onboard enterprise customers with 300+ people engineering teams. We love helping engineering teams and are glad that Boxy has helped us join our mission of helping them too.",
+      "source_content_hash": "acb8d82bf8631770d9928ea255462d09d19783892ddcceadf14d7882644acf20",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "**Kaushik（Spike）：** 当然！事实上，确实如此。多亏了Boxy，我们能够无缝地接纳拥有300多人工程团队的企业客户。我们热爱帮助工程团队，也很高兴Boxy帮助我们实现了这一使命。"
+      }
+    },
+    {
+      "segment_id": "e536ea0d",
+      "source_content": "**Q:** Could you elaborate on BoxyHQ's support during the transition?",
+      "source_content_hash": "7f35d656ff5614d0fbca61ea1d257c09f142414f824daecc1a0e18e6fa6e1dd5",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "**问：** 能否详细说明BoxyHQ在过渡期间的支持？"
+      }
+    },
+    {
+      "segment_id": "40158b4b",
+      "source_content": "**Kaushik (Spike):** Boxy’s support team and the response have been a game changer. As a young company, we were lost in the enterprise world but Boxy’s team helped us with direction and a clear understanding of how we can achieve customer delight. This helped us build SSO integrations seamlessly giving us the opportunity to help incident responders and also enable incident responders to triage and resolve incidents securely.",
+      "source_content_hash": "7825310395e361afacc56eea9518456e34bbe9c6f716e251f57e7e7ae981632e",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "**Kaushik（Spike）：** Boxy的支持团队和响应速度改变了游戏规则。作为一家年轻的公司，我们在企业领域曾感到迷茫，但Boxy的团队为我们指明了方向，并清晰地理解了如何实现客户满意度。这帮助我们无缝地构建了SSO集成，使我们有机会帮助事件响应者，并确保他们能够安全地处理和解决事件。"
+      }
+    },
+    {
+      "segment_id": "6ea4c715",
+      "source_content": "**Q:** Can you share your perspective on the relationship between Spike and BoxyHQ?",
+      "source_content_hash": "a3973a6617d2837bfc2a7d8be7c61af6a9b6ade0105bf898b4cdc6f05df5318c",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "**问：** 能否分享一下你对Spike与BoxyHQ之间关系的看法？"
+      }
+    },
+    {
+      "segment_id": "79ad944d",
+      "source_content": "**Kaushik (Spike):** Our partnership with BoxyHQ is rooted in key values. Reliability, flexibility, open-source commitment, and exceptional support define our collaboration. It's a relationship built on shared goals and the assurance that it just works. We anticipate continued collaboration and growth.",
+      "source_content_hash": "bffc444e4d71273a2359872eef79394e3b9f41bfcbe64d36ae91ea3060a779db",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "**Kaushik（Spike）：** 我们与BoxyHQ的合作基于关键价值观。可靠性、灵活性、对开源的承诺以及卓越的支持定义了我们的合作关系。这是一种建立在共同目标和确保一切顺利运行的基础上的关系。我们期待继续合作并共同成长。"
+      }
+    },
+    {
+      "segment_id": "531437ca",
+      "source_content": "**Q:** Any final comments for our readers?",
+      "source_content_hash": "d2e747c65920339cdc372edcb4e5e1ac05a3c49e719b49c3b934dead9b3951e6",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "**问：** 对读者还有什么最后的建议吗？"
+      }
+    },
+    {
+      "segment_id": "06e24cc0",
+      "source_content": "**Kaushik:** We're grateful for this opportunity. The case of Spike underscores how advanced solutions like BoxyHQ's SSO can revolutionize security, processes, and customer interactions. This partnership is a testament to how technology can elevate operations while fostering strong, values-based relationships.",
+      "source_content_hash": "ec1fbb23e1bd752f6126ab046d125feed2a58e9f3b1c8684138d446ab2d07963",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "**Kaushik:** 我们非常感谢这次机会。Spike的案例充分展示了像BoxyHQ单点登录(SSO)这样的先进解决方案如何能彻底改变安全性、流程和客户互动。这次合作证明了技术如何在提升运营效率的同时，也能建立基于共同价值观的牢固关系。"
+      }
+    },
+    {
+      "segment_id": "7f71ff2a",
+      "source_content": "**Q:** Thank you for sharing your insights. We're excited to witness the journey of Spike and BoxyHQ as it continues to unfold. We appreciate you taking the time to tell your success story.",
+      "source_content_hash": "99d8dd4ce0be368834fd935624a468cc6303a37975bef61b451b6be62feb73f7",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "**Q:** 感谢分享这些宝贵见解。我们非常期待见证Spike和BoxyHQ的合作旅程继续展开。感谢您抽空讲述这个成功案例。"
+      }
+    },
+    {
+      "segment_id": "147e8550",
+      "source_content": "**Kaushik:** Thank you, we appreciate the opportunity to share our story. Stay tuned for more updates on our evolving collaboration!",
+      "source_content_hash": "a07f7f770249b08120c343c526f6fde209f853facd99fe8f41119fa8b419ec8f",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "**Kaushik:** 谢谢，我们很珍惜这次分享故事的机会。请继续关注我们合作进展的更多更新！"
+      }
+    },
+    {
+      "segment_id": "68209f5c",
+      "source_content": "<div style={{ textAlign: \"center\" }}>\n  <a href=\"/success-stories/spike-boosts-time-to-market-and-enterprise-security-with-boxyhqs-sso-solution\" className=\"button button-primary\">Read Spike's success story</a>\n</div>",
+      "source_content_hash": "d94a4a4b548a84b9ddb2f435dd5d3927c9848d82723b2b9ff1fa9a4c2ce29dd8",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_68209f5c"
+      }
+    }
+  ],
+  "target_i18n_subpath": "docusaurus-plugin-content-blog/2023-08-23-transforming-security-and-access-with-boxyhqs-sso-solution-a-conversation-with-the-spike-team.md",
+  "last_updated_timestamp": "2025-06-08T18:49:09.291738+00:00",
+  "schema_version": "1.0",
+  "translated_versions": {
+    "zh-CN": "2cad54e83c38239650644fb200bb5464534d2d08aa1a222310501538ec50ed28"
+  }
+}

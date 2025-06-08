@@ -1,0 +1,152 @@
+{
+  "source_file_path_relative_to_docusaurus_root": "blog/2022-10-25-how-low-code-solutions-are-changing-how-we-build-products-and-workflows.md",
+  "source_file_content_hash": "6874e4af54e5749f11e04bd1a92865b6f8ce4b5175aa224c43b7915fc08f1cd7",
+  "segments": [
+    {
+      "segment_id": "58cfcc64",
+      "source_content": "---\nslug: how-low-code-solutions-are-changing-how-we-build-products-and-workflows\ntitle: How low-code solutions are changing how we build products and workflows\nauthor: Jay Singh\nauthor_title: Marketing Consultant\nauthor_url: https://www.linkedin.com/in/jaydsingh/\nauthor_image_url: /images/authors/jay.jpg\ntags_disabled: [low-code, no-code, speed of development]\nimage: /img/blog/lowcode-graph.png\n---",
+      "source_content_hash": "3bc1715737685065d267667b29042d58d163d0b29a6ddc19f24d909910908298",
+      "node_type": "yaml",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_58cfcc64"
+      }
+    },
+    {
+      "segment_id": "8d66f911",
+      "source_content": "We have all heard the terms low-code or no-code being thrown around as buzzwords over the last few years but what does this mean and how is it changing the way businesses and individuals solve problems? I am going to use our product SAML Jackson to explain how low-code solutions are changing the way we build products.",
+      "source_content_hash": "1ae323cdef3d8a8a92ca47546e4be88e3ff3720baf32f206419bd034bf82ebbb",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "近年来我们常听到\"低代码\"和\"无代码\"这些流行术语，但它们究竟意味着什么？又是如何改变企业和个人解决问题的方式？我将以我们的产品SAML Jackson为例，说明低代码解决方案如何改变产品构建方式。"
+      }
+    },
+    {
+      "segment_id": "ad8fd492",
+      "source_content": "Low-code solutions are essentially products that provide you with building blocks so instead of building a solution from scratch you can simply combine the relevant building blocks to make a relevant solution for your business. Let’s take BoxyHQ and our SAML Jackson product as an example. Without the low-code product (SAML Jackson) the alternative for businesses would be to build a custom SAML integration which takes months and a ton of resources. This sounds ridiculous tho right? With the number of businesses who are deploying SAML for their customer, there must be some reusable parts that can be shared to reduce the time it takes each business. This is where low-code products like SAML Jackson come in. By building the SAML integrations as a reusable component, businesses only need to create one simple connection to the SAML Jackson to deploy SAML.",
+      "source_content_hash": "56b9bef9ab7738754f88cf335ba1f5dd9b5c3fd35060a9610d9c355066d24ac1",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "低代码解决方案本质上是提供标准化组件的产品，企业无需从零构建，只需组合相关模块即可快速搭建业务解决方案。以BoxyHQ的SAML Jackson产品为例，如果没有这个低代码方案，企业需要耗费数月资源和精力开发定制化SAML集成——考虑到众多企业都在为客户部署SAML，显然存在可复用的通用组件。这正是SAML Jackson这类低代码产品的价值：将SAML集成封装为可复用模块，企业只需建立简单连接即可快速部署。"
+      }
+    },
+    {
+      "segment_id": "86b54d44",
+      "source_content": "Still with me? If not, don't worry. Essentially what low-code is taking advantage of is building in a way that can be shared so the amount of custom building is limited (or low) for common use cases.",
+      "source_content_hash": "48889c21dd11ec04e56fdf9b0288c4e18333913a930975b0b98c09dcf2e715ef",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "还没理解？没关系。简单来说，低代码的核心在于通过共享组件开发，最大限度减少常见场景下的定制化开发工作量。"
+      }
+    },
+    {
+      "segment_id": "d350c018",
+      "source_content": "## So what is the difference between low-code and no-code?",
+      "source_content_hash": "423973b15c810e64da52b77f5b049a50263b90c94c3f59c46262b2774e1368d1",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 低代码与无代码有何区别？"
+      }
+    },
+    {
+      "segment_id": "1acb9a05",
+      "source_content": "Well while a lot of people would still group them together, the obvious difference is that low-code still needs some code to integrate the building blocks, whereas no-code doesn't. If we look at a product like Zapier for example, that requires no code at all and a non-technical person can use visual blocks to connect different data sources and outputs to build workflows. An example of this is as a non-technical person I can take data from forms such as Hubspot forms that are submitted on our website and create notifications for the team on Slack. Doing all of this without code and just using Zapier is what makes this a no-code solution.",
+      "source_content_hash": "0f4c36ce036bf16534d54dc9d0c01b9c19ab7ebe72c870e366bad91c9636b13d",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "虽然常被混为一谈，但本质区别在于低代码仍需编写集成代码，而无代码完全不需要。以Zapier为例，非技术人员通过可视化模块连接数据源和输出端就能创建工作流——比如将Hubspot表单提交数据自动推送至Slack通知团队，整个过程无需编码，这就是典型的无代码解决方案。"
+      }
+    },
+    {
+      "segment_id": "63622bf0",
+      "source_content": "## Why is low-code so important?",
+      "source_content_hash": "58ccdbd3e8cd6713f3cd54d6309248b354ea87238602e9ad400eefca5c4c4e9b",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 低代码为何如此重要？"
+      }
+    },
+    {
+      "segment_id": "98cfbd53",
+      "source_content": "Lastly, let's take a quick look at the main benefits of having solid DevSecOps in place",
+      "source_content_hash": "07cf52b5671d31c923eeee599c8f2da96565267df548588b7f16f50be9c53dd6",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "最后让我们快速了解实施稳健DevSecOps的主要优势"
+      }
+    },
+    {
+      "segment_id": "0cc488ed",
+      "source_content": "1. **Speed speed speed**\n\n   In today's world businesses need to be agile and fast. With competitors springing up every day and customer expectations high the last thing a business wants to do is to have to make specialist hires for each element of their build or spend precious time on auxiliary features that also have their learning curve. The birth of plug-and-play has meant that businesses can operate faster and more efficiently than ever before. Can you imagine if a business had to build all its tools from scratch? No neither can I.\n\n2. **Cost**\n\n   Cost is always a major element that businesses and individuals look at when finding a solution and in the case of low-code it comes down to the question of build V buy. For larger enterprises who have not fully adopted the trust and efficiency of low-code they might still choose to build their own solution which will cost them a lot more in resources and time but that might be something, they have spare. Smaller businesses who want to focus on their core offerings will always look for reliable plug-and-play solutions such as low-code which allow them to quickly deploy solutions and stay competitive while saving on the large number of resources needed to build from scratch.",
+      "source_content_hash": "0cccf5f74c404e8c30338a3ebce426bd42cfadf6b2c665361c8cade8124332b5",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "1. **速度至上**\n\n   当今商业环境要求企业敏捷高效。面对激烈竞争和客户高期待，企业最不愿做的就是为每个功能模块招聘专家，或在辅助功能上耗费学习成本。即插即用方案的诞生使企业运营效率达到前所未有的水平——试想如果每个工具都要从零开发会怎样？这显然不可行。\n\n2. **成本考量**\n\n   成本始终是决策关键因素，低代码方案本质是\"自建还是购买\"的选择题。尚未完全信任低代码效率的大型企业可能仍选择耗费资源的自建方案，而聚焦核心业务的中小企业则会选择能快速部署、节省资源的即插即用方案以保持竞争力。"
+      }
+    },
+    {
+      "segment_id": "7499a4e7",
+      "source_content": "![DevSecOps](/img/blog/lowcode-graph.png)",
+      "source_content_hash": "352ad21ec0ed4f374ca3ac6d5ce6f3fb6e824fa363abdc026fde4587862f77fb",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![DevSecOps](/img/blog/lowcode-graph.png)"
+      }
+    },
+    {
+      "segment_id": "109ace10",
+      "source_content": "## Are there any negatives to using low-code and no-code platforms?",
+      "source_content_hash": "3363367f8edda32885f987a541f82bde6f72a0ed9a4b86718243a81fda71b2af",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 低代码/无代码平台是否存在弊端？"
+      }
+    },
+    {
+      "segment_id": "135468ee",
+      "source_content": "The only main negative of these solutions I have identified is that because of the ease and speed of the platforms it can create a lack of transparency and some shadow IT as lots of people in the organization can be building solutions and data can be moving around without accountability. However, with the right IT processes and policies in place, this can be easily fixed.",
+      "source_content_hash": "da734d00a0ae8fb7a66aa79edc9786f5890327e367ab42aff0b2ab83cd536914",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "目前发现的主要问题是：由于平台易用性高，可能导致透明度缺失和影子IT现象——组织内多人可随意构建解决方案，数据流动缺乏监管。但通过制定规范的IT流程和政策，这个问题完全可以规避。"
+      }
+    },
+    {
+      "segment_id": "782c902a",
+      "source_content": "## Why are we so excited about low-code and no-code?",
+      "source_content_hash": "39486bb813c1f681faa8e3148e101cb0f6b27c33577d22d2a3638bf3aae490f6",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 我们为何对低代码/无代码如此兴奋？"
+      }
+    },
+    {
+      "segment_id": "50746522",
+      "source_content": "We are very excited about low-code solutions because it drives innovation! We at BoxyHQ are building low-code solutions for enterprises to implement the important but standard features they need to be competitive and compliant with ease so they can focus on what they do best which is innovate. We have some great clients already and can’t wait to see what they do next without the hassle of building standard features such as SSO and Directory Sync.",
+      "source_content_hash": "a382164cd1561730980185eb83c77b50d8e78e6765fbf962f553403e018c8f2e",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "因为低代码驱动创新！BoxyHQ正在构建企业级低代码方案，让客户能轻松实现竞争所需的标准化功能（如SSO和目录同步），从而专注最擅长的创新领域。我们已服务众多优秀客户，期待看到他们摆脱基础功能开发负担后创造的更多可能。"
+      }
+    }
+  ],
+  "target_i18n_subpath": "docusaurus-plugin-content-blog/2022-10-25-how-low-code-solutions-are-changing-how-we-build-products-and-workflows.md",
+  "last_updated_timestamp": "2025-06-08T18:49:09.313155+00:00",
+  "schema_version": "1.0",
+  "translated_versions": {
+    "zh-CN": "6874e4af54e5749f11e04bd1a92865b6f8ce4b5175aa224c43b7915fc08f1cd7"
+  }
+}

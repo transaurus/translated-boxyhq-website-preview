@@ -1,0 +1,312 @@
+{
+  "source_file_path_relative_to_docusaurus_root": "docs/jackson/sso-providers/pingone.md",
+  "source_file_content_hash": "d817ceec41ed70c3a09b48245af634e0f782be707faf71fc574b93cd3f62269b",
+  "segments": [
+    {
+      "segment_id": "58cfcc64",
+      "source_content": "---\ntitle: Set up your own custom SAML application for PingOne SAML\nsidebar_label: PingOne SAML\n---",
+      "source_content_hash": "e0a772f37397bf02129d1f66250f6f3ca775a3b0c7cee81179c9041ec442fe34",
+      "node_type": "yaml",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_58cfcc64"
+      }
+    },
+    {
+      "segment_id": "b3de8742",
+      "source_content": "# PingOne SAML SSO",
+      "source_content_hash": "535bbd893d6f1a79070b3dbfd818693f55d8f167eeb402c07e37de4bbd7c9b92",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "# PingOne SAML 单点登录"
+      }
+    },
+    {
+      "segment_id": "3fbbcc07",
+      "source_content": "In this section, we will show you how to set up your own custom SAML application for PingOne SAML.",
+      "source_content_hash": "6d9c0a77cd3320854ea716a69c9ebb9a08bc4ad309d6b336daf58963e30f5db0",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "本节将指导您如何为PingOne SAML设置自定义SAML应用程序。"
+      }
+    },
+    {
+      "segment_id": "1cc03ec8",
+      "source_content": "## Create Application",
+      "source_content_hash": "a4c42fce6e36a4ed1120ec7f3eb7c050bd9ea2173680e61024ccfe8f6aaa2897",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 创建应用"
+      }
+    },
+    {
+      "segment_id": "8d66f911",
+      "source_content": "From your PingOne account, click **Connections** > **Applications** from left navigation menu.",
+      "source_content_hash": "1e9a70e9bde27a1803580f0c34a486edf18727d79dab6f4e8798e7ae0ffa3357",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "在PingOne账户中，从左导航菜单选择**连接** > **应用程序**。"
+      }
+    },
+    {
+      "segment_id": "ad8fd492",
+      "source_content": "If your application is already created, choose it from the list and move to the section [Configure Application](#configure-application)",
+      "source_content_hash": "1137b1c722a49032336fe1d2b3fd3b599f15d60bf8c23858936523cfc6344994",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "若应用已存在，请从列表中选择并跳转至[配置应用](#configure-application)章节。"
+      }
+    },
+    {
+      "segment_id": "86b54d44",
+      "source_content": "If you haven't created a SAML application, click plus button to create a new application.",
+      "source_content_hash": "b46faaecc5705d2ff71d3247cd9e9eda17c7102456ead29c658b75898ec7a3ff",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "若需新建SAML应用，点击加号按钮创建新应用。"
+      }
+    },
+    {
+      "segment_id": "39b3772c",
+      "source_content": "![PingOne SAML Step 1](/images/docs/jackson/sso-providers/pingone/1.png)",
+      "source_content_hash": "65e05b5939b467a8c72e2e7da7fafeefe53c2d5435f1c70e102f0db1622ae6ee",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![PingOne SAML 步骤1](/images/docs/jackson/sso-providers/pingone/1.png)"
+      }
+    },
+    {
+      "segment_id": "1acb9a05",
+      "source_content": "Give your application a **Application Name**, choose **SAML Application** from the **Application Type** and click **Configure**.",
+      "source_content_hash": "52cabff79bf6ac473e1ec0b8e7f37ff2be1ee7164923ad7467343d3653279ad3",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "填写**应用名称**，从**应用类型**中选择**SAML应用**，点击**配置**。"
+      }
+    },
+    {
+      "segment_id": "63622bf0",
+      "source_content": "## Configure Application",
+      "source_content_hash": "aa3cb32afcf17822a5ba904685b48592ccb953a514ebc2da0731fc9ce393d544",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 配置应用"
+      }
+    },
+    {
+      "segment_id": "98cfbd53",
+      "source_content": "![PingOne SAML Step 2](/images/docs/jackson/sso-providers/pingone/2.png)",
+      "source_content_hash": "d47014b17d3ca132b876c3d3bdea23778e6a4b3d1a30a6e4a5bfc177b8e65f93",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![PingOne SAML 步骤2](/images/docs/jackson/sso-providers/pingone/2.png)"
+      }
+    },
+    {
+      "segment_id": "ccc88b4c",
+      "source_content": "From the next screen, you have to enter the following values in the **SAML Configuration** section:",
+      "source_content_hash": "08c8c522844f5b48b56ab1b88b01c189447425a864836955fab577429e8e5bb4",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "在**SAML配置**部分填写以下字段值："
+      }
+    },
+    {
+      "segment_id": "1d13125b",
+      "source_content": "- **ACS URLs**\n- **Entity ID**",
+      "source_content_hash": "0a6206b2e40a86d9c174aa880d7d04bf58d868d1faf4aa5876cfda257bd8f2b0",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- **ACS URLs**\n- **Entity ID**"
+      }
+    },
+    {
+      "segment_id": "dfe931a2",
+      "source_content": "Replace the values with the ones you have received from SAML Jackson.",
+      "source_content_hash": "3a0252490deba22aac834db0ee890225a76896363a384f397f251886c5af8ecf",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "请替换为从SAML Jackson获取的对应值。"
+      }
+    },
+    {
+      "segment_id": "4daf5cdd",
+      "source_content": "Click **Save** to save the configuration.",
+      "source_content_hash": "5de8a67baabbbbb72ebc8307981194a5b2a380f1a353144b6e06e27fc2d66b50",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "点击**保存**完成配置。"
+      }
+    },
+    {
+      "segment_id": "bdc231b1",
+      "source_content": "![PingOne SAML Step 3](/images/docs/jackson/sso-providers/pingone/3.png)",
+      "source_content_hash": "c6d2b90b16232a2a3745fc3bc81bc2c0de2d65f573c2478dcf0bc12d9b9fe231",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![PingOne SAML 步骤3](/images/docs/jackson/sso-providers/pingone/3.png)"
+      }
+    },
+    {
+      "segment_id": "97ae4a01",
+      "source_content": "Click the **Configuration** tab from the top and click **Download Metadata** to download the metadata XML file.",
+      "source_content_hash": "565ab35b961bebb2df472b55115c5c091f368dc1a07f7bab36d652959dff2e9d",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "点击顶部**配置**标签页，选择**下载元数据**获取XML元数据文件。"
+      }
+    },
+    {
+      "segment_id": "c3a738de",
+      "source_content": "![PingOne SAML Step 4](/images/docs/jackson/sso-providers/pingone/4.png)",
+      "source_content_hash": "4eb936a73e0a541ddc890f7a51035b5ffb2d5d7ce2c0eb51878603eeaa99c841",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![PingOne SAML 步骤4](/images/docs/jackson/sso-providers/pingone/4.png)"
+      }
+    },
+    {
+      "segment_id": "9f9e64f5",
+      "source_content": "## Attribute Mapping",
+      "source_content_hash": "ced521d3f2fec68e3b98cce4a507ed30e9cda40547fcc34bacfb25d1deb14981",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 属性映射"
+      }
+    },
+    {
+      "segment_id": "1042b50d",
+      "source_content": "Click the **Attribute Mappings** tab from the top and you have to configure the following attributes:",
+      "source_content_hash": "27fd143ea21eaaf8e28398df301d8761c93a9b41c150f81e1f42e0d0cdd6fc89",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "点击顶部**属性映射**标签页，配置以下属性："
+      }
+    },
+    {
+      "segment_id": "17d239d8",
+      "source_content": "| SAML App  | PingOne       |\n| --------- | ------------- |\n| id        | User ID       |\n| email     | Email Address |\n| firstName | Given Name    |\n| lastName  | Family Name   |",
+      "source_content_hash": "93c65544bf1322b89166c1e68f3a5e4635815abc8c473422fbbecce5f1188470",
+      "node_type": "table",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_17d239d8"
+      }
+    },
+    {
+      "segment_id": "f7ef78f9",
+      "source_content": "See the screenshot below.",
+      "source_content_hash": "484fb0ee90c5fa8ea70ce5cad0e59baf1dc7a4e18927a947a1fdaf6da53dfdca",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "参考下方截图示例。"
+      }
+    },
+    {
+      "segment_id": "b36c6338",
+      "source_content": "![PingOne SAML Step 5](/images/docs/jackson/sso-providers/pingone/5.png)",
+      "source_content_hash": "a2f0bcb39f71efb2e21156140a6014efefa31c0f589bbfda1a38b6e7b3df39a0",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![PingOne SAML 步骤5](/images/docs/jackson/sso-providers/pingone/5.png)"
+      }
+    },
+    {
+      "segment_id": "b9aaa519",
+      "source_content": "Make sure you have enabled your app so that it can be used by the users. You can do this by clicking the **Toggle** button next to your app.",
+      "source_content_hash": "d524cd13d1431a1070d8cbb4004ce07829a6ec4a47788516e3b0fc608738270c",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "确保通过应用旁的**切换**按钮启用应用，以供用户使用。"
+      }
+    },
+    {
+      "segment_id": "e536ea0d",
+      "source_content": "![PingOne SAML Step 6](/images/docs/jackson/sso-providers/pingone/6.png)",
+      "source_content_hash": "07dc4a95a3a5f76e927e86a6614c46ac413870778536ace4d3a8a3a347f9bb10",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![PingOne SAML 步骤6](/images/docs/jackson/sso-providers/pingone/6.png)"
+      }
+    },
+    {
+      "segment_id": "ab5fc5b5",
+      "source_content": "## Next steps",
+      "source_content_hash": "3a5d9cbc49e6e5f0c98349dd1cd7cfe5713807fc5f02234240621031925d1f32",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 后续步骤"
+      }
+    },
+    {
+      "segment_id": "6ea4c715",
+      "source_content": "You've successfully configured your custom SAML application for PingOne SAML. At this stage, you can assign users to your application and start using it.",
+      "source_content_hash": "664bc1e1baa7b8d79cf15e67a70e544138b0270bca6d2b24e091db2397cb6e5a",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "您已成功完成PingOne SAML自定义应用的配置。现在可以为应用分配用户并开始使用。"
+      }
+    },
+    {
+      "segment_id": "c315c636",
+      "source_content": "## Resources",
+      "source_content_hash": "75c6211de8f8951e8037d10289e3e5d0177b8a172b593345006b5b42a8e08e0e",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 相关资源"
+      }
+    },
+    {
+      "segment_id": "2eb5ba30",
+      "source_content": "- [Ping Identity Website](https://www.pingidentity.com/en.html)\n- [Ping Identity Documentation](https://docs.pingidentity.com/)",
+      "source_content_hash": "8bf15a7eab072ab097106d7da399111065afad109cefd501b43baacf88cb6a83",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- [Ping Identity官网](https://www.pingidentity.com/en.html)\n- [Ping Identity文档](https://docs.pingidentity.com/)"
+      }
+    },
+    {
+      "segment_id": "c9945b55",
+      "source_content": ":::tip\nGot a question? [Ask here](https://discord.gg/uyb7pYt4Pa)\n:::",
+      "source_content_hash": "205c5768df1b402d61a634ce459105e3be3777225d2575780c425cf0a7ceae4c",
+      "node_type": "containerDirective",
+      "translatable": true,
+      "translations": {
+        "zh-CN": ":::tip\n遇到问题？[在此提问](https://discord.gg/uyb7pYt4Pa)\n:::"
+      }
+    }
+  ],
+  "target_i18n_subpath": "docusaurus-plugin-content-docs/current/jackson/sso-providers/pingone.md",
+  "last_updated_timestamp": "2025-06-08T18:49:09.314789+00:00",
+  "schema_version": "1.0",
+  "translated_versions": {
+    "zh-CN": "d817ceec41ed70c3a09b48245af634e0f782be707faf71fc574b93cd3f62269b"
+  }
+}

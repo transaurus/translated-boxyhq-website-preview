@@ -1,0 +1,456 @@
+{
+  "source_file_path_relative_to_docusaurus_root": "i18n/en/docusaurus-theme-classic/navbar.json",
+  "source_file_content_hash": "0ce734bae5acc3f47ae91612ada0c929d0c00d7007217d873e0e1ff8de77a253",
+  "segments": [
+    {
+      "segment_id": "title",
+      "source_content": "BoxyHQ",
+      "source_content_hash": "3bac99b9dc91f3a982725e5321741584efb4623cbee5bcf17131f397f5efd1cf",
+      "node_type": "json_message",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "BoxyHQ"
+      },
+      "metadata": {
+        "json_description": "The title in the navbar"
+      }
+    },
+    {
+      "segment_id": "logo.alt",
+      "source_content": "BoxyHQ",
+      "source_content_hash": "3bac99b9dc91f3a982725e5321741584efb4623cbee5bcf17131f397f5efd1cf",
+      "node_type": "json_message",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "BoxyHQ"
+      },
+      "metadata": {
+        "json_description": "The alt text of navbar logo"
+      }
+    },
+    {
+      "segment_id": "item.label.Products",
+      "source_content": "Products",
+      "source_content_hash": "4edc8bfafc6bd936b849f38c009454eac0febc8982f990e734724156584d56f9",
+      "node_type": "json_message",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "产品"
+      },
+      "metadata": {
+        "json_description": "Navbar item with label Products"
+      }
+    },
+    {
+      "segment_id": "item.label.Solutions",
+      "source_content": "Solutions",
+      "source_content_hash": "900fe12faa2658c32e12a164133effea50bbdf97b401b4c872b1fcbe8d6b9205",
+      "node_type": "json_message",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "解决方案"
+      },
+      "metadata": {
+        "json_description": "Navbar item with label Solutions"
+      }
+    },
+    {
+      "segment_id": "item.label.Resources",
+      "source_content": "Resources",
+      "source_content_hash": "e89b30aa1dc30a6ad8c34610689bede83b3ef645a24c3a84a0990826687fb735",
+      "node_type": "json_message",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "资源"
+      },
+      "metadata": {
+        "json_description": "Navbar item with label Resources"
+      }
+    },
+    {
+      "segment_id": "item.label.Pricing",
+      "source_content": "Pricing",
+      "source_content_hash": "dfe95783edfef7918760312f94edd764f4ce3ffd38b90c2c955a0cc3b250f040",
+      "node_type": "json_message",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "定价"
+      },
+      "metadata": {
+        "json_description": "Navbar item with label Pricing"
+      }
+    },
+    {
+      "segment_id": "item.label.Company",
+      "source_content": "Company",
+      "source_content_hash": "de4743c879734dc38cb3e270ecefcae077c3c2e626f9298115d5a03c8613f89b",
+      "node_type": "json_message",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "公司"
+      },
+      "metadata": {
+        "json_description": "Navbar item with label Company"
+      }
+    },
+    {
+      "segment_id": "item.label.Sign Up",
+      "source_content": "Sign Up",
+      "source_content_hash": "47de23586e49d83300bafc4feec21bfc1483d728d12bb000e99c31283206f2ce",
+      "node_type": "json_message",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "注册"
+      },
+      "metadata": {
+        "json_description": "Navbar item with label Sign Up"
+      }
+    },
+    {
+      "segment_id": "item.label.Overview",
+      "source_content": "Overview",
+      "source_content_hash": "d4b1ea5708dd532930a85188b45aff6f0a3ed458500c7577e0127a538eb0d100",
+      "node_type": "json_message",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "概述"
+      },
+      "metadata": {
+        "json_description": "Navbar item with label Overview"
+      }
+    },
+    {
+      "segment_id": "item.label.Enterprise SSO",
+      "source_content": "Enterprise SSO",
+      "source_content_hash": "0f8d7e8eb50c63a034a016e7dbba486be2f3127e0f095fd23e787fcd435b4437",
+      "node_type": "json_message",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "企业单点登录"
+      },
+      "metadata": {
+        "json_description": "Navbar item with label Enterprise SSO"
+      }
+    },
+    {
+      "segment_id": "item.label.Identity Federation",
+      "source_content": "Identity Federation",
+      "source_content_hash": "0aad756f9aae4fc64cd16248d98ea456565426e47be15a0ae2872f56b4857584",
+      "node_type": "json_message",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "身份联合"
+      },
+      "metadata": {
+        "json_description": "Navbar item with label Identity Federation"
+      }
+    },
+    {
+      "segment_id": "item.label.Directory Sync",
+      "source_content": "Directory Sync",
+      "source_content_hash": "ea18bba8cbdb7d175b79f65c33feff141972c3bbbe4782c8bccbb8ff9e217e53",
+      "node_type": "json_message",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "目录同步"
+      },
+      "metadata": {
+        "json_description": "Navbar item with label Directory Sync"
+      }
+    },
+    {
+      "segment_id": "item.label.SaaS Sign up",
+      "source_content": "SaaS Sign up",
+      "source_content_hash": "d90afc6018b29fdf1281ef0a5ee35a622d1e3216d9720f88b317761de8c2080b",
+      "node_type": "json_message",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "SaaS注册"
+      },
+      "metadata": {
+        "json_description": "Navbar item with label SaaS Sign up"
+      }
+    },
+    {
+      "segment_id": "item.label.SaaS Starter Kit",
+      "source_content": "SaaS Starter Kit",
+      "source_content_hash": "9c689c92faf15a12eca99a40027db5deaecf32ea7d7b6e5f9e399f706833b0b2",
+      "node_type": "json_message",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "SaaS入门套件"
+      },
+      "metadata": {
+        "json_description": "Navbar item with label SaaS Starter Kit"
+      }
+    },
+    {
+      "segment_id": "item.label.Enterprise Readiness",
+      "source_content": "Enterprise Readiness",
+      "source_content_hash": "e442b89e6d712430ba64348e235503344dcba2b22fb35ef18e6f94340e145f1c",
+      "node_type": "json_message",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "企业就绪性"
+      },
+      "metadata": {
+        "json_description": "Navbar item with label Enterprise Readiness"
+      }
+    },
+    {
+      "segment_id": "item.label.Docs",
+      "source_content": "Docs",
+      "source_content_hash": "7af023c43013b9a53fbff7dd4b5821588bba3319308878229740489152c43f6d",
+      "node_type": "json_message",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "文档"
+      },
+      "metadata": {
+        "json_description": "Navbar item with label Docs"
+      }
+    },
+    {
+      "segment_id": "item.label.SSO & DSync API",
+      "source_content": "SSO & DSync API",
+      "source_content_hash": "1739738ced2474aa4cf090a1e79d84af58ae383f54fa3a35b7a15f24cec79e11",
+      "node_type": "json_message",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "SSO和目录同步API"
+      },
+      "metadata": {
+        "json_description": "Navbar item with label SSO & DSync API"
+      }
+    },
+    {
+      "segment_id": "item.label.Guides",
+      "source_content": "Guides",
+      "source_content_hash": "572cd72feb9a84e0c639af3ccae73f3a4406f69fe193eac69ab0678eee32baff",
+      "node_type": "json_message",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "指南"
+      },
+      "metadata": {
+        "json_description": "Navbar item with label Guides"
+      }
+    },
+    {
+      "segment_id": "item.label.Blog",
+      "source_content": "Blog",
+      "source_content_hash": "8c6bc099534a0251b576f6b88bd2db124ae9497c64bd9242e92a6aec23e6a73a",
+      "node_type": "json_message",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "博客"
+      },
+      "metadata": {
+        "json_description": "Navbar item with label Blog"
+      }
+    },
+    {
+      "segment_id": "item.label.Success Stories",
+      "source_content": "Success Stories",
+      "source_content_hash": "3c9bcaeff941445312350d62b7db20e4a4e4ebf9a1a1dcac64809e30378195ff",
+      "node_type": "json_message",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "成功案例"
+      },
+      "metadata": {
+        "json_description": "Navbar item with label Success Stories"
+      }
+    },
+    {
+      "segment_id": "item.label.Mock SAML",
+      "source_content": "Mock SAML",
+      "source_content_hash": "f8119421556687c8496f3b8434e86e87fb70941b65379c118f98c5835983d90f",
+      "node_type": "json_message",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "模拟SAML"
+      },
+      "metadata": {
+        "json_description": "Navbar item with label Mock SAML"
+      }
+    },
+    {
+      "segment_id": "item.label.Events",
+      "source_content": "Events",
+      "source_content_hash": "8d14f6e72de8f18ab1ee5c5330f00653c0c3ce099e63024454f80af97e72d333",
+      "node_type": "json_message",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "活动"
+      },
+      "metadata": {
+        "json_description": "Navbar item with label Events"
+      }
+    },
+    {
+      "segment_id": "item.label.Contact Us",
+      "source_content": "Contact Us",
+      "source_content_hash": "98b67063cf8e584d75e53b88472ee85473e01e0ea16f29ece9cc98f4a2710494",
+      "node_type": "json_message",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "联系我们"
+      },
+      "metadata": {
+        "json_description": "Navbar item with label Contact Us"
+      }
+    },
+    {
+      "segment_id": "item.label.About",
+      "source_content": "About",
+      "source_content_hash": "4efca0d10c5feb8e9b35eb1d994f2905bb71714e6a271f511d713b539ea5faa1",
+      "node_type": "json_message",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "关于"
+      },
+      "metadata": {
+        "json_description": "Navbar item with label About"
+      }
+    },
+    {
+      "segment_id": "item.label.Pledge",
+      "source_content": "Pledge",
+      "source_content_hash": "6ecacf535168e5773687e4322e8ca75492192668017eca424f5c4f666457b2a4",
+      "node_type": "json_message",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "承诺"
+      },
+      "metadata": {
+        "json_description": "Navbar item with label Pledge"
+      }
+    },
+    {
+      "segment_id": "item.label.Careers",
+      "source_content": "Careers",
+      "source_content_hash": "7e658675b5ca75b3802ff34b548abe663438f113bed3acf541142b317c146e34",
+      "node_type": "json_message",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "招聘"
+      },
+      "metadata": {
+        "json_description": "Navbar item with label Careers"
+      }
+    }
+  ],
+  "original_json_structure": {
+    "title": {
+      "message": "BoxyHQ",
+      "description": "The title in the navbar"
+    },
+    "logo.alt": {
+      "message": "BoxyHQ",
+      "description": "The alt text of navbar logo"
+    },
+    "item.label.Products": {
+      "message": "Products",
+      "description": "Navbar item with label Products"
+    },
+    "item.label.Solutions": {
+      "message": "Solutions",
+      "description": "Navbar item with label Solutions"
+    },
+    "item.label.Resources": {
+      "message": "Resources",
+      "description": "Navbar item with label Resources"
+    },
+    "item.label.Pricing": {
+      "message": "Pricing",
+      "description": "Navbar item with label Pricing"
+    },
+    "item.label.Company": {
+      "message": "Company",
+      "description": "Navbar item with label Company"
+    },
+    "item.label.Sign Up": {
+      "message": "Sign Up",
+      "description": "Navbar item with label Sign Up"
+    },
+    "item.label.Overview": {
+      "message": "Overview",
+      "description": "Navbar item with label Overview"
+    },
+    "item.label.Enterprise SSO": {
+      "message": "Enterprise SSO",
+      "description": "Navbar item with label Enterprise SSO"
+    },
+    "item.label.Identity Federation": {
+      "message": "Identity Federation",
+      "description": "Navbar item with label Identity Federation"
+    },
+    "item.label.Directory Sync": {
+      "message": "Directory Sync",
+      "description": "Navbar item with label Directory Sync"
+    },
+    "item.label.SaaS Sign up": {
+      "message": "SaaS Sign up",
+      "description": "Navbar item with label SaaS Sign up"
+    },
+    "item.label.SaaS Starter Kit": {
+      "message": "SaaS Starter Kit",
+      "description": "Navbar item with label SaaS Starter Kit"
+    },
+    "item.label.Enterprise Readiness": {
+      "message": "Enterprise Readiness",
+      "description": "Navbar item with label Enterprise Readiness"
+    },
+    "item.label.Docs": {
+      "message": "Docs",
+      "description": "Navbar item with label Docs"
+    },
+    "item.label.SSO & DSync API": {
+      "message": "SSO & DSync API",
+      "description": "Navbar item with label SSO & DSync API"
+    },
+    "item.label.Guides": {
+      "message": "Guides",
+      "description": "Navbar item with label Guides"
+    },
+    "item.label.Blog": {
+      "message": "Blog",
+      "description": "Navbar item with label Blog"
+    },
+    "item.label.Success Stories": {
+      "message": "Success Stories",
+      "description": "Navbar item with label Success Stories"
+    },
+    "item.label.Mock SAML": {
+      "message": "Mock SAML",
+      "description": "Navbar item with label Mock SAML"
+    },
+    "item.label.Events": {
+      "message": "Events",
+      "description": "Navbar item with label Events"
+    },
+    "item.label.Contact Us": {
+      "message": "Contact Us",
+      "description": "Navbar item with label Contact Us"
+    },
+    "item.label.About": {
+      "message": "About",
+      "description": "Navbar item with label About"
+    },
+    "item.label.Pledge": {
+      "message": "Pledge",
+      "description": "Navbar item with label Pledge"
+    },
+    "item.label.Careers": {
+      "message": "Careers",
+      "description": "Navbar item with label Careers"
+    }
+  },
+  "target_i18n_subpath": "docusaurus-theme-classic/navbar.json",
+  "last_updated_timestamp": "2025-06-10T09:19:15.088458+00:00",
+  "schema_version": "1.0",
+  "translated_versions": {
+    "zh-CN": "0ce734bae5acc3f47ae91612ada0c929d0c00d7007217d873e0e1ff8de77a253"
+  }
+}

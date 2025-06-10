@@ -1,0 +1,14 @@
+{
+  "title": {
+    "message": "博客",
+    "description": "The title for the blog used in SEO"
+  },
+  "description": {
+    "message": "BoxyHQ博客是我们团队分享关于产品、行业新闻与见解的专栏。我们也欢迎客座投稿，如果您有观点希望在我们的博客上分享，请随时联系我们。",
+    "description": "The description for the blog used in SEO"
+  },
+  "sidebar.title": {
+    "message": "近期文章",
+    "description": "The label for the left sidebar"
+  }
+}

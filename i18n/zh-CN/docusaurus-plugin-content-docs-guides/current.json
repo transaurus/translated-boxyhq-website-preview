@@ -1,0 +1,26 @@
+{
+  "version.label": {
+    "message": "下一个",
+    "description": "The label for version current"
+  },
+  "sidebar.GuidesSidebar.category.Enterprise SSO": {
+    "message": "企业级单点登录(SSO)",
+    "description": "The label for category Enterprise SSO in sidebar GuidesSidebar"
+  },
+  "sidebar.GuidesSidebar.category.Deployment Guides": {
+    "message": "部署指南",
+    "description": "The label for category Deployment Guides in sidebar GuidesSidebar"
+  },
+  "sidebar.GuidesSidebar.category.Framework Guides": {
+    "message": "框架指南",
+    "description": "The label for category Framework Guides in sidebar GuidesSidebar"
+  },
+  "sidebar.GuidesSidebar.category.Integrations Guides": {
+    "message": "集成指南",
+    "description": "The label for category Integrations Guides in sidebar GuidesSidebar"
+  },
+  "sidebar.GuidesSidebar.category.Directory Sync": {
+    "message": "目录同步",
+    "description": "The label for category Directory Sync in sidebar GuidesSidebar"
+  }
+}

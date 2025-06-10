@@ -1,0 +1,26 @@
+{
+  "version.label": {
+    "message": "Next",
+    "description": "The label for version current"
+  },
+  "sidebar.GuidesSidebar.category.Enterprise SSO": {
+    "message": "Enterprise SSO",
+    "description": "The label for category Enterprise SSO in sidebar GuidesSidebar"
+  },
+  "sidebar.GuidesSidebar.category.Deployment Guides": {
+    "message": "Deployment Guides",
+    "description": "The label for category Deployment Guides in sidebar GuidesSidebar"
+  },
+  "sidebar.GuidesSidebar.category.Framework Guides": {
+    "message": "Framework Guides",
+    "description": "The label for category Framework Guides in sidebar GuidesSidebar"
+  },
+  "sidebar.GuidesSidebar.category.Integrations Guides": {
+    "message": "Integrations Guides",
+    "description": "The label for category Integrations Guides in sidebar GuidesSidebar"
+  },
+  "sidebar.GuidesSidebar.category.Directory Sync": {
+    "message": "Directory Sync",
+    "description": "The label for category Directory Sync in sidebar GuidesSidebar"
+  }
+}

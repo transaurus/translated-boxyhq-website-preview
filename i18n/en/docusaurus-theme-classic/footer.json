@@ -1,0 +1,74 @@
+{
+  "link.title.Community": {
+    "message": "Community",
+    "description": "The title of the footer links column with title=Community in the footer"
+  },
+  "link.title.Social": {
+    "message": "Social",
+    "description": "The title of the footer links column with title=Social in the footer"
+  },
+  "link.title.Legal": {
+    "message": "Legal",
+    "description": "The title of the footer links column with title=Legal in the footer"
+  },
+  "link.title.Company": {
+    "message": "Company",
+    "description": "The title of the footer links column with title=Company in the footer"
+  },
+  "link.item.label.GitHub": {
+    "message": "GitHub",
+    "description": "The label of footer link with label=GitHub linking to https://github.com/boxyhq/jackson"
+  },
+  "link.item.label.Discord": {
+    "message": "Discord",
+    "description": "The label of footer link with label=Discord linking to https://discord.boxyhq.com"
+  },
+  "link.item.label.Twitter": {
+    "message": "Twitter",
+    "description": "The label of footer link with label=Twitter linking to https://twitter.com/boxyhq"
+  },
+  "link.item.label.OSS Friends": {
+    "message": "OSS Friends",
+    "description": "The label of footer link with label=OSS Friends linking to https://boxyhq.com/oss-friends"
+  },
+  "link.item.label.Developer-First Security Week": {
+    "message": "Developer-First Security Week",
+    "description": "The label of footer link with label=Developer-First Security Week linking to https://boxyhq.com/developer-first-security-week"
+  },
+  "link.item.label.SaaS Product Hunt Launch": {
+    "message": "SaaS Product Hunt Launch",
+    "description": "The label of footer link with label=SaaS Product Hunt Launch linking to /saas-producthunt"
+  },
+  "link.item.label.LinkedIn": {
+    "message": "LinkedIn",
+    "description": "The label of footer link with label=LinkedIn linking to https://www.linkedin.com/company/boxyhq"
+  },
+  "link.item.label.Facebook": {
+    "message": "Facebook",
+    "description": "The label of footer link with label=Facebook linking to https://www.facebook.com/boxyhq"
+  },
+  "link.item.label.Instagram": {
+    "message": "Instagram",
+    "description": "The label of footer link with label=Instagram linking to https://www.instagram.com/boxyhq"
+  },
+  "link.item.label.Privacy & Cookies Policy": {
+    "message": "Privacy & Cookies Policy",
+    "description": "The label of footer link with label=Privacy & Cookies Policy linking to https://boxyhq.com/privacy.html"
+  },
+  "link.item.label.Terms": {
+    "message": "Terms",
+    "description": "The label of footer link with label=Terms linking to https://boxyhq.com/terms.html"
+  },
+  "link.item.label.Careers": {
+    "message": "Careers",
+    "description": "The label of footer link with label=Careers linking to /careers"
+  },
+  "link.item.label.Team": {
+    "message": "Team",
+    "description": "The label of footer link with label=Team linking to /team"
+  },
+  "copyright": {
+    "message": "2021-present © BoxyHQ Inc.",
+    "description": "The footer copyright"
+  }
+}

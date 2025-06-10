@@ -20,14 +20,6 @@ module.exports = {
   i18n: {
     defaultLocale: 'en',
     locales: ['en', 'zh-CN'],
-    localeConfigs: {
-      en: {
-        htmlLang: 'en-US',
-      },
-      'zh-CN': {
-        htmlLang: 'zh-CN',
-      },
-    },
   },
   themeConfig: {
     prism: {
@@ -173,13 +165,13 @@ module.exports = {
           position: 'right',
         },
         {
+          type: 'localeDropdown',
+          position: 'right',
+        },
+        {
           href: 'https://github.com/boxyhq/jackson',
           position: 'right',
           className: 'header-github-link',
-        },
-        {
-          type: 'localeDropdown',
-          position: 'right',
         },
       ],
     },

@@ -1,0 +1,320 @@
+{
+  "source_file_path_relative_to_docusaurus_root": "i18n/en/docusaurus-theme-classic/footer.json",
+  "source_file_content_hash": "ebdc08300cf6dfb0d7dac337f50a98f55ab32efd5548cb84b086d3d45b490a02",
+  "segments": [
+    {
+      "segment_id": "link.title.Community",
+      "source_content": "Community",
+      "source_content_hash": "bb501d7877eb7ddbd40baf7990e8058212e8140a2e6ceaaf2d54a6412b770bfd",
+      "node_type": "json_message",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "社区"
+      },
+      "metadata": {
+        "json_description": "The title of the footer links column with title=Community in the footer"
+      }
+    },
+    {
+      "segment_id": "link.title.Social",
+      "source_content": "Social",
+      "source_content_hash": "f1b7505afa5c9e2bd6d68ae814b3582cf38632d56a67913e75e7d8cb10b5a8a3",
+      "node_type": "json_message",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "社交媒体"
+      },
+      "metadata": {
+        "json_description": "The title of the footer links column with title=Social in the footer"
+      }
+    },
+    {
+      "segment_id": "link.title.Legal",
+      "source_content": "Legal",
+      "source_content_hash": "4787eaf7c938045fd5285fe6a2cd72558caf7bd5faeb93fd1ad490a502e0e37b",
+      "node_type": "json_message",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "法律条款"
+      },
+      "metadata": {
+        "json_description": "The title of the footer links column with title=Legal in the footer"
+      }
+    },
+    {
+      "segment_id": "link.title.Company",
+      "source_content": "Company",
+      "source_content_hash": "de4743c879734dc38cb3e270ecefcae077c3c2e626f9298115d5a03c8613f89b",
+      "node_type": "json_message",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "公司"
+      },
+      "metadata": {
+        "json_description": "The title of the footer links column with title=Company in the footer"
+      }
+    },
+    {
+      "segment_id": "link.item.label.GitHub",
+      "source_content": "GitHub",
+      "source_content_hash": "f911e414cf6bdfc595532ab166b5ba0f63d73c021452fcdacbda363dda6ad8fb",
+      "node_type": "json_message",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "GitHub"
+      },
+      "metadata": {
+        "json_description": "The label of footer link with label=GitHub linking to https://github.com/boxyhq/jackson"
+      }
+    },
+    {
+      "segment_id": "link.item.label.Discord",
+      "source_content": "Discord",
+      "source_content_hash": "053bc65874ad6098e58c41c57b378a2f36b0220e5e0b46722245e6c2f796818c",
+      "node_type": "json_message",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "Discord"
+      },
+      "metadata": {
+        "json_description": "The label of footer link with label=Discord linking to https://discord.boxyhq.com"
+      }
+    },
+    {
+      "segment_id": "link.item.label.Twitter",
+      "source_content": "Twitter",
+      "source_content_hash": "bcd18ead5fa830127187d499e97e7a4dc8f641ec34d8c7e9f9f24deae2e39fdc",
+      "node_type": "json_message",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "Twitter"
+      },
+      "metadata": {
+        "json_description": "The label of footer link with label=Twitter linking to https://twitter.com/boxyhq"
+      }
+    },
+    {
+      "segment_id": "link.item.label.OSS Friends",
+      "source_content": "OSS Friends",
+      "source_content_hash": "1ad3f33d9f2dc9a6fe9fc7accc010a9f127b4baf73f78a58b0422fe388e032c6",
+      "node_type": "json_message",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "开源之友"
+      },
+      "metadata": {
+        "json_description": "The label of footer link with label=OSS Friends linking to https://boxyhq.com/oss-friends"
+      }
+    },
+    {
+      "segment_id": "link.item.label.Developer-First Security Week",
+      "source_content": "Developer-First Security Week",
+      "source_content_hash": "93ad344f2c09c58dbd42b1467946641687facfbc8790e52b1c03d98981f48a67",
+      "node_type": "json_message",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "开发者优先安全周"
+      },
+      "metadata": {
+        "json_description": "The label of footer link with label=Developer-First Security Week linking to https://boxyhq.com/developer-first-security-week"
+      }
+    },
+    {
+      "segment_id": "link.item.label.SaaS Product Hunt Launch",
+      "source_content": "SaaS Product Hunt Launch",
+      "source_content_hash": "c4e668aaf5e6cbdcd4a7ef4cabeb58413b02fe0726fc58bb48b85c63c0fc9b37",
+      "node_type": "json_message",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "SaaS产品发布"
+      },
+      "metadata": {
+        "json_description": "The label of footer link with label=SaaS Product Hunt Launch linking to /saas-producthunt"
+      }
+    },
+    {
+      "segment_id": "link.item.label.LinkedIn",
+      "source_content": "LinkedIn",
+      "source_content_hash": "dd84425b72da12c6c828339ce814342daceac705b50d42e377e1acebf8f2320b",
+      "node_type": "json_message",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "领英"
+      },
+      "metadata": {
+        "json_description": "The label of footer link with label=LinkedIn linking to https://www.linkedin.com/company/boxyhq"
+      }
+    },
+    {
+      "segment_id": "link.item.label.Facebook",
+      "source_content": "Facebook",
+      "source_content_hash": "d41f5b4977ee05c6b61b3b5f054784628f5cd1cbe06a82a5484d1e6de6eefe85",
+      "node_type": "json_message",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "脸书"
+      },
+      "metadata": {
+        "json_description": "The label of footer link with label=Facebook linking to https://www.facebook.com/boxyhq"
+      }
+    },
+    {
+      "segment_id": "link.item.label.Instagram",
+      "source_content": "Instagram",
+      "source_content_hash": "bad57ef7837c8e6bf99c2a5935cc9d6fe5324a53d88744ad5551db0e46b03cd6",
+      "node_type": "json_message",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "Instagram"
+      },
+      "metadata": {
+        "json_description": "The label of footer link with label=Instagram linking to https://www.instagram.com/boxyhq"
+      }
+    },
+    {
+      "segment_id": "link.item.label.Privacy & Cookies Policy",
+      "source_content": "Privacy & Cookies Policy",
+      "source_content_hash": "d357d2e9dd5edd113e5794ce6c9f9c8c732e131a86dbe166a5bec1e4329e9840",
+      "node_type": "json_message",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "隐私与Cookie政策"
+      },
+      "metadata": {
+        "json_description": "The label of footer link with label=Privacy & Cookies Policy linking to https://boxyhq.com/privacy.html"
+      }
+    },
+    {
+      "segment_id": "link.item.label.Terms",
+      "source_content": "Terms",
+      "source_content_hash": "ede5489964834a514b61c7a4a8370be2452dd4a7d807180f14991ccc11ad2430",
+      "node_type": "json_message",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "服务条款"
+      },
+      "metadata": {
+        "json_description": "The label of footer link with label=Terms linking to https://boxyhq.com/terms.html"
+      }
+    },
+    {
+      "segment_id": "link.item.label.Careers",
+      "source_content": "Careers",
+      "source_content_hash": "7e658675b5ca75b3802ff34b548abe663438f113bed3acf541142b317c146e34",
+      "node_type": "json_message",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "招聘信息"
+      },
+      "metadata": {
+        "json_description": "The label of footer link with label=Careers linking to /careers"
+      }
+    },
+    {
+      "segment_id": "link.item.label.Team",
+      "source_content": "Team",
+      "source_content_hash": "5985039f106df054b43c3529139613bf7c2372937539f344c7c5ee47d00a0d63",
+      "node_type": "json_message",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "团队"
+      },
+      "metadata": {
+        "json_description": "The label of footer link with label=Team linking to /team"
+      }
+    },
+    {
+      "segment_id": "copyright",
+      "source_content": "2021-present © BoxyHQ Inc.",
+      "source_content_hash": "7b46ad0ea176789724d5e0c9e9f8d8b71c31146327c1269cf6929f09e386b761",
+      "node_type": "json_message",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "2021-至今 © BoxyHQ公司"
+      },
+      "metadata": {
+        "json_description": "The footer copyright"
+      }
+    }
+  ],
+  "original_json_structure": {
+    "link.title.Community": {
+      "message": "Community",
+      "description": "The title of the footer links column with title=Community in the footer"
+    },
+    "link.title.Social": {
+      "message": "Social",
+      "description": "The title of the footer links column with title=Social in the footer"
+    },
+    "link.title.Legal": {
+      "message": "Legal",
+      "description": "The title of the footer links column with title=Legal in the footer"
+    },
+    "link.title.Company": {
+      "message": "Company",
+      "description": "The title of the footer links column with title=Company in the footer"
+    },
+    "link.item.label.GitHub": {
+      "message": "GitHub",
+      "description": "The label of footer link with label=GitHub linking to https://github.com/boxyhq/jackson"
+    },
+    "link.item.label.Discord": {
+      "message": "Discord",
+      "description": "The label of footer link with label=Discord linking to https://discord.boxyhq.com"
+    },
+    "link.item.label.Twitter": {
+      "message": "Twitter",
+      "description": "The label of footer link with label=Twitter linking to https://twitter.com/boxyhq"
+    },
+    "link.item.label.OSS Friends": {
+      "message": "OSS Friends",
+      "description": "The label of footer link with label=OSS Friends linking to https://boxyhq.com/oss-friends"
+    },
+    "link.item.label.Developer-First Security Week": {
+      "message": "Developer-First Security Week",
+      "description": "The label of footer link with label=Developer-First Security Week linking to https://boxyhq.com/developer-first-security-week"
+    },
+    "link.item.label.SaaS Product Hunt Launch": {
+      "message": "SaaS Product Hunt Launch",
+      "description": "The label of footer link with label=SaaS Product Hunt Launch linking to /saas-producthunt"
+    },
+    "link.item.label.LinkedIn": {
+      "message": "LinkedIn",
+      "description": "The label of footer link with label=LinkedIn linking to https://www.linkedin.com/company/boxyhq"
+    },
+    "link.item.label.Facebook": {
+      "message": "Facebook",
+      "description": "The label of footer link with label=Facebook linking to https://www.facebook.com/boxyhq"
+    },
+    "link.item.label.Instagram": {
+      "message": "Instagram",
+      "description": "The label of footer link with label=Instagram linking to https://www.instagram.com/boxyhq"
+    },
+    "link.item.label.Privacy & Cookies Policy": {
+      "message": "Privacy & Cookies Policy",
+      "description": "The label of footer link with label=Privacy & Cookies Policy linking to https://boxyhq.com/privacy.html"
+    },
+    "link.item.label.Terms": {
+      "message": "Terms",
+      "description": "The label of footer link with label=Terms linking to https://boxyhq.com/terms.html"
+    },
+    "link.item.label.Careers": {
+      "message": "Careers",
+      "description": "The label of footer link with label=Careers linking to /careers"
+    },
+    "link.item.label.Team": {
+      "message": "Team",
+      "description": "The label of footer link with label=Team linking to /team"
+    },
+    "copyright": {
+      "message": "2021-present © BoxyHQ Inc.",
+      "description": "The footer copyright"
+    }
+  },
+  "target_i18n_subpath": "docusaurus-theme-classic/footer.json",
+  "last_updated_timestamp": "2025-06-10T09:19:15.088041+00:00",
+  "schema_version": "1.0",
+  "translated_versions": {
+    "zh-CN": "ebdc08300cf6dfb0d7dac337f50a98f55ab32efd5548cb84b086d3d45b490a02"
+  }
+}

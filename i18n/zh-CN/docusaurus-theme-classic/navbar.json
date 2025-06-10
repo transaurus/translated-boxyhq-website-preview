@@ -1,0 +1,106 @@
+{
+  "title": {
+    "message": "BoxyHQ",
+    "description": "The title in the navbar"
+  },
+  "logo.alt": {
+    "message": "BoxyHQ",
+    "description": "The alt text of navbar logo"
+  },
+  "item.label.Products": {
+    "message": "产品",
+    "description": "Navbar item with label Products"
+  },
+  "item.label.Solutions": {
+    "message": "解决方案",
+    "description": "Navbar item with label Solutions"
+  },
+  "item.label.Resources": {
+    "message": "资源",
+    "description": "Navbar item with label Resources"
+  },
+  "item.label.Pricing": {
+    "message": "定价",
+    "description": "Navbar item with label Pricing"
+  },
+  "item.label.Company": {
+    "message": "公司",
+    "description": "Navbar item with label Company"
+  },
+  "item.label.Sign Up": {
+    "message": "注册",
+    "description": "Navbar item with label Sign Up"
+  },
+  "item.label.Overview": {
+    "message": "概述",
+    "description": "Navbar item with label Overview"
+  },
+  "item.label.Enterprise SSO": {
+    "message": "企业单点登录",
+    "description": "Navbar item with label Enterprise SSO"
+  },
+  "item.label.Identity Federation": {
+    "message": "身份联合",
+    "description": "Navbar item with label Identity Federation"
+  },
+  "item.label.Directory Sync": {
+    "message": "目录同步",
+    "description": "Navbar item with label Directory Sync"
+  },
+  "item.label.SaaS Sign up": {
+    "message": "SaaS注册",
+    "description": "Navbar item with label SaaS Sign up"
+  },
+  "item.label.SaaS Starter Kit": {
+    "message": "SaaS入门套件",
+    "description": "Navbar item with label SaaS Starter Kit"
+  },
+  "item.label.Enterprise Readiness": {
+    "message": "企业就绪性",
+    "description": "Navbar item with label Enterprise Readiness"
+  },
+  "item.label.Docs": {
+    "message": "文档",
+    "description": "Navbar item with label Docs"
+  },
+  "item.label.SSO & DSync API": {
+    "message": "SSO和目录同步API",
+    "description": "Navbar item with label SSO & DSync API"
+  },
+  "item.label.Guides": {
+    "message": "指南",
+    "description": "Navbar item with label Guides"
+  },
+  "item.label.Blog": {
+    "message": "博客",
+    "description": "Navbar item with label Blog"
+  },
+  "item.label.Success Stories": {
+    "message": "成功案例",
+    "description": "Navbar item with label Success Stories"
+  },
+  "item.label.Mock SAML": {
+    "message": "模拟SAML",
+    "description": "Navbar item with label Mock SAML"
+  },
+  "item.label.Events": {
+    "message": "活动",
+    "description": "Navbar item with label Events"
+  },
+  "item.label.Contact Us": {
+    "message": "联系我们",
+    "description": "Navbar item with label Contact Us"
+  },
+  "item.label.About": {
+    "message": "关于",
+    "description": "Navbar item with label About"
+  },
+  "item.label.Pledge": {
+    "message": "承诺",
+    "description": "Navbar item with label Pledge"
+  },
+  "item.label.Careers": {
+    "message": "招聘",
+    "description": "Navbar item with label Careers"
+  }
+}

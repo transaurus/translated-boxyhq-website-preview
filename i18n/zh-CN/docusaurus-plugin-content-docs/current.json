@@ -1,0 +1,42 @@
+{
+  "version.label": {
+    "message": "下一个",
+    "description": "The label for version current"
+  },
+  "sidebar.DocsSidebar.category.Enterprise SSO": {
+    "message": "企业级单点登录",
+    "description": "The label for category Enterprise SSO in sidebar DocsSidebar"
+  },
+  "sidebar.DocsSidebar.category.Deploy": {
+    "message": "部署",
+    "description": "The label for category Deploy in sidebar DocsSidebar"
+  },
+  "sidebar.DocsSidebar.category.Configure your SSO provider": {
+    "message": "配置您的SSO提供商",
+    "description": "The label for category Configure your SSO provider in sidebar DocsSidebar"
+  },
+  "sidebar.DocsSidebar.category.Single Sign-on (SSO) Flow": {
+    "message": "单点登录(SSO)流程",
+    "description": "The label for category Single Sign-on (SSO) Flow in sidebar DocsSidebar"
+  },
+  "sidebar.DocsSidebar.category.Directory Sync": {
+    "message": "目录同步",
+    "description": "The label for category Directory Sync in sidebar DocsSidebar"
+  },
+  "sidebar.DocsSidebar.category.Providers": {
+    "message": "服务提供商",
+    "description": "The label for category Providers in sidebar DocsSidebar"
+  },
+  "sidebar.DocsSidebar.category.Admin Portal": {
+    "message": "管理门户",
+    "description": "The label for category Admin Portal in sidebar DocsSidebar"
+  },
+  "sidebar.DocsSidebar.category.Setup Links": {
+    "message": "设置链接",
+    "description": "The label for category Setup Links in sidebar DocsSidebar"
+  },
+  "sidebar.DocsSidebar.doc.Docs": {
+    "message": "文档",
+    "description": "The label for the doc item Docs in sidebar DocsSidebar, linking to the doc index"
+  }
+}

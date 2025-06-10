@@ -1,0 +1,63 @@
+{
+  "source_file_path_relative_to_docusaurus_root": "i18n/en/docusaurus-plugin-content-blog-success-stories/options.json",
+  "source_file_content_hash": "4a76c29b8a55c8ca83a25da17ffcf3fbe980a001d13ddd1dfff11d983a3ce833",
+  "segments": [
+    {
+      "segment_id": "title",
+      "source_content": "Success Stories",
+      "source_content_hash": "3c9bcaeff941445312350d62b7db20e4a4e4ebf9a1a1dcac64809e30378195ff",
+      "node_type": "json_message",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "成功案例"
+      },
+      "metadata": {
+        "json_description": "The title for the blog used in SEO"
+      }
+    },
+    {
+      "segment_id": "description",
+      "source_content": "",
+      "source_content_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "node_type": "json_message",
+      "translatable": true,
+      "translations": {},
+      "metadata": {
+        "json_description": "The description for the blog used in SEO"
+      }
+    },
+    {
+      "segment_id": "sidebar.title",
+      "source_content": "Recent posts",
+      "source_content_hash": "eba7045ba54fd465b583d1704bd549cf38d46b83b447361354286875dc303d31",
+      "node_type": "json_message",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "近期文章"
+      },
+      "metadata": {
+        "json_description": "The label for the left sidebar"
+      }
+    }
+  ],
+  "original_json_structure": {
+    "title": {
+      "message": "Success Stories",
+      "description": "The title for the blog used in SEO"
+    },
+    "description": {
+      "message": "",
+      "description": "The description for the blog used in SEO"
+    },
+    "sidebar.title": {
+      "message": "Recent posts",
+      "description": "The label for the left sidebar"
+    }
+  },
+  "target_i18n_subpath": "docusaurus-plugin-content-blog-success-stories/options.json",
+  "last_updated_timestamp": "2025-06-10T09:19:15.084906+00:00",
+  "schema_version": "1.0",
+  "translated_versions": {
+    "zh-CN": "4a76c29b8a55c8ca83a25da17ffcf3fbe980a001d13ddd1dfff11d983a3ce833"
+  }
+}

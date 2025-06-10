@@ -1,0 +1,42 @@
+{
+  "version.label": {
+    "message": "Next",
+    "description": "The label for version current"
+  },
+  "sidebar.DocsSidebar.category.Enterprise SSO": {
+    "message": "Enterprise SSO",
+    "description": "The label for category Enterprise SSO in sidebar DocsSidebar"
+  },
+  "sidebar.DocsSidebar.category.Deploy": {
+    "message": "Deploy",
+    "description": "The label for category Deploy in sidebar DocsSidebar"
+  },
+  "sidebar.DocsSidebar.category.Configure your SSO provider": {
+    "message": "Configure your SSO provider",
+    "description": "The label for category Configure your SSO provider in sidebar DocsSidebar"
+  },
+  "sidebar.DocsSidebar.category.Single Sign-on (SSO) Flow": {
+    "message": "Single Sign-on (SSO) Flow",
+    "description": "The label for category Single Sign-on (SSO) Flow in sidebar DocsSidebar"
+  },
+  "sidebar.DocsSidebar.category.Directory Sync": {
+    "message": "Directory Sync",
+    "description": "The label for category Directory Sync in sidebar DocsSidebar"
+  },
+  "sidebar.DocsSidebar.category.Providers": {
+    "message": "Providers",
+    "description": "The label for category Providers in sidebar DocsSidebar"
+  },
+  "sidebar.DocsSidebar.category.Admin Portal": {
+    "message": "Admin Portal",
+    "description": "The label for category Admin Portal in sidebar DocsSidebar"
+  },
+  "sidebar.DocsSidebar.category.Setup Links": {
+    "message": "Setup Links",
+    "description": "The label for category Setup Links in sidebar DocsSidebar"
+  },
+  "sidebar.DocsSidebar.doc.Docs": {
+    "message": "Docs",
+    "description": "The label for the doc item Docs in sidebar DocsSidebar, linking to the doc index"
+  }
+}

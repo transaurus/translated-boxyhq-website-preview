@@ -1,0 +1,106 @@
+{
+  "title": {
+    "message": "BoxyHQ",
+    "description": "The title in the navbar"
+  },
+  "logo.alt": {
+    "message": "BoxyHQ",
+    "description": "The alt text of navbar logo"
+  },
+  "item.label.Products": {
+    "message": "Products",
+    "description": "Navbar item with label Products"
+  },
+  "item.label.Solutions": {
+    "message": "Solutions",
+    "description": "Navbar item with label Solutions"
+  },
+  "item.label.Resources": {
+    "message": "Resources",
+    "description": "Navbar item with label Resources"
+  },
+  "item.label.Pricing": {
+    "message": "Pricing",
+    "description": "Navbar item with label Pricing"
+  },
+  "item.label.Company": {
+    "message": "Company",
+    "description": "Navbar item with label Company"
+  },
+  "item.label.Sign Up": {
+    "message": "Sign Up",
+    "description": "Navbar item with label Sign Up"
+  },
+  "item.label.Overview": {
+    "message": "Overview",
+    "description": "Navbar item with label Overview"
+  },
+  "item.label.Enterprise SSO": {
+    "message": "Enterprise SSO",
+    "description": "Navbar item with label Enterprise SSO"
+  },
+  "item.label.Identity Federation": {
+    "message": "Identity Federation",
+    "description": "Navbar item with label Identity Federation"
+  },
+  "item.label.Directory Sync": {
+    "message": "Directory Sync",
+    "description": "Navbar item with label Directory Sync"
+  },
+  "item.label.SaaS Sign up": {
+    "message": "SaaS Sign up",
+    "description": "Navbar item with label SaaS Sign up"
+  },
+  "item.label.SaaS Starter Kit": {
+    "message": "SaaS Starter Kit",
+    "description": "Navbar item with label SaaS Starter Kit"
+  },
+  "item.label.Enterprise Readiness": {
+    "message": "Enterprise Readiness",
+    "description": "Navbar item with label Enterprise Readiness"
+  },
+  "item.label.Docs": {
+    "message": "Docs",
+    "description": "Navbar item with label Docs"
+  },
+  "item.label.SSO & DSync API": {
+    "message": "SSO & DSync API",
+    "description": "Navbar item with label SSO & DSync API"
+  },
+  "item.label.Guides": {
+    "message": "Guides",
+    "description": "Navbar item with label Guides"
+  },
+  "item.label.Blog": {
+    "message": "Blog",
+    "description": "Navbar item with label Blog"
+  },
+  "item.label.Success Stories": {
+    "message": "Success Stories",
+    "description": "Navbar item with label Success Stories"
+  },
+  "item.label.Mock SAML": {
+    "message": "Mock SAML",
+    "description": "Navbar item with label Mock SAML"
+  },
+  "item.label.Events": {
+    "message": "Events",
+    "description": "Navbar item with label Events"
+  },
+  "item.label.Contact Us": {
+    "message": "Contact Us",
+    "description": "Navbar item with label Contact Us"
+  },
+  "item.label.About": {
+    "message": "About",
+    "description": "Navbar item with label About"
+  },
+  "item.label.Pledge": {
+    "message": "Pledge",
+    "description": "Navbar item with label Pledge"
+  },
+  "item.label.Careers": {
+    "message": "Careers",
+    "description": "Navbar item with label Careers"
+  }
+}
